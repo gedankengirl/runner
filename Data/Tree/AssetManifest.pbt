@@ -1,10 +1,10 @@
 ﻿Assets {
-  Id: 17035098698640557487
-  Name: "Fantasy Ability Green 012"
+  Id: 16957605919230160676
+  Name: "Icon Player Move"
   PlatformAssetType: 9
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
-    AssetId: "UI_Fantasy_Ability_Green_012"
+    AssetId: "Icon_PlayerMove"
   }
 }
 Assets {
@@ -14,5 +14,41 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_cube_002"
+  }
+}
+Assets {
+  Id: 10414207800896120430
+  Name: "4 Point Star"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Scifi_Icon_020"
+  }
+}
+Assets {
+  Id: 5196377603841433560
+  Name: "BG Gradient 001"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "BackgroundFlat_020"
+  }
+}
+Assets {
+  Id: 3511578302211237993
+  Name: "Icon Team"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "Icon_Team"
+  }
+}
+Assets {
+  Id: 2643522378176279095
+  Name: "Icon Player"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "Icon_Player"
   }
 }
