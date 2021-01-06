@@ -1,0 +1,103 @@
+﻿MetaVersion: 1
+MarketplaceDetails {
+  Id: "a4410fbf24ca454691161d7af0df00d9"
+  OwnerAccountId: "9287ad93145f44d79da5d0ecee31df80"
+  OwnerName: "NyaAlchemi"
+  Version: "1.0.0"
+}
+AssetIdsOriginalToNew {
+  key: 101697734561938786
+  value: 11921616525281476480
+}
+AssetIdsOriginalToNew {
+  key: 635947665660025098
+  value: 9717788279554587665
+}
+AssetIdsOriginalToNew {
+  key: 1339236324764425758
+  value: 17210547027535489338
+}
+AssetIdsOriginalToNew {
+  key: 1365995432914886842
+  value: 13171917521064130619
+}
+AssetIdsOriginalToNew {
+  key: 1524021171008506024
+  value: 8773022197263195839
+}
+AssetIdsOriginalToNew {
+  key: 1524616560919413875
+  value: 9328301213438330755
+}
+AssetIdsOriginalToNew {
+  key: 2303736137267582387
+  value: 1141267203961742429
+}
+AssetIdsOriginalToNew {
+  key: 2677311883075814004
+  value: 3490593329562162298
+}
+AssetIdsOriginalToNew {
+  key: 4722670613636637477
+  value: 18329090647877443322
+}
+AssetIdsOriginalToNew {
+  key: 5095911568624286039
+  value: 13606608348369426690
+}
+AssetIdsOriginalToNew {
+  key: 6751669604246849288
+  value: 15323812057146518147
+}
+AssetIdsOriginalToNew {
+  key: 7534743001810646147
+  value: 17028496886576370575
+}
+AssetIdsOriginalToNew {
+  key: 7750377540398701609
+  value: 12837675237242059654
+}
+AssetIdsOriginalToNew {
+  key: 7794020330182560569
+  value: 13538684777639876625
+}
+AssetIdsOriginalToNew {
+  key: 8277262014617206235
+  value: 2082536439907726371
+}
+AssetIdsOriginalToNew {
+  key: 8570650037536284447
+  value: 15671991721512516472
+}
+AssetIdsOriginalToNew {
+  key: 8705901881043495415
+  value: 15298486915241358877
+}
+AssetIdsOriginalToNew {
+  key: 10152614858410288706
+  value: 180735945138361905
+}
+AssetIdsOriginalToNew {
+  key: 14217532226974651727
+  value: 14863999780221077747
+}
+AssetIdsOriginalToNew {
+  key: 14553261951458175515
+  value: 1972364615648159279
+}
+AssetIdsOriginalToNew {
+  key: 15307356203240263626
+  value: 11448908334609776806
+}
+AssetIdsOriginalToNew {
+  key: 15449186819083139525
+  value: 4430140065791758793
+}
+AssetIdsOriginalToNew {
+  key: 15453076368156248033
+  value: 2696690883701708078
+}
+AssetIdsOriginalToNew {
+  key: 17568782740033696875
+  value: 9028937462707372097
+}

@@ -18,16 +18,12 @@ Objects {
   ChildIds: 10764064574047099998
   ChildIds: 3503138823459757888
   ChildIds: 16813558807825262224
-  ChildIds: 14982843161775482339
   ChildIds: 11409735037263253615
   ChildIds: 12187569197149205462
   ChildIds: 3924873657808812146
   ChildIds: 14143624588738292401
-  ChildIds: 4482921410689426743
-  ChildIds: 16187259527731269166
-  ChildIds: 10117971475990585394
-  ChildIds: 17619711486668341062
-  ChildIds: 5887220393755762593
+  ChildIds: 7553754998792656332
+  ChildIds: 2522660340735145273
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -40,76 +36,13 @@ Objects {
   }
 }
 Objects {
-  Id: 5887220393755762593
-  Name: "WedgeTrampoline"
-  Transform {
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 4781671109827199097
-  TemplateInstance {
-    ParameterOverrideMap {
-      key: 1810618377831597046
-      value {
-        Overrides {
-          Name: "Position"
-          Vector {
-          }
-        }
-      }
-    }
-    ParameterOverrideMap {
-      key: 7139972749460444073
-      value {
-        Overrides {
-          Name: "Name"
-          String: "WedgeTrampoline"
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-            X: -127.356308
-            Y: 1573.15027
-            Z: 183.046234
-          }
-        }
-        Overrides {
-          Name: "cs:LaunchSpeed"
-          Float: 200
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-          }
-        }
-      }
-    }
-    ParameterOverrideMap {
-      key: 14711423367625273538
-      value {
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-            Roll: -53.9569397
-          }
-        }
-      }
-    }
-    TemplateAsset {
-      Id: 14108504815513171710
-    }
-  }
-}
-Objects {
-  Id: 17619711486668341062
-  Name: "BosterPickup"
+  Id: 2522660340735145273
+  Name: "Pets"
   Transform {
     Location {
-      X: -987.85022
-      Y: 623.243164
+      X: 5610
+      Y: -1425
+      Z: 95
     }
     Rotation {
     }
@@ -120,99 +53,20 @@ Objects {
     }
   }
   ParentId: 4781671109827199097
-  WantsNetworking: true
-  TemplateInstance {
-    ParameterOverrideMap {
-      key: 13092897262669847206
-      value {
-        Overrides {
-          Name: "Name"
-          String: "BosterPickup"
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-            X: -1320.55774
-            Y: -1478.51746
-            Z: 197.905518
-          }
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-          }
-        }
-        Overrides {
-          Name: "Scale"
-          Vector {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-      }
-    }
-    TemplateAsset {
-      Id: 3815191084439700869
-    }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "Pets"
   }
 }
 Objects {
-  Id: 10117971475990585394
-  Name: "BosterPickup"
-  Transform {
-    Location {
-      Y: 623.243164
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 4781671109827199097
-  WantsNetworking: true
-  TemplateInstance {
-    ParameterOverrideMap {
-      key: 13092897262669847206
-      value {
-        Overrides {
-          Name: "Name"
-          String: "BosterPickup"
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-            X: -1411.33606
-            Y: 1344.24951
-            Z: 197.905762
-          }
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-          }
-        }
-        Overrides {
-          Name: "Scale"
-          Vector {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-      }
-    }
-    TemplateAsset {
-      Id: 3815191084439700869
-    }
-  }
-}
-Objects {
-  Id: 16187259527731269166
-  Name: "BosterPickup"
+  Id: 7553754998792656332
+  Name: "Scene props"
   Transform {
     Location {
     }
@@ -225,89 +79,15 @@ Objects {
     }
   }
   ParentId: 4781671109827199097
-  WantsNetworking: true
-  TemplateInstance {
-    ParameterOverrideMap {
-      key: 13092897262669847206
-      value {
-        Overrides {
-          Name: "Name"
-          String: "BosterPickup"
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-            X: 1233.85046
-            Y: 1334.63696
-            Z: 197.905762
-          }
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-          }
-        }
-        Overrides {
-          Name: "Scale"
-          Vector {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-      }
-    }
-    TemplateAsset {
-      Id: 3815191084439700869
-    }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
   }
-}
-Objects {
-  Id: 4482921410689426743
-  Name: "BosterPickup"
-  Transform {
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
   }
-  ParentId: 4781671109827199097
-  WantsNetworking: true
-  TemplateInstance {
-    ParameterOverrideMap {
-      key: 13092897262669847206
-      value {
-        Overrides {
-          Name: "Name"
-          String: "BosterPickup"
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-            X: 1484.50256
-            Y: -1540.90503
-            Z: 197.905762
-          }
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-          }
-        }
-        Overrides {
-          Name: "Scale"
-          Vector {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-      }
-    }
-    TemplateAsset {
-      Id: 3815191084439700869
-    }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "Scene props"
   }
 }
 Objects {
@@ -367,6 +147,8 @@ Objects {
   Id: 3924873657808812146
   Name: "Resource Display"
   Transform {
+    Location {
+    }
     Scale {
       X: 1
       Y: 1
@@ -862,6 +644,8 @@ Objects {
   Id: 12187569197149205462
   Name: "Player Count Display"
   Transform {
+    Location {
+    }
     Scale {
       X: 1
       Y: 1
@@ -1300,6 +1084,8 @@ Objects {
   Id: 11409735037263253615
   Name: "Ability Display"
   Transform {
+    Location {
+    }
     Scale {
       X: 1
       Y: 1
@@ -2113,50 +1899,12 @@ Objects {
   }
 }
 Objects {
-  Id: 14982843161775482339
-  Name: "Default Floor"
-  Transform {
-    Location {
-      Z: -50
-    }
-    Rotation {
-    }
-    Scale {
-      X: 50
-      Y: 50
-      Z: 1
-    }
-  }
-  ParentId: 4781671109827199097
-  UnregisteredParameters {
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CoreMesh {
-    MeshAsset {
-      Id: 12095835209017042614
-    }
-    Teams {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    EnableCameraCollision: true
-    StaticMesh {
-      Physics {
-      }
-    }
-  }
-}
-Objects {
   Id: 16813558807825262224
   Name: "Spawn Point"
   Transform {
     Location {
-      Z: 115
+      Y: -18580.6
+      Z: 165
     }
     Rotation {
     }
@@ -2184,6 +1932,8 @@ Objects {
   Id: 3503138823459757888
   Name: "StaringEquipment"
   Transform {
+    Location {
+    }
     Scale {
       X: 1
       Y: 1

@@ -17,8 +17,8 @@ Objects {
   }
   ParentId: 10764064574047099998
   ChildIds: 13551641546322277000
-  ChildIds: 7155168770677928712
   ChildIds: 10505154200474359396
+  ChildIds: 11224427131237256045
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -29,6 +29,56 @@ Objects {
   }
   Folder {
     IsGroup: true
+  }
+}
+Objects {
+  Id: 11224427131237256045
+  Name: "Skylight"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 10005074784157121906
+  UnregisteredParameters {
+    Overrides {
+      Name: "bp:Ambient Image"
+      Enum {
+        Value: "mc:eambientcubemapssmall:0"
+      }
+    }
+    Overrides {
+      Name: "bp:Intensity"
+      Float: 3.45555663
+    }
+    Overrides {
+      Name: "bp:Tint Color"
+      Color {
+        R: 1
+        G: 0.969968259
+        B: 0.914000034
+        A: 1
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 11515840070784317904
+    }
+    TeamSettings {
+    }
   }
 }
 Objects {
@@ -65,11 +115,9 @@ Objects {
     }
     Overrides {
       Name: "bp:Shape"
-      Int: 1
-    }
-    Overrides {
-      Name: "bp:Size"
-      Float: 5
+      Enum {
+        Value: "mc:esundiscshapes:0"
+      }
     }
     Overrides {
       Name: "bp:Light Shaft Bloom"
@@ -82,10 +130,6 @@ Objects {
     Overrides {
       Name: "bp:Light Shaft Mask Darkness"
       Float: 0.5
-    }
-    Overrides {
-      Name: "bp:Intensity"
-      Float: 3.5
     }
     Overrides {
       Name: "bp:Sun Disc Color"
@@ -117,6 +161,14 @@ Objects {
         A: 1
       }
     }
+    Overrides {
+      Name: "bp:Cast Shadows"
+      Bool: true
+    }
+    Overrides {
+      Name: "bp:Intensity"
+      Float: 4.70117712
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -127,85 +179,6 @@ Objects {
   Blueprint {
     BlueprintAsset {
       Id: 16910278292812118833
-    }
-  }
-}
-Objects {
-  Id: 7155168770677928712
-  Name: "Skylight"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 10005074784157121906
-  UnregisteredParameters {
-    Overrides {
-      Name: "bp:Index"
-      Int: 3
-    }
-    Overrides {
-      Name: "bp:Occlusion Contrast"
-      Float: 0
-    }
-    Overrides {
-      Name: "bp:Intensity"
-      Float: 3
-    }
-    Overrides {
-      Name: "bp:Lower Hemisphere Color"
-      Color {
-        R: 0.0666259378
-        G: 0.0307134502
-        A: 1
-      }
-    }
-    Overrides {
-      Name: "bp:Occlusion Tint"
-      Color {
-        R: 0.0274509825
-        G: 0.0274509825
-        B: 0.0392156877
-        A: 1
-      }
-    }
-    Overrides {
-      Name: "bp:Occlusion Exponent"
-      Float: 0.4
-    }
-    Overrides {
-      Name: "bp:Cast Shadows"
-      Bool: true
-    }
-    Overrides {
-      Name: "bp:Cast Volumetric Shadows"
-      Bool: false
-    }
-    Overrides {
-      Name: "bp:Tint Color"
-      Color {
-        R: 0.502886474
-        G: 0.48514995
-        B: 0.752942204
-        A: 1
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Blueprint {
-    BlueprintAsset {
-      Id: 11515840070784317904
     }
   }
 }
@@ -246,9 +219,9 @@ Objects {
     Overrides {
       Name: "bp:Haze Color"
       Color {
-        R: 0.590618849
-        G: 0.590618849
-        B: 0.701101899
+        R: 1
+        G: 0.937142849
+        B: 0.802
         A: 1
       }
     }
@@ -288,7 +261,9 @@ Objects {
     }
     Overrides {
       Name: "bp:Cloud Shape"
-      Int: 4
+      Enum {
+        Value: "mc:none:none"
+      }
     }
     Overrides {
       Name: "bp:Cloud Lighting Brightness"
@@ -300,10 +275,6 @@ Objects {
     }
     Overrides {
       Name: "bp:Cloud Speed"
-      Float: 1
-    }
-    Overrides {
-      Name: "bp:Brightness"
       Float: 1
     }
     Overrides {
@@ -325,6 +296,14 @@ Objects {
     Overrides {
       Name: "bp:High Cloud Noise Scale"
       Float: 0.2
+    }
+    Overrides {
+      Name: "bp:Brightness"
+      Float: 2
+    }
+    Overrides {
+      Name: "bp:Clouds"
+      Bool: true
     }
   }
   Collidable_v2 {
