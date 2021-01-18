@@ -1,0 +1,90 @@
+﻿Assets {
+  Id: 15050262795654144928
+  Name: "Terrain - Moss"
+  PlatformAssetType: 2
+  PrimaryAsset {
+    AssetType: "MaterialAssetRef"
+    AssetId: "mi_terrain_rock-moss_001_wa"
+  }
+}
+Assets {
+  Id: 14431767805421956439
+  Name: "Rock 01"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_rock_generic_001"
+  }
+}
+Assets {
+  Id: 12249585289919208147
+  Name: "Dirt 01"
+  PlatformAssetType: 2
+  PrimaryAsset {
+    AssetType: "MaterialAssetRef"
+    AssetId: "dirt_001"
+  }
+}
+Assets {
+  Id: 12095835209017042614
+  Name: "Cube"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_cube_002"
+  }
+}
+Assets {
+  Id: 10561038649745416493
+  Name: "Rock Flat 01"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_rock_generic_004"
+  }
+}
+Assets {
+  Id: 6191334647174897868
+  Name: "Branches Cluster Small"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_gen_branches_small_001"
+  }
+}
+Assets {
+  Id: 5517246664425075321
+  Name: "Branches Cluster Medium"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_gen_branches_medium_001"
+  }
+}
+Assets {
+  Id: 4839613605086708204
+  Name: "Rock 02"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_rock_generic_002_sm_rock_generic_002_LOD0"
+  }
+}
+Assets {
+  Id: 1481744078696836815
+  Name: "Sand 01"
+  PlatformAssetType: 2
+  PrimaryAsset {
+    AssetType: "MaterialAssetRef"
+    AssetId: "mi_sand_001_uv"
+  }
+}
+Assets {
+  Id: 461812557173768745
+  Name: "Rock 03"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_rock_generic_003"
+  }
+}

@@ -1,0 +1,191 @@
+﻿Name: "Necklace"
+RootId: 7517530515135515280
+Objects {
+  Id: 10731924186252395131
+  Name: "Ring - Quarter Thin"
+  Transform {
+    Location {
+      X: 2.046875
+      Y: -9.58935452
+      Z: 39.1487122
+    }
+    Rotation {
+      Pitch: -41.8699837
+      Yaw: 93.3109741
+      Roll: -175.941711
+    }
+    Scale {
+      X: 0.999593556
+      Y: 0.774747908
+      Z: 0.44655934
+    }
+  }
+  ParentId: 7517530515135515280
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 4444385379076542575
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: true
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.638541698
+        G: 0.638541698
+        B: 0.638541698
+        A: 1
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 7852233738478497271
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    EnableCameraCollision: true
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+    }
+  }
+}
+Objects {
+  Id: 12258844985184446593
+  Name: "Ring - Quarter Thin"
+  Transform {
+    Location {
+      X: -2.03515625
+      Y: -9.58935452
+      Z: 39.1487122
+    }
+    Rotation {
+      Pitch: -41.8697319
+      Yaw: 93.3113098
+      Roll: -2.21178889
+    }
+    Scale {
+      X: 0.999593556
+      Y: 0.774747908
+      Z: 0.44655934
+    }
+  }
+  ParentId: 7517530515135515280
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 4444385379076542575
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: true
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.638541698
+        G: 0.638541698
+        B: 0.638541698
+        A: 1
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 7852233738478497271
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    EnableCameraCollision: true
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+    }
+  }
+}
+Objects {
+  Id: 14625221457780655368
+  Name: "Bone Human Skull 01"
+  Transform {
+    Location {
+      X: -0.0117168427
+      Y: 19.1788311
+      Z: 1.52587891e-05
+    }
+    Rotation {
+      Roll: 24.7499409
+    }
+    Scale {
+      X: 0.703661203
+      Y: 0.703661203
+      Z: 0.703661203
+    }
+  }
+  ParentId: 7517530515135515280
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 1589449360944952949
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.688541591
+        G: 0.688541591
+        B: 0.688541591
+        A: 1
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 15299940389587492714
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    EnableCameraCollision: true
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+    }
+  }
+}

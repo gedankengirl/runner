@@ -562,7 +562,7 @@ Objects {
   Transform {
     Location {
       X: -52.1286621
-      Y: -48.3287964
+      Y: -57.5899658
       Z: -85.1776581
     }
     Rotation {
@@ -679,7 +679,7 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "vegetation"
+    FilePartitionName: "vegetation_2"
   }
 }
 Objects {
@@ -788,50 +788,6 @@ Objects {
   }
 }
 Objects {
-  Id: 11092245886863287407
-  Name: "Fantasy Human Guy 1"
-  Transform {
-    Location {
-      X: -650
-      Y: 3420
-      Z: 185
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 15346583032969552003
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CoreMesh {
-    MeshAsset {
-      Id: 9996725459975783452
-    }
-    Teams {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    EnableCameraCollision: true
-    AnimatedMesh {
-      AnimationStance: "unarmed_idle_relaxed"
-      AnimationStancePlaybackRate: 1
-      AnimationStanceShouldLoop: true
-      AnimationPlaybackRateMultiplier: 1
-      PlayOnStartAnimation {
-        PlaybackRate: 1
-      }
-    }
-  }
-}
-Objects {
   Id: 7336164263267299788
   Name: "Food"
   Transform {
@@ -883,9 +839,6 @@ Objects {
   }
   ParentId: 7336164263267299788
   ChildIds: 371545189232950710
-  ChildIds: 4843103883783528071
-  ChildIds: 16022935726694073995
-  ChildIds: 5660755022493520417
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -894,148 +847,6 @@ Objects {
   }
   Folder {
     IsGroup: true
-  }
-}
-Objects {
-  Id: 5660755022493520417
-  Name: "Point Light"
-  Transform {
-    Location {
-      Z: 11.1487732
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 15268212118830998559
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Light {
-    Intensity: 200
-    Color {
-      R: 0.940000057
-      G: 0.298807979
-      A: 1
-    }
-    VolumetricIntensity: 5
-    TeamSettings {
-    }
-    Light {
-      Temperature: 6500
-      LocalLight {
-        AttenuationRadius: 558.706238
-        PointLight {
-          SourceRadius: 20
-          SoftSourceRadius: 20
-          FallOffExponent: 8
-          UseFallOffExponent: true
-        }
-      }
-      MaxDrawDistance: 5000
-      MaxDistanceFadeRange: 1000
-    }
-  }
-}
-Objects {
-  Id: 16022935726694073995
-  Name: "Callout Sparkle"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 3.25097942
-      Y: 3.25097942
-      Z: 3.25097942
-    }
-  }
-  ParentId: 15268212118830998559
-  UnregisteredParameters {
-    Overrides {
-      Name: "bp:Particle Scale Multiplier"
-      Float: 20
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Blueprint {
-    BlueprintAsset {
-      Id: 7544842697048745075
-    }
-    TeamSettings {
-    }
-    Vfx {
-      AutoPlay: true
-    }
-  }
-}
-Objects {
-  Id: 4843103883783528071
-  Name: "Outline Object"
-  Transform {
-    Location {
-      X: -9.83476639
-      Y: 6.15610456
-      Z: -237.499954
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 15268212118830998559
-  UnregisteredParameters {
-    Overrides {
-      Name: "bp:Object To Outline"
-      ObjectReference {
-        SelfId: 371545189232950710
-      }
-    }
-    Overrides {
-      Name: "bp:Color A"
-      Color {
-        R: 10
-        G: 1.78807974
-        A: 0.8
-      }
-    }
-    Overrides {
-      Name: "bp:Thickness"
-      Float: 2.67458248
-    }
-    Overrides {
-      Name: "bp:Outline Channel"
-      Int: 27
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Blueprint {
-    BlueprintAsset {
-      Id: 10913251976909601512
-    }
-    TeamSettings {
-    }
   }
 }
 Objects {
@@ -2755,7 +2566,7 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Rocks"
+    FilePartitionName: "Rocks_8"
   }
 }
 Objects {

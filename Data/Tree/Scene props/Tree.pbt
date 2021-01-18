@@ -1,6 +1,93 @@
 ﻿Name: "Scene props"
 RootId: 7553754998792656332
 Objects {
+  Id: 10665984139206756167
+  Name: "Pet Barn"
+  Transform {
+    Location {
+      X: 500
+      Y: 18704.2148
+      Z: -700
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 7553754998792656332
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "Pet Barn"
+  }
+}
+Objects {
+  Id: 8313710388303195555
+  Name: "Tropical"
+  Transform {
+    Location {
+      X: 21373.9355
+      Y: 550
+      Z: -700
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 7553754998792656332
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "Tropical"
+  }
+}
+Objects {
+  Id: 4293257082225003563
+  Name: "Graveyard"
+  Transform {
+    Location {
+      X: -18700.4844
+      Y: 550
+      Z: -700
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 7553754998792656332
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "Graveyard"
+  }
+}
+Objects {
   Id: 2423505836595553228
   Name: "Disco scene"
   Transform {

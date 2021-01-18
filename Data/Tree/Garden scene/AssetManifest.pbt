@@ -89,15 +89,6 @@ Assets {
   }
 }
 Assets {
-  Id: 10913251976909601512
-  Name: "Outline Object"
-  PlatformAssetType: 20
-  PrimaryAsset {
-    AssetType: "BlueprintAssetRef"
-    AssetId: "fxbp_local_outline"
-  }
-}
-Assets {
   Id: 10830521042113057013
   Name: "Ring - Extra Thick"
   PlatformAssetType: 1
@@ -113,24 +104,6 @@ Assets {
   PrimaryAsset {
     AssetType: "MaterialAssetRef"
     AssetId: "mi_basic_pbr_material_001"
-  }
-}
-Assets {
-  Id: 9996725459975783452
-  Name: "Fantasy Human Guy 1"
-  PlatformAssetType: 17
-  PrimaryAsset {
-    AssetType: "AnimatedMeshAssetRef"
-    AssetId: "npc_human_guy_fantasy_001_ref"
-  }
-}
-Assets {
-  Id: 7544842697048745075
-  Name: "Callout Sparkle"
-  PlatformAssetType: 8
-  PrimaryAsset {
-    AssetType: "VfxBlueprintAssetRef"
-    AssetId: "fxbp_sparkles_volume_vfx"
   }
 }
 Assets {

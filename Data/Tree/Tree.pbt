@@ -23,7 +23,6 @@ Objects {
   ChildIds: 3924873657808812146
   ChildIds: 14143624588738292401
   ChildIds: 7553754998792656332
-  ChildIds: 2522660340735145273
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -33,35 +32,6 @@ Objects {
     Value: "mc:evisibilitysetting:forceon"
   }
   Folder {
-  }
-}
-Objects {
-  Id: 2522660340735145273
-  Name: "Pets"
-  Transform {
-    Location {
-      X: 5610
-      Y: -1425
-      Z: 95
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 4781671109827199097
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:forceoff"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "Pets"
   }
 }
 Objects {
@@ -1903,8 +1873,9 @@ Objects {
   Name: "Spawn Point"
   Transform {
     Location {
-      Y: -18580.6
-      Z: 165
+      X: 794.275513
+      Y: 19556.4824
+      Z: 165.016235
     }
     Rotation {
     }
