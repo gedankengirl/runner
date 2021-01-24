@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 12828847012893698445
   Name: "ClickEquipment"
   PlatformAssetType: 5
@@ -140,5 +140,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 70
+  SerializationVersion: 73
 }

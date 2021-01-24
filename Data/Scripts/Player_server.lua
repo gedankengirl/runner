@@ -3,14 +3,10 @@
 local OnResourceChanged do
 
     Game.playerJoinedEvent:Connect(function(player)
-        local data = Storage.GetPlayerData(player)
-        local rebirth = data[BusinessLogic.REBIRTH_KEY] or 0
-        local clicks = data[BusinessLogic.CLICKS_KEY] or 0
-        player:SetResource(BusinessLogic.REBIRTH_KEY, rebirth)
         player.resourceChangedEvent:Connect(OnResourceChanged)
         -- NOTE: we need to wait to prevent weird camera behavior
         Task.Wait(1)
-        BusinessLogic.addClicks(player, clicks)
+        BusinessLogic.LoadSave(player)
     end)
 
     OnResourceChanged = function(player, key, value)

@@ -1,6 +1,6 @@
 Assets {
-  Id: 3403025055362370891
-  Name: "StaticPlayerEquipmentServer"
+  Id: 8336394962520892309
+  Name: "RebirthServer"
   PlatformAssetType: 3
   TextAsset {
   }

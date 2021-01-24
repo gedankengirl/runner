@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 16957605919230160676
   Name: "Icon Player Move"
   PlatformAssetType: 9

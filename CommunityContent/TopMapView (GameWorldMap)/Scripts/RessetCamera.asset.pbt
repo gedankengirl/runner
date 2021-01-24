@@ -1,6 +1,6 @@
 Assets {
-  Id: 3403025055362370891
-  Name: "StaticPlayerEquipmentServer"
+  Id: 10488561068778875631
+  Name: "RessetCamera"
   PlatformAssetType: 3
   TextAsset {
   }

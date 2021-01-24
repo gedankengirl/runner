@@ -1,25 +1,5 @@
-﻿--[[
-Copyright 2019 Manticore Games, Inc. 
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of
-this software and associated documentation files (the "Software"), to deal in
-the Software without restriction, including without limitation the rights to
-use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies
-of the Software, and to permit persons to whom the Software is furnished to do
-so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
---]]
-
+﻿local BusinessLogic = require('961D2BEB7E5DFB42:BusinessLogic')
+assert(BusinessLogic.max and BusinessLogic.MAX_KEY)
 -- Internal custom properties
 local COMPONENT_ROOT = script:GetCustomProperty("ComponentRoot"):WaitForObject()
 local PANEL = script:GetCustomProperty("Panel"):WaitForObject()
@@ -30,28 +10,24 @@ local TEXT_BOX = script:GetCustomProperty("TextBox"):WaitForObject()
 local RESOURCE_NAME = COMPONENT_ROOT:GetCustomProperty("ResourceName")
 local ALWAYS_SHOW = COMPONENT_ROOT:GetCustomProperty("AlwaysShow")
 local POPUP_DURATION = COMPONENT_ROOT:GetCustomProperty("PopupDuration")
-local MAX_VALUE = COMPONENT_ROOT:GetCustomProperty("MaxValue")
 local SHOW_PROGRESS_BAR = COMPONENT_ROOT:GetCustomProperty("ShowProgressBar")
 local SHOW_TEXT = COMPONENT_ROOT:GetCustomProperty("ShowText")
 local SHOW_MAX_IN_TEXT = COMPONENT_ROOT:GetCustomProperty("ShowMaxInText")
+
+-- Constants
+local LOCAL_PLAYER = Game.GetLocalPlayer()
 
 -- Check user properties
 if RESOURCE_NAME == "" then
     error("ResourceName required")
 end
 
-if SHOW_PROGRESS_BAR and MAX_VALUE == 0 then
-    warn("MaxValue (non-zero) required for ShowProgressBar")
-    SHOW_PROGRESS_BAR = false
-end
-
-if SHOW_MAX_IN_TEXT and (not SHOW_TEXT or MAX_VALUE == 0) then
+if SHOW_MAX_IN_TEXT and not SHOW_TEXT then
     warn("ShowMaxInText requires both ShowText and non-zero MaxValue")
     SHOW_MAX_IN_TEXT = false
 end
 
--- Constants
-local LOCAL_PLAYER = Game.GetLocalPlayer()
+
 
 -- Variables
 local lastChangeTime = 0.0
@@ -61,6 +37,7 @@ local lastResource = 0
 -- Check for changes to our resource and update UI
 function Tick(deltaTime)
     local resource = LOCAL_PLAYER:GetResource(RESOURCE_NAME)
+    local MAX_VALUE = BusinessLogic.max(LOCAL_PLAYER:GetResource(BusinessLogic.MAX_KEY))
 
     -- Update things if our resource changed
     if resource ~= lastResource then

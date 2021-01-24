@@ -1,4 +1,4 @@
-﻿Name: "Root"
+Name: "Root"
 RootId: 4781671109827199097
 Objects {
   Id: 4781671109827199097
@@ -28,6 +28,7 @@ Objects {
   ChildIds: 10117971475990585394
   ChildIds: 17619711486668341062
   ChildIds: 5887220393755762593
+  ChildIds: 7575298899346122701
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -37,6 +38,38 @@ Objects {
     Value: "mc:evisibilitysetting:forceon"
   }
   Folder {
+  }
+}
+Objects {
+  Id: 7575298899346122701
+  Name: "RebirthPlate"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 4222691229199675037
+      value {
+        Overrides {
+          Name: "Name"
+          String: "RebirthPlate"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            Y: -775
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 6997487586924821979
+    }
   }
 }
 Objects {
@@ -150,6 +183,10 @@ Objects {
             Z: 1
           }
         }
+        Overrides {
+          Name: "cs:Value"
+          Int: 10
+        }
       }
     }
     TemplateAsset {
@@ -203,6 +240,10 @@ Objects {
             Z: 1
           }
         }
+        Overrides {
+          Name: "cs:Value"
+          Int: 10
+        }
       }
     }
     TemplateAsset {
@@ -255,6 +296,10 @@ Objects {
             Z: 1
           }
         }
+        Overrides {
+          Name: "cs:Value"
+          Int: 10
+        }
       }
     }
     TemplateAsset {
@@ -302,6 +347,10 @@ Objects {
             Y: 1
             Z: 1
           }
+        }
+        Overrides {
+          Name: "cs:Value"
+          Int: 10
         }
       }
     }
@@ -378,7 +427,7 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:ResourceName"
-      String: "Click"
+      String: "SpeedCoin"
     }
     Overrides {
       Name: "cs:AlwaysShow"
@@ -386,15 +435,11 @@ Objects {
     }
     Overrides {
       Name: "cs:PopupDuration"
-      Float: 2.5
-    }
-    Overrides {
-      Name: "cs:MaxValue"
-      Int: 5
+      Float: 10
     }
     Overrides {
       Name: "cs:ShowProgressBar"
-      Bool: false
+      Bool: true
     }
     Overrides {
       Name: "cs:ShowText"
@@ -402,7 +447,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ShowMaxInText"
-      Bool: false
+      Bool: true
     }
     Overrides {
       Name: "cs:ResourceName:tooltip"
@@ -415,10 +460,6 @@ Objects {
     Overrides {
       Name: "cs:PopupDuration:tooltip"
       String: "If not AlwaysShow, how long to show when there is a change"
-    }
-    Overrides {
-      Name: "cs:MaxValue:tooltip"
-      String: "The maximum value of this resource (or 0 for no max)"
     }
     Overrides {
       Name: "cs:ShowProgressBar:tooltip"
@@ -1315,7 +1356,7 @@ Objects {
     }
     Overrides {
       Name: "cs:BindingHint"
-      String: "Click"
+      String: "Speed"
     }
     Overrides {
       Name: "cs:ShowAbilityName"

@@ -1,12 +1,12 @@
 Assets {
-  Id: 11177347287288288650
-  Name: "RunnerBosterPickup"
+  Id: 1020503227268980639
+  Name: "TopMapView (GameWorldMap)"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {
-      RootId: 5020416386583574133
+      RootId: 17983968218945013995
       Objects {
-        Id: 5020416386583574133
+        Id: 17983968218945013995
         Name: "TemplateBundleDummy"
         Transform {
           Location {
@@ -22,7 +22,7 @@ Assets {
         Folder {
           BundleDummy {
             ReferencedAssets {
-              Id: 3815191084439700869
+              Id: 11365975516612400160
             }
           }
         }
@@ -34,11 +34,11 @@ Assets {
     }
   }
   Marketplace {
-    Id: "cba767612d03476d95e8e686ce539dc8"
-    OwnerAccountId: "eec0239c0d644f5bb9f59779307edb17"
-    OwnerName: "zoonior"
-    Version: "1.0.0"
-    Description: "RunnerBosterPickup"
+    Id: "b7b6fc45f5a4495e8ea6d481268cfae2"
+    OwnerAccountId: "a1641e3976064bb88348ba14cbe81c40"
+    OwnerName: "ImmorTalos"
+    Version: "1.1.0"
+    Description: "ONLY \"M\" default Key, same to open and close.\r\nFull Screen Size World Map with custom icons, Follow the player (Center of map) and you can zoom in/out with mouse."
   }
   SerializationVersion: 73
 }

@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 14108504815513171710
   Name: "WedgeTrampoline"
   PlatformAssetType: 5
@@ -631,6 +631,6 @@
   Marketplace {
     Description: "WedgeTrampoline"
   }
-  SerializationVersion: 70
+  SerializationVersion: 73
   DirectlyPublished: true
 }
