@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 17486990138462391439
   Name: "Teardrop - Truncated"
   PlatformAssetType: 1

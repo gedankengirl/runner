@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 9584398799393067822
   Name: "Corregated Fence with gate"
   PlatformAssetType: 5
@@ -2867,6 +2867,6 @@
   Marketplace {
     Description: "no working gate. made for my survival submission"
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
   DirectlyPublished: true
 }

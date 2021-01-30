@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 17946025571022015865
   Name: "Fern 01"
   PlatformAssetType: 1

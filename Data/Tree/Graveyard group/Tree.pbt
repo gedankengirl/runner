@@ -1,4 +1,4 @@
-﻿Name: "Graveyard group"
+Name: "Graveyard group"
 RootId: 15700620208541501602
 Objects {
   Id: 12711591489942066146
@@ -166,7 +166,7 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Right eye_2"
+    FilePartitionName: "Right eye_6"
   }
 }
 Objects {
@@ -195,7 +195,7 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Left eye_2"
+    FilePartitionName: "Left eye_6"
   }
 }
 Objects {

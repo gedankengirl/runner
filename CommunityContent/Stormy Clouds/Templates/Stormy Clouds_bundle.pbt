@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 16033217297385341944
   Name: "Stormy Clouds"
   PlatformAssetType: 5
@@ -40,5 +40,5 @@
     Version: "1.0.0"
     Description: "Awesome Stormy Clouds for your project. Copy, paste and resize to fill as much sky as you like. The dynamic material changes the shape of the cloud as you move it around the sky making every cloud unique."
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

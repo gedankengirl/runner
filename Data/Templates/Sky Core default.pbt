@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 18103421153378785540
   Name: "Sky Core default"
   PlatformAssetType: 5
@@ -378,5 +378,5 @@
       AssetId: "Sky_CORE_default"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

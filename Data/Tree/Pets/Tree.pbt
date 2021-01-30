@@ -1,12 +1,38 @@
-﻿Name: "Pets"
+Name: "Pets"
 RootId: 2522660340735145273
+Objects {
+  Id: 9403604496505621632
+  Name: "Forest group"
+  Transform {
+    Location {
+      Y: 3935.57422
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 2522660340735145273
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "Forest group"
+  }
+}
 Objects {
   Id: 15869095603941509801
   Name: "Tropical group"
   Transform {
     Location {
-      X: 263.199829
-      Y: 1117.79297
+      Y: 2897.40625
     }
     Rotation {
     }

@@ -1,5 +1,96 @@
-﻿Name: "Vegetation"
+Name: "Vegetation"
 RootId: 11144448321580845553
+Objects {
+  Id: 8555159134906836725
+  Name: "Fern 01"
+  Transform {
+    Location {
+      X: 3750.89844
+      Y: 2695.58179
+      Z: 2.18615723
+    }
+    Rotation {
+      Yaw: 1.02452832e-05
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 11144448321580845553
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 17946025571022015865
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    EnableCameraCollision: true
+    StaticMesh {
+      Physics {
+      }
+    }
+  }
+  InstanceHistory {
+    SelfId: 4696881956628749229
+    SubobjectId: 2680756288873514131
+    InstanceId: 1693106337742674149
+    TemplateId: 17955120187965219576
+  }
+}
+Objects {
+  Id: 5200796067467857716
+  Name: "Fern 04"
+  Transform {
+    Location {
+      X: 3515.61963
+      Y: 2454.0376
+    }
+    Rotation {
+      Yaw: 41.2737808
+    }
+    Scale {
+      X: 0.686906457
+      Y: 0.854379475
+      Z: 0.85439086
+    }
+  }
+  ParentId: 11144448321580845553
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 7763406895188263260
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    EnableCameraCollision: true
+    StaticMesh {
+      Physics {
+      }
+    }
+  }
+  InstanceHistory {
+    SelfId: 13407923146529831090
+    SubobjectId: 16001249847790987148
+    InstanceId: 1693106337742674149
+    TemplateId: 17955120187965219576
+  }
+}
 Objects {
   Id: 3083187865412847054
   Name: "Flower Daisy Patch 01"

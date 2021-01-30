@@ -1,4 +1,4 @@
-﻿Name: "Necklace"
+Name: "Necklace"
 RootId: 7517530515135515280
 Objects {
   Id: 10731924186252395131

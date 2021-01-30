@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 864780416145087760
   Name: "Small Sign"
   PlatformAssetType: 5
@@ -764,5 +764,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

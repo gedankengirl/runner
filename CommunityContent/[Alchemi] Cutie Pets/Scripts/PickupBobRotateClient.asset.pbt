@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 12193609359099018118
   Name: "PickupBobRotateClient"
   PlatformAssetType: 3
@@ -55,5 +55,5 @@
       }
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

@@ -1,10 +1,19 @@
-﻿Assets {
+Assets {
   Id: 17348004700843477078
   Name: "Cylinder - Rounded Small"
   PlatformAssetType: 1
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_cylinder_rounded_003"
+  }
+}
+Assets {
+  Id: 15961349352539224933
+  Name: "Capsule"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_capsule_001"
   }
 }
 Assets {

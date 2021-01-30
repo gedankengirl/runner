@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 17509543516441033028
   Name: "Fabric Burlap New 01"
   PlatformAssetType: 2

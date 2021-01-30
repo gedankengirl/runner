@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 12765484072463437192
   Name: "Prop Fish Knifejaw"
   PlatformAssetType: 5
@@ -2303,6 +2303,6 @@
   Marketplace {
     Description: "The are the fish used in Farmers Market. "
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
   DirectlyPublished: true
 }

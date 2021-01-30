@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 14606816262388666657
   Name: "ColumnSkulls"
   PlatformAssetType: 5
@@ -1369,6 +1369,6 @@
   Marketplace {
     Description: "Here is a CC Mega Pack full of Halloween goodies. Candy, Monsters, Props, etc."
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
   DirectlyPublished: true
 }

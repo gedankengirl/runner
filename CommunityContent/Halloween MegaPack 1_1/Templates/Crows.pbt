@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 13558915170777951852
   Name: "Crows"
   PlatformAssetType: 5
@@ -2246,6 +2246,6 @@
   Marketplace {
     Description: "Here is a CC Mega Pack full of Halloween goodies. Candy, Monsters, Props, etc."
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
   DirectlyPublished: true
 }

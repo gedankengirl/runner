@@ -1,9 +1,14 @@
-﻿Name: "Garden group"
+Name: "Garden group"
 RootId: 16078820315079516733
 Objects {
-  Id: 6603555931391990004
-  Name: "Gnome_no_legs"
+  Id: 3165213921731033096
+  Name: "Gnome"
   Transform {
+    Location {
+      Z: -1.69277954
+    }
+    Rotation {
+    }
     Scale {
       X: 1
       Y: 1
@@ -11,38 +16,22 @@ Objects {
     }
   }
   ParentId: 16078820315079516733
-  TemplateInstance {
-    ParameterOverrideMap {
-      key: 14043914407470347049
-      value {
-        Overrides {
-          Name: "Name"
-          String: "Gnome"
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-            Z: -1.69277954
-          }
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-          }
-        }
-        Overrides {
-          Name: "Scale"
-          Vector {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-      }
-    }
-    TemplateAsset {
-      Id: 8426704733723076710
-    }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "Gnome"
+  }
+  InstanceHistory {
+    SelfId: 3165213921731033096
+    SubobjectId: 14043914407470347049
+    InstanceId: 6603555931391990004
+    TemplateId: 8426704733723076710
+    WasRoot: true
   }
 }
 Objects {

@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 15555866687508865654
   Name: "big speaker cabinet"
   PlatformAssetType: 5
@@ -4681,5 +4681,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

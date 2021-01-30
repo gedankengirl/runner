@@ -1,4 +1,4 @@
-﻿Name: "Claw paw"
+Name: "Claw paw"
 RootId: 15817910134954811779
 Objects {
   Id: 8152623221761461486

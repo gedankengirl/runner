@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 11046868989260134393
   Name: "Banana"
   PlatformAssetType: 5
@@ -405,6 +405,6 @@
   Marketplace {
     Description: "A low-poly style banana"
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
   DirectlyPublished: true
 }

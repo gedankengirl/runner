@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 13033315210521626649
   Name: "Fexel\'s Globby Trees"
   PlatformAssetType: 5
@@ -1838,6 +1838,6 @@
   Marketplace {
     Description: "Some translucent night time vegetation. \r\n(Made for PIRATES! but if you folks want to use it as well, here it is!)"
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
   DirectlyPublished: true
 }

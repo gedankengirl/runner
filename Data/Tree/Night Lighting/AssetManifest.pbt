@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 7786429434059921876
   Name: "Sun Adjustment Volume"
   PlatformAssetType: 6

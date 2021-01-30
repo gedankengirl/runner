@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 12713383964149582220
   Name: "Palm Tree Redux [XRStudio]"
   PlatformAssetType: 5
@@ -516,6 +516,6 @@
   Marketplace {
     Description: "Great for tropical themed games, paradises, dessert oasis settings and more.\r\n\r\nThis is a modified version of the Palm Tree created by Carbide.\r\n\r\nThe make-over features more palm leaves, scaled down tree trunk thickness along with a number of smaller tweaks.\r\n\r\nThese trees look amazing when grouped in multiples at different size scales, with a little rotatation to the Z-Axis.\r\n\r\nCore Games has an amazing talent pool in it\'s creator/builder/developer base.  \r\n\r\nEverybody has been amazing and awesome (so far).\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n"
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
   DirectlyPublished: true
 }

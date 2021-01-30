@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 12494722282328795103
   Name: "Bat"
   PlatformAssetType: 5
@@ -3625,6 +3625,6 @@
   Marketplace {
     Description: "Here is a CC Mega Pack full of Halloween goodies. Candy, Monsters, Props, etc."
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
   DirectlyPublished: true
 }

@@ -1,4 +1,4 @@
-﻿Name: "DJ corner"
+Name: "DJ corner"
 RootId: 3106689386415756056
 Objects {
   Id: 6096305556525170887

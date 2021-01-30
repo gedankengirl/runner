@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 6474422482478674871
   Name: "Palm Tree"
   PlatformAssetType: 5
@@ -46,5 +46,5 @@
     Version: "1.0.0"
     Description: "For inclusion in your gaming paradise!"
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

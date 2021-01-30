@@ -1,8 +1,8 @@
-﻿Assets {
+Assets {
   Id: 14076718051742444563
   Name: "Custom Rubber Basic 01_1"
   PlatformAssetType: 13
-  SerializationVersion: 72
+  SerializationVersion: 73
   CustomMaterialAsset {
     BaseMaterialId: 14173610504413439254
     ParameterOverrides {

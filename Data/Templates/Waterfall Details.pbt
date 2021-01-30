@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 17955120187965219576
   Name: "Waterfall Details"
   PlatformAssetType: 5
@@ -1630,5 +1630,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

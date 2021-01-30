@@ -1,13 +1,13 @@
-﻿Name: "Flamingo"
+Name: "Flamingo"
 RootId: 12659662651344689855
 Objects {
   Id: 9207483195057132486
   Name: "Legs"
   Transform {
     Location {
-      X: -0.751831055
+      X: -0.751953125
       Y: -1.203125
-      Z: -123.851425
+      Z: -71.7159271
     }
     Rotation {
     }
@@ -26,7 +26,7 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Legs"
+    FilePartitionName: "Legs_1"
   }
 }
 Objects {
@@ -389,6 +389,6 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Eyes"
+    FilePartitionName: "Eyes_1"
   }
 }

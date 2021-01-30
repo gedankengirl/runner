@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 7057721231414447216
   Name: "Boombox"
   PlatformAssetType: 5
@@ -2097,6 +2097,6 @@
   Marketplace {
     Description: "A pretty basic boombox model."
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
   DirectlyPublished: true
 }

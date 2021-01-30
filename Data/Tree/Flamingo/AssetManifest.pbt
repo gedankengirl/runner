@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 17211744512365148018
   Name: "Donut"
   PlatformAssetType: 1

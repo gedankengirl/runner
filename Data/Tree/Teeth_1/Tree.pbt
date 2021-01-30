@@ -1,4 +1,4 @@
-﻿Name: "Teeth_1"
+Name: "Teeth_1"
 RootId: 10080573236217413867
 Objects {
   Id: 6676253609891102357

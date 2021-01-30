@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 13694479251341052722
   Name: "DJ stage section"
   PlatformAssetType: 5
@@ -459,5 +459,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

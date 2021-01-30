@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 15254897160481075727
   Name: "Fence - Window Size"
   PlatformAssetType: 5
@@ -1651,6 +1651,6 @@
   Marketplace {
     Description: "Trellis/Wood Panels in 3 sizes\r\nWindow Fill\r\nHalf Wall\r\nFull Wall\r\n\r\nSimple but useful :-)"
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
   DirectlyPublished: true
 }

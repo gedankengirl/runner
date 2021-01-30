@@ -1,4 +1,4 @@
-﻿Name: "Hoodie Drawstring"
+Name: "Hoodie Drawstring"
 RootId: 6088061285454684094
 Objects {
   Id: 15696250777476279788

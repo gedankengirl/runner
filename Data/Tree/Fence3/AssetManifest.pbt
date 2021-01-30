@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 17891617188768803116
   Name: "Pyramid - 4-Sided"
   PlatformAssetType: 1

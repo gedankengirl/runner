@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 8928227474274855860
   Name: "Futuristic Building"
   PlatformAssetType: 5
@@ -145067,6 +145067,6 @@
   Marketplace {
     Description: "22 floor futuristic building"
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
   DirectlyPublished: true
 }

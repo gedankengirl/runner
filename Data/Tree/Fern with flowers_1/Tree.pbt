@@ -1,4 +1,4 @@
-﻿Name: "Fern with flowers_1"
+Name: "Fern with flowers_1"
 RootId: 12446785605971723897
 Objects {
   Id: 7549084328398598412

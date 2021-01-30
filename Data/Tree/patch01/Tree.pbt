@@ -1,4 +1,4 @@
-﻿Name: "patch01"
+Name: "patch01"
 RootId: 4815537410376482989
 Objects {
   Id: 8006679324688053973

@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 8380558917617597287
   Name: "Flower Wild Lily 02"
   PlatformAssetType: 1

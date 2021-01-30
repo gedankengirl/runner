@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 16580196261381048319
   Name: "Cloud"
   PlatformAssetType: 5
@@ -63,6 +63,6 @@
   Marketplace {
     Description: "A simple cloud"
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
   DirectlyPublished: true
 }

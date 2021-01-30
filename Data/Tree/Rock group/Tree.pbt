@@ -1,4 +1,4 @@
-﻿Name: "rock group"
+Name: "rock group"
 RootId: 2529443280022183438
 Objects {
   Id: 2808464392872458533
@@ -1582,12 +1582,12 @@ Objects {
   Name: "Rock 02"
   Transform {
     Location {
-      X: -1246.68164
-      Y: 1584.19434
-      Z: 330
+      X: -1180.09924
+      Y: 1576.46887
+      Z: 320.132935
     }
     Rotation {
-      Pitch: -77.457016
+      Pitch: -77.4570313
       Yaw: 32.9179955
       Roll: -177.102936
     }

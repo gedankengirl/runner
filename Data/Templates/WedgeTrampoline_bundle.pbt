@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 11402014636371929701
   Name: "WedgeTrampoline"
   PlatformAssetType: 5
@@ -40,5 +40,5 @@
     Version: "1.0.0"
     Description: "WedgeTrampoline"
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

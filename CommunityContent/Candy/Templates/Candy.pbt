@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 9952137256402927922
   Name: "Candy"
   PlatformAssetType: 5
@@ -1115,6 +1115,6 @@
   Marketplace {
     Description: "one piece of candy (light green)"
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
   DirectlyPublished: true
 }

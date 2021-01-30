@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 16569041337464070912
   Name: "Cute Animals Props Pack"
   PlatformAssetType: 5
@@ -46,5 +46,5 @@
     Version: "1.1.0"
     Description: "9 little animal props"
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

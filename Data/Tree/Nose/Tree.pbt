@@ -1,4 +1,4 @@
-﻿Name: "Nose"
+Name: "Nose"
 RootId: 17283843903726346757
 Objects {
   Id: 7531494935268823498

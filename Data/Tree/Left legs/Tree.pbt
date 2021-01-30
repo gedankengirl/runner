@@ -1,4 +1,4 @@
-﻿Name: "Left legs"
+Name: "Left legs"
 RootId: 17213739562910414475
 Objects {
   Id: 12229395547560728080

@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 731972141063427235
   Name: "catapillar"
   PlatformAssetType: 5
@@ -5246,6 +5246,6 @@
   Marketplace {
     Description: "From my Alice Entry. Hopeing some can use him in the future."
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
   DirectlyPublished: true
 }

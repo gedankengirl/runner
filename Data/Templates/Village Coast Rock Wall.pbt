@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 8965823007101946117
   Name: "Village Coast Rock Wall"
   PlatformAssetType: 5
@@ -1968,5 +1968,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

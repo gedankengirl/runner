@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 8902885379852312343
   Name: "Birdie"
   PlatformAssetType: 5
@@ -1416,5 +1416,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

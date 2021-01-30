@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 3743869005471647528
   Name: "Lemon"
   PlatformAssetType: 5
@@ -40,5 +40,5 @@
     Version: "1.0.0"
     Description: "A Lemon"
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

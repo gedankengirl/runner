@@ -1,8 +1,8 @@
-﻿Assets {
+Assets {
   Id: 1051059025413845138
   Name: "Disco Ball "
   PlatformAssetType: 13
-  SerializationVersion: 72
+  SerializationVersion: 73
   CustomMaterialAsset {
     BaseMaterialId: 2258330122587909962
     ParameterOverrides {

@@ -1,4 +1,4 @@
-﻿Name: "Vibrisses_1"
+Name: "Vibrisses_1"
 RootId: 9774948591994573920
 Objects {
   Id: 8436839536398674086

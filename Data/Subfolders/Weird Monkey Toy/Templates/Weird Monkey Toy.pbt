@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 7060424667611114335
   Name: "Weird Monkey Toy"
   PlatformAssetType: 5
@@ -48,5 +48,5 @@
     Version: "1.4.0"
     Description: "Feed me bananas\r\n\r\nThank you LuckOfBuck, Joviex, CodeHeavy, and tjarvis for their help with the code! :D"
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

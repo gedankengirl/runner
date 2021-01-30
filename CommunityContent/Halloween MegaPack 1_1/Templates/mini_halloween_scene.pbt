@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 11538855986179335608
   Name: "mini_halloween_scene"
   PlatformAssetType: 5
@@ -2580,6 +2580,6 @@
   Marketplace {
     Description: "Here is a CC Mega Pack full of Halloween goodies. Candy, Monsters, Props, etc."
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
   DirectlyPublished: true
 }

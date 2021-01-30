@@ -1,4 +1,4 @@
-﻿Name: "Fence1"
+Name: "Fence1"
 RootId: 3102393093161295210
 Objects {
   Id: 205940700983854003

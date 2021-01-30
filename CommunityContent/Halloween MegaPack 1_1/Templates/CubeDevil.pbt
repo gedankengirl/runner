@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 12470079130776867619
   Name: "CubeDevil"
   PlatformAssetType: 5
@@ -1517,6 +1517,6 @@
   Marketplace {
     Description: "Here is a CC Mega Pack full of Halloween goodies. Candy, Monsters, Props, etc."
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
   DirectlyPublished: true
 }

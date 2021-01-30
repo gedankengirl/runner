@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 8721208146146861604
   Name: "Cube - Rounded Bottom-Aligned"
   PlatformAssetType: 1

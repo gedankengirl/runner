@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 12301076964460173051
   Name: "Candy"
   PlatformAssetType: 5
@@ -4209,6 +4209,6 @@
   Marketplace {
     Description: "Here is a CC Mega Pack full of Halloween goodies. Candy, Monsters, Props, etc."
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
   DirectlyPublished: true
 }

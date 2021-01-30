@@ -1,4 +1,4 @@
-﻿Name: "Hair"
+Name: "Hair"
 RootId: 1566585117079445848
 Objects {
   Id: 13213640896561097311

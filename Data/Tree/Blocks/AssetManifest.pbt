@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 17318727588484659287
   Name: "Stone Block Long Broken"
   PlatformAssetType: 1

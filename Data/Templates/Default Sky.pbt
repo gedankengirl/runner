@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 3763643597437609373
   Name: "Default Sky"
   PlatformAssetType: 5
@@ -351,5 +351,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

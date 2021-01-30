@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 3372797686770669646
   Name: "Eggs"
   PlatformAssetType: 5
@@ -504,6 +504,6 @@
   Marketplace {
     Description: "Colorful eggs for spring Holiday"
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
   DirectlyPublished: true
 }

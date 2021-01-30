@@ -1,4 +1,4 @@
-﻿Name: "Large rock segment"
+Name: "Large rock segment"
 RootId: 4514571635489438715
 Objects {
   Id: 8368053031505277337
@@ -354,6 +354,6 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Rock section"
+    FilePartitionName: "Rock section_2"
   }
 }

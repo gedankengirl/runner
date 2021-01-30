@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 8103053730603946536
   Name: "Sheep"
   PlatformAssetType: 5
@@ -1984,6 +1984,6 @@
   Marketplace {
     Description: "Cartoony Little Sheep for you to put in your games! Take care of the cute little sheep!\r\n-LTKB"
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
   DirectlyPublished: true
 }

@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 8539241641825137027
   Name: "Bee"
   PlatformAssetType: 5
@@ -1073,5 +1073,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

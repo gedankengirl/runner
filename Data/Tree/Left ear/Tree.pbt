@@ -1,4 +1,4 @@
-﻿Name: "Left ear"
+Name: "Left ear"
 RootId: 187733939346338387
 Objects {
   Id: 12041184709485328604

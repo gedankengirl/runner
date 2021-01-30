@@ -1,8 +1,8 @@
-﻿Assets {
+Assets {
   Id: 11772111206063658968
   Name: "Building Ceiling"
   PlatformAssetType: 13
-  SerializationVersion: 72
+  SerializationVersion: 73
   CustomMaterialAsset {
     BaseMaterialId: 17328705949405116771
     ParameterOverrides {

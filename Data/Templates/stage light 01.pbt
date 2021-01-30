@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 8896845541011819504
   Name: "stage light 01"
   PlatformAssetType: 5
@@ -338,5 +338,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 4602280942838896132
   Name: "3 eggs"
   PlatformAssetType: 5
@@ -40,5 +40,5 @@
     Version: "1.0.0"
     Description: "Colorful eggs for spring Holiday"
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

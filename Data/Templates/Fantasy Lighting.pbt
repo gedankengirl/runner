@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 15899833134017194107
   Name: "Fantasy Lighting"
   PlatformAssetType: 5
@@ -7429,5 +7429,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

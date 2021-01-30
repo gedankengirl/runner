@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 11288658458749534030
   Name: "Palm"
   PlatformAssetType: 5
@@ -538,6 +538,6 @@
   Marketplace {
     Description: "A simple palm tree with coconuts"
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
   DirectlyPublished: true
 }

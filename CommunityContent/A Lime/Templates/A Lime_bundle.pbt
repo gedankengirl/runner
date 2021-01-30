@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 11697525381695645437
   Name: "A Lime"
   PlatformAssetType: 5
@@ -40,5 +40,5 @@
     Version: "1.0.0"
     Description: "A Lime"
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 5560201792704112484
   Name: "Lime"
   PlatformAssetType: 5
@@ -413,6 +413,6 @@
   Marketplace {
     Description: "A Lime"
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
   DirectlyPublished: true
 }

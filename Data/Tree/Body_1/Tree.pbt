@@ -1,4 +1,4 @@
-﻿Name: "Body_1"
+Name: "Body_1"
 RootId: 1618593235210802706
 Objects {
   Id: 3893175660200303446

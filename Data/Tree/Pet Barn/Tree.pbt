@@ -1,10 +1,40 @@
-﻿Name: "Pet Barn"
+Name: "Pet Barn"
 RootId: 10665984139206756167
+Objects {
+  Id: 10966550013016146936
+  Name: "Teleports"
+  Transform {
+    Location {
+      X: 1175.27539
+      Y: -1211.27734
+      Z: 786.129822
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 10665984139206756167
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "Teleports"
+  }
+}
 Objects {
   Id: 2522660340735145273
   Name: "Pets"
   Transform {
     Location {
+      Y: -1762.2832
       Z: 795
     }
     Rotation {

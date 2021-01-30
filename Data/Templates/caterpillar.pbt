@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 12530106150458753794
   Name: "caterpillar"
   PlatformAssetType: 5
@@ -3531,5 +3531,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

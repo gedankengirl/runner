@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 11945076888191994327
   Name: "Metal Frame 01"
   PlatformAssetType: 2

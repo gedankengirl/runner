@@ -1,7 +1,7 @@
-﻿Name: "Fence04"
-RootId: 16116236027511132799
+Name: "Fence04"
+RootId: 13041171439116853451
 Objects {
-  Id: 14461907572752731316
+  Id: 9081136484956262199
   Name: "Rickety wooden fence"
   Transform {
     Location {
@@ -17,7 +17,7 @@ Objects {
       Z: 8.69999886
     }
   }
-  ParentId: 16116236027511132799
+  ParentId: 13041171439116853451
   TemplateInstance {
     ParameterOverrideMap {
       key: 2930946233843972535
@@ -244,7 +244,7 @@ Objects {
   }
 }
 Objects {
-  Id: 10179086172677766084
+  Id: 12879438260108772853
   Name: "Rickety wooden fence"
   Transform {
     Location {
@@ -260,7 +260,7 @@ Objects {
       Z: 8.69999886
     }
   }
-  ParentId: 16116236027511132799
+  ParentId: 13041171439116853451
   TemplateInstance {
     ParameterOverrideMap {
       key: 2930946233843972535
@@ -487,7 +487,7 @@ Objects {
   }
 }
 Objects {
-  Id: 9855422468882081346
+  Id: 1440200386380942684
   Name: "Rickety wooden fence"
   Transform {
     Location {
@@ -503,7 +503,7 @@ Objects {
       Z: 8.69999886
     }
   }
-  ParentId: 16116236027511132799
+  ParentId: 13041171439116853451
   TemplateInstance {
     ParameterOverrideMap {
       key: 2930946233843972535
@@ -766,7 +766,7 @@ Objects {
   }
 }
 Objects {
-  Id: 1359950691819946809
+  Id: 8021055316602151734
   Name: "Rickety wooden fence"
   Transform {
     Location {
@@ -783,7 +783,7 @@ Objects {
       Z: 8.69999886
     }
   }
-  ParentId: 16116236027511132799
+  ParentId: 13041171439116853451
   TemplateInstance {
     ParameterOverrideMap {
       key: 2930946233843972535
@@ -1010,7 +1010,7 @@ Objects {
   }
 }
 Objects {
-  Id: 5642440838084367986
+  Id: 2907810352590530019
   Name: "Rickety wooden fence"
   Transform {
     Location {
@@ -1027,7 +1027,7 @@ Objects {
       Z: 8.69999886
     }
   }
-  ParentId: 16116236027511132799
+  ParentId: 13041171439116853451
   TemplateInstance {
     ParameterOverrideMap {
       key: 2930946233843972535

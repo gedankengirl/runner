@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 3610617419357635328
   Name: "witch broom by staypunny"
   PlatformAssetType: 5
@@ -1179,6 +1179,6 @@
   Marketplace {
     Description: "Hallo everyone!\r\n\r\nI\'ve been rather busy with my upcoming game but hope you all are doing well.\r\nHere is a lil treat for a witch broom!\r\n\r\n- Fully scalable\r\n- Completely adjustable\r\n- All parts correctly names\r\n\r\nHave a wonderful day!"
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
   DirectlyPublished: true
 }

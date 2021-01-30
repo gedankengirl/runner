@@ -1,4 +1,4 @@
-﻿Name: "Rim"
+Name: "Rim"
 RootId: 13124974244320606771
 Objects {
   Id: 13501840172917100851

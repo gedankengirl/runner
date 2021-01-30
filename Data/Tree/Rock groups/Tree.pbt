@@ -1,4 +1,4 @@
-﻿Name: "Rock groups"
+Name: "Rock groups"
 RootId: 16132288479880245220
 Objects {
   Id: 6539397073487565007

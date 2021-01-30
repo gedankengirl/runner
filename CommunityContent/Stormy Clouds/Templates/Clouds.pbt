@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 6538708574493652010
   Name: "Clouds"
   PlatformAssetType: 5
@@ -235,6 +235,6 @@
   Marketplace {
     Description: "Awesome Stormy Clouds for your project. Copy, paste and resize to fill as much sky as you like. The dynamic material changes the shape of the cloud as you move it around the sky making every cloud unique."
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
   DirectlyPublished: true
 }

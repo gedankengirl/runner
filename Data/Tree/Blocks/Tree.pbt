@@ -1,4 +1,4 @@
-﻿Name: "Blocks"
+Name: "Blocks"
 RootId: 4079889813385455536
 Objects {
   Id: 834503639815967170

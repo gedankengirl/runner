@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 996362363973713768
   Name: "Brooms"
   PlatformAssetType: 5
@@ -808,6 +808,6 @@
   Marketplace {
     Description: "Here is a CC Mega Pack full of Halloween goodies. Candy, Monsters, Props, etc."
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
   DirectlyPublished: true
 }

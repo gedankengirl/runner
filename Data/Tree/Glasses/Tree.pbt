@@ -1,4 +1,4 @@
-﻿Name: "Glasses"
+Name: "Glasses"
 RootId: 9707576913177621163
 Objects {
   Id: 16180745750453808326

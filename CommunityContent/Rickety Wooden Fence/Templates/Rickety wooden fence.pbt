@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 8499819634968771372
   Name: "Rickety wooden fence"
   PlatformAssetType: 5
@@ -647,6 +647,6 @@
   Marketplace {
     Description: "The perfect fence to complete your idylic scene. Fence is 3m long, turn grid on and set grid size to 100 to easily place a line of fences."
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
   DirectlyPublished: true
 }

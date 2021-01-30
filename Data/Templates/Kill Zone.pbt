@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 12493886121345544039
   Name: "Kill Zone"
   PlatformAssetType: 5
@@ -105,5 +105,5 @@
       AssetId: "Kill_Zone"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

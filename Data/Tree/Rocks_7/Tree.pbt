@@ -1,4 +1,4 @@
-﻿Name: "Rocks_7"
+Name: "Rocks_7"
 RootId: 6559716557260938991
 Objects {
   Id: 6681383407054277671
@@ -1506,7 +1506,7 @@ Objects {
       Z: 1594.89905
     }
     Rotation {
-      Pitch: -80.4445419
+      Pitch: -80.4445496
       Yaw: 137.979858
       Roll: 94.7824478
     }

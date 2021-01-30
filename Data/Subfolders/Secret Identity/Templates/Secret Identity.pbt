@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 10686899043226632238
   Name: "Secret Identity"
   PlatformAssetType: 5
@@ -48,5 +48,5 @@
     Version: "1.0.0"
     Description: "Oh no it\'s not me... It\'s... somone else."
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

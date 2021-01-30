@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 15570372970768635194
   Name: "Basic Material"
   PlatformAssetType: 2

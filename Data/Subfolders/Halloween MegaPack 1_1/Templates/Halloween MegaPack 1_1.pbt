@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 7533777183264986913
   Name: "Halloween MegaPack 1.1"
   PlatformAssetType: 5
@@ -175,5 +175,5 @@
     Version: "1.0.0"
     Description: "Here is a CC Mega Pack full of Halloween goodies. Candy, Monsters, Props, etc."
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

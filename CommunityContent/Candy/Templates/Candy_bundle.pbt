@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 5974553329181844937
   Name: "Candy"
   PlatformAssetType: 5
@@ -40,5 +40,5 @@
     Version: "1.0.0"
     Description: "one piece of candy (light green)"
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

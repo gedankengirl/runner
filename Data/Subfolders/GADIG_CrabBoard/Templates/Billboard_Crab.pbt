@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 17401625702133204578
   Name: "Billboard_Crab"
   PlatformAssetType: 5
@@ -1838,6 +1838,6 @@
   Marketplace {
     Description: "Crab billboard"
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
   DirectlyPublished: true
 }

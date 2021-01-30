@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 17227878734980094148
   Name: "Bush Leafy Tall 01"
   PlatformAssetType: 1

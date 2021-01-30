@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 13691346472995936609
   Name: "Cube - Rounded"
   PlatformAssetType: 1

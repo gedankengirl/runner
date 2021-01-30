@@ -1,8 +1,8 @@
-﻿Assets {
+Assets {
   Id: 5914334869987402307
   Name: "Custom Leaves from Clover Patch 01"
   PlatformAssetType: 13
-  SerializationVersion: 72
+  SerializationVersion: 73
   CustomMaterialAsset {
     BaseMaterialId: 13016519134406316206
     ParameterOverrides {

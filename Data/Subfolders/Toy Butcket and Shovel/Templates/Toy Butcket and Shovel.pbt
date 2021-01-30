@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 2678155992481715179
   Name: "Toy Butcket and Shovel"
   PlatformAssetType: 5
@@ -43,5 +43,5 @@
     Version: "1.0.0"
     Description: "A toy bucket and shovel for playing in the sand :)"
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

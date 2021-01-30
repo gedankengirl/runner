@@ -1,4 +1,4 @@
-﻿Name: "Torso"
+Name: "Torso"
 RootId: 1907163473268906116
 Objects {
   Id: 8128401962567750943

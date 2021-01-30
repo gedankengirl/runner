@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 13612414561874767234
   Name: "girder stuff"
   PlatformAssetType: 5
@@ -1968,5 +1968,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

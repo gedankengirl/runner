@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 7608314043348700490
   Name: "Main Street Building - Upper Level Template"
   PlatformAssetType: 5
@@ -1132,5 +1132,5 @@
       AssetId: "Main_Street_Building_-_Upper_Level_Template"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

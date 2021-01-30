@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 4327599547798364754
   Name: "CubeSkellington"
   PlatformAssetType: 5
@@ -1474,6 +1474,6 @@
   Marketplace {
     Description: "Here is a CC Mega Pack full of Halloween goodies. Candy, Monsters, Props, etc."
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
   DirectlyPublished: true
 }

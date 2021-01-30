@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 7419506935172155469
   Name: "Gnome_with_legs"
   PlatformAssetType: 5
@@ -1537,5 +1537,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

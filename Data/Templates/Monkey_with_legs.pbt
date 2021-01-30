@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 5496638680063391696
   Name: "Monkey_with_legs"
   PlatformAssetType: 5
@@ -6354,5 +6354,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

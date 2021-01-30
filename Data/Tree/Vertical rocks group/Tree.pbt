@@ -1,4 +1,4 @@
-﻿Name: "Vertical rocks group"
+Name: "Vertical rocks group"
 RootId: 16613581173157592339
 Objects {
   Id: 14226300630864410828

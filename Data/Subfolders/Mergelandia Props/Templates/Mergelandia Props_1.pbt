@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 819540168631362096
   Name: "Mergelandia Props"
   PlatformAssetType: 5
@@ -20945,6 +20945,14 @@
               Animation: "2hand_staff_magic_up"
               StartPosition: 0.316543728
             }
+            SkinnedMeshes {
+            }
+            SkinnedMeshes {
+            }
+            SkinnedMeshes {
+            }
+            SkinnedMeshes {
+            }
           }
         }
       }
@@ -21049,6 +21057,14 @@
             PlayOnStartAnimation {
               Animation: "2hand_staff_magic_up"
               StartPosition: 0.316543728
+            }
+            SkinnedMeshes {
+            }
+            SkinnedMeshes {
+            }
+            SkinnedMeshes {
+            }
+            SkinnedMeshes {
             }
           }
         }
@@ -21814,6 +21830,14 @@
             PlayOnStartAnimation {
               Animation: "2hand_staff_magic_up"
               StartPosition: 0.316543728
+            }
+            SkinnedMeshes {
+            }
+            SkinnedMeshes {
+            }
+            SkinnedMeshes {
+            }
+            SkinnedMeshes {
             }
           }
         }
@@ -23172,6 +23196,14 @@
               Animation: "2hand_staff_magic_up"
               StartPosition: 0.316543728
             }
+            SkinnedMeshes {
+            }
+            SkinnedMeshes {
+            }
+            SkinnedMeshes {
+            }
+            SkinnedMeshes {
+            }
           }
         }
       }
@@ -24154,6 +24186,14 @@
               Animation: "2hand_staff_magic_up"
               StartPosition: 0.316543728
             }
+            SkinnedMeshes {
+            }
+            SkinnedMeshes {
+            }
+            SkinnedMeshes {
+            }
+            SkinnedMeshes {
+            }
           }
         }
       }
@@ -25128,6 +25168,14 @@
             PlayOnStartAnimation {
               Animation: "2hand_staff_magic_up"
               StartPosition: 0.316543728
+            }
+            SkinnedMeshes {
+            }
+            SkinnedMeshes {
+            }
+            SkinnedMeshes {
+            }
+            SkinnedMeshes {
             }
           }
         }
@@ -37364,6 +37412,6 @@
   Marketplace {
     Description: "This contains food, coins, trees, crates, chests, mana crystals, and statues from Mergelandia. Enjoy!\r\n\r\nBig props to the Merglandia team for such awesome content!"
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
   DirectlyPublished: true
 }

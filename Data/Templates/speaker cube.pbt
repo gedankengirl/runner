@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 17583205650330148161
   Name: "speaker cube"
   PlatformAssetType: 5
@@ -422,5 +422,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 4081841519905920035
   Name: "hat"
   PlatformAssetType: 5
@@ -299,6 +299,6 @@
   Marketplace {
     Description: "just a model"
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
   DirectlyPublished: true
 }

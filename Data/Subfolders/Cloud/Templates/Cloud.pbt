@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 1458534138232571064
   Name: "Cloud"
   PlatformAssetType: 5
@@ -40,5 +40,5 @@
     Version: "1.2.0"
     Description: "A simple cloud"
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

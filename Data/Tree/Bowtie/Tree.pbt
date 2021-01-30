@@ -1,4 +1,4 @@
-﻿Name: "Bowtie"
+Name: "Bowtie"
 RootId: 2121751075096493428
 Objects {
   Id: 827021835092525379

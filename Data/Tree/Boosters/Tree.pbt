@@ -1,4 +1,4 @@
-﻿Name: "Boosters"
+Name: "Boosters"
 RootId: 15462755105733782301
 Objects {
   Id: 17619711486668341062

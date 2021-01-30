@@ -1,4 +1,4 @@
-﻿Name: "Witch"
+Name: "Witch"
 RootId: 12534621280433502161
 Objects {
   Id: 7517530515135515280
@@ -596,7 +596,7 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Hat"
+    FilePartitionName: "Hat_1"
   }
 }
 Objects {
@@ -626,7 +626,7 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Right eye"
+    FilePartitionName: "Right eye_5"
   }
 }
 Objects {
@@ -656,7 +656,7 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Left eye"
+    FilePartitionName: "Left eye_5"
   }
 }
 Objects {

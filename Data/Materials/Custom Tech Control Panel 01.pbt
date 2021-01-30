@@ -1,8 +1,8 @@
-﻿Assets {
+Assets {
   Id: 12497996637795491594
   Name: "Custom Tech Control Panel 01"
   PlatformAssetType: 13
-  SerializationVersion: 72
+  SerializationVersion: 73
   CustomMaterialAsset {
     BaseMaterialId: 5225851799403858510
     ParameterOverrides {

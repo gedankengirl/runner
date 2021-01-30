@@ -1,4 +1,4 @@
-﻿Name: "Veggie patch"
+Name: "Veggie patch"
 RootId: 13169547398859074150
 Objects {
   Id: 15341244253166053239

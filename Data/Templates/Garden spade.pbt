@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 10882032922510369775
   Name: "Garden spade"
   PlatformAssetType: 5
@@ -1073,5 +1073,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

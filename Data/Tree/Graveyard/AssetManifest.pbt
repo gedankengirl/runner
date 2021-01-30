@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 17397324931887173102
   Name: "Pyramid - 4-Sided Truncated Polished"
   PlatformAssetType: 1
@@ -17,15 +17,6 @@ Assets {
   }
 }
 Assets {
-  Id: 16914302134900630003
-  Name: "Road Edge"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_urb_road_edge_straight_001"
-  }
-}
-Assets {
   Id: 16804877967495353470
   Name: "Stone Block Long"
   PlatformAssetType: 1
@@ -35,12 +26,30 @@ Assets {
   }
 }
 Assets {
+  Id: 16325489697704183042
+  Name: "Dust Motes Volume VFX"
+  PlatformAssetType: 8
+  PrimaryAsset {
+    AssetType: "VfxBlueprintAssetRef"
+    AssetId: "fxbp_dust_motes"
+  }
+}
+Assets {
   Id: 16082927538532457093
   Name: "Stone Block Big Broken"
   PlatformAssetType: 1
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_fantasy_block_broken_04"
+  }
+}
+Assets {
+  Id: 13629958479359906438
+  Name: "Cylinder - Rounded Bottom-Aligned"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_cylinder_rounded_001"
   }
 }
 Assets {
@@ -80,12 +89,12 @@ Assets {
   }
 }
 Assets {
-  Id: 10628002871497063225
-  Name: "Road Edge Corner - In"
-  PlatformAssetType: 1
+  Id: 10184847056121543272
+  Name: "Basic Material"
+  PlatformAssetType: 2
   PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_urb_road_edge_curve_002"
+    AssetType: "MaterialAssetRef"
+    AssetId: "mi_basic_pbr_material_001"
   }
 }
 Assets {
@@ -143,15 +152,6 @@ Assets {
   }
 }
 Assets {
-  Id: 8454732915716827975
-  Name: "Road Edge Corner"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_urb_road_edge_curve_001"
-  }
-}
-Assets {
   Id: 7786429434059921876
   Name: "Sun Adjustment Volume"
   PlatformAssetType: 6
@@ -176,6 +176,15 @@ Assets {
   PrimaryAsset {
     AssetType: "DecalBlueprintAssetRef"
     AssetId: "bp_decal_roadsigns_001"
+  }
+}
+Assets {
+  Id: 5836430349218932838
+  Name: "Pipe - Thin"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_pipe_003"
   }
 }
 Assets {
@@ -221,15 +230,6 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_grass_generic_001"
-  }
-}
-Assets {
-  Id: 3222245794641090049
-  Name: "Road Edge Corner - Wide"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_urb_road_edge_curve_003"
   }
 }
 Assets {

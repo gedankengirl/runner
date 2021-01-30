@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 3815191084439700869
   Name: "BosterPickup"
   PlatformAssetType: 5
@@ -295,6 +295,6 @@
   Marketplace {
     Description: "RunnerBosterPickup"
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
   DirectlyPublished: true
 }

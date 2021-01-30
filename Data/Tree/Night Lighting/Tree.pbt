@@ -1,4 +1,4 @@
-﻿Name: "Night Lighting"
+Name: "Night Lighting"
 RootId: 17399326854977672207
 Objects {
   Id: 8915426877852477612
@@ -28,7 +28,7 @@ Objects {
     }
     Overrides {
       Name: "bp:Intensity"
-      Float: 0.792651892
+      Float: 1.8358978
     }
     Overrides {
       Name: "bp:Blend Duration"
@@ -123,7 +123,7 @@ Objects {
     }
     Overrides {
       Name: "bp:Intensity"
-      Float: 2
+      Float: 2.13679886
     }
     Overrides {
       Name: "bp:Occlusion Contrast"
@@ -153,9 +153,9 @@ Objects {
     Overrides {
       Name: "bp:Tint Color"
       Color {
-        R: 0.274955
-        G: 0.380318344
-        B: 0.433000028
+        R: 1
+        G: 0.616190434
+        B: 0.194
         A: 1
       }
     }

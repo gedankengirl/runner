@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 7853921415226844021
   Name: "mixing board"
   PlatformAssetType: 5
@@ -564,5 +564,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 5842334498772879622
   Name: "Chain Necklace with Jewel"
   PlatformAssetType: 5
@@ -8004,6 +8004,6 @@
   Marketplace {
     Description: "Gold necklace great for props or quest item.\r\n\r\nEnjoy!\r\n\r\nMade for DnD game jam"
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
   DirectlyPublished: true
 }

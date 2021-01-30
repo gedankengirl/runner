@@ -1,4 +1,4 @@
-﻿Name: "Dance floor"
+Name: "Dance floor"
 RootId: 1676555309271394201
 Objects {
   Id: 10323652997671236394

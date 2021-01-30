@@ -1,4 +1,4 @@
-﻿Name: "Top"
+Name: "Top"
 RootId: 12691817389255229158
 Objects {
   Id: 16898941444807781454

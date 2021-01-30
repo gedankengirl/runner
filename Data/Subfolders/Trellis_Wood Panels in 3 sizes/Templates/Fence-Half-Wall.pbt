@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 12926932486625661426
   Name: "Fence-Half-Wall"
   PlatformAssetType: 5
@@ -2014,6 +2014,6 @@
   Marketplace {
     Description: "Trellis/Wood Panels in 3 sizes\r\nWindow Fill\r\nHalf Wall\r\nFull Wall\r\n\r\nSimple but useful :-)"
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
   DirectlyPublished: true
 }

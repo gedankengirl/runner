@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 7212094149127784336
   Name: "Prop Fish Goldfish"
   PlatformAssetType: 5
@@ -1782,6 +1782,6 @@
   Marketplace {
     Description: "The are the fish used in Farmers Market. "
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
   DirectlyPublished: true
 }

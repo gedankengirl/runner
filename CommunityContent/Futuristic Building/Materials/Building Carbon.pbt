@@ -1,8 +1,8 @@
-﻿Assets {
+Assets {
   Id: 15569596763399408364
   Name: "Building Carbon"
   PlatformAssetType: 13
-  SerializationVersion: 72
+  SerializationVersion: 73
   CustomMaterialAsset {
     BaseMaterialId: 5052175087655874841
     ParameterOverrides {

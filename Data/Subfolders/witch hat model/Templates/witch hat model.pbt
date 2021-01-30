@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 614421357213921740
   Name: "witch hat model"
   PlatformAssetType: 5
@@ -40,5 +40,5 @@
     Version: "1.0.0"
     Description: "just a model"
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

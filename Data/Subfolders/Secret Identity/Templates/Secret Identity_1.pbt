@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 10628474227384417250
   Name: "Secret Identity"
   PlatformAssetType: 5
@@ -1355,6 +1355,6 @@
   Marketplace {
     Description: "Oh no it\'s not me... It\'s... somone else."
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
   DirectlyPublished: true
 }

@@ -1,4 +1,4 @@
-﻿Name: "Headphones"
+Name: "Headphones"
 RootId: 4659024132920712891
 Objects {
   Id: 15362830320349544448

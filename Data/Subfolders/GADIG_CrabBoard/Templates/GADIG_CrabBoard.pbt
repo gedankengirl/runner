@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 15509541834173015977
   Name: "GADIG_CrabBoard"
   PlatformAssetType: 5
@@ -46,5 +46,5 @@
     Version: "1.0.0"
     Description: "Crab billboard"
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

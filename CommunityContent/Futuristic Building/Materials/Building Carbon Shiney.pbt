@@ -1,8 +1,8 @@
-﻿Assets {
+Assets {
   Id: 9737696112331393922
   Name: "Building Carbon Shiney"
   PlatformAssetType: 13
-  SerializationVersion: 72
+  SerializationVersion: 73
   CustomMaterialAsset {
     BaseMaterialId: 5052175087655874841
     ParameterOverrides {

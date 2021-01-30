@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 8662869852166588166
   Name: "Toy Bucket"
   PlatformAssetType: 5
@@ -507,6 +507,6 @@
   Marketplace {
     Description: "A toy bucket and shovel for playing in the sand :)"
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
   DirectlyPublished: true
 }

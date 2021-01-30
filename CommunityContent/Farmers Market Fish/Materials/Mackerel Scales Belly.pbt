@@ -1,8 +1,8 @@
-﻿Assets {
+Assets {
   Id: 13976435247822123261
   Name: "Mackerel Scales Belly"
   PlatformAssetType: 13
-  SerializationVersion: 72
+  SerializationVersion: 73
   CustomMaterialAsset {
     BaseMaterialId: 2988642617099388749
     ParameterOverrides {

@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 6656070991669195
   Name: "Disco Ball Client Context"
   PlatformAssetType: 5
@@ -519,5 +519,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

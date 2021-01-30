@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 12249585289919208147
   Name: "Dirt 01"
   PlatformAssetType: 2

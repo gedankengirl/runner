@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 4092205729096852388
   Name: "corregated fence w gate"
   PlatformAssetType: 5
@@ -40,5 +40,5 @@
     Version: "1.0.0"
     Description: "no working gate. made for my survival submission"
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

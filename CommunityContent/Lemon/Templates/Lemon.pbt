@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 15898701858981194497
   Name: "Lemon"
   PlatformAssetType: 5
@@ -393,6 +393,6 @@
   Marketplace {
     Description: "A Lemon"
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
   DirectlyPublished: true
 }

@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 18034040441435704630
   Name: "My Smoking Caterpillar"
   PlatformAssetType: 5
@@ -46,5 +46,5 @@
     Version: "1.0.0"
     Description: "From my Alice Entry. Hopeing some can use him in the future."
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

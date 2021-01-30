@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 1304856108651213665
   Name: "Hillcrest Cemetery"
   PlatformAssetType: 5
@@ -40,5 +40,5 @@
     Version: "1.0.0"
     Description: "A cemetery I made with all basic shapes. If you use this and find it useful please leave a rewiew for me. \r\nEnjoy :)"
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 17211744512365148018
   Name: "Donut"
   PlatformAssetType: 1
@@ -23,14 +23,5 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_half_lense_001"
-  }
-}
-Assets {
-  Id: 289143332295159697
-  Name: "Sphere - Half Thin"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_hemisphere_002"
   }
 }

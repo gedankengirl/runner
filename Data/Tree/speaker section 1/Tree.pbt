@@ -1,4 +1,4 @@
-﻿Name: "speaker section 1"
+Name: "speaker section 1"
 RootId: 8774131278659269059
 Objects {
   Id: 14159913419912931716

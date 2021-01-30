@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 6004004997884593756
   Name: "EvilMonkeyEffects"
   PlatformAssetType: 5
@@ -326,5 +326,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

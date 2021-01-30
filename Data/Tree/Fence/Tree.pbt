@@ -1,7 +1,7 @@
-﻿Name: "Fence"
-RootId: 14681343968693381477
+Name: "Fence"
+RootId: 14867123600289321220
 Objects {
-  Id: 4365403034827728785
+  Id: 13087124468828917501
   Name: "Fence03"
   Transform {
     Location {
@@ -17,7 +17,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 14681343968693381477
+  ParentId: 14867123600289321220
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -30,7 +30,7 @@ Objects {
   }
 }
 Objects {
-  Id: 9485369997379513184
+  Id: 10353691826992676216
   Name: "Fence01"
   Transform {
     Location {
@@ -45,7 +45,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 14681343968693381477
+  ParentId: 14867123600289321220
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -58,7 +58,7 @@ Objects {
   }
 }
 Objects {
-  Id: 15210395562427601787
+  Id: 9584453748419977532
   Name: "Fence02"
   Transform {
     Location {
@@ -74,7 +74,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 14681343968693381477
+  ParentId: 14867123600289321220
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -87,7 +87,7 @@ Objects {
   }
 }
 Objects {
-  Id: 16116236027511132799
+  Id: 13041171439116853451
   Name: "Fence04"
   Transform {
     Location {
@@ -103,7 +103,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 14681343968693381477
+  ParentId: 14867123600289321220
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }

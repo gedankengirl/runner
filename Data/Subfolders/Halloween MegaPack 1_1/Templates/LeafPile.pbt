@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 1250434601975773047
   Name: "LeafPile"
   PlatformAssetType: 5
@@ -6718,6 +6718,6 @@
   Marketplace {
     Description: "Here is a CC Mega Pack full of Halloween goodies. Candy, Monsters, Props, etc."
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
   DirectlyPublished: true
 }

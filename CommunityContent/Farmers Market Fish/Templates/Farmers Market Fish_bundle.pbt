@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 590041633447981896
   Name: "Farmers Market Fish"
   PlatformAssetType: 5
@@ -43,5 +43,5 @@
     Version: "1.1.0"
     Description: "The are the fish used in Farmers Market. "
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

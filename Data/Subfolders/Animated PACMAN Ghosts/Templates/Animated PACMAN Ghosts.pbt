@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 1473914038185998769
   Name: "Animated PACMAN Ghosts"
   PlatformAssetType: 5
@@ -46,5 +46,5 @@
     Version: "1.0.0"
     Description: "Looks great in your hub world."
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

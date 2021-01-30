@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 11259929999270036456
   Name: "Clear Coat 01"
   PlatformAssetType: 2

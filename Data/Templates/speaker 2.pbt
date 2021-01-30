@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 4391352709367392192
   Name: "speaker 2"
   PlatformAssetType: 5
@@ -249,5 +249,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

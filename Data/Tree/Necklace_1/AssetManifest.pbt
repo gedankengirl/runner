@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 16628730901845472849
   Name: "Cylinder"
   PlatformAssetType: 1

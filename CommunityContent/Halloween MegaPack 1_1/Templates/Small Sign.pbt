@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 3923359383786144572
   Name: "Small Sign"
   PlatformAssetType: 5
@@ -1247,6 +1247,6 @@
   Marketplace {
     Description: "Here is a CC Mega Pack full of Halloween goodies. Candy, Monsters, Props, etc."
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
   DirectlyPublished: true
 }

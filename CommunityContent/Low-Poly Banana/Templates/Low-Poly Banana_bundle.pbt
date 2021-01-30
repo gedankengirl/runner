@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 4381059495905011519
   Name: "Low-Poly Banana"
   PlatformAssetType: 5
@@ -40,5 +40,5 @@
     Version: "1.0.0"
     Description: "A low-poly style banana"
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 8187912940210062696
   Name: "Hill Crest Cemetery"
   PlatformAssetType: 5
@@ -139927,6 +139927,6 @@
   Marketplace {
     Description: "A cemetery I made with all basic shapes. If you use this and find it useful please leave a rewiew for me. \r\nEnjoy :)"
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
   DirectlyPublished: true
 }

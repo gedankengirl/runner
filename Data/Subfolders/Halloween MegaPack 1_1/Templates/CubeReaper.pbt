@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 9072695575845901117
   Name: "CubeReaper"
   PlatformAssetType: 5
@@ -1304,6 +1304,6 @@
   Marketplace {
     Description: "Here is a CC Mega Pack full of Halloween goodies. Candy, Monsters, Props, etc."
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
   DirectlyPublished: true
 }

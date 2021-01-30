@@ -1,4 +1,4 @@
-﻿Name: "Party Blower"
+Name: "Party Blower"
 RootId: 2385299363963367136
 Objects {
   Id: 14537305816717916462

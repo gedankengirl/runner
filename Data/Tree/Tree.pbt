@@ -1,4 +1,4 @@
-﻿Name: "Root"
+Name: "Root"
 RootId: 4781671109827199097
 Objects {
   Id: 4781671109827199097
@@ -1873,9 +1873,9 @@ Objects {
   Name: "Spawn Point"
   Transform {
     Location {
-      X: 794.275513
-      Y: 19556.4824
-      Z: 165.016235
+      X: -20324.9512
+      Y: 18989.2773
+      Z: 391.824219
     }
     Rotation {
     }

@@ -1,8 +1,8 @@
-﻿Assets {
+Assets {
   Id: 15671991721512516472
   Name: "Custom Spicer-Eyes"
   PlatformAssetType: 13
-  SerializationVersion: 72
+  SerializationVersion: 73
   CustomMaterialAsset {
     BaseMaterialId: 13102472956238261432
     ParameterOverrides {

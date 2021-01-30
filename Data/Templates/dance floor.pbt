@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 5330921416195742546
   Name: "dance floor"
   PlatformAssetType: 5
@@ -1876,5 +1876,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 8991335705890327735
   Name: "Fences_Gates"
   PlatformAssetType: 5
@@ -3886,6 +3886,6 @@
   Marketplace {
     Description: "Here is a CC Mega Pack full of Halloween goodies. Candy, Monsters, Props, etc."
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
   DirectlyPublished: true
 }

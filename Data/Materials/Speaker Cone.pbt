@@ -1,8 +1,8 @@
-﻿Assets {
+Assets {
   Id: 8046258331502496081
   Name: "Speaker Cone"
   PlatformAssetType: 13
-  SerializationVersion: 72
+  SerializationVersion: 73
   CustomMaterialAsset {
     BaseMaterialId: 2258330122587909962
     ParameterOverrides {

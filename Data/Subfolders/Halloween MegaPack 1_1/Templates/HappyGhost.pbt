@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 2915501724042438958
   Name: "HappyGhost"
   PlatformAssetType: 5
@@ -820,6 +820,6 @@
   Marketplace {
     Description: "Here is a CC Mega Pack full of Halloween goodies. Candy, Monsters, Props, etc."
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
   DirectlyPublished: true
 }

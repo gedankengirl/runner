@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 1554452554864307959
   Name: "DJ Table"
   PlatformAssetType: 5
@@ -1956,5 +1956,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

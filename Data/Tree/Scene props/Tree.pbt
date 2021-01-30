@@ -1,11 +1,11 @@
-﻿Name: "Scene props"
+Name: "Scene props"
 RootId: 7553754998792656332
 Objects {
   Id: 10665984139206756167
   Name: "Pet Barn"
   Transform {
     Location {
-      X: 500
+      X: -20409.582
       Y: 18704.2148
       Z: -700
     }
@@ -27,6 +27,34 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "Pet Barn"
+  }
+}
+Objects {
+  Id: 12794903354937555053
+  Name: "Forest"
+  Transform {
+    Location {
+      X: 649.34375
+      Y: 20009.2949
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 7553754998792656332
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "Forest"
   }
 }
 Objects {

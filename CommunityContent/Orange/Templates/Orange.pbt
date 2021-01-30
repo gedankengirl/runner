@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 3510463524249440279
   Name: "Orange"
   PlatformAssetType: 5
@@ -210,6 +210,6 @@
   Marketplace {
     Description: "Just an orange"
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
   DirectlyPublished: true
 }

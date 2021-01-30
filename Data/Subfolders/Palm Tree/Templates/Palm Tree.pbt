@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 12629833819506799912
   Name: "Palm Tree"
   PlatformAssetType: 5
@@ -40,5 +40,5 @@
     Version: "1.0.0"
     Description: "A simple palm tree with coconuts"
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

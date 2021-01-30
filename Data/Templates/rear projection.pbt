@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 11218480001614962198
   Name: "rear projection"
   PlatformAssetType: 5
@@ -161,5 +161,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

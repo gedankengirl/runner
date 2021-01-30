@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 18407147136566773042
   Name: "Metal Diamond Plates 02"
   PlatformAssetType: 2

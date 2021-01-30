@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 16108440458181281713
   Name: "CubeFranky"
   PlatformAssetType: 5
@@ -1461,6 +1461,6 @@
   Marketplace {
     Description: "Here is a CC Mega Pack full of Halloween goodies. Candy, Monsters, Props, etc."
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
   DirectlyPublished: true
 }

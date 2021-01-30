@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 3838933192147788212
   Name: "Orange"
   PlatformAssetType: 5
@@ -40,5 +40,5 @@
     Version: "1.0.0"
     Description: "Just an orange"
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

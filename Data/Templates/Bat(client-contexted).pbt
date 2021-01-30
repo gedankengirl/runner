@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 12325720584492096876
   Name: "Bat(client-contexted)"
   PlatformAssetType: 5
@@ -4226,5 +4226,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

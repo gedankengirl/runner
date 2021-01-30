@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 16629170984132490956
   Name: "Cemetery"
   PlatformAssetType: 5
@@ -8284,5 +8284,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

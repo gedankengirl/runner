@@ -1,4 +1,4 @@
-﻿Name: "Disco group"
+Name: "Disco group"
 RootId: 12387650148172351450
 Objects {
   Id: 4257078180759420519

@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 17844254492972452058
   Name: "Apples"
   PlatformAssetType: 5
@@ -733,6 +733,6 @@
   Marketplace {
     Description: "Here is a CC Mega Pack full of Halloween goodies. Candy, Monsters, Props, etc."
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
   DirectlyPublished: true
 }

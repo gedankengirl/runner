@@ -1,4 +1,4 @@
-﻿MetaVersion: 1
+MetaVersion: 1
 MarketplaceDetails {
   Id: "35d27279dec44db6b02df8b60986d8e1"
   OwnerAccountId: "8aa6e0c558be4a1c98e80229b73ffeb9"

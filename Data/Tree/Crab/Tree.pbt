@@ -1,4 +1,4 @@
-﻿Name: "Crab"
+Name: "Crab"
 RootId: 5918962060276845217
 Objects {
   Id: 8388683526200495264
@@ -114,7 +114,7 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Right eye_1"
+    FilePartitionName: "Right eye_4"
   }
 }
 Objects {
@@ -144,7 +144,7 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Left eye_1"
+    FilePartitionName: "Left eye_4"
   }
 }
 Objects {

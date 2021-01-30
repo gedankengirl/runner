@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 6831298658357706632
   Name: "Mergelandia Props"
   PlatformAssetType: 5
@@ -40,5 +40,5 @@
     Version: "1.0.0"
     Description: "This contains food, coins, trees, crates, chests, mana crystals, and statues from Mergelandia. Enjoy!\r\n\r\nBig props to the Merglandia team for such awesome content!"
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

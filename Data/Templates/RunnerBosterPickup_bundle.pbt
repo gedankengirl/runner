@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 11177347287288288650
   Name: "RunnerBosterPickup"
   PlatformAssetType: 5
@@ -40,5 +40,5 @@
     Version: "1.0.0"
     Description: "RunnerBosterPickup"
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

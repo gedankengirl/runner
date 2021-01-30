@@ -1,4 +1,4 @@
-﻿Name: "Bull"
+Name: "Bull"
 RootId: 14957012823790861710
 Objects {
   Id: 2121751075096493428
@@ -952,7 +952,7 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Eye_1"
+    FilePartitionName: "Eye_6"
   }
   InstanceHistory {
     SelfId: 5880664458129295636
@@ -990,7 +990,7 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Eye"
+    FilePartitionName: "Eye_7"
   }
   InstanceHistory {
     SelfId: 2141834646163036883

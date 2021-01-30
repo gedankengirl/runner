@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 16681173327285042258
   Name: "Futuristic Building"
   PlatformAssetType: 5
@@ -46,5 +46,5 @@
     Version: "1.0.0"
     Description: "22 floor futuristic building"
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

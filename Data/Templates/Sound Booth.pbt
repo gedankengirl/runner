@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 16606290206479975363
   Name: "Sound Booth"
   PlatformAssetType: 5
@@ -1382,5 +1382,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }

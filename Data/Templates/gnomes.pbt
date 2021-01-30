@@ -1,4 +1,4 @@
-﻿Assets {
+Assets {
   Id: 12754538166903418309
   Name: "gnomes"
   PlatformAssetType: 5
@@ -3893,5 +3893,5 @@
       AssetId: "None"
     }
   }
-  SerializationVersion: 72
+  SerializationVersion: 73
 }
