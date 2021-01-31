@@ -1,65 +1,7 @@
 Name: "Left eye_4"
-RootId: 10024122421494311200
+RootId: 4057057806069083601
 Objects {
-  Id: 2090267011441130854
-  Name: "Sphere - Half Thin"
-  Transform {
-    Location {
-      Z: -2.60054348e-05
-    }
-    Rotation {
-      Pitch: 10.4351692
-      Yaw: 25.0548592
-      Roll: -101.870026
-    }
-    Scale {
-      X: 0.3354325
-      Y: 0.3354325
-      Z: 0.3354325
-    }
-  }
-  ParentId: 10024122421494311200
-  UnregisteredParameters {
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 10184847056121543272
-      }
-    }
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:color"
-      Color {
-        R: 0.617708385
-        G: 0.078439191
-        A: 1
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CoreMesh {
-    MeshAsset {
-      Id: 289143332295159697
-    }
-    Teams {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    EnableCameraCollision: true
-    StaticMesh {
-      Physics {
-        Mass: 100
-        LinearDamping: 0.01
-      }
-    }
-  }
-}
-Objects {
-  Id: 13421149145362833860
+  Id: 8592933224332000760
   Name: "Lens - Half"
   Transform {
     Location {
@@ -69,8 +11,8 @@ Objects {
     }
     Rotation {
       Pitch: 74.2436295
-      Yaw: -109.386658
-      Roll: -41.841156
+      Yaw: -109.386665
+      Roll: -41.8411674
     }
     Scale {
       X: 0.294117928
@@ -78,7 +20,7 @@ Objects {
       Z: 0.294117928
     }
   }
-  ParentId: 10024122421494311200
+  ParentId: 4057057806069083601
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:color"
@@ -123,7 +65,7 @@ Objects {
   }
 }
 Objects {
-  Id: 1661832012640452415
+  Id: 15973065907190473407
   Name: "Donut"
   Transform {
     Location {
@@ -142,7 +84,7 @@ Objects {
       Z: 0.302521318
     }
   }
-  ParentId: 10024122421494311200
+  ParentId: 4057057806069083601
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:color"

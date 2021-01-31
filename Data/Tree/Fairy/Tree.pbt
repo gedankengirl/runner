@@ -54,7 +54,7 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Arms"
+    FilePartitionName: "Arms_1"
   }
 }
 Objects {
@@ -538,9 +538,8 @@ Objects {
     Overrides {
       Name: "ma:Shared_BaseMaterial:color"
       Color {
-        R: 0.838541687
-        G: 0.472969294
-        B: 0.386952102
+        R: 0.579206526
+        G: 0.890000105
         A: 1
       }
     }
@@ -596,7 +595,7 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Right eye_1"
+    FilePartitionName: "Right eye_2"
   }
 }
 Objects {
@@ -627,7 +626,7 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Left eye_1"
+    FilePartitionName: "Left eye_2"
   }
 }
 Objects {
@@ -639,7 +638,7 @@ Objects {
     }
     Rotation {
       Pitch: 28.2610874
-      Yaw: -20.874155
+      Yaw: -20.8741341
       Roll: 3.39260964e-06
     }
     Scale {

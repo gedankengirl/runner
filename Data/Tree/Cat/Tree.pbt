@@ -2295,7 +2295,7 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Vibrisses"
+    FilePartitionName: "Vibrisses_3"
   }
 }
 Objects {
@@ -2324,7 +2324,7 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Vibrisses_1"
+    FilePartitionName: "Vibrisses_4"
   }
 }
 Objects {

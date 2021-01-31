@@ -5,7 +5,7 @@ Objects {
   Name: "Mermaid_turquoise"
   Transform {
     Location {
-      Y: 385.888672
+      Y: 269.914063
     }
     Rotation {
     }
@@ -32,7 +32,8 @@ Objects {
   Name: "Mermaid_golden"
   Transform {
     Location {
-      Y: 205.974609
+      X: -227.214844
+      Y: 272.384766
     }
     Rotation {
     }

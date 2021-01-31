@@ -1,122 +1,61 @@
 Name: "Vibrisses"
-RootId: 9944437943845514198
+RootId: 8486486228528795900
 Objects {
-  Id: 10439440007081750390
-  Name: "Cylinder - Rounded"
+  Id: 8729764340812041644
+  Name: "Vibrisses"
   Transform {
     Location {
-      Y: 0.94921875
-      Z: -1.52587891e-05
+      Y: 24.5820313
+      Z: 3.05175781e-05
     }
     Rotation {
-      Pitch: 4.67584467
-      Yaw: -3.09518456
-      Roll: 104.661934
+      Yaw: 6.10351344e-05
     }
     Scale {
-      X: 0.00501998607
-      Y: 0.00502020121
-      Z: 0.269395322
+      X: 1.01186919
+      Y: -1.01186919
+      Z: 1.01186919
     }
   }
-  ParentId: 9944437943845514198
-  UnregisteredParameters {
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 10184847056121543272
-      }
-    }
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:color"
-      Color {
-        R: 1
-        G: 1
-        B: 1
-        A: 1
-      }
-    }
-  }
+  ParentId: 8486486228528795900
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
-  CoreMesh {
-    MeshAsset {
-      Id: 15934210186397621780
-    }
-    Teams {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    EnableCameraCollision: true
-    StaticMesh {
-      Physics {
-        Mass: 100
-        LinearDamping: 0.01
-      }
-    }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "Vibrisses_1"
   }
 }
 Objects {
-  Id: 792557189653719174
-  Name: "Cylinder - Rounded"
+  Id: 13671475904462388303
+  Name: "Vibrisses"
   Transform {
     Location {
-      Y: -0.951171875
-      Z: 3.38365173
+      X: 2.61856e-05
+      Y: -24.581316
+      Z: -1.5439904e-05
     }
     Rotation {
-      Pitch: 4.67584467
-      Yaw: -3.0951848
-      Roll: 104.661896
+      Yaw: 6.10351381e-05
     }
     Scale {
-      X: 0.00501998607
-      Y: 0.00502020121
-      Z: 0.269395322
+      X: 1.01186931
+      Y: 1.01186931
+      Z: 1.01186931
     }
   }
-  ParentId: 9944437943845514198
-  UnregisteredParameters {
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 10184847056121543272
-      }
-    }
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:color"
-      Color {
-        R: 1
-        G: 1
-        B: 1
-        A: 1
-      }
-    }
-  }
+  ParentId: 8486486228528795900
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
-  CoreMesh {
-    MeshAsset {
-      Id: 15934210186397621780
-    }
-    Teams {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    EnableCameraCollision: true
-    StaticMesh {
-      Physics {
-        Mass: 100
-        LinearDamping: 0.01
-      }
-    }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "Vibrisses_2"
   }
 }

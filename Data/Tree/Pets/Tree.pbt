@@ -5,7 +5,7 @@ Objects {
   Name: "Forest group"
   Transform {
     Location {
-      Y: 3935.57422
+      Y: 4190.58
     }
     Rotation {
     }

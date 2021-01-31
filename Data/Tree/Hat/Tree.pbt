@@ -30,8 +30,8 @@ Objects {
       Name: "ma:Shared_BaseMaterial:color"
       Color {
         R: 1
-        G: 0.785872936
-        B: 0.290000081
+        G: 0.875142813
+        B: 0.586
         A: 1
       }
     }
@@ -89,8 +89,8 @@ Objects {
       Name: "ma:Shared_BaseMaterial:color"
       Color {
         R: 1
-        G: 0.785872936
-        B: 0.290000081
+        G: 0.875142813
+        B: 0.586
         A: 1
       }
     }
@@ -150,7 +150,7 @@ Objects {
     }
     Overrides {
       Name: "ma:Shared_BaseMaterial:smart"
-      Bool: true
+      Bool: false
     }
   }
   Collidable_v2 {
