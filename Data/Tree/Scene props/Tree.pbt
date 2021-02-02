@@ -2,7 +2,7 @@ Name: "Scene props"
 RootId: 7553754998792656332
 Objects {
   Id: 10665984139206756167
-  Name: "Pet Barn"
+  Name: "Home base"
   Transform {
     Location {
       X: -20409.582
@@ -26,7 +26,7 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Pet Barn"
+    FilePartitionName: "Home base"
   }
 }
 Objects {

@@ -1,7 +1,7 @@
-Name: "Padlock - 3 digits"
-RootId: 5285863831581891795
+Name: "Padlock - 3 digits_2"
+RootId: 4083495961948829864
 Objects {
-  Id: 17813724651534981207
+  Id: 16801351827342578405
   Name: "Ring - Quarter Thick"
   Transform {
     Location {
@@ -17,7 +17,7 @@ Objects {
       Z: 0.908833325
     }
   }
-  ParentId: 5285863831581891795
+  ParentId: 4083495961948829864
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -50,7 +50,7 @@ Objects {
   }
 }
 Objects {
-  Id: 2146074019514426995
+  Id: 3412381771482321224
   Name: "Ring - Quarter Thick"
   Transform {
     Location {
@@ -65,7 +65,7 @@ Objects {
       Z: 0.908833206
     }
   }
-  ParentId: 5285863831581891795
+  ParentId: 4083495961948829864
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -98,7 +98,7 @@ Objects {
   }
 }
 Objects {
-  Id: 9752227003409742892
+  Id: 6445592500340699852
   Name: "Plaque"
   Transform {
     Location {
@@ -112,7 +112,7 @@ Objects {
       Z: 1.00000024
     }
   }
-  ParentId: 5285863831581891795
+  ParentId: 4083495961948829864
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -121,11 +121,11 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Plaque"
+    FilePartitionName: "Plaque_2"
   }
 }
 Objects {
-  Id: 14962968696008313197
+  Id: 5088937187468494829
   Name: "Cube - Rounded Bottom-Aligned"
   Transform {
     Location {
@@ -138,7 +138,7 @@ Objects {
       Z: 1.00000024
     }
   }
-  ParentId: 5285863831581891795
+  ParentId: 4083495961948829864
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"

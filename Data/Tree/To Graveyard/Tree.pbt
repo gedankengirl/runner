@@ -88,87 +88,6 @@ Objects {
   }
 }
 Objects {
-  Id: 1753965412140468059
-  Name: "PadlockClientContext"
-  Transform {
-    Location {
-      X: 43.720459
-      Y: 27.3649788
-      Z: 152.731705
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 12977225123815053029
-  ChildIds: 5203387498763691867
-  WantsNetworking: true
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:forceoff"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  NetworkContext {
-  }
-}
-Objects {
-  Id: 5203387498763691867
-  Name: "ClientContext"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 1753965412140468059
-  ChildIds: 2612494655566885215
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:forceoff"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  NetworkContext {
-  }
-}
-Objects {
-  Id: 2612494655566885215
-  Name: "Padlock - 3 digits"
-  Transform {
-    Location {
-      Z: -2.55095183e-05
-    }
-    Rotation {
-    }
-    Scale {
-      X: 0.358229309
-      Y: 0.358229309
-      Z: 0.358229309
-    }
-  }
-  ParentId: 5203387498763691867
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "Padlock - 3 digits"
-  }
-}
-Objects {
   Id: 15297254130400343282
   Name: "Teleporter"
   Transform {
@@ -189,6 +108,7 @@ Objects {
   ChildIds: 17683569527331874273
   ChildIds: 14885974327686798620
   ChildIds: 2633714835844955001
+  ChildIds: 15369457593930350977
   UnregisteredParameters {
     Overrides {
       Name: "cs:Target"
@@ -256,8 +176,48 @@ Objects {
   }
 }
 Objects {
+  Id: 15369457593930350977
+  Name: "Force field trigger"
+  Transform {
+    Location {
+      Z: 75
+    }
+    Rotation {
+    }
+    Scale {
+      X: 2.00795507
+      Y: 2.00795507
+      Z: 2.22683978
+    }
+  }
+  ParentId: 15297254130400343282
+  UnregisteredParameters {
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Trigger {
+    TeamSettings {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    TriggerShape_v2 {
+      Value: "mc:etriggershape:capsule"
+    }
+  }
+  InstanceHistory {
+    SelfId: 2633714835844955001
+    SubobjectId: 10724094219624853734
+    InstanceId: 12446202931934361455
+    TemplateId: 9109379844744492242
+  }
+}
+Objects {
   Id: 2633714835844955001
-  Name: "Trigger"
+  Name: "Teleport trigger"
   Transform {
     Location {
       Z: 75
@@ -310,9 +270,9 @@ Objects {
     }
   }
   ParentId: 15297254130400343282
-  ChildIds: 10680444434149675370
   ChildIds: 7102767976715428831
   ChildIds: 678161519258690949
+  ChildIds: 17057582357031964093
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -329,6 +289,118 @@ Objects {
     SubobjectId: 9136376097970247299
     InstanceId: 12446202931934361455
     TemplateId: 9109379844744492242
+  }
+}
+Objects {
+  Id: 17057582357031964093
+  Name: "BarrierClientContext"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 14885974327686798620
+  ChildIds: 6330299888300522327
+  ChildIds: 2612494655566885215
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  NetworkContext {
+  }
+}
+Objects {
+  Id: 2612494655566885215
+  Name: "Padlock - 3 digits"
+  Transform {
+    Location {
+      Z: 152.731705
+    }
+    Rotation {
+    }
+    Scale {
+      X: 0.358229309
+      Y: 0.358229309
+      Z: 0.358229309
+    }
+  }
+  ParentId: 17057582357031964093
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "Padlock - 3 digits_3"
+  }
+}
+Objects {
+  Id: 6330299888300522327
+  Name: "Restrictive barrier"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1.64083469
+      Y: 1.64083469
+      Z: 1.49843
+    }
+  }
+  ParentId: 17057582357031964093
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 7625382804772008570
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.0793968216
+        B: 0.122000098
+        A: 1
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 13846976516959842924
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    EnableCameraCollision: true
+    StaticMesh {
+      Physics {
+      }
+    }
+  }
+  InstanceHistory {
+    SelfId: 6330299888300522327
+    SubobjectId: 13244279783212375693
+    InstanceId: 3141865312036887679
+    TemplateId: 8072276412441393964
+    WasRoot: true
   }
 }
 Objects {
@@ -446,64 +518,6 @@ Objects {
     SubobjectId: 15189918855055894592
     InstanceId: 12446202931934361455
     TemplateId: 9109379844744492242
-  }
-}
-Objects {
-  Id: 10680444434149675370
-  Name: "Restrictive barrier"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1.64083469
-      Y: 1.64083469
-      Z: 1.49843
-    }
-  }
-  ParentId: 14885974327686798620
-  UnregisteredParameters {
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 7625382804772008570
-      }
-    }
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:color"
-      Color {
-        R: 0.0793968216
-        B: 0.122000098
-        A: 1
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CoreMesh {
-    MeshAsset {
-      Id: 13846976516959842924
-    }
-    Teams {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    EnableCameraCollision: true
-    StaticMesh {
-      Physics {
-      }
-    }
-  }
-  InstanceHistory {
-    SelfId: 10680444434149675370
-    SubobjectId: 4404424931568353790
-    InstanceId: 11730628622584063619
-    TemplateId: 2324683983699743525
   }
 }
 Objects {

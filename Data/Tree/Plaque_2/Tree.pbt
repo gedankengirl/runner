@@ -1,7 +1,7 @@
-Name: "Plaque"
-RootId: 9752227003409742892
+Name: "Plaque_2"
+RootId: 6445592500340699852
 Objects {
-  Id: 10961125988896249694
+  Id: 1870923568919495601
   Name: "Level req - 3 digits"
   Transform {
     Location {
@@ -17,7 +17,7 @@ Objects {
       Z: 0.816050351
     }
   }
-  ParentId: 9752227003409742892
+  ParentId: 6445592500340699852
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -26,11 +26,11 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Level req - 3 digits"
+    FilePartitionName: "Level req - 3 digits_2"
   }
 }
 Objects {
-  Id: 13200358642441758621
+  Id: 17321014654023942277
   Name: "Cube"
   Transform {
     Location {
@@ -43,7 +43,7 @@ Objects {
       Z: 0.302133322
     }
   }
-  ParentId: 9752227003409742892
+  ParentId: 6445592500340699852
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"

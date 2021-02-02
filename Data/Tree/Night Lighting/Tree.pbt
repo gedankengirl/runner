@@ -123,7 +123,7 @@ Objects {
     }
     Overrides {
       Name: "bp:Intensity"
-      Float: 2.13679886
+      Float: 1.20470452
     }
     Overrides {
       Name: "bp:Occlusion Contrast"
@@ -153,9 +153,9 @@ Objects {
     Overrides {
       Name: "bp:Tint Color"
       Color {
-        R: 1
-        G: 0.616190434
-        B: 0.194
+        R: 0.398230284
+        G: 0.454848647
+        B: 0.576041698
         A: 1
       }
     }

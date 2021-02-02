@@ -1,7 +1,7 @@
-Name: "Level req - 3 digits"
-RootId: 10961125988896249694
+Name: "Level req - 3 digits_2"
+RootId: 1870923568919495601
 Objects {
-  Id: 8328629646380255386
+  Id: 10979925160773587983
   Name: "Text 04: 0"
   Transform {
     Location {
@@ -16,7 +16,7 @@ Objects {
       Z: 0.19589816
     }
   }
-  ParentId: 10961125988896249694
+  ParentId: 1870923568919495601
   UnregisteredParameters {
     Overrides {
       Name: "ma:Font.Faces:id"
@@ -89,7 +89,7 @@ Objects {
   }
 }
 Objects {
-  Id: 11048386246721998636
+  Id: 2635080387189614168
   Name: "Text 04: 0"
   Transform {
     Location {
@@ -104,7 +104,7 @@ Objects {
       Z: 0.19589816
     }
   }
-  ParentId: 10961125988896249694
+  ParentId: 1870923568919495601
   UnregisteredParameters {
     Overrides {
       Name: "ma:Font.Faces:id"
@@ -177,7 +177,7 @@ Objects {
   }
 }
 Objects {
-  Id: 2013431526128911237
+  Id: 1860995456186842418
   Name: "Text 04: 0"
   Transform {
     Location {
@@ -191,7 +191,7 @@ Objects {
       Z: 0.19589816
     }
   }
-  ParentId: 10961125988896249694
+  ParentId: 1870923568919495601
   UnregisteredParameters {
     Overrides {
       Name: "ma:Font.Faces:id"
