@@ -476,6 +476,6 @@ Assets {
   Marketplace {
     Description: "For inclusion in your gaming paradise!"
   }
-  SerializationVersion: 73
+  SerializationVersion: 74
   DirectlyPublished: true
 }

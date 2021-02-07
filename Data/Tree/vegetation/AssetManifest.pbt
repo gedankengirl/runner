@@ -44,6 +44,24 @@ Assets {
   }
 }
 Assets {
+  Id: 6191334647174897868
+  Name: "Branches Cluster Small"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_gen_branches_small_001"
+  }
+}
+Assets {
+  Id: 5517246664425075321
+  Name: "Branches Cluster Medium"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_gen_branches_medium_001"
+  }
+}
+Assets {
   Id: 5360248459253508103
   Name: "Flower Wild Lily 01"
   PlatformAssetType: 1

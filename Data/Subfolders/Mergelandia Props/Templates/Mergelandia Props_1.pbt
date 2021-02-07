@@ -37412,6 +37412,6 @@ Assets {
   Marketplace {
     Description: "This contains food, coins, trees, crates, chests, mana crystals, and statues from Mergelandia. Enjoy!\r\n\r\nBig props to the Merglandia team for such awesome content!"
   }
-  SerializationVersion: 73
+  SerializationVersion: 74
   DirectlyPublished: true
 }

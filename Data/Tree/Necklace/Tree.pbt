@@ -1,7 +1,7 @@
 Name: "Necklace"
-RootId: 7517530515135515280
+RootId: 15051892050617190650
 Objects {
-  Id: 10731924186252395131
+  Id: 9659264619528049787
   Name: "Ring - Quarter Thin"
   Transform {
     Location {
@@ -20,7 +20,7 @@ Objects {
       Z: 0.44655934
     }
   }
-  ParentId: 7517530515135515280
+  ParentId: 15051892050617190650
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -30,14 +30,13 @@ Objects {
     }
     Overrides {
       Name: "ma:Shared_BaseMaterial:smart"
-      Bool: true
+      Bool: false
     }
     Overrides {
       Name: "ma:Shared_BaseMaterial:color"
       Color {
-        R: 0.638541698
-        G: 0.638541698
-        B: 0.638541698
+        G: 0.412222385
+        B: 0.490000129
         A: 1
       }
     }
@@ -66,7 +65,7 @@ Objects {
   }
 }
 Objects {
-  Id: 12258844985184446593
+  Id: 2221602324585885965
   Name: "Ring - Quarter Thin"
   Transform {
     Location {
@@ -85,7 +84,7 @@ Objects {
       Z: 0.44655934
     }
   }
-  ParentId: 7517530515135515280
+  ParentId: 15051892050617190650
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -95,14 +94,13 @@ Objects {
     }
     Overrides {
       Name: "ma:Shared_BaseMaterial:smart"
-      Bool: true
+      Bool: false
     }
     Overrides {
       Name: "ma:Shared_BaseMaterial:color"
       Color {
-        R: 0.638541698
-        G: 0.638541698
-        B: 0.638541698
+        G: 0.412222385
+        B: 0.490000129
         A: 1
       }
     }
@@ -131,7 +129,7 @@ Objects {
   }
 }
 Objects {
-  Id: 14625221457780655368
+  Id: 15535761365242448203
   Name: "Bone Human Skull 01"
   Transform {
     Location {
@@ -143,12 +141,12 @@ Objects {
       Roll: 24.7499409
     }
     Scale {
-      X: 0.703661203
-      Y: 0.703661203
-      Z: 0.703661203
+      X: 0.965393543
+      Y: 0.965393543
+      Z: 0.965393543
     }
   }
-  ParentId: 7517530515135515280
+  ParentId: 15051892050617190650
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -159,9 +157,8 @@ Objects {
     Overrides {
       Name: "ma:Shared_BaseMaterial:color"
       Color {
-        R: 0.688541591
-        G: 0.688541591
-        B: 0.688541591
+        G: 0.412222385
+        B: 0.490000129
         A: 1
       }
     }

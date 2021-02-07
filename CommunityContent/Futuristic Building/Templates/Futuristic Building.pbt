@@ -145067,6 +145067,6 @@ Assets {
   Marketplace {
     Description: "22 floor futuristic building"
   }
-  SerializationVersion: 73
+  SerializationVersion: 74
   DirectlyPublished: true
 }

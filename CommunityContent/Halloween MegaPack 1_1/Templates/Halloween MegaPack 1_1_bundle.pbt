@@ -175,5 +175,5 @@ Assets {
     Version: "1.0.0"
     Description: "Here is a CC Mega Pack full of Halloween goodies. Candy, Monsters, Props, etc."
   }
-  SerializationVersion: 73
+  SerializationVersion: 74
 }

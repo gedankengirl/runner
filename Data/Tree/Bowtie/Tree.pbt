@@ -1,24 +1,93 @@
 Name: "Bowtie"
-RootId: 2121751075096493428
+RootId: 11812781413550281801
 Objects {
-  Id: 827021835092525379
+  Id: 696431406947290692
+  Name: "Gem - Radiant Polished"
+  Transform {
+    Location {
+      X: -0.0181947015
+      Y: -5.42337819e-09
+      Z: 0.000321762171
+    }
+    Rotation {
+      Pitch: 90
+      Roll: 5.33587468e-08
+    }
+    Scale {
+      X: 1.51188266
+      Y: 1.51188266
+      Z: 1.51188266
+    }
+  }
+  ParentId: 11812781413550281801
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 13309346029814269858
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:utile"
+      Float: 0.25
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:vtile"
+      Float: 0.25
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 2839016978971507306
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    EnableCameraCollision: true
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+    }
+  }
+}
+Objects {
+  Id: 17399361559451891756
   Name: "Cone"
   Transform {
     Location {
-      X: 0.0262093656
-      Y: -243.104
-      Z: 0.00389325619
+      X: 0.0211503506
+      Y: -243.106232
+      Z: 0.00501629664
     }
     Rotation {
       Roll: 89.9999924
     }
     Scale {
-      X: 0.5
-      Y: 1.83900118
-      Z: 3.84164023
+      X: 0.500002086
+      Y: 2.95175433
+      Z: 3.84164
     }
   }
-  ParentId: 2121751075096493428
+  ParentId: 11812781413550281801
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -33,9 +102,8 @@ Objects {
     Overrides {
       Name: "ma:Shared_BaseMaterial:color"
       Color {
-        R: 0.0553166196
-        G: 0.580208302
-        B: 0.0207044575
+        G: 0.412222385
+        B: 0.490000129
         A: 1
       }
     }
@@ -70,22 +138,24 @@ Objects {
   }
 }
 Objects {
-  Id: 17511704353224227920
+  Id: 7330217220855721291
   Name: "Cone"
   Transform {
     Location {
-      Y: 243.103638
+      X: -0.000453003886
+      Y: 243.106232
+      Z: 9.89663604e-05
     }
     Rotation {
       Roll: -90
     }
     Scale {
-      X: 0.5
-      Y: 1.83941126
-      Z: 3.84164023
+      X: 0.500002086
+      Y: 2.95241284
+      Z: 3.84164
     }
   }
-  ParentId: 2121751075096493428
+  ParentId: 11812781413550281801
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -100,9 +170,8 @@ Objects {
     Overrides {
       Name: "ma:Shared_BaseMaterial:color"
       Color {
-        R: 0.0553166196
-        G: 0.580208302
-        B: 0.0207044575
+        G: 0.412222385
+        B: 0.490000129
         A: 1
       }
     }
@@ -132,73 +201,6 @@ Objects {
   InstanceHistory {
     SelfId: 17511704353224227920
     SubobjectId: 17681339733615073332
-    InstanceId: 16048335809180774042
-    TemplateId: 5137771896592679532
-  }
-}
-Objects {
-  Id: 18381380988449232664
-  Name: "Cube - Rounded"
-  Transform {
-    Location {
-      X: -3.22894907
-      Z: 0.0571020022
-    }
-    Rotation {
-    }
-    Scale {
-      X: 0.5
-      Y: 0.815638363
-      Z: 0.815638363
-    }
-  }
-  ParentId: 2121751075096493428
-  UnregisteredParameters {
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 6444890610919955733
-      }
-    }
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:smart"
-      Bool: true
-    }
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:color"
-      Color {
-        R: 0.0553166196
-        G: 0.580208302
-        B: 0.0207044575
-        A: 1
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CoreMesh {
-    MeshAsset {
-      Id: 13691346472995936609
-    }
-    Teams {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    EnableCameraCollision: true
-    StaticMesh {
-      Physics {
-        Mass: 100
-        LinearDamping: 0.01
-      }
-    }
-  }
-  InstanceHistory {
-    SelfId: 18381380988449232664
-    SubobjectId: 17974259755565560700
     InstanceId: 16048335809180774042
     TemplateId: 5137771896592679532
   }

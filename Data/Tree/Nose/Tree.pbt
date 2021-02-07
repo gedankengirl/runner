@@ -1,11 +1,11 @@
 Name: "Nose"
-RootId: 17283843903726346757
+RootId: 8042851660245824882
 Objects {
-  Id: 7531494935268823498
+  Id: 16497157125012463276
   Name: "Prism - 3-Sided Convex"
   Transform {
     Location {
-      X: -4.49078369
+      X: -4.49023438
       Z: 4.4161377
     }
     Rotation {
@@ -13,12 +13,12 @@ Objects {
       Roll: -89.9999695
     }
     Scale {
-      X: 0.138536394
-      Y: 0.0840554386
+      X: 0.15857546
+      Y: 0.0840554163
       Z: 0.194805071
     }
   }
-  ParentId: 17283843903726346757
+  ParentId: 8042851660245824882
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:color"
@@ -60,7 +60,7 @@ Objects {
   }
 }
 Objects {
-  Id: 5078323795145513059
+  Id: 6196388014794217701
   Name: "Bridge"
   Transform {
     Location {
@@ -74,7 +74,7 @@ Objects {
       Z: 0.141931012
     }
   }
-  ParentId: 17283843903726346757
+  ParentId: 8042851660245824882
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"

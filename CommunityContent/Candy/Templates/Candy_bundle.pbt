@@ -40,5 +40,5 @@ Assets {
     Version: "1.0.0"
     Description: "one piece of candy (light green)"
   }
-  SerializationVersion: 73
+  SerializationVersion: 74
 }

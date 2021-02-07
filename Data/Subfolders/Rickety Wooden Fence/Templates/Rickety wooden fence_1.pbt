@@ -647,6 +647,6 @@ Assets {
   Marketplace {
     Description: "The perfect fence to complete your idylic scene. Fence is 3m long, turn grid on and set grid size to 100 to easily place a line of fences."
   }
-  SerializationVersion: 73
+  SerializationVersion: 74
   DirectlyPublished: true
 }

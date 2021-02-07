@@ -1,7 +1,7 @@
 Name: "Temple_1"
-RootId: 15867005311708837960
+RootId: 10267803272291803980
 Objects {
-  Id: 870694828062640306
+  Id: 4358905738097330759
   Name: "Cube - Rounded"
   Transform {
     Location {
@@ -20,7 +20,7 @@ Objects {
       Z: 0.0361657366
     }
   }
-  ParentId: 15867005311708837960
+  ParentId: 10267803272291803980
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -66,7 +66,7 @@ Objects {
   }
 }
 Objects {
-  Id: 6836971550004827732
+  Id: 10436808866488667028
   Name: "Cylinder - Rounded"
   Transform {
     Location {
@@ -85,7 +85,7 @@ Objects {
       Z: 0.479272336
     }
   }
-  ParentId: 15867005311708837960
+  ParentId: 10267803272291803980
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"

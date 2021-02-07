@@ -40,5 +40,5 @@ Assets {
     Version: "1.0.0"
     Description: "A low-poly style banana"
   }
-  SerializationVersion: 73
+  SerializationVersion: 74
 }

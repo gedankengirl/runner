@@ -1,7 +1,7 @@
 Name: "Glasses"
-RootId: 9707576913177621163
+RootId: 1720127599433414857
 Objects {
-  Id: 16180745750453808326
+  Id: 5412636502448277844
   Name: "Temple"
   Transform {
     Location {
@@ -17,7 +17,7 @@ Objects {
       Z: 1.00000012
     }
   }
-  ParentId: 9707576913177621163
+  ParentId: 1720127599433414857
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -30,7 +30,7 @@ Objects {
   }
 }
 Objects {
-  Id: 15867005311708837960
+  Id: 10267803272291803980
   Name: "Temple"
   Transform {
     Location {
@@ -46,7 +46,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 9707576913177621163
+  ParentId: 1720127599433414857
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -59,7 +59,7 @@ Objects {
   }
 }
 Objects {
-  Id: 11409219822908156680
+  Id: 8629382858571920338
   Name: "Lens - Half"
   Transform {
     Location {
@@ -78,11 +78,13 @@ Objects {
       Z: 0.193877891
     }
   }
-  ParentId: 9707576913177621163
+  ParentId: 1720127599433414857
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:color"
       Color {
+        G: 0.412222385
+        B: 0.490000129
         A: 1
       }
     }
@@ -123,7 +125,7 @@ Objects {
   }
 }
 Objects {
-  Id: 14720310411710356294
+  Id: 7533451249258532697
   Name: "Crescent - 02"
   Transform {
     Location {
@@ -141,7 +143,7 @@ Objects {
       Z: 0.0185759049
     }
   }
-  ParentId: 9707576913177621163
+  ParentId: 1720127599433414857
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -174,7 +176,7 @@ Objects {
   }
 }
 Objects {
-  Id: 11952005120345212329
+  Id: 8678409222508084975
   Name: "Lens - Half"
   Transform {
     Location {
@@ -193,11 +195,13 @@ Objects {
       Z: 0.193877891
     }
   }
-  ParentId: 9707576913177621163
+  ParentId: 1720127599433414857
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:color"
       Color {
+        G: 0.412222385
+        B: 0.490000129
         A: 1
       }
     }

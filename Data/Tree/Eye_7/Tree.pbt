@@ -1,13 +1,13 @@
 Name: "Eye_7"
-RootId: 2141834646163036883
+RootId: 3057291746266179060
 Objects {
-  Id: 11585374687571657947
+  Id: 3151841824886187393
   Name: "Donut"
   Transform {
     Location {
-      X: -2.74559093
-      Y: -1.17570567
-      Z: 2.34340914e-05
+      X: -2.74560547
+      Y: -1.17578125
+      Z: 3.05175781e-05
     }
     Rotation {
       Pitch: 7.96960068
@@ -20,7 +20,7 @@ Objects {
       Z: 0.308571458
     }
   }
-  ParentId: 2141834646163036883
+  ParentId: 3057291746266179060
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:color"
@@ -61,20 +61,20 @@ Objects {
     }
   }
   InstanceHistory {
-    SelfId: 11585374687571657947
-    SubobjectId: 12006924809250660543
-    InstanceId: 16048335809180774042
-    TemplateId: 5137771896592679532
+    SelfId: 3790680265018850544
+    SubobjectId: 10155011280153423173
+    InstanceId: 6208513033488493417
+    TemplateId: 1976493870456417382
   }
 }
 Objects {
-  Id: 7678230492583535442
+  Id: 2384015972699315296
   Name: "Lens - Half"
   Transform {
     Location {
-      X: 2.74560356
-      Y: 1.17570567
-      Z: 0.585023105
+      X: 2.74560547
+      Y: 1.17578125
+      Z: 0.585022
     }
     Rotation {
       Pitch: 80.2386093
@@ -87,7 +87,7 @@ Objects {
       Z: 0.3
     }
   }
-  ParentId: 2141834646163036883
+  ParentId: 3057291746266179060
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:color"
@@ -125,9 +125,9 @@ Objects {
     }
   }
   InstanceHistory {
-    SelfId: 7678230492583535442
-    SubobjectId: 7847561286328289078
-    InstanceId: 16048335809180774042
-    TemplateId: 5137771896592679532
+    SelfId: 6429151984851796872
+    SubobjectId: 16234918944937333309
+    InstanceId: 6208513033488493417
+    TemplateId: 1976493870456417382
   }
 }

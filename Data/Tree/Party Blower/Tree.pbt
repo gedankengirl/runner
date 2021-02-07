@@ -1,7 +1,7 @@
 Name: "Party Blower"
-RootId: 2385299363963367136
+RootId: 18380895124905046815
 Objects {
-  Id: 14537305816717916462
+  Id: 17365699045478933477
   Name: "Donut"
   Transform {
     Location {
@@ -18,7 +18,7 @@ Objects {
       Z: 0.216472268
     }
   }
-  ParentId: 2385299363963367136
+  ParentId: 18380895124905046815
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -33,9 +33,8 @@ Objects {
     Overrides {
       Name: "ma:Shared_BaseMaterial:color"
       Color {
-        R: 1
-        G: 0.090000093
-        B: 0.537778258
+        G: 0.412222385
+        B: 0.490000129
         A: 1
       }
     }
@@ -70,7 +69,7 @@ Objects {
   }
 }
 Objects {
-  Id: 16295175395140018992
+  Id: 5711952885081153995
   Name: "Pipe - 45-Degree Long Thin"
   Transform {
     Location {
@@ -86,7 +85,7 @@ Objects {
       Z: 0.455430835
     }
   }
-  ParentId: 2385299363963367136
+  ParentId: 18380895124905046815
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -101,9 +100,8 @@ Objects {
     Overrides {
       Name: "ma:Shared_BaseMaterial:color"
       Color {
-        R: 1
-        G: 0.090000093
-        B: 0.537778258
+        R: 0.506000042
+        G: 0.305206329
         A: 1
       }
     }

@@ -1,40 +1,42 @@
 Name: "Necklace_1"
-RootId: 15387303877953880331
+RootId: 3648738270161341821
 Objects {
-  Id: 10644664636618284133
-  Name: "Ring - Beveled Thin"
+  Id: 9505879343008142354
+  Name: "Ring - Quarter Thin"
   Transform {
     Location {
-      X: -16.0766
-      Y: -0.435546875
-      Z: 31.177597
+      X: 2.046875
+      Y: -9.58935452
+      Z: 39.1487122
     }
     Rotation {
-      Pitch: -35.6027489
+      Pitch: -41.8699837
+      Yaw: 93.3109741
+      Roll: -175.941711
     }
     Scale {
-      X: 0.692416847
-      Y: 0.692416847
-      Z: 0.692416847
+      X: 0.999593556
+      Y: 0.774747908
+      Z: 0.44655934
     }
   }
-  ParentId: 15387303877953880331
+  ParentId: 3648738270161341821
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
       AssetReference {
-        Id: 14613802976288032229
+        Id: 4444385379076542575
       }
     }
     Overrides {
       Name: "ma:Shared_BaseMaterial:smart"
-      Bool: true
+      Bool: false
     }
     Overrides {
       Name: "ma:Shared_BaseMaterial:color"
       Color {
-        R: 0.938000083
-        G: 0.729555547
+        R: 0.506000042
+        G: 0.305206329
         A: 1
       }
     }
@@ -47,7 +49,7 @@ Objects {
   }
   CoreMesh {
     MeshAsset {
-      Id: 6402680484513847234
+      Id: 7852233738478497271
     }
     Teams {
       IsTeamCollisionEnabled: true
@@ -61,45 +63,44 @@ Objects {
       }
     }
   }
-  InstanceHistory {
-    SelfId: 10644664636618284133
-    SubobjectId: 3156910636779343312
-    InstanceId: 6208513033488493417
-    TemplateId: 1976493870456417382
-  }
 }
 Objects {
-  Id: 18175898797998098838
-  Name: "Cylinder"
+  Id: 9876809463807574733
+  Name: "Ring - Quarter Thin"
   Transform {
     Location {
-      X: 16.0766
-      Y: 0.435546875
+      X: -2.03515625
+      Y: -9.58935452
+      Z: 39.1487122
     }
     Rotation {
-      Pitch: 69.9585648
-      Yaw: 180
-      Roll: 180
+      Pitch: -41.8697319
+      Yaw: 93.3113098
+      Roll: -2.21178889
     }
     Scale {
-      X: 0.239260495
-      Y: 0.239260435
-      Z: 0.0249052867
+      X: 0.999593556
+      Y: 0.774747908
+      Z: 0.44655934
     }
   }
-  ParentId: 15387303877953880331
+  ParentId: 3648738270161341821
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
       AssetReference {
-        Id: 14613802976288032229
+        Id: 4444385379076542575
       }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
     }
     Overrides {
       Name: "ma:Shared_BaseMaterial:color"
       Color {
-        R: 0.938000083
-        G: 0.729555547
+        R: 0.506000042
+        G: 0.305206329
         A: 1
       }
     }
@@ -112,7 +113,7 @@ Objects {
   }
   CoreMesh {
     MeshAsset {
-      Id: 16628730901845472849
+      Id: 7852233738478497271
     }
     Teams {
       IsTeamCollisionEnabled: true
@@ -126,34 +127,42 @@ Objects {
       }
     }
   }
-  InstanceHistory {
-    SelfId: 18175898797998098838
-    SubobjectId: 4921071829206521891
-    InstanceId: 6208513033488493417
-    TemplateId: 1976493870456417382
-  }
 }
 Objects {
-  Id: 3909505470509859205
-  Name: "Manticore Logo"
+  Id: 1748471316884627505
+  Name: "Bone Human Skull 01"
   Transform {
     Location {
-      X: 18.1586914
-      Y: 0.392578125
-      Z: 0.654846191
+      X: -0.0117149353
+      Y: 19.1796856
+      Z: 1.52587891e-05
     }
     Rotation {
-      Pitch: 10.1830807
-      Yaw: 91.0284576
-      Roll: 113.387611
+      Roll: 24.7499409
     }
     Scale {
-      X: 0.0896922201
-      Y: 0.0896922201
-      Z: 0.0896922201
+      X: 0.965393543
+      Y: 0.965393543
+      Z: 0.965393543
     }
   }
-  ParentId: 15387303877953880331
+  ParentId: 3648738270161341821
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 1589449360944952949
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.506000042
+        G: 0.305206329
+        A: 1
+      }
+    }
+  }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -162,7 +171,7 @@ Objects {
   }
   CoreMesh {
     MeshAsset {
-      Id: 11827461829708346186
+      Id: 15299940389587492714
     }
     Teams {
       IsTeamCollisionEnabled: true
@@ -175,11 +184,5 @@ Objects {
         LinearDamping: 0.01
       }
     }
-  }
-  InstanceHistory {
-    SelfId: 3909505470509859205
-    SubobjectId: 10247855096876945456
-    InstanceId: 6208513033488493417
-    TemplateId: 1976493870456417382
   }
 }

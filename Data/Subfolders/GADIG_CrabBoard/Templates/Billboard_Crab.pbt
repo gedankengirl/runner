@@ -1838,6 +1838,6 @@ Assets {
   Marketplace {
     Description: "Crab billboard"
   }
-  SerializationVersion: 73
+  SerializationVersion: 74
   DirectlyPublished: true
 }

@@ -46,5 +46,5 @@ Assets {
     Version: "1.0.0"
     Description: "Looks great in your hub world."
   }
-  SerializationVersion: 73
+  SerializationVersion: 74
 }

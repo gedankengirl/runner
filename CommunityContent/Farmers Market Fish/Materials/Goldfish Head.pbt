@@ -2,7 +2,7 @@ Assets {
   Id: 3323074418125081293
   Name: "Goldfish Head"
   PlatformAssetType: 13
-  SerializationVersion: 73
+  SerializationVersion: 74
   CustomMaterialAsset {
     BaseMaterialId: 2988642617099388749
     ParameterOverrides {

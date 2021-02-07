@@ -1,7 +1,7 @@
 Name: "Headphones"
-RootId: 4659024132920712891
+RootId: 7226967891070816537
 Objects {
-  Id: 15362830320349544448
+  Id: 13603930244964844616
   Name: "Left ear"
   Transform {
     Location {
@@ -18,7 +18,7 @@ Objects {
       Z: 1.14542723
     }
   }
-  ParentId: 4659024132920712891
+  ParentId: 7226967891070816537
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -27,7 +27,7 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Left ear_1"
+    FilePartitionName: "Left ear_3"
   }
   InstanceHistory {
     SelfId: 15362830320349544448
@@ -37,7 +37,7 @@ Objects {
   }
 }
 Objects {
-  Id: 1019625450401971147
+  Id: 4029903926192772796
   Name: "Right ear"
   Transform {
     Location {
@@ -54,7 +54,7 @@ Objects {
       Z: 1.14542723
     }
   }
-  ParentId: 4659024132920712891
+  ParentId: 7226967891070816537
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -63,7 +63,7 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Right ear_1"
+    FilePartitionName: "Right ear_3"
   }
   InstanceHistory {
     SelfId: 1019625450401971147
@@ -73,7 +73,7 @@ Objects {
   }
 }
 Objects {
-  Id: 5165505560316689350
+  Id: 4310004107515700624
   Name: "Pipe - Half Thin"
   Transform {
     Location {
@@ -91,7 +91,7 @@ Objects {
       Z: 0.143827245
     }
   }
-  ParentId: 4659024132920712891
+  ParentId: 7226967891070816537
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -128,7 +128,7 @@ Objects {
   }
 }
 Objects {
-  Id: 5905391213578250260
+  Id: 1096490379107978753
   Name: "Pipe - Half"
   Transform {
     Location {
@@ -146,7 +146,7 @@ Objects {
       Z: 0.179784074
     }
   }
-  ParentId: 4659024132920712891
+  ParentId: 7226967891070816537
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -157,8 +157,8 @@ Objects {
     Overrides {
       Name: "ma:Shared_BaseMaterial:color"
       Color {
-        R: 0.738000154
-        B: 0.702857435
+        G: 0.412222385
+        B: 0.490000129
         A: 1
       }
     }

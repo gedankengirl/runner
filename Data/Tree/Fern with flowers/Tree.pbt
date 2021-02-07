@@ -131,10 +131,4 @@ Objects {
       }
     }
   }
-  InstanceHistory {
-    SelfId: 6586052095281302846
-    SubobjectId: 4574253804002382336
-    InstanceId: 1693106337742674149
-    TemplateId: 17955120187965219576
-  }
 }

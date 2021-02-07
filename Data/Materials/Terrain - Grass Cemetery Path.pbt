@@ -2,7 +2,7 @@ Assets {
   Id: 18036099227402910655
   Name: "Terrain - Grass Cemetery Path"
   PlatformAssetType: 13
-  SerializationVersion: 73
+  SerializationVersion: 74
   CustomMaterialAsset {
     BaseMaterialId: 5877682917100452727
     ParameterOverrides {

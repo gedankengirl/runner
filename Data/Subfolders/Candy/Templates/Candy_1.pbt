@@ -1115,6 +1115,6 @@ Assets {
   Marketplace {
     Description: "one piece of candy (light green)"
   }
-  SerializationVersion: 73
+  SerializationVersion: 74
   DirectlyPublished: true
 }

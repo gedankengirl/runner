@@ -626,7 +626,7 @@ Objects {
 }
 Objects {
   Id: 1116775946371480676
-  Name: "Cemetery"
+  Name: "Cemetery props"
   Transform {
     Location {
       X: 3076.09668

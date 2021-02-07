@@ -1,10 +1,28 @@
 Assets {
+  Id: 15934210186397621780
+  Name: "Cylinder - Rounded"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_cylinder_rounded_002"
+  }
+}
+Assets {
   Id: 15050262795654144928
   Name: "Terrain - Moss"
   PlatformAssetType: 2
   PrimaryAsset {
     AssetType: "MaterialAssetRef"
     AssetId: "mi_terrain_rock-moss_001_wa"
+  }
+}
+Assets {
+  Id: 14431767805421956439
+  Name: "Rock 01"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_rock_generic_001"
   }
 }
 Assets {
@@ -35,6 +53,15 @@ Assets {
   }
 }
 Assets {
+  Id: 5891317505873994422
+  Name: "Waterfall 90 Outer Corner"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "waterfall_90oc"
+  }
+}
+Assets {
   Id: 5119651858357045976
   Name: "Rock Pile 002"
   PlatformAssetType: 1
@@ -50,5 +77,23 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_rock_generic_002_sm_rock_generic_002_LOD0"
+  }
+}
+Assets {
+  Id: 1272761305013892500
+  Name: "Generic Water"
+  PlatformAssetType: 2
+  PrimaryAsset {
+    AssetType: "MaterialAssetRef"
+    AssetId: "fxma_parameter_driven_water_manual"
+  }
+}
+Assets {
+  Id: 461812557173768745
+  Name: "Rock 03"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_rock_generic_003"
   }
 }

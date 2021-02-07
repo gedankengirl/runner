@@ -1,7 +1,7 @@
 Name: "Torso"
-RootId: 1907163473268906116
+RootId: 227490750176261329
 Objects {
-  Id: 8128401962567750943
+  Id: 15138324863799680003
   Name: "Teardrop - Truncated"
   Transform {
     Location {
@@ -17,7 +17,7 @@ Objects {
       Z: 1.16532767
     }
   }
-  ParentId: 1907163473268906116
+  ParentId: 227490750176261329
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"

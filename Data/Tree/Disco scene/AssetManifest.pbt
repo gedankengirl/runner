@@ -8,15 +8,6 @@ Assets {
   }
 }
 Assets {
-  Id: 18394305983786224728
-  Name: "Electric Surface"
-  PlatformAssetType: 2
-  PrimaryAsset {
-    AssetType: "MaterialAssetRef"
-    AssetId: "fxma_electrical_surface"
-  }
-}
-Assets {
   Id: 15305471345784383605
   Name: "Cube - Polished"
   PlatformAssetType: 1
@@ -80,15 +71,6 @@ Assets {
   }
 }
 Assets {
-  Id: 11532960868733969370
-  Name: "Cylinder - Bottom-Aligned"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_cylinder_001"
-  }
-}
-Assets {
   Id: 11011881755036046467
   Name: "Plane 1m - One Sided"
   PlatformAssetType: 1
@@ -113,15 +95,6 @@ Assets {
   PrimaryAsset {
     AssetType: "MaterialAssetRef"
     AssetId: "mi_basic_pbr_material_001"
-  }
-}
-Assets {
-  Id: 9608867807191114934
-  Name: "Metal Steel Brushed"
-  PlatformAssetType: 2
-  PrimaryAsset {
-    AssetType: "MaterialAssetRef"
-    AssetId: "mi_stainless-steel_001_uv"
   }
 }
 Assets {
@@ -197,15 +170,6 @@ Assets {
   }
 }
 Assets {
-  Id: 4679924433031865767
-  Name: "Metal Frame 03"
-  PlatformAssetType: 2
-  PrimaryAsset {
-    AssetType: "MaterialAssetRef"
-    AssetId: "mi_metal_frames_003_uv"
-  }
-}
-Assets {
   Id: 4510543441130352012
   Name: "Whitebox Floor 01 4m x 4m"
   PlatformAssetType: 1
@@ -242,15 +206,6 @@ Assets {
   }
 }
 Assets {
-  Id: 3408295800136798535
-  Name: "Sphere"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_sphere_002"
-  }
-}
-Assets {
   Id: 2900900476994012643
   Name: "Craftsman Part - Stair Balust"
   PlatformAssetType: 1
@@ -284,15 +239,6 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_urb_st_post_lights_traffic_001"
-  }
-}
-Assets {
-  Id: 506728267337359222
-  Name: "Plane 4m - One Sided"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_plane_4m_001"
   }
 }
 Assets {

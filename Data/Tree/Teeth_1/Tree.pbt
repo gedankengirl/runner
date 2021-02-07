@@ -1,7 +1,7 @@
 Name: "Teeth_1"
-RootId: 10080573236217413867
+RootId: 14278432611913386987
 Objects {
-  Id: 6676253609891102357
+  Id: 15446666426920980944
   Name: "Teeth"
   Transform {
     Location {
@@ -20,7 +20,7 @@ Objects {
       Z: 0.0300613474
     }
   }
-  ParentId: 10080573236217413867
+  ParentId: 14278432611913386987
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -57,7 +57,7 @@ Objects {
   }
 }
 Objects {
-  Id: 17000344082759847360
+  Id: 397223691322100422
   Name: "Teeth"
   Transform {
     Location {
@@ -76,7 +76,7 @@ Objects {
       Z: 0.0287052542
     }
   }
-  ParentId: 10080573236217413867
+  ParentId: 14278432611913386987
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -113,7 +113,7 @@ Objects {
   }
 }
 Objects {
-  Id: 8482563074844469818
+  Id: 9174691810833041705
   Name: "Teeth"
   Transform {
     Location {
@@ -132,7 +132,7 @@ Objects {
       Z: 0.0250689723
     }
   }
-  ParentId: 10080573236217413867
+  ParentId: 14278432611913386987
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -169,7 +169,7 @@ Objects {
   }
 }
 Objects {
-  Id: 9436574095447598483
+  Id: 14857983854898871429
   Name: "Teeth"
   Transform {
     Location {
@@ -188,7 +188,7 @@ Objects {
       Z: 0.0250689723
     }
   }
-  ParentId: 10080573236217413867
+  ParentId: 14278432611913386987
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -225,7 +225,7 @@ Objects {
   }
 }
 Objects {
-  Id: 8733222611335401813
+  Id: 14931713605417601878
   Name: "Teeth"
   Transform {
     Location {
@@ -244,7 +244,7 @@ Objects {
       Z: 0.0250689723
     }
   }
-  ParentId: 10080573236217413867
+  ParentId: 14278432611913386987
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -281,7 +281,7 @@ Objects {
   }
 }
 Objects {
-  Id: 4113081790102104457
+  Id: 7886793541334138753
   Name: "Teeth"
   Transform {
     Location {
@@ -300,7 +300,7 @@ Objects {
       Z: 0.0250689723
     }
   }
-  ParentId: 10080573236217413867
+  ParentId: 14278432611913386987
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -337,7 +337,7 @@ Objects {
   }
 }
 Objects {
-  Id: 14883846948962983922
+  Id: 2987722123548902520
   Name: "Teeth"
   Transform {
     Location {
@@ -356,7 +356,7 @@ Objects {
       Z: 0.0250689723
     }
   }
-  ParentId: 10080573236217413867
+  ParentId: 14278432611913386987
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -393,7 +393,7 @@ Objects {
   }
 }
 Objects {
-  Id: 15025770016730166527
+  Id: 12841687257624477457
   Name: "Teeth"
   Transform {
     Location {
@@ -412,7 +412,7 @@ Objects {
       Z: 0.0250689723
     }
   }
-  ParentId: 10080573236217413867
+  ParentId: 14278432611913386987
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -449,7 +449,7 @@ Objects {
   }
 }
 Objects {
-  Id: 5714614163064930153
+  Id: 16178150091427307656
   Name: "Teeth"
   Transform {
     Location {
@@ -468,7 +468,7 @@ Objects {
       Z: 0.0250689723
     }
   }
-  ParentId: 10080573236217413867
+  ParentId: 14278432611913386987
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -505,7 +505,7 @@ Objects {
   }
 }
 Objects {
-  Id: 1875552348138965537
+  Id: 976772492606362586
   Name: "Teeth"
   Transform {
     Location {
@@ -524,7 +524,7 @@ Objects {
       Z: 0.0250688437
     }
   }
-  ParentId: 10080573236217413867
+  ParentId: 14278432611913386987
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -561,7 +561,7 @@ Objects {
   }
 }
 Objects {
-  Id: 11123060169078725502
+  Id: 4345534783860544507
   Name: "Teeth"
   Transform {
     Location {
@@ -580,7 +580,7 @@ Objects {
       Z: 0.0250688437
     }
   }
-  ParentId: 10080573236217413867
+  ParentId: 14278432611913386987
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -617,7 +617,7 @@ Objects {
   }
 }
 Objects {
-  Id: 16912355090068328584
+  Id: 16975460764526419099
   Name: "Teeth"
   Transform {
     Location {
@@ -636,7 +636,7 @@ Objects {
       Z: 0.0294018239
     }
   }
-  ParentId: 10080573236217413867
+  ParentId: 14278432611913386987
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"

@@ -1,7 +1,7 @@
 Name: "Top"
-RootId: 12691817389255229158
+RootId: 13485080999893912864
 Objects {
-  Id: 16898941444807781454
+  Id: 5096001493302162176
   Name: "Top"
   Transform {
     Location {
@@ -16,7 +16,7 @@ Objects {
       Z: 0.950408041
     }
   }
-  ParentId: 12691817389255229158
+  ParentId: 13485080999893912864
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -27,8 +27,8 @@ Objects {
     Overrides {
       Name: "ma:Shared_BaseMaterial:color"
       Color {
-        G: 0.030190818
-        B: 0.634000063
+        G: 0.412222385
+        B: 0.490000129
         A: 1
       }
     }
@@ -57,7 +57,7 @@ Objects {
   }
 }
 Objects {
-  Id: 4567459894711266900
+  Id: 2094303740858427581
   Name: "Top"
   Transform {
     Location {
@@ -72,7 +72,7 @@ Objects {
       Z: 0.876888156
     }
   }
-  ParentId: 12691817389255229158
+  ParentId: 13485080999893912864
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"

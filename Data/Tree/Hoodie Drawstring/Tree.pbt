@@ -1,7 +1,7 @@
 Name: "Hoodie Drawstring"
-RootId: 6088061285454684094
+RootId: 13323232589421778574
 Objects {
-  Id: 15696250777476279788
+  Id: 3856027080462035424
   Name: "Donut"
   Transform {
     Location {
@@ -17,7 +17,7 @@ Objects {
       Z: 0.0738712326
     }
   }
-  ParentId: 6088061285454684094
+  ParentId: 13323232589421778574
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -28,9 +28,8 @@ Objects {
     Overrides {
       Name: "ma:Shared_BaseMaterial:color"
       Color {
-        R: 1
-        G: 1
-        B: 1
+        G: 0.412222385
+        B: 0.490000129
         A: 1
       }
     }
@@ -59,7 +58,7 @@ Objects {
   }
 }
 Objects {
-  Id: 14061350322922422669
+  Id: 6152749207197434043
   Name: "Cylinder - Rounded Small"
   Transform {
     Location {
@@ -76,7 +75,7 @@ Objects {
       Z: 0.388337195
     }
   }
-  ParentId: 6088061285454684094
+  ParentId: 13323232589421778574
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -87,11 +86,14 @@ Objects {
     Overrides {
       Name: "ma:Shared_BaseMaterial:color"
       Color {
-        R: 1
-        G: 1
-        B: 1
+        G: 0.412222385
+        B: 0.490000129
         A: 1
       }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: true
     }
   }
   Collidable_v2 {

@@ -1,11 +1,40 @@
 Name: "Hat_1"
-RootId: 13785705758558944701
+RootId: 12510952033092175315
 Objects {
-  Id: 1023915964809345896
-  Name: "Pipe - 4-Sided"
+  Id: 8452471800381392035
+  Name: "Bottom diamonds"
+  Transform {
+    Location {
+      Z: 34.9007263
+    }
+    Rotation {
+      Yaw: 6.83018789e-06
+    }
+    Scale {
+      X: 0.640424
+      Y: 0.640424
+      Z: 0.640424
+    }
+  }
+  ParentId: 12510952033092175315
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "Bottom diamonds_1"
+  }
+}
+Objects {
+  Id: 13354790201438220180
+  Name: "Gem - Baguette Polished"
   Transform {
     Location {
       X: 39.2382774
+      Y: -1.52587891e-05
       Z: 33.95755
     }
     Rotation {
@@ -14,17 +43,25 @@ Objects {
       Roll: 180
     }
     Scale {
-      X: 0.300535351
-      Y: 0.195298433
-      Z: 0.0155315604
+      X: 0.300536394
+      Y: 0.403384238
+      Z: 0.253314137
     }
   }
-  ParentId: 13785705758558944701
+  ParentId: 12510952033092175315
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
       AssetReference {
-        Id: 17953761627118563580
+        Id: 132672053610873933
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        G: 0.412222385
+        B: 0.490000129
+        A: 1
       }
     }
   }
@@ -36,7 +73,7 @@ Objects {
   }
   CoreMesh {
     MeshAsset {
-      Id: 10638810594798168017
+      Id: 15017730142366544903
     }
     Teams {
       IsTeamCollisionEnabled: true
@@ -52,7 +89,7 @@ Objects {
   }
 }
 Objects {
-  Id: 13124974244320606771
+  Id: 5195736606344636980
   Name: "Rim"
   Transform {
     Location {
@@ -66,7 +103,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13785705758558944701
+  ParentId: 12510952033092175315
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -79,7 +116,7 @@ Objects {
   }
 }
 Objects {
-  Id: 12691817389255229158
+  Id: 13485080999893912864
   Name: "Top"
   Transform {
     Location {
@@ -93,7 +130,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13785705758558944701
+  ParentId: 12510952033092175315
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -106,7 +143,7 @@ Objects {
   }
 }
 Objects {
-  Id: 14679843275808272718
+  Id: 695160243555234778
   Name: "Cone - Truncated Hollow Wide Thin"
   Transform {
     Location {
@@ -120,7 +157,7 @@ Objects {
       Z: 0.419970423
     }
   }
-  ParentId: 13785705758558944701
+  ParentId: 12510952033092175315
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"

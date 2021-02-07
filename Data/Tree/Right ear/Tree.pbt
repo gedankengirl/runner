@@ -1,31 +1,31 @@
 Name: "Right ear"
-RootId: 15919815780055970241
+RootId: 13714853072773665141
 Objects {
-  Id: 9777257112323395297
+  Id: 688022160101849174
   Name: "Ring"
   Transform {
     Location {
-      X: 5.88476515
-      Y: 1.04040527
-      Z: -1.52587891e-05
+      X: 5.88476563
+      Y: 1.04101372
+      Z: 4.40792847
     }
     Rotation {
       Pitch: 90
-      Yaw: 13.2626944
-      Roll: 13.2626944
+      Yaw: 9.1069187e-06
+      Roll: 2.35959415e-05
     }
     Scale {
-      X: 0.240768671
-      Y: 0.240768671
-      Z: 0.240768671
+      X: 0.0698182061
+      Y: 0.0698182508
+      Z: 0.253021479
     }
   }
-  ParentId: 15919815780055970241
+  ParentId: 13714853072773665141
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
       AssetReference {
-        Id: 17789466444063350813
+        Id: 132672053610873933
       }
     }
     Overrides {
@@ -35,9 +35,8 @@ Objects {
     Overrides {
       Name: "ma:Shared_BaseMaterial:color"
       Color {
-        R: 1
-        G: 1
-        B: 1
+        G: 0.412222385
+        B: 0.490000129
         A: 1
       }
     }
@@ -66,7 +65,66 @@ Objects {
   }
 }
 Objects {
-  Id: 7775256526758277606
+  Id: 13262076878591281961
+  Name: "Gem - Pear Polished"
+  Transform {
+    Location {
+      X: 5.88476563
+      Y: 1.03515434
+      Z: -4.80116272
+    }
+    Rotation {
+      Yaw: -89.9999695
+      Roll: -89.9999695
+    }
+    Scale {
+      X: 0.179464817
+      Y: 0.179464817
+      Z: 0.179464817
+    }
+  }
+  ParentId: 13714853072773665141
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 132672053610873933
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        G: 0.412222385
+        B: 0.490000129
+        A: 1
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 4598660795231725597
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    EnableCameraCollision: true
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+    }
+  }
+}
+Objects {
+  Id: 5074750107729421165
   Name: "Sphere - Half"
   Transform {
     Location {
@@ -85,7 +143,7 @@ Objects {
       Z: 0.392681479
     }
   }
-  ParentId: 15919815780055970241
+  ParentId: 13714853072773665141
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
