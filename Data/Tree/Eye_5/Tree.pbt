@@ -1,7 +1,7 @@
 Name: "Eye_5"
-RootId: 2877404211643977668
+RootId: 12894069819636589953
 Objects {
-  Id: 12991506980579285782
+  Id: 440361723795072313
   Name: "Donut"
   Transform {
     Location {
@@ -20,7 +20,7 @@ Objects {
       Z: 0.308571458
     }
   }
-  ParentId: 2877404211643977668
+  ParentId: 12894069819636589953
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:color"
@@ -68,7 +68,7 @@ Objects {
   }
 }
 Objects {
-  Id: 16631539094523220316
+  Id: 1943875767989147789
   Name: "Lens - Half"
   Transform {
     Location {
@@ -87,7 +87,7 @@ Objects {
       Z: 0.3
     }
   }
-  ParentId: 2877404211643977668
+  ParentId: 12894069819636589953
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:color"

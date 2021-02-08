@@ -1,7 +1,7 @@
 Name: "Left eye_5"
-RootId: 10024122421494311200
+RootId: 14381081994105557196
 Objects {
-  Id: 2090267011441130854
+  Id: 11974800074163851971
   Name: "Sphere - Half Thin"
   Transform {
     Location {
@@ -18,7 +18,7 @@ Objects {
       Z: 0.3354325
     }
   }
-  ParentId: 10024122421494311200
+  ParentId: 14381081994105557196
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -59,7 +59,7 @@ Objects {
   }
 }
 Objects {
-  Id: 13421149145362833860
+  Id: 3487191798143327972
   Name: "Lens - Half"
   Transform {
     Location {
@@ -78,7 +78,7 @@ Objects {
       Z: 0.294117928
     }
   }
-  ParentId: 10024122421494311200
+  ParentId: 14381081994105557196
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:color"
@@ -123,7 +123,7 @@ Objects {
   }
 }
 Objects {
-  Id: 1661832012640452415
+  Id: 17998000740955709113
   Name: "Donut"
   Transform {
     Location {
@@ -142,7 +142,7 @@ Objects {
       Z: 0.302521318
     }
   }
-  ParentId: 10024122421494311200
+  ParentId: 14381081994105557196
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:color"

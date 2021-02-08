@@ -56,12 +56,10 @@ Objects {
   }
 }
 Objects {
-  Id: 12659662651344689855
-  Name: "Flamingo"
+  Id: 9647420106749990554
+  Name: "Crabs"
   Transform {
     Location {
-      Y: -212.878906
-      Z: 63.8372803
     }
     Rotation {
     }
@@ -80,22 +78,22 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Flamingo"
+    FilePartitionName: "Crabs"
   }
 }
 Objects {
-  Id: 5918962060276845217
-  Name: "Crab"
+  Id: 17958106882838060675
+  Name: "Flamingos"
   Transform {
     Location {
-      Z: -53.5408936
+      Y: -282.248047
     }
     Rotation {
     }
     Scale {
-      X: 0.80677
-      Y: 0.80677
-      Z: 0.80677
+      X: 1
+      Y: 1
+      Z: 1
     }
   }
   ParentId: 15869095603941509801
@@ -107,6 +105,6 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Crab"
+    FilePartitionName: "Flamingos"
   }
 }

@@ -1,6 +1,36 @@
 Name: "Witch_1"
 RootId: 12534621280433502161
 Objects {
+  Id: 17104052078247695589
+  Name: "Necklace"
+  Transform {
+    Location {
+      X: 0.0117206573
+      Y: 20.7031212
+      Z: 64.4088898
+    }
+    Rotation {
+      Yaw: 1.70754702e-05
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 12534621280433502161
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "Necklace_2"
+  }
+}
+Objects {
   Id: 187733939346338387
   Name: "Left ear"
   Transform {
@@ -538,7 +568,7 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Body_3"
+    FilePartitionName: "Body_5"
   }
 }
 Objects {
@@ -567,7 +597,7 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Hat_3"
+    FilePartitionName: "Hat_6"
   }
 }
 Objects {
@@ -597,7 +627,7 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Right eye_8"
+    FilePartitionName: "Right eye_9"
   }
 }
 Objects {
@@ -627,7 +657,7 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Left eye_8"
+    FilePartitionName: "Left eye_9"
   }
 }
 Objects {

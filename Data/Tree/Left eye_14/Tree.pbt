@@ -1,7 +1,33 @@
 Name: "Left eye_14"
-RootId: 5184203103861912230
+RootId: 1282537864884658699
 Objects {
-  Id: 11621657951946030778
+  Id: 16558534355973999811
+  Name: "Monocle"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 1282537864884658699
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "Monocle_1"
+  }
+}
+Objects {
+  Id: 7738683480030374986
   Name: "Lens - Half"
   Transform {
     Location {
@@ -20,7 +46,7 @@ Objects {
       Z: 0.294117928
     }
   }
-  ParentId: 5184203103861912230
+  ParentId: 1282537864884658699
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:color"
@@ -65,7 +91,7 @@ Objects {
   }
 }
 Objects {
-  Id: 13545584283156201999
+  Id: 3605432816309824058
   Name: "Donut"
   Transform {
     Location {
@@ -84,7 +110,7 @@ Objects {
       Z: 0.302521318
     }
   }
-  ParentId: 5184203103861912230
+  ParentId: 1282537864884658699
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:color"

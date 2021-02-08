@@ -1,7 +1,7 @@
 Name: "Flowers"
-RootId: 18085583966973161709
+RootId: 12521191310469221611
 Objects {
-  Id: 15861952053516570095
+  Id: 17524480343591790287
   Name: "Flower Wild Lily 02"
   Transform {
     Location {
@@ -20,7 +20,17 @@ Objects {
       Z: 0.323282957
     }
   }
-  ParentId: 18085583966973161709
+  ParentId: 12521191310469221611
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Nature_Leaves:color"
+      Color {
+        G: 0.412222385
+        B: 0.490000129
+        A: 1
+      }
+    }
+  }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -45,7 +55,7 @@ Objects {
   }
 }
 Objects {
-  Id: 12866404590931125331
+  Id: 4745590751826527304
   Name: "Flower Wild Lily 02"
   Transform {
     Location {
@@ -62,7 +72,17 @@ Objects {
       Z: 0.323282957
     }
   }
-  ParentId: 18085583966973161709
+  ParentId: 12521191310469221611
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Nature_Leaves:color"
+      Color {
+        G: 0.412222385
+        B: 0.490000129
+        A: 1
+      }
+    }
+  }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -87,7 +107,7 @@ Objects {
   }
 }
 Objects {
-  Id: 2643051646275365256
+  Id: 17241366985414387246
   Name: "Flower Wild Lily 02"
   Transform {
     Location {
@@ -104,7 +124,17 @@ Objects {
       Z: 0.323282957
     }
   }
-  ParentId: 18085583966973161709
+  ParentId: 12521191310469221611
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Nature_Leaves:color"
+      Color {
+        G: 0.412222385
+        B: 0.490000129
+        A: 1
+      }
+    }
+  }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -129,7 +159,7 @@ Objects {
   }
 }
 Objects {
-  Id: 18329785209199375771
+  Id: 7379877133056169646
   Name: "Flower Wild Lily 02"
   Transform {
     Location {
@@ -146,7 +176,17 @@ Objects {
       Z: 0.323282957
     }
   }
-  ParentId: 18085583966973161709
+  ParentId: 12521191310469221611
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Nature_Leaves:color"
+      Color {
+        G: 0.412222385
+        B: 0.490000129
+        A: 1
+      }
+    }
+  }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -171,7 +211,7 @@ Objects {
   }
 }
 Objects {
-  Id: 12199244099048419689
+  Id: 12999488855890716768
   Name: "Flower Wild Lily 01"
   Transform {
     Location {
@@ -190,7 +230,17 @@ Objects {
       Z: 0.605656326
     }
   }
-  ParentId: 18085583966973161709
+  ParentId: 12521191310469221611
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Nature_Leaves:color"
+      Color {
+        G: 0.412222385
+        B: 0.490000129
+        A: 1
+      }
+    }
+  }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -215,13 +265,13 @@ Objects {
   }
 }
 Objects {
-  Id: 15148957004455818179
+  Id: 9185358461120861854
   Name: "Flower Wild Lily 01"
   Transform {
     Location {
-      X: 4.65197372
-      Y: -3.47460938
-      Z: 8.60186386
+      X: 4.65228128
+      Y: -0.975449
+      Z: 8.60221577
     }
     Rotation {
       Pitch: -34.1147156
@@ -234,7 +284,17 @@ Objects {
       Z: 0.656437814
     }
   }
-  ParentId: 18085583966973161709
+  ParentId: 12521191310469221611
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Nature_Leaves:color"
+      Color {
+        G: 0.412222385
+        B: 0.490000129
+        A: 1
+      }
+    }
+  }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -259,7 +319,7 @@ Objects {
   }
 }
 Objects {
-  Id: 14659375554451892277
+  Id: 9594514697477913955
   Name: "Flower Wild Lily 01"
   Transform {
     Location {
@@ -278,7 +338,17 @@ Objects {
       Z: 0.605656326
     }
   }
-  ParentId: 18085583966973161709
+  ParentId: 12521191310469221611
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Nature_Leaves:color"
+      Color {
+        G: 0.412222385
+        B: 0.490000129
+        A: 1
+      }
+    }
+  }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -303,7 +373,7 @@ Objects {
   }
 }
 Objects {
-  Id: 9092711271914868560
+  Id: 3916060285110985161
   Name: "Flower Wild Lily 02"
   Transform {
     Location {
@@ -322,7 +392,17 @@ Objects {
       Z: 0.323282957
     }
   }
-  ParentId: 18085583966973161709
+  ParentId: 12521191310469221611
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Nature_Leaves:color"
+      Color {
+        G: 0.412222385
+        B: 0.490000129
+        A: 1
+      }
+    }
+  }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -347,7 +427,7 @@ Objects {
   }
 }
 Objects {
-  Id: 5531152940860636129
+  Id: 15319108684405162073
   Name: "Flower Wild Lily 02"
   Transform {
     Location {
@@ -364,7 +444,17 @@ Objects {
       Z: 0.323282957
     }
   }
-  ParentId: 18085583966973161709
+  ParentId: 12521191310469221611
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Nature_Leaves:color"
+      Color {
+        G: 0.412222385
+        B: 0.490000129
+        A: 1
+      }
+    }
+  }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -389,7 +479,7 @@ Objects {
   }
 }
 Objects {
-  Id: 13791135365866776256
+  Id: 1919632099699932174
   Name: "Flower Wild Lily 02"
   Transform {
     Location {
@@ -408,7 +498,17 @@ Objects {
       Z: 0.323282957
     }
   }
-  ParentId: 18085583966973161709
+  ParentId: 12521191310469221611
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Nature_Leaves:color"
+      Color {
+        G: 0.412222385
+        B: 0.490000129
+        A: 1
+      }
+    }
+  }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -433,7 +533,7 @@ Objects {
   }
 }
 Objects {
-  Id: 6916827961037554819
+  Id: 18144755386929001290
   Name: "Flower Wild Lily 02"
   Transform {
     Location {
@@ -452,7 +552,17 @@ Objects {
       Z: 0.323282957
     }
   }
-  ParentId: 18085583966973161709
+  ParentId: 12521191310469221611
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Nature_Leaves:color"
+      Color {
+        G: 0.412222385
+        B: 0.490000129
+        A: 1
+      }
+    }
+  }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -477,7 +587,7 @@ Objects {
   }
 }
 Objects {
-  Id: 4973318917114624996
+  Id: 3103632917145371182
   Name: "Flower Wild Lily 02"
   Transform {
     Location {
@@ -496,7 +606,17 @@ Objects {
       Z: 0.323282957
     }
   }
-  ParentId: 18085583966973161709
+  ParentId: 12521191310469221611
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Nature_Leaves:color"
+      Color {
+        G: 0.412222385
+        B: 0.490000129
+        A: 1
+      }
+    }
+  }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -521,7 +641,7 @@ Objects {
   }
 }
 Objects {
-  Id: 11618291288173326703
+  Id: 1460635168042106699
   Name: "Flower Wild Lily 02"
   Transform {
     Location {
@@ -540,7 +660,17 @@ Objects {
       Z: 0.323282957
     }
   }
-  ParentId: 18085583966973161709
+  ParentId: 12521191310469221611
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Nature_Leaves:color"
+      Color {
+        G: 0.412222385
+        B: 0.490000129
+        A: 1
+      }
+    }
+  }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -565,7 +695,7 @@ Objects {
   }
 }
 Objects {
-  Id: 14611624171522325864
+  Id: 14020870359716120068
   Name: "Flower Wild Lily 01"
   Transform {
     Location {
@@ -583,7 +713,17 @@ Objects {
       Z: 0.605656326
     }
   }
-  ParentId: 18085583966973161709
+  ParentId: 12521191310469221611
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Nature_Leaves:color"
+      Color {
+        G: 0.412222385
+        B: 0.490000129
+        A: 1
+      }
+    }
+  }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }

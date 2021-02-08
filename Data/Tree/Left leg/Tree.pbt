@@ -1,7 +1,7 @@
 Name: "Left leg"
-RootId: 12652393313855283801
+RootId: 12692450613699448889
 Objects {
-  Id: 11878384430871388806
+  Id: 13082818239404355143
   Name: "Foot"
   Transform {
     Location {
@@ -11,12 +11,12 @@ Objects {
     Rotation {
     }
     Scale {
-      X: 1.21257627
-      Y: 1.21257627
-      Z: 1.21257627
+      X: 1.54838896
+      Y: 1.54838896
+      Z: 1.54838896
     }
   }
-  ParentId: 12652393313855283801
+  ParentId: 12692450613699448889
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -29,7 +29,7 @@ Objects {
   }
 }
 Objects {
-  Id: 122593274322835929
+  Id: 15288993355936630732
   Name: "Cylinder - Rounded Small"
   Transform {
     Location {
@@ -45,7 +45,7 @@ Objects {
       Z: 1.56980848
     }
   }
-  ParentId: 12652393313855283801
+  ParentId: 12692450613699448889
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"

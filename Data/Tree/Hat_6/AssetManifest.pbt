@@ -1,36 +1,36 @@
 Assets {
-  Id: 16682408004697469476
-  Name: "Diamond - Polished"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_diamond_hq_001"
-  }
-}
-Assets {
-  Id: 10184847056121543272
-  Name: "Basic Material"
+  Id: 17953761627118563580
+  Name: "Metal Iron Rusted 02"
   PlatformAssetType: 2
   PrimaryAsset {
     AssetType: "MaterialAssetRef"
-    AssetId: "mi_basic_pbr_material_001"
+    AssetId: "mi_metal_iron_003"
   }
 }
 Assets {
-  Id: 7027494913329720896
-  Name: "Cone"
+  Id: 10638810594798168017
+  Name: "Pipe - 4-Sided"
   PlatformAssetType: 1
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_cone_001"
+    AssetId: "sm_pipe_4_sided_001"
   }
 }
 Assets {
-  Id: 2258330122587909962
-  Name: "Advanced Material"
+  Id: 9258812049024871290
+  Name: "Cone - Truncated Hollow Wide Thin"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_cone_truncated_hollow_006"
+  }
+}
+Assets {
+  Id: 132672053610873933
+  Name: "Plastic Matte"
   PlatformAssetType: 2
   PrimaryAsset {
     AssetType: "MaterialAssetRef"
-    AssetId: "universal_material_001"
+    AssetId: "plastic_matte_001"
   }
 }

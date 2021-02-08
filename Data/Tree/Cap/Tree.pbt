@@ -1,7 +1,7 @@
 Name: "Cap"
-RootId: 8388683526200495264
+RootId: 2742808206740260934
 Objects {
-  Id: 16917017407166013344
+  Id: 16631576017928735698
   Name: "Cylinder - Rounded Small"
   Transform {
     Location {
@@ -17,7 +17,7 @@ Objects {
       Z: 0.0199569799
     }
   }
-  ParentId: 8388683526200495264
+  ParentId: 2742808206740260934
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -28,11 +28,22 @@ Objects {
     Overrides {
       Name: "ma:Shared_BaseMaterial:color"
       Color {
-        R: 1
-        G: 0.821365118
-        B: 0.338000059
+        R: 0.938000083
+        G: 0.699777842
         A: 1
       }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:utile"
+      Float: 10.7
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:vtile"
+      Float: 0.2
     }
   }
   Collidable_v2 {
@@ -59,7 +70,7 @@ Objects {
   }
 }
 Objects {
-  Id: 4306199892409238040
+  Id: 12492920820110240930
   Name: "Crescent - 03"
   Transform {
     Location {
@@ -77,7 +88,7 @@ Objects {
       Z: 0.03
     }
   }
-  ParentId: 8388683526200495264
+  ParentId: 2742808206740260934
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -116,7 +127,7 @@ Objects {
   }
 }
 Objects {
-  Id: 3991003684978721532
+  Id: 9504144973220023424
   Name: "Cone - Truncated Hollow Thick"
   Transform {
     Location {
@@ -134,7 +145,7 @@ Objects {
       Z: 1.11640012
     }
   }
-  ParentId: 8388683526200495264
+  ParentId: 2742808206740260934
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -176,7 +187,7 @@ Objects {
   }
 }
 Objects {
-  Id: 6594603822261671462
+  Id: 1824893838927144391
   Name: "Manticore Logo"
   Transform {
     Location {
@@ -193,7 +204,7 @@ Objects {
       Z: 0.140704706
     }
   }
-  ParentId: 8388683526200495264
+  ParentId: 2742808206740260934
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -218,7 +229,7 @@ Objects {
   }
 }
 Objects {
-  Id: 5162608271159636607
+  Id: 13557404364301743849
   Name: "Cylinder - Rounded Small"
   Transform {
     Location {
@@ -236,7 +247,7 @@ Objects {
       Z: 0.0432600267
     }
   }
-  ParentId: 8388683526200495264
+  ParentId: 2742808206740260934
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -278,7 +289,7 @@ Objects {
   }
 }
 Objects {
-  Id: 3783940081733858467
+  Id: 290836579516384761
   Name: "Cylinder - Rounded Small"
   Transform {
     Location {
@@ -294,7 +305,7 @@ Objects {
       Z: 0.256820202
     }
   }
-  ParentId: 8388683526200495264
+  ParentId: 2742808206740260934
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"

@@ -1,21 +1,22 @@
 Name: "Foot_1"
-RootId: 11878384430871388806
+RootId: 13082818239404355143
 Objects {
-  Id: 15947434274489040917
+  Id: 8521200830173931247
   Name: "Sphere - Half"
   Transform {
     Location {
-      X: 0.260433853
+      X: 0.260937184
     }
     Rotation {
+      Pitch: 180
     }
     Scale {
-      X: 0.111775599
+      X: 0.111775592
       Y: 0.114
       Z: 0.045
     }
   }
-  ParentId: 11878384430871388806
+  ParentId: 13082818239404355143
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -57,7 +58,63 @@ Objects {
   }
 }
 Objects {
-  Id: 5879715716316123347
+  Id: 12839936269849121599
+  Name: "Sphere - Half"
+  Transform {
+    Location {
+      X: 0.260433853
+    }
+    Rotation {
+    }
+    Scale {
+      X: 0.111775599
+      Y: 0.114
+      Z: 0.045
+    }
+  }
+  ParentId: 13082818239404355143
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 10184847056121543272
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 1
+        G: 0.194
+        B: 0.194
+        A: 1
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 4799620171569546646
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    EnableCameraCollision: true
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+    }
+  }
+}
+Objects {
+  Id: 16876049888707433502
   Name: "Cone - Bullet"
   Transform {
     Location {
@@ -73,7 +130,7 @@ Objects {
       Z: 0.0896725804
     }
   }
-  ParentId: 11878384430871388806
+  ParentId: 13082818239404355143
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -115,7 +172,7 @@ Objects {
   }
 }
 Objects {
-  Id: 793662200273627544
+  Id: 14325455747569596287
   Name: "Cone - Bullet"
   Transform {
     Location {
@@ -131,7 +188,7 @@ Objects {
       Z: 0.0896725804
     }
   }
-  ParentId: 11878384430871388806
+  ParentId: 13082818239404355143
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"

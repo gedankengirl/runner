@@ -1,18 +1,18 @@
 Name: "Eye_14"
-RootId: 7098011513915677537
+RootId: 9844935912132781079
 Objects {
-  Id: 221761005251759908
+  Id: 8756150044519233763
   Name: "Donut"
   Transform {
     Location {
-      X: -2.74560547
-      Y: -1.17578125
-      Z: 3.05175781e-05
+      X: -2.74559093
+      Y: -1.17570567
+      Z: 2.34340914e-05
     }
     Rotation {
       Pitch: 7.96960068
       Yaw: -67.6350403
-      Roll: -95.6525116
+      Roll: -95.6525269
     }
     Scale {
       X: 0.249999985
@@ -20,7 +20,7 @@ Objects {
       Z: 0.308571458
     }
   }
-  ParentId: 7098011513915677537
+  ParentId: 9844935912132781079
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:color"
@@ -61,25 +61,25 @@ Objects {
     }
   }
   InstanceHistory {
-    SelfId: 3703233150196991515
-    SubobjectId: 10021192537304749998
-    InstanceId: 6208513033488493417
-    TemplateId: 1976493870456417382
+    SelfId: 7394841537082663973
+    SubobjectId: 6987739064500387905
+    InstanceId: 16048335809180774042
+    TemplateId: 5137771896592679532
   }
 }
 Objects {
-  Id: 13954042102272041012
+  Id: 13818771079336976288
   Name: "Lens - Half"
   Transform {
     Location {
-      X: 2.74560547
-      Y: 1.17578125
-      Z: 0.585022
+      X: 2.74560356
+      Y: 1.17570567
+      Z: 0.585023105
     }
     Rotation {
       Pitch: 80.2386093
       Yaw: 147.88353
-      Roll: -54.8727455
+      Roll: -54.8727417
     }
     Scale {
       X: 0.3
@@ -87,7 +87,7 @@ Objects {
       Z: 0.3
     }
   }
-  ParentId: 7098011513915677537
+  ParentId: 9844935912132781079
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:color"
@@ -125,9 +125,9 @@ Objects {
     }
   }
   InstanceHistory {
-    SelfId: 13181402393037032436
-    SubobjectId: 1052528165426944577
-    InstanceId: 6208513033488493417
-    TemplateId: 1976493870456417382
+    SelfId: 6602360134510674648
+    SubobjectId: 6757340169776572092
+    InstanceId: 16048335809180774042
+    TemplateId: 5137771896592679532
   }
 }

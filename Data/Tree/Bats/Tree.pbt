@@ -656,7 +656,7 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Eyes_2"
+    FilePartitionName: "Eyes_4"
   }
   InstanceHistory {
     SelfId: 10080436799444204203
@@ -1163,7 +1163,7 @@ Objects {
   Transform {
     Location {
       X: -6.10351563e-05
-      Y: -947.185
+      Y: -873.974487
       Z: 64.5686188
     }
     Rotation {
@@ -1597,7 +1597,7 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Eyes_3"
+    FilePartitionName: "Eyes_5"
   }
   InstanceHistory {
     SelfId: 10080436799444204203
@@ -2387,7 +2387,6 @@ Objects {
   ChildIds: 4951727924795394446
   ChildIds: 11015405248208622797
   ChildIds: 11935075933464145263
-  ChildIds: 12068883283270099362
   ChildIds: 3219731893256244885
   WantsNetworking: true
   Collidable_v2 {
@@ -2517,70 +2516,6 @@ Objects {
   InstanceHistory {
     SelfId: 7871660342339477898
     SubobjectId: 1935934873072305302
-    InstanceId: 12711591489942066146
-    TemplateId: 12325720584492096876
-  }
-}
-Objects {
-  Id: 12068883283270099362
-  Name: "tail"
-  Transform {
-    Location {
-      X: -13.5961409
-      Y: -2.43117938e-06
-    }
-    Rotation {
-      Pitch: 3.4150944e-05
-      Yaw: -89.9998627
-      Roll: -110.008904
-    }
-    Scale {
-      X: 0.142442048
-      Y: 0.142441884
-      Z: 0.104542449
-    }
-  }
-  ParentId: 11968827002467308074
-  UnregisteredParameters {
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 18394305983786224728
-      }
-    }
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:color"
-      Color {
-        R: 1
-        G: 0.977301598
-        B: 0.89
-        A: 1
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CoreMesh {
-    MeshAsset {
-      Id: 13703744877030710122
-    }
-    Teams {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    EnableCameraCollision: true
-    StaticMesh {
-      Physics {
-      }
-    }
-  }
-  InstanceHistory {
-    SelfId: 12068883283270099362
-    SubobjectId: 15032270661573559486
     InstanceId: 12711591489942066146
     TemplateId: 12325720584492096876
   }
@@ -2744,7 +2679,7 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Eyes_4"
+    FilePartitionName: "Eyes_6"
   }
   InstanceHistory {
     SelfId: 17845373394317278178

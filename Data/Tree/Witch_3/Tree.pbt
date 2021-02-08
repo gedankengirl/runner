@@ -1,6 +1,35 @@
 Name: "Witch_3"
 RootId: 12569696267008543379
 Objects {
+  Id: 3616934934122373553
+  Name: "Bone arm"
+  Transform {
+    Location {
+      X: -3.05175781e-05
+      Y: -79.5527191
+      Z: 234.817108
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 12569696267008543379
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "Bone arm"
+  }
+}
+Objects {
   Id: 17878148438548768557
   Name: "Outline Object"
   Transform {
@@ -414,7 +443,7 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Body_1"
+    FilePartitionName: "Body_3"
   }
 }
 Objects {
@@ -443,7 +472,7 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Hat_1"
+    FilePartitionName: "Hat_4"
   }
 }
 Objects {
@@ -473,7 +502,7 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Right eye_6"
+    FilePartitionName: "Right eye_7"
   }
 }
 Objects {
@@ -503,7 +532,7 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Left eye_6"
+    FilePartitionName: "Left eye_7"
   }
 }
 Objects {

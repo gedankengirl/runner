@@ -183,7 +183,7 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Hat_4"
+    FilePartitionName: "Hat_7"
   }
 }
 Objects {
@@ -249,7 +249,7 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Right eye_12"
+    FilePartitionName: "Right eye_13"
   }
 }
 Objects {
@@ -278,7 +278,7 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Left eye_12"
+    FilePartitionName: "Left eye_13"
   }
 }
 Objects {
@@ -2474,7 +2474,7 @@ Objects {
   Transform {
     Location {
       X: -6.10351563e-05
-      Y: -947.185425
+      Y: -873.974487
     }
     Rotation {
       Yaw: 1.02452814e-05
@@ -2535,7 +2535,7 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Hat_5"
+    FilePartitionName: "Hat_8"
   }
 }
 Objects {
@@ -2628,7 +2628,7 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Right eye_13"
+    FilePartitionName: "Right eye_14"
   }
 }
 Objects {
@@ -2657,7 +2657,7 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Left eye_13"
+    FilePartitionName: "Left eye_14"
   }
 }
 Objects {
@@ -4874,6 +4874,7 @@ Objects {
   ChildIds: 975446768053450638
   ChildIds: 6581560784374063770
   ChildIds: 17291869150919220698
+  ChildIds: 14624011324445988136
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -4888,6 +4889,37 @@ Objects {
     SubobjectId: 16484458625909799852
     InstanceId: 10239507396371542674
     TemplateId: 1266056586137157079
+  }
+}
+Objects {
+  Id: 14624011324445988136
+  Name: "Hat"
+  Transform {
+    Location {
+      X: -8.33714294
+      Z: 138.067322
+    }
+    Rotation {
+      Pitch: 13.0878572
+      Yaw: 1.71668944e-05
+      Roll: -1.79176453e-07
+    }
+    Scale {
+      X: 1.15129554
+      Y: 1.15129554
+      Z: 1.15129554
+    }
+  }
+  ParentId: 3418651420501488149
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "Hat_9"
   }
 }
 Objects {
@@ -4953,7 +4985,7 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Right eye_14"
+    FilePartitionName: "Right eye_15"
   }
 }
 Objects {
@@ -4982,7 +5014,7 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Left eye_14"
+    FilePartitionName: "Left eye_15"
   }
 }
 Objects {

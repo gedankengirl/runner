@@ -1,13 +1,4 @@
 Assets {
-  Id: 18394305983786224728
-  Name: "Electric Surface"
-  PlatformAssetType: 2
-  PrimaryAsset {
-    AssetType: "MaterialAssetRef"
-    AssetId: "fxma_electrical_surface"
-  }
-}
-Assets {
   Id: 13703744877030710122
   Name: "Horn"
   PlatformAssetType: 1

@@ -1,7 +1,7 @@
 Name: "Eyes_1"
-RootId: 14044230623153276712
+RootId: 3106104262421528396
 Objects {
-  Id: 7326989548037871593
+  Id: 15297286710385121467
   Name: "Eye"
   Transform {
     Location {
@@ -20,7 +20,7 @@ Objects {
       Z: 1.09807694
     }
   }
-  ParentId: 14044230623153276712
+  ParentId: 3106104262421528396
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -39,7 +39,7 @@ Objects {
   }
 }
 Objects {
-  Id: 12894069819636589953
+  Id: 11562012944645417763
   Name: "Eye"
   Transform {
     Location {
@@ -58,7 +58,7 @@ Objects {
       Z: 1.09807694
     }
   }
-  ParentId: 14044230623153276712
+  ParentId: 3106104262421528396
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }

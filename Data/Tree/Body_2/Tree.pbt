@@ -1,21 +1,26 @@
 Name: "Body_2"
-RootId: 642794587975244784
+RootId: 7553647502562111735
 Objects {
-  Id: 8601542380797593779
-  Name: "Cylinder"
+  Id: 1427924106659375757
+  Name: "Horn"
   Transform {
     Location {
-      Z: 34.0419464
+      X: -5.91778564
+      Y: -0.298828125
+      Z: 23.8005676
     }
     Rotation {
+      Pitch: -1.36603776e-05
+      Yaw: 88.2384262
+      Roll: 85.6948776
     }
     Scale {
-      X: 1
-      Y: 1
-      Z: 0.180903673
+      X: 0.643000841
+      Y: 0.450780123
+      Z: 0.62038666
     }
   }
-  ParentId: 642794587975244784
+  ParentId: 7553647502562111735
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -26,8 +31,9 @@ Objects {
     Overrides {
       Name: "ma:Shared_BaseMaterial:color"
       Color {
-        R: 0.00800260901
-        B: 0.126041576
+        R: 1
+        G: 0.194
+        B: 0.194
         A: 1
       }
     }
@@ -40,7 +46,7 @@ Objects {
   }
   CoreMesh {
     MeshAsset {
-      Id: 16628730901845472849
+      Id: 1138156223354331830
     }
     Teams {
       IsTeamCollisionEnabled: true
@@ -56,89 +62,80 @@ Objects {
   }
 }
 Objects {
-  Id: 10190515850362333330
-  Name: "Cone - Truncated Hollow Thin"
+  Id: 18085583966973161709
+  Name: "Flowers"
   Transform {
     Location {
+      X: 12.1383057
+      Y: -0.154296875
+      Z: 3.05175781e-05
     }
     Rotation {
-      Yaw: 6.83018789e-06
+      Pitch: -48.8842468
     }
     Scale {
-      X: 1.48043716
-      Y: 1.48043716
-      Z: 3.41862392
+      X: 1.22940183
+      Y: 1.22940183
+      Z: 1.22940183
     }
   }
-  ParentId: 642794587975244784
-  UnregisteredParameters {
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 18394305983786224728
-      }
-    }
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:color"
-      Color {
-        R: 0.506000042
-        G: 0.305206329
-        A: 1
-      }
-    }
-  }
+  ParentId: 7553647502562111735
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
-  CoreMesh {
-    MeshAsset {
-      Id: 10802140989642693335
-    }
-    Teams {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    EnableCameraCollision: true
-    StaticMesh {
-      Physics {
-        Mass: 100
-        LinearDamping: 0.01
-      }
-    }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "Flowers_2"
   }
 }
 Objects {
-  Id: 6555527859299285905
-  Name: "Cone - Truncated Hollow Thin"
+  Id: 4139907528040854840
+  Name: "Sphere"
   Transform {
     Location {
+      X: -6.22045898
+      Y: 0.453125
+      Z: 9.75132751
     }
     Rotation {
     }
     Scale {
-      X: 1.23315167
-      Y: 1.23315167
-      Z: 2.84759521
+      X: 1.79879284
+      Y: 1.11495185
+      Z: 0.9962098
     }
   }
-  ParentId: 642794587975244784
+  ParentId: 7553647502562111735
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
       AssetReference {
-        Id: 10184847056121543272
+        Id: 2053604298863069118
       }
     }
     Overrides {
       Name: "ma:Shared_BaseMaterial:color"
       Color {
-        R: 0.00800260901
-        B: 0.126041576
+        R: 1
+        G: 0.194
+        B: 0.194
         A: 1
       }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:utile"
+      Float: 1.8
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:vtile"
+      Float: 0.12
     }
   }
   Collidable_v2 {
@@ -149,7 +146,7 @@ Objects {
   }
   CoreMesh {
     MeshAsset {
-      Id: 10802140989642693335
+      Id: 5185278861897178064
     }
     Teams {
       IsTeamCollisionEnabled: true

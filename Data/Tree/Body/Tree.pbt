@@ -1,8 +1,67 @@
 Name: "Body"
-RootId: 7553647502562111735
+RootId: 9875771189020649049
 Objects {
-  Id: 1427924106659375757
-  Name: "Horn"
+  Id: 17610254214438273122
+  Name: "Diamonds"
+  Transform {
+    Location {
+      X: -19.5332031
+      Y: 3.0040741e-05
+      Z: 13.2772675
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 9875771189020649049
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "Diamonds"
+  }
+}
+Objects {
+  Id: 12521191310469221611
+  Name: "Flowers"
+  Transform {
+    Location {
+      X: 12.1383057
+      Y: -0.154296875
+      Z: 3.05175781e-05
+    }
+    Rotation {
+      Pitch: -48.8842468
+    }
+    Scale {
+      X: 1.22940183
+      Y: 1.22940183
+      Z: 1.22940183
+    }
+  }
+  ParentId: 9875771189020649049
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "Flowers"
+  }
+}
+Objects {
+  Id: 3074142913307074716
+  Name: "Tail"
   Transform {
     Location {
       X: -5.91778564
@@ -10,7 +69,6 @@ Objects {
       Z: 23.8005676
     }
     Rotation {
-      Pitch: -1.36603776e-05
       Yaw: 88.2384262
       Roll: 85.6948776
     }
@@ -20,7 +78,7 @@ Objects {
       Z: 0.62038666
     }
   }
-  ParentId: 7553647502562111735
+  ParentId: 9875771189020649049
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -62,37 +120,7 @@ Objects {
   }
 }
 Objects {
-  Id: 18085583966973161709
-  Name: "Flowers"
-  Transform {
-    Location {
-      X: 12.1383057
-      Y: -0.154296875
-      Z: 3.05175781e-05
-    }
-    Rotation {
-      Pitch: -48.8842468
-    }
-    Scale {
-      X: 1.22940183
-      Y: 1.22940183
-      Z: 1.22940183
-    }
-  }
-  ParentId: 7553647502562111735
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "Flowers"
-  }
-}
-Objects {
-  Id: 4139907528040854840
+  Id: 11248915300144421024
   Name: "Sphere"
   Transform {
     Location {
@@ -108,13 +136,25 @@ Objects {
       Z: 0.9962098
     }
   }
-  ParentId: 7553647502562111735
+  ParentId: 9875771189020649049
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
       AssetReference {
-        Id: 10184847056121543272
+        Id: 1002825802213487558
       }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:utile"
+      Float: 1.8
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:vtile"
+      Float: 0.12
     }
     Overrides {
       Name: "ma:Shared_BaseMaterial:color"

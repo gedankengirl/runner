@@ -618,7 +618,36 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Body_2"
+    FilePartitionName: "Body_4"
+  }
+}
+Objects {
+  Id: 9859408943375978143
+  Name: "Bone arm"
+  Transform {
+    Location {
+      X: -1.52587891e-05
+      Y: -79.2812424
+      Z: 234.817108
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 2712634904532951220
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "Bone arm_1"
   }
 }
 Objects {
@@ -647,7 +676,7 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Hat_2"
+    FilePartitionName: "Hat_5"
   }
 }
 Objects {
@@ -677,7 +706,7 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Right eye_7"
+    FilePartitionName: "Right eye_8"
   }
 }
 Objects {
@@ -707,7 +736,7 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Left eye_7"
+    FilePartitionName: "Left eye_8"
   }
 }
 Objects {

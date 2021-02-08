@@ -1,52 +1,26 @@
 Name: "Left eye_12"
-RootId: 7636199457207596580
+RootId: 14584508970379356843
 Objects {
-  Id: 4670015954689303231
-  Name: "Monocle"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 7636199457207596580
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "Monocle"
-  }
-}
-Objects {
-  Id: 7789637477560002660
+  Id: 13154660357608261284
   Name: "Lens - Half"
   Transform {
     Location {
-      X: -1.15265357
-      Y: 2.64082599
-      Z: 1.18970954
+      X: -0.000429119042
+      Y: 0.000156796872
+      Z: -0.127331614
     }
     Rotation {
       Pitch: 74.2436295
-      Yaw: -109.386665
-      Roll: -41.8411674
+      Yaw: -109.386658
+      Roll: -41.841156
     }
     Scale {
-      X: 0.294117928
-      Y: 0.294117928
-      Z: 0.294117928
+      X: 0.294117689
+      Y: 0.294103384
+      Z: 0.435404599
     }
   }
-  ParentId: 7636199457207596580
+  ParentId: 14584508970379356843
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:color"
@@ -84,20 +58,20 @@ Objects {
     }
   }
   InstanceHistory {
-    SelfId: 6429151984851796872
-    SubobjectId: 16234918944937333309
-    InstanceId: 6208513033488493417
-    TemplateId: 1976493870456417382
+    SelfId: 13154660357608261284
+    SubobjectId: 13938269231852282808
+    InstanceId: 12711591489942066146
+    TemplateId: 12325720584492096876
   }
 }
 Objects {
-  Id: 161258037928635066
+  Id: 12754777210220462989
   Name: "Donut"
   Transform {
     Location {
-      X: 1.15265357
-      Y: -2.64082599
-      Z: -2.72469206e-05
+      X: 1.30018861e-05
+      Y: 0.000103898725
+      Z: 5.05938397e-06
     }
     Rotation {
       Pitch: 10.4352646
@@ -105,12 +79,12 @@ Objects {
       Roll: -101.869751
     }
     Scale {
-      X: 0.245098233
-      Y: 0.245098233
-      Z: 0.302521318
+      X: 0.223046258
+      Y: 0.223075539
+      Z: 0.0883417204
     }
   }
-  ParentId: 7636199457207596580
+  ParentId: 14584508970379356843
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:color"
@@ -151,9 +125,9 @@ Objects {
     }
   }
   InstanceHistory {
-    SelfId: 3790680265018850544
-    SubobjectId: 10155011280153423173
-    InstanceId: 6208513033488493417
-    TemplateId: 1976493870456417382
+    SelfId: 12754777210220462989
+    SubobjectId: 14331018790481487505
+    InstanceId: 12711591489942066146
+    TemplateId: 12325720584492096876
   }
 }

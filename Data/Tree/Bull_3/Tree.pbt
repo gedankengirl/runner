@@ -217,7 +217,7 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Hat_6"
+    FilePartitionName: "Hat_10"
   }
 }
 Objects {
@@ -1082,7 +1082,7 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Eye_8"
+    FilePartitionName: "Eye_12"
   }
   InstanceHistory {
     SelfId: 5880664458129295636
@@ -1120,7 +1120,7 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Eye_9"
+    FilePartitionName: "Eye_13"
   }
   InstanceHistory {
     SelfId: 2141834646163036883

@@ -1,42 +1,36 @@
 Name: "Necklace_2"
-RootId: 6870709424796340972
+RootId: 17104052078247695589
 Objects {
-  Id: 11059136869222172842
-  Name: "Ring - Beveled Thin"
+  Id: 7433630467314328273
+  Name: "Ring - Quarter Thin"
   Transform {
     Location {
-      X: -16.0761719
-      Y: -0.435546875
-      Z: 31.177597
+      X: 2.046875
+      Y: -9.58935452
+      Z: 39.1487122
     }
     Rotation {
-      Pitch: -35.6027527
+      Pitch: -41.8699837
+      Yaw: 93.3109741
+      Roll: -175.941711
     }
     Scale {
-      X: 0.687569916
-      Y: 0.687569916
-      Z: 0.687569916
+      X: 0.999593556
+      Y: 0.774747908
+      Z: 0.44655934
     }
   }
-  ParentId: 6870709424796340972
+  ParentId: 17104052078247695589
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
       AssetReference {
-        Id: 18394305983786224728
+        Id: 4444385379076542575
       }
     }
     Overrides {
       Name: "ma:Shared_BaseMaterial:smart"
-      Bool: true
-    }
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:color"
-      Color {
-        G: 0.412222385
-        B: 0.490000129
-        A: 1
-      }
+      Bool: false
     }
   }
   Collidable_v2 {
@@ -47,7 +41,7 @@ Objects {
   }
   CoreMesh {
     MeshAsset {
-      Id: 6402680484513847234
+      Id: 7852233738478497271
     }
     Teams {
       IsTeamCollisionEnabled: true
@@ -61,50 +55,38 @@ Objects {
       }
     }
   }
-  InstanceHistory {
-    SelfId: 10644664636618284133
-    SubobjectId: 3156910636779343312
-    InstanceId: 6208513033488493417
-    TemplateId: 1976493870456417382
-  }
 }
 Objects {
-  Id: 1002902291087761312
-  Name: "Ring - Beveled Thin"
+  Id: 1543736681538142365
+  Name: "Ring - Quarter Thin"
   Transform {
     Location {
-      X: -16.0766
-      Y: -0.435546875
-      Z: 31.177597
+      X: -2.03515625
+      Y: -9.58935452
+      Z: 39.1487122
     }
     Rotation {
-      Pitch: -35.6027489
+      Pitch: -41.8697319
+      Yaw: 93.3113098
+      Roll: -2.21178889
     }
     Scale {
-      X: 0.692416847
-      Y: 0.692416847
-      Z: 0.692416847
+      X: 0.999593556
+      Y: 0.774747908
+      Z: 0.44655934
     }
   }
-  ParentId: 6870709424796340972
+  ParentId: 17104052078247695589
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
       AssetReference {
-        Id: 3137863792944559042
+        Id: 4444385379076542575
       }
     }
     Overrides {
       Name: "ma:Shared_BaseMaterial:smart"
-      Bool: true
-    }
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:color"
-      Color {
-        G: 0.412222385
-        B: 0.490000129
-        A: 1
-      }
+      Bool: false
     }
   }
   Collidable_v2 {
@@ -115,72 +97,7 @@ Objects {
   }
   CoreMesh {
     MeshAsset {
-      Id: 6402680484513847234
-    }
-    Teams {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    EnableCameraCollision: true
-    StaticMesh {
-      Physics {
-        Mass: 100
-        LinearDamping: 0.01
-      }
-    }
-  }
-  InstanceHistory {
-    SelfId: 10644664636618284133
-    SubobjectId: 3156910636779343312
-    InstanceId: 6208513033488493417
-    TemplateId: 1976493870456417382
-  }
-}
-Objects {
-  Id: 16416055130453551828
-  Name: "Gem - Pear Polished"
-  Transform {
-    Location {
-      X: 24.40625
-      Y: -0.623046875
-      Z: 2.59129333
-    }
-    Rotation {
-      Yaw: 89.9999847
-      Roll: -90
-    }
-    Scale {
-      X: 0.197401673
-      Y: 0.197401673
-      Z: 0.197401673
-    }
-  }
-  ParentId: 6870709424796340972
-  UnregisteredParameters {
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 18394305983786224728
-      }
-    }
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:color"
-      Color {
-        G: 0.412222385
-        B: 0.490000129
-        A: 1
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CoreMesh {
-    MeshAsset {
-      Id: 4598660795231725597
+      Id: 7852233738478497271
     }
     Teams {
       IsTeamCollisionEnabled: true
@@ -196,37 +113,37 @@ Objects {
   }
 }
 Objects {
-  Id: 16017348014329326418
-  Name: "Gem - Pear Polished"
+  Id: 12295254863084302079
+  Name: "Bone Human Skull 01"
   Transform {
     Location {
-      X: 16.5859375
-      Y: -0.623046875
-      Z: 3.91017151
+      X: -0.0117149353
+      Y: 19.1796856
+      Z: 1.52587891e-05
     }
     Rotation {
-      Yaw: 90
-      Roll: -68.4203186
+      Roll: 24.7499409
     }
     Scale {
-      X: 0.245681122
-      Y: 0.245681122
-      Z: 0.245681122
+      X: 0.965393543
+      Y: 0.965393543
+      Z: 0.965393543
     }
   }
-  ParentId: 6870709424796340972
+  ParentId: 17104052078247695589
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
       AssetReference {
-        Id: 2258330122587909962
+        Id: 4247430867898109902
       }
     }
     Overrides {
       Name: "ma:Shared_BaseMaterial:color"
       Color {
-        G: 0.412222385
-        B: 0.490000129
+        R: 1
+        G: 0.957777798
+        B: 0.81
         A: 1
       }
     }
@@ -239,7 +156,7 @@ Objects {
   }
   CoreMesh {
     MeshAsset {
-      Id: 4598660795231725597
+      Id: 15299940389587492714
     }
     Teams {
       IsTeamCollisionEnabled: true
