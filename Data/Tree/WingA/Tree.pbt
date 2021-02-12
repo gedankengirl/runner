@@ -75,7 +75,6 @@ Objects {
   ChildIds: 12722639949231656415
   ChildIds: 15027283106305713964
   ChildIds: 7073690902211011919
-  ChildIds: 15480525536241616602
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -90,41 +89,6 @@ Objects {
   InstanceHistory {
     SelfId: 6521658856881023483
     SubobjectId: 5846484434800184750
-    InstanceId: 5166161301489284275
-    TemplateId: 12325720584492096876
-  }
-}
-Objects {
-  Id: 15480525536241616602
-  Name: "Aura"
-  Transform {
-    Location {
-      X: 0.000144240388
-      Y: 3.30301189
-      Z: 4.2283864
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 8946224030340135421
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "Aura_1"
-  }
-  InstanceHistory {
-    SelfId: 8978958370655431365
-    SubobjectId: 8590862182535532176
     InstanceId: 5166161301489284275
     TemplateId: 12325720584492096876
   }

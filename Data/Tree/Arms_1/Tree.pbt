@@ -1,7 +1,35 @@
 Name: "Arms_1"
-RootId: 12928326341574107991
+RootId: 735444896184361374
 Objects {
-  Id: 18416937688013024959
+  Id: 15711804798113422389
+  Name: "Magic wand"
+  Transform {
+    Location {
+      Y: -52.375
+    }
+    Rotation {
+      Roll: -27.1379089
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 735444896184361374
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "Magic wand"
+  }
+}
+Objects {
+  Id: 9669305230793609427
   Name: "Cylinder - Rounded Small"
   Transform {
     Location {
@@ -17,7 +45,7 @@ Objects {
       Z: 0.474237055
     }
   }
-  ParentId: 12928326341574107991
+  ParentId: 735444896184361374
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -59,7 +87,7 @@ Objects {
   }
 }
 Objects {
-  Id: 7237897523948784382
+  Id: 13174701016523903019
   Name: "Cylinder - Rounded Small"
   Transform {
     Location {
@@ -75,7 +103,7 @@ Objects {
       Z: 0.474237055
     }
   }
-  ParentId: 12928326341574107991
+  ParentId: 735444896184361374
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"

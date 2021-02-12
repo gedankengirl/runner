@@ -1,12 +1,12 @@
 Name: "Arms"
-RootId: 4429768817373289019
+RootId: 11139181547257464954
 Objects {
-  Id: 17835588868311003590
+  Id: 401441722446565974
   Name: "Cylinder - Rounded Small"
   Transform {
     Location {
-      Y: -28.111
-      Z: 2.37298584
+      Y: -9.67382813
+      Z: 2.37338257
     }
     Rotation {
       Roll: -114.999619
@@ -17,7 +17,7 @@ Objects {
       Z: 0.474237055
     }
   }
-  ParentId: 4429768817373289019
+  ParentId: 11139181547257464954
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -28,9 +28,9 @@ Objects {
     Overrides {
       Name: "ma:Shared_BaseMaterial:color"
       Color {
-        R: 0.362000048
-        G: 0.61517489
-        B: 1
+        R: 0.774000049
+        G: 1
+        B: 0.322000027
         A: 1
       }
     }
@@ -59,12 +59,12 @@ Objects {
   }
 }
 Objects {
-  Id: 1963553072668492457
+  Id: 18408113966649770663
   Name: "Cylinder - Rounded Small"
   Transform {
     Location {
-      Y: 28.1113281
-      Z: 2.37298584
+      Y: 9.67382813
+      Z: 2.373
     }
     Rotation {
       Roll: 114.999695
@@ -75,7 +75,7 @@ Objects {
       Z: 0.474237055
     }
   }
-  ParentId: 4429768817373289019
+  ParentId: 11139181547257464954
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -86,9 +86,9 @@ Objects {
     Overrides {
       Name: "ma:Shared_BaseMaterial:color"
       Color {
-        R: 0.362000048
-        G: 0.61517489
-        B: 1
+        R: 0.774000049
+        G: 1
+        B: 0.322000027
         A: 1
       }
     }

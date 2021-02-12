@@ -1,7 +1,7 @@
 Name: "Right eye_4"
-RootId: 17098491531307040796
+RootId: 13362189033304876500
 Objects {
-  Id: 2666877291032946137
+  Id: 5753491541929561662
   Name: "Lens - Half"
   Transform {
     Location {
@@ -20,7 +20,7 @@ Objects {
       Z: 0.294117928
     }
   }
-  ParentId: 17098491531307040796
+  ParentId: 13362189033304876500
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:color"
@@ -65,7 +65,7 @@ Objects {
   }
 }
 Objects {
-  Id: 16543996459002528627
+  Id: 12818342162014412063
   Name: "Donut"
   Transform {
     Location {
@@ -84,7 +84,7 @@ Objects {
       Z: 0.302521318
     }
   }
-  ParentId: 17098491531307040796
+  ParentId: 13362189033304876500
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:color"

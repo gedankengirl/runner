@@ -16,12 +16,3 @@ Assets {
     AssetId: "sm_quarter_torus_001"
   }
 }
-Assets {
-  Id: 1589449360944952949
-  Name: "Metal Basic Steel"
-  PlatformAssetType: 2
-  PrimaryAsset {
-    AssetType: "MaterialAssetRef"
-    AssetId: "steel_001"
-  }
-}

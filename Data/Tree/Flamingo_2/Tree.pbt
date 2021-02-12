@@ -106,7 +106,7 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Legs_2"
+    FilePartitionName: "Legs_4"
   }
 }
 Objects {

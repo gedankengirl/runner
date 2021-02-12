@@ -35,7 +35,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Period"
-      Float: 2
+      Float: 2.2
     }
   }
   Collidable_v2 {

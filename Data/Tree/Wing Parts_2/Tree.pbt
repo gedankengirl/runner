@@ -1,7 +1,7 @@
 Name: "Wing Parts_2"
-RootId: 35451594477590189
+RootId: 14921802697781676820
 Objects {
-  Id: 14363675020508012085
+  Id: 5854857520212249034
   Name: "Fancy Wing"
   Transform {
     Location {
@@ -20,7 +20,7 @@ Objects {
       Z: 0.389524937
     }
   }
-  ParentId: 35451594477590189
+  ParentId: 14921802697781676820
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -39,9 +39,8 @@ Objects {
     Overrides {
       Name: "ma:Shared_BaseMaterial:color"
       Color {
-        R: 0.571258366
-        G: 1
-        B: 0.220000029
+        G: 0.412222147
+        B: 0.490000129
         A: 1
       }
     }
@@ -78,7 +77,7 @@ Objects {
   }
 }
 Objects {
-  Id: 2671930089349992418
+  Id: 16926722479868078849
   Name: "Wing Part-1"
   Transform {
     Location {
@@ -92,7 +91,7 @@ Objects {
       Z: 0.536444604
     }
   }
-  ParentId: 35451594477590189
+  ParentId: 14921802697781676820
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -107,9 +106,8 @@ Objects {
     Overrides {
       Name: "ma:Shared_BaseMaterial:color"
       Color {
-        R: 0.571258366
-        G: 1
-        B: 0.220000029
+        G: 0.412222147
+        B: 0.490000129
         A: 1
       }
     }

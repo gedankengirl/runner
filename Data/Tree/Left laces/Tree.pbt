@@ -1,7 +1,7 @@
 Name: "Left laces"
-RootId: 14445399097752422414
+RootId: 3193796105225313800
 Objects {
-  Id: 12157382084087216765
+  Id: 9095086505384080203
   Name: "Cube - Arched"
   Transform {
     Location {
@@ -17,7 +17,7 @@ Objects {
       Z: 0.0518359542
     }
   }
-  ParentId: 14445399097752422414
+  ParentId: 3193796105225313800
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -32,9 +32,8 @@ Objects {
     Overrides {
       Name: "ma:Shared_BaseMaterial:color"
       Color {
-        R: 0.890000105
-        G: 0.890000105
-        B: 0.890000105
+        G: 0.412222147
+        B: 0.490000129
         A: 1
       }
     }
@@ -63,7 +62,7 @@ Objects {
   }
 }
 Objects {
-  Id: 10023496986391747111
+  Id: 5132991802102154116
   Name: "Cube - Arched"
   Transform {
     Location {
@@ -79,7 +78,7 @@ Objects {
       Z: 0.0518359542
     }
   }
-  ParentId: 14445399097752422414
+  ParentId: 3193796105225313800
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -94,9 +93,8 @@ Objects {
     Overrides {
       Name: "ma:Shared_BaseMaterial:color"
       Color {
-        R: 0.890000105
-        G: 0.890000105
-        B: 0.890000105
+        G: 0.412222147
+        B: 0.490000129
         A: 1
       }
     }

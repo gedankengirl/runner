@@ -28,7 +28,7 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Right eye_10"
+    FilePartitionName: "Right eye_14"
   }
   InstanceHistory {
     SelfId: 2420893340817522384
@@ -65,7 +65,7 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Left eye_10"
+    FilePartitionName: "Left eye_14"
   }
   InstanceHistory {
     SelfId: 13125163814618983394

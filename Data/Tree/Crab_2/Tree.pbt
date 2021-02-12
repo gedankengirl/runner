@@ -1,6 +1,58 @@
 Name: "Crab_2"
 RootId: 1530393669090453077
 Objects {
+  Id: 15440385861507521189
+  Name: "Outline Object"
+  Transform {
+    Location {
+      X: -52.1708107
+      Z: 227.500931
+    }
+    Rotation {
+      Yaw: -6.10351381e-05
+    }
+    Scale {
+      X: 1.23951066
+      Y: 1.23951066
+      Z: 1.23951066
+    }
+  }
+  ParentId: 1530393669090453077
+  UnregisteredParameters {
+    Overrides {
+      Name: "bp:Color A"
+      Color {
+        R: 0.506000042
+        G: 0.305206269
+        A: 0.8
+      }
+    }
+    Overrides {
+      Name: "bp:Object To Outline"
+      ObjectReference {
+        SelfId: 1530393669090453077
+      }
+    }
+    Overrides {
+      Name: "bp:Thickness"
+      Float: 4
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 10913251976909601512
+    }
+    TeamSettings {
+    }
+  }
+}
+Objects {
   Id: 2742808206740260934
   Name: "Cap"
   Transform {
@@ -26,7 +78,7 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Cap"
+    FilePartitionName: "Cap_1"
   }
 }
 Objects {
@@ -55,7 +107,7 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Right legs"
+    FilePartitionName: "Right legs_1"
   }
 }
 Objects {
@@ -84,7 +136,7 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Left legs"
+    FilePartitionName: "Left legs_1"
   }
 }
 Objects {
@@ -114,7 +166,7 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Right eye_5"
+    FilePartitionName: "Right eye_9"
   }
 }
 Objects {
@@ -144,7 +196,7 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Left eye_5"
+    FilePartitionName: "Left eye_9"
   }
 }
 Objects {

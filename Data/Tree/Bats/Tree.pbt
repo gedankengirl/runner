@@ -323,7 +323,6 @@ Objects {
   ChildIds: 10509888175288814799
   ChildIds: 17861873315358124086
   ChildIds: 9160653628518293641
-  ChildIds: 1346747088012281952
   ChildIds: 10973452474442983251
   ChildIds: 2974459124658470813
   ChildIds: 11058972635050313461
@@ -560,40 +559,6 @@ Objects {
         LinearDamping: 0.01
       }
     }
-  }
-}
-Objects {
-  Id: 1346747088012281952
-  Name: "Aura"
-  Transform {
-    Location {
-      X: 3.52859497e-05
-      Y: -1.58945724e-07
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 13322665378845772518
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "Aura_2"
-  }
-  InstanceHistory {
-    SelfId: 11344410266233550584
-    SubobjectId: 10866066303510434477
-    InstanceId: 5166161301489284275
-    TemplateId: 12325720584492096876
   }
 }
 Objects {
@@ -1484,7 +1449,6 @@ Objects {
   ChildIds: 12017116598788974533
   ChildIds: 10080436799444204203
   ChildIds: 1040465222137714388
-  ChildIds: 11344410266233550584
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -1499,40 +1463,6 @@ Objects {
   InstanceHistory {
     SelfId: 16473591189676463492
     SubobjectId: 17239365221623689681
-    InstanceId: 5166161301489284275
-    TemplateId: 12325720584492096876
-  }
-}
-Objects {
-  Id: 11344410266233550584
-  Name: "Aura"
-  Transform {
-    Location {
-      X: 3.52859497e-05
-      Y: -1.58945724e-07
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 16473591189676463492
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "Aura_5"
-  }
-  InstanceHistory {
-    SelfId: 11344410266233550584
-    SubobjectId: 10866066303510434477
     InstanceId: 5166161301489284275
     TemplateId: 12325720584492096876
   }

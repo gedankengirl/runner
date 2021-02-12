@@ -1,7 +1,7 @@
 Name: "Necklace_2"
-RootId: 17104052078247695589
+RootId: 3648738270161341821
 Objects {
-  Id: 7433630467314328273
+  Id: 9505879343008142354
   Name: "Ring - Quarter Thin"
   Transform {
     Location {
@@ -20,7 +20,7 @@ Objects {
       Z: 0.44655934
     }
   }
-  ParentId: 17104052078247695589
+  ParentId: 3648738270161341821
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -31,6 +31,14 @@ Objects {
     Overrides {
       Name: "ma:Shared_BaseMaterial:smart"
       Bool: false
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.506000042
+        G: 0.305206329
+        A: 1
+      }
     }
   }
   Collidable_v2 {
@@ -57,7 +65,7 @@ Objects {
   }
 }
 Objects {
-  Id: 1543736681538142365
+  Id: 9876809463807574733
   Name: "Ring - Quarter Thin"
   Transform {
     Location {
@@ -76,7 +84,7 @@ Objects {
       Z: 0.44655934
     }
   }
-  ParentId: 17104052078247695589
+  ParentId: 3648738270161341821
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -87,6 +95,14 @@ Objects {
     Overrides {
       Name: "ma:Shared_BaseMaterial:smart"
       Bool: false
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.506000042
+        G: 0.305206329
+        A: 1
+      }
     }
   }
   Collidable_v2 {
@@ -113,7 +129,7 @@ Objects {
   }
 }
 Objects {
-  Id: 12295254863084302079
+  Id: 1748471316884627505
   Name: "Bone Human Skull 01"
   Transform {
     Location {
@@ -130,20 +146,19 @@ Objects {
       Z: 0.965393543
     }
   }
-  ParentId: 17104052078247695589
+  ParentId: 3648738270161341821
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
       AssetReference {
-        Id: 4247430867898109902
+        Id: 1589449360944952949
       }
     }
     Overrides {
       Name: "ma:Shared_BaseMaterial:color"
       Color {
-        R: 1
-        G: 0.957777798
-        B: 0.81
+        R: 0.506000042
+        G: 0.305206329
         A: 1
       }
     }

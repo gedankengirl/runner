@@ -11,12 +11,12 @@ Assets {
         Bool: false
       }
       Overrides {
-        Name: "emissiveboost"
-        Float: 20
-      }
-      Overrides {
         Name: "texture scale"
         Float: 10
+      }
+      Overrides {
+        Name: "emissiveboost"
+        Float: 50
       }
     }
     Assets {

@@ -31,9 +31,8 @@ Objects {
     Overrides {
       Name: "ma:Shared_BaseMaterial:color"
       Color {
-        R: 1
-        G: 0.402
-        B: 0.0340001
+        R: 0.506000042
+        G: 0.305206329
         A: 1
       }
     }
@@ -91,9 +90,8 @@ Objects {
     Overrides {
       Name: "ma:Shared_BaseMaterial:color"
       Color {
-        R: 1
-        G: 0.402
-        B: 0.0340001
+        R: 0.506000042
+        G: 0.305206329
         A: 1
       }
     }
@@ -151,9 +149,8 @@ Objects {
     Overrides {
       Name: "ma:Shared_BaseMaterial:color"
       Color {
-        R: 1
-        G: 0.402
-        B: 0.0340001
+        R: 0.506000042
+        G: 0.305206329
         A: 1
       }
     }
@@ -204,17 +201,28 @@ Objects {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
       AssetReference {
-        Id: 10184847056121543272
+        Id: 14613802976288032229
       }
     }
     Overrides {
       Name: "ma:Shared_BaseMaterial:color"
       Color {
-        R: 1
-        G: 0.402
-        B: 0.0340001
+        R: 0.506000042
+        G: 0.305206269
         A: 1
       }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:utile"
+      Float: 45
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:vtile"
+      Float: 30
     }
   }
   Collidable_v2 {
@@ -263,17 +271,28 @@ Objects {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
       AssetReference {
-        Id: 10184847056121543272
+        Id: 14613802976288032229
       }
     }
     Overrides {
       Name: "ma:Shared_BaseMaterial:color"
       Color {
-        R: 1
-        G: 0.402
-        B: 0.0340001
+        R: 0.506000042
+        G: 0.305206269
         A: 1
       }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:utile"
+      Float: 45
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:vtile"
+      Float: 30
     }
   }
   Collidable_v2 {

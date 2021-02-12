@@ -1,7 +1,7 @@
 Name: "Legs_3"
-RootId: 9207483195057132486
+RootId: 17209734914471155334
 Objects {
-  Id: 17543417386906607407
+  Id: 5946361659619826107
   Name: "Right leg"
   Transform {
     Location {
@@ -16,7 +16,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 9207483195057132486
+  ParentId: 17209734914471155334
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -25,11 +25,11 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Right leg_2"
+    FilePartitionName: "Right leg"
   }
 }
 Objects {
-  Id: 12652393313855283801
+  Id: 12692450613699448889
   Name: "Left leg"
   Transform {
     Location {
@@ -45,7 +45,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 9207483195057132486
+  ParentId: 17209734914471155334
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -54,6 +54,6 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Left leg_2"
+    FilePartitionName: "Left leg"
   }
 }

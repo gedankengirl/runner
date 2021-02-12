@@ -75,7 +75,7 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Rim_2"
+    FilePartitionName: "Rim_3"
   }
 }
 Objects {

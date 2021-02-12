@@ -1,7 +1,7 @@
 Name: "Necklace_1"
-RootId: 3648738270161341821
+RootId: 15051892050617190650
 Objects {
-  Id: 9505879343008142354
+  Id: 9659264619528049787
   Name: "Ring - Quarter Thin"
   Transform {
     Location {
@@ -20,7 +20,7 @@ Objects {
       Z: 0.44655934
     }
   }
-  ParentId: 3648738270161341821
+  ParentId: 15051892050617190650
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -35,8 +35,8 @@ Objects {
     Overrides {
       Name: "ma:Shared_BaseMaterial:color"
       Color {
-        R: 0.506000042
-        G: 0.305206329
+        G: 0.412222385
+        B: 0.490000129
         A: 1
       }
     }
@@ -65,7 +65,7 @@ Objects {
   }
 }
 Objects {
-  Id: 9876809463807574733
+  Id: 2221602324585885965
   Name: "Ring - Quarter Thin"
   Transform {
     Location {
@@ -84,7 +84,7 @@ Objects {
       Z: 0.44655934
     }
   }
-  ParentId: 3648738270161341821
+  ParentId: 15051892050617190650
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -99,8 +99,8 @@ Objects {
     Overrides {
       Name: "ma:Shared_BaseMaterial:color"
       Color {
-        R: 0.506000042
-        G: 0.305206329
+        G: 0.412222385
+        B: 0.490000129
         A: 1
       }
     }
@@ -129,12 +129,12 @@ Objects {
   }
 }
 Objects {
-  Id: 1748471316884627505
+  Id: 15535761365242448203
   Name: "Bone Human Skull 01"
   Transform {
     Location {
-      X: -0.0117149353
-      Y: 19.1796856
+      X: -0.0117168427
+      Y: 19.1788311
       Z: 1.52587891e-05
     }
     Rotation {
@@ -146,19 +146,19 @@ Objects {
       Z: 0.965393543
     }
   }
-  ParentId: 3648738270161341821
+  ParentId: 15051892050617190650
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
       AssetReference {
-        Id: 1589449360944952949
+        Id: 13674206740428179952
       }
     }
     Overrides {
       Name: "ma:Shared_BaseMaterial:color"
       Color {
-        R: 0.506000042
-        G: 0.305206329
+        G: 0.412222385
+        B: 0.490000129
         A: 1
       }
     }

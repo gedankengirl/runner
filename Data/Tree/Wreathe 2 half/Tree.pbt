@@ -1,7 +1,7 @@
 Name: "Wreathe 2 half"
-RootId: 6639821980706722949
+RootId: 5625145534083645962
 Objects {
-  Id: 18155644286551772997
+  Id: 160303240755246566
   Name: "Flower Wild Lily 01"
   Transform {
     Location {
@@ -20,14 +20,13 @@ Objects {
       Z: 0.740789771
     }
   }
-  ParentId: 6639821980706722949
+  ParentId: 5625145534083645962
   UnregisteredParameters {
     Overrides {
       Name: "ma:Nature_Leaves:color"
       Color {
-        R: 1
-        G: 0.873428464
-        B: 0.114000022
+        G: 0.412222147
+        B: 0.490000129
         A: 1
       }
     }
@@ -56,7 +55,7 @@ Objects {
   }
 }
 Objects {
-  Id: 16322134180998709691
+  Id: 5966793895022341988
   Name: "Flower Wild Lily 01"
   Transform {
     Location {
@@ -75,14 +74,13 @@ Objects {
       Z: 0.740789711
     }
   }
-  ParentId: 6639821980706722949
+  ParentId: 5625145534083645962
   UnregisteredParameters {
     Overrides {
       Name: "ma:Nature_Leaves:color"
       Color {
-        R: 1
-        G: 0.873428464
-        B: 0.114000022
+        G: 0.412222147
+        B: 0.490000129
         A: 1
       }
     }
@@ -111,7 +109,7 @@ Objects {
   }
 }
 Objects {
-  Id: 3065875308012744947
+  Id: 5988600757269083977
   Name: "Flower Wild Lily 01"
   Transform {
     Location {
@@ -130,14 +128,13 @@ Objects {
       Z: 0.740789
     }
   }
-  ParentId: 6639821980706722949
+  ParentId: 5625145534083645962
   UnregisteredParameters {
     Overrides {
       Name: "ma:Nature_Leaves:color"
       Color {
-        R: 1
-        G: 0.873428464
-        B: 0.114000022
+        G: 0.412222147
+        B: 0.490000129
         A: 1
       }
     }
@@ -166,7 +163,7 @@ Objects {
   }
 }
 Objects {
-  Id: 6659219426921275393
+  Id: 14880420670712216190
   Name: "Flower Wild Lily 01"
   Transform {
     Location {
@@ -185,14 +182,13 @@ Objects {
       Z: 0.740789
     }
   }
-  ParentId: 6639821980706722949
+  ParentId: 5625145534083645962
   UnregisteredParameters {
     Overrides {
       Name: "ma:Nature_Leaves:color"
       Color {
-        R: 1
-        G: 0.873428464
-        B: 0.114000022
+        G: 0.412222147
+        B: 0.490000129
         A: 1
       }
     }
@@ -221,7 +217,7 @@ Objects {
   }
 }
 Objects {
-  Id: 1726166913533625361
+  Id: 15685054223480931232
   Name: "Flower Wild Lily 01"
   Transform {
     Location {
@@ -240,14 +236,13 @@ Objects {
       Z: 0.740789771
     }
   }
-  ParentId: 6639821980706722949
+  ParentId: 5625145534083645962
   UnregisteredParameters {
     Overrides {
       Name: "ma:Nature_Leaves:color"
       Color {
-        R: 1
-        G: 0.873428464
-        B: 0.114000022
+        G: 0.412222147
+        B: 0.490000129
         A: 1
       }
     }
@@ -276,7 +271,7 @@ Objects {
   }
 }
 Objects {
-  Id: 6672225920345205572
+  Id: 11102430826121670121
   Name: "Flower Wild Lily 01"
   Transform {
     Location {
@@ -294,14 +289,13 @@ Objects {
       Z: 0.740789831
     }
   }
-  ParentId: 6639821980706722949
+  ParentId: 5625145534083645962
   UnregisteredParameters {
     Overrides {
       Name: "ma:Nature_Leaves:color"
       Color {
-        R: 1
-        G: 0.873428464
-        B: 0.114000022
+        G: 0.412222147
+        B: 0.490000129
         A: 1
       }
     }

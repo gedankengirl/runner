@@ -1,27 +1,27 @@
 Assets {
-  Id: 15299940389587492714
-  Name: "Bone Human Skull 01"
+  Id: 16353917461806733124
+  Name: "Ring - Thin"
   PlatformAssetType: 1
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_bones_human_skull_01_ref"
+    AssetId: "sm_torus_003"
   }
 }
 Assets {
-  Id: 7852233738478497271
-  Name: "Ring - Quarter Thin"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_quarter_torus_001"
-  }
-}
-Assets {
-  Id: 1589449360944952949
-  Name: "Metal Basic Steel"
+  Id: 10184847056121543272
+  Name: "Basic Material"
   PlatformAssetType: 2
   PrimaryAsset {
     AssetType: "MaterialAssetRef"
-    AssetId: "steel_001"
+    AssetId: "mi_basic_pbr_material_001"
+  }
+}
+Assets {
+  Id: 4598660795231725597
+  Name: "Gem - Pear Polished"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_gem_pear_polished_001"
   }
 }

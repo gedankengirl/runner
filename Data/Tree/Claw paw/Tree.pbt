@@ -1,7 +1,7 @@
 Name: "Claw paw"
-RootId: 3514256917751358110
+RootId: 9510337967484615783
 Objects {
-  Id: 4477194770786888476
+  Id: 9387605185740103342
   Name: "Claw"
   Transform {
     Location {
@@ -17,7 +17,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 3514256917751358110
+  ParentId: 9510337967484615783
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -30,7 +30,7 @@ Objects {
   }
 }
 Objects {
-  Id: 5700923130266654973
+  Id: 2738400376571089597
   Name: "Horn"
   Transform {
     Location {
@@ -49,7 +49,7 @@ Objects {
       Z: 0.306498021
     }
   }
-  ParentId: 3514256917751358110
+  ParentId: 9510337967484615783
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -90,7 +90,7 @@ Objects {
   }
 }
 Objects {
-  Id: 3895994901818100292
+  Id: 13147861342048007383
   Name: "Horn"
   Transform {
     Location {
@@ -109,7 +109,7 @@ Objects {
       Z: 0.638587415
     }
   }
-  ParentId: 3514256917751358110
+  ParentId: 9510337967484615783
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"

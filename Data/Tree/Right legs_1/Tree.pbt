@@ -1,7 +1,7 @@
 Name: "Right legs_1"
-RootId: 2801284710957840178
+RootId: 3454968274598243130
 Objects {
-  Id: 7321769609491787805
+  Id: 16695433371432386835
   Name: "Horn"
   Transform {
     Location {
@@ -20,7 +20,7 @@ Objects {
       Z: 0.550166488
     }
   }
-  ParentId: 2801284710957840178
+  ParentId: 3454968274598243130
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -61,7 +61,7 @@ Objects {
   }
 }
 Objects {
-  Id: 604935541107455917
+  Id: 3026352264900290860
   Name: "Horn"
   Transform {
     Location {
@@ -80,7 +80,7 @@ Objects {
       Z: 0.503071308
     }
   }
-  ParentId: 2801284710957840178
+  ParentId: 3454968274598243130
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -121,7 +121,7 @@ Objects {
   }
 }
 Objects {
-  Id: 18399534004056891808
+  Id: 11357019599002583533
   Name: "Horn"
   Transform {
     Location {
@@ -140,7 +140,7 @@ Objects {
       Z: 0.314707488
     }
   }
-  ParentId: 2801284710957840178
+  ParentId: 3454968274598243130
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -181,7 +181,7 @@ Objects {
   }
 }
 Objects {
-  Id: 14407703875592589761
+  Id: 15044092620988628427
   Name: "Horn"
   Transform {
     Location {
@@ -200,7 +200,7 @@ Objects {
       Z: 0.541936219
     }
   }
-  ParentId: 2801284710957840178
+  ParentId: 3454968274598243130
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -241,7 +241,7 @@ Objects {
   }
 }
 Objects {
-  Id: 15817910134954811779
+  Id: 3514256917751358110
   Name: "Claw paw"
   Transform {
     Location {
@@ -258,7 +258,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 2801284710957840178
+  ParentId: 3454968274598243130
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }

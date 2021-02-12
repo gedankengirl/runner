@@ -1,7 +1,7 @@
 Name: "Wings"
-RootId: 10801649301686981213
+RootId: 9611681611752094669
 Objects {
-  Id: 13241431323401551565
+  Id: 3624283965918405561
   Name: "Wing - R "
   Transform {
     Location {
@@ -19,7 +19,7 @@ Objects {
       Z: 0.577988505
     }
   }
-  ParentId: 10801649301686981213
+  ParentId: 9611681611752094669
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -38,7 +38,7 @@ Objects {
   }
 }
 Objects {
-  Id: 15917411725046069604
+  Id: 3447649033690351489
   Name: "Wing - L"
   Transform {
     Location {
@@ -55,7 +55,7 @@ Objects {
       Z: 0.577988505
     }
   }
-  ParentId: 10801649301686981213
+  ParentId: 9611681611752094669
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }

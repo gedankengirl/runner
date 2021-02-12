@@ -1,26 +1,26 @@
 Name: "Right eye_15"
-RootId: 8499503138318632171
+RootId: 2420893340817522384
 Objects {
-  Id: 12546202075383740717
+  Id: 11812015468367167330
   Name: "Lens - Half"
   Transform {
     Location {
-      X: 1.153
-      Y: 2.64096069
-      Z: 1.1897583
+      X: -0.000429119042
+      Y: 0.000156796872
+      Z: -0.127331614
     }
     Rotation {
-      Pitch: 74.2438126
-      Yaw: -70.6132431
-      Roll: 41.8413162
+      Pitch: 74.2436295
+      Yaw: -109.386658
+      Roll: -41.841156
     }
     Scale {
-      X: 0.294117928
-      Y: -0.294117928
-      Z: 0.294117928
+      X: 0.294117689
+      Y: 0.294103384
+      Z: 0.435404599
     }
   }
-  ParentId: 8499503138318632171
+  ParentId: 2420893340817522384
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:color"
@@ -58,33 +58,33 @@ Objects {
     }
   }
   InstanceHistory {
-    SelfId: 13181402393037032436
-    SubobjectId: 1052528165426944577
-    InstanceId: 6208513033488493417
-    TemplateId: 1976493870456417382
+    SelfId: 11812015468367167330
+    SubobjectId: 12128125416850348855
+    InstanceId: 5166161301489284275
+    TemplateId: 12325720584492096876
   }
 }
 Objects {
-  Id: 4723012053870646723
+  Id: 7187270302652622099
   Name: "Donut"
   Transform {
     Location {
-      X: -1.153
-      Y: -2.64080811
-      Z: 1.52587891e-05
+      X: 1.30018861e-05
+      Y: 0.000103898725
+      Z: 5.05938397e-06
     }
     Rotation {
-      Pitch: 10.4352713
-      Yaw: 158.630447
-      Roll: 101.869759
+      Pitch: 10.4352646
+      Yaw: 21.3694401
+      Roll: -101.869751
     }
     Scale {
-      X: 0.245098233
-      Y: -0.245098233
-      Z: 0.302521318
+      X: 0.223046258
+      Y: 0.223075539
+      Z: 0.0883417204
     }
   }
-  ParentId: 8499503138318632171
+  ParentId: 2420893340817522384
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:color"
@@ -125,9 +125,9 @@ Objects {
     }
   }
   InstanceHistory {
-    SelfId: 3703233150196991515
-    SubobjectId: 10021192537304749998
-    InstanceId: 6208513033488493417
-    TemplateId: 1976493870456417382
+    SelfId: 7187270302652622099
+    SubobjectId: 7502193175698800966
+    InstanceId: 5166161301489284275
+    TemplateId: 12325720584492096876
   }
 }

@@ -1,7 +1,7 @@
 Name: "Rim_1"
-RootId: 7921534498123296624
+RootId: 5195736606344636980
 Objects {
-  Id: 3380068759741278446
+  Id: 14745951453297613864
   Name: "Cone - Concave"
   Transform {
     Location {
@@ -15,7 +15,7 @@ Objects {
       Z: 2.08612394
     }
   }
-  ParentId: 7921534498123296624
+  ParentId: 5195736606344636980
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -26,8 +26,8 @@ Objects {
     Overrides {
       Name: "ma:Shared_BaseMaterial:color"
       Color {
-        R: 0.506000042
-        G: 0.305206329
+        G: 0.412222385
+        B: 0.490000129
         A: 1
       }
     }
@@ -56,7 +56,7 @@ Objects {
   }
 }
 Objects {
-  Id: 13098975736123769092
+  Id: 5205177060606137210
   Name: "Cone - Concave"
   Transform {
     Location {
@@ -69,7 +69,7 @@ Objects {
       Z: 1.92474961
     }
   }
-  ParentId: 7921534498123296624
+  ParentId: 5195736606344636980
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"

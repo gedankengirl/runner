@@ -1,7 +1,7 @@
 Name: "Legs"
-RootId: 5095254788361352811
+RootId: 8592975313466275536
 Objects {
-  Id: 16280034326804305570
+  Id: 16003402291800585894
   Name: "Right laces"
   Transform {
     Location {
@@ -17,7 +17,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 5095254788361352811
+  ParentId: 8592975313466275536
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -30,7 +30,7 @@ Objects {
   }
 }
 Objects {
-  Id: 14445399097752422414
+  Id: 3193796105225313800
   Name: "Left laces"
   Transform {
     Location {
@@ -46,7 +46,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 5095254788361352811
+  ParentId: 8592975313466275536
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -59,7 +59,7 @@ Objects {
   }
 }
 Objects {
-  Id: 4879880025097438771
+  Id: 11038975697582743789
   Name: "Capsule"
   Transform {
     Location {
@@ -75,7 +75,7 @@ Objects {
       Z: 0.154353052
     }
   }
-  ParentId: 5095254788361352811
+  ParentId: 8592975313466275536
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -116,7 +116,7 @@ Objects {
   }
 }
 Objects {
-  Id: 15673757770308521461
+  Id: 4000778693568720742
   Name: "Capsule"
   Transform {
     Location {
@@ -132,7 +132,7 @@ Objects {
       Z: 0.154353052
     }
   }
-  ParentId: 5095254788361352811
+  ParentId: 8592975313466275536
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -173,7 +173,7 @@ Objects {
   }
 }
 Objects {
-  Id: 4156452556362346057
+  Id: 10914409734522991001
   Name: "Cylinder - Rounded Small"
   Transform {
     Location {
@@ -188,7 +188,7 @@ Objects {
       Z: 0.474237055
     }
   }
-  ParentId: 5095254788361352811
+  ParentId: 8592975313466275536
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -230,7 +230,7 @@ Objects {
   }
 }
 Objects {
-  Id: 11539566741491623149
+  Id: 5626393934240724004
   Name: "Cylinder - Rounded Small"
   Transform {
     Location {
@@ -245,7 +245,7 @@ Objects {
       Z: 0.474237055
     }
   }
-  ParentId: 5095254788361352811
+  ParentId: 8592975313466275536
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"

@@ -8,6 +8,24 @@ Assets {
   }
 }
 Assets {
+  Id: 14569843378511035170
+  Name: "Ring 01"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_torus_002"
+  }
+}
+Assets {
+  Id: 11827461829708346186
+  Name: "Manticore Logo"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_logo_manticore_01"
+  }
+}
+Assets {
   Id: 11201079080483063210
   Name: "Cone - Truncated Hollow Thick"
   PlatformAssetType: 1

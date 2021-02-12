@@ -1,7 +1,7 @@
 Name: "Wing - R_4"
-RootId: 13241431323401551565
+RootId: 3624283965918405561
 Objects {
-  Id: 6899771068995522695
+  Id: 11256209381008205349
   Name: "Wing - R "
   Transform {
     Location {
@@ -18,7 +18,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13241431323401551565
+  ParentId: 3624283965918405561
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -37,7 +37,7 @@ Objects {
   }
 }
 Objects {
-  Id: 534140038648287865
+  Id: 491478420344135942
   Name: "Object Rotator"
   Transform {
     Location {
@@ -53,12 +53,12 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13241431323401551565
+  ParentId: 3624283965918405561
   UnregisteredParameters {
     Overrides {
       Name: "cs:Object"
       ObjectReference {
-        SelfId: 6899771068995522695
+        SelfId: 11256209381008205349
       }
     }
     Overrides {

@@ -1,26 +1,26 @@
 Name: "Aura_1"
-RootId: 15480525536241616602
+RootId: 9938398005338431639
 Objects {
-  Id: 4293614560769557094
+  Id: 13365715519620118579
   Name: "Horn"
   Transform {
     Location {
-      X: -0.000586776529
-      Y: -50.5501099
-      Z: 0.982723057
+      X: -23.2521362
+      Y: 2.14740467e-07
+      Z: -166.896118
     }
     Rotation {
-      Pitch: 1.36603776e-05
-      Yaw: 4.31706903e-05
-      Roll: 49.5358505
+      Pitch: -2.04905664e-05
+      Yaw: -89.9998856
+      Roll: -171.999939
     }
     Scale {
-      X: 0.160924464
-      Y: 0.186664835
-      Z: 0.350660324
+      X: 0.745331585
+      Y: 0.745332
+      Z: 0.397825599
     }
   }
-  ParentId: 15480525536241616602
+  ParentId: 9938398005338431639
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -31,10 +31,14 @@ Objects {
     Overrides {
       Name: "ma:Shared_BaseMaterial:color"
       Color {
-        G: 0.412222385
-        B: 0.490000129
+        R: 0.506000042
+        G: 0.305206269
         A: 1
       }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
     }
   }
   Collidable_v2 {
@@ -45,7 +49,7 @@ Objects {
   }
   CoreMesh {
     MeshAsset {
-      Id: 10153547487072633676
+      Id: 1138156223354331830
     }
     Teams {
       IsTeamCollisionEnabled: true
@@ -54,37 +58,33 @@ Objects {
     EnableCameraCollision: true
     StaticMesh {
       Physics {
+        Mass: 100
+        LinearDamping: 0.01
       }
     }
-  }
-  InstanceHistory {
-    SelfId: 14679031968401394153
-    SubobjectId: 13840988263404989884
-    InstanceId: 5166161301489284275
-    TemplateId: 12325720584492096876
   }
 }
 Objects {
-  Id: 11105355981078663285
-  Name: "Horn"
+  Id: 2030430386797771051
+  Name: "Crescent - 03"
   Transform {
     Location {
-      X: 0.000188474107
-      Y: -21.5646801
-      Z: 25.5953407
+      X: -11.6443186
+      Y: 5.00006536e-06
+      Z: -116.579567
     }
     Rotation {
-      Pitch: 1.36603776e-05
-      Yaw: 4.31706903e-05
-      Roll: 49.5358505
+      Pitch: -7.99998856
+      Yaw: 3.08174931e-05
+      Roll: -4.28896237e-06
     }
     Scale {
-      X: 0.100815199
-      Y: 0.116940655
-      Z: 0.472846061
+      X: 1.34968638
+      Y: 1.12814188
+      Z: 1.47088349
     }
   }
-  ParentId: 15480525536241616602
+  ParentId: 9938398005338431639
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -95,8 +95,8 @@ Objects {
     Overrides {
       Name: "ma:Shared_BaseMaterial:color"
       Color {
-        G: 0.412222385
-        B: 0.490000129
+        R: 0.506000042
+        G: 0.305206269
         A: 1
       }
     }
@@ -109,7 +109,7 @@ Objects {
   }
   CoreMesh {
     MeshAsset {
-      Id: 10153547487072633676
+      Id: 7150799765729022666
     }
     Teams {
       IsTeamCollisionEnabled: true
@@ -118,37 +118,31 @@ Objects {
     EnableCameraCollision: true
     StaticMesh {
       Physics {
+        Mass: 100
+        LinearDamping: 0.01
       }
     }
-  }
-  InstanceHistory {
-    SelfId: 14098601697122840131
-    SubobjectId: 14414684544312019478
-    InstanceId: 5166161301489284275
-    TemplateId: 12325720584492096876
   }
 }
 Objects {
-  Id: 11756886596172794396
-  Name: "Horn"
+  Id: 16400445265882226920
+  Name: "Sphere - Half"
   Transform {
     Location {
-      X: -0.00020657877
-      Y: -8.53215218
-      Z: 43.8204155
+      X: -5.26258135
+      Y: 2.01055263e-06
+      Z: -51.0065842
     }
     Rotation {
-      Pitch: 4.09811328e-05
-      Yaw: 2.57380907e-05
-      Roll: 18.676918
+      Pitch: -7.99998856
     }
     Scale {
-      X: 0.0974460766
-      Y: 0.138494506
-      Z: 0.294401616
+      X: 1.34795344
+      Y: 1.18830156
+      Z: 1.01387775
     }
   }
-  ParentId: 15480525536241616602
+  ParentId: 9938398005338431639
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -159,8 +153,8 @@ Objects {
     Overrides {
       Name: "ma:Shared_BaseMaterial:color"
       Color {
-        G: 0.412222385
-        B: 0.490000129
+        R: 0.506000042
+        G: 0.305206269
         A: 1
       }
     }
@@ -173,7 +167,7 @@ Objects {
   }
   CoreMesh {
     MeshAsset {
-      Id: 10153547487072633676
+      Id: 4799620171569546646
     }
     Teams {
       IsTeamCollisionEnabled: true
@@ -182,37 +176,32 @@ Objects {
     EnableCameraCollision: true
     StaticMesh {
       Physics {
+        Mass: 100
+        LinearDamping: 0.01
       }
     }
-  }
-  InstanceHistory {
-    SelfId: 13155856782037930131
-    SubobjectId: 13632830074854651078
-    InstanceId: 5166161301489284275
-    TemplateId: 12325720584492096876
   }
 }
 Objects {
-  Id: 12070537700994017356
-  Name: "Horn"
+  Id: 1827226383053138007
+  Name: "Cone"
   Transform {
     Location {
-      X: 6.82406244e-05
-      Y: 68.2435532
-      Z: 86.146431
+      X: -27.4371967
+      Y: -2.90024818e-05
+      Z: 0.398319542
     }
     Rotation {
-      Pitch: 3.4150944e-05
-      Yaw: 1.06084044e-05
-      Roll: 169.799927
+      Yaw: 8.03698192e-27
+      Roll: 4.07111031e-13
     }
     Scale {
-      X: 0.0788825452
-      Y: 0.10126657
-      Z: 0.427004427
+      X: 0.0408037305
+      Y: 0.199798122
+      Z: 0.287841797
     }
   }
-  ParentId: 15480525536241616602
+  ParentId: 9938398005338431639
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -223,10 +212,22 @@ Objects {
     Overrides {
       Name: "ma:Shared_BaseMaterial:color"
       Color {
-        G: 0.412222385
-        B: 0.490000129
+        R: 0.506000042
+        G: 0.305206269
         A: 1
       }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:utile"
+      Float: 45
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:vtile"
+      Float: 30
     }
   }
   Collidable_v2 {
@@ -237,7 +238,7 @@ Objects {
   }
   CoreMesh {
     MeshAsset {
-      Id: 13703744877030710122
+      Id: 7027494913329720896
     }
     Teams {
       IsTeamCollisionEnabled: true
@@ -246,37 +247,32 @@ Objects {
     EnableCameraCollision: true
     StaticMesh {
       Physics {
+        Mass: 100
+        LinearDamping: 0.01
       }
     }
-  }
-  InstanceHistory {
-    SelfId: 1729200360382616621
-    SubobjectId: 2043559061691347064
-    InstanceId: 5166161301489284275
-    TemplateId: 12325720584492096876
   }
 }
 Objects {
-  Id: 12445617678661392336
-  Name: "Horn"
+  Id: 15213414936647949982
+  Name: "Cone"
   Transform {
     Location {
-      X: 6.82406244e-05
-      Y: 68.2435532
-      Z: 86.146431
+      X: 0.0120991273
+      Y: -27.4489384
+      Z: 0.398287535
     }
     Rotation {
-      Pitch: 3.4150944e-05
-      Yaw: -179.999939
-      Roll: 54.709137
+      Yaw: 89.9999619
+      Roll: 8.45192881e-06
     }
     Scale {
-      X: 0.0806661323
-      Y: 0.105517842
-      Z: 0.444930941
+      X: 0.0408037305
+      Y: 0.199798062
+      Z: 0.287841707
     }
   }
-  ParentId: 15480525536241616602
+  ParentId: 9938398005338431639
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -287,10 +283,22 @@ Objects {
     Overrides {
       Name: "ma:Shared_BaseMaterial:color"
       Color {
-        G: 0.412222385
-        B: 0.490000129
+        R: 0.506000042
+        G: 0.305206269
         A: 1
       }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:utile"
+      Float: 45
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:vtile"
+      Float: 30
     }
   }
   Collidable_v2 {
@@ -301,7 +309,7 @@ Objects {
   }
   CoreMesh {
     MeshAsset {
-      Id: 13703744877030710122
+      Id: 7027494913329720896
     }
     Teams {
       IsTeamCollisionEnabled: true
@@ -310,37 +318,32 @@ Objects {
     EnableCameraCollision: true
     StaticMesh {
       Physics {
+        Mass: 100
+        LinearDamping: 0.01
       }
     }
-  }
-  InstanceHistory {
-    SelfId: 237835338486786860
-    SubobjectId: 643875425327239033
-    InstanceId: 5166161301489284275
-    TemplateId: 12325720584492096876
   }
 }
 Objects {
-  Id: 10160724810370423997
-  Name: "Horn"
+  Id: 5668944824275779525
+  Name: "Cone"
   Transform {
     Location {
-      X: -0.000379269331
-      Y: -6.32517099
-      Z: 48.9104271
+      X: 0.0120369168
+      Y: 27.4489384
+      Z: 0.398265094
     }
     Rotation {
-      Pitch: 3.4150944e-05
-      Yaw: 1.0792698e-05
-      Roll: 1.81850469
+      Yaw: 89.9999771
+      Roll: 8.45192881e-06
     }
     Scale {
-      X: 0.105517872
-      Y: 0.105517872
-      Z: 0.444930851
+      X: 0.0408037305
+      Y: 0.199798077
+      Z: 0.287841797
     }
   }
-  ParentId: 15480525536241616602
+  ParentId: 9938398005338431639
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -351,10 +354,22 @@ Objects {
     Overrides {
       Name: "ma:Shared_BaseMaterial:color"
       Color {
-        G: 0.412222385
-        B: 0.490000129
+        R: 0.506000042
+        G: 0.305206269
         A: 1
       }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:utile"
+      Float: 45
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:vtile"
+      Float: 30
     }
   }
   Collidable_v2 {
@@ -365,7 +380,7 @@ Objects {
   }
   CoreMesh {
     MeshAsset {
-      Id: 13703744877030710122
+      Id: 7027494913329720896
     }
     Teams {
       IsTeamCollisionEnabled: true
@@ -374,37 +389,32 @@ Objects {
     EnableCameraCollision: true
     StaticMesh {
       Physics {
+        Mass: 100
+        LinearDamping: 0.01
       }
     }
-  }
-  InstanceHistory {
-    SelfId: 15794998429418351676
-    SubobjectId: 15028634902438643817
-    InstanceId: 5166161301489284275
-    TemplateId: 12325720584492096876
   }
 }
 Objects {
-  Id: 11778083682356530385
-  Name: "Horn"
+  Id: 12661732893468572981
+  Name: "Cone"
   Transform {
     Location {
-      X: -0.0001225546
-      Y: -49.5164261
-      Z: -0.00014112347
+      X: 27.4153385
+      Y: 2.89203745e-05
+      Z: -3.0540552e-05
     }
     Rotation {
-      Pitch: 4.09811328e-05
-      Yaw: -179.999954
-      Roll: -45.0460777
+      Yaw: 8.03698192e-27
+      Roll: 4.07111031e-13
     }
     Scale {
-      X: 0.107228719
-      Y: 0.107228719
-      Z: 0.452144802
+      X: 0.0281515196
+      Y: 0.199798137
+      Z: 0.392029166
     }
   }
-  ParentId: 15480525536241616602
+  ParentId: 9938398005338431639
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -415,10 +425,22 @@ Objects {
     Overrides {
       Name: "ma:Shared_BaseMaterial:color"
       Color {
-        G: 0.412222385
-        B: 0.490000129
+        R: 0.506000042
+        G: 0.305206269
         A: 1
       }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:utile"
+      Float: 45
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:vtile"
+      Float: 30
     }
   }
   Collidable_v2 {
@@ -429,7 +451,7 @@ Objects {
   }
   CoreMesh {
     MeshAsset {
-      Id: 13703744877030710122
+      Id: 7027494913329720896
     }
     Teams {
       IsTeamCollisionEnabled: true
@@ -438,13 +460,9 @@ Objects {
     EnableCameraCollision: true
     StaticMesh {
       Physics {
+        Mass: 100
+        LinearDamping: 0.01
       }
     }
-  }
-  InstanceHistory {
-    SelfId: 2915053276301226208
-    SubobjectId: 2582582603503899829
-    InstanceId: 5166161301489284275
-    TemplateId: 12325720584492096876
   }
 }

@@ -26,7 +26,7 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Diamonds_1"
+    FilePartitionName: "Diamonds_3"
   }
 }
 Objects {
@@ -175,7 +175,7 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Necklace_3"
+    FilePartitionName: "Necklace_4"
   }
   InstanceHistory {
     SelfId: 15387303877953880331

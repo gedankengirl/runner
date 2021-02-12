@@ -1,7 +1,7 @@
 Name: "Claw"
-RootId: 4477194770786888476
+RootId: 9387605185740103342
 Objects {
-  Id: 4477048675038810279
+  Id: 2141121940687381469
   Name: "Cone - Bullet"
   Transform {
     Location {
@@ -19,7 +19,7 @@ Objects {
       Z: 0.0522313826
     }
   }
-  ParentId: 4477194770786888476
+  ParentId: 9387605185740103342
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -30,8 +30,8 @@ Objects {
     Overrides {
       Name: "ma:Shared_BaseMaterial:color"
       Color {
-        R: 0.617708385
-        G: 0.078439191
+        G: 0.412222385
+        B: 0.490000129
         A: 1
       }
     }
@@ -60,7 +60,7 @@ Objects {
   }
 }
 Objects {
-  Id: 17911031023531745877
+  Id: 11497250398254254799
   Name: "Cone - Bullet"
   Transform {
     Location {
@@ -78,7 +78,7 @@ Objects {
       Z: 0.1830865
     }
   }
-  ParentId: 4477194770786888476
+  ParentId: 9387605185740103342
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -89,8 +89,8 @@ Objects {
     Overrides {
       Name: "ma:Shared_BaseMaterial:color"
       Color {
-        R: 0.617708385
-        G: 0.078439191
+        G: 0.412222385
+        B: 0.490000129
         A: 1
       }
     }

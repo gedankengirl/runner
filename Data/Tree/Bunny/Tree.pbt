@@ -35,7 +35,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Period"
-      Float: 2
+      Float: 2.4
     }
   }
   Collidable_v2 {
@@ -167,7 +167,7 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Arms"
+    FilePartitionName: "Arms_3"
   }
 }
 Objects {
@@ -532,7 +532,7 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Right eye_1"
+    FilePartitionName: "Right eye_3"
   }
 }
 Objects {
@@ -563,6 +563,6 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Left eye_1"
+    FilePartitionName: "Left eye_3"
   }
 }

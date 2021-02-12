@@ -249,7 +249,7 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Right eye_13"
+    FilePartitionName: "Right eye_17"
   }
 }
 Objects {
@@ -278,7 +278,7 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Left eye_13"
+    FilePartitionName: "Left eye_17"
   }
 }
 Objects {
@@ -2628,7 +2628,7 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Right eye_14"
+    FilePartitionName: "Right eye_18"
   }
 }
 Objects {
@@ -2657,7 +2657,7 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Left eye_14"
+    FilePartitionName: "Left eye_18"
   }
 }
 Objects {
@@ -4985,7 +4985,7 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Right eye_15"
+    FilePartitionName: "Right eye_19"
   }
 }
 Objects {
@@ -5014,7 +5014,7 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Left eye_15"
+    FilePartitionName: "Left eye_19"
   }
 }
 Objects {

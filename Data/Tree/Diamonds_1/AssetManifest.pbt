@@ -8,11 +8,11 @@ Assets {
   }
 }
 Assets {
-  Id: 10184847056121543272
-  Name: "Basic Material"
+  Id: 132672053610873933
+  Name: "Plastic Matte"
   PlatformAssetType: 2
   PrimaryAsset {
     AssetType: "MaterialAssetRef"
-    AssetId: "mi_basic_pbr_material_001"
+    AssetId: "plastic_matte_001"
   }
 }

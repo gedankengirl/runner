@@ -17,11 +17,11 @@ Assets {
   }
 }
 Assets {
-  Id: 4247430867898109902
-  Name: "Stucco Tintable"
+  Id: 1589449360944952949
+  Name: "Metal Basic Steel"
   PlatformAssetType: 2
   PrimaryAsset {
     AssetType: "MaterialAssetRef"
-    AssetId: "mi_stucco_tint_001_uv"
+    AssetId: "steel_001"
   }
 }

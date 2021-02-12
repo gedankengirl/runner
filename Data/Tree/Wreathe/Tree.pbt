@@ -1,7 +1,7 @@
 Name: "Wreathe"
-RootId: 8885968840780859381
+RootId: 3861880264178803605
 Objects {
-  Id: 6639821980706722949
+  Id: 5625145534083645962
   Name: "Wreathe 2 half"
   Transform {
     Location {
@@ -20,7 +20,7 @@ Objects {
       Z: 0.999999881
     }
   }
-  ParentId: 8885968840780859381
+  ParentId: 3861880264178803605
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -33,7 +33,7 @@ Objects {
   }
 }
 Objects {
-  Id: 1090757438093692485
+  Id: 3552030984824440843
   Name: "Wreathe 1 half"
   Transform {
     Location {
@@ -48,7 +48,7 @@ Objects {
       Z: 0.99999994
     }
   }
-  ParentId: 8885968840780859381
+  ParentId: 3861880264178803605
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }

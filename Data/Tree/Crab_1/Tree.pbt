@@ -26,7 +26,7 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Cap_1"
+    FilePartitionName: "Cap_2"
   }
 }
 Objects {
@@ -55,7 +55,7 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Right legs_1"
+    FilePartitionName: "Right legs_2"
   }
 }
 Objects {
@@ -84,7 +84,7 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Left legs_1"
+    FilePartitionName: "Left legs_2"
   }
 }
 Objects {
@@ -114,7 +114,7 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Right eye_6"
+    FilePartitionName: "Right eye_10"
   }
 }
 Objects {
@@ -144,7 +144,7 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Left eye_6"
+    FilePartitionName: "Left eye_10"
   }
 }
 Objects {

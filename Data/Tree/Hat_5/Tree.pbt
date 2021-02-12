@@ -83,7 +83,7 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Rim_1"
+    FilePartitionName: "Rim_2"
   }
 }
 Objects {

@@ -52,12 +52,3 @@ Assets {
     AssetId: "sm_hemisphere_002"
   }
 }
-Assets {
-  Id: 132672053610873933
-  Name: "Plastic Matte"
-  PlatformAssetType: 2
-  PrimaryAsset {
-    AssetType: "MaterialAssetRef"
-    AssetId: "plastic_matte_001"
-  }
-}

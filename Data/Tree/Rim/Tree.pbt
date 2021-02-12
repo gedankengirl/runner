@@ -1,75 +1,52 @@
 Name: "Rim"
-RootId: 5195736606344636980
+RootId: 17911832859403838246
 Objects {
-  Id: 14745951453297613864
-  Name: "Cone - Concave"
+  Id: 2394256954662670627
+  Name: "Diamonds"
   Transform {
     Location {
+      X: -14.3071308
+      Z: 2.32851791
     }
     Rotation {
-      Yaw: 6.83018789e-06
+      Pitch: -57.4730759
     }
     Scale {
-      X: 3.00058436
-      Y: 3.00058436
-      Z: 2.08612394
+      X: 0.839916229
+      Y: 0.839916229
+      Z: 0.839916229
     }
   }
-  ParentId: 5195736606344636980
-  UnregisteredParameters {
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 2482510762028700951
-      }
-    }
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:color"
-      Color {
-        G: 0.412222385
-        B: 0.490000129
-        A: 1
-      }
-    }
-  }
+  ParentId: 17911832859403838246
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
-  CoreMesh {
-    MeshAsset {
-      Id: 186900004530064859
-    }
-    Teams {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    EnableCameraCollision: true
-    StaticMesh {
-      Physics {
-        Mass: 100
-        LinearDamping: 0.01
-      }
-    }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "Diamonds"
   }
 }
 Objects {
-  Id: 5205177060606137210
-  Name: "Cone - Concave"
+  Id: 18245736361145597644
+  Name: "Cylinder - Rounded Small"
   Transform {
     Location {
+      X: 0.00169379939
+      Z: -7.45350335e-05
     }
     Rotation {
+      Pitch: 19.9871464
     }
     Scale {
-      X: 2.76847124
-      Y: 2.76847124
-      Z: 1.92474961
+      X: 1.07844555
+      Y: 1.07844555
+      Z: 0.256820202
     }
   }
-  ParentId: 5195736606344636980
+  ParentId: 17911832859403838246
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -80,8 +57,6 @@ Objects {
     Overrides {
       Name: "ma:Shared_BaseMaterial:color"
       Color {
-        R: 0.00800260901
-        B: 0.126041576
         A: 1
       }
     }
@@ -94,7 +69,7 @@ Objects {
   }
   CoreMesh {
     MeshAsset {
-      Id: 186900004530064859
+      Id: 17348004700843477078
     }
     Teams {
       IsTeamCollisionEnabled: true

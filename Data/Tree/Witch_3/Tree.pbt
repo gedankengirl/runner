@@ -106,7 +106,7 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Necklace"
+    FilePartitionName: "Necklace_1"
   }
 }
 Objects {
@@ -502,7 +502,7 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Right eye_7"
+    FilePartitionName: "Right eye_11"
   }
 }
 Objects {
@@ -532,7 +532,7 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Left eye_7"
+    FilePartitionName: "Left eye_11"
   }
 }
 Objects {
