@@ -1,7 +1,7 @@
 Name: "Ear right"
-RootId: 4978488074829441676
+RootId: 17286446705782935528
 Objects {
-  Id: 366699910090088515
+  Id: 4359913760655637936
   Name: "Teardrop - Truncated"
   Transform {
     Location {
@@ -19,7 +19,7 @@ Objects {
       Z: 0.785225868
     }
   }
-  ParentId: 4978488074829441676
+  ParentId: 17286446705782935528
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -30,9 +30,8 @@ Objects {
     Overrides {
       Name: "ma:Shared_BaseMaterial:color"
       Color {
-        R: 1
-        G: 0.357555568
-        B: 0.314
+        G: 0.412222385
+        B: 0.490000129
         A: 1
       }
     }
@@ -61,7 +60,7 @@ Objects {
   }
 }
 Objects {
-  Id: 4955367382284477601
+  Id: 312791224030370106
   Name: "Teardrop - Truncated"
   Transform {
     Location {
@@ -79,7 +78,7 @@ Objects {
       Z: 1.02150619
     }
   }
-  ParentId: 4978488074829441676
+  ParentId: 17286446705782935528
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"

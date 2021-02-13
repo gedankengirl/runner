@@ -78,7 +78,7 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Cap"
+    FilePartitionName: "Cap_2"
   }
 }
 Objects {
@@ -166,7 +166,7 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Right eye_8"
+    FilePartitionName: "Right eye_12"
   }
 }
 Objects {
@@ -196,7 +196,7 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Left eye_8"
+    FilePartitionName: "Left eye_12"
   }
 }
 Objects {

@@ -1,7 +1,7 @@
 Name: "Vibrisses_7"
-RootId: 9944437943845514198
+RootId: 8729764340812041644
 Objects {
-  Id: 10439440007081750390
+  Id: 4691300861368420567
   Name: "Cylinder - Rounded"
   Transform {
     Location {
@@ -19,7 +19,7 @@ Objects {
       Z: 0.269395322
     }
   }
-  ParentId: 9944437943845514198
+  ParentId: 8729764340812041644
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -61,7 +61,7 @@ Objects {
   }
 }
 Objects {
-  Id: 792557189653719174
+  Id: 2269873555948340299
   Name: "Cylinder - Rounded"
   Transform {
     Location {
@@ -79,7 +79,7 @@ Objects {
       Z: 0.269395322
     }
   }
-  ParentId: 9944437943845514198
+  ParentId: 8729764340812041644
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"

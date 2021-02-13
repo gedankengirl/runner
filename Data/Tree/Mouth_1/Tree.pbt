@@ -1,7 +1,7 @@
 Name: "Mouth_1"
-RootId: 13158737835179183461
+RootId: 17560568825428315845
 Objects {
-  Id: 3145062971565424123
+  Id: 17116417336735795354
   Name: "Moustache"
   Transform {
     Location {
@@ -17,7 +17,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13158737835179183461
+  ParentId: 17560568825428315845
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -30,7 +30,7 @@ Objects {
   }
 }
 Objects {
-  Id: 11770325437350577016
+  Id: 11913811212269713061
   Name: "Pipe"
   Transform {
     Location {
@@ -47,7 +47,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13158737835179183461
+  ParentId: 17560568825428315845
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }

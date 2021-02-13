@@ -1,7 +1,56 @@
 Name: "Mushroom"
-RootId: 10005214591545513014
+RootId: 3746114769389083455
 Objects {
-  Id: 4287748917988513845
+  Id: 3492075746073545459
+  Name: "Outline Object"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 3746114769389083455
+  UnregisteredParameters {
+    Overrides {
+      Name: "bp:Color A"
+      Color {
+        G: 0.412222266
+        B: 0.490000129
+        A: 0.8
+      }
+    }
+    Overrides {
+      Name: "bp:Thickness"
+      Float: 4
+    }
+    Overrides {
+      Name: "bp:Object To Outline"
+      ObjectReference {
+        SelfId: 3746114769389083455
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 10913251976909601512
+    }
+    TeamSettings {
+    }
+  }
+}
+Objects {
+  Id: 5227445426546782422
   Name: "RockMove"
   Transform {
     Location {
@@ -19,12 +68,12 @@ Objects {
       Z: 0.514266312
     }
   }
-  ParentId: 10005214591545513014
+  ParentId: 3746114769389083455
   UnregisteredParameters {
     Overrides {
       Name: "cs:Object"
       ObjectReference {
-        SelfId: 10005214591545513014
+        SelfId: 3746114769389083455
       }
     }
     Overrides {
@@ -57,7 +106,7 @@ Objects {
   }
 }
 Objects {
-  Id: 2244893462390872696
+  Id: 9623318042747164854
   Name: "Teardrop - Truncated"
   Transform {
     Location {
@@ -71,9 +120,9 @@ Objects {
       Z: 1.33410525
     }
   }
-  ParentId: 10005214591545513014
-  ChildIds: 17424551458943513784
-  ChildIds: 13158737835179183461
+  ParentId: 3746114769389083455
+  ChildIds: 10291481581738281570
+  ChildIds: 17560568825428315845
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -119,7 +168,7 @@ Objects {
   }
 }
 Objects {
-  Id: 13158737835179183461
+  Id: 17560568825428315845
   Name: "Mouth"
   Transform {
     Location {
@@ -135,7 +184,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 2244893462390872696
+  ParentId: 9623318042747164854
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -148,7 +197,7 @@ Objects {
   }
 }
 Objects {
-  Id: 17424551458943513784
+  Id: 10291481581738281570
   Name: "Eyes"
   Transform {
     Location {
@@ -164,7 +213,7 @@ Objects {
       Z: 0.877364
     }
   }
-  ParentId: 2244893462390872696
+  ParentId: 9623318042747164854
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -177,7 +226,7 @@ Objects {
   }
 }
 Objects {
-  Id: 9761631798774816713
+  Id: 14243946465776045032
   Name: "Hat"
   Transform {
     Location {
@@ -194,7 +243,7 @@ Objects {
       Z: 1.17477918
     }
   }
-  ParentId: 10005214591545513014
+  ParentId: 3746114769389083455
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }

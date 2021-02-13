@@ -1,7 +1,7 @@
 Name: "Vibrisses"
-RootId: 8486486228528795900
+RootId: 5169558809301499065
 Objects {
-  Id: 8729764340812041644
+  Id: 6503850590677572500
   Name: "Vibrisses"
   Transform {
     Location {
@@ -17,7 +17,7 @@ Objects {
       Z: 1.01186919
     }
   }
-  ParentId: 8486486228528795900
+  ParentId: 5169558809301499065
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -30,7 +30,7 @@ Objects {
   }
 }
 Objects {
-  Id: 13671475904462388303
+  Id: 105389386920814955
   Name: "Vibrisses"
   Transform {
     Location {
@@ -47,7 +47,7 @@ Objects {
       Z: 1.01186931
     }
   }
-  ParentId: 8486486228528795900
+  ParentId: 5169558809301499065
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }

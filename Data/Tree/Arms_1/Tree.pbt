@@ -1,40 +1,12 @@
 Name: "Arms_1"
-RootId: 735444896184361374
+RootId: 4429768817373289019
 Objects {
-  Id: 15711804798113422389
-  Name: "Magic wand"
-  Transform {
-    Location {
-      Y: -52.375
-    }
-    Rotation {
-      Roll: -27.1379089
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 735444896184361374
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "Magic wand"
-  }
-}
-Objects {
-  Id: 9669305230793609427
+  Id: 17835588868311003590
   Name: "Cylinder - Rounded Small"
   Transform {
     Location {
-      Y: -9.67382813
-      Z: 2.37338257
+      Y: -28.111
+      Z: 2.37298584
     }
     Rotation {
       Roll: -114.999619
@@ -45,7 +17,7 @@ Objects {
       Z: 0.474237055
     }
   }
-  ParentId: 735444896184361374
+  ParentId: 4429768817373289019
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -56,9 +28,9 @@ Objects {
     Overrides {
       Name: "ma:Shared_BaseMaterial:color"
       Color {
-        R: 0.774000049
-        G: 1
-        B: 0.322000027
+        R: 0.362000048
+        G: 0.61517489
+        B: 1
         A: 1
       }
     }
@@ -87,12 +59,12 @@ Objects {
   }
 }
 Objects {
-  Id: 13174701016523903019
+  Id: 1963553072668492457
   Name: "Cylinder - Rounded Small"
   Transform {
     Location {
-      Y: 9.67382813
-      Z: 2.373
+      Y: 28.1113281
+      Z: 2.37298584
     }
     Rotation {
       Roll: 114.999695
@@ -103,7 +75,7 @@ Objects {
       Z: 0.474237055
     }
   }
-  ParentId: 735444896184361374
+  ParentId: 4429768817373289019
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -114,9 +86,9 @@ Objects {
     Overrides {
       Name: "ma:Shared_BaseMaterial:color"
       Color {
-        R: 0.774000049
-        G: 1
-        B: 0.322000027
+        R: 0.362000048
+        G: 0.61517489
+        B: 1
         A: 1
       }
     }

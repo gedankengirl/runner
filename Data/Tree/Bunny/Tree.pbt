@@ -1,7 +1,56 @@
 Name: "Bunny"
-RootId: 4724769210512331480
+RootId: 4774796647838766459
 Objects {
-  Id: 2488735331601651888
+  Id: 3204106586655554867
+  Name: "Outline Object"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4774796647838766459
+  UnregisteredParameters {
+    Overrides {
+      Name: "bp:Color A"
+      Color {
+        G: 0.412222266
+        B: 0.490000129
+        A: 0.8
+      }
+    }
+    Overrides {
+      Name: "bp:Thickness"
+      Float: 4
+    }
+    Overrides {
+      Name: "bp:Object To Outline"
+      ObjectReference {
+        SelfId: 4774796647838766459
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 10913251976909601512
+    }
+    TeamSettings {
+    }
+  }
+}
+Objects {
+  Id: 14814053161989408499
   Name: "RockMove"
   Transform {
     Location {
@@ -19,12 +68,12 @@ Objects {
       Z: 0.514266312
     }
   }
-  ParentId: 4724769210512331480
+  ParentId: 4774796647838766459
   UnregisteredParameters {
     Overrides {
       Name: "cs:Object"
       ObjectReference {
-        SelfId: 4724769210512331480
+        SelfId: 4774796647838766459
       }
     }
     Overrides {
@@ -57,15 +106,224 @@ Objects {
   }
 }
 Objects {
-  Id: 13993109935309092724
-  Name: "Teardrop - Truncated"
+  Id: 8451784027799797287
+  Name: "Gem - Radiant Polished"
+  Transform {
+    Location {
+      X: 59.3632813
+      Z: 69.3721161
+    }
+    Rotation {
+      Pitch: 111.036171
+    }
+    Scale {
+      X: 0.255177677
+      Y: 0.255177677
+      Z: 0.255177677
+    }
+  }
+  ParentId: 4774796647838766459
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 13674206740428179952
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        G: 0.412222385
+        B: 0.490000129
+        A: 1
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 2839016978971507306
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    EnableCameraCollision: true
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+    }
+  }
+}
+Objects {
+  Id: 5599680223617473576
+  Name: "Crescent - 03"
+  Transform {
+    Location {
+      X: 41.609375
+      Z: 62.032135
+    }
+    Rotation {
+      Pitch: -156.726654
+    }
+    Scale {
+      X: 0.355596036
+      Y: 0.859570265
+      Z: 0.0680332184
+    }
+  }
+  ParentId: 4774796647838766459
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 10184847056121543272
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        A: 1
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 7150799765729022666
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    EnableCameraCollision: true
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+    }
+  }
+}
+Objects {
+  Id: 5323308215278249065
+  Name: "Crescent - 03"
+  Transform {
+    Location {
+      X: 19.5839844
+      Z: 112.258179
+    }
+    Rotation {
+      Pitch: -4.30740356
+    }
+    Scale {
+      X: 1.46615303
+      Y: 1
+      Z: 0.0301506314
+    }
+  }
+  ParentId: 4774796647838766459
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 10184847056121543272
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        G: 0.412222385
+        B: 0.490000129
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:utile"
+      Float: 0.9
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:vtile"
+      Float: 0.5
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 7150799765729022666
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    EnableCameraCollision: true
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+    }
+  }
+}
+Objects {
+  Id: 17607443548529411402
+  Name: "Jacket"
   Transform {
     Location {
       X: 56.8339844
       Z: 32.5412903
     }
     Rotation {
-      Pitch: 18.6305351
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4774796647838766459
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "Jacket"
+  }
+}
+Objects {
+  Id: 8825958759380925651
+  Name: "Chest"
+  Transform {
+    Location {
+      X: 56.8339844
+      Z: 32.5412903
+    }
+    Rotation {
+      Pitch: 18.6305218
     }
     Scale {
       X: 0.211103782
@@ -73,7 +331,7 @@ Objects {
       Z: 0.509787679
     }
   }
-  ParentId: 4724769210512331480
+  ParentId: 4774796647838766459
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -115,7 +373,7 @@ Objects {
   }
 }
 Objects {
-  Id: 14014590717984276726
+  Id: 18423382703480096481
   Name: "bow"
   Transform {
     Location {
@@ -130,7 +388,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 4724769210512331480
+  ParentId: 4774796647838766459
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -143,7 +401,7 @@ Objects {
   }
 }
 Objects {
-  Id: 4429768817373289019
+  Id: 5398931889368308519
   Name: "Arms"
   Transform {
     Location {
@@ -158,7 +416,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 4724769210512331480
+  ParentId: 4774796647838766459
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -171,7 +429,7 @@ Objects {
   }
 }
 Objects {
-  Id: 17820929926125560688
+  Id: 1973333515564803663
   Name: "Sphere"
   Transform {
     Location {
@@ -186,7 +444,7 @@ Objects {
       Z: 0.226841062
     }
   }
-  ParentId: 4724769210512331480
+  ParentId: 4774796647838766459
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -228,7 +486,7 @@ Objects {
   }
 }
 Objects {
-  Id: 7941831387147671259
+  Id: 12669882303215005169
   Name: "Teardrop - Truncated"
   Transform {
     Location {
@@ -242,7 +500,7 @@ Objects {
       Z: 0.818891
     }
   }
-  ParentId: 4724769210512331480
+  ParentId: 4774796647838766459
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -284,7 +542,7 @@ Objects {
   }
 }
 Objects {
-  Id: 9763829289448961909
+  Id: 1775138294457143755
   Name: "Sphere"
   Transform {
     Location {
@@ -299,13 +557,14 @@ Objects {
       Z: 0.988269627
     }
   }
-  ParentId: 4724769210512331480
-  ChildIds: 10015483219448234561
-  ChildIds: 2244418347305092410
-  ChildIds: 5228841971966998185
-  ChildIds: 4978488074829441676
-  ChildIds: 15094628913017257355
-  ChildIds: 16853660462447268378
+  ParentId: 4774796647838766459
+  ChildIds: 9945508852042487902
+  ChildIds: 3304182708116912250
+  ChildIds: 2160588161897546724
+  ChildIds: 17286446705782935528
+  ChildIds: 6101279273283391809
+  ChildIds: 2278439601901404502
+  ChildIds: 7336558438975904964
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -353,7 +612,35 @@ Objects {
   }
 }
 Objects {
-  Id: 16853660462447268378
+  Id: 7336558438975904964
+  Name: "Cap"
+  Transform {
+    Location {
+      Z: 33.776535
+    }
+    Rotation {
+      Pitch: 8.07330322
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 1775138294457143755
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "Cap"
+  }
+}
+Objects {
+  Id: 2278439601901404502
   Name: "Heart - Polished"
   Transform {
     Location {
@@ -370,7 +657,7 @@ Objects {
       Z: 0.102428511
     }
   }
-  ParentId: 9763829289448961909
+  ParentId: 1775138294457143755
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -412,7 +699,7 @@ Objects {
   }
 }
 Objects {
-  Id: 15094628913017257355
+  Id: 6101279273283391809
   Name: "Mouth"
   Transform {
     Location {
@@ -431,7 +718,7 @@ Objects {
       Z: 0.488262713
     }
   }
-  ParentId: 9763829289448961909
+  ParentId: 1775138294457143755
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -440,11 +727,11 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Mouth"
+    FilePartitionName: "Mouth_3"
   }
 }
 Objects {
-  Id: 4978488074829441676
+  Id: 17286446705782935528
   Name: "Ear right"
   Transform {
     Location {
@@ -462,7 +749,7 @@ Objects {
       Z: 0.99999994
     }
   }
-  ParentId: 9763829289448961909
+  ParentId: 1775138294457143755
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -475,7 +762,7 @@ Objects {
   }
 }
 Objects {
-  Id: 5228841971966998185
+  Id: 2160588161897546724
   Name: "Ear left"
   Transform {
     Location {
@@ -492,7 +779,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 9763829289448961909
+  ParentId: 1775138294457143755
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -505,7 +792,7 @@ Objects {
   }
 }
 Objects {
-  Id: 2244418347305092410
+  Id: 3304182708116912250
   Name: "Right eye"
   Transform {
     Location {
@@ -523,7 +810,7 @@ Objects {
       Z: 1.1874367
     }
   }
-  ParentId: 9763829289448961909
+  ParentId: 1775138294457143755
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -536,7 +823,7 @@ Objects {
   }
 }
 Objects {
-  Id: 10015483219448234561
+  Id: 9945508852042487902
   Name: "Left eye"
   Transform {
     Location {
@@ -554,7 +841,7 @@ Objects {
       Z: 1.1874367
     }
   }
-  ParentId: 9763829289448961909
+  ParentId: 1775138294457143755
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }

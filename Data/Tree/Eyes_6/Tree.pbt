@@ -1,7 +1,7 @@
 Name: "Eyes_6"
-RootId: 17845373394317278178
+RootId: 17861873315358124086
 Objects {
-  Id: 6763240037893029785
+  Id: 4387135276881167697
   Name: "Right eye"
   Transform {
     Location {
@@ -19,7 +19,7 @@ Objects {
       Z: 0.510697305
     }
   }
-  ParentId: 17845373394317278178
+  ParentId: 17861873315358124086
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -28,17 +28,17 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Right eye_16"
+    FilePartitionName: "Right eye_18"
   }
   InstanceHistory {
-    SelfId: 6763240037893029785
+    SelfId: 2420893340817522384
     SubobjectId: 3043247084665346693
-    InstanceId: 12711591489942066146
+    InstanceId: 5166161301489284275
     TemplateId: 12325720584492096876
   }
 }
 Objects {
-  Id: 14584508970379356843
+  Id: 12984572361359730305
   Name: "Left eye"
   Transform {
     Location {
@@ -56,7 +56,7 @@ Objects {
       Z: 0.510697305
     }
   }
-  ParentId: 17845373394317278178
+  ParentId: 17861873315358124086
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -65,12 +65,12 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Left eye_16"
+    FilePartitionName: "Left eye_18"
   }
   InstanceHistory {
-    SelfId: 14584508970379356843
+    SelfId: 13125163814618983394
     SubobjectId: 13656750530601226167
-    InstanceId: 12711591489942066146
+    InstanceId: 5166161301489284275
     TemplateId: 12325720584492096876
   }
 }

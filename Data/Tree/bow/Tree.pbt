@@ -1,7 +1,7 @@
 Name: "bow"
-RootId: 14014590717984276726
+RootId: 18423382703480096481
 Objects {
-  Id: 3965653301509271528
+  Id: 13808796271660813225
   Name: "Ring"
   Transform {
     Location {
@@ -16,7 +16,7 @@ Objects {
       Z: 0.764821
     }
   }
-  ParentId: 14014590717984276726
+  ParentId: 18423382703480096481
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -27,6 +27,8 @@ Objects {
     Overrides {
       Name: "ma:Shared_BaseMaterial:color"
       Color {
+        G: 0.412222385
+        B: 0.490000129
         A: 1
       }
     }
@@ -55,7 +57,7 @@ Objects {
   }
 }
 Objects {
-  Id: 15984912524017946098
+  Id: 17506215362210932041
   Name: "Cone"
   Transform {
     Location {
@@ -71,7 +73,7 @@ Objects {
       Z: 0.206865236
     }
   }
-  ParentId: 14014590717984276726
+  ParentId: 18423382703480096481
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -82,6 +84,8 @@ Objects {
     Overrides {
       Name: "ma:Shared_BaseMaterial:color"
       Color {
+        G: 0.412222385
+        B: 0.490000129
         A: 1
       }
     }
@@ -110,7 +114,7 @@ Objects {
   }
 }
 Objects {
-  Id: 8916974127379938268
+  Id: 7879209503075010822
   Name: "Cone"
   Transform {
     Location {
@@ -126,7 +130,7 @@ Objects {
       Z: 0.206865236
     }
   }
-  ParentId: 14014590717984276726
+  ParentId: 18423382703480096481
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -137,6 +141,8 @@ Objects {
     Overrides {
       Name: "ma:Shared_BaseMaterial:color"
       Color {
+        G: 0.412222385
+        B: 0.490000129
         A: 1
       }
     }
@@ -165,7 +171,7 @@ Objects {
   }
 }
 Objects {
-  Id: 1116809020341297603
+  Id: 5932749575382325127
   Name: "Cube - Rounded"
   Transform {
     Location {
@@ -179,7 +185,7 @@ Objects {
       Z: 0.0843515
     }
   }
-  ParentId: 14014590717984276726
+  ParentId: 18423382703480096481
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -190,6 +196,8 @@ Objects {
     Overrides {
       Name: "ma:Shared_BaseMaterial:color"
       Color {
+        G: 0.412222385
+        B: 0.490000129
         A: 1
       }
     }

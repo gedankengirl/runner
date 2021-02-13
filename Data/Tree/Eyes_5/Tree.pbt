@@ -1,25 +1,26 @@
 Name: "Eyes_5"
-RootId: 10080436799444204203
+RootId: 14044230623153276712
 Objects {
-  Id: 2420893340817522384
-  Name: "Right eye"
+  Id: 7326989548037871593
+  Name: "Eye"
   Transform {
     Location {
-      X: -0.336004853
-      Y: -11.5070019
+      X: -17.2664185
+      Y: -46.5273438
+      Z: -10.4588013
     }
     Rotation {
-      Pitch: -1.39959717
-      Yaw: 83.3579941
-      Roll: -6.7901
+      Pitch: -3.82016
+      Yaw: -64.8990173
+      Roll: 2.28352499
     }
     Scale {
-      X: 0.510697305
-      Y: -0.510697305
-      Z: 0.510697305
+      X: 1.09807694
+      Y: -1.09807694
+      Z: 1.09807694
     }
   }
-  ParentId: 10080436799444204203
+  ParentId: 14044230623153276712
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -28,35 +29,36 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Right eye_15"
+    FilePartitionName: "Eye_4"
   }
   InstanceHistory {
-    SelfId: 2420893340817522384
-    SubobjectId: 3043247084665346693
-    InstanceId: 5166161301489284275
-    TemplateId: 12325720584492096876
+    SelfId: 10483824224479512922
+    SubobjectId: 2956874836813912303
+    InstanceId: 6208513033488493417
+    TemplateId: 1976493870456417382
   }
 }
 Objects {
-  Id: 13125163814618983394
-  Name: "Left eye"
+  Id: 12894069819636589953
+  Name: "Eye"
   Transform {
     Location {
-      X: -0.336221457
-      Y: 11.5070019
+      X: -17.2661743
+      Y: 46.53125
+      Z: -10.4588013
     }
     Rotation {
-      Pitch: -1.39959717
-      Yaw: -83.3585205
-      Roll: 6.79009914
+      Pitch: -3.82016
+      Yaw: 64.899
+      Roll: 2.28352499
     }
     Scale {
-      X: 0.510697305
-      Y: 0.510697305
-      Z: 0.510697305
+      X: 1.09807694
+      Y: 1.09807694
+      Z: 1.09807694
     }
   }
-  ParentId: 10080436799444204203
+  ParentId: 14044230623153276712
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -65,12 +67,12 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Left eye_15"
+    FilePartitionName: "Eye_5"
   }
   InstanceHistory {
-    SelfId: 13125163814618983394
-    SubobjectId: 13656750530601226167
-    InstanceId: 5166161301489284275
-    TemplateId: 12325720584492096876
+    SelfId: 17904893721601388156
+    SubobjectId: 4615097324505743305
+    InstanceId: 6208513033488493417
+    TemplateId: 1976493870456417382
   }
 }

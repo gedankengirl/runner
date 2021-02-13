@@ -1,7 +1,7 @@
 Name: "Pipe"
-RootId: 11770325437350577016
+RootId: 11913811212269713061
 Objects {
-  Id: 7896508181846473158
+  Id: 10206149931319744308
   Name: "Pipe"
   Transform {
     Location {
@@ -20,9 +20,9 @@ Objects {
       Z: 0.234609574
     }
   }
-  ParentId: 11770325437350577016
-  ChildIds: 3392995462941640584
-  ChildIds: 15025450453406855489
+  ParentId: 11913811212269713061
+  ChildIds: 14871451531816187113
+  ChildIds: 17154361827227435001
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -37,6 +37,10 @@ Objects {
         G: 0.0113333454
         A: 1
       }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
     }
   }
   Collidable_v2 {
@@ -63,7 +67,7 @@ Objects {
   }
 }
 Objects {
-  Id: 15025450453406855489
+  Id: 17154361827227435001
   Name: "Cylinder"
   Transform {
     Location {
@@ -80,7 +84,7 @@ Objects {
       Z: 0.135250688
     }
   }
-  ParentId: 7896508181846473158
+  ParentId: 10206149931319744308
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -90,7 +94,7 @@ Objects {
     }
     Overrides {
       Name: "ma:Shared_BaseMaterial:smart"
-      Bool: true
+      Bool: false
     }
     Overrides {
       Name: "ma:Shared_BaseMaterial:color"
@@ -125,7 +129,7 @@ Objects {
   }
 }
 Objects {
-  Id: 3392995462941640584
+  Id: 14871451531816187113
   Name: "Cylinder"
   Transform {
     Location {
@@ -141,13 +145,17 @@ Objects {
       Z: 0.591267645
     }
   }
-  ParentId: 7896508181846473158
+  ParentId: 10206149931319744308
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
       AssetReference {
         Id: 7698458016917015794
       }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: true
     }
   }
   Collidable_v2 {
@@ -174,7 +182,7 @@ Objects {
   }
 }
 Objects {
-  Id: 8291027497227610965
+  Id: 5780698118714584018
   Name: "Horn"
   Transform {
     Location {
@@ -190,7 +198,7 @@ Objects {
       Z: 0.431536674
     }
   }
-  ParentId: 11770325437350577016
+  ParentId: 11913811212269713061
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -205,6 +213,10 @@ Objects {
         G: 0.0113333454
         A: 1
       }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
     }
   }
   Collidable_v2 {

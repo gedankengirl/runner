@@ -26,7 +26,7 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Diamonds_2"
+    FilePartitionName: "Diamonds_3"
   }
 }
 Objects {
@@ -2496,7 +2496,7 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Vibrisses_3"
+    FilePartitionName: "Vibrisses_9"
   }
 }
 Objects {
@@ -2525,7 +2525,7 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Vibrisses_4"
+    FilePartitionName: "Vibrisses_10"
   }
 }
 Objects {

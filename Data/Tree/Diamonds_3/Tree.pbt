@@ -1,26 +1,26 @@
 Name: "Diamonds_3"
-RootId: 3021021597476039957
+RootId: 13339109160245024038
 Objects {
-  Id: 13709112102044095292
+  Id: 14935313102326864474
   Name: "Diamond - Polished"
   Transform {
     Location {
-      X: 9.13085938
-      Y: -57.4775391
-      Z: 4.54203796
+      X: 3.91015625
+      Y: 55.8828125
+      Z: 55.7793274
     }
     Rotation {
-      Pitch: 27.9034939
-      Yaw: 13.1066952
-      Roll: 26.2521172
+      Pitch: -51.1104
+      Yaw: 97.1084213
+      Roll: 69.571434
     }
     Scale {
-      X: 0.0899014771
-      Y: -0.0899014771
-      Z: 0.0899014771
+      X: 0.15064086
+      Y: 0.15064086
+      Z: 0.15064086
     }
   }
-  ParentId: 3021021597476039957
+  ParentId: 13339109160245024038
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -61,26 +61,26 @@ Objects {
   }
 }
 Objects {
-  Id: 18154533379459893468
+  Id: 2735178408446456809
   Name: "Diamond - Polished"
   Transform {
     Location {
-      X: -9.61914063
-      Y: -68.5214844
-      Z: -1.52587891e-05
+      X: -0.408203125
+      Y: 68.4277344
+      Z: 26.2924957
     }
     Rotation {
-      Pitch: 9.87158298
-      Yaw: 31.0581055
-      Roll: 58.0559235
+      Pitch: -15.3218346
+      Yaw: -32.5281563
+      Roll: 80.208931
     }
     Scale {
-      X: 0.0899014771
-      Y: -0.0899014771
-      Z: 0.0899014771
+      X: 0.15064086
+      Y: 0.15064086
+      Z: 0.15064086
     }
   }
-  ParentId: 3021021597476039957
+  ParentId: 13339109160245024038
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -121,25 +121,26 @@ Objects {
   }
 }
 Objects {
-  Id: 4608409780431099353
+  Id: 10950742857369250709
   Name: "Diamond - Polished"
   Transform {
     Location {
-      X: 9.60546875
-      Y: -77.421875
-      Z: -1.52587891e-05
+      X: -9.20117188
+      Y: 66.8945313
+      Z: 4.57763672e-05
     }
     Rotation {
-      Pitch: -27.2992134
-      Roll: 41.9224472
+      Pitch: -17.4967918
+      Yaw: -24.9369946
+      Roll: 108.467842
     }
     Scale {
-      X: 0.0899014771
-      Y: -0.0899014771
-      Z: 0.0899014771
+      X: 0.15064086
+      Y: 0.15064086
+      Z: 0.15064086
     }
   }
-  ParentId: 3021021597476039957
+  ParentId: 13339109160245024038
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -180,24 +181,26 @@ Objects {
   }
 }
 Objects {
-  Id: 10278051503873825417
+  Id: 7859653129733861856
   Name: "Diamond - Polished"
   Transform {
     Location {
-      X: -8.56433105
-      Y: -57.6095772
-      Z: 17.9532738
+      X: -8.84375
+      Y: -62.1640625
+      Z: 1.60775757
     }
     Rotation {
-      Roll: -41.921978
+      Pitch: -17.4967918
+      Yaw: 24.9370441
+      Roll: -108.467834
     }
     Scale {
-      X: 0.0899014771
-      Y: 0.0899014771
-      Z: 0.0899014771
+      X: 0.15064086
+      Y: -0.15064086
+      Z: 0.15064086
     }
   }
-  ParentId: 3021021597476039957
+  ParentId: 13339109160245024038
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -238,26 +241,26 @@ Objects {
   }
 }
 Objects {
-  Id: 9988303201015419950
+  Id: 7129756441927478282
   Name: "Diamond - Polished"
   Transform {
     Location {
-      X: 9.12995052
-      Y: 57.8995
-      Z: 4.54206085
+      X: -2.72070313
+      Y: -62.78125
+      Z: 27.1114502
     }
     Rotation {
-      Pitch: 27.9035072
-      Yaw: -13.1066465
-      Roll: -26.2521782
+      Pitch: -26.8002872
+      Yaw: 14.3280487
+      Roll: -80.8867
     }
     Scale {
-      X: 0.0899014771
-      Y: 0.0899014771
-      Z: 0.0899014771
+      X: 0.15064086
+      Y: -0.15064086
+      Z: 0.15064086
     }
   }
-  ParentId: 3021021597476039957
+  ParentId: 13339109160245024038
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -298,25 +301,26 @@ Objects {
   }
 }
 Objects {
-  Id: 7475347095235127493
+  Id: 14101429668058010412
   Name: "Diamond - Polished"
   Transform {
     Location {
-      X: -10.7236452
-      Y: 68.7316437
+      X: 2.32617188
+      Y: -53.0195313
+      Z: 50.7119446
     }
     Rotation {
-      Pitch: 9.87158298
-      Yaw: -31.058054
-      Roll: -58.0559769
+      Pitch: -30.136282
+      Yaw: -0.334599406
+      Roll: -50.6900711
     }
     Scale {
-      X: 0.0899014771
-      Y: 0.0899014771
-      Z: 0.0899014771
+      X: 0.15064086
+      Y: -0.15064086
+      Z: 0.15064086
     }
   }
-  ParentId: 3021021597476039957
+  ParentId: 13339109160245024038
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -357,25 +361,26 @@ Objects {
   }
 }
 Objects {
-  Id: 4240714152731591921
+  Id: 12146939185362702526
   Name: "Diamond - Polished"
   Transform {
     Location {
-      X: 9.60485744
-      Y: 76.6432
+      X: 4.97460938
+      Y: -37.5351563
+      Z: 68.3855286
     }
     Rotation {
-      Pitch: -27.2992268
-      Yaw: 9.60782245e-07
-      Roll: -41.9224129
+      Pitch: -16.7703266
+      Yaw: 10.710144
+      Roll: -40.9504089
     }
     Scale {
-      X: 0.0899014771
-      Y: 0.0899014771
-      Z: 0.0899014771
+      X: 0.15064086
+      Y: -0.15064086
+      Z: 0.15064086
     }
   }
-  ParentId: 3021021597476039957
+  ParentId: 13339109160245024038
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -416,24 +421,85 @@ Objects {
   }
 }
 Objects {
-  Id: 3067866727551494389
+  Id: 15515183167808643986
   Name: "Diamond - Polished"
   Transform {
     Location {
-      X: -8.56433105
-      Y: 57.7661
-      Z: 17.9532738
+      X: 4.97460938
+      Y: 35.3574219
+      Z: 72.6009216
     }
     Rotation {
-      Roll: -41.9219513
+      Pitch: -7.03906298
+      Yaw: 2.19501424
+      Roll: 26.5704079
     }
     Scale {
-      X: 0.0899014696
-      Y: 0.0899014696
-      Z: 0.0899014696
+      X: 0.15064086
+      Y: 0.15064086
+      Z: 0.15064086
     }
   }
-  ParentId: 3021021597476039957
+  ParentId: 13339109160245024038
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 10184847056121543272
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        G: 0.412222385
+        B: 0.490000129
+        A: 1
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 16682408004697469476
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    EnableCameraCollision: true
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+    }
+  }
+}
+Objects {
+  Id: 14827949772341563638
+  Name: "Diamond - Polished"
+  Transform {
+    Location {
+      X: 4.97460938
+      Y: -11.0585938
+      Z: 79.4886169
+    }
+    Rotation {
+      Pitch: -3.27420115
+      Roll: -8.62055492
+    }
+    Scale {
+      X: 0.15064086
+      Y: -0.15064086
+      Z: 0.15064086
+    }
+  }
+  ParentId: 13339109160245024038
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"

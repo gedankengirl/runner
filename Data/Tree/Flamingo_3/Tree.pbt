@@ -25,7 +25,7 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Hat_1"
+    FilePartitionName: "Hat_3"
   }
 }
 Objects {
@@ -525,6 +525,6 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Eyes_1"
+    FilePartitionName: "Eyes_3"
   }
 }

@@ -1,37 +1,28 @@
 Assets {
-  Id: 16628730901845472849
-  Name: "Cylinder"
-  PlatformAssetType: 1
+  Id: 17953761627118563580
+  Name: "Metal Iron Rusted 02"
+  PlatformAssetType: 2
   PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_cylinder_002"
+    AssetType: "MaterialAssetRef"
+    AssetId: "mi_metal_iron_003"
   }
 }
 Assets {
-  Id: 14601367390357193660
-  Name: "Cylinder - Chamfered Small Polished"
+  Id: 10638810594798168017
+  Name: "Pipe - 4-Sided"
   PlatformAssetType: 1
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_cylinder_hq_003"
+    AssetId: "sm_pipe_4_sided_001"
   }
 }
 Assets {
-  Id: 7405212669635227572
-  Name: "Cone - Truncated Wide"
+  Id: 9258812049024871290
+  Name: "Cone - Truncated Hollow Wide Thin"
   PlatformAssetType: 1
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_cone_truncated_003"
-  }
-}
-Assets {
-  Id: 2433235999455009803
-  Name: "Ring"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_torus_004"
+    AssetId: "sm_cone_truncated_hollow_006"
   }
 }
 Assets {

@@ -217,7 +217,7 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Hat_10"
+    FilePartitionName: "Hat_12"
   }
 }
 Objects {

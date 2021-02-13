@@ -17,6 +17,24 @@ Assets {
   }
 }
 Assets {
+  Id: 13480208518049004567
+  Name: "Flower Bellflower 01"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_foliage_gen_flower_bell_001_ref"
+  }
+}
+Assets {
+  Id: 10156621431651819963
+  Name: "Coral Spikes Small"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_coral_spike_small_01"
+  }
+}
+Assets {
   Id: 7405212669635227572
   Name: "Cone - Truncated Wide"
   PlatformAssetType: 1
@@ -32,15 +50,6 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_torus_004"
-  }
-}
-Assets {
-  Id: 2258330122587909962
-  Name: "Advanced Material"
-  PlatformAssetType: 2
-  PrimaryAsset {
-    AssetType: "MaterialAssetRef"
-    AssetId: "universal_material_001"
   }
 }
 Assets {

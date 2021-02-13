@@ -1,26 +1,23 @@
 Name: "Mouth"
-RootId: 15094628913017257355
+RootId: 3611482385001463829
 Objects {
-  Id: 8486486228528795900
-  Name: "Vibrisses"
+  Id: 11729232740719842249
+  Name: "Moustache"
   Transform {
     Location {
-      X: -9.53771496
-      Y: 1.98437846
-      Z: 2.57122445
+      X: -41.9464188
+      Y: -8.23790646
+      Z: 1.14374707e-05
     }
     Rotation {
-      Pitch: 0.750132322
-      Yaw: -13.4971619
-      Roll: -6.27050781
     }
     Scale {
-      X: 2.75800228
-      Y: 2.75800228
-      Z: 2.75800228
+      X: 1
+      Y: 1
+      Z: 1
     }
   }
-  ParentId: 15094628913017257355
+  ParentId: 3611482385001463829
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -29,67 +26,36 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Vibrisses"
+    FilePartitionName: "Moustache_1"
   }
 }
 Objects {
-  Id: 866623800619338722
-  Name: "Heart - Polished"
+  Id: 1687100181670749294
+  Name: "Pipe"
   Transform {
     Location {
-      X: -15.2821455
-      Y: 3.87499785
-      Z: -2.03753281
+      X: 29.0486126
+      Y: 31.3295193
+      Z: 40.5702972
     }
     Rotation {
-      Pitch: 6.2927351
-      Yaw: 74.5445633
-      Roll: 155.212814
+      Yaw: 8.2046051
     }
     Scale {
-      X: 1.14574635
-      Y: 0.592074513
-      Z: 0.786504388
+      X: 1
+      Y: 1
+      Z: 1
     }
   }
-  ParentId: 15094628913017257355
-  UnregisteredParameters {
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 10184847056121543272
-      }
-    }
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:color"
-      Color {
-        R: 1
-        G: 1
-        B: 1
-        A: 1
-      }
-    }
-  }
+  ParentId: 3611482385001463829
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
-  CoreMesh {
-    MeshAsset {
-      Id: 1016564893161391447
-    }
-    Teams {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    EnableCameraCollision: true
-    StaticMesh {
-      Physics {
-        Mass: 100
-        LinearDamping: 0.01
-      }
-    }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "Pipe_1"
   }
 }

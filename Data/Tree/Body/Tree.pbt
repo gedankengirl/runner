@@ -26,7 +26,7 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Diamonds_1"
+    FilePartitionName: "Diamonds_2"
   }
 }
 Objects {

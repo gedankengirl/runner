@@ -131,7 +131,7 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Arms_4"
+    FilePartitionName: "Arms_6"
   }
 }
 Objects {
@@ -822,7 +822,7 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Right eye_5"
+    FilePartitionName: "Right eye_9"
   }
 }
 Objects {
@@ -853,6 +853,6 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Left eye_5"
+    FilePartitionName: "Left eye_9"
   }
 }

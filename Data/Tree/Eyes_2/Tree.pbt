@@ -1,26 +1,25 @@
 Name: "Eyes_2"
-RootId: 16213723772759702523
+RootId: 17424551458943513784
 Objects {
-  Id: 11208502669600052845
-  Name: "Eye"
+  Id: 13491334505135080845
+  Name: "Left eye"
   Transform {
     Location {
-      X: -17.2664185
-      Y: -46.5273438
-      Z: -10.4588013
+      Y: 23.1914063
+      Z: -1.52587891e-05
     }
     Rotation {
-      Pitch: -3.82016
-      Yaw: -64.8990173
-      Roll: 2.28352499
+      Pitch: -0.793670654
+      Yaw: -86.3349609
+      Roll: 10.0775728
     }
     Scale {
-      X: 1.09807694
-      Y: -1.09807694
-      Z: 1.09807694
+      X: 1.17350745
+      Y: 1.17350745
+      Z: 1.17350745
     }
   }
-  ParentId: 16213723772759702523
+  ParentId: 17424551458943513784
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -29,36 +28,30 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Eye_2"
-  }
-  InstanceHistory {
-    SelfId: 10483824224479512922
-    SubobjectId: 2956874836813912303
-    InstanceId: 6208513033488493417
-    TemplateId: 1976493870456417382
+    FilePartitionName: "Left eye_1"
   }
 }
 Objects {
-  Id: 14819340593747849626
-  Name: "Eye"
+  Id: 13362189033304876500
+  Name: "Right eye"
   Transform {
     Location {
-      X: -17.2661743
-      Y: 46.53125
-      Z: -10.4588013
+      X: 5.81707063e-05
+      Y: -23.1914063
+      Z: 0.000268427451
     }
     Rotation {
-      Pitch: -3.82016
-      Yaw: 64.899
-      Roll: 2.28352499
+      Pitch: 0.974736214
+      Yaw: -90.8356
+      Roll: 10.1272058
     }
     Scale {
-      X: 1.09807694
-      Y: 1.09807694
-      Z: 1.09807694
+      X: 1.17350745
+      Y: 1.17350745
+      Z: 1.17350745
     }
   }
-  ParentId: 16213723772759702523
+  ParentId: 17424551458943513784
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -67,12 +60,6 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Eye_3"
-  }
-  InstanceHistory {
-    SelfId: 17904893721601388156
-    SubobjectId: 4615097324505743305
-    InstanceId: 6208513033488493417
-    TemplateId: 1976493870456417382
+    FilePartitionName: "Right eye_1"
   }
 }

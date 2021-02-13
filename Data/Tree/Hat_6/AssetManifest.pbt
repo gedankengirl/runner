@@ -1,19 +1,10 @@
 Assets {
-  Id: 17953761627118563580
-  Name: "Metal Iron Rusted 02"
-  PlatformAssetType: 2
-  PrimaryAsset {
-    AssetType: "MaterialAssetRef"
-    AssetId: "mi_metal_iron_003"
-  }
-}
-Assets {
-  Id: 10638810594798168017
-  Name: "Pipe - 4-Sided"
+  Id: 15017730142366544903
+  Name: "Gem - Baguette Polished"
   PlatformAssetType: 1
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_pipe_4_sided_001"
+    AssetId: "sm_gem_baguette_polished_001"
   }
 }
 Assets {
