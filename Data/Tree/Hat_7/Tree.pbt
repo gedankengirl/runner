@@ -1,0 +1,170 @@
+Name: "Hat_7"
+RootId: 12762545853669996524
+Objects {
+  Id: 16460913206144231015
+  Name: "Pipe - 4-Sided"
+  Transform {
+    Location {
+      X: 39.2382774
+      Z: 33.95755
+    }
+    Rotation {
+      Pitch: 67.7504578
+      Yaw: -179.999985
+      Roll: 180
+    }
+    Scale {
+      X: 0.300535351
+      Y: 0.195298433
+      Z: 0.0155315604
+    }
+  }
+  ParentId: 12762545853669996524
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 10184847056121543272
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.506000042
+        G: 0.305206329
+        A: 1
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 10638810594798168017
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    EnableCameraCollision: true
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+    }
+  }
+}
+Objects {
+  Id: 7921534498123296624
+  Name: "Rim"
+  Transform {
+    Location {
+      Z: -6.84069824
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 12762545853669996524
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "Rim_2"
+  }
+}
+Objects {
+  Id: 3674631715881960914
+  Name: "Top"
+  Transform {
+    Location {
+      Z: -3.05175781e-05
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 12762545853669996524
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "Top_1"
+  }
+}
+Objects {
+  Id: 2488660481582301816
+  Name: "Cone - Truncated Hollow Wide Thin"
+  Transform {
+    Location {
+      Z: 22.9417725
+    }
+    Rotation {
+    }
+    Scale {
+      X: 0.868862867
+      Y: 0.868862867
+      Z: 0.419970423
+    }
+  }
+  ParentId: 12762545853669996524
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 132672053610873933
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.154000044
+        G: 0.0415555723
+        A: 1
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 9258812049024871290
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    EnableCameraCollision: true
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+    }
+  }
+}

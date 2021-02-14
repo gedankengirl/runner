@@ -8,12 +8,12 @@ Assets {
   }
 }
 Assets {
-  Id: 12095835209017042614
-  Name: "Cube"
+  Id: 10515482815474555518
+  Name: "Branches Cluster Big"
   PlatformAssetType: 1
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_cube_002"
+    AssetId: "sm_gen_branches_big_001"
   }
 }
 Assets {

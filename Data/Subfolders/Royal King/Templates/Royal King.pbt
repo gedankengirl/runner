@@ -1,0 +1,44 @@
+Assets {
+  Id: 12880038554983661170
+  Name: "Royal King"
+  PlatformAssetType: 5
+  TemplateAsset {
+    ObjectBlock {
+      RootId: 6445006563157579753
+      Objects {
+        Id: 6445006563157579753
+        Name: "TemplateBundleDummy"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        Folder {
+          BundleDummy {
+            ReferencedAssets {
+              Id: 1465011741521636212
+            }
+          }
+        }
+      }
+    }
+    PrimaryAssetId {
+      AssetType: "None"
+      AssetId: "None"
+    }
+  }
+  Marketplace {
+    Id: "12cc3baf16b9430686cdd8b299e024df"
+    OwnerAccountId: "aa46c614a311415fb2a2d6be6031b6b9"
+    OwnerName: "BobbybearAlpha"
+    Version: "1.0.0"
+    Description: "This is my first template so it\'s not great but I neede a king so I made a king"
+  }
+  SerializationVersion: 74
+}
