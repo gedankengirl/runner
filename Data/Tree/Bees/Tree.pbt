@@ -186,6 +186,7 @@ Objects {
   }
   ParentId: 7284708399235958616
   ChildIds: 8471165546901573229
+  WantsNetworking: true
   Collidable_v2 {
     Value: "mc:ecollisionsetting:forceoff"
   }

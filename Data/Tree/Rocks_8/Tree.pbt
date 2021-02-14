@@ -5,8 +5,8 @@ Objects {
   Name: "Rock Pile 001"
   Transform {
     Location {
-      X: 3200
-      Y: 970
+      X: 6016.45703
+      Y: 687.531738
       Z: -340
     }
     Rotation {

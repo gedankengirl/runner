@@ -1153,14 +1153,15 @@ Objects {
         Overrides {
           Name: "Position"
           Vector {
-            X: 2220
-            Y: -4270
+            X: 3905.93359
+            Y: -5652.21
             Z: 60
           }
         }
         Overrides {
           Name: "Rotation"
           Rotator {
+            Yaw: -49.9194031
           }
         }
         Overrides {
@@ -2518,9 +2519,13 @@ Objects {
   Name: "Tomato"
   Transform {
     Location {
-      Z: 40.8335571
+      Y: -535.722351
+      Z: -154.152985
     }
     Rotation {
+      Pitch: 14.6471624
+      Yaw: 45.8959503
+      Roll: 6.23005772
     }
     Scale {
       X: 2.28633

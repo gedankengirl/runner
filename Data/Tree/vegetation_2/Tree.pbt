@@ -786,8 +786,8 @@ Objects {
   Name: "Flower Daisy Patch 01"
   Transform {
     Location {
-      X: 3715
-      Y: 1605
+      X: 5423.36035
+      Y: 1133.30664
     }
     Rotation {
       Yaw: 80

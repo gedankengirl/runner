@@ -44,7 +44,10 @@ Objects {
     }
   }
   ParentId: 6612141579144997591
-  ChildIds: 5512826741515909169
+  ChildIds: 18207685789847834436
+  ChildIds: 9241869580372425524
+  ChildIds: 8443725788156297523
+  ChildIds: 4326309210469853418
   Collidable_v2 {
     Value: "mc:ecollisionsetting:forceoff"
   }
@@ -55,16 +58,15 @@ Objects {
   }
 }
 Objects {
-  Id: 5512826741515909169
-  Name: "Rotation controller"
+  Id: 4326309210469853418
+  Name: "Row"
   Transform {
     Location {
-      X: 6941.48193
-      Y: 7184.45605
+      X: 1350.79395
+      Y: -7139.98633
       Z: 3077.69
     }
     Rotation {
-      Pitch: 21.8566589
     }
     Scale {
       X: 1
@@ -81,7 +83,94 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Rotation controller"
+    FilePartitionName: "Row"
+  }
+}
+Objects {
+  Id: 8443725788156297523
+  Name: "Row"
+  Transform {
+    Location {
+      X: 1350.79395
+      Y: -2666.69336
+      Z: 3077.69
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 17056879319693043648
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "Row_1"
+  }
+}
+Objects {
+  Id: 9241869580372425524
+  Name: "Row"
+  Transform {
+    Location {
+      X: 1350.79395
+      Y: 2553.11133
+      Z: 3077.69
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 17056879319693043648
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "Row_2"
+  }
+}
+Objects {
+  Id: 18207685789847834436
+  Name: "Row"
+  Transform {
+    Location {
+      X: 1350.79395
+      Y: 7192.1123
+      Z: 3077.69
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 17056879319693043648
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "Row_3"
   }
 }
 Objects {

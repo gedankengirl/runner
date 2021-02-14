@@ -1,13 +1,13 @@
-Name: "Rotation controller"
-RootId: 17784931124766965314
+Name: "Rotation controller_10"
+RootId: 13272200510438026152
 Objects {
-  Id: 1642763411796167546
+  Id: 6815014822493316858
   Name: "stage light 01"
   Transform {
     Location {
-      X: -12.974884
+      X: -16.7806625
       Y: -69.9130859
-      Z: -234.367584
+      Z: -219.794586
     }
     Rotation {
       Pitch: 39.4879379
@@ -20,12 +20,12 @@ Objects {
       Z: 2.41510916
     }
   }
-  ParentId: 17784931124766965314
-  ChildIds: 17972369531634219739
-  ChildIds: 7101104412390863211
-  ChildIds: 11898642092248280109
-  ChildIds: 8495893191110708246
-  ChildIds: 5485494793988133843
+  ParentId: 13272200510438026152
+  ChildIds: 9646229646644471376
+  ChildIds: 2014664214962009658
+  ChildIds: 2413896201881175181
+  ChildIds: 14922351401810052608
+  ChildIds: 4054435841515449655
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -44,7 +44,7 @@ Objects {
   }
 }
 Objects {
-  Id: 5485494793988133843
+  Id: 4054435841515449655
   Name: "Object Rotator"
   Transform {
     Scale {
@@ -53,7 +53,7 @@ Objects {
       Z: 0.299310923
     }
   }
-  ParentId: 1642763411796167546
+  ParentId: 6815014822493316858
   TemplateInstance {
     ParameterOverrideMap {
       key: 8270530540092255344
@@ -66,6 +66,7 @@ Objects {
           Name: "Rotation"
           Rotator {
             Yaw: 6.83018834e-06
+            Roll: -3.41509417e-06
           }
         }
         Overrides {
@@ -79,15 +80,14 @@ Objects {
         Overrides {
           Name: "cs:Object"
           ObjectReference {
-            SelfId: 17784931124766965314
+            SelfId: 13272200510438026152
           }
         }
         Overrides {
           Name: "cs:RotateTo"
           Rotator {
-            Pitch: 16.5069332
-            Yaw: -16.4397583
-            Roll: -46.0797729
+            Yaw: 60
+            Roll: -20
           }
         }
         Overrides {
@@ -121,7 +121,7 @@ Objects {
   }
 }
 Objects {
-  Id: 8495893191110708246
+  Id: 14922351401810052608
   Name: "Truncated Teardrop"
   Transform {
     Location {
@@ -140,7 +140,7 @@ Objects {
       Z: 6.3166256
     }
   }
-  ParentId: 1642763411796167546
+  ParentId: 6815014822493316858
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -187,7 +187,7 @@ Objects {
   }
 }
 Objects {
-  Id: 11898642092248280109
+  Id: 2413896201881175181
   Name: "Traffic Signal 01"
   Transform {
     Location {
@@ -206,7 +206,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 1642763411796167546
+  ParentId: 6815014822493316858
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:color"
@@ -271,7 +271,7 @@ Objects {
   }
 }
 Objects {
-  Id: 7101104412390863211
+  Id: 2014664214962009658
   Name: "Traffic Signal 01"
   Transform {
     Location {
@@ -285,7 +285,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 1642763411796167546
+  ParentId: 6815014822493316858
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:color"
@@ -350,7 +350,7 @@ Objects {
   }
 }
 Objects {
-  Id: 17972369531634219739
+  Id: 9646229646644471376
   Name: "Spotlight"
   Transform {
     Location {
@@ -369,7 +369,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 1642763411796167546
+  ParentId: 6815014822493316858
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }

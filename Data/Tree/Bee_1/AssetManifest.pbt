@@ -44,30 +44,12 @@ Assets {
   }
 }
 Assets {
-  Id: 6258457757629646348
-  Name: "Edgeline Wavy Object Fade Advanced"
-  PlatformAssetType: 2
-  PrimaryAsset {
-    AssetType: "MaterialAssetRef"
-    AssetId: "fxma_add_edgeline_local"
-  }
-}
-Assets {
   Id: 5185278861897178064
   Name: "Sphere"
   PlatformAssetType: 1
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_sphere_002"
-  }
-}
-Assets {
-  Id: 4598660795231725597
-  Name: "Gem - Pear Polished"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_gem_pear_polished_001"
   }
 }
 Assets {

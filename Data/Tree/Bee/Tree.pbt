@@ -945,8 +945,10 @@ Objects {
     }
   }
   ParentId: 10408677958397955096
-  ChildIds: 10956754085513322191
-  ChildIds: 16589374091768381474
+  ChildIds: 8251951314987672026
+  ChildIds: 10035367617166180003
+  ChildIds: 93974225485783230
+  ChildIds: 5511384256557737015
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -964,106 +966,220 @@ Objects {
   }
 }
 Objects {
-  Id: 16589374091768381474
-  Name: "Gem - Pear Polished"
+  Id: 5511384256557737015
+  Name: "Right wing controller"
   Transform {
     Location {
-      X: 10
-      Y: -70
-      Z: 1
+      X: 24.2421875
+      Y: -5.07226563
+      Z: -24.9590759
     }
     Rotation {
-      Pitch: -67.7309265
-      Yaw: -95.5058289
-      Roll: -96.9362183
     }
     Scale {
       X: 1
-      Y: 1.3
-      Z: 0.1
+      Y: 1
+      Z: 1
     }
   }
   ParentId: 8643060876037730149
-  UnregisteredParameters {
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 6258457757629646348
-      }
-    }
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:color"
-      Color {
-        R: 0.506000042
-        G: 0.305206269
-        A: 0.742
-      }
-    }
-  }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
-  CoreMesh {
-    MeshAsset {
-      Id: 4598660795231725597
-    }
-    Teams {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    EnableCameraCollision: true
-    StaticMesh {
-      Physics {
-        Mass: 100
-        LinearDamping: 0.01
-      }
-    }
-  }
-  InstanceHistory {
-    SelfId: 16589374091768381474
-    SubobjectId: 16639121560091305869
-    InstanceId: 3613408277365474097
-    TemplateId: 8539241641825137027
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "Right wing controller_1"
   }
 }
 Objects {
-  Id: 10956754085513322191
-  Name: "Gem - Pear Polished"
+  Id: 93974225485783230
+  Name: "Left wing controller"
   Transform {
     Location {
-      X: 10
-      Y: 70
-      Z: 1
+      X: 24.2421875
+      Y: 5.234375
+      Z: -24.9544678
     }
     Rotation {
-      Pitch: -67.7310486
-      Yaw: 110.505508
-      Roll: -96.9362183
     }
     Scale {
       X: 1
-      Y: 1.3
-      Z: 0.1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 8643060876037730149
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "Left wing controller_1"
+  }
+}
+Objects {
+  Id: 10035367617166180003
+  Name: "Object Rotator"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
     }
   }
   ParentId: 8643060876037730149
   UnregisteredParameters {
     Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 6258457757629646348
+      Name: "cs:Object"
+      ObjectReference {
+        SelfId: 5511384256557737015
       }
     }
     Overrides {
-      Name: "ma:Shared_BaseMaterial:color"
-      Color {
-        R: 0.506000042
-        G: 0.305206269
-        A: 0.742
+      Name: "cs:RotateTo"
+      Rotator {
+        Yaw: -47.272
       }
+    }
+    Overrides {
+      Name: "cs:LocalSpace"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:Reverse"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:Duration"
+      Float: 0.1
+    }
+    Overrides {
+      Name: "cs:AutoStart"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:StartDelayRange"
+      Vector2 {
+      }
+    }
+    Overrides {
+      Name: "cs:RepeatCount"
+      Int: -1
+    }
+    Overrides {
+      Name: "cs:IntervalDelayRange"
+      Vector2 {
+      }
+    }
+    Overrides {
+      Name: "cs:BounceOnRepeat"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:StartEventName"
+      String: ""
+    }
+    Overrides {
+      Name: "cs:StopEventName"
+      String: ""
+    }
+    Overrides {
+      Name: "cs:ResetEventName"
+      String: ""
+    }
+    Overrides {
+      Name: "cs:OnStartedEventName"
+      String: ""
+    }
+    Overrides {
+      Name: "cs:OnStoppedEventName"
+      String: ""
+    }
+    Overrides {
+      Name: "cs:OnResetEventName"
+      String: ""
+    }
+    Overrides {
+      Name: "cs:OnCompletedEventName"
+      String: ""
+    }
+    Overrides {
+      Name: "cs:Duration:tooltip"
+      String: "Time in seconds for the object to perform the action."
+    }
+    Overrides {
+      Name: "cs:StartDelayRange:tooltip"
+      String: "Random delay range for the object to take action at the start of the game."
+    }
+    Overrides {
+      Name: "cs:LocalSpace:tooltip"
+      String: "Whether RotateTo is in local space"
+    }
+    Overrides {
+      Name: "cs:Reverse:tooltip"
+      String: "If true, the object will start from RotateTo and rotate towards the initial rotation."
+    }
+    Overrides {
+      Name: "cs:Object:tooltip"
+      String: "Object to transform"
+    }
+    Overrides {
+      Name: "cs:AutoStart:tooltip"
+      String: "If true, the specified object will start the action automatically."
+    }
+    Overrides {
+      Name: "cs:RepeatCount:tooltip"
+      String: "Number of times the object is rotated. If set to -1, the action will keep repeating indefinitely."
+    }
+    Overrides {
+      Name: "cs:BounceOnRepeat:tooltip"
+      String: "Whether to reverse alternating repeats, so that the object transforms smoothly."
+    }
+    Overrides {
+      Name: "cs:StartEventName:tooltip"
+      String: "Specify the event that will trigger this action to start"
+    }
+    Overrides {
+      Name: "cs:StopEventName:tooltip"
+      String: "Specify the event that will trigger this action to stop"
+    }
+    Overrides {
+      Name: "cs:ResetEventName:tooltip"
+      String: "This event will trigger this action to reset"
+    }
+    Overrides {
+      Name: "cs:OnStartedEventName:tooltip"
+      String: "Event that will be broadcasted when the action starts"
+    }
+    Overrides {
+      Name: "cs:OnStoppedEventName:tooltip"
+      String: "Event that will be broadcasted when the action stops"
+    }
+    Overrides {
+      Name: "cs:OnResetEventName:tooltip"
+      String: "Event that will be broadcasted when the action is reset"
+    }
+    Overrides {
+      Name: "cs:OnCompletedEventName:tooltip"
+      String: "Event that will be broadcasted when the action is completed"
+    }
+    Overrides {
+      Name: "cs:IntervalDelayRange:tooltip"
+      String: "Random delay time between each action repeat."
+    }
+    Overrides {
+      Name: "cs:RotateTo:tooltip"
+      String: "Target rotation for the object to rotate to."
     }
   }
   Collidable_v2 {
@@ -1072,27 +1188,195 @@ Objects {
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
-  CoreMesh {
-    MeshAsset {
-      Id: 4598660795231725597
-    }
-    Teams {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    EnableCameraCollision: true
-    StaticMesh {
-      Physics {
-        Mass: 100
-        LinearDamping: 0.01
-      }
+  Script {
+    ScriptAsset {
+      Id: 6126478455621128065
     }
   }
   InstanceHistory {
-    SelfId: 10956754085513322191
-    SubobjectId: 11015091084638402912
-    InstanceId: 3613408277365474097
-    TemplateId: 8539241641825137027
+    SelfId: 1331770799666073691
+    SubobjectId: 8270530540092255344
+    InstanceId: 9106977922245047753
+    TemplateId: 7073111513809388259
+    WasRoot: true
+  }
+}
+Objects {
+  Id: 8251951314987672026
+  Name: "Object Rotator"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 8643060876037730149
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Object"
+      ObjectReference {
+        SelfId: 93974225485783230
+      }
+    }
+    Overrides {
+      Name: "cs:RotateTo"
+      Rotator {
+        Yaw: 47.2717056
+      }
+    }
+    Overrides {
+      Name: "cs:LocalSpace"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:Reverse"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:Duration"
+      Float: 0.1
+    }
+    Overrides {
+      Name: "cs:AutoStart"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:StartDelayRange"
+      Vector2 {
+      }
+    }
+    Overrides {
+      Name: "cs:RepeatCount"
+      Int: -1
+    }
+    Overrides {
+      Name: "cs:IntervalDelayRange"
+      Vector2 {
+      }
+    }
+    Overrides {
+      Name: "cs:BounceOnRepeat"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:StartEventName"
+      String: ""
+    }
+    Overrides {
+      Name: "cs:StopEventName"
+      String: ""
+    }
+    Overrides {
+      Name: "cs:ResetEventName"
+      String: ""
+    }
+    Overrides {
+      Name: "cs:OnStartedEventName"
+      String: ""
+    }
+    Overrides {
+      Name: "cs:OnStoppedEventName"
+      String: ""
+    }
+    Overrides {
+      Name: "cs:OnResetEventName"
+      String: ""
+    }
+    Overrides {
+      Name: "cs:OnCompletedEventName"
+      String: ""
+    }
+    Overrides {
+      Name: "cs:Duration:tooltip"
+      String: "Time in seconds for the object to perform the action."
+    }
+    Overrides {
+      Name: "cs:StartDelayRange:tooltip"
+      String: "Random delay range for the object to take action at the start of the game."
+    }
+    Overrides {
+      Name: "cs:LocalSpace:tooltip"
+      String: "Whether RotateTo is in local space"
+    }
+    Overrides {
+      Name: "cs:Reverse:tooltip"
+      String: "If true, the object will start from RotateTo and rotate towards the initial rotation."
+    }
+    Overrides {
+      Name: "cs:Object:tooltip"
+      String: "Object to transform"
+    }
+    Overrides {
+      Name: "cs:AutoStart:tooltip"
+      String: "If true, the specified object will start the action automatically."
+    }
+    Overrides {
+      Name: "cs:RepeatCount:tooltip"
+      String: "Number of times the object is rotated. If set to -1, the action will keep repeating indefinitely."
+    }
+    Overrides {
+      Name: "cs:BounceOnRepeat:tooltip"
+      String: "Whether to reverse alternating repeats, so that the object transforms smoothly."
+    }
+    Overrides {
+      Name: "cs:StartEventName:tooltip"
+      String: "Specify the event that will trigger this action to start"
+    }
+    Overrides {
+      Name: "cs:StopEventName:tooltip"
+      String: "Specify the event that will trigger this action to stop"
+    }
+    Overrides {
+      Name: "cs:ResetEventName:tooltip"
+      String: "This event will trigger this action to reset"
+    }
+    Overrides {
+      Name: "cs:OnStartedEventName:tooltip"
+      String: "Event that will be broadcasted when the action starts"
+    }
+    Overrides {
+      Name: "cs:OnStoppedEventName:tooltip"
+      String: "Event that will be broadcasted when the action stops"
+    }
+    Overrides {
+      Name: "cs:OnResetEventName:tooltip"
+      String: "Event that will be broadcasted when the action is reset"
+    }
+    Overrides {
+      Name: "cs:OnCompletedEventName:tooltip"
+      String: "Event that will be broadcasted when the action is completed"
+    }
+    Overrides {
+      Name: "cs:IntervalDelayRange:tooltip"
+      String: "Random delay time between each action repeat."
+    }
+    Overrides {
+      Name: "cs:RotateTo:tooltip"
+      String: "Target rotation for the object to rotate to."
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 6126478455621128065
+    }
+  }
+  InstanceHistory {
+    SelfId: 5779590910514481272
+    SubobjectId: 8270530540092255344
+    InstanceId: 14014397232811600122
+    TemplateId: 7073111513809388259
+    WasRoot: true
   }
 }
 Objects {
