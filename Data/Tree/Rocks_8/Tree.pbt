@@ -1,6 +1,136 @@
 Name: "Rocks_8"
 RootId: 8334643597125002787
 Objects {
+  Id: 12088488915195962492
+  Name: "Rock Pile 001"
+  Transform {
+    Location {
+      X: -6426.8584
+      Y: 12935.3057
+      Z: -334.999756
+    }
+    Rotation {
+      Pitch: 1.35953546
+      Yaw: 8.39625072
+      Roll: -9.13232422
+    }
+    Scale {
+      X: 2.77824545
+      Y: 2.86387539
+      Z: 2.77824
+    }
+  }
+  ParentId: 8334643597125002787
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 11865225340998629423
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    EnableCameraCollision: true
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+    }
+  }
+}
+Objects {
+  Id: 14317069241092902108
+  Name: "Rock Pile 001"
+  Transform {
+    Location {
+      X: -6103.82959
+      Y: 12543.6758
+      Z: -334.999756
+    }
+    Rotation {
+      Yaw: 8.5046339
+    }
+    Scale {
+      X: 2.50339031
+      Y: 2.58054805
+      Z: 2.50338483
+    }
+  }
+  ParentId: 8334643597125002787
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 11865225340998629423
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    EnableCameraCollision: true
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+    }
+  }
+}
+Objects {
+  Id: 10785944656007565
+  Name: "Rock 01"
+  Transform {
+    Location {
+      X: -5616.95264
+      Y: 12789.3662
+      Z: -334.999634
+    }
+    Rotation {
+      Pitch: -9.63192749
+      Yaw: -165.243774
+      Roll: -91.4822388
+    }
+    Scale {
+      X: 1.37047088
+      Y: 1.37047088
+      Z: 1.37047088
+    }
+  }
+  ParentId: 8334643597125002787
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 8610644588844948675
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    EnableCameraCollision: true
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+    }
+  }
+}
+Objects {
   Id: 4741948284876810380
   Name: "Rock Pile 001"
   Transform {

@@ -1,6 +1,90 @@
 Name: "vegetation_2"
 RootId: 3288142853916238356
 Objects {
+  Id: 5674084508572007133
+  Name: "Leafy Patch 02"
+  Transform {
+    Location {
+      X: -5198.33691
+      Y: 12614.5664
+      Z: -5.25857544
+    }
+    Rotation {
+      Yaw: 10.868988
+    }
+    Scale {
+      X: 2.81817293
+      Y: 2.81817293
+      Z: 2.81817293
+    }
+  }
+  ParentId: 3288142853916238356
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 3648173988961026746
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    EnableCameraCollision: true
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+    }
+  }
+}
+Objects {
+  Id: 4275333194083604601
+  Name: "Leafy Patch 02"
+  Transform {
+    Location {
+      X: -5280.92578
+      Y: 12206.7793
+      Z: -5.25857544
+    }
+    Rotation {
+      Yaw: -53.4424744
+    }
+    Scale {
+      X: 2.65802884
+      Y: 2.65802884
+      Z: 2.65802884
+    }
+  }
+  ParentId: 3288142853916238356
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 3648173988961026746
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    EnableCameraCollision: true
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+    }
+  }
+}
+Objects {
   Id: 12583761901856938798
   Name: "Bush Leafy Low 01"
   Transform {

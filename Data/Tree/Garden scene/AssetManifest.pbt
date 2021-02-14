@@ -35,15 +35,6 @@ Assets {
   }
 }
 Assets {
-  Id: 13658921109999552618
-  Name: "Food Strawberry 01"
-  PlatformAssetType: 2
-  PrimaryAsset {
-    AssetType: "MaterialAssetRef"
-    AssetId: "mi_food_generic_strawberry_001_uv"
-  }
-}
-Assets {
   Id: 13629958479359906438
   Name: "Cylinder - Rounded Bottom-Aligned"
   PlatformAssetType: 1
@@ -179,30 +170,12 @@ Assets {
   }
 }
 Assets {
-  Id: 2359135948222717576
-  Name: "Cone - Truncated Concave"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_cone_truncated_concave_001"
-  }
-}
-Assets {
   Id: 2009711520667461264
   Name: "Ring - Quarter"
   PlatformAssetType: 1
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_quarter_torus_002"
-  }
-}
-Assets {
-  Id: 1016564893161391447
-  Name: "Heart - Polished"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_heart_polished_001"
   }
 }
 Assets {

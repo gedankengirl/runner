@@ -1238,8 +1238,37 @@ Objects {
   }
 }
 Objects {
+  Id: 14358123819498812248
+  Name: "Crates"
+  Transform {
+    Location {
+      X: -5487.38086
+      Y: 6206.95898
+      Z: 81.392395
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 15346583032969552003
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "Crates"
+  }
+}
+Objects {
   Id: 7336164263267299788
-  Name: "Food"
+  Name: "Fruit+veggies"
   Transform {
     Location {
       X: -1675
@@ -1255,7 +1284,6 @@ Objects {
     }
   }
   ParentId: 15346583032969552003
-  ChildIds: 1524256496357337859
   ChildIds: 9339901500099433404
   ChildIds: 10922304490515109017
   ChildIds: 15268212118830998559
@@ -2757,231 +2785,6 @@ Objects {
   CoreMesh {
     MeshAsset {
       Id: 10830521042113057013
-    }
-    Teams {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    EnableCameraCollision: true
-    StaticMesh {
-      Physics {
-      }
-    }
-  }
-}
-Objects {
-  Id: 1524256496357337859
-  Name: "Food_01"
-  Transform {
-    Location {
-      X: 460
-    }
-    Rotation {
-    }
-    Scale {
-      X: 2.1
-      Y: 2.1
-      Z: 2.1
-    }
-  }
-  ParentId: 7336164263267299788
-  ChildIds: 16279424356594719148
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Folder {
-    IsGroup: true
-  }
-}
-Objects {
-  Id: 16279424356594719148
-  Name: "Strawberry"
-  Transform {
-    Location {
-      Z: 56.5955811
-    }
-    Rotation {
-      Pitch: -20.7341919
-    }
-    Scale {
-      X: 1.28678429
-      Y: 1.28678429
-      Z: 1.28678429
-    }
-  }
-  ParentId: 1524256496357337859
-  ChildIds: 16556297822317753951
-  ChildIds: 493759418557999929
-  ChildIds: 7200840280100850094
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Folder {
-    IsGroup: true
-  }
-}
-Objects {
-  Id: 7200840280100850094
-  Name: "Kelp Bush 02"
-  Transform {
-    Location {
-      X: 1.24035501
-      Y: -0.217904046
-      Z: 24.0903378
-    }
-    Rotation {
-      Pitch: -3.85861206
-      Yaw: 40.4140091
-      Roll: 4.51879072
-    }
-    Scale {
-      X: 0.257898301
-      Y: 0.257898301
-      Z: 0.321002573
-    }
-  }
-  ParentId: 16279424356594719148
-  UnregisteredParameters {
-    Overrides {
-      Name: "ma:Nature_Leaves:id"
-      AssetReference {
-        Id: 6526571475933819489
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CoreMesh {
-    MeshAsset {
-      Id: 3544124856207124336
-    }
-    Teams {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    EnableCameraCollision: true
-    StaticMesh {
-      Physics {
-      }
-    }
-  }
-}
-Objects {
-  Id: 493759418557999929
-  Name: "Cone - Truncated Concave"
-  Transform {
-    Location {
-      X: 0.472046375
-      Y: 1.95103335
-      Z: 30.9359837
-    }
-    Rotation {
-      Pitch: 15.739337
-      Yaw: -94.3302612
-      Roll: -15.5973206
-    }
-    Scale {
-      X: 0.100453682
-      Y: 0.100453764
-      Z: 0.464990258
-    }
-  }
-  ParentId: 16279424356594719148
-  UnregisteredParameters {
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 132672053610873933
-      }
-    }
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:color"
-      Color {
-        G: 0.0599999428
-        B: 0.00278145517
-        A: 1
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CoreMesh {
-    MeshAsset {
-      Id: 2359135948222717576
-    }
-    Teams {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    EnableCameraCollision: true
-    StaticMesh {
-      Physics {
-      }
-    }
-  }
-}
-Objects {
-  Id: 16556297822317753951
-  Name: "Heart - Polished"
-  Transform {
-    Location {
-      X: 1.45825899
-      Y: 1.02245092
-    }
-    Rotation {
-      Yaw: -90
-      Roll: 8.86697478e-07
-    }
-    Scale {
-      X: 0.747813046
-      Y: 1.62506402
-      Z: 0.978900373
-    }
-  }
-  ParentId: 16279424356594719148
-  UnregisteredParameters {
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 13658921109999552618
-      }
-    }
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:smart"
-      Bool: false
-    }
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:utile"
-      Float: 1.08961225
-    }
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:vtile"
-      Float: 1.23602724
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CoreMesh {
-    MeshAsset {
-      Id: 1016564893161391447
     }
     Teams {
       IsTeamCollisionEnabled: true
