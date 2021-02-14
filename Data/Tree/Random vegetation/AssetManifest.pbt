@@ -8,6 +8,15 @@ Assets {
   }
 }
 Assets {
+  Id: 13068580623119518346
+  Name: "Clover Patch 01"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_foliage_gen_clover_patch_001"
+  }
+}
+Assets {
   Id: 12184241772267133154
   Name: "Bush 02"
   PlatformAssetType: 1
@@ -18,6 +27,15 @@ Assets {
 }
 Assets {
   Id: 7763406895188263260
+  Name: "Fern 04"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_fern_generic_004"
+  }
+}
+Assets {
+  Id: 3540704478394813387
   Name: "Fern 04"
   PlatformAssetType: 1
   PrimaryAsset {

@@ -1,16 +1,15 @@
 Name: "Bats"
 RootId: 4797334295332245929
 Objects {
-  Id: 10871823273171047486
-  Name: "Bat_3(client-contexted)"
+  Id: 13957969993207948439
+  Name: "Bat_3_ClientContext"
   Transform {
     Location {
-      X: -0.000122070313
-      Y: -1850.10901
-      Z: 64.5686188
+      X: -0.000244140625
+      Y: -1868.5155
     }
     Rotation {
-      Yaw: 89.9998932
+      Yaw: 89.9998627
     }
     Scale {
       X: 2.29785371
@@ -19,49 +18,7 @@ Objects {
     }
   }
   ParentId: 4797334295332245929
-  ChildIds: 13957969993207948439
-  UnregisteredParameters {
-  }
-  WantsNetworking: true
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Folder {
-    IsGroup: true
-  }
-  InstanceHistory {
-    SelfId: 13570023895507280210
-    SubobjectId: 13254406405877122311
-    InstanceId: 5166161301489284275
-    TemplateId: 12325720584492096876
-    WasRoot: true
-  }
-}
-Objects {
-  Id: 13957969993207948439
-  Name: "ClientContext"
-  Transform {
-    Location {
-      X: -8.01052094
-      Y: -1.43239265e-06
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 10871823273171047486
   ChildIds: 14565002406257328207
-  ChildIds: 13322665378845772518
-  ChildIds: 4491593331984770168
-  ChildIds: 3532926657403163483
-  ChildIds: 3467509945942590417
   WantsNetworking: true
   Collidable_v2 {
     Value: "mc:ecollisionsetting:forceoff"
@@ -79,157 +36,12 @@ Objects {
   }
 }
 Objects {
-  Id: 3467509945942590417
-  Name: "Outline Object"
+  Id: 14565002406257328207
+  Name: "ClientContext"
   Transform {
     Location {
-      Z: 22.3583508
     }
     Rotation {
-      Yaw: 6.83018297e-05
-    }
-    Scale {
-      X: 0.435188711
-      Y: 0.435188711
-      Z: 0.435188711
-    }
-  }
-  ParentId: 13957969993207948439
-  UnregisteredParameters {
-    Overrides {
-      Name: "bp:Color A"
-      Color {
-        G: 0.412222266
-        B: 0.490000129
-        A: 0.8
-      }
-    }
-    Overrides {
-      Name: "bp:Object To Outline"
-      ObjectReference {
-        SelfId: 4491593331984770168
-      }
-    }
-    Overrides {
-      Name: "bp:Thickness"
-      Float: 4
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Blueprint {
-    BlueprintAsset {
-      Id: 10913251976909601512
-    }
-    TeamSettings {
-    }
-  }
-}
-Objects {
-  Id: 3532926657403163483
-  Name: "Outline Object"
-  Transform {
-    Location {
-      Z: 22.3583508
-    }
-    Rotation {
-      Yaw: 6.8301837e-05
-    }
-    Scale {
-      X: 0.435188711
-      Y: 0.435188711
-      Z: 0.435188711
-    }
-  }
-  ParentId: 13957969993207948439
-  UnregisteredParameters {
-    Overrides {
-      Name: "bp:Color A"
-      Color {
-        G: 0.412222266
-        B: 0.490000129
-        A: 0.8
-      }
-    }
-    Overrides {
-      Name: "bp:Object To Outline"
-      ObjectReference {
-        SelfId: 13322665378845772518
-      }
-    }
-    Overrides {
-      Name: "bp:Thickness"
-      Float: 4
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Blueprint {
-    BlueprintAsset {
-      Id: 10913251976909601512
-    }
-    TeamSettings {
-    }
-  }
-}
-Objects {
-  Id: 4491593331984770168
-  Name: "Wings"
-  Transform {
-    Location {
-      X: 8.98984528
-      Y: 1.60750938e-06
-      Z: 12.8578625
-    }
-    Rotation {
-    }
-    Scale {
-      X: 0.447014898
-      Y: 0.447014898
-      Z: 0.447014898
-    }
-  }
-  ParentId: 13957969993207948439
-  ChildIds: 16415603470181988564
-  ChildIds: 5205558609005803039
-  UnregisteredParameters {
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Folder {
-    IsGroup: true
-  }
-  InstanceHistory {
-    SelfId: 5831508720773861340
-    SubobjectId: 6579436880056576905
-    InstanceId: 5166161301489284275
-    TemplateId: 12325720584492096876
-  }
-}
-Objects {
-  Id: 5205558609005803039
-  Name: "WingB"
-  Transform {
-    Location {
-      X: 2.65536733e-06
-      Y: -14.8498907
-    }
-    Rotation {
-      Pitch: -11.15979
-      Yaw: -27.9977417
-      Roll: -20.0037842
     }
     Scale {
       X: 1
@@ -237,61 +49,23 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 4491593331984770168
-  UnregisteredParameters {
-  }
+  ParentId: 13957969993207948439
+  ChildIds: 244286760217907700
+  ChildIds: 3467509945942590417
+  ChildIds: 3532926657403163483
+  ChildIds: 4491593331984770168
+  ChildIds: 13322665378845772518
   Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
+    Value: "mc:ecollisionsetting:forceoff"
   }
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "WingB"
+  NetworkContext {
   }
   InstanceHistory {
-    SelfId: 7410590144917136945
-    SubobjectId: 7887140821457830500
-    InstanceId: 5166161301489284275
-    TemplateId: 12325720584492096876
-  }
-}
-Objects {
-  Id: 16415603470181988564
-  Name: "WingA"
-  Transform {
-    Location {
-      X: -2.65536733e-06
-      Y: 14.8498907
-    }
-    Rotation {
-      Pitch: -11.1600037
-      Yaw: 27.998
-      Roll: 20.004
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 4491593331984770168
-  UnregisteredParameters {
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "WingA"
-  }
-  InstanceHistory {
-    SelfId: 1260627678691975363
-    SubobjectId: 1935934873072305302
+    SelfId: 4106004257425492167
+    SubobjectId: 3699708937997085842
     InstanceId: 5166161301489284275
     TemplateId: 12325720584492096876
   }
@@ -301,11 +75,12 @@ Objects {
   Name: "Body"
   Transform {
     Location {
-      X: 10.1918736
-      Y: 1.82244878e-06
-      Z: 8.85777283
+      X: 10.1920853
+      Y: 2.55148152e-05
+      Z: 36.9573021
     }
     Rotation {
+      Yaw: -2.73207497e-05
     }
     Scale {
       X: 1
@@ -313,7 +88,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13957969993207948439
+  ParentId: 14565002406257328207
   ChildIds: 1023775862027902538
   ChildIds: 15895086612389227827
   ChildIds: 13418666946351158475
@@ -406,7 +181,7 @@ Objects {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
       AssetReference {
-        Id: 10184847056121543272
+        Id: 13674206740428179952
       }
     }
     Overrides {
@@ -466,7 +241,7 @@ Objects {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
       AssetReference {
-        Id: 10184847056121543272
+        Id: 13674206740428179952
       }
     }
     Overrides {
@@ -526,7 +301,7 @@ Objects {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
       AssetReference {
-        Id: 10184847056121543272
+        Id: 13674206740428179952
       }
     }
     Overrides {
@@ -1043,12 +818,56 @@ Objects {
   }
 }
 Objects {
-  Id: 14565002406257328207
-  Name: "ClientContext"
+  Id: 4491593331984770168
+  Name: "Wings"
   Transform {
     Location {
+      X: 8.99021721
+      Y: 2.2506063e-05
+      Z: 40.9573898
     }
     Rotation {
+      Yaw: -2.73207497e-05
+    }
+    Scale {
+      X: 0.447014898
+      Y: 0.447014898
+      Z: 0.447014898
+    }
+  }
+  ParentId: 14565002406257328207
+  ChildIds: 16415603470181988564
+  ChildIds: 5205558609005803039
+  UnregisteredParameters {
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+  InstanceHistory {
+    SelfId: 5831508720773861340
+    SubobjectId: 6579436880056576905
+    InstanceId: 5166161301489284275
+    TemplateId: 12325720584492096876
+  }
+}
+Objects {
+  Id: 5205558609005803039
+  Name: "WingB"
+  Transform {
+    Location {
+      X: 2.65536733e-06
+      Y: -14.8498907
+    }
+    Rotation {
+      Pitch: -11.15979
+      Yaw: -27.9977417
+      Roll: -20.0037842
     }
     Scale {
       X: 1
@@ -1056,21 +875,165 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13957969993207948439
-  ChildIds: 244286760217907700
+  ParentId: 4491593331984770168
+  UnregisteredParameters {
+  }
   Collidable_v2 {
-    Value: "mc:ecollisionsetting:forceoff"
+    Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
-  NetworkContext {
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "WingB"
   }
   InstanceHistory {
-    SelfId: 4106004257425492167
-    SubobjectId: 3699708937997085842
+    SelfId: 7410590144917136945
+    SubobjectId: 7887140821457830500
     InstanceId: 5166161301489284275
     TemplateId: 12325720584492096876
+  }
+}
+Objects {
+  Id: 16415603470181988564
+  Name: "WingA"
+  Transform {
+    Location {
+      X: -2.65536733e-06
+      Y: 14.8498907
+    }
+    Rotation {
+      Pitch: -11.1600037
+      Yaw: 27.998
+      Roll: 20.004
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4491593331984770168
+  UnregisteredParameters {
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "WingA"
+  }
+  InstanceHistory {
+    SelfId: 1260627678691975363
+    SubobjectId: 1935934873072305302
+    InstanceId: 5166161301489284275
+    TemplateId: 12325720584492096876
+  }
+}
+Objects {
+  Id: 3532926657403163483
+  Name: "Outline Object"
+  Transform {
+    Location {
+      Z: 50.4578781
+    }
+    Rotation {
+      Yaw: 5.12264e-05
+    }
+    Scale {
+      X: 0.435188711
+      Y: 0.435188711
+      Z: 0.435188711
+    }
+  }
+  ParentId: 14565002406257328207
+  UnregisteredParameters {
+    Overrides {
+      Name: "bp:Color A"
+      Color {
+        G: 0.412222266
+        B: 0.490000129
+        A: 0.8
+      }
+    }
+    Overrides {
+      Name: "bp:Object To Outline"
+      ObjectReference {
+        SelfId: 13322665378845772518
+      }
+    }
+    Overrides {
+      Name: "bp:Thickness"
+      Float: 4
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 10913251976909601512
+    }
+    TeamSettings {
+    }
+  }
+}
+Objects {
+  Id: 3467509945942590417
+  Name: "Outline Object"
+  Transform {
+    Location {
+      Z: 50.4578781
+    }
+    Rotation {
+      Yaw: 5.12264e-05
+    }
+    Scale {
+      X: 0.435188711
+      Y: 0.435188711
+      Z: 0.435188711
+    }
+  }
+  ParentId: 14565002406257328207
+  UnregisteredParameters {
+    Overrides {
+      Name: "bp:Color A"
+      Color {
+        G: 0.412222266
+        B: 0.490000129
+        A: 0.8
+      }
+    }
+    Overrides {
+      Name: "bp:Object To Outline"
+      ObjectReference {
+        SelfId: 4491593331984770168
+      }
+    }
+    Overrides {
+      Name: "bp:Thickness"
+      Float: 4
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 10913251976909601512
+    }
+    TeamSettings {
+    }
   }
 }
 Objects {
@@ -1078,10 +1041,12 @@ Objects {
   Name: "BatMovement"
   Transform {
     Location {
-      X: 8.0105114
-      Y: 1.43239083e-06
+      X: 8.01019192
+      Y: 2.00526738e-05
+      Z: 28.0995274
     }
     Rotation {
+      Yaw: -2.73207497e-05
     }
     Scale {
       X: 1
@@ -1123,16 +1088,15 @@ Objects {
   }
 }
 Objects {
-  Id: 13570023895507280210
-  Name: "Bat_2(client-contexted)"
+  Id: 15734090486168916835
+  Name: "Bat_2_ClientContext"
   Transform {
     Location {
-      X: -6.10351563e-05
-      Y: -873.974487
-      Z: 64.5686188
+      X: -0.000183105469
+      Y: -892.380737
     }
     Rotation {
-      Yaw: 89.9999161
+      Yaw: 89.9998856
     }
     Scale {
       X: 2.29785371
@@ -1141,49 +1105,7 @@ Objects {
     }
   }
   ParentId: 4797334295332245929
-  ChildIds: 15734090486168916835
-  UnregisteredParameters {
-  }
-  WantsNetworking: true
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Folder {
-    IsGroup: true
-  }
-  InstanceHistory {
-    SelfId: 13570023895507280210
-    SubobjectId: 13254406405877122311
-    InstanceId: 5166161301489284275
-    TemplateId: 12325720584492096876
-    WasRoot: true
-  }
-}
-Objects {
-  Id: 15734090486168916835
-  Name: "ClientContext"
-  Transform {
-    Location {
-      X: -8.01052094
-      Y: -1.43239265e-06
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 13570023895507280210
   ChildIds: 4106004257425492167
-  ChildIds: 16473591189676463492
-  ChildIds: 5831508720773861340
-  ChildIds: 4789158677751939329
-  ChildIds: 4271511172889134276
   WantsNetworking: true
   Collidable_v2 {
     Value: "mc:ecollisionsetting:forceoff"
@@ -1201,14 +1123,49 @@ Objects {
   }
 }
 Objects {
+  Id: 4106004257425492167
+  Name: "ClientContext"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 15734090486168916835
+  ChildIds: 14491857266107245451
+  ChildIds: 16473591189676463492
+  ChildIds: 5831508720773861340
+  ChildIds: 4789158677751939329
+  ChildIds: 4271511172889134276
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  NetworkContext {
+  }
+  InstanceHistory {
+    SelfId: 4106004257425492167
+    SubobjectId: 3699708937997085842
+    InstanceId: 5166161301489284275
+    TemplateId: 12325720584492096876
+  }
+}
+Objects {
   Id: 4271511172889134276
   Name: "Outline Object"
   Transform {
     Location {
-      Z: 22.3583508
+      Z: 50.4578781
     }
     Rotation {
-      Yaw: 6.83018297e-05
+      Yaw: 5.80565975e-05
     }
     Scale {
       X: 0.435188711
@@ -1216,7 +1173,7 @@ Objects {
       Z: 0.435188711
     }
   }
-  ParentId: 15734090486168916835
+  ParentId: 4106004257425492167
   UnregisteredParameters {
     Overrides {
       Name: "bp:Color A"
@@ -1256,10 +1213,10 @@ Objects {
   Name: "Outline Object"
   Transform {
     Location {
-      Z: 22.3583508
+      Z: 50.4578781
     }
     Rotation {
-      Yaw: 6.8301837e-05
+      Yaw: 5.80565975e-05
     }
     Scale {
       X: 0.435188711
@@ -1267,7 +1224,7 @@ Objects {
       Z: 0.435188711
     }
   }
-  ParentId: 15734090486168916835
+  ParentId: 4106004257425492167
   UnregisteredParameters {
     Overrides {
       Name: "bp:Color A"
@@ -1307,11 +1264,12 @@ Objects {
   Name: "Wings"
   Transform {
     Location {
-      X: 8.98984528
-      Y: 1.60750938e-06
-      Z: 12.8578625
+      X: 8.99021721
+      Y: 1.71474767e-05
+      Z: 40.9573898
     }
     Rotation {
+      Yaw: -1.02452759e-05
     }
     Scale {
       X: 0.447014898
@@ -1319,7 +1277,7 @@ Objects {
       Z: 0.447014898
     }
   }
-  ParentId: 15734090486168916835
+  ParentId: 4106004257425492167
   ChildIds: 1260627678691975363
   ChildIds: 7410590144917136945
   UnregisteredParameters {
@@ -1423,11 +1381,12 @@ Objects {
   Name: "Body"
   Transform {
     Location {
-      X: 10.1918736
-      Y: 1.82244878e-06
-      Z: 8.85777283
+      X: 10.1920853
+      Y: 1.94398581e-05
+      Z: 36.9573021
     }
     Rotation {
+      Yaw: -1.02452759e-05
     }
     Scale {
       X: 1
@@ -1435,7 +1394,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 15734090486168916835
+  ParentId: 4106004257425492167
   ChildIds: 1743449889568390243
   ChildIds: 13240588331050789643
   ChildIds: 4525696299260053201
@@ -1541,7 +1500,7 @@ Objects {
   Name: "Ring"
   Transform {
     Location {
-      X: 0.67230159
+      X: 0.672292411
       Y: 19.2486019
       Z: 20.8769588
     }
@@ -1549,9 +1508,9 @@ Objects {
       Yaw: 3.25688747e-11
     }
     Scale {
-      X: 0.0430473611
-      Y: 0.0430473611
-      Z: 0.1710089
+      X: 0.0673826
+      Y: 0.0673826
+      Z: 0.16935733
     }
   }
   ParentId: 16473591189676463492
@@ -1599,7 +1558,7 @@ Objects {
   Name: "Ring"
   Transform {
     Location {
-      X: -0.942656577
+      X: -0.942665696
       Y: 19.2485981
       Z: 30.2214832
     }
@@ -1607,9 +1566,9 @@ Objects {
       Yaw: 6.51377494e-11
     }
     Scale {
-      X: 0.0430473611
-      Y: 0.0430473611
-      Z: 0.1710089
+      X: 0.0673826
+      Y: 0.0673826
+      Z: 0.16935733
     }
   }
   ParentId: 16473591189676463492
@@ -1657,17 +1616,17 @@ Objects {
   Name: "Ring"
   Transform {
     Location {
-      X: -0.458169073
-      Y: 19.2486
+      X: -0.458178282
+      Y: 19.2485981
       Z: 27.2659645
     }
     Rotation {
       Yaw: 3.25688747e-11
     }
     Scale {
-      X: 0.0430473611
-      Y: 0.0430473611
-      Z: 0.1710089
+      X: 0.0673826
+      Y: 0.0673826
+      Z: 0.16935733
     }
   }
   ParentId: 16473591189676463492
@@ -1715,16 +1674,16 @@ Objects {
   Name: "Ring"
   Transform {
     Location {
-      X: 0.298311293
+      X: 0.298302114
       Y: 19.2486
-      Z: 24.1845493
+      Z: 24.1845417
     }
     Rotation {
     }
     Scale {
-      X: 0.0430473611
-      Y: 0.0430473611
-      Z: 0.1710089
+      X: 0.0673826
+      Y: 0.0673826
+      Z: 0.16935733
     }
   }
   ParentId: 16473591189676463492
@@ -2180,45 +2139,16 @@ Objects {
   }
 }
 Objects {
-  Id: 4106004257425492167
-  Name: "ClientContext"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 15734090486168916835
-  ChildIds: 14491857266107245451
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:forceoff"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  NetworkContext {
-  }
-  InstanceHistory {
-    SelfId: 4106004257425492167
-    SubobjectId: 3699708937997085842
-    InstanceId: 5166161301489284275
-    TemplateId: 12325720584492096876
-  }
-}
-Objects {
   Id: 14491857266107245451
   Name: "BatMovement"
   Transform {
     Location {
-      X: 8.0105114
-      Y: 1.43239083e-06
+      X: 8.01019192
+      Y: 1.52782268e-05
+      Z: 28.0995274
     }
     Rotation {
+      Yaw: -1.02452759e-05
     }
     Scale {
       X: 1
@@ -2260,50 +2190,10 @@ Objects {
   }
 }
 Objects {
-  Id: 13839860189674561563
-  Name: "Bat_1(client-contexted)"
+  Id: 8445312979971112218
+  Name: "Bat_1_ClientContext"
   Transform {
     Location {
-      Z: 64.5686188
-    }
-    Rotation {
-      Yaw: 89.9999313
-    }
-    Scale {
-      X: 2.29785371
-      Y: 2.29785371
-      Z: 2.29785371
-    }
-  }
-  ParentId: 4797334295332245929
-  ChildIds: 11968827002467308074
-  UnregisteredParameters {
-  }
-  WantsNetworking: true
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Folder {
-    IsGroup: true
-  }
-  InstanceHistory {
-    SelfId: 13839860189674561563
-    SubobjectId: 13254406405877122311
-    InstanceId: 12711591489942066146
-    TemplateId: 12325720584492096876
-    WasRoot: true
-  }
-}
-Objects {
-  Id: 11968827002467308074
-  Name: "ClientContext"
-  Transform {
-    Location {
-      X: -8.01052094
-      Y: -1.43239265e-06
     }
     Rotation {
     }
@@ -2313,11 +2203,8 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13839860189674561563
-  ChildIds: 4951727924795394446
-  ChildIds: 11015405248208622797
-  ChildIds: 11935075933464145263
-  ChildIds: 3219731893256244885
+  ParentId: 4797334295332245929
+  ChildIds: 1314673686048974370
   WantsNetworking: true
   Collidable_v2 {
     Value: "mc:ecollisionsetting:forceoff"
@@ -2327,11 +2214,33 @@ Objects {
   }
   NetworkContext {
   }
-  InstanceHistory {
-    SelfId: 11968827002467308074
-    SubobjectId: 15130339224982812470
-    InstanceId: 12711591489942066146
-    TemplateId: 12325720584492096876
+}
+Objects {
+  Id: 1314673686048974370
+  Name: "ClientContext"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 8445312979971112218
+  ChildIds: 13068896598873154242
+  ChildIds: 11015405248208622797
+  ChildIds: 11935075933464145263
+  ChildIds: 3219731893256244885
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  NetworkContext {
   }
 }
 Objects {
@@ -2339,19 +2248,19 @@ Objects {
   Name: "Wings"
   Transform {
     Location {
-      X: 8.98984528
-      Y: 1.60750938e-06
-      Z: 12.8578625
+      Y: 2.25195289
+      Z: 94.11409
     }
     Rotation {
+      Yaw: 89.9998856
     }
     Scale {
-      X: 0.447014898
-      Y: 0.447014898
-      Z: 0.447014898
+      X: 1.02717483
+      Y: 1.02717483
+      Z: 1.02717483
     }
   }
-  ParentId: 11968827002467308074
+  ParentId: 1314673686048974370
   ChildIds: 7871660342339477898
   ChildIds: 1915387913446795128
   UnregisteredParameters {
@@ -2455,21 +2364,21 @@ Objects {
   Name: "tail"
   Transform {
     Location {
-      X: -13.5961409
-      Y: -2.43117938e-06
+      Y: -49.6484337
+      Z: 64.5686
     }
     Rotation {
       Pitch: 3.4150944e-05
-      Yaw: -89.9998932
-      Roll: -110.008965
+      Yaw: 5.28796299e-05
+      Roll: -110.008888
     }
     Scale {
-      X: 0.142442048
-      Y: 0.142441884
-      Z: 0.104542449
+      X: 0.327310979
+      Y: 0.327310622
+      Z: 0.240223259
     }
   }
-  ParentId: 11968827002467308074
+  ParentId: 1314673686048974370
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -2510,19 +2419,19 @@ Objects {
   Name: "head"
   Transform {
     Location {
-      X: 10.1918736
-      Y: 1.82244878e-06
-      Z: 8.85777283
+      Y: 5.0136714
+      Z: 84.9224701
     }
     Rotation {
+      Yaw: 89.9998856
     }
     Scale {
-      X: 1
-      Y: 1
-      Z: 1
+      X: 2.29785371
+      Y: 2.29785371
+      Z: 2.29785371
     }
   }
-  ParentId: 11968827002467308074
+  ParentId: 1314673686048974370
   ChildIds: 7238020440763120938
   ChildIds: 14664674481737280066
   ChildIds: 4795743851013425048
@@ -2975,53 +2884,22 @@ Objects {
   }
 }
 Objects {
-  Id: 4951727924795394446
-  Name: "ClientContext"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 11968827002467308074
-  ChildIds: 13068896598873154242
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:forceoff"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  NetworkContext {
-  }
-  InstanceHistory {
-    SelfId: 4951727924795394446
-    SubobjectId: 3699708937997085842
-    InstanceId: 12711591489942066146
-    TemplateId: 12325720584492096876
-  }
-}
-Objects {
   Id: 13068896598873154242
   Name: "BatMovement"
   Transform {
     Location {
-      X: 8.0105114
-      Y: 1.43239083e-06
+      Z: 64.5686
     }
     Rotation {
+      Yaw: 89.9998703
     }
     Scale {
-      X: 1
-      Y: 1
-      Z: 1
+      X: 2.29785371
+      Y: 2.29785371
+      Z: 2.29785371
     }
   }
-  ParentId: 4951727924795394446
+  ParentId: 1314673686048974370
   UnregisteredParameters {
     Overrides {
       Name: "cs:Amplitude"

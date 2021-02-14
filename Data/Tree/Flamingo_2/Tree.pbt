@@ -1,12 +1,67 @@
 Name: "Flamingo_2"
 RootId: 14446702659863560936
 Objects {
+  Id: 16526631739012920796
+  Name: "RockMove"
+  Transform {
+    Location {
+      Z: 75.7167358
+    }
+    Rotation {
+      Pitch: 28.2610874
+      Yaw: -20.8739243
+      Roll: 3.39260964e-06
+    }
+    Scale {
+      X: 0.514266312
+      Y: 0.514266312
+      Z: 0.514266312
+    }
+  }
+  ParentId: 14446702659863560936
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Object"
+      ObjectReference {
+        SelfId: 14446702659863560936
+      }
+    }
+    Overrides {
+      Name: "cs:Amplitude"
+      Vector {
+        Z: 10
+      }
+    }
+    Overrides {
+      Name: "cs:Period"
+      Float: 2.3
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 14863999780221077747
+    }
+  }
+  InstanceHistory {
+    SelfId: 6868078495993990776
+    SubobjectId: 13047611329256546289
+    InstanceId: 903624328023784543
+    TemplateId: 6043847446701242570
+  }
+}
+Objects {
   Id: 15751047802721611665
   Name: "Hat"
   Transform {
     Location {
       X: 17.2109375
-      Z: 221.098816
+      Z: 296.815552
     }
     Rotation {
     }
@@ -34,10 +89,10 @@ Objects {
   Transform {
     Location {
       X: -42.0898438
-      Z: 66.1627197
+      Z: 141.879456
     }
     Rotation {
-      Yaw: -4.78113143e-05
+      Yaw: -4.7811307e-05
     }
     Scale {
       X: 1
@@ -87,7 +142,7 @@ Objects {
     Location {
       X: -0.751953125
       Y: -1.203125
-      Z: -71.7159271
+      Z: 4.00080872
     }
     Rotation {
     }
@@ -114,9 +169,9 @@ Objects {
   Name: "Body"
   Transform {
     Location {
-      X: -13.1097212
+      X: -13.109375
       Y: 0.298828125
-      Z: 37.6974182
+      Z: 113.414154
     }
     Rotation {
     }
@@ -143,9 +198,9 @@ Objects {
   Name: "Neck"
   Transform {
     Location {
-      X: 32.4529419
+      X: 32.453125
       Y: 0.751953125
-      Z: 76.8278198
+      Z: 152.544556
     }
     Rotation {
       Yaw: -179.999954
@@ -202,9 +257,9 @@ Objects {
   Name: "Head"
   Transform {
     Location {
-      X: 16.9282227
+      X: 16.9277344
       Y: 0.751953125
-      Z: 167.113327
+      Z: 242.830078
     }
     Rotation {
     }

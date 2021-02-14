@@ -8,21 +8,21 @@ Assets {
   }
 }
 Assets {
-  Id: 15701378010386469452
-  Name: "Fantasy Staff Grip 01"
+  Id: 17211744512365148018
+  Name: "Donut"
   PlatformAssetType: 1
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_weap_fan_grip_staff_001"
+    AssetId: "sm_torus_001"
   }
 }
 Assets {
-  Id: 12610149741243116648
-  Name: "Urban Pipe Wrap 01"
+  Id: 16628730901845472849
+  Name: "Cylinder"
   PlatformAssetType: 1
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_prop_urb_pipes_acc_coupling_005_ref"
+    AssetId: "sm_cylinder_002"
   }
 }
 Assets {
@@ -35,21 +35,21 @@ Assets {
   }
 }
 Assets {
-  Id: 7150799765729022666
-  Name: "Crescent - 03"
+  Id: 9371661852199201852
+  Name: "Lens - Half"
   PlatformAssetType: 1
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_crescent_003"
+    AssetId: "sm_half_lense_001"
   }
 }
 Assets {
-  Id: 5768005592733434958
-  Name: "Parallelepiped - Thin"
-  PlatformAssetType: 1
+  Id: 6258457757629646348
+  Name: "Edgeline Wavy Object Fade Advanced"
+  PlatformAssetType: 2
   PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_parallelepiped_002"
+    AssetType: "MaterialAssetRef"
+    AssetId: "fxma_add_edgeline_local"
   }
 }
 Assets {
@@ -62,20 +62,20 @@ Assets {
   }
 }
 Assets {
-  Id: 4898843251402229921
-  Name: "Hay 01"
-  PlatformAssetType: 2
-  PrimaryAsset {
-    AssetType: "MaterialAssetRef"
-    AssetId: "mi_fan_hay_001_uv"
-  }
-}
-Assets {
-  Id: 2264041107168619230
-  Name: "Cone - Bullet"
+  Id: 4598660795231725597
+  Name: "Gem - Pear Polished"
   PlatformAssetType: 1
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_bullet_001"
+    AssetId: "sm_gem_pear_polished_001"
+  }
+}
+Assets {
+  Id: 1938148825372685458
+  Name: "Teardrop - Truncated"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_truncated_teardrop_001"
   }
 }

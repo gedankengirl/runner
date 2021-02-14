@@ -1,234 +1,12 @@
-Name: "Bee"
-RootId: 10408677958397955096
+Name: "Bee_1"
+RootId: 13068819757793865231
 Objects {
-  Id: 11114422639725351502
-  Name: "RockMove"
-  Transform {
-    Location {
-      Z: 90.2475586
-    }
-    Rotation {
-      Pitch: 28.2610474
-      Yaw: -20.8737411
-      Roll: 1.0662483e-05
-    }
-    Scale {
-      X: 0.514266312
-      Y: 0.514266312
-      Z: 0.514266312
-    }
-  }
-  ParentId: 10408677958397955096
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:Object"
-      ObjectReference {
-        SelfId: 10408677958397955096
-      }
-    }
-    Overrides {
-      Name: "cs:Amplitude"
-      Vector {
-        Z: 10
-      }
-    }
-    Overrides {
-      Name: "cs:Period"
-      Float: 2.7
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Script {
-    ScriptAsset {
-      Id: 14863999780221077747
-    }
-  }
-  InstanceHistory {
-    SelfId: 6868078495993990776
-    SubobjectId: 13047611329256546289
-    InstanceId: 903624328023784543
-    TemplateId: 6043847446701242570
-  }
-}
-Objects {
-  Id: 6541450568916360945
-  Name: "Outline Object"
-  Transform {
-    Location {
-      Z: 130
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 10408677958397955096
-  UnregisteredParameters {
-    Overrides {
-      Name: "bp:Color A"
-      Color {
-        R: 0.506000042
-        G: 0.305206269
-        A: 0.8
-      }
-    }
-    Overrides {
-      Name: "bp:Object To Outline"
-      ObjectReference {
-        SelfId: 10408677958397955096
-      }
-    }
-    Overrides {
-      Name: "bp:Thickness"
-      Float: 4
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Blueprint {
-    BlueprintAsset {
-      Id: 10913251976909601512
-    }
-    TeamSettings {
-    }
-  }
-}
-Objects {
-  Id: 4977469357113656237
-  Name: "Teardrop - Truncated"
-  Transform {
-    Location {
-      Y: -48.4238281
-      Z: 212.347992
-    }
-    Rotation {
-      Yaw: -179.999954
-      Roll: -149.999969
-    }
-    Scale {
-      X: 0.192327753
-      Y: 0.192314073
-      Z: 0.124724105
-    }
-  }
-  ParentId: 10408677958397955096
-  UnregisteredParameters {
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 10184847056121543272
-      }
-    }
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:color"
-      Color {
-        R: 0.506000042
-        G: 0.305206329
-        A: 1
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CoreMesh {
-    MeshAsset {
-      Id: 1938148825372685458
-    }
-    Teams {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    EnableCameraCollision: true
-    StaticMesh {
-      Physics {
-        Mass: 100
-        LinearDamping: 0.01
-      }
-    }
-  }
-}
-Objects {
-  Id: 7384161505753070047
-  Name: "Teardrop - Truncated"
-  Transform {
-    Location {
-      Y: 48.4238281
-      Z: 212.347992
-    }
-    Rotation {
-      Pitch: -1.36603776e-05
-      Yaw: -179.999985
-      Roll: 149.999954
-    }
-    Scale {
-      X: 0.192327753
-      Y: 0.192314073
-      Z: 0.124724105
-    }
-  }
-  ParentId: 10408677958397955096
-  UnregisteredParameters {
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 10184847056121543272
-      }
-    }
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:color"
-      Color {
-        R: 0.506000042
-        G: 0.305206329
-        A: 1
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CoreMesh {
-    MeshAsset {
-      Id: 1938148825372685458
-    }
-    Teams {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    EnableCameraCollision: true
-    StaticMesh {
-      Physics {
-        Mass: 100
-        LinearDamping: 0.01
-      }
-    }
-  }
-}
-Objects {
-  Id: 12282675838377574672
+  Id: 10329603577417540359
   Name: "Cylinder - Rounded Small"
   Transform {
     Location {
       Y: -40
-      Z: 72
+      Z: 71.5
     }
     Rotation {
       Pitch: -3.53325677
@@ -241,7 +19,7 @@ Objects {
       Z: 0.36
     }
   }
-  ParentId: 10408677958397955096
+  ParentId: 13068819757793865231
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -281,20 +59,20 @@ Objects {
     }
   }
   InstanceHistory {
-    SelfId: 12282675838377574672
+    SelfId: 10329603577417540359
     SubobjectId: 12296964055635175103
-    InstanceId: 3613408277365474097
+    InstanceId: 10480445571314059281
     TemplateId: 8539241641825137027
   }
 }
 Objects {
-  Id: 2528263143489686128
+  Id: 448383932660787303
   Name: "Donut"
   Transform {
     Location {
       X: 0.37890625
       Y: -43.7988281
-      Z: 69.6706848
+      Z: 69.1706848
     }
     Rotation {
       Pitch: -3.53325677
@@ -307,13 +85,11 @@ Objects {
       Z: 0.2
     }
   }
-  ParentId: 10408677958397955096
+  ParentId: 13068819757793865231
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:color"
       Color {
-        R: 0.506000042
-        G: 0.305206329
         A: 1
       }
     }
@@ -347,19 +123,19 @@ Objects {
     }
   }
   InstanceHistory {
-    SelfId: 2528263143489686128
+    SelfId: 448383932660787303
     SubobjectId: 2577592660425387487
-    InstanceId: 3613408277365474097
+    InstanceId: 10480445571314059281
     TemplateId: 8539241641825137027
   }
 }
 Objects {
-  Id: 1874550709812713701
+  Id: 4552425438101682930
   Name: "Cylinder"
   Transform {
     Location {
       Y: -30
-      Z: 180
+      Z: 179.5
     }
     Rotation {
       Roll: -30.0000095
@@ -370,13 +146,11 @@ Objects {
       Z: 0.4
     }
   }
-  ParentId: 10408677958397955096
+  ParentId: 13068819757793865231
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:color"
       Color {
-        R: 0.506000042
-        G: 0.305206329
         A: 1
       }
     }
@@ -410,20 +184,20 @@ Objects {
     }
   }
   InstanceHistory {
-    SelfId: 1874550709812713701
+    SelfId: 4552425438101682930
     SubobjectId: 1932324346667384650
-    InstanceId: 3613408277365474097
+    InstanceId: 10480445571314059281
     TemplateId: 8539241641825137027
   }
 }
 Objects {
-  Id: 11442260668870205309
+  Id: 13539465713273142634
   Name: "Donut"
   Transform {
     Location {
       X: 30
       Y: -20
-      Z: 140
+      Z: 139.5
     }
     Rotation {
       Pitch: 6.71770906
@@ -436,7 +210,7 @@ Objects {
       Z: 0.308571458
     }
   }
-  ParentId: 10408677958397955096
+  ParentId: 13068819757793865231
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:color"
@@ -477,20 +251,20 @@ Objects {
     }
   }
   InstanceHistory {
-    SelfId: 11442260668870205309
+    SelfId: 13539465713273142634
     SubobjectId: 11391943516080568530
-    InstanceId: 3613408277365474097
+    InstanceId: 10480445571314059281
     TemplateId: 8539241641825137027
   }
 }
 Objects {
-  Id: 3120973711169353105
+  Id: 1036151365543630726
   Name: "Lens - Half"
   Transform {
     Location {
       X: 34.9785156
       Y: -22.7402344
-      Z: 141.92836
+      Z: 141.42836
     }
     Rotation {
       Pitch: 69.9999847
@@ -503,7 +277,7 @@ Objects {
       Z: 0.3
     }
   }
-  ParentId: 10408677958397955096
+  ParentId: 13068819757793865231
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:color"
@@ -541,20 +315,20 @@ Objects {
     }
   }
   InstanceHistory {
-    SelfId: 3120973711169353105
+    SelfId: 1036151365543630726
     SubobjectId: 3142578216170000958
-    InstanceId: 3613408277365474097
+    InstanceId: 10480445571314059281
     TemplateId: 8539241641825137027
   }
 }
 Objects {
-  Id: 4298774427131173975
+  Id: 2199616650011524672
   Name: "Donut"
   Transform {
     Location {
       X: 30
       Y: 20
-      Z: 140
+      Z: 139.5
     }
     Rotation {
       Pitch: 6.71770906
@@ -567,7 +341,7 @@ Objects {
       Z: 0.308571458
     }
   }
-  ParentId: 10408677958397955096
+  ParentId: 13068819757793865231
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:color"
@@ -608,20 +382,20 @@ Objects {
     }
   }
   InstanceHistory {
-    SelfId: 4298774427131173975
+    SelfId: 2199616650011524672
     SubobjectId: 4286041056753662968
-    InstanceId: 3613408277365474097
+    InstanceId: 10480445571314059281
     TemplateId: 8539241641825137027
   }
 }
 Objects {
-  Id: 18207896559456541178
+  Id: 15673013044510833645
   Name: "Lens - Half"
   Transform {
     Location {
       X: 34.8613281
       Y: 22.9414063
-      Z: 141.92836
+      Z: 141.42836
     }
     Rotation {
       Pitch: 70.0000305
@@ -634,7 +408,7 @@ Objects {
       Z: 0.3
     }
   }
-  ParentId: 10408677958397955096
+  ParentId: 13068819757793865231
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:color"
@@ -672,19 +446,19 @@ Objects {
     }
   }
   InstanceHistory {
-    SelfId: 18207896559456541178
+    SelfId: 15673013044510833645
     SubobjectId: 18193471856794910293
-    InstanceId: 3613408277365474097
+    InstanceId: 10480445571314059281
     TemplateId: 8539241641825137027
   }
 }
 Objects {
-  Id: 14031356136587565576
+  Id: 16687999565963196447
   Name: "Donut"
   Transform {
     Location {
       Y: 42
-      Z: 70
+      Z: 69.5
     }
     Rotation {
       Roll: 59.9999847
@@ -695,13 +469,11 @@ Objects {
       Z: 0.2
     }
   }
-  ParentId: 10408677958397955096
+  ParentId: 13068819757793865231
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:color"
       Color {
-        R: 0.506000042
-        G: 0.305206329
         A: 1
       }
     }
@@ -735,18 +507,18 @@ Objects {
     }
   }
   InstanceHistory {
-    SelfId: 14031356136587565576
+    SelfId: 16687999565963196447
     SubobjectId: 14009052616469380519
-    InstanceId: 3613408277365474097
+    InstanceId: 10480445571314059281
     TemplateId: 8539241641825137027
   }
 }
 Objects {
-  Id: 8532400457791184226
+  Id: 6001018062790295413
   Name: "Donut"
   Transform {
     Location {
-      Z: 92
+      Z: 91.5
     }
     Rotation {
     }
@@ -756,13 +528,11 @@ Objects {
       Z: 0.36
     }
   }
-  ParentId: 10408677958397955096
+  ParentId: 13068819757793865231
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:color"
       Color {
-        R: 0.506000042
-        G: 0.305206329
         A: 1
       }
     }
@@ -796,19 +566,19 @@ Objects {
     }
   }
   InstanceHistory {
-    SelfId: 8532400457791184226
+    SelfId: 6001018062790295413
     SubobjectId: 8555271610454735565
-    InstanceId: 3613408277365474097
+    InstanceId: 10480445571314059281
     TemplateId: 8539241641825137027
   }
 }
 Objects {
-  Id: 17967634420705440190
+  Id: 15886191979293168553
   Name: "Cylinder - Rounded Small"
   Transform {
     Location {
       Y: 38
-      Z: 72
+      Z: 71.5
     }
     Rotation {
       Roll: 114.999863
@@ -819,7 +589,7 @@ Objects {
       Z: 0.36
     }
   }
-  ParentId: 10408677958397955096
+  ParentId: 13068819757793865231
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -859,19 +629,19 @@ Objects {
     }
   }
   InstanceHistory {
-    SelfId: 17967634420705440190
+    SelfId: 15886191979293168553
     SubobjectId: 17981359826518660625
-    InstanceId: 3613408277365474097
+    InstanceId: 10480445571314059281
     TemplateId: 8539241641825137027
   }
 }
 Objects {
-  Id: 6117963566451252609
+  Id: 8199247683564388246
   Name: "Cylinder"
   Transform {
     Location {
       Y: 30
-      Z: 180
+      Z: 179.5
     }
     Rotation {
       Roll: 30.0000095
@@ -882,13 +652,11 @@ Objects {
       Z: 0.4
     }
   }
-  ParentId: 10408677958397955096
+  ParentId: 13068819757793865231
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:color"
       Color {
-        R: 0.506000042
-        G: 0.305206329
         A: 1
       }
     }
@@ -922,19 +690,19 @@ Objects {
     }
   }
   InstanceHistory {
-    SelfId: 6117963566451252609
+    SelfId: 8199247683564388246
     SubobjectId: 6067505668661623342
-    InstanceId: 3613408277365474097
+    InstanceId: 10480445571314059281
     TemplateId: 8539241641825137027
   }
 }
 Objects {
-  Id: 8643060876037730149
+  Id: 5970815647273799026
   Name: "Wings"
   Transform {
     Location {
       X: -65.5019531
-      Z: 100
+      Z: 99.5
     }
     Rotation {
     }
@@ -944,9 +712,9 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 10408677958397955096
-  ChildIds: 10956754085513322191
-  ChildIds: 16589374091768381474
+  ParentId: 13068819757793865231
+  ChildIds: 13628172756435844312
+  ChildIds: 14057846561190912565
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -957,14 +725,14 @@ Objects {
     IsGroup: true
   }
   InstanceHistory {
-    SelfId: 8643060876037730149
+    SelfId: 5970815647273799026
     SubobjectId: 8584161210430867658
-    InstanceId: 3613408277365474097
+    InstanceId: 10480445571314059281
     TemplateId: 8539241641825137027
   }
 }
 Objects {
-  Id: 16589374091768381474
+  Id: 14057846561190912565
   Name: "Gem - Pear Polished"
   Transform {
     Location {
@@ -983,7 +751,7 @@ Objects {
       Z: 0.1
     }
   }
-  ParentId: 8643060876037730149
+  ParentId: 5970815647273799026
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -994,9 +762,10 @@ Objects {
     Overrides {
       Name: "ma:Shared_BaseMaterial:color"
       Color {
-        R: 0.506000042
-        G: 0.305206269
-        A: 0.742
+        R: 0.40200007
+        G: 0.848127306
+        B: 1
+        A: 0.742000043
       }
     }
   }
@@ -1023,14 +792,14 @@ Objects {
     }
   }
   InstanceHistory {
-    SelfId: 16589374091768381474
+    SelfId: 14057846561190912565
     SubobjectId: 16639121560091305869
-    InstanceId: 3613408277365474097
+    InstanceId: 10480445571314059281
     TemplateId: 8539241641825137027
   }
 }
 Objects {
-  Id: 10956754085513322191
+  Id: 13628172756435844312
   Name: "Gem - Pear Polished"
   Transform {
     Location {
@@ -1049,7 +818,7 @@ Objects {
       Z: 0.1
     }
   }
-  ParentId: 8643060876037730149
+  ParentId: 5970815647273799026
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -1060,9 +829,10 @@ Objects {
     Overrides {
       Name: "ma:Shared_BaseMaterial:color"
       Color {
-        R: 0.506000042
-        G: 0.305206269
-        A: 0.742
+        R: 0.40200007
+        G: 0.848127306
+        B: 1
+        A: 0.742000043
       }
     }
   }
@@ -1089,17 +859,18 @@ Objects {
     }
   }
   InstanceHistory {
-    SelfId: 10956754085513322191
+    SelfId: 13628172756435844312
     SubobjectId: 11015091084638402912
-    InstanceId: 3613408277365474097
+    InstanceId: 10480445571314059281
     TemplateId: 8539241641825137027
   }
 }
 Objects {
-  Id: 474750891971510470
+  Id: 2573926258091254481
   Name: "Teardrop - Truncated"
   Transform {
     Location {
+      Z: -0.5
     }
     Rotation {
     }
@@ -1109,13 +880,11 @@ Objects {
       Z: 0.7
     }
   }
-  ParentId: 10408677958397955096
+  ParentId: 13068819757793865231
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:color"
       Color {
-        R: 0.506000042
-        G: 0.305206329
         A: 1
       }
     }
@@ -1149,18 +918,18 @@ Objects {
     }
   }
   InstanceHistory {
-    SelfId: 474750891971510470
+    SelfId: 2573926258091254481
     SubobjectId: 452018416893978473
-    InstanceId: 3613408277365474097
+    InstanceId: 10480445571314059281
     TemplateId: 8539241641825137027
   }
 }
 Objects {
-  Id: 17908348682027112189
+  Id: 15972569265045304554
   Name: "Teardrop - Truncated"
   Transform {
     Location {
-      Z: 10
+      Z: 9.5
     }
     Rotation {
     }
@@ -1170,7 +939,7 @@ Objects {
       Z: 0.7
     }
   }
-  ParentId: 10408677958397955096
+  ParentId: 13068819757793865231
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:color"
@@ -1210,18 +979,18 @@ Objects {
     }
   }
   InstanceHistory {
-    SelfId: 17908348682027112189
+    SelfId: 15972569265045304554
     SubobjectId: 17894066923330269522
-    InstanceId: 3613408277365474097
+    InstanceId: 10480445571314059281
     TemplateId: 8539241641825137027
   }
 }
 Objects {
-  Id: 5601807094779177892
+  Id: 7535462255337671091
   Name: "Sphere"
   Transform {
     Location {
-      Z: 126
+      Z: 125.5
     }
     Rotation {
     }
@@ -1231,7 +1000,7 @@ Objects {
       Z: 0.9
     }
   }
-  ParentId: 10408677958397955096
+  ParentId: 13068819757793865231
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -1271,9 +1040,64 @@ Objects {
     }
   }
   InstanceHistory {
-    SelfId: 5601807094779177892
+    SelfId: 7535462255337671091
     SubobjectId: 5579642105140481035
-    InstanceId: 3613408277365474097
+    InstanceId: 10480445571314059281
     TemplateId: 8539241641825137027
+  }
+}
+Objects {
+  Id: 15148502514933326894
+  Name: "RockMove"
+  Transform {
+    Location {
+      Z: 89.7475586
+    }
+    Rotation {
+      Pitch: 28.2610474
+      Yaw: -20.8737698
+      Roll: 1.0662483e-05
+    }
+    Scale {
+      X: 0.514266312
+      Y: 0.514266312
+      Z: 0.514266312
+    }
+  }
+  ParentId: 13068819757793865231
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Object"
+      ObjectReference {
+        SelfId: 13068819757793865231
+      }
+    }
+    Overrides {
+      Name: "cs:Amplitude"
+      Vector {
+        Z: 10
+      }
+    }
+    Overrides {
+      Name: "cs:Period"
+      Float: 2.9
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 14863999780221077747
+    }
+  }
+  InstanceHistory {
+    SelfId: 6868078495993990776
+    SubobjectId: 13047611329256546289
+    InstanceId: 903624328023784543
+    TemplateId: 6043847446701242570
   }
 }

@@ -1,11 +1,13 @@
-Name: "Flamingos"
-RootId: 17958106882838060675
+Name: "Monkeys"
+RootId: 15317849570465314173
 Objects {
-  Id: 4080512881728923953
-  Name: "Flamingo_3_ClientContext"
+  Id: 15438684020340682988
+  Name: "Monkey_3_ClientContext"
   Transform {
     Location {
-      X: -1802.479
+      X: -1829.52905
+      Y: -238.923828
+      Z: -3.05175781e-05
     }
     Rotation {
     }
@@ -15,8 +17,8 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 17958106882838060675
-  ChildIds: 12997121461094270896
+  ParentId: 15317849570465314173
+  ChildIds: 17060038321132283114
   WantsNetworking: true
   Collidable_v2 {
     Value: "mc:ecollisionsetting:forceoff"
@@ -28,10 +30,11 @@ Objects {
   }
 }
 Objects {
-  Id: 12997121461094270896
+  Id: 17060038321132283114
   Name: "ClientContext"
   Transform {
     Location {
+      Z: 3.05175781e-05
     }
     Rotation {
     }
@@ -41,8 +44,8 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 4080512881728923953
-  ChildIds: 1699710045405077909
+  ParentId: 15438684020340682988
+  ChildIds: 11744810268467115009
   Collidable_v2 {
     Value: "mc:ecollisionsetting:forceoff"
   }
@@ -53,20 +56,21 @@ Objects {
   }
 }
 Objects {
-  Id: 1699710045405077909
-  Name: "Flamingo_3"
+  Id: 11744810268467115009
+  Name: "Monkey_3"
   Transform {
     Location {
+      Z: 3.05175781e-05
     }
     Rotation {
     }
     Scale {
-      X: 1
-      Y: 1
-      Z: 1
+      X: 1.0980773
+      Y: 1.0980773
+      Z: 1.0980773
     }
   }
-  ParentId: 12997121461094270896
+  ParentId: 17060038321132283114
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -75,15 +79,24 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Flamingo_3"
+    FilePartitionName: "Monkey_3"
+  }
+  InstanceHistory {
+    SelfId: 987780170120872825
+    SubobjectId: 13097496574099182284
+    InstanceId: 6208513033488493417
+    TemplateId: 1976493870456417382
+    WasRoot: true
   }
 }
 Objects {
-  Id: 8295314185366841103
-  Name: "Flamingo_2_ClientContext"
+  Id: 9427328422732542111
+  Name: "Monkey_2_ClientContext"
   Transform {
     Location {
-      X: -786.621
+      X: -865.949
+      Y: -238.923828
+      Z: -3.05175781e-05
     }
     Rotation {
     }
@@ -93,8 +106,8 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 17958106882838060675
-  ChildIds: 10442324773558007333
+  ParentId: 15317849570465314173
+  ChildIds: 2134774853750781622
   WantsNetworking: true
   Collidable_v2 {
     Value: "mc:ecollisionsetting:forceoff"
@@ -106,10 +119,11 @@ Objects {
   }
 }
 Objects {
-  Id: 10442324773558007333
+  Id: 2134774853750781622
   Name: "ClientContext"
   Transform {
     Location {
+      Z: 3.05175781e-05
     }
     Rotation {
     }
@@ -119,8 +133,8 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 8295314185366841103
-  ChildIds: 14446702659863560936
+  ParentId: 9427328422732542111
+  ChildIds: 12804118645655319006
   Collidable_v2 {
     Value: "mc:ecollisionsetting:forceoff"
   }
@@ -131,20 +145,21 @@ Objects {
   }
 }
 Objects {
-  Id: 14446702659863560936
-  Name: "Flamingo_2"
+  Id: 12804118645655319006
+  Name: "Monkey_2"
   Transform {
     Location {
+      Z: 3.05175781e-05
     }
     Rotation {
     }
     Scale {
-      X: 1
-      Y: 1
-      Z: 1
+      X: 1.0980773
+      Y: 1.0980773
+      Z: 1.0980773
     }
   }
-  ParentId: 10442324773558007333
+  ParentId: 2134774853750781622
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -153,14 +168,23 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Flamingo_2"
+    FilePartitionName: "Monkey_2"
+  }
+  InstanceHistory {
+    SelfId: 987780170120872825
+    SubobjectId: 13097496574099182284
+    InstanceId: 6208513033488493417
+    TemplateId: 1976493870456417382
+    WasRoot: true
   }
 }
 Objects {
-  Id: 4104565150519144179
-  Name: "Flamingo_1_ClientContext"
+  Id: 911214978013014229
+  Name: "Monkey_1_ClientContext"
   Transform {
     Location {
+      Y: -238.923828
+      Z: -3.05175781e-05
     }
     Rotation {
     }
@@ -170,8 +194,8 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 17958106882838060675
-  ChildIds: 8923416871582045946
+  ParentId: 15317849570465314173
+  ChildIds: 14560583244043183585
   WantsNetworking: true
   Collidable_v2 {
     Value: "mc:ecollisionsetting:forceoff"
@@ -183,10 +207,11 @@ Objects {
   }
 }
 Objects {
-  Id: 8923416871582045946
+  Id: 14560583244043183585
   Name: "ClientContext"
   Transform {
     Location {
+      Z: 3.05175781e-05
     }
     Rotation {
     }
@@ -196,8 +221,8 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 4104565150519144179
-  ChildIds: 12659662651344689855
+  ParentId: 911214978013014229
+  ChildIds: 987780170120872825
   Collidable_v2 {
     Value: "mc:ecollisionsetting:forceoff"
   }
@@ -208,20 +233,21 @@ Objects {
   }
 }
 Objects {
-  Id: 12659662651344689855
-  Name: "Flamingo_1"
+  Id: 987780170120872825
+  Name: "Monkey_1"
   Transform {
     Location {
+      Z: 3.05175781e-05
     }
     Rotation {
     }
     Scale {
-      X: 1
-      Y: 1
-      Z: 1
+      X: 1.0980773
+      Y: 1.0980773
+      Z: 1.0980773
     }
   }
-  ParentId: 8923416871582045946
+  ParentId: 14560583244043183585
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -230,6 +256,13 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Flamingo_1"
+    FilePartitionName: "Monkey_1"
+  }
+  InstanceHistory {
+    SelfId: 987780170120872825
+    SubobjectId: 13097496574099182284
+    InstanceId: 6208513033488493417
+    TemplateId: 1976493870456417382
+    WasRoot: true
   }
 }

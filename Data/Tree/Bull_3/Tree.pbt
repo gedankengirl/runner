@@ -1,11 +1,66 @@
 Name: "Bull_3"
 RootId: 2561874221820290327
 Objects {
+  Id: 15535761016309462645
+  Name: "RockMove"
+  Transform {
+    Location {
+      Z: 103.683838
+    }
+    Rotation {
+      Pitch: 28.2610474
+      Yaw: -20.8737411
+      Roll: 1.0662483e-05
+    }
+    Scale {
+      X: 0.514266312
+      Y: 0.514266312
+      Z: 0.514266312
+    }
+  }
+  ParentId: 2561874221820290327
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Object"
+      ObjectReference {
+        SelfId: 2561874221820290327
+      }
+    }
+    Overrides {
+      Name: "cs:Amplitude"
+      Vector {
+        Z: 10
+      }
+    }
+    Overrides {
+      Name: "cs:Period"
+      Float: 2.1
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 14863999780221077747
+    }
+  }
+  InstanceHistory {
+    SelfId: 6868078495993990776
+    SubobjectId: 13047611329256546289
+    InstanceId: 903624328023784543
+    TemplateId: 6043847446701242570
+  }
+}
+Objects {
   Id: 13348267808003561235
   Name: "Outline Object"
   Transform {
     Location {
-      Z: 6.95678711
+      Z: 143.436401
     }
     Rotation {
     }
@@ -56,7 +111,7 @@ Objects {
   Transform {
     Location {
       X: 16.3476563
-      Z: -20.7972412
+      Z: 115.682373
     }
     Rotation {
       Pitch: 1.01313555
@@ -90,14 +145,14 @@ Objects {
   Name: "Party Blower"
   Transform {
     Location {
-      X: 107.648315
+      X: 107.648438
       Y: 21.3574219
-      Z: -14.4999237
+      Z: 121.979691
     }
     Rotation {
-      Pitch: -40.8161
-      Yaw: 41.3251915
-      Roll: -15.5859375
+      Pitch: -40.8160973
+      Yaw: 41.325222
+      Roll: -15.5859747
     }
     Scale {
       X: 1
@@ -128,12 +183,12 @@ Objects {
   Name: "Lips"
   Transform {
     Location {
-      X: 78.0007324
-      Z: 0.0952758789
+      X: 78
+      Z: 136.57489
     }
     Rotation {
-      Yaw: 90
-      Roll: 77.7032623
+      Yaw: 89.9999924
+      Roll: 77.7032166
     }
     Scale {
       X: 0.190655187
@@ -198,7 +253,7 @@ Objects {
   Transform {
     Location {
       X: -30.8769531
-      Z: 62.9664917
+      Z: 199.446106
     }
     Rotation {
     }
@@ -225,12 +280,12 @@ Objects {
   Name: "Cylinder - Rounded Small"
   Transform {
     Location {
-      X: -38.3918457
-      Y: -96.865
-      Z: -54.3189392
+      X: -38.3925781
+      Y: -96.8652344
+      Z: 82.160675
     }
     Rotation {
-      Roll: -114.999725
+      Roll: -114.999672
     }
     Scale {
       X: 0.226196691
@@ -289,12 +344,12 @@ Objects {
   Name: "Cylinder - Rounded Small"
   Transform {
     Location {
-      X: -38.3918457
-      Y: -35.914
-      Z: -25.6293335
+      X: -38.3925781
+      Y: -35.9140625
+      Z: 110.850281
     }
     Rotation {
-      Roll: -114.999786
+      Roll: -114.999725
     }
     Scale {
       X: 0.208701357
@@ -313,8 +368,23 @@ Objects {
     Overrides {
       Name: "ma:Shared_BaseMaterial:color"
       Color {
+        R: 1
+        G: 1
+        B: 1
         A: 1
       }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:utile"
+      Float: 0.125
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:vtile"
+      Float: 0.125
     }
   }
   Collidable_v2 {
@@ -351,14 +421,14 @@ Objects {
   Name: "Horn"
   Transform {
     Location {
-      X: -38.0049438
-      Y: -35.238
-      Z: 46.2050476
+      X: -38.0058594
+      Y: -35.2382813
+      Z: 182.684662
     }
     Rotation {
-      Pitch: -12.476532
-      Yaw: -168.335922
-      Roll: 46.3021622
+      Pitch: -12.4765282
+      Yaw: -168.335876
+      Roll: 46.3021736
     }
     Scale {
       X: 0.343331933
@@ -417,12 +487,12 @@ Objects {
   Name: "Cylinder - Rounded Small"
   Transform {
     Location {
-      X: -38.3918457
+      X: -38.3925781
       Y: 96.8652344
-      Z: -54.3189392
+      Z: 82.160675
     }
     Rotation {
-      Roll: 114.999794
+      Roll: 114.999756
     }
     Scale {
       X: 0.226196691
@@ -481,12 +551,12 @@ Objects {
   Name: "Cylinder - Rounded Small"
   Transform {
     Location {
-      X: -38.3918457
+      X: -38.3925781
       Y: 35.9140625
-      Z: -25.6293335
+      Z: 110.850281
     }
     Rotation {
-      Roll: 114.999832
+      Roll: 114.999794
     }
     Scale {
       X: 0.208701357
@@ -505,8 +575,23 @@ Objects {
     Overrides {
       Name: "ma:Shared_BaseMaterial:color"
       Color {
+        R: 1
+        G: 1
+        B: 1
         A: 1
       }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:utile"
+      Float: 0.125
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:vtile"
+      Float: 0.125
     }
   }
   Collidable_v2 {
@@ -543,9 +628,9 @@ Objects {
   Name: "Torso"
   Transform {
     Location {
-      X: -20.791626
+      X: -20.7910156
       Y: 0.974609375
-      Z: -137.989288
+      Z: -1.50967407
     }
     Rotation {
     }
@@ -578,9 +663,9 @@ Objects {
   Name: "Cylinder"
   Transform {
     Location {
-      X: 14.2470093
+      X: 14.2460938
       Y: 2.43945313
-      Z: 12.0477142
+      Z: 148.527328
     }
     Rotation {
       Pitch: 90
@@ -601,13 +686,24 @@ Objects {
     }
     Overrides {
       Name: "ma:Shared_BaseMaterial:smart"
-      Bool: true
+      Bool: false
     }
     Overrides {
       Name: "ma:Shared_BaseMaterial:color"
       Color {
+        R: 1
+        G: 1
+        B: 1
         A: 1
       }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:utile"
+      Float: 0.125
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:vtile"
+      Float: 0.125
     }
   }
   Collidable_v2 {
@@ -646,11 +742,12 @@ Objects {
     Location {
       X: -37.3730469
       Y: 72.4726563
-      Z: 13.6922607
+      Z: 150.171875
     }
     Rotation {
       Pitch: 90
-      Yaw: 90
+      Yaw: -90
+      Roll: 180
     }
     Scale {
       X: 0.102693737
@@ -723,7 +820,7 @@ Objects {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
       AssetReference {
-        Id: 10184847056121543272
+        Id: 13674206740428179952
       }
     }
     Overrides {
@@ -763,13 +860,13 @@ Objects {
   Name: "Teardrop - Truncated"
   Transform {
     Location {
-      X: -37.0881348
-      Y: -88.355
-      Z: 29.3085327
+      X: -37.0878906
+      Y: -88.3554688
+      Z: 165.788147
     }
     Rotation {
       Yaw: 179.999954
-      Roll: -89.999939
+      Roll: -89.9999466
     }
     Scale {
       X: 0.07
@@ -826,14 +923,14 @@ Objects {
   Name: "Teardrop - Truncated"
   Transform {
     Location {
-      X: -37.0881653
+      X: -37.0878906
       Y: 88.3554688
-      Z: 29.3085327
+      Z: 165.788147
     }
     Rotation {
       Pitch: -1.36603776e-05
-      Yaw: 180
-      Roll: 89.9999771
+      Yaw: -179.999969
+      Roll: 89.9999466
     }
     Scale {
       X: 0.07
@@ -890,8 +987,8 @@ Objects {
   Name: "Capsule"
   Transform {
     Location {
-      X: 55.2337646
-      Z: 12.7035522
+      X: 55.234375
+      Z: 149.183167
     }
     Rotation {
       Roll: 89.9999542
@@ -954,13 +1051,13 @@ Objects {
   Name: "Horn"
   Transform {
     Location {
-      X: -38.0049438
+      X: -38.0058594
       Y: 35.2382813
-      Z: 46.2050476
+      Z: 182.684662
     }
     Rotation {
-      Pitch: -12.476532
-      Yaw: 168.335968
+      Pitch: -12.4765282
+      Yaw: 168.335938
       Roll: -46.3021545
     }
     Scale {
@@ -1020,8 +1117,9 @@ Objects {
   Name: "Face"
   Transform {
     Location {
-      X: 22.0564575
+      X: 22.0566406
       Y: 1.61328125
+      Z: 136.479614
     }
     Rotation {
       Yaw: -178.588776
@@ -1134,8 +1232,8 @@ Objects {
   Name: "Sphere"
   Transform {
     Location {
-      X: -30.3661499
-      Z: 23.8397675
+      X: -30.3652344
+      Z: 160.319397
     }
     Rotation {
     }
@@ -1151,6 +1249,27 @@ Objects {
       Name: "ma:Shared_BaseMaterial:id"
       AssetReference {
         Id: 18071282882724555942
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:utile"
+      Float: 0.125
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:vtile"
+      Float: 0.125
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 1
+        G: 1
+        B: 1
+        A: 1
       }
     }
   }

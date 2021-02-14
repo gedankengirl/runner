@@ -59,9 +59,8 @@ Objects {
   Name: "Graveyard group"
   Transform {
     Location {
-      X: 45.2626953
+      X: 45.2617188
       Y: 1867.16602
-      Z: 14.0551758
     }
     Rotation {
       Yaw: -90
@@ -89,9 +88,9 @@ Objects {
   Name: "Disco group"
   Transform {
     Location {
-      X: 7.35214233
+      X: 7.3515625
       Y: 896.824219
-      Z: -13.4363098
+      Z: 4.50561523
     }
     Rotation {
     }

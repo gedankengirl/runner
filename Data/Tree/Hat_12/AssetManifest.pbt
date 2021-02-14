@@ -16,12 +16,3 @@ Assets {
     AssetId: "sm_cone_001"
   }
 }
-Assets {
-  Id: 2258330122587909962
-  Name: "Advanced Material"
-  PlatformAssetType: 2
-  PrimaryAsset {
-    AssetType: "MaterialAssetRef"
-    AssetId: "universal_material_001"
-  }
-}

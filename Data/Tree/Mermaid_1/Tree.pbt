@@ -1,6 +1,61 @@
 Name: "Mermaid_1"
 RootId: 15657600548922701514
 Objects {
+  Id: 14698099878150548803
+  Name: "RockMove"
+  Transform {
+    Location {
+      Z: 75.4190674
+    }
+    Rotation {
+      Pitch: 28.2610874
+      Yaw: -20.8738728
+      Roll: 4.8465854e-06
+    }
+    Scale {
+      X: 0.514266372
+      Y: 0.514266372
+      Z: 0.514266372
+    }
+  }
+  ParentId: 15657600548922701514
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Object"
+      ObjectReference {
+        SelfId: 15657600548922701514
+      }
+    }
+    Overrides {
+      Name: "cs:Amplitude"
+      Vector {
+        Z: 10
+      }
+    }
+    Overrides {
+      Name: "cs:Period"
+      Float: 2
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 14863999780221077747
+    }
+  }
+  InstanceHistory {
+    SelfId: 6868078495993990776
+    SubobjectId: 13047611329256546289
+    InstanceId: 903624328023784543
+    TemplateId: 6043847446701242570
+  }
+}
+Objects {
   Id: 2436639197708486960
   Name: "Arms"
   Transform {

@@ -7,12 +7,3 @@ Assets {
     AssetId: "sm_diamond_hq_001"
   }
 }
-Assets {
-  Id: 132672053610873933
-  Name: "Plastic Matte"
-  PlatformAssetType: 2
-  PrimaryAsset {
-    AssetType: "MaterialAssetRef"
-    AssetId: "plastic_matte_001"
-  }
-}

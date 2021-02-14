@@ -1,6 +1,116 @@
 Name: "Random vegetation"
 RootId: 13697641988438033428
 Objects {
+  Id: 8028005970905460686
+  Name: "Clover Patch 01"
+  Transform {
+    Location {
+      X: 6509.40576
+      Y: -1459.11914
+      Z: -6.20452881
+    }
+    Rotation {
+      Yaw: -4.44980335
+    }
+    Scale {
+      X: 2.23184276
+      Y: 2.23184276
+      Z: 2.23184276
+    }
+  }
+  ParentId: 13697641988438033428
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Nature_Leaves:color"
+      Color {
+        R: 1
+        G: 0.632715285
+        B: 0.410000026
+        A: 1
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 13068580623119518346
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    EnableCameraCollision: true
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+    }
+  }
+}
+Objects {
+  Id: 1499664387694899764
+  Name: "Fern 04"
+  Transform {
+    Location {
+      X: 6484.21338
+      Y: -1280.09863
+      Z: -6.802742
+    }
+    Rotation {
+      Yaw: -119.285423
+    }
+    Scale {
+      X: 1.52345
+      Y: 1.52345
+      Z: 1.52345
+    }
+  }
+  ParentId: 13697641988438033428
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Nature_Leaves:color"
+      Color {
+        R: 1
+        G: 0.632715285
+        B: 0.410000026
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "ma:Nature_Leaves:id"
+      AssetReference {
+        Id: 17843285454465122524
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 3540704478394813387
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    EnableCameraCollision: true
+    StaticMesh {
+      Physics {
+      }
+    }
+  }
+}
+Objects {
   Id: 7654461064961327065
   Name: "Bush Leafy Tall 01"
   Transform {

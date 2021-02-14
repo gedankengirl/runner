@@ -1,6 +1,61 @@
 Name: "Gnome_1"
 RootId: 3165213921731033096
 Objects {
+  Id: 10319294710317319647
+  Name: "RockMove"
+  Transform {
+    Location {
+      Z: 91.9404297
+    }
+    Rotation {
+      Pitch: 28.2610474
+      Yaw: -20.8736973
+      Roll: 1.11471427e-05
+    }
+    Scale {
+      X: 0.514266312
+      Y: 0.514266312
+      Z: 0.514266312
+    }
+  }
+  ParentId: 3165213921731033096
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Object"
+      ObjectReference {
+        SelfId: 3165213921731033096
+      }
+    }
+    Overrides {
+      Name: "cs:Amplitude"
+      Vector {
+        Z: 10
+      }
+    }
+    Overrides {
+      Name: "cs:Period"
+      Float: 3.2
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 14863999780221077747
+    }
+  }
+  InstanceHistory {
+    SelfId: 6868078495993990776
+    SubobjectId: 13047611329256546289
+    InstanceId: 903624328023784543
+    TemplateId: 6043847446701242570
+  }
+}
+Objects {
   Id: 3950172713887762251
   Name: "Sphere"
   Transform {

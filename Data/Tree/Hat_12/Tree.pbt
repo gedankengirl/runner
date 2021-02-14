@@ -25,7 +25,7 @@ Objects {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
       AssetReference {
-        Id: 2258330122587909962
+        Id: 13674206740428179952
       }
     }
     Overrides {
@@ -85,7 +85,7 @@ Objects {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
       AssetReference {
-        Id: 2258330122587909962
+        Id: 13674206740428179952
       }
     }
     Overrides {
@@ -142,7 +142,7 @@ Objects {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
       AssetReference {
-        Id: 2258330122587909962
+        Id: 13674206740428179952
       }
     }
     Overrides {
@@ -201,7 +201,7 @@ Objects {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
       AssetReference {
-        Id: 2258330122587909962
+        Id: 13674206740428179952
       }
     }
     Overrides {
@@ -259,7 +259,7 @@ Objects {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
       AssetReference {
-        Id: 2258330122587909962
+        Id: 13674206740428179952
       }
     }
     Overrides {
@@ -318,7 +318,7 @@ Objects {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
       AssetReference {
-        Id: 2258330122587909962
+        Id: 13674206740428179952
       }
     }
     Overrides {
@@ -378,7 +378,7 @@ Objects {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
       AssetReference {
-        Id: 2258330122587909962
+        Id: 13674206740428179952
       }
     }
     Overrides {
@@ -436,7 +436,7 @@ Objects {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
       AssetReference {
-        Id: 2258330122587909962
+        Id: 13674206740428179952
       }
     }
     Overrides {
@@ -495,7 +495,7 @@ Objects {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
       AssetReference {
-        Id: 2258330122587909962
+        Id: 13674206740428179952
       }
     }
     Overrides {
@@ -555,7 +555,7 @@ Objects {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
       AssetReference {
-        Id: 2258330122587909962
+        Id: 13674206740428179952
       }
     }
     Overrides {
@@ -679,6 +679,10 @@ Objects {
         B: 0.490000129
         A: 1
       }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
     }
   }
   Collidable_v2 {

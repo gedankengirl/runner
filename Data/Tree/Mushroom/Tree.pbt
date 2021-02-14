@@ -54,7 +54,6 @@ Objects {
   Name: "RockMove"
   Transform {
     Location {
-      Y: -243.964844
       Z: 148.954178
     }
     Rotation {

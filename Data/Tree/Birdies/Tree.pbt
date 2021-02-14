@@ -1,8 +1,8 @@
 Name: "Birdies"
 RootId: 10212933596085455662
 Objects {
-  Id: 6010831596680089717
-  Name: "Birdie_3"
+  Id: 352741228926014805
+  Name: "Birdie_3_ClientContext"
   Transform {
     Location {
       X: -1815.76172
@@ -16,6 +16,57 @@ Objects {
     }
   }
   ParentId: 10212933596085455662
+  ChildIds: 17106641403797720161
+  WantsNetworking: true
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  NetworkContext {
+  }
+}
+Objects {
+  Id: 17106641403797720161
+  Name: "ClientContext"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 352741228926014805
+  ChildIds: 6010831596680089717
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  NetworkContext {
+  }
+}
+Objects {
+  Id: 6010831596680089717
+  Name: "Birdie_3"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 17106641403797720161
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -28,8 +79,8 @@ Objects {
   }
 }
 Objects {
-  Id: 17955518962049526930
-  Name: "Birdie_2"
+  Id: 1205502004173868255
+  Name: "Birdie_2_ClientContext"
   Transform {
     Location {
       X: -858.121094
@@ -43,6 +94,57 @@ Objects {
     }
   }
   ParentId: 10212933596085455662
+  ChildIds: 10014507084037130056
+  WantsNetworking: true
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  NetworkContext {
+  }
+}
+Objects {
+  Id: 10014507084037130056
+  Name: "ClientContext"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 1205502004173868255
+  ChildIds: 17955518962049526930
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  NetworkContext {
+  }
+}
+Objects {
+  Id: 17955518962049526930
+  Name: "Birdie_2"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 10014507084037130056
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -52,6 +154,57 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "Birdie_2"
+  }
+}
+Objects {
+  Id: 5016731360337371346
+  Name: "Birdie_1_ClientContext"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 10212933596085455662
+  ChildIds: 6250968183839813875
+  WantsNetworking: true
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  NetworkContext {
+  }
+}
+Objects {
+  Id: 6250968183839813875
+  Name: "ClientContext"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 5016731360337371346
+  ChildIds: 257443276587879188
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  NetworkContext {
   }
 }
 Objects {
@@ -68,8 +221,9 @@ Objects {
       Z: 0.6
     }
   }
-  ParentId: 10212933596085455662
+  ParentId: 6250968183839813875
   ChildIds: 8412662698897616857
+  ChildIds: 13589802759133367186
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -85,6 +239,61 @@ Objects {
     InstanceId: 17923542387085783057
     TemplateId: 8902885379852312343
     WasRoot: true
+  }
+}
+Objects {
+  Id: 13589802759133367186
+  Name: "RockMove"
+  Transform {
+    Location {
+      Z: 150.412598
+    }
+    Rotation {
+      Pitch: 28.2610474
+      Yaw: -20.873867
+      Roll: 1.11471418e-05
+    }
+    Scale {
+      X: 0.8571105
+      Y: 0.8571105
+      Z: 0.8571105
+    }
+  }
+  ParentId: 257443276587879188
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Object"
+      ObjectReference {
+        SelfId: 257443276587879188
+      }
+    }
+    Overrides {
+      Name: "cs:Amplitude"
+      Vector {
+        Z: 10
+      }
+    }
+    Overrides {
+      Name: "cs:Period"
+      Float: 1.9
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 14863999780221077747
+    }
+  }
+  InstanceHistory {
+    SelfId: 6868078495993990776
+    SubobjectId: 13047611329256546289
+    InstanceId: 903624328023784543
+    TemplateId: 6043847446701242570
   }
 }
 Objects {

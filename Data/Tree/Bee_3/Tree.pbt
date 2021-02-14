@@ -1,15 +1,70 @@
 Name: "Bee_3"
 RootId: 10562313355436265869
 Objects {
+  Id: 5490799325670955249
+  Name: "RockMove"
+  Transform {
+    Location {
+      Z: 90.2475586
+    }
+    Rotation {
+      Pitch: 28.2610474
+      Yaw: -20.8737125
+      Roll: 1.11471418e-05
+    }
+    Scale {
+      X: 0.514266312
+      Y: 0.514266312
+      Z: 0.514266312
+    }
+  }
+  ParentId: 10562313355436265869
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Object"
+      ObjectReference {
+        SelfId: 10562313355436265869
+      }
+    }
+    Overrides {
+      Name: "cs:Amplitude"
+      Vector {
+        Z: 10
+      }
+    }
+    Overrides {
+      Name: "cs:Period"
+      Float: 3.1
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 14863999780221077747
+    }
+  }
+  InstanceHistory {
+    SelfId: 6868078495993990776
+    SubobjectId: 13047611329256546289
+    InstanceId: 903624328023784543
+    TemplateId: 6043847446701242570
+  }
+}
+Objects {
   Id: 10524657146130844446
   Name: "Gem - Diamond 8-Sided Polished"
   Transform {
     Location {
       Y: -48.2675781
-      Z: 82.2297363
+      Z: 212.229736
     }
     Rotation {
-      Roll: -30
+      Roll: -30.0000095
     }
     Scale {
       X: 0.450289637
@@ -62,6 +117,7 @@ Objects {
   Name: "Outline Object"
   Transform {
     Location {
+      Z: 130
     }
     Rotation {
     }
@@ -112,10 +168,10 @@ Objects {
   Transform {
     Location {
       Y: 48.4863281
-      Z: 82.2297363
+      Z: 212.229736
     }
     Rotation {
-      Roll: 30
+      Roll: 30.0000095
     }
     Scale {
       X: 0.450289637
@@ -169,12 +225,12 @@ Objects {
   Transform {
     Location {
       Y: -40
-      Z: -58
+      Z: 72
     }
     Rotation {
-      Pitch: -176.466736
-      Yaw: 3.5401
-      Roll: -60.1092224
+      Pitch: -3.53325677
+      Yaw: -176.4599
+      Roll: 119.890793
     }
     Scale {
       X: 0.18
@@ -233,14 +289,14 @@ Objects {
   Name: "Donut"
   Transform {
     Location {
-      X: 0.379135132
-      Y: -43.7987518
-      Z: -60.3293228
+      X: 0.37890625
+      Y: -43.7988281
+      Z: 69.6706848
     }
     Rotation {
-      Pitch: -176.466736
-      Yaw: 3.54008484
-      Roll: -115.109207
+      Pitch: -3.53325677
+      Yaw: -176.459915
+      Roll: 64.890831
     }
     Scale {
       X: 0.24000001
@@ -300,10 +356,10 @@ Objects {
   Transform {
     Location {
       Y: -30
-      Z: 50
+      Z: 180
     }
     Rotation {
-      Roll: -30
+      Roll: -30.0000095
     }
     Scale {
       X: 0.119279042
@@ -364,7 +420,7 @@ Objects {
     Location {
       X: 30
       Y: -20
-      Z: 10
+      Z: 140
     }
     Rotation {
       Pitch: 6.71770906
@@ -429,13 +485,13 @@ Objects {
   Name: "Lens - Half"
   Transform {
     Location {
-      X: 34.9775543
-      Y: -22.7395325
-      Z: 11.92836
+      X: 34.9785156
+      Y: -22.7402344
+      Z: 141.92836
     }
     Rotation {
-      Pitch: 70
-      Yaw: 130
+      Pitch: 69.9999847
+      Yaw: 129.999939
       Roll: -20
     }
     Scale {
@@ -495,12 +551,12 @@ Objects {
     Location {
       X: 30
       Y: 20
-      Z: 10
+      Z: 140
     }
     Rotation {
       Pitch: 6.71770906
-      Yaw: -61.1182861
-      Roll: -108.881714
+      Yaw: -61.1182899
+      Roll: -108.881699
     }
     Scale {
       X: 0.249999985
@@ -560,14 +616,14 @@ Objects {
   Name: "Lens - Half"
   Transform {
     Location {
-      X: 34.8612823
-      Y: 22.940918
-      Z: 11.92836
+      X: 34.8613281
+      Y: 22.9414063
+      Z: 141.92836
     }
     Rotation {
-      Pitch: 110
-      Yaw: 10
-      Roll: 160
+      Pitch: 70.0000305
+      Yaw: -169.999969
+      Roll: -20.0000134
     }
     Scale {
       X: 0.3
@@ -625,10 +681,10 @@ Objects {
   Transform {
     Location {
       Y: 42
-      Z: -60
+      Z: 70
     }
     Rotation {
-      Roll: 60
+      Roll: 59.9999847
     }
     Scale {
       X: 0.24000001
@@ -687,7 +743,7 @@ Objects {
   Name: "Donut"
   Transform {
     Location {
-      Z: -38
+      Z: 92
     }
     Rotation {
     }
@@ -749,10 +805,10 @@ Objects {
   Transform {
     Location {
       Y: 38
-      Z: -58
+      Z: 72
     }
     Rotation {
-      Roll: 114.999916
+      Roll: 114.999863
     }
     Scale {
       X: 0.18
@@ -812,10 +868,10 @@ Objects {
   Transform {
     Location {
       Y: 30
-      Z: 50
+      Z: 180
     }
     Rotation {
-      Roll: 30
+      Roll: 30.0000095
     }
     Scale {
       X: 0.119279042
@@ -874,8 +930,8 @@ Objects {
   Name: "Wings"
   Transform {
     Location {
-      X: -65.5028534
-      Z: -30
+      X: -65.5019531
+      Z: 100
     }
     Rotation {
     }
@@ -1041,7 +1097,6 @@ Objects {
   Name: "Teardrop - Truncated"
   Transform {
     Location {
-      Z: -130
     }
     Rotation {
     }
@@ -1102,7 +1157,7 @@ Objects {
   Name: "Teardrop - Truncated"
   Transform {
     Location {
-      Z: -120
+      Z: 10
     }
     Rotation {
     }
@@ -1163,7 +1218,7 @@ Objects {
   Name: "Sphere"
   Transform {
     Location {
-      Z: -4
+      Z: 126
     }
     Rotation {
     }

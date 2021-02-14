@@ -6,6 +6,7 @@ Objects {
   Transform {
     Location {
       Y: 290.708984
+      Z: 8.04431152
     }
     Rotation {
     }

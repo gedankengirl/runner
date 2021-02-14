@@ -1,6 +1,61 @@
 Name: "Monkey_3"
 RootId: 11744810268467115009
 Objects {
+  Id: 4167851933677575508
+  Name: "RockMove"
+  Transform {
+    Location {
+      Z: 94.4230804
+    }
+    Rotation {
+      Pitch: 28.2610474
+      Yaw: -20.8738499
+      Roll: 1.0662483e-05
+    }
+    Scale {
+      X: 0.468333453
+      Y: 0.468333453
+      Z: 0.468333453
+    }
+  }
+  ParentId: 11744810268467115009
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Object"
+      ObjectReference {
+        SelfId: 11744810268467115009
+      }
+    }
+    Overrides {
+      Name: "cs:Amplitude"
+      Vector {
+        Z: 10
+      }
+    }
+    Overrides {
+      Name: "cs:Period"
+      Float: 2.35
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 14863999780221077747
+    }
+  }
+  InstanceHistory {
+    SelfId: 6868078495993990776
+    SubobjectId: 13047611329256546289
+    InstanceId: 903624328023784543
+    TemplateId: 6043847446701242570
+  }
+}
+Objects {
   Id: 3021021597476039957
   Name: "Diamonds"
   Transform {
@@ -311,7 +366,7 @@ Objects {
     }
     Overrides {
       Name: "ma:Shared_BaseMaterial:smart"
-      Bool: true
+      Bool: false
     }
     Overrides {
       Name: "ma:Shared_BaseMaterial:color"
@@ -320,6 +375,14 @@ Objects {
         B: 0.490000129
         A: 1
       }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:utile"
+      Float: 0.6
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:vtile"
+      Float: 0.6
     }
   }
   Collidable_v2 {
@@ -429,6 +492,18 @@ Objects {
       AssetReference {
         Id: 8942635855820448227
       }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:utile"
+      Float: 0.4
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:vtile"
+      Float: 0.4
     }
   }
   Collidable_v2 {
@@ -1319,6 +1394,18 @@ Objects {
       AssetReference {
         Id: 8942635855820448227
       }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:utile"
+      Float: 0.4
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:vtile"
+      Float: 0.4
     }
   }
   Collidable_v2 {
@@ -2780,6 +2867,10 @@ Objects {
         G: 0.0923840851
         A: 1
       }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
     }
   }
   Collidable_v2 {

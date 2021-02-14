@@ -54,7 +54,7 @@ Objects {
 }
 Objects {
   Id: 15317849570465314173
-  Name: "Monkies"
+  Name: "Monkeys"
   Transform {
     Location {
     }
@@ -75,6 +75,6 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Monkies"
+    FilePartitionName: "Monkeys"
   }
 }

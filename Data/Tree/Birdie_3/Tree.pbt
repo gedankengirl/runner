@@ -1,6 +1,61 @@
 Name: "Birdie_3"
 RootId: 6010831596680089717
 Objects {
+  Id: 12542855280635464929
+  Name: "RockMove"
+  Transform {
+    Location {
+      Z: 90.2475586
+    }
+    Rotation {
+      Pitch: 28.2610474
+      Yaw: -20.8738155
+      Roll: 1.11471418e-05
+    }
+    Scale {
+      X: 0.514266312
+      Y: 0.514266312
+      Z: 0.514266312
+    }
+  }
+  ParentId: 6010831596680089717
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Object"
+      ObjectReference {
+        SelfId: 6010831596680089717
+      }
+    }
+    Overrides {
+      Name: "cs:Amplitude"
+      Vector {
+        Z: 10
+      }
+    }
+    Overrides {
+      Name: "cs:Period"
+      Float: 2.3
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 14863999780221077747
+    }
+  }
+  InstanceHistory {
+    SelfId: 6868078495993990776
+    SubobjectId: 13047611329256546289
+    InstanceId: 903624328023784543
+    TemplateId: 6043847446701242570
+  }
+}
+Objects {
   Id: 12102968243944589755
   Name: "Outline Object"
   Transform {
@@ -366,7 +421,7 @@ Objects {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
       AssetReference {
-        Id: 10184847056121543272
+        Id: 13674206740428179952
       }
     }
     Overrides {
@@ -422,7 +477,7 @@ Objects {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
       AssetReference {
-        Id: 10184847056121543272
+        Id: 13674206740428179952
       }
     }
     Overrides {

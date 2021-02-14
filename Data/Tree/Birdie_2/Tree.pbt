@@ -1,6 +1,61 @@
 Name: "Birdie_2"
 RootId: 17955518962049526930
 Objects {
+  Id: 5558296470316825880
+  Name: "RockMove"
+  Transform {
+    Location {
+      Z: 90.2475586
+    }
+    Rotation {
+      Pitch: 28.2610474
+      Yaw: -20.8738518
+      Roll: 1.0662483e-05
+    }
+    Scale {
+      X: 0.514266312
+      Y: 0.514266312
+      Z: 0.514266312
+    }
+  }
+  ParentId: 17955518962049526930
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Object"
+      ObjectReference {
+        SelfId: 17955518962049526930
+      }
+    }
+    Overrides {
+      Name: "cs:Amplitude"
+      Vector {
+        Z: 10
+      }
+    }
+    Overrides {
+      Name: "cs:Period"
+      Float: 2.1
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 14863999780221077747
+    }
+  }
+  InstanceHistory {
+    SelfId: 6868078495993990776
+    SubobjectId: 13047611329256546289
+    InstanceId: 903624328023784543
+    TemplateId: 6043847446701242570
+  }
+}
+Objects {
   Id: 18328864305732203575
   Name: "Outline Object"
   Transform {

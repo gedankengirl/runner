@@ -1,12 +1,67 @@
 Name: "Flamingo_1"
 RootId: 12659662651344689855
 Objects {
+  Id: 9102671012661936914
+  Name: "RockMove"
+  Transform {
+    Location {
+      Z: 75.4190674
+    }
+    Rotation {
+      Pitch: 28.2610874
+      Yaw: -20.8739452
+      Roll: 4.36192659e-06
+    }
+    Scale {
+      X: 0.514266312
+      Y: 0.514266312
+      Z: 0.514266312
+    }
+  }
+  ParentId: 12659662651344689855
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Object"
+      ObjectReference {
+        SelfId: 12659662651344689855
+      }
+    }
+    Overrides {
+      Name: "cs:Amplitude"
+      Vector {
+        Z: 10
+      }
+    }
+    Overrides {
+      Name: "cs:Period"
+      Float: 2.1
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 14863999780221077747
+    }
+  }
+  InstanceHistory {
+    SelfId: 6868078495993990776
+    SubobjectId: 13047611329256546289
+    InstanceId: 903624328023784543
+    TemplateId: 6043847446701242570
+  }
+}
+Objects {
   Id: 15098874753082337554
   Name: "Hat"
   Transform {
     Location {
-      X: 17.211
-      Z: 221.098816
+      X: 17.2109375
+      Z: 296.517883
     }
     Rotation {
     }
@@ -35,7 +90,7 @@ Objects {
     Location {
       X: -0.751953125
       Y: -1.203125
-      Z: -71.7159271
+      Z: 3.70314026
     }
     Rotation {
     }
@@ -62,9 +117,9 @@ Objects {
   Name: "Body"
   Transform {
     Location {
-      X: -13.1097212
+      X: -13.109375
       Y: 0.298828125
-      Z: 37.6974182
+      Z: 113.116486
     }
     Rotation {
     }
@@ -91,9 +146,9 @@ Objects {
   Name: "Pipe - 45-Degree Long "
   Transform {
     Location {
-      X: 32.4529419
+      X: 32.453125
       Y: 0.751953125
-      Z: 76.8278198
+      Z: 152.246887
     }
     Rotation {
       Yaw: -179.999954
@@ -150,9 +205,9 @@ Objects {
   Name: "Sphere"
   Transform {
     Location {
-      X: 16.9282227
+      X: 16.9277344
       Y: 0.751953125
-      Z: 167.113327
+      Z: 242.53241
     }
     Rotation {
     }

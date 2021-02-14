@@ -1,6 +1,61 @@
 Name: "Mermaid_3"
 RootId: 17072390057767254469
 Objects {
+  Id: 13199404775212185072
+  Name: "RockMove"
+  Transform {
+    Location {
+      Z: 75.4190674
+    }
+    Rotation {
+      Pitch: 28.2610874
+      Yaw: -20.8738155
+      Roll: 3.87726823e-06
+    }
+    Scale {
+      X: 0.514266372
+      Y: 0.514266372
+      Z: 0.514266372
+    }
+  }
+  ParentId: 17072390057767254469
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Object"
+      ObjectReference {
+        SelfId: 17072390057767254469
+      }
+    }
+    Overrides {
+      Name: "cs:Amplitude"
+      Vector {
+        Z: 10
+      }
+    }
+    Overrides {
+      Name: "cs:Period"
+      Float: 2.3
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 14863999780221077747
+    }
+  }
+  InstanceHistory {
+    SelfId: 6868078495993990776
+    SubobjectId: 13047611329256546289
+    InstanceId: 903624328023784543
+    TemplateId: 6043847446701242570
+  }
+}
+Objects {
   Id: 11216167880987337107
   Name: "Outline Object"
   Transform {

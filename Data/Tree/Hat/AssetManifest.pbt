@@ -26,12 +26,12 @@ Assets {
   }
 }
 Assets {
-  Id: 8844214288382199534
-  Name: "Decal Fantasy Painted 01"
-  PlatformAssetType: 14
+  Id: 9371661852199201852
+  Name: "Lens - Half"
+  PlatformAssetType: 1
   PrimaryAsset {
-    AssetType: "DecalBlueprintAssetRef"
-    AssetId: "bp_decal_fantasy_painted_002"
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_half_lense_001"
   }
 }
 Assets {
@@ -50,6 +50,24 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_hemisphere_003"
+  }
+}
+Assets {
+  Id: 2264041107168619230
+  Name: "Cone - Bullet"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_bullet_001"
+  }
+}
+Assets {
+  Id: 1434749987095754567
+  Name: "Decal Elven Symbols"
+  PlatformAssetType: 14
+  PrimaryAsset {
+    AssetType: "DecalBlueprintAssetRef"
+    AssetId: "bp_decal_elven_symbols_001"
   }
 }
 Assets {

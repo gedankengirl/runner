@@ -1,6 +1,61 @@
 Name: "Gnome_2"
 RootId: 12384625977959244665
 Objects {
+  Id: 12572008314682481944
+  Name: "RockMove"
+  Transform {
+    Location {
+      Z: 91.9404297
+    }
+    Rotation {
+      Pitch: 28.2610474
+      Yaw: -20.8736668
+      Roll: 1.0662483e-05
+    }
+    Scale {
+      X: 0.514266312
+      Y: 0.514266312
+      Z: 0.514266312
+    }
+  }
+  ParentId: 12384625977959244665
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Object"
+      ObjectReference {
+        SelfId: 12384625977959244665
+      }
+    }
+    Overrides {
+      Name: "cs:Amplitude"
+      Vector {
+        Z: 10
+      }
+    }
+    Overrides {
+      Name: "cs:Period"
+      Float: 3.6
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 14863999780221077747
+    }
+  }
+  InstanceHistory {
+    SelfId: 6868078495993990776
+    SubobjectId: 13047611329256546289
+    InstanceId: 903624328023784543
+    TemplateId: 6043847446701242570
+  }
+}
+Objects {
   Id: 8936987207584304703
   Name: "Outline Object"
   Transform {

@@ -1,15 +1,70 @@
 Name: "Ghosts"
 RootId: 15437553740384145432
 Objects {
-  Id: 11937351086263483706
-  Name: "Ghost_3"
+  Id: 1531073650135882929
+  Name: "Ghost_3_ClientContext"
   Transform {
     Location {
       X: -0.000122070313
       Y: -1850.10913
     }
     Rotation {
-      Yaw: 2.39056571e-05
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 15437553740384145432
+  ChildIds: 9893178451770392049
+  WantsNetworking: true
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  NetworkContext {
+  }
+}
+Objects {
+  Id: 9893178451770392049
+  Name: "ClientContext"
+  Transform {
+    Location {
+      X: -1.16415322e-10
+      Y: -0.00195312477
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 1531073650135882929
+  ChildIds: 11937351086263483706
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  NetworkContext {
+  }
+}
+Objects {
+  Id: 11937351086263483706
+  Name: "Ghost_3"
+  Transform {
+    Location {
+      X: -3.49245965e-10
+      Y: -0.00195312477
+    }
+    Rotation {
+      Yaw: 1.70754702e-05
     }
     Scale {
       X: 1.26902914
@@ -17,7 +72,7 @@ Objects {
       Z: 1.26902914
     }
   }
-  ParentId: 15437553740384145432
+  ParentId: 9893178451770392049
   ChildIds: 8851619354889675700
   ChildIds: 198602140075664385
   ChildIds: 7395063704312866647
@@ -26,6 +81,7 @@ Objects {
   ChildIds: 9911161771361030640
   ChildIds: 1989436715145689770
   ChildIds: 7460066984714696719
+  ChildIds: 14518058850892640665
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -43,14 +99,69 @@ Objects {
   }
 }
 Objects {
+  Id: 14518058850892640665
+  Name: "RockMove"
+  Transform {
+    Location {
+      Z: 71.1154327
+    }
+    Rotation {
+      Pitch: 28.2610054
+      Yaw: 69.1260757
+      Roll: 1.26011118e-05
+    }
+    Scale {
+      X: 0.405243903
+      Y: 0.405243903
+      Z: 0.405243903
+    }
+  }
+  ParentId: 11937351086263483706
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Object"
+      ObjectReference {
+        SelfId: 11937351086263483706
+      }
+    }
+    Overrides {
+      Name: "cs:Amplitude"
+      Vector {
+        Z: 10
+      }
+    }
+    Overrides {
+      Name: "cs:Period"
+      Float: 2.45
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 14863999780221077747
+    }
+  }
+  InstanceHistory {
+    SelfId: 6868078495993990776
+    SubobjectId: 13047611329256546289
+    InstanceId: 903624328023784543
+    TemplateId: 6043847446701242570
+  }
+}
+Objects {
   Id: 7460066984714696719
   Name: "Outline Object"
   Transform {
     Location {
-      Z: 91.3649826
+      Z: 114.125427
     }
     Rotation {
-      Yaw: 89.9999847
+      Yaw: 89.999939
     }
     Scale {
       X: 0.788004
@@ -98,13 +209,14 @@ Objects {
   Name: "Bowtie"
   Transform {
     Location {
-      X: 1.80359802e-05
+      X: 3.00599659e-05
       Y: 50.9909325
-      Z: 58.2078438
+      Z: 80.9682846
     }
     Rotation {
       Pitch: 1.01313555
-      Yaw: 89.9999695
+      Yaw: 89.9999237
+      Roll: 5.33691953e-08
     }
     Scale {
       X: 0.088361606
@@ -135,6 +247,7 @@ Objects {
   Name: "Jacket"
   Transform {
     Location {
+      Z: 22.7604446
     }
     Rotation {
     }
@@ -161,12 +274,14 @@ Objects {
   Name: "Hat"
   Transform {
     Location {
-      X: -8.33714199
-      Y: 1.50299832e-06
-      Z: 138.067322
+      X: -8.33714294
+      Y: 4.50899506e-06
+      Z: 160.827774
     }
     Rotation {
       Pitch: 13.0878572
+      Yaw: -4.99475696e-08
+      Roll: -4.3541587e-07
     }
     Scale {
       X: 1.15129554
@@ -191,12 +306,13 @@ Objects {
   Name: "eyes"
   Transform {
     Location {
-      X: 3.40586507e-06
-      Y: 42.4189796
-      Z: 98.9619064
+      X: 2.40479731e-05
+      Y: 42.4183083
+      Z: 121.722351
     }
     Rotation {
-      Roll: 10.1027517
+      Yaw: -3.7586986e-08
+      Roll: 10.1027756
     }
     Scale {
       X: 1
@@ -286,6 +402,7 @@ Objects {
   Name: "fringe"
   Transform {
     Location {
+      Z: 22.7604446
     }
     Rotation {
       Yaw: 6.83018789e-06
@@ -1323,6 +1440,7 @@ Objects {
   Name: "fringe"
   Transform {
     Location {
+      Z: 22.7604446
     }
     Rotation {
     }
@@ -2231,7 +2349,7 @@ Objects {
   Name: "body"
   Transform {
     Location {
-      Z: 5.30761862
+      Z: 28.0680599
     }
     Rotation {
     }
@@ -2469,15 +2587,70 @@ Objects {
   }
 }
 Objects {
-  Id: 6984775265161652347
-  Name: "Ghost_2"
+  Id: 17234232042024116817
+  Name: "Ghost_2_ClientContext"
   Transform {
     Location {
       X: -6.10351563e-05
       Y: -873.974487
     }
     Rotation {
-      Yaw: 1.02452814e-05
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 15437553740384145432
+  ChildIds: 613686739948549746
+  WantsNetworking: true
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  NetworkContext {
+  }
+}
+Objects {
+  Id: 613686739948549746
+  Name: "ClientContext"
+  Transform {
+    Location {
+      X: -1.16415322e-10
+      Y: -0.00195312477
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 17234232042024116817
+  ChildIds: 6984775265161652347
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  NetworkContext {
+  }
+}
+Objects {
+  Id: 6984775265161652347
+  Name: "Ghost_2"
+  Transform {
+    Location {
+      X: -3.49245965e-10
+      Y: -0.00195312477
+    }
+    Rotation {
+      Yaw: 6.83018789e-06
     }
     Scale {
       X: 1.26902914
@@ -2485,13 +2658,14 @@ Objects {
       Z: 1.26902914
     }
   }
-  ParentId: 15437553740384145432
+  ParentId: 613686739948549746
   ChildIds: 235524381622368143
   ChildIds: 4703501091409292679
   ChildIds: 17755377128602592024
   ChildIds: 4488853122677434470
   ChildIds: 13052501472717705973
   ChildIds: 16467117492961604631
+  ChildIds: 12400149868903218025
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -2509,13 +2683,68 @@ Objects {
   }
 }
 Objects {
+  Id: 12400149868903218025
+  Name: "RockMove"
+  Transform {
+    Location {
+      Z: 71.1154327
+    }
+    Rotation {
+      Pitch: 28.261034
+      Yaw: 69.1260529
+      Roll: 1.26011155e-05
+    }
+    Scale {
+      X: 0.405243903
+      Y: 0.405243903
+      Z: 0.405243903
+    }
+  }
+  ParentId: 6984775265161652347
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Object"
+      ObjectReference {
+        SelfId: 6984775265161652347
+      }
+    }
+    Overrides {
+      Name: "cs:Amplitude"
+      Vector {
+        Z: 10
+      }
+    }
+    Overrides {
+      Name: "cs:Period"
+      Float: 2.05
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 14863999780221077747
+    }
+  }
+  InstanceHistory {
+    SelfId: 6868078495993990776
+    SubobjectId: 13047611329256546289
+    InstanceId: 903624328023784543
+    TemplateId: 6043847446701242570
+  }
+}
+Objects {
   Id: 16467117492961604631
   Name: "Hat"
   Transform {
     Location {
-      X: -8.33714199
-      Y: 1.50299832e-06
-      Z: 138.067322
+      X: -8.33714294
+      Y: 3.00599663e-06
+      Z: 160.827774
     }
     Rotation {
       Pitch: 13.0878572
@@ -2543,7 +2772,7 @@ Objects {
   Name: "Jacket"
   Transform {
     Location {
-      Z: 34.6104088
+      Z: 57.3708534
     }
     Rotation {
     }
@@ -2570,12 +2799,13 @@ Objects {
   Name: "eyes"
   Transform {
     Location {
-      X: 3.40586507e-06
-      Y: 42.4189796
-      Z: 98.9619064
+      X: 1.50299829e-05
+      Y: 42.4183083
+      Z: 121.722351
     }
     Rotation {
-      Roll: 10.1027517
+      Yaw: -3.7586986e-08
+      Roll: 10.1027756
     }
     Scale {
       X: 1
@@ -2665,6 +2895,7 @@ Objects {
   Name: "fringe"
   Transform {
     Location {
+      Z: 22.7604446
     }
     Rotation {
       Yaw: 6.83018789e-06
@@ -3702,6 +3933,7 @@ Objects {
   Name: "fringe"
   Transform {
     Location {
+      Z: 22.7604446
     }
     Rotation {
     }
@@ -4610,7 +4842,7 @@ Objects {
   Name: "body"
   Transform {
     Location {
-      Z: 5.30761862
+      Z: 28.0680599
     }
     Rotation {
     }
@@ -4856,6 +5088,57 @@ Objects {
   }
 }
 Objects {
+  Id: 12344384744197908433
+  Name: "Ghost_1_ClientContext"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 15437553740384145432
+  ChildIds: 2882760717016952686
+  WantsNetworking: true
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  NetworkContext {
+  }
+}
+Objects {
+  Id: 2882760717016952686
+  Name: "ClientContext"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 12344384744197908433
+  ChildIds: 3418651420501488149
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  NetworkContext {
+  }
+}
+Objects {
   Id: 3418651420501488149
   Name: "Ghost_1"
   Transform {
@@ -4869,12 +5152,8 @@ Objects {
       Z: 1.26902914
     }
   }
-  ParentId: 15437553740384145432
+  ParentId: 2882760717016952686
   ChildIds: 14854303083389758126
-  ChildIds: 975446768053450638
-  ChildIds: 6581560784374063770
-  ChildIds: 17291869150919220698
-  ChildIds: 14624011324445988136
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -4892,12 +5171,108 @@ Objects {
   }
 }
 Objects {
+  Id: 14854303083389758126
+  Name: "body"
+  Transform {
+    Location {
+      Z: 28.0680599
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 3418651420501488149
+  ChildIds: 15555003840717123124
+  ChildIds: 5523120942607104363
+  ChildIds: 4083152593655496275
+  ChildIds: 6662061360370852701
+  ChildIds: 975446768053450638
+  ChildIds: 6581560784374063770
+  ChildIds: 17291869150919220698
+  ChildIds: 14624011324445988136
+  ChildIds: 16594210202629128595
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+  InstanceHistory {
+    SelfId: 14854303083389758126
+    SubobjectId: 401074772268917527
+    InstanceId: 10239507396371542674
+    TemplateId: 1266056586137157079
+  }
+}
+Objects {
+  Id: 16594210202629128595
+  Name: "RockMove"
+  Transform {
+    Location {
+      Z: 43.0473633
+    }
+    Rotation {
+      Pitch: 28.2610531
+      Yaw: 69.1260681
+      Roll: 8.72385e-06
+    }
+    Scale {
+      X: 0.405243903
+      Y: 0.405243903
+      Z: 0.405243903
+    }
+  }
+  ParentId: 14854303083389758126
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Object"
+      ObjectReference {
+        SelfId: 3418651420501488149
+      }
+    }
+    Overrides {
+      Name: "cs:Amplitude"
+      Vector {
+        Z: 10
+      }
+    }
+    Overrides {
+      Name: "cs:Period"
+      Float: 2.25
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 14863999780221077747
+    }
+  }
+  InstanceHistory {
+    SelfId: 6868078495993990776
+    SubobjectId: 13047611329256546289
+    InstanceId: 903624328023784543
+    TemplateId: 6043847446701242570
+  }
+}
+Objects {
   Id: 14624011324445988136
   Name: "Hat"
   Transform {
     Location {
       X: -8.33714294
-      Z: 138.067322
+      Z: 132.759705
     }
     Rotation {
       Pitch: 13.0878572
@@ -4910,7 +5285,7 @@ Objects {
       Z: 1.15129554
     }
   }
-  ParentId: 3418651420501488149
+  ParentId: 14854303083389758126
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -4927,12 +5302,11 @@ Objects {
   Name: "eyes"
   Transform {
     Location {
-      X: 3.40586507e-06
-      Y: 42.4189796
-      Z: 98.9619064
+      Y: 42.4183121
+      Z: 93.6542816
     }
     Rotation {
-      Roll: 10.1027517
+      Roll: 10.1027632
     }
     Scale {
       X: 1
@@ -4940,7 +5314,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 3418651420501488149
+  ParentId: 14854303083389758126
   ChildIds: 5184203103861912230
   ChildIds: 8499503138318632171
   Collidable_v2 {
@@ -5022,6 +5396,7 @@ Objects {
   Name: "fringe"
   Transform {
     Location {
+      Z: -5.30762815
     }
     Rotation {
       Yaw: 6.83018789e-06
@@ -5032,7 +5407,7 @@ Objects {
       Z: 1.06075013
     }
   }
-  ParentId: 3418651420501488149
+  ParentId: 14854303083389758126
   ChildIds: 2887501990255653631
   ChildIds: 8850552717435222736
   ChildIds: 4047449933533703655
@@ -6043,6 +6418,7 @@ Objects {
   Name: "fringe"
   Transform {
     Location {
+      Z: -5.30762815
     }
     Rotation {
     }
@@ -6052,7 +6428,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 3418651420501488149
+  ParentId: 14854303083389758126
   ChildIds: 4585524677646175549
   ChildIds: 15523198194178931534
   ChildIds: 14672772815264367306
@@ -6942,42 +7318,6 @@ Objects {
   InstanceHistory {
     SelfId: 4585524677646175549
     SubobjectId: 17588523522361738372
-    InstanceId: 10239507396371542674
-    TemplateId: 1266056586137157079
-  }
-}
-Objects {
-  Id: 14854303083389758126
-  Name: "body"
-  Transform {
-    Location {
-      Z: 5.30761862
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 3418651420501488149
-  ChildIds: 15555003840717123124
-  ChildIds: 5523120942607104363
-  ChildIds: 4083152593655496275
-  ChildIds: 6662061360370852701
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Folder {
-    IsGroup: true
-  }
-  InstanceHistory {
-    SelfId: 14854303083389758126
-    SubobjectId: 401074772268917527
     InstanceId: 10239507396371542674
     TemplateId: 1266056586137157079
   }
