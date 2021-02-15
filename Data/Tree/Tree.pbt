@@ -24,6 +24,7 @@ Objects {
   ChildIds: 14143624588738292401
   ChildIds: 7553754998792656332
   ChildIds: 16160423230498307867
+  ChildIds: 2137261537859657176
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -33,6 +34,40 @@ Objects {
     Value: "mc:evisibilitysetting:forceon"
   }
   Folder {
+  }
+}
+Objects {
+  Id: 2137261537859657176
+  Name: "RebirthPlate"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 4222691229199675037
+      value {
+        Overrides {
+          Name: "Name"
+          String: "RebirthPlate"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -19532.3086
+            Y: 17244.8457
+            Z: 84.0365
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 6997487586924821979
+    }
   }
 }
 Objects {
