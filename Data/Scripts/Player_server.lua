@@ -1,4 +1,4 @@
-﻿local BusinessLogic = require('961D2BEB7E5DFB42:BusinessLogic')
+﻿local BusinessLogic = _G.req("BusinessLogic")
 
 local OnResourceChanged do
 

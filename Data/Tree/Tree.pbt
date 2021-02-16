@@ -14,6 +14,8 @@ Objects {
       Z: 1
     }
   }
+  ChildIds: 12083086909516339305
+  ChildIds: 13451739167729300045
   ChildIds: 4906105228638113618
   ChildIds: 10764064574047099998
   ChildIds: 3503138823459757888
@@ -208,7 +210,7 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:ResourceName"
-      String: "Click"
+      String: "SpeedCoin"
     }
     Overrides {
       Name: "cs:AlwaysShow"
@@ -224,7 +226,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ShowProgressBar"
-      Bool: false
+      Bool: true
     }
     Overrides {
       Name: "cs:ShowText"
@@ -232,7 +234,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ShowMaxInText"
-      Bool: false
+      Bool: true
     }
     Overrides {
       Name: "cs:ResourceName:tooltip"
@@ -485,6 +487,7 @@ Objects {
     Value: "mc:evisibilitysetting:forceon"
   }
   Control {
+    Width: 175
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -544,7 +547,7 @@ Objects {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   Control {
-    Width: 100
+    Width: 435
     Height: 100
     RenderTransformPivot {
       Anchor {
@@ -2114,5 +2117,73 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "Settings"
+  }
+}
+Objects {
+  Id: 13451739167729300045
+  Name: "@ClientServer"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 5300870412525512097
+      value {
+        Overrides {
+          Name: "Name"
+          String: "@ClientServer"
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 13073670985043419975
+    }
+  }
+}
+Objects {
+  Id: 12083086909516339305
+  Name: "@CoreModules"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:forceoff"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 16291094792229598910
+      value {
+        Overrides {
+          Name: "Name"
+          String: "@CoreModules"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 17771149258410848072
+    }
   }
 }
