@@ -23,7 +23,6 @@ Objects {
   ChildIds: 3924873657808812146
   ChildIds: 14143624588738292401
   ChildIds: 7553754998792656332
-  ChildIds: 16160423230498307867
   ChildIds: 2137261537859657176
   UnregisteredParameters {
   }
@@ -58,7 +57,7 @@ Objects {
         Overrides {
           Name: "Position"
           Vector {
-            X: -19532.3086
+            X: -17764.3457
             Y: 17244.8457
             Z: 84.0365
           }
@@ -67,48 +66,6 @@ Objects {
     }
     TemplateAsset {
       Id: 6997487586924821979
-    }
-  }
-}
-Objects {
-  Id: 16160423230498307867
-  Name: "Branches Cluster Big"
-  Transform {
-    Location {
-      X: -5978.25146
-      Y: 6024.51074
-      Z: 89.8260498
-    }
-    Rotation {
-      Yaw: 66.1488495
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 4781671109827199097
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CoreMesh {
-    MeshAsset {
-      Id: 10515482815474555518
-    }
-    Teams {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    EnableCameraCollision: true
-    StaticMesh {
-      Physics {
-        Mass: 100
-        LinearDamping: 0.01
-      }
     }
   }
 }

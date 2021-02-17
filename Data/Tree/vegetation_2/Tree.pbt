@@ -1,6 +1,48 @@
 Name: "vegetation_2"
 RootId: 3288142853916238356
 Objects {
+  Id: 16160423230498307867
+  Name: "Branches Cluster Big"
+  Transform {
+    Location {
+      X: -6258.25146
+      Y: 11884.5107
+      Z: 19.8260498
+    }
+    Rotation {
+      Yaw: 66.1488724
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 3288142853916238356
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 10515482815474555518
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    EnableCameraCollision: true
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+    }
+  }
+}
+Objects {
   Id: 5674084508572007133
   Name: "Leafy Patch 02"
   Transform {

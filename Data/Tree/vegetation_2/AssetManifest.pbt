@@ -26,6 +26,15 @@ Assets {
   }
 }
 Assets {
+  Id: 10515482815474555518
+  Name: "Branches Cluster Big"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_gen_branches_big_001"
+  }
+}
+Assets {
   Id: 9151926530998174305
   Name: "Flower Bellflower Patch 01"
   PlatformAssetType: 1
