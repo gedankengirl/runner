@@ -1,8 +1,8 @@
-﻿local Maid = require('108BCE6EE4C80C2D:Maid')
-local BusinessLogic = require('961D2BEB7E5DFB42:BusinessLogic')
+﻿local Maid = _G.req("_Maid")
+local BusinessLogic = _G.req("BusinessLogic")
 local trigger = script:GetCustomProperty("Trigger"):WaitForObject()
 
-local _maid = Maid.New()
+local _maid = Maid.New(trigger)
 
 _maid.beginOverlapEvent = trigger.beginOverlapEvent:Connect(function(_, object)
     if object and object:IsA("Player") then
@@ -10,8 +10,3 @@ _maid.beginOverlapEvent = trigger.beginOverlapEvent:Connect(function(_, object)
         BusinessLogic.doRebirth(object)
     end
 end)
-
-_maid.destroyEvent = trigger.destroyEvent:Connect(function()
-    _maid.Destroy()
-end)
-

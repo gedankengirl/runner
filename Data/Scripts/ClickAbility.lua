@@ -1,3 +1,5 @@
-﻿local BusinessLogic = require('961D2BEB7E5DFB42:BusinessLogic')
+﻿local BusinessLogic = _G.req("BusinessLogic")
+local Maid = _G.req("_Maid")
 local ability = script.parent
-ability.executeEvent:Connect(BusinessLogic.onClick)
+_maid = Maid.New(script)
+_maid.connction = ability.executeEvent:Connect(BusinessLogic.onClick)

@@ -1,14 +1,9 @@
 Name: "Mermaids"
 RootId: 8303771595245639355
 Objects {
-  Id: 4553000398729571450
-  Name: "Mermaid_3_ClientContext"
+  Id: 4251518539654548957
+  Name: "$Mermaid_3_ClientContext"
   Transform {
-    Location {
-      X: -1802.47852
-    }
-    Rotation {
-    }
     Scale {
       X: 1
       Y: 1
@@ -16,76 +11,31 @@ Objects {
     }
   }
   ParentId: 8303771595245639355
-  ChildIds: 9545688681023102806
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:forceoff"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  NetworkContext {
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 13491140555172990980
+      value {
+        Overrides {
+          Name: "Name"
+          String: "$Mermaid_3_ClientContext"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -1802.47852
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 7819974979559232425
+    }
   }
 }
 Objects {
-  Id: 9545688681023102806
-  Name: "ClientContext"
+  Id: 6432528844260229451
+  Name: "$Mermaid_2_ClientContext"
   Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 4553000398729571450
-  ChildIds: 17072390057767254469
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:forceoff"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  NetworkContext {
-  }
-}
-Objects {
-  Id: 17072390057767254469
-  Name: "Mermaid_3"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 9545688681023102806
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "Mermaid_3"
-  }
-}
-Objects {
-  Id: 1713434826338838595
-  Name: "Mermaid_2_ClientContext"
-  Transform {
-    Location {
-      X: -786.621094
-    }
-    Rotation {
-    }
     Scale {
       X: 1
       Y: 1
@@ -93,76 +43,32 @@ Objects {
     }
   }
   ParentId: 8303771595245639355
-  ChildIds: 13797998887421191076
   WantsNetworking: true
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:forceoff"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  NetworkContext {
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 960806047540393483
+      value {
+        Overrides {
+          Name: "Name"
+          String: "$Mermaid_2_ClientContext"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -786.621094
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 1699581498531384486
+    }
   }
 }
 Objects {
-  Id: 13797998887421191076
-  Name: "ClientContext"
+  Id: 6409064503467575773
+  Name: "$Mermaid_1_ClientContext"
   Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 1713434826338838595
-  ChildIds: 13593798639285944702
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:forceoff"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  NetworkContext {
-  }
-}
-Objects {
-  Id: 13593798639285944702
-  Name: "Mermaid_2"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 13797998887421191076
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "Mermaid_2"
-  }
-}
-Objects {
-  Id: 6999288955777143851
-  Name: "Mermaid_1_ClientContext"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
     Scale {
       X: 1
       Y: 1
@@ -170,65 +76,19 @@ Objects {
     }
   }
   ParentId: 8303771595245639355
-  ChildIds: 16109138733058142947
   WantsNetworking: true
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:forceoff"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  NetworkContext {
-  }
-}
-Objects {
-  Id: 16109138733058142947
-  Name: "ClientContext"
-  Transform {
-    Location {
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 7196723035181198596
+      value {
+        Overrides {
+          Name: "Name"
+          String: "$Mermaid_1_ClientContext"
+        }
+      }
     }
-    Rotation {
+    TemplateAsset {
+      Id: 3296002258450138245
     }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 6999288955777143851
-  ChildIds: 15657600548922701514
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:forceoff"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  NetworkContext {
-  }
-}
-Objects {
-  Id: 15657600548922701514
-  Name: "Mermaid_1"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 16109138733058142947
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "Mermaid_1"
   }
 }

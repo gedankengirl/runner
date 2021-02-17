@@ -1,5 +1,5 @@
 local Animation = {}
-Animation.__index = Animation  
+Animation.__index = Animation
 
 Animation.EasingFunction     = require(script:GetCustomProperty("EasingFunction"))
 Animation.Playback           = require(script:GetCustomProperty("Playback"))
@@ -7,15 +7,15 @@ Animation.Bnimation_Action   = require(script:GetCustomProperty("Bnimation_Actio
 
 function Animation.New(Data)
     local o = setmetatable({},Animation)
-    local o.actions = {}
-    local o.easingType = Data.easingType or "linear"
-    local o.playbackType =  Data.playbackType or "Loop"
-    local o.playbackRate = Data.playbackRate or 1
-    local o.frameRate = Data.frameRate or 60
-    local o.time = 0
-    local o.playingAction
-    local o.isPlaying = false
-    return o 
+    o.actions = {}
+    o.easingType = Data.easingType or "linear"
+    o.playbackType =  Data.playbackType or "Loop"
+    o.playbackRate = Data.playbackRate or 1
+    o.frameRate = Data.frameRate or 60
+    o.time = 0
+    o.playingAction = nil
+    o.isPlaying = false
+    return o
 end
 
 function Animation:NewAction(Name)
@@ -70,7 +70,7 @@ function Animation:BuildFromFile(File, ObjectRoot)
 end
 
 function Animation.GetChild(File, ObjectRoot)
-    local name = object["Name"] 
+    local name = ObjectRoot["Name"]
     local CurrentObj = ObjectRoot
     for i = 1, #{CoreString.Split(name,"-")} do
         local tab = {CoreString.Split(name,"-")}
@@ -117,17 +117,17 @@ function Animation:MoveObjects()
                 Data[k] = self:CalculateFrameData(StartFrame.time,EndFrame.time,StartFrame.data,EndFrame.data)
 
                 if Animation.AnyTrue(Data["lx"], Data["ly"], Data["lz"]) then 
-                    local NewPos = Vector3.New(Data["lx"] or ObjectLoc.x, Data["ly"] or ObjectLoc.y, Data["lz"] or ObjectLoc.z) 
+                    local NewPos = Vector3.New(Data["lx"] or ObjectLoc.x, Data["ly"] or ObjectLoc.y, Data["lz"] or ObjectLoc.z)
                     object:SetPosition(NewPos)
                 end
 
                 if Animation.AnyTrue(Data["sx"], Data["sy"], Data["sz"] ) then 
-                    local NewSca = Vector3.New(Data["sx"] or ObjectScale.x, Data["sy"] or ObjectScale.y, Data["sz"] or ObjectScale.z) 
+                    local NewSca = Vector3.New(Data["sx"] or ObjectScale.x, Data["sy"] or ObjectScale.y, Data["sz"] or ObjectScale.z)
                     object:SetScale(NewSca)
                 end
 
                 if Animation.AnyTrue(Data["rx"], Data["ry"], Data["rz"]) then
-                    local NewRot = Rotation.New(Data["rx"] or ObjectRot, Data["ry"] or ObjectRot.y,Data["rz"] or ObjectRot.z))
+                    local NewRot = Rotation.New(Data["rx"] or ObjectRot, Data["ry"] or ObjectRot.y,Data["rz"] or ObjectRot.z)
                     object:SetRotation(Rotation.New(NewRot))
                 end
             end

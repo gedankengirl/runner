@@ -1,4 +1,4 @@
-﻿local BusinessLogic = require('961D2BEB7E5DFB42:BusinessLogic')
+﻿local BusinessLogic = _G.req("BusinessLogic")
 assert(BusinessLogic.max and BusinessLogic.MAX_KEY)
 -- Internal custom properties
 local COMPONENT_ROOT = script:GetCustomProperty("ComponentRoot"):WaitForObject()
