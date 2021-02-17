@@ -180,9 +180,13 @@ end
 -- In Game State
 --------------------------
 function INGAME:Enter(from)
+    print("InGame_Enter")
+    REvents.BroadcastToServer("InGame_Enter")
 end
 
 function INGAME:Exit()
+    print("InGame_Exit")
+    REvents.BroadcastToServer("InGame_Exit")
 end
 
 function INGAME:HandleInventoryBinding()
@@ -486,8 +490,6 @@ function INVENTORY:_UpdateCamera(dt)
 end
 
 -- Monkey patching Grid for highlights
-
-
 function INVENTORY._OnTileUnderCursorChanged(grid, cursor_cell, move_outcome)
     local hl = grid._highlights
     hl:_clear()
@@ -516,7 +518,7 @@ end
 do -- main
     Client:Start()
     ISM:SetBindingHandlers({
-        ["ability_extra_28"] = {"_", "HandleInventoryBinding"}, -- `O` button for inventory
+        ["ability_extra_27"] = {"_", "HandleInventoryBinding"}, -- `I` button for inventory
         ["ability_primary"] = {"HandleLeftMouseDown", "HandleLeftMouseUp"},
         ["ability_secondary"] = {"HandleRightMouseDown", "HandleRightMouseUp"},
     })

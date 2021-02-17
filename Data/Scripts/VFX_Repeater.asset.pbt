@@ -1,6 +1,6 @@
 Assets {
-  Id: 3403025055362370891
-  Name: "StaticPlayerEquipmentServer"
+  Id: 10594085518880585884
+  Name: "VFX_Repeater"
   PlatformAssetType: 3
   TextAsset {
   }

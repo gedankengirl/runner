@@ -84,9 +84,11 @@ local PlayerConnection = {}
 PlayerConnection.__index = PlayerConnection
 
 function PlayerConnection.New(player)
-    local saved_inventory = B.LoadKey(player, B.INVENTORY_KEY)
+    local playerData = B.LoadSave(player)
+    local saved_inventory = playerData[B.INVENTORY_KEY]
     local inventory = saved_inventory and P.PROTOCOL_RECORD.unpack(saved_inventory, Grid.deserialize) or _make_debug_inventory()
     local self = setmetatable({
+        _maid = Maid.New(),
         player = player,
         inventory = inventory,
         channel = _borrow_channel(),
@@ -94,12 +96,14 @@ function PlayerConnection.New(player)
     }, PlayerConnection)
     B.RecalculatePetBonus(self.player, self.inventory)
     self:Send(P.PROTOCOL_OWNER.pack(player.id, self.channel, SOCIAL, _nonce(self)))
+    self._maid:GiveTask(player.resourceChangedEvent:Connect(B.SaveKey))
     return self
 end
 
 function PlayerConnection:Destroy()
     DOWNLINK:SetNetworkedCustomProperty(self.channel, "")
     _free_chan(self.channel)
+    self._maid:Destroy()
 end
 
 function PlayerConnection:Send(message)
@@ -121,7 +125,7 @@ function PlayerConnection:OnTHE(egg)
         local reason = pet_id
         warn(pp{self.player, reason})
     end
-    print(pp{"on GIR", self.player.name})
+    print(pp{"on THE", self.player.name})
 end
 
 function PlayerConnection:OnGIR()
@@ -205,9 +209,8 @@ end
 
 function Server:OnPlayerJoined(player)
     if self.playerConnections[player] then return end
-    local playerData = B.LoadSave(player)
     -- TODO: remove player data from args
-    self.playerConnections[player] = PlayerConnection.New(player, playerData)
+    self.playerConnections[player] = PlayerConnection.New(player)
     REvents.Broadcast(P.SOCIAL.CONNECT.event, player)
 end
 
@@ -239,8 +242,7 @@ function Social.Start()
         local event = protocol.event
         _maid:GiveTask(Events.Connect(event, function(player, ...)
             assert(player)
-            -- NOTE: maybe player.id ()not player.name would be better
-            player = type(player) == "string" and player or player.name
+            player = type(player) == "string" and player or player.id
             local n = select("#", ...)
             assert(n == 0 or n == 1)
             if n == 1 then

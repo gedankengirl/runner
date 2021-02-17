@@ -15,15 +15,13 @@ Objects {
     }
   }
   ChildIds: 12083086909516339305
-  ChildIds: 13451739167729300045
+  ChildIds: 16584166719041832993
   ChildIds: 4906105228638113618
   ChildIds: 10764064574047099998
-  ChildIds: 3503138823459757888
   ChildIds: 16813558807825262224
   ChildIds: 11409735037263253615
   ChildIds: 12187569197149205462
   ChildIds: 3924873657808812146
-  ChildIds: 14143624588738292401
   ChildIds: 7553754998792656332
   ChildIds: 16160423230498307867
   ChildIds: 2137261537859657176
@@ -138,59 +136,6 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "Scene props"
-  }
-}
-Objects {
-  Id: 14143624588738292401
-  Name: "Server"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 4781671109827199097
-  ChildIds: 2078165734510696653
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  NetworkContext {
-    Type: Server
-  }
-}
-Objects {
-  Id: 2078165734510696653
-  Name: "Player.server"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 14143624588738292401
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Script {
-    ScriptAsset {
-      Id: 11007312075818591120
-    }
   }
 }
 Objects {
@@ -825,7 +770,7 @@ Objects {
   Control {
     Width: 125
     Height: 40
-    UIX: -20
+    UIX: 25
     UIY: -20
     RenderTransformPivot {
       Anchor {
@@ -837,12 +782,12 @@ Objects {
     AnchorLayout {
       SelfAnchor {
         Anchor {
-          Value: "mc:euianchor:bottomright"
+          Value: "mc:euianchor:bottomleft"
         }
       }
       TargetAnchor {
         Anchor {
-          Value: "mc:euianchor:bottomright"
+          Value: "mc:euianchor:bottomleft"
         }
       }
     }
@@ -1981,93 +1926,6 @@ Objects {
   }
 }
 Objects {
-  Id: 3503138823459757888
-  Name: "StaringEquipment"
-  Transform {
-    Location {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 4781671109827199097
-  ChildIds: 4082934301925010695
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:EquipmentTemplate"
-      AssetReference {
-        Id: 12828847012893698445
-      }
-    }
-    Overrides {
-      Name: "cs:Team"
-      Int: 0
-    }
-    Overrides {
-      Name: "cs:ReplaceOnEachRespawn"
-      Bool: false
-    }
-    Overrides {
-      Name: "cs:EquipmentTemplate:tooltip"
-      String: "Equipment template to give to players"
-    }
-    Overrides {
-      Name: "cs:Team:tooltip"
-      String: "If non-zero, only give equipment to players on that team"
-    }
-    Overrides {
-      Name: "cs:ReplaceOnEachRespawn:tooltip"
-      String: "Whether to replace that equipment every time a player spawns"
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Folder {
-    IsGroup: true
-  }
-}
-Objects {
-  Id: 4082934301925010695
-  Name: "StaticPlayerEquipmentServer"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 3503138823459757888
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:ComponentRoot"
-      ObjectReference {
-        SelfId: 3503138823459757888
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Script {
-    ScriptAsset {
-      Id: 3403025055362370891
-    }
-  }
-}
-Objects {
   Id: 10764064574047099998
   Name: "Environment"
   Transform {
@@ -2120,7 +1978,7 @@ Objects {
   }
 }
 Objects {
-  Id: 13451739167729300045
+  Id: 16584166719041832993
   Name: "@ClientServer"
   Transform {
     Scale {
@@ -2130,19 +1988,22 @@ Objects {
     }
   }
   ParentId: 4781671109827199097
-  TemplateInstance {
-    ParameterOverrideMap {
-      key: 5300870412525512097
-      value {
-        Overrides {
-          Name: "Name"
-          String: "@ClientServer"
-        }
-      }
-    }
-    TemplateAsset {
-      Id: 13073670985043419975
-    }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "_ClientServer"
+  }
+  InstanceHistory {
+    SelfId: 16584166719041832993
+    SubobjectId: 5300870412525512097
+    InstanceId: 13451739167729300045
+    TemplateId: 13073670985043419975
+    WasRoot: true
   }
 }
 Objects {
