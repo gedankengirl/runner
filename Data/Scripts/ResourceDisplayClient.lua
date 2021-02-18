@@ -27,6 +27,7 @@ if SHOW_MAX_IN_TEXT and not SHOW_TEXT then
     SHOW_MAX_IN_TEXT = false
 end
 
+local fmtN = BusinessLogic.formatNumber
 
 
 -- Variables
@@ -51,9 +52,9 @@ function Tick(deltaTime)
 
         if SHOW_TEXT then
             if SHOW_MAX_IN_TEXT then
-                TEXT_BOX.text = string.format("%d / %d", resource, MAX_VALUE)
+                TEXT_BOX.text = string.format("%s / %s", fmtN(resource), fmtN(MAX_VALUE))
             else
-                TEXT_BOX.text = string.format("%d", resource)
+                TEXT_BOX.text = string.format("%s", fmtN(resource))
             end
         end
     end
