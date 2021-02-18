@@ -11351,6 +11351,7 @@ Objects {
   ParentId: 4293257082225003563
   ChildIds: 16218303156478813679
   ChildIds: 8691382249038940449
+  ChildIds: 13528000012487961098
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -11359,6 +11360,55 @@ Objects {
   }
   Folder {
     IsGroup: true
+  }
+}
+Objects {
+  Id: 13528000012487961098
+  Name: "Scene limit"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 152
+      Y: 152
+      Z: 50
+    }
+  }
+  ParentId: 15953365687059277970
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 7055655178099606474
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceon"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:forceoff"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 16593169243176712161
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    DisableDistanceFieldLighting: true
+    DisableCastShadows: true
+    DisableReceiveDecals: true
+    EnableCameraCollision: true
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+    }
   }
 }
 Objects {

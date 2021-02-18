@@ -1,6 +1,6 @@
 Assets {
-  Id: 16050221015487268811
-  Name: "Barrier"
+  Id: 12301155947735466898
+  Name: "TeleporterBarrierForceField"
   PlatformAssetType: 3
   TextAsset {
   }

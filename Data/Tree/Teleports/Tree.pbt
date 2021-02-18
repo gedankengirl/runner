@@ -1,6 +1,53 @@
 Name: "Teleports"
 RootId: 10966550013016146936
 Objects {
+  Id: 2137261537859657176
+  Name: "RebirthPlate"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 10966550013016146936
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 4222691229199675037
+      value {
+        Overrides {
+          Name: "Name"
+          String: "RebirthPlate"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: 1469.96094
+            Y: -248.091797
+            Z: -2.09332275
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 8
+            Y: 8
+            Z: 8
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 6997487586924821979
+    }
+  }
+}
+Objects {
   Id: 8242733357257470304
   Name: "Teleporter Landing"
   Transform {
@@ -57,40 +104,12 @@ Objects {
   }
 }
 Objects {
-  Id: 11356138887542544570
-  Name: "To Tropical Beach"
-  Transform {
-    Location {
-      X: -43.7207031
-      Y: 2133.25195
-    }
-    Rotation {
-    }
-    Scale {
-      X: 2.3926425
-      Y: 2.3926425
-      Z: 2.3926425
-    }
-  }
-  ParentId: 10966550013016146936
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "To Tropical Beach"
-  }
-}
-Objects {
   Id: 15351899610614648275
   Name: "To Disco Hall"
   Transform {
     Location {
       X: -43.7207031
-      Y: 1585.94336
+      Y: 2126.52539
     }
     Rotation {
     }
@@ -110,6 +129,34 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "To Disco Hall"
+  }
+}
+Objects {
+  Id: 11356138887542544570
+  Name: "To Tropical Beach"
+  Transform {
+    Location {
+      X: -43.7207031
+      Y: 1585.04492
+    }
+    Rotation {
+    }
+    Scale {
+      X: 2.3926425
+      Y: 2.3926425
+      Z: 2.3926425
+    }
+  }
+  ParentId: 10966550013016146936
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "To Tropical Beach"
   }
 }
 Objects {

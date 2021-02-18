@@ -7,7 +7,7 @@ Assets {
       RootId: 1873900053037563493
       Objects {
         Id: 1873900053037563493
-        Name: "MushroomClientContext_3"
+        Name: "$MushroomClientContext_3"
         Transform {
           Scale {
             X: 1
@@ -1755,16 +1755,16 @@ Assets {
         Name: "Decal Elven Symbols"
         Transform {
           Location {
-            X: -0.107294805
-            Y: 7.24198866
-            Z: 28.6111431
+            X: -0.107884355
+            Y: 7.24044371
+            Z: 60.610939
           }
           Rotation {
           }
           Scale {
-            X: 0.851223826
-            Y: 0.851223826
-            Z: 0.851223826
+            X: 0.851234
+            Y: 0.851206362
+            Z: 0.724292517
           }
         }
         ParentId: 16778676133152796326

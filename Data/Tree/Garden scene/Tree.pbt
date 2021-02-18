@@ -5,8 +5,9 @@ Objects {
   Name: "Teleporter Home"
   Transform {
     Location {
-      X: 5232.6792
-      Z: 68.1765137
+      X: 5288.45605
+      Y: -225.774414
+      Z: 68.1726074
     }
     Rotation {
     }
@@ -397,8 +398,9 @@ Objects {
   Name: "Teleporter Landing"
   Transform {
     Location {
-      X: -5232.67871
-      Z: 66.8295288
+      X: -5176.90186
+      Y: -225.774414
+      Z: 66.8256226
     }
     Rotation {
     }
@@ -425,9 +427,9 @@ Objects {
   Name: "Fence"
   Transform {
     Location {
-      X: 325
-      Y: 4400
-      Z: 50
+      X: 380.776855
+      Y: 4174.22559
+      Z: 49.9960938
     }
     Rotation {
     }
@@ -454,9 +456,9 @@ Objects {
   Name: "WedgeTrampoline"
   Transform {
     Location {
-      X: 112.643692
-      Y: 2358.15039
-      Z: 233.046234
+      X: 168.420532
+      Y: 2132.37598
+      Z: 233.042328
     }
     Rotation {
     }
@@ -1078,9 +1080,9 @@ Objects {
   Name: "Boosters"
   Transform {
     Location {
-      X: 240
-      Y: 785
-      Z: 165
+      X: 295.776855
+      Y: 559.225586
+      Z: 164.996094
     }
     Rotation {
     }
@@ -1107,9 +1109,9 @@ Objects {
   Name: "vegetation"
   Transform {
     Location {
-      X: 280
-      Y: -5860
-      Z: 70
+      X: 335.776855
+      Y: -6085.77441
+      Z: 69.9960938
     }
     Rotation {
     }
@@ -1153,9 +1155,9 @@ Objects {
         Overrides {
           Name: "Position"
           Vector {
-            X: 3905.93359
-            Y: -5652.21
-            Z: 60
+            X: 3961.71045
+            Y: -5877.98438
+            Z: 59.9960938
           }
         }
         Overrides {
@@ -1184,9 +1186,9 @@ Objects {
   Name: "Fence"
   Transform {
     Location {
-      X: 325
-      Y: 4400
-      Z: 50
+      X: 380.776855
+      Y: 4174.22559
+      Z: 49.9960938
     }
     Rotation {
     }
@@ -1198,7 +1200,7 @@ Objects {
   }
   ParentId: 15346583032969552003
   Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
+    Value: "mc:ecollisionsetting:forceon"
   }
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
@@ -1213,9 +1215,9 @@ Objects {
   Name: "Veggie patch"
   Transform {
     Location {
-      X: 475
-      Y: 785
-      Z: 50
+      X: 530.776855
+      Y: 559.225586
+      Z: 49.9960938
     }
     Rotation {
     }
@@ -1242,9 +1244,9 @@ Objects {
   Name: "Crates"
   Transform {
     Location {
-      X: -5487.38086
-      Y: 6206.95898
-      Z: 81.392395
+      X: -5431.604
+      Y: 5981.18457
+      Z: 81.3884888
     }
     Rotation {
     }
@@ -1271,9 +1273,9 @@ Objects {
   Name: "Fruit+veggies"
   Transform {
     Location {
-      X: -1675
-      Y: 1115
-      Z: 80
+      X: -1619.22314
+      Y: 889.225586
+      Z: 79.9960938
     }
     Rotation {
     }
@@ -1303,7 +1305,7 @@ Objects {
   Transform {
     Location {
       X: -955
-      Y: -6245
+      Y: -6629.91406
     }
     Rotation {
       Yaw: -35
@@ -2802,9 +2804,9 @@ Objects {
   Name: "Rocks"
   Transform {
     Location {
-      X: -195
-      Y: -6220
-      Z: 405
+      X: -139.223145
+      Y: -6445.77441
+      Z: 404.996094
     }
     Rotation {
     }
@@ -2831,8 +2833,8 @@ Objects {
   Name: "Ground"
   Transform {
     Location {
-      X: 500
-      Y: 550
+      X: 327.814941
+      Y: 263.009521
       Z: -700
     }
     Rotation {
@@ -2846,7 +2848,7 @@ Objects {
   ParentId: 15346583032969552003
   ChildIds: 14982843161775482339
   ChildIds: 17091733917147744905
-  ChildIds: 8413279626233207670
+  ChildIds: 18294876075795856155
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -2858,17 +2860,17 @@ Objects {
   }
 }
 Objects {
-  Id: 8413279626233207670
-  Name: "Cube - Bottom-Aligned"
+  Id: 18294876075795856155
+  Name: "Scene limit"
   Transform {
     Location {
     }
     Rotation {
     }
     Scale {
-      X: 165.097763
-      Y: 165.097763
-      Z: 52.0789757
+      X: 152
+      Y: 152
+      Z: 50
     }
   }
   ParentId: 15377254809547208498
@@ -2881,14 +2883,14 @@ Objects {
     }
   }
   Collidable_v2 {
-    Value: "mc:ecollisionsetting:forceoff"
+    Value: "mc:ecollisionsetting:forceon"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:forceon"
+    Value: "mc:evisibilitysetting:forceoff"
   }
   CoreMesh {
     MeshAsset {
-      Id: 4065777884031260765
+      Id: 16593169243176712161
     }
     Teams {
       IsTeamCollisionEnabled: true

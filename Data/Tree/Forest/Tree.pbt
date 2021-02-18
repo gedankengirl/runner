@@ -50,7 +50,7 @@ Objects {
   ChildIds: 1558925974066518266
   ChildIds: 9240871969528842041
   Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
+    Value: "mc:ecollisionsetting:forceoff"
   }
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
@@ -1975,7 +1975,7 @@ Objects {
   ChildIds: 6782044049003545371
   ChildIds: 13697641988438033428
   Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
+    Value: "mc:ecollisionsetting:forceoff"
   }
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
@@ -3192,7 +3192,7 @@ Objects {
   ChildIds: 3075114996757978011
   ChildIds: 2209823142761019385
   Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
+    Value: "mc:ecollisionsetting:forceoff"
   }
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
@@ -3825,7 +3825,7 @@ Objects {
   ChildIds: 12431927534204225175
   ChildIds: 4500263902448980626
   Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
+    Value: "mc:ecollisionsetting:forceoff"
   }
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
@@ -4494,7 +4494,7 @@ Objects {
   ChildIds: 17433860243211622113
   ChildIds: 3687186226298356092
   Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
+    Value: "mc:ecollisionsetting:forceoff"
   }
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
@@ -16360,6 +16360,7 @@ Objects {
   ParentId: 12794903354937555053
   ChildIds: 8571062207732517539
   ChildIds: 6094479264709994014
+  ChildIds: 5951755901894564612
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -16368,6 +16369,55 @@ Objects {
   }
   Folder {
     IsGroup: true
+  }
+}
+Objects {
+  Id: 5951755901894564612
+  Name: "Scene limit"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 152
+      Y: 152
+      Z: 50
+    }
+  }
+  ParentId: 6043336544795926621
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 7055655178099606474
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceon"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:forceoff"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 16593169243176712161
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    DisableDistanceFieldLighting: true
+    DisableCastShadows: true
+    DisableReceiveDecals: true
+    EnableCameraCollision: true
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+    }
   }
 }
 Objects {

@@ -1,19 +1,4 @@
---[[
-Copyright 2019 Manticore Games, Inc. 
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated
-documentation files (the "Software"), to deal in the Software without restriction, including without limitation the
-rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit
-persons to whom the Software is furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the
-Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE
-WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
-COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
-OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
---]]
+-- NB!: CORE"S SCRIPT CUSTOMIZED TO CHECK TELEPORTER'S LEVEL REQUIREMENT
 
 -- Internal custom properties
 local COMPONENT_ROOT = script:GetCustomProperty("ComponentRoot"):WaitForObject()
@@ -24,6 +9,14 @@ local TARGET = COMPONENT_ROOT:GetCustomProperty("Target"):WaitForObject()
 local DESTINATION_OFFSET = COMPONENT_ROOT:GetCustomProperty("DestinationOffset")
 local TELEPORTER_COOLDOWN = COMPONENT_ROOT:GetCustomProperty("TeleporterCooldown")
 local PER_PLAYER_COOLDOWN = COMPONENT_ROOT:GetCustomProperty("PerPlayerCooldown")
+
+-- Customization values
+local TELEPORTER = script.parent
+local LVL_REQ = TELEPORTER:GetCustomProperty("LevelReq") or 0
+local BUSINESS_LOGIC = _G.req("BusinessLogic")
+
+assert (LVL_REQ, "either the parent object or its custom property has not been found")
+
 
 -- Check user properties
 if TELEPORTER_COOLDOWN < 0.0 then
@@ -42,6 +35,12 @@ local useTime = 0.0
 -- nil TryTeleportPlayer(Player)
 -- Try to teleport the player, checking appropriate conditions
 function TryTeleportPlayer(player)
+	-- Check if Player's level meets the teleporter's level requirement
+	local level = player:GetResource(BUSINESS_LOGIC.REBIRTH_KEY)
+    if level < LVL_REQ then
+		return
+	end
+
 	-- Make sure we don't enter an infinite loop
 	if _G.TeleporterServer.isTeleporting then
 		return

@@ -62,6 +62,15 @@ Assets {
   }
 }
 Assets {
+  Id: 16593169243176712161
+  Name: "Container - Square Thin 01"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_container_square_thin_ref"
+  }
+}
+Assets {
   Id: 16325489697704183042
   Name: "Dust Motes Volume VFX"
   PlatformAssetType: 8
@@ -365,6 +374,15 @@ Assets {
   PrimaryAsset {
     AssetType: "VfxBlueprintAssetRef"
     AssetId: "fxbp_Swirling_Magic_Column"
+  }
+}
+Assets {
+  Id: 7055655178099606474
+  Name: "Glass 01"
+  PlatformAssetType: 2
+  PrimaryAsset {
+    AssetType: "MaterialAssetRef"
+    AssetId: "mi_basic_glass_refrac_001"
   }
 }
 Assets {

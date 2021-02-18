@@ -27,6 +27,11 @@ Objects {
             Y: 254.65625
           }
         }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
       }
     }
     TemplateAsset {
