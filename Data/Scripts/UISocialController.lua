@@ -1,5 +1,6 @@
 local Deque = _G.req("_Deque")
 local Maid = _G.req("_Maid")
+local B = _G.req("BusinessLogic")
 local STATIC_CONTEXT = script.parent:GetCustomProperty("StaticContext"):WaitForObject()
 local P = require(STATIC_CONTEXT:GetCustomProperty("Protocols"))
 local S = require(STATIC_CONTEXT:GetCustomProperty("StaticData"))
@@ -101,9 +102,13 @@ local function WriteLine(lineInfo)
     PushLinesUp()
     local line = SpawnLine()
     -- Player icon.
-    line.PlayerIcon:SetImage(lineInfo.player)
+    if type(lineInfo.player) == "userdata" then
+        line.PlayerIcon:SetImage(lineInfo.player)
+    else
+        line.PlayerIcon:SetImage("EB55834C5013E70F:Icon Profile")
+    end
     -- Layered messages.
-    local fullMessage = lineInfo.player.name .. " " .. lineInfo.message
+    local fullMessage = lineInfo.message
     local nameMessage = lineInfo.player.name
     line.TextBack.text = fullMessage
     line.TextFront.text = nameMessage
@@ -121,26 +126,32 @@ local function WriteLine(lineInfo)
     line.IconVictory.visibility = Visibility.FORCE_OFF
     line.IconMap.visibility = Visibility.FORCE_OFF
     line.IconEnemy.visibility = Visibility.FORCE_OFF
-    if lineInfo.type == "NewMap" then
+    if lineInfo.type == "Hatch" then
         line.TextBack:SetColor(COLOR_MESSAGE_NEW_MAP)
-        line.IconMap:SetColor(COLOR_MESSAGE_NEW_MAP)
-        line.IconMap.visibility = Visibility.INHERIT
-    elseif lineInfo.type == "MapComplete" then
-        line.TextBack:SetColor(COLOR_MESSAGE_MAP_COMPLETE)
-        line.IconVictory:SetColor(COLOR_MESSAGE_MAP_COMPLETE)
-        line.IconVictory.visibility = Visibility.INHERIT
+        line.IconRank:SetColor(COLOR_MESSAGE_NEW_MAP)
+        line.IconRankNumber:SetColor(COLOR_MESSAGE_NEW_MAP)
+        line.IconRank.visibility = Visibility.INHERIT
+        line.IconRankNumber.text = tostring(lineInfo.actorRank)
     elseif lineInfo.type == "Merge" then
         line.TextBack:SetColor(COLOR_MESSAGE_MERGE)
         line.IconRank:SetColor(COLOR_MESSAGE_MERGE)
         line.IconRankNumber:SetColor(COLOR_MESSAGE_MERGE)
         line.IconRank.visibility = Visibility.INHERIT
         line.IconRankNumber.text = tostring(lineInfo.actorRank)
-    elseif lineInfo.type == "Combat" then
+    elseif lineInfo.type == "Rebirth" then
+        line.TextBack:SetColor(COLOR_MESSAGE_MAP_COMPLETE)
+        line.IconRank:SetColor(COLOR_MESSAGE_MAP_COMPLETE)
+        line.IconRankNumber:SetColor(COLOR_MESSAGE_MAP_COMPLETE)
+        line.IconRank.visibility = Visibility.INHERIT
+        line.IconRankNumber.text = tostring(lineInfo.actorRank)
+    elseif lineInfo.type == "Connect" then
         line.TextBack:SetColor(COLOR_MESSAGE_COMBAT)
         line.IconRank:SetColor(COLOR_MESSAGE_COMBAT)
         line.IconRankNumber:SetColor(COLOR_MESSAGE_COMBAT)
         line.IconRank.visibility = Visibility.INHERIT
         line.IconRankNumber.text = tostring(lineInfo.actorRank)
+    elseif lineInfo.type == "Disconnect" then
+        line.TextBack:SetColor(COLOR_MESSAGE_COMBAT)
     end
 
     line.scrollTimer = LINE_SCROLL_TIME
@@ -174,17 +185,11 @@ end
 ----------------------------------------------------------------------------------------------------
 local playersById = {}
 local function GetPlayerById(playerId)
-    return playersById[playerId]
+    local players = Game.GetPlayers()
+    for _, player in ipairs(players) do
+        if player.id == playerId then return player end
+    end
 end
-
-local function OnPlayerJoined(player)
-    playersById[player.id] = player
-end
-
-local function OnPlayerLeft(player)
-    playersById[player.id] = nil
-end
-
 ----------------------------------------------------------------------------------------------------
 local QUEUE_LIMIT = 30
 local importantQueue = Deque.New()
@@ -192,57 +197,12 @@ local frivolousQueue = Deque.New()
 local rolloutTimer = 0
 
 local function PushOntoAppropriateQueue(lineInfo)
-    local isImportant = lineInfo.player == LOCAL_PLAYER or lineInfo.type == "NewMap" or lineInfo.type == "MapComplete"
+    local isImportant = lineInfo.player == LOCAL_PLAYER
     local appropriateQueue = isImportant and importantQueue or frivolousQueue
     if appropriateQueue:Count() > QUEUE_LIMIT then
         appropriateQueue:PopFront()
     end
     appropriateQueue:PushBack(lineInfo)
-end
-
-local function OnMapLoad(playerId, mapId)
-    local player = GetPlayerById(playerId)
-    local mapDefinition = MAP_CATALOG[mapId]
-    PushOntoAppropriateQueue({
-        type = "NewMap",
-        player = player,
-        message = "started " .. mapDefinition.name,
-    })
-end
-
-local function OnMapVictory(playerId, mapId)
-    local player = GetPlayerById(playerId)
-    local mapDefinition = MAP_CATALOG[mapId]
-    PushOntoAppropriateQueue({
-        type = "MapComplete",
-        player = player,
-        message = "finished " .. mapDefinition.name,
-    })
-end
-
-local function OnMergedNewActors(playerId, mapId, actorType, numGenerated)
-    local player = GetPlayerById(playerId)
-    local mapDefinition = MAP_CATALOG[mapId]
-    local actorName, actorRank = mapDefinition:GetActorNameAndRank(actorType)
-    PushOntoAppropriateQueue({
-        type = "Merge",
-        player = player,
-        message = "merged " .. actorName,
-        actorRank = actorRank,
-    })
-end
-
-local function OnEnemyDefeated(playerId, mapId, tileIndex)
-    local player = GetPlayerById(playerId)
-    local mapDefinition = MAP_CATALOG[mapId]
-    local enemyType = mapDefinition:GetDefaultTileActorType(tileIndex)
-    local enemyName, enemyRank = mapDefinition:GetActorNameAndRank(enemyType)
-    PushOntoAppropriateQueue({
-        type = "Combat",
-        player = player,
-        message = "defeated " .. enemyName,
-        actorRank = enemyRank,
-    })
 end
 
 local function UpdateRollout(dt)
@@ -260,46 +220,75 @@ function Tick(dt)
     UpdateRollout(dt)
     UpdateLines(dt)
 end
-
 ---------------------------------------------------------------------------------------------------
--- local social_protocols = {
---     [HATCH.op] = HATCH,
---     [MERGE.op] = MERGE,
---     [REBIRTH.op] = REBIRTH,
---     [CONNECT.op] = CONNECT,
---     [DISCONNECT.op] = DISCONNECT
--- }
-
 local SocialHandlers = {}
 
-function SocialHandlers.OnSocial_Hatch()
+function SocialHandlers.OnSocial_Hatch(player_id, pet_id)
+    local player = GetPlayerById(player_id)
+    if not player then return end
+    local pet = S.PetDb:GetName(pet_id)
+    local _, rarity = S.PetDb:GetRarity(pet_id)
+    PushOntoAppropriateQueue{
+        type = "Hatch",
+        player = player,
+        actorRank = player:GetResource(B.REBIRTH_KEY) or 0,
+        message = string.format("%s hatched %s %s", player.name, rarity, pet)
+    }
 end
 
-function SocialHandlers.OnSocial_Merge()
+function SocialHandlers.OnSocial_Merge(player_id, pet_id)
+    local player = GetPlayerById(player_id)
+    if not player then return end
+    local pet = S.PetDb:GetName(pet_id)
+    local _, upgrade = S.PetDb:GetUpgradeStatus(pet_id)
+    PushOntoAppropriateQueue{
+        type = "Merge",
+        player = player,
+        actorRank = player:GetResource(B.REBIRTH_KEY) or 0,
+        message = string.format("%s merged %s %s", player.name, upgrade, pet)
+    }
 end
 
-function SocialHandlers.OnSocial_Rebirth()
+function SocialHandlers.OnSocial_Rebirth(player_id, rebirth)
+    local player = GetPlayerById(player_id)
+    if not player then return end
+    PushOntoAppropriateQueue{
+        type = "Rebirth",
+        player = player,
+        actorRank = player:GetResource(B.REBIRTH_KEY) or 0,
+        message = string.format("%s rebirthed %d-th time", player.name, rebirth)
+    }
 end
 
-function SocialHandlers.OnSocial_Connect()
+function SocialHandlers.OnSocial_Connect_Local(player)
+    if not player then return end
+    PushOntoAppropriateQueue{
+        type = "Connect",
+        player = player,
+        actorRank = player:GetResource(B.REBIRTH_KEY) or 0,
+        message = string.format("%s join the game", player.name)
+    }
 end
 
-function SocialHandlers.OnSocial_Disconnect()
+function SocialHandlers.OnSocial_Disconnect_Local(player)
+    if not player then return end
+    PushOntoAppropriateQueue{
+        type = "Disconnect",
+        player = {name=player.name},
+        message = string.format("%s left the game", player.name)
+    }
 end
-
-Game.playerJoinedEvent:Connect(OnPlayerJoined)
-Game.playerLeftEvent:Connect(OnPlayerLeft)
 
 for _op, protocol in pairs(P.SOCIAL.protocols) do
     local event = protocol.event
     local handler = "On"..event
-    _maid:GiveTask(Events.Connect(event, SocialHandlers[handler]))
+    if SocialHandlers[handler] then
+        _maid:GiveTask(Events.Connect(event, SocialHandlers[handler]))
+    end
 end
 
-Events.Connect("Social_MapLoad", OnMapLoad)
-Events.Connect("Social_MapVictory", OnMapVictory)
-Events.Connect("Social_MergedNewActors", OnMergedNewActors)
-Events.Connect("Social_EnemyDefeated", OnEnemyDefeated)
+_maid:GiveTask(Game.playerJoinedEvent:Connect(SocialHandlers.OnSocial_Connect_Local))
+_maid:GiveTask(Game.playerLeftEvent:Connect(SocialHandlers.OnSocial_Disconnect_Local))
 
 --[[
 ---------------------------------------------------------------------------------------------------

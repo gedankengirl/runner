@@ -10,8 +10,13 @@ local UPGRADE = {
     DARK = 6,
     PERLECENT = 7
 }
+
 -- limit max upgrade
 UPGRADE.MAX = UPGRADE.DIAMOND
+
+local UPGRADE_NAMES = {
+ "", "Golden", "Diamond", "Emerald", "Ruby", "Dark", "Perlecent"
+}
 
 local RARITY = {
     COMMON = 1,
@@ -21,6 +26,10 @@ local RARITY = {
     LEGENDARY = 5,
     MYTHIC = 6,
     GODLY = 7
+}
+
+local RARITY_NAMES = {
+    "Common", "Unique", "Rare", "Epic", "Legendary", "Mythic", "Godly"
 }
 
 -- name, rarity, upgrade, bonus, muid, [next upgrade id]
@@ -113,7 +122,13 @@ local PetDb, EggDb do
     end
 
     function PetDb:GetUpgradeStatus(id)
-        return self[id][kUpgrade]
+        local n = self[id][kUpgrade]
+        return n, UPGRADE_NAMES[n]
+    end
+
+    function PetDb:GetRarity(id)
+        local n = self[id][kRarity]
+        return n, RARITY_NAMES[n]
     end
 
     function PetDb:CanUpgrade(id1, id2)
