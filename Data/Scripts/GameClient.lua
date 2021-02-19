@@ -3,11 +3,11 @@ local Grid = _G.req("_Grid")
 local Base64 = _G.req("_Base64")
 local REvents = _G.req("ReliableEvents")
 local StateMachine = _G.req("StateMachine")
+local P = _G.req("Protocols")
+local S = _G.req("StaticData")
 local pp = _G.req("_Luapp").pp
 local DOWNLINK = script:GetCustomProperty("DOWNLINK"):WaitForObject()
 local STATIC_CONTEXT = script:GetCustomProperty("StaticContext"):WaitForObject()
-local P = require(STATIC_CONTEXT:GetCustomProperty("Protocols"))
-local S = require(STATIC_CONTEXT:GetCustomProperty("StaticData"))
 local LOCAL_PLAYER = Game.GetLocalPlayer()
 local INVENTORY_ROOT = assert(script:GetCustomProperty("InventoryRoot"):WaitForObject())
 local INVENTORY_CAM = script:GetCustomProperty("InventoryCamera"):WaitForObject()
@@ -181,21 +181,22 @@ end
 --------------------------
 function INGAME:Enter(from)
     print("InGame_Enter")
-    REvents.BroadcastToServer("InGame_Enter")
+    self.isInteractionEnabled = true
+    REvents.BroadcastToServer(P.C2S.INGAME_ENTER) -- for equipment server
 end
 
 function INGAME:Exit()
     print("InGame_Exit")
-    REvents.BroadcastToServer("InGame_Exit")
+    self.isInteractionEnabled = false
+    REvents.BroadcastToServer(P.C2S.INGAME_EXIT)
 end
 
 function INGAME:HandleInventoryBinding()
     ISM:GoToState(INVENTORY)
 end
 
-function INVENTORY:Check()
-    -- return LOCAL_PLAYER:GetActiveCamera() == DEFAULT_CAM and _maid.grid
-    return true
+function INGAME:HandleModal(modal_arg)
+    self.isInteractionEnabled = modal_arg < P.MODAL_ARG.OPEN
 end
 
 --------------------------
@@ -205,6 +206,11 @@ local function _show_cursor(show)
     UI.SetCursorVisible(show)
     UI.SetCursorLockedToViewport(not show)
     UI.SetCanCursorInteractWithUI(show)
+end
+
+function INVENTORY:Check()
+    -- TODO: check cameras
+    return _maid.grid and true
 end
 
 function INVENTORY:Enter(from)
@@ -512,6 +518,12 @@ function INVENTORY._OnTileUnderCursorChanged(grid, cursor_cell, move_outcome)
     end
 end
 
+function INVENTORY:HandleModal(modal_arg)
+    self.isInteractionEnabled = modal_arg < P.MODAL_ARG.OPEN
+end
+
+
+
 -----------------------------------------------------------------------------
 -- Main
 -----------------------------------------------------------------------------
@@ -521,9 +533,12 @@ do -- main
         ["ability_extra_27"] = {"_", "HandleInventoryBinding"}, -- `I` button for inventory
         ["ability_primary"] = {"HandleLeftMouseDown", "HandleLeftMouseUp"},
         ["ability_secondary"] = {"HandleRightMouseDown", "HandleRightMouseUp"},
+        [P.CLIENT_LOCAL.MODAL] = {"HandleModal"} -- +1 arg
     })
-    ISM:Connect(LOCAL_PLAYER.bindingPressedEvent, function(_, binding) ISM:MapToStateHandler(binding, 1) end)
-    ISM:Connect(LOCAL_PLAYER.bindingReleasedEvent, function(_, binding) ISM:MapToStateHandler(binding, 2) end)
+    ISM:Connect(LOCAL_PLAYER.bindingPressedEvent, function(_player, binding) ISM:MapToStateHandler(binding, 1) end)
+    ISM:Connect(LOCAL_PLAYER.bindingReleasedEvent, function(_player, binding) ISM:MapToStateHandler(binding, 2) end)
+    ISM:Connect(Events, function(...) ISM:MapToStateHandler(P.CLIENT_LOCAL.MODAL, 1, ...) end, P.CLIENT_LOCAL.MODAL)
+
     ISM:GoToState(INGAME)
 
     -- DEBUG:

@@ -59,6 +59,11 @@ local BroadcastFactory do
 
     BroadcastFactory = function(method)
         return function (...)
+            local event = select(1, ...)
+            if not event or type(event) ~= "string" then
+                warn("Bad argument to brodcast\n" .. CoreDebug.GetStackTrace())
+                return
+            end
             if txqueue:empty() then
                 local result, _ = Events[method](...)
                 if result == BroadcastEventResultCode.EXCEEDED_RATE_LIMIT then
@@ -82,7 +87,11 @@ local Broadcast do
 
     -- for the nested events, we broadcast them in breadth-first order
     Broadcast = function(...)
-        -- assert(select("#", ...) >= 1 and type(select(1, ...)) == "string", CoreDebug.GetStackTrace())
+        local event = select(1, ...)
+        if not event or type(event) ~= "string" then
+            warn("Bad argument to brodcast\n" .. CoreDebug.GetStackTrace())
+            return
+        end
         if not _in_trampoline then
         _in_trampoline = true
             Events.Broadcast(...)

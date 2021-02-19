@@ -1,4 +1,5 @@
 ﻿local Maid = _G.req("_Maid")
+local P = _G.req("Protocols")
 local COMPONENT_ROOT = script:GetCustomProperty("ComponentRoot"):WaitForObject()
 local EQUIPMENT_TEMPLATE = assert(COMPONENT_ROOT:GetCustomProperty("EquipmentTemplate"))
 local _maid = Maid.New(script)
@@ -18,13 +19,13 @@ end
 
 _maid.playerJoinedEvent = Game.playerJoinedEvent:Connect(OnPlayerJoined)
 _maid.playerLeftEvent = Game.playerLeftEvent:Connect(OnPlayerLeft)
-_maid.InGame_Enter = Events.ConnectForPlayer("InGame_Enter", function(player)
+_maid.InGame_Enter = Events.ConnectForPlayer(P.C2S.INGAME_ENTER, function(player)
     if _maid[player.id] and _maid[player.id]:IsValid() then
         _maid[player.id]:Equip(player)
     end
 end)
 
-_maid.InGame_Exit = Events.ConnectForPlayer("InGame_Exit", function(player)
+_maid.InGame_Exit = Events.ConnectForPlayer(P.C2S.INGAME_EXIT, function(player)
     if _maid[player.id] and _maid[player.id]:IsValid() then
         _maid[player.id]:Unequip(player)
     end

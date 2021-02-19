@@ -162,7 +162,19 @@ Protocols.MOVE_OUTCOME = {
 -- internal client events
 Protocols.CLIENT_LOCAL = {
     EGG_HATCHED = "Egg_Hatched",
+    MODAL = "Interactions_Modal"
+}
 
+Protocols.C2S = {
+    INGAME_ENTER = "Ingame_Enter",
+    INGAME_EXIT  = "Ingame_Exit"
+}
+
+
+Protocols.MODAL_ARG = {
+    NO_ARG = 0,
+    YES_ARG = 1,
+    OPEN_ARG = 2,
 }
 
 -- Environment

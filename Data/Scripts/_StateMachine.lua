@@ -31,8 +31,8 @@ function StateMachine:SetBindingHandlers(handlers)
 end
 
 function StateMachine:MapToStateHandler(binding, handlerIndex, ...)
+    assert(handlerIndex and type(handlerIndex) == "number")
     if not self.handlers[binding] then return end
-    handlerIndex = handlerIndex or 1
     local handler = self.handlers[binding][handlerIndex]
     if self.currentState and self.currentState[handler] then
         self.currentState[handler](self.currentState, ...)
