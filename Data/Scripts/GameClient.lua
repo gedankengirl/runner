@@ -116,7 +116,7 @@ function Client:_SetupEventForwarding()
     for _op, protocol in pairs(P.SOCIAL.protocols) do
         local event = protocol.event
         _maid:GiveTask(Events.Connect(event, function(...)
-            print("[SOCIAL:DEBUG]", event, ...)
+            print("[SOCIAL DEBUG]", event, ...)
         end))
     end
 end

@@ -135,7 +135,7 @@ local function doRebirth(player)
     if ok then
         player:SetResource(REBIRTH_KEY, rebirth + 1)
         setSpeed(player, 0)
-        return true
+        return true, rebirth + 1
     end
     return false, needed, has, rebirth
 end

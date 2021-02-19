@@ -211,14 +211,12 @@ function Server:OnPlayerJoined(player)
     if self.playerConnections[player] then return end
     -- TODO: remove player data from args
     self.playerConnections[player] = PlayerConnection.New(player)
-    REvents.Broadcast(P.SOCIAL.CONNECT.event, player)
 end
 
 function Server:OnPlayerLeft(player)
     local connection = self.playerConnections[player]
     self.playerConnections[player] = nil
     connection:Destroy()
-    REvents.Broadcast(P.SOCIAL.DISCONNECT.event, player)
 end
 
 Server:Start()
