@@ -182,13 +182,13 @@ end
 function INGAME:Enter(from)
     print("InGame_Enter")
     self.isInteractionEnabled = true
-    REvents.BroadcastToServer(P.C2S.INGAME_ENTER) -- for equipment server
+    REvents.BroadcastToServer(P.C2S.EQUIPMENT_ON) -- for equipment server
 end
 
 function INGAME:Exit()
     print("InGame_Exit")
     self.isInteractionEnabled = false
-    REvents.BroadcastToServer(P.C2S.INGAME_EXIT)
+    REvents.BroadcastToServer(P.C2S.EQUIPMENT_OFF)
 end
 
 function INGAME:HandleInventoryBinding()
@@ -389,8 +389,8 @@ function INVENTORY:HandleLeftMouseDown()
     self.mouseDownCursorPosition = UI.GetCursorPosition()
     self.mouseInteractionType = nil
     self.hasMouseLeftDeadZone = nil
-    local actor = self.cellUnderCursor.actor
-    if self.cellUnderCursor and actor then
+    local actor = self.cellUnderCursor and self.cellUnderCursor.actor
+    if actor then
         self.attachedActor = actor
         self.moveOutcome = nil
         -- When mousing down, end any ongoing animations immediately so the actor is locked into its base visual state.

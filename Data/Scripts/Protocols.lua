@@ -166,8 +166,8 @@ Protocols.CLIENT_LOCAL = {
 }
 
 Protocols.C2S = {
-    INGAME_ENTER = "Ingame_Enter",
-    INGAME_EXIT  = "Ingame_Exit"
+    EQUIPMENT_ON = "TurnOnEquipment",
+    EQUIPMENT_OFF = "TurnOffEquipment",
 }
 
 
