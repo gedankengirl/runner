@@ -127,6 +127,18 @@ Assets {
               Id: 18342435553950571227
             }
           }
+          Overrides {
+            Name: "cs:Protocols"
+            AssetReference {
+              Id: 5305102967692430199
+            }
+          }
+          Overrides {
+            Name: "cs:StaticData"
+            AssetReference {
+              Id: 14856984160948620178
+            }
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
