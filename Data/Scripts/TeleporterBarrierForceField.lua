@@ -7,13 +7,22 @@ assert (levelRequirement, "either the parent object or its custom property has n
 assert (levelRequirement > 0, "the field value must be greater than zero")
 assert (trigger:IsA("Trigger"), "no trigger has been found")
 
+local THROWBACK_DISTANCE = 50
+local THROWBACK_IMPULSE = 100000
+
+-- TODO: add client part with some restrictive sound
 function OnBeginOverlap(_trigger, other)
   if other:IsA("Player") then
     local level = other:GetResource(businessLogic.REBIRTH_KEY)
     if level < levelRequirement then
-      local dir = other:GetWorldPosition() - trigger:GetWorldPosition()
+      local position = other:GetWorldPosition()
+      local direction = position - trigger:GetWorldPosition()
+      direction.z = 0
+      direction = direction:GetNormalized()
+      -- apply trowback
       other:ResetVelocity()
-      other:AddImpulse(100000*dir:GetNormalized())
+      other:SetWorldPosition(position + direction*THROWBACK_DISTANCE)
+      other:AddImpulse(direction*THROWBACK_IMPULSE)
     end
   end
 end
