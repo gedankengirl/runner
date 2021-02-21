@@ -73,7 +73,7 @@ function Client:_AwaitDownlinkChannel()
     while not self.channel do
         Task.Wait(0.1)
         for _, val in pairs(DOWNLINK:GetCustomProperties()) do
-            local player_id, channel, social = P.PROTOCOL_OWNER.unpack(val)
+            local player_id, channel, social = P.S2C.CHANNELS.unpack(val)
             if player_id and player_id == LOCAL_PLAYER.id then
                 warn(pp{"got channel", LOCAL_PLAYER.name, player_id, channel, social})
                 self.channel = channel
@@ -88,14 +88,14 @@ function Client:_AwaitDownlinkChannel()
         if prop == self.channel then
             local b1, _, _ = Base64.dec3(data)
             local op = string.char(b1)
-            if op == P.PROTOCOL_RECORD.op then
-                local grid = P.PROTOCOL_RECORD.unpack(data, Grid.deserialize)
+            if op == P.S2C.INVENTORY.op then
+                local grid = P.S2C.INVENTORY.unpack(data, Grid.deserialize)
                 _maid.grid = grid -- <- kill old inventory
                 ISM:GoToState(INGAME)
                 Task.Wait()
                 self:_InstantiateInventory(assert(grid))
-            elseif op == P.PROTOCOL_EGG.op then
-                local pet_id, egg, row, col = P.PROTOCOL_EGG.unpack(data)
+            elseif op == P.S2C.EGG.op then
+                local pet_id, egg, row, col = P.P.S2C.EGG.unpack(data)
                 ISM:GoToState(INGAME)
                 self:_HatchEgg(pet_id, row, col)
                 REvents.Broadcast(P.CLIENT_LOCAL.EGG_HATCHED, egg, pet_id)
@@ -108,7 +108,7 @@ function Client:_AwaitDownlinkChannel()
     end)
     -- ask for inventory
     warn(pp{"ask server for inventory", LOCAL_PLAYER.name})
-    REvents.BroadcastToServer(P.CLIENT.GameInventoryRrequest)
+    REvents.BroadcastToServer(P.C2S.GameInventoryRrequest)
 end
 
 function Client:_SetupEventForwarding()
@@ -182,13 +182,13 @@ end
 function INGAME:Enter(from)
     print("InGame_Enter")
     self.isInteractionEnabled = true
-    REvents.BroadcastToServer(P.C2S.EQUIPMENT_ON) -- for equipment server
+    REvents.BroadcastToServer(P.C2S.TurnEquipmentOn) -- for equipment server
 end
 
 function INGAME:Exit()
     print("InGame_Exit")
     self.isInteractionEnabled = false
-    REvents.BroadcastToServer(P.C2S.EQUIPMENT_OFF)
+    REvents.BroadcastToServer(P.C2S.TurnEquipmentOff)
 end
 
 function INGAME:HandleInventoryBinding()
@@ -403,7 +403,7 @@ local function _notify_server(type, dst_cell, src_cell, other_cell)
     local function p(cell)
         return cell and {cell.row, cell.col, cell.actor and cell.actor.id}
     end
-    REvents.BroadcastToServer(P.CLIENT.TransmitInventoryModifications, type, p(dst_cell), p(src_cell), p(other_cell))
+    REvents.BroadcastToServer(P.C2S.TransmitInventoryModifications, type, p(dst_cell), p(src_cell), p(other_cell))
 end
 
 function INVENTORY:HandleLeftMouseUp()

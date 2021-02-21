@@ -356,7 +356,7 @@ Assets {
       }
       Objects {
         Id: 1096840467246655666
-        Name: "UI Container"
+        Name: "UI Container(order matters)"
         Transform {
           Location {
           }
@@ -370,6 +370,7 @@ Assets {
         }
         ParentId: 2415398450263118494
         ChildIds: 3161102089242200769
+        ChildIds: 6644879288469022771
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -566,6 +567,853 @@ Assets {
         Script {
           ScriptAsset {
             Id: 16886683776743936748
+          }
+        }
+      }
+      Objects {
+        Id: 6644879288469022771
+        Name: "PopupPanel"
+        Transform {
+          Location {
+          }
+          Rotation {
+            Yaw: -3.4150944e-06
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 1096840467246655666
+        ChildIds: 3955913630317822049
+        ChildIds: 1659234652366744361
+        ChildIds: 8060677182867735188
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:X"
+            ObjectReference {
+              SubObjectId: 15685009500465546738
+            }
+          }
+          Overrides {
+            Name: "cs:YES"
+            ObjectReference {
+              SubObjectId: 14933718392551860725
+            }
+          }
+          Overrides {
+            Name: "cs:NO"
+            ObjectReference {
+              SubObjectId: 2555057210573009506
+            }
+          }
+          Overrides {
+            Name: "cs:OK"
+            ObjectReference {
+              SubObjectId: 5372441260164928988
+            }
+          }
+          Overrides {
+            Name: "cs:TEXT"
+            ObjectReference {
+              SubObjectId: 10992597925728250253
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:forceoff"
+        }
+        Control {
+          Width: 8
+          Height: 8
+          RenderTransformPivot {
+            Anchor {
+              Value: "mc:euianchor:middlecenter"
+            }
+          }
+          AddSizeToParentIfUsingParentSize: true
+          UseParentWidth: true
+          UseParentHeight: true
+          Panel {
+            IsClipping: true
+          }
+          AnchorLayout {
+            SelfAnchor {
+              Anchor {
+                Value: "mc:euianchor:middlecenter"
+              }
+            }
+            TargetAnchor {
+              Anchor {
+                Value: "mc:euianchor:middlecenter"
+              }
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 3955913630317822049
+        Name: "Popup"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 6644879288469022771
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 12412081992422237432
+          }
+        }
+      }
+      Objects {
+        Id: 1659234652366744361
+        Name: "_Blocker"
+        Transform {
+          Location {
+            X: -2747.10986
+            Y: -1156.11975
+            Z: -70
+          }
+          Rotation {
+            Yaw: 44.9999962
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 6644879288469022771
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Control {
+          UIX: -2
+          UIY: -2
+          RenderTransformPivot {
+            Anchor {
+              Value: "mc:euianchor:middlecenter"
+            }
+          }
+          AddSizeToParentIfUsingParentSize: true
+          UseParentWidth: true
+          UseParentHeight: true
+          Button {
+            FontColor {
+              A: 1
+            }
+            FontSize: 20
+            ButtonColor {
+              A: 0.661
+            }
+            HoveredColor {
+              R: 1
+              G: 1
+              B: 1
+              A: 1
+            }
+            PressedColor {
+              R: 1
+              G: 1
+              B: 1
+              A: 1
+            }
+            DisabledColor {
+              R: 1
+              G: 1
+              B: 1
+              A: 1
+            }
+            Brush {
+              Id: 841534158063459245
+            }
+            IsButtonEnabled: true
+            OnlyUseMainColor: true
+            ClickMode {
+              Value: "mc:ebuttonclickmode:default"
+            }
+          }
+          AnchorLayout {
+            SelfAnchor {
+              Anchor {
+                Value: "mc:euianchor:middlecenter"
+              }
+            }
+            TargetAnchor {
+              Anchor {
+                Value: "mc:euianchor:middlecenter"
+              }
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 8060677182867735188
+        Name: "Root"
+        Transform {
+          Location {
+          }
+          Rotation {
+            Yaw: 3.41509485e-06
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 6644879288469022771
+        ChildIds: 14434931091161601767
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Folder {
+          IsFilePartition: true
+          FilePartitionName: "Root"
+        }
+      }
+      Objects {
+        Id: 14434931091161601767
+        Name: "UI Panel"
+        Transform {
+          Location {
+            X: -113.137093
+            Y: -148.492416
+          }
+          Rotation {
+            Yaw: -5.00001
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 8060677182867735188
+        ChildIds: 17872013191392935084
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Control {
+          Width: 800
+          Height: 600
+          RenderTransformPivot {
+            Anchor {
+              Value: "mc:euianchor:middlecenter"
+            }
+          }
+          Panel {
+          }
+          AnchorLayout {
+            SelfAnchor {
+              Anchor {
+                Value: "mc:euianchor:middlecenter"
+              }
+            }
+            TargetAnchor {
+              Anchor {
+                Value: "mc:euianchor:middlecenter"
+              }
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 17872013191392935084
+        Name: "UI Image"
+        Transform {
+          Location {
+            X: -26535.1309
+            Y: -6218.37207
+            Z: 690
+          }
+          Rotation {
+            Yaw: -24.9999619
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 14434931091161601767
+        ChildIds: 17260697373163788686
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Control {
+          Width: 200
+          Height: 200
+          RenderTransformPivot {
+            Anchor {
+              Value: "mc:euianchor:middlecenter"
+            }
+          }
+          UseParentWidth: true
+          UseParentHeight: true
+          Image {
+            Brush {
+              Id: 8316394068749470350
+            }
+            Color {
+              A: 0.713000059
+            }
+            TeamSettings {
+            }
+          }
+          AnchorLayout {
+            SelfAnchor {
+              Anchor {
+                Value: "mc:euianchor:topleft"
+              }
+            }
+            TargetAnchor {
+              Anchor {
+                Value: "mc:euianchor:topleft"
+              }
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 17260697373163788686
+        Name: "UI Image"
+        Transform {
+          Location {
+            X: -26535.125
+            Y: -6218.37158
+            Z: 690
+          }
+          Rotation {
+            Yaw: -24.9999142
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 17872013191392935084
+        ChildIds: 15507645259013702678
+        ChildIds: 14933718392551860725
+        ChildIds: 10992597925728250253
+        ChildIds: 2555057210573009506
+        ChildIds: 5372441260164928988
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Control {
+          Width: -32
+          Height: -32
+          RenderTransformPivot {
+            Anchor {
+              Value: "mc:euianchor:middlecenter"
+            }
+          }
+          AddSizeToParentIfUsingParentSize: true
+          UseParentWidth: true
+          UseParentHeight: true
+          Image {
+            Brush {
+              Id: 8142256572158983484
+            }
+            Color {
+              R: 0.0299999714
+              G: 0.0160927
+              A: 1
+            }
+            TeamSettings {
+            }
+          }
+          AnchorLayout {
+            SelfAnchor {
+              Anchor {
+                Value: "mc:euianchor:middlecenter"
+              }
+            }
+            TargetAnchor {
+              Anchor {
+                Value: "mc:euianchor:middlecenter"
+              }
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 15507645259013702678
+        Name: "X_bg"
+        Transform {
+          Location {
+            X: 0.0153876301
+            Y: 0.00271322206
+          }
+          Rotation {
+            Yaw: -3.4150944e-06
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 17260697373163788686
+        ChildIds: 15685009500465546738
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Control {
+          Width: 120
+          Height: 120
+          UIX: 40
+          UIY: -35
+          RenderTransformPivot {
+            Anchor {
+              Value: "mc:euianchor:middlecenter"
+            }
+          }
+          Image {
+            Brush {
+              Id: 15709523992004481946
+            }
+            Color {
+              A: 0.917000055
+            }
+            TeamSettings {
+            }
+          }
+          AnchorLayout {
+            SelfAnchor {
+              Anchor {
+                Value: "mc:euianchor:topright"
+              }
+            }
+            TargetAnchor {
+              Anchor {
+                Value: "mc:euianchor:topright"
+              }
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 15685009500465546738
+        Name: "@X"
+        Transform {
+          Location {
+            X: -2747.10986
+            Y: -1156.11938
+            Z: -70
+          }
+          Rotation {
+            Yaw: 44.9999924
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 15507645259013702678
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Control {
+          Width: 64
+          Height: 64
+          RenderTransformPivot {
+            Anchor {
+              Value: "mc:euianchor:middlecenter"
+            }
+          }
+          Button {
+            FontColor {
+              A: 1
+            }
+            FontSize: 20
+            ButtonColor {
+              R: 1
+              G: 0.00999999
+              B: 0.00999999
+              A: 1
+            }
+            HoveredColor {
+              R: 1
+              G: 0.526225209
+              B: 0.0199999809
+              A: 1
+            }
+            PressedColor {
+              R: 1
+              G: 0.502913892
+              B: 0.459999979
+              A: 1
+            }
+            DisabledColor {
+              R: 0.97
+              A: 0.238
+            }
+            Brush {
+              Id: 8539290119167451381
+            }
+            IsButtonEnabled: true
+            ClickMode {
+              Value: "mc:ebuttonclickmode:default"
+            }
+          }
+          AnchorLayout {
+            SelfAnchor {
+              Anchor {
+                Value: "mc:euianchor:middlecenter"
+              }
+            }
+            TargetAnchor {
+              Anchor {
+                Value: "mc:euianchor:middlecenter"
+              }
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 14933718392551860725
+        Name: "@YES"
+        Transform {
+          Location {
+            X: 21663.2578
+            Y: 15476.1523
+          }
+          Rotation {
+            Yaw: 14.9998989
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 17260697373163788686
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Control {
+          Width: 300
+          Height: 100
+          UIX: -32
+          UIY: -48
+          RenderTransformPivot {
+            Anchor {
+              Value: "mc:euianchor:middlecenter"
+            }
+          }
+          Button {
+            Label: "YES"
+            FontColor {
+              R: 0.110331029
+              G: 0.98
+              A: 1
+            }
+            FontSize: 48
+            ButtonColor {
+              A: 0.713000059
+            }
+            HoveredColor {
+              R: 1
+              G: 1
+              B: 1
+              A: 0.183000013
+            }
+            PressedColor {
+              A: 0.713000059
+            }
+            DisabledColor {
+              R: 1
+              G: 1
+              B: 1
+              A: 0.183000013
+            }
+            Brush {
+              Id: 841534158063459245
+            }
+            IsButtonEnabled: true
+            ClickMode {
+              Value: "mc:ebuttonclickmode:default"
+            }
+          }
+          AnchorLayout {
+            SelfAnchor {
+              Anchor {
+                Value: "mc:euianchor:bottomright"
+              }
+            }
+            TargetAnchor {
+              Anchor {
+                Value: "mc:euianchor:bottomcenter"
+              }
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 10992597925728250253
+        Name: "@TEXT"
+        Transform {
+          Location {
+            X: 19643.7363
+            Y: 14660.3633
+            Z: -760
+          }
+          Rotation {
+            Yaw: 74.9999466
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 17260697373163788686
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Control {
+          Width: 670
+          Height: 330
+          UIY: 60
+          RenderTransformPivot {
+            Anchor {
+              Value: "mc:euianchor:middlecenter"
+            }
+          }
+          Text {
+            Label: "MMMM MMMMMMMMMMMMM  MMMMMM MMMMMMM MMMMMMM  MMMMMM MMMMMMM MMMMMMM MMMMMMM MMMMMMMMMM MMMMMMM MMMMM MMM MMMM MMM"
+            Color {
+              R: 0.98
+              G: 0.623046339
+              A: 1
+            }
+            Size: 32
+            Justification {
+              Value: "mc:etextjustify:center"
+            }
+            AutoWrapText: true
+          }
+          AnchorLayout {
+            SelfAnchor {
+              Anchor {
+                Value: "mc:euianchor:topcenter"
+              }
+            }
+            TargetAnchor {
+              Anchor {
+                Value: "mc:euianchor:topcenter"
+              }
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 2555057210573009506
+        Name: "@NO"
+        Transform {
+          Location {
+            X: 21663.2539
+            Y: 15476.1475
+          }
+          Rotation {
+            Yaw: 14.9999208
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 17260697373163788686
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Control {
+          Width: 300
+          Height: 100
+          UIX: 32
+          UIY: -48
+          RenderTransformPivot {
+            Anchor {
+              Value: "mc:euianchor:middlecenter"
+            }
+          }
+          Button {
+            Label: "NO"
+            FontColor {
+              R: 1
+              A: 1
+            }
+            FontSize: 48
+            ButtonColor {
+              A: 0.713000059
+            }
+            HoveredColor {
+              R: 1
+              G: 1
+              B: 1
+              A: 0.183000013
+            }
+            PressedColor {
+              A: 0.713000059
+            }
+            DisabledColor {
+              R: 1
+              G: 1
+              B: 1
+              A: 0.183000013
+            }
+            Brush {
+              Id: 841534158063459245
+            }
+            IsButtonEnabled: true
+            ClickMode {
+              Value: "mc:ebuttonclickmode:default"
+            }
+          }
+          AnchorLayout {
+            SelfAnchor {
+              Anchor {
+                Value: "mc:euianchor:bottomleft"
+              }
+            }
+            TargetAnchor {
+              Anchor {
+                Value: "mc:euianchor:bottomcenter"
+              }
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 5372441260164928988
+        Name: "@OK"
+        Transform {
+          Location {
+            X: 21663.2441
+            Y: 15476.1406
+          }
+          Rotation {
+            Yaw: 14.9999418
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 17260697373163788686
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Control {
+          Width: 300
+          Height: 100
+          UIY: -48
+          RenderTransformPivot {
+            Anchor {
+              Value: "mc:euianchor:middlecenter"
+            }
+          }
+          Button {
+            Label: "OK"
+            FontColor {
+              R: 0.98
+              G: 0.623046339
+              A: 1
+            }
+            FontSize: 48
+            ButtonColor {
+              A: 0.713000059
+            }
+            HoveredColor {
+              R: 1
+              G: 1
+              B: 1
+              A: 0.183000013
+            }
+            PressedColor {
+              A: 0.713000059
+            }
+            DisabledColor {
+              R: 1
+              G: 1
+              B: 1
+              A: 0.183000013
+            }
+            Brush {
+              Id: 841534158063459245
+            }
+            IsButtonEnabled: true
+            ClickMode {
+              Value: "mc:ebuttonclickmode:default"
+            }
+          }
+          AnchorLayout {
+            SelfAnchor {
+              Anchor {
+                Value: "mc:euianchor:bottomcenter"
+              }
+            }
+            TargetAnchor {
+              Anchor {
+                Value: "mc:euianchor:bottomcenter"
+              }
+            }
           }
         }
       }
@@ -787,7 +1635,51 @@ Assets {
       Name: "Protocols"
       PlatformAssetType: 3
       TextAsset {
-        Text: "local Base64 = _G.req(\"_Base64\")\nlocal _pp = _G.req(\"_Luapp\").pp\npp = function(...) warn(\"\\n\".._pp{...}) end\nlocal Protocols = {}\nProtocols.__index = Protocols\n\nlocal spack, sunpack = string.pack, string.unpack\nlocal enc, dec, testOp = Base64.encode, Base64.decode, Base64.test_prefix\n\n\nlocal PROTOCOL_OWNER do\n    local op, fmt = \"$\", \"c1 z c3 c3 c1\"\n    local function pack(player_id, channel, social, nonce)\n        assert(nonce)\n        return enc(spack(fmt, op, player_id, channel, social, nonce))\n    end\n    local function unpack(msg)\n        if msg and type(msg) == \"string\" and #msg > 0 and testOp(msg, op) then\n            local _op, player_id, channel, social, _nonce = sunpack(fmt, dec(msg))\n            return player_id, channel, social\n        end\n    end\n    PROTOCOL_OWNER = {op=op, pack=pack, unpack=unpack}\nend\n\nlocal PROTOCOL_EGG do\n    local op, fmt = \"#\", \"c1 B z B B\"\n    local function pack(pet_id, egg_id, row, col, nonce)\n        assert(nonce, CoreDebug.GetStackTrace())\n        return enc(spack(fmt, op, pet_id, egg_id, row, col, nonce))\n    end\n    local function unpack(msg)\n        if msg and type(msg) == \"string\" and #msg > 0 and testOp(msg, op) then\n            local _op, pet_id, egg_id, row, col, _nonce = sunpack(fmt, dec(msg))\n            return pet_id, egg_id, row, col\n        end\n    end\n    PROTOCOL_EGG = {op=op, pack=pack, unpack=unpack}\nend\n\n-- TODO: rename record to grid or inventory\nlocal PROTOCOL_RECORD do\n    local op = \"@\"\n    local function pack(frags, nonce)\n        assert(nonce)\n        assert(frags[1] == \"\", \"there is no `op` placeholder at [1]\")\n        frags[1] = op\n        frags[#frags + 1] = nonce\n        return enc(table.concat(frags))\n    end\n    local function unpack(msg, deserialize)\n        assert(deserialize and type(deserialize) == \"function\")\n        if msg and #msg > 0 and testOp(msg, op) then\n            local decoded  = dec(msg)\n            -- ajust indices to remove op and nonce\n            local from, to = #op + 1, #decoded - 1\n            local record = deserialize(decoded, from, to)\n            return record\n        end\n    end\n    PROTOCOL_RECORD = {op=op, pack=pack, unpack=unpack}\nend\n\nProtocols.PROTOCOL_RECORD = PROTOCOL_RECORD\nProtocols.PROTOCOL_OWNER = PROTOCOL_OWNER\nProtocols.PROTOCOL_EGG = PROTOCOL_EGG\n\nlocal SOCIAL do\n    local HATCH do\n        local op, event, fmt = \"SH\", \"Social_Hatch\", \"c2 z B c1\"\n        local function pack(player_id, pet_id, nonce)\n            assert(nonce)\n            return enc(spack(fmt, op, player_id, pet_id, nonce))\n        end\n        local function unpack(msg)\n            if msg and type(msg) == \"string\" and #msg > 0 and testOp(msg, op) then\n                local _op, player_id, pet_id, _nonce = sunpack(fmt, dec(msg))\n                return player_id, pet_id\n            end\n        end\n        HATCH = {op=op, event=event, pack=pack, unpack=unpack}\n    end\n\n    local MERGE do\n        local op, event, fmt = \"SM\", \"Social_Merge\", \"c2 z B c1\"\n        local function pack(player_id, pet_id, nonce)\n            assert(nonce)\n            return enc(spack(fmt, op, player_id, pet_id, nonce))\n        end\n        local function unpack(msg)\n            if msg and type(msg) == \"string\" and #msg > 0 and testOp(msg, op) then\n                local _op, player_id, pet_id, _nonce = sunpack(fmt, dec(msg))\n                return player_id, pet_id\n            end\n        end\n        MERGE = {op=op, event=event, pack=pack, unpack=unpack}\n    end\n\n    local REBIRTH do\n        local op, event, fmt = \"SR\", \"Social_Rebirth\", \"c2 z B c1\"\n        local function pack(player_id, nrebirth, nonce)\n            assert(nonce)\n            assert(math.type(nrebirth) == \"integer\")\n            return enc(spack(fmt, op, player_id, nrebirth, nonce))\n        end\n        local function unpack(msg)\n            if msg and type(msg) == \"string\" and #msg > 0 and testOp(msg, op) then\n                local _op, player_id, nrebirth, _nonce = sunpack(fmt, dec(msg))\n                return player_id, nrebirth\n            end\n        end\n        REBIRTH = {op=op, event=event, pack=pack, unpack=unpack}\n    end\n    -- handle protocol\n    local social_protocols = {\n        [HATCH.op] = HATCH,\n        [MERGE.op] = MERGE,\n        [REBIRTH.op] = REBIRTH,\n    }\n    local function handle_data(data)\n        assert(Environment.IsClient())\n        for op, protocol in pairs(social_protocols) do\n            if testOp(data, op) then\n                Events.Broadcast(protocol.event, protocol.unpack(data))\n            end\n        end\n    end\n    SOCIAL = {handle=handle_data, protocols=social_protocols}\n    SOCIAL.HATCH = HATCH\n    SOCIAL.MERGE = MERGE\n    SOCIAL.REBIRTH = REBIRTH\nend\n\nProtocols.SOCIAL = SOCIAL\n\n-- server to client\nProtocols.CLIENT = {\n    GameInventoryRrequest = \"GIR\",\n    GameResetRequest = \"GRR\",\n    TransmitInventoryModifications = \"TIM\",\n    TransmitPetDeletion = \"TPD\", -- TODO: send and handle\n    TransmitHatchingEgg = \"THE\"\n}\n\n-- client only inventory events\nProtocols.INTERACTION = {\n    AttemptDelete = \"Interaction_AttemptDelete\",\n    CameraScrollingBegin=\"Interaction_CameraScrollingBegin\",\n    CameraScrollingEnd = \"Interaction_CameraScrollingEnd\",\n    TileUnderCursorChanged = \"Interaction_TileUnderCursorChanged\",\n    ActorPickUp = \"Interaction_ActorPickUp\"\n}\n\n-- enum\nProtocols.MOVE_OUTCOME = {\n    BASIC = \"Basic\",\n    PUSHOUT = \"Pushout\",\n    SWAP = \"Swap\",\n    MERGE = \"Merge\"\n}\n\n-- internal client events\nProtocols.CLIENT_LOCAL = {\n    EGG_HATCHED = \"Egg_Hatched\",\n    MODAL = \"Interactions_Modal\"\n}\n\nProtocols.C2S = {\n    EQUIPMENT_ON = \"TurnOnEquipment\",\n    EQUIPMENT_OFF = \"TurnOffEquipment\",\n}\n\n\nProtocols.MODAL_ARG = {\n    NO_ARG = 0,\n    YES_ARG = 1,\n    OPEN_ARG = 2,\n}\n\n-- Environment\n-- Time of the day Noon, Dusk, Midnight, Dawn (look DayNightControllerClient)\n\n-- Social\n-- + PetHatch player_id, pet_id\n-- + Rebirth player_id, rebirth\n-- + PetMerge player_id, pet_id\n-- + Connect/Disconnect player_id\n\n-- Client Inventory Presentation\n--  -- \"Game_TileActorModified\"\n--  -- \"Game_MouseHoverTile\"\n--  -- \"Game_MousePickUpActor\"\n--  -- \"Game_MouseClickedActor\"\n--  -- \"Game_MouseDragActorBegin\"\n--  -- \"Game_MouseDragActorHoverTile\"\n--  -- \"Game_MouseDragActorDropOnTile\"\n\n-- Client Presentation\n\n-- Client Requests\n-- GIR Game_InventoryRequest inventory_id\n-- GFR Game_FullResetRequest ()\n-- TIM TransmitInventoryModification\n-- THE TransmitHatchingEgg\n\nreturn Protocols"
+        Text: "local Base64 = _G.req(\"_Base64\")\nlocal _pp = _G.req(\"_Luapp\").pp\npp = function(...) warn(\"\\n\".._pp{...}) end\nlocal Protocols = {}\nProtocols.__index = Protocols\n\nlocal spack, sunpack = string.pack, string.unpack\nlocal enc, dec, testOp = Base64.encode, Base64.decode, Base64.test_prefix\n\nlocal PROTOCOL_CHANNELS do\n    local op, fmt = \"$\", \"c1 z c3 c3 c1\"\n    local function pack(player_id, channel, social, nonce)\n        assert(nonce)\n        return enc(spack(fmt, op, player_id, channel, social, nonce))\n    end\n    local function unpack(msg)\n        if msg and type(msg) == \"string\" and #msg > 0 and testOp(msg, op) then\n            local _op, player_id, channel, social, _nonce = sunpack(fmt, dec(msg))\n            return player_id, channel, social\n        end\n    end\n    PROTOCOL_CHANNELS = {op=op, pack=pack, unpack=unpack}\nend\n\nlocal PROTOCOL_EGG do\n    local op, fmt = \"#\", \"c1 B z B B\"\n    local function pack(pet_id, egg_id, row, col, nonce)\n        assert(nonce, CoreDebug.GetStackTrace())\n        return enc(spack(fmt, op, pet_id, egg_id, row, col, nonce))\n    end\n    local function unpack(msg)\n        if msg and type(msg) == \"string\" and #msg > 0 and testOp(msg, op) then\n            local _op, pet_id, egg_id, row, col, _nonce = sunpack(fmt, dec(msg))\n            return pet_id, egg_id, row, col\n        end\n    end\n    PROTOCOL_EGG = {op=op, pack=pack, unpack=unpack}\nend\n\n-- TODO: rename record to grid or inventory\nlocal PROTOCOL_INVENTORY do\n    local op = \"@\"\n    local function pack(frags, nonce)\n        assert(nonce)\n        assert(frags[1] == \"\", \"there is no `op` placeholder at [1]\")\n        frags[1] = op\n        frags[#frags + 1] = nonce\n        return enc(table.concat(frags))\n    end\n    local function unpack(msg, deserialize)\n        assert(deserialize and type(deserialize) == \"function\")\n        if msg and #msg > 0 and testOp(msg, op) then\n            local decoded  = dec(msg)\n            -- ajust indices to remove op and nonce\n            local from, to = #op + 1, #decoded - 1\n            local record = deserialize(decoded, from, to)\n            return record\n        end\n    end\n    PROTOCOL_INVENTORY = {op=op, pack=pack, unpack=unpack}\nend\n\n\n-- S2C channel protocols\nProtocols.S2C = {\n    INVENTORY = PROTOCOL_INVENTORY,\n    CHANNELS = PROTOCOL_CHANNELS,\n    EGG = PROTOCOL_EGG,\n}\n\n-- S2CC social channel protosols\nlocal SOCIAL do\n    local HATCH do\n        local op, event, fmt = \"SH\", \"Social_Hatch\", \"c2 z B c1\"\n        local function pack(player_id, pet_id, nonce)\n            assert(nonce)\n            return enc(spack(fmt, op, player_id, pet_id, nonce))\n        end\n        local function unpack(msg)\n            if msg and type(msg) == \"string\" and #msg > 0 and testOp(msg, op) then\n                local _op, player_id, pet_id, _nonce = sunpack(fmt, dec(msg))\n                return player_id, pet_id\n            end\n        end\n        HATCH = {op=op, event=event, pack=pack, unpack=unpack}\n    end\n\n    local MERGE do\n        local op, event, fmt = \"SM\", \"Social_Merge\", \"c2 z B c1\"\n        local function pack(player_id, pet_id, nonce)\n            assert(nonce)\n            return enc(spack(fmt, op, player_id, pet_id, nonce))\n        end\n        local function unpack(msg)\n            if msg and type(msg) == \"string\" and #msg > 0 and testOp(msg, op) then\n                local _op, player_id, pet_id, _nonce = sunpack(fmt, dec(msg))\n                return player_id, pet_id\n            end\n        end\n        MERGE = {op=op, event=event, pack=pack, unpack=unpack}\n    end\n\n    local REBIRTH do\n        local op, event, fmt = \"SR\", \"Social_Rebirth\", \"c2 z B c1\"\n        local function pack(player_id, nrebirth, nonce)\n            assert(nonce)\n            assert(math.type(nrebirth) == \"integer\")\n            return enc(spack(fmt, op, player_id, nrebirth, nonce))\n        end\n        local function unpack(msg)\n            if msg and type(msg) == \"string\" and #msg > 0 and testOp(msg, op) then\n                local _op, player_id, nrebirth, _nonce = sunpack(fmt, dec(msg))\n                return player_id, nrebirth\n            end\n        end\n        REBIRTH = {op=op, event=event, pack=pack, unpack=unpack}\n    end\n    -- handle protocol\n    local social_protocols = {\n        [HATCH.op] = HATCH,\n        [MERGE.op] = MERGE,\n        [REBIRTH.op] = REBIRTH,\n    }\n    local function handle_data(data)\n        assert(Environment.IsClient())\n        for op, protocol in pairs(social_protocols) do\n            if testOp(data, op) then\n                Events.Broadcast(protocol.event, protocol.unpack(data))\n            end\n        end\n    end\n    SOCIAL = {handle=handle_data, protocols=social_protocols}\n    SOCIAL.HATCH = HATCH\n    SOCIAL.MERGE = MERGE\n    SOCIAL.REBIRTH = REBIRTH\nend\n\nProtocols.SOCIAL = SOCIAL\n\n-- C2S\nProtocols.C2S = {\n    GameInventoryRrequest = \"GIR\",\n    GameResetRequest = \"GRR\",\n    TransmitInventoryModifications = \"TIM\",\n    TransmitPetDeletion = \"TPD\", -- TODO: send and handle\n    TransmitHatchingEgg = \"THE\", -- TODO: handle\n    AskForRebirth = \"AFR\",\n    -- for Equipment Server\n    TurnEquipmentOn = \"EON\",\n    TurnEquipmentOff = \"EOF\",\n}\n\n-- client only inventory events\nProtocols.INTERACTION = {\n    AttemptDelete = \"Interaction_AttemptDelete\",\n    CameraScrollingBegin=\"Interaction_CameraScrollingBegin\",\n    CameraScrollingEnd = \"Interaction_CameraScrollingEnd\",\n    TileUnderCursorChanged = \"Interaction_TileUnderCursorChanged\",\n    ActorPickUp = \"Interaction_ActorPickUp\",\n}\n\n-- enum\nProtocols.MOVE_OUTCOME = {\n    BASIC = \"Basic\",\n    PUSHOUT = \"Pushout\",\n    SWAP = \"Swap\",\n    MERGE = \"Merge\",\n}\n\n-- internal client events\nProtocols.CLIENT_LOCAL = {\n    EGG_HATCHED = \"Egg_Hatched\",\n    MODAL = \"Interactions_Modal\",\n    POPUP = \"Show_Popup\",\n}\n\nProtocols.MODAL_ARG = {\n    X = -1,\n    NO = 0,\n    YES = 1,\n    OPEN = 2,\n}\n\n-- Environment\n-- Time of the day Noon, Dusk, Midnight, Dawn (look DayNightControllerClient)\n\n-- Social\n-- + PetHatch player_id, pet_id\n-- + Rebirth player_id, rebirth\n-- + PetMerge player_id, pet_id\n-- + Connect/Disconnect player_id\n\n-- Client Inventory Presentation\n--  -- \"Game_TileActorModified\"\n--  -- \"Game_MouseHoverTile\"\n--  -- \"Game_MousePickUpActor\"\n--  -- \"Game_MouseClickedActor\"\n--  -- \"Game_MouseDragActorBegin\"\n--  -- \"Game_MouseDragActorHoverTile\"\n--  -- \"Game_MouseDragActorDropOnTile\"\n\n-- Client Presentation\n\n-- Client Requests\n-- GIR Game_InventoryRequest inventory_id\n-- GFR Game_FullResetRequest ()\n-- TIM TransmitInventoryModification\n-- THE TransmitHatchingEgg\n\nreturn Protocols"
+      }
+    }
+    Assets {
+      Id: 8539290119167451381
+      Name: "Icon Close"
+      PlatformAssetType: 9
+      PrimaryAsset {
+        AssetType: "PlatformBrushAssetRef"
+        AssetId: "Icon_Close"
+      }
+    }
+    Assets {
+      Id: 15709523992004481946
+      Name: "BG Flat 006"
+      PlatformAssetType: 9
+      PrimaryAsset {
+        AssetType: "PlatformBrushAssetRef"
+        AssetId: "BackgroundNoOutline_015"
+      }
+    }
+    Assets {
+      Id: 8142256572158983484
+      Name: "BG Flat 011"
+      PlatformAssetType: 9
+      PrimaryAsset {
+        AssetType: "PlatformBrushAssetRef"
+        AssetId: "BackgroundNoOutline_28"
+      }
+    }
+    Assets {
+      Id: 8316394068749470350
+      Name: "BG Flat 002"
+      PlatformAssetType: 9
+      PrimaryAsset {
+        AssetType: "PlatformBrushAssetRef"
+        AssetId: "BackgroundNoOutline_019"
+      }
+    }
+    Assets {
+      Id: 12412081992422237432
+      Name: "Popup"
+      PlatformAssetType: 3
+      TextAsset {
+        Text: "local Maid = _G.req(\"_Maid\")\nlocal REvents = _G.req(\"ReliableEvents\")\nlocal Deque = _G.req(\"_Deque\")\nlocal P = _G.req(\"Protocols\")\n-- TODO: windows animation with Spr\nlocal Spr = _G.req(\"Spr\")\nlocal PANEL = script.parent\nassert(PANEL:IsA(\"UIPanel\"))\nassert(Environment.IsClient())\n\nlocal NEXT_POPUP_INTERVAL = 3\n\nlocal X = script.parent:GetCustomProperty(\"X\"):WaitForObject()\nlocal YES = script.parent:GetCustomProperty(\"YES\"):WaitForObject()\nlocal NO = script.parent:GetCustomProperty(\"NO\"):WaitForObject()\nlocal OK = script.parent:GetCustomProperty(\"OK\"):WaitForObject()\nlocal TEXT = script.parent:GetCustomProperty(\"TEXT\"):WaitForObject()\n\nlocal _maid = Maid.New(PANEL)\nlocal _popup_maid= Maid.New()\nlocal _popup_stack = Deque.New()\nlocal _is_vacant = false\nlocal _noop = function(...) end\n\nlocal function _show_cursor(bool)\n    UI.SetCursorVisible(bool)\n    UI.SetCursorLockedToViewport(not bool)\n    UI.SetCanCursorInteractWithUI(bool)\nend\n\nlocal function _show_panel(args)\n    _is_vacant = false\n    _show_cursor(true)\n    PANEL.visibility = Visibility.INHERIT\nend\n\nlocal function _hide_panel(args)\n    _popup_stack:Pop()\n    _popup_maid:Destroy()\n    PANEL.visibility = Visibility.FORCE_OFF\n    _show_cursor(false)\n    _is_vacant = true\nend\n\n-- initial hide\n_hide_panel()\n\nlocal function _do_show_popup(params)\n    TEXT.text = params.text or \"Lorem ipsum dolor sit amet, consectetur adipiscing elit.\"\n    local is_yes_no = params.yes\n    _popup_maid.on_close = params.on_close -- will fire at maid destroy\n    _popup_maid.on_yes = YES.clickedEvent:Connect(params.yes or _noop)\n    _popup_maid.on_no = NO.clickedEvent:Connect(params.no or _noop)\n    _popup_maid.on_x = OK.clickedEvent:Connect(params.ok or _noop)\n    YES.visibility = is_yes_no and Visibility.INHERIT or Visibility.FORCE_OFF\n    NO.visibility = is_yes_no and Visibility.INHERIT or Visibility.FORCE_OFF\n    OK.visibility = is_yes_no and Visibility.FORCE_OFF or Visibility.INHERIT\n    _show_panel()\nend\n\nlocal function OnShowPopup(params)\n    assert(type(params) == \"table\")\n    _popup_stack:Push(params)\n    if _is_vacant then\n        _do_show_popup(params)\n    end\nend\n\n_maid.trampoline = Task.Spawn(function()\n    if not _popup_stack:Empty() and _is_vacant then\n        local params = _popup_stack:Peek()\n        _do_show_popup(params)\n    end\nend)\n_maid.trampoline.repeatCount = -1\n_maid.trampoline.repeatInterval = NEXT_POPUP_INTERVAL\n\n-- show events\n_maid.SHOW = Events.Connect(P.CLIENT_LOCAL.POPUP, OnShowPopup)\n\n-- closed events\n_maid.X = X.clickedEvent:Connect(function(...)\n    _hide_panel(...)\n    REvents.Broadcast(P.CLIENT_LOCAL.MODAL, P.MODAL_ARG.X)\nend)\n_maid.YES = YES.clickedEvent:Connect(function(...)\n    _hide_panel(...)\n    REvents.Broadcast(P.CLIENT_LOCAL.MODAL, P.MODAL_ARG.YES)\nend)\n_maid.NO = NO.clickedEvent:Connect(function(...)\n    _hide_panel(...)\n    REvents.Broadcast(P.CLIENT_LOCAL.MODAL, P.MODAL_ARG.NO)\nend)\n_maid.OK = OK.clickedEvent:Connect(function(...)\n    _hide_panel(...)\n    REvents.Broadcast(P.CLIENT_LOCAL.MODAL, P.MODAL_ARG.X)\nend)\n\n-- self test\nlocal function _test()\n    Task.Wait(3)\n    REvents.Broadcast(P.CLIENT_LOCAL.POPUP, {\n        ok = function() print(\"@@@ OK\") end,\n        text = \"Test OK\"\n    })\n    REvents.Broadcast(P.CLIENT_LOCAL.POPUP, {\n        yes = function() print(\"@@@ Yes\") end,\n        text = \"Test Yes/No\"\n    })\n    REvents.Broadcast(P.CLIENT_LOCAL.POPUP, {\n        ok = function() print(\"@@@ Yes\") end,\n        text = nil\n    })\nend\n-- _test()\n\n\n\n"
       }
     }
     Assets {
@@ -1929,7 +2821,7 @@ Assets {
       Name: "GameClient"
       PlatformAssetType: 3
       TextAsset {
-        Text: "local Maid = _G.req(\"_Maid\")\nlocal Grid = _G.req(\"_Grid\")\nlocal Base64 = _G.req(\"_Base64\")\nlocal REvents = _G.req(\"ReliableEvents\")\nlocal StateMachine = _G.req(\"StateMachine\")\nlocal P = _G.req(\"Protocols\")\nlocal S = _G.req(\"StaticData\")\nlocal pp = _G.req(\"_Luapp\").pp\nlocal DOWNLINK = script:GetCustomProperty(\"DOWNLINK\"):WaitForObject()\nlocal STATIC_CONTEXT = script:GetCustomProperty(\"StaticContext\"):WaitForObject()\nlocal LOCAL_PLAYER = Game.GetLocalPlayer()\nlocal INVENTORY_ROOT = assert(script:GetCustomProperty(\"InventoryRoot\"):WaitForObject())\nlocal INVENTORY_CAM = script:GetCustomProperty(\"InventoryCamera\"):WaitForObject()\nassert(not INVENTORY_CAM.followPlayer and not INVENTORY_CAM.useCameraSocket)\nlocal DEFAULT_CAM = LOCAL_PLAYER:GetActiveCamera()\nlocal Tile = require(script:GetCustomProperty(\"Tile\"))\nlocal Actor = require(script:GetCustomProperty(\"Actor\"))\nActor.SetDb(S.PetDb)\n\nlocal COLOR_DEFAULT = Color.New(1, 1, 1, 0.5)\nlocal COLOR_MOVE = Color.New(1, 1, 0, 0.5)\nlocal COLOR_MERGE = Color.New(0, 1, 0, 0.5)\n\nlocal SCROLL_LIMIT_ADJUST_TOP = -50 -- 100 -- -300 -- -200\nlocal SCROLL_LIMIT_ADJUST_SIDES = 0 -- -1000\nlocal SCROLL_LIMIT_ADJUST_BOTTOM = -150 -- 50 -- -100\nlocal CAMERA_START_ROW = 4\nlocal CAMERA_RELATIVE_YAW = 0\nlocal CAMERA_RELATIVE_PITCH = -60\nlocal CAMERA_RELATIVE_HEIGHT = 200\nlocal CAMERA_SCROLL_SPEED = 20 -- 50\nlocal INTERACTION_PLANE_HEIGHT = 75 --75\n\nlocal MOUSE_CLICK_TIMEOUT = 0.3\nlocal MOUSE_DRAG_DEADTIME = 0.06\nlocal MOUSE_DRAG_DEADZONE = 2\n\nlocal CAMERA_YAW_ROTATION = Rotation.New(0, 0, CAMERA_RELATIVE_YAW)\nlocal CAMERA_RELATIVE_TRANSFORM = Transform.New(\n    Rotation.New(0, CAMERA_RELATIVE_PITCH, CAMERA_RELATIVE_YAW),\n    Vector3.UP * CAMERA_RELATIVE_HEIGHT,\n    Vector3.ONE\n)\n\nlocal _maid = Maid.New(script)\n-----------------------------------------------------------------------------\n-- Client State Machine\n-----------------------------------------------------------------------------\nlocal ISM = StateMachine.New()\nlocal INGAME = ISM:AddState(\"InGame\")\nlocal INVENTORY = ISM:AddState(\"Inventory\")\n_maid.ISM = ISM\n\n-----------------------------------------------------------------------------\n-- Client\n-----------------------------------------------------------------------------\nlocal function _read_channel(channel)\n    local data = DOWNLINK:GetCustomProperty(channel)\n    if data and #data > 1 then return data end\nend\n\nlocal Client = {\n    channel = nil,\n    social = nil\n}\n\nfunction Client:Start()\n    self:_AwaitDownlinkChannel()\n    self:_SetupEventForwarding()\nend\n\nfunction Client:_AwaitDownlinkChannel()\n    while not self.channel do\n        Task.Wait(0.1)\n        for _, val in pairs(DOWNLINK:GetCustomProperties()) do\n            local player_id, channel, social = P.PROTOCOL_OWNER.unpack(val)\n            if player_id and player_id == LOCAL_PLAYER.id then\n                warn(pp{\"got channel\", LOCAL_PLAYER.name, player_id, channel, social})\n                self.channel = channel\n                self.social = social\n                break\n            end\n        end\n    end\n    _maid.downlink = DOWNLINK.networkedPropertyChangedEvent:Connect(function(_owner, prop)\n        local data = _read_channel(prop)\n        if not data or #data == 0 then return end\n        if prop == self.channel then\n            local b1, _, _ = Base64.dec3(data)\n            local op = string.char(b1)\n            if op == P.PROTOCOL_RECORD.op then\n                local grid = P.PROTOCOL_RECORD.unpack(data, Grid.deserialize)\n                _maid.grid = grid -- <- kill old inventory\n                ISM:GoToState(INGAME)\n                Task.Wait()\n                self:_InstantiateInventory(assert(grid))\n            elseif op == P.PROTOCOL_EGG.op then\n                local pet_id, egg, row, col = P.PROTOCOL_EGG.unpack(data)\n                ISM:GoToState(INGAME)\n                self:_HatchEgg(pet_id, row, col)\n                REvents.Broadcast(P.CLIENT_LOCAL.EGG_HATCHED, egg, pet_id)\n            else\n                warn(self.channel .. \", Unknown message:\\n\" .. data)\n            end\n        elseif prop == self.social then\n            P.SOCIAL.handle(data)\n        end\n    end)\n    -- ask for inventory\n    warn(pp{\"ask server for inventory\", LOCAL_PLAYER.name})\n    REvents.BroadcastToServer(P.CLIENT.GameInventoryRrequest)\nend\n\nfunction Client:_SetupEventForwarding()\n    -- DEBUG:\n    for _op, protocol in pairs(P.SOCIAL.protocols) do\n        local event = protocol.event\n        _maid:GiveTask(Events.Connect(event, function(...)\n            print(\"[SOCIAL DEBUG]\", event, ...)\n        end))\n    end\nend\n\nfunction Client:_HatchEgg(pet_id, row, col)\n    local grid = _maid.grid\n    local cell = grid:at(row, col)\n    assert(cell:IsFree())\n    Actor.New(pet_id. cell)\nend\n\nlocal Highlights = {}\nHighlights.__index = Highlights\nfunction Highlights.New()\n    return setmetatable({}, Highlights)\nend\nfunction Highlights:_show(color, ...) -- cells\n    local n = select(\"#\", ...)\n    for i=1, n do\n        local cell = select(i, ...)\n        local tile = cell.tile\n        self[tile] = true\n        tile.color.visibility = Visibility.INHERIT\n        tile.color:SetColor(color)\n    end\nend\n\nfunction Highlights:_clear()\n    for tile, _ in pairs(self) do\n        tile.color.visibility = Visibility.FORCE_OFF\n        self[tile] = nil\n    end\nend\n\nfunction Highlights:_turn(on)\n    for tile, _ in pairs(self) do\n        tile.color.visibility = on and Visibility.INHERIT or Visibility.FORCE_OFF\n    end\nend\n\nfunction Client:_InstantiateInventory(grid)\n    assert(grid)\n    local N = grid.w*grid.h\n    local maid = grid._maid\n    for i=1, N do\n        local cell = grid:at(i)\n        if not cell:IsNil() then\n            cell.tile = Tile.New(cell, INVENTORY_ROOT)\n            maid:GiveTask(cell.tile)\n            if cell.actor then\n                assert(type(cell.actor) == \"table\", \"not {id=pet_id}\")\n                Actor.New(cell.actor, cell)\n            end\n        end\n    end\n    -- Monkey patching grid for highlights support\n    grid._highlights = Highlights.New()\nend\n\n--------------------------\n-- In Game State\n--------------------------\nfunction INGAME:Enter(from)\n    print(\"InGame_Enter\")\n    self.isInteractionEnabled = true\n    REvents.BroadcastToServer(P.C2S.EQUIPMENT_ON) -- for equipment server\nend\n\nfunction INGAME:Exit()\n    print(\"InGame_Exit\")\n    self.isInteractionEnabled = false\n    REvents.BroadcastToServer(P.C2S.EQUIPMENT_OFF)\nend\n\nfunction INGAME:HandleInventoryBinding()\n    ISM:GoToState(INVENTORY)\nend\n\nfunction INGAME:HandleModal(modal_arg)\n    self.isInteractionEnabled = modal_arg < P.MODAL_ARG.OPEN\nend\n\n--------------------------\n-- Inventory State\n--------------------------\nlocal function _show_cursor(show)\n    UI.SetCursorVisible(show)\n    UI.SetCursorLockedToViewport(not show)\n    UI.SetCanCursorInteractWithUI(show)\nend\n\nfunction INVENTORY:Check()\n    -- TODO: check cameras\n    return _maid.grid and true\nend\n\nfunction INVENTORY:Enter(from)\n    LOCAL_PLAYER.isVisibleToSelf = false\n    -- TODO: we should save override camera and set it back on exit\n    self:_StartCamera()\n    _show_cursor(true)\n    self.isInteractionEnabled = true\n    _maid.highlights = Events.Connect(P.INTERACTION.TileUnderCursorChanged, INVENTORY._OnTileUnderCursorChanged)\nend\n\nfunction INVENTORY:Exit()\n    LOCAL_PLAYER:SetDefaultCamera(DEFAULT_CAM)\n    LOCAL_PLAYER.isVisibleToSelf = true\n    _show_cursor(false)\n    self.isInteractionEnabled = false\n    _maid.highlights = nil\nend\n\nfunction INVENTORY:Update(dt)\n    self:_UpdateInteractions(dt)\n    self:_UpdateCamera(dt)\nend\n\nfunction INVENTORY:HandleInventoryBinding()\n    ISM:GoToState(INGAME)\nend\n\nlocal function _get_move_outcome(grid, src_cell, dst_cell)\n    assert(src_cell and src_cell.actor)\n    assert(grid.type == \"Grid\")\n    assert(src_cell.type == \"Cell\")\n    assert(not dst_cell or dst_cell.type == \"Cell\")\n\n    if src_cell == dst_cell or not dst_cell then return nil end\n\n    local function _get_mergable_neghbor(dst_cell, src_cell)\n        assert(dst_cell.actor.id == src_cell.actor.id)\n        local aid = src_cell.actor.id\n        return grid:Neighbor4(dst_cell, function(cell)\n            return cell ~= src_cell and cell.actor and cell.actor.id == aid\n        end)\n    end\n\n    local function _get_empty_neghbor(dst_cell)\n        return grid:Neighbor4(dst_cell, function (cell)\n            return not cell.actor\n        end)\n    end\n\n    if dst_cell.actor then\n        if src_cell:Distance(dst_cell) and src_cell.actor:CanUpgrade(dst_cell.actor) then\n            local cell_mergable = _get_mergable_neghbor(dst_cell, src_cell)\n            if cell_mergable then\n                return {P.MOVE_OUTCOME.MERGE, dst_cell, src_cell, cell_mergable}\n            end\n        end\n        local cell_empty = _get_empty_neghbor(dst_cell)\n        if cell_empty and src_cell:Distance(dst_cell) >= 2 then\n            return {P.MOVE_OUTCOME.PUSHOUT, dst_cell, src_cell, cell_empty}\n        else\n            return {P.MOVE_OUTCOME.SWAP, dst_cell, src_cell}\n        end\n    end\n    return {P.MOVE_OUTCOME.BASIC, dst_cell, src_cell}\nend\n\nlocal function _compute_mouse_interaction_state(mouseDownTime, mouseDownPosition, hasLeftDeadZone)\n    local isValidClick, isValidDrag = nil, nil\n    if mouseDownTime then\n        local mouseHoldTime = time() - mouseDownTime\n        local mouseDisplacement = UI.GetCursorPosition() - mouseDownPosition\n        hasLeftDeadZone = hasLeftDeadZone or mouseDisplacement.size > MOUSE_DRAG_DEADZONE\n        isValidClick = mouseHoldTime <= MOUSE_CLICK_TIMEOUT and not hasLeftDeadZone\n        isValidDrag = mouseHoldTime >= MOUSE_DRAG_DEADTIME and hasLeftDeadZone\n    end\n    return isValidClick, isValidDrag, hasLeftDeadZone\nend\n\nfunction INVENTORY:_UpdateInteractions(_dt)\n    local grid = _maid.grid\n    if not self.isInteractionEnabled then return end\n    local worldInteractionPoint = UI.GetCursorPlaneIntersection(table.unpack(self.interactionPlane))\n    local cell = grid:GetCellAtPoint(worldInteractionPoint)\n    if not cell:IsNil() then\n        local newCellUnderCursor = cell\n        -- DEBUG:\n        -- CoreDebug.DrawSphere(cell.tile.content:GetWorldPosition(), 20)\n        if newCellUnderCursor ~= self.cellUnderCursor then\n            self.tileActivationOutcome = nil\n            self.moveOutcome = nil\n            if self.attachedActor then\n                local src_cell = self.attachedActor.homeCell\n                local dst_cell = newCellUnderCursor\n                self.moveOutcome = _get_move_outcome(grid, src_cell, dst_cell)\n            elseif newCellUnderCursor and newCellUnderCursor.actor then\n                self.tileActivationOutcome = newCellUnderCursor.actor:GetActivationOutcome()\n            end\n            if not self.isHoveringUI then\n                -- 1. change color of tiles\n                -- 2. show hover animation\n                Events.Broadcast(P.INTERACTION.TileUnderCursorChanged, grid,\n                     newCellUnderCursor, self.moveOutcome, self.tileActivationOutcome)\n            end\n        end\n        self.cellUnderCursor = newCellUnderCursor\n    end\n    -- Update left mouse movement criteria and interaction type.\n    if self.mouseDownTime and self.attachedActor then\n        local isValidClick, isValidDrag, hasLeftDeadZone = _compute_mouse_interaction_state(\n            self.mouseDownTime,\n            self.mouseDownCursorPosition,\n            self.hasMouseLeftDeadZone)\n        self.hasMouseLeftDeadZone = hasLeftDeadZone\n        if isValidClick then\n            self.mouseInteractionType = \"Click\"\n        elseif isValidDrag then\n            self.mouseInteractionType = \"Drag\"\n            -- When entering drag state, disable actor animations.\n            self.attachedActor:FinishAnimations()\n        else\n            self.mouseInteractionType = nil\n        end\n    end\n    -- Update right mouse interactions.\n    grid._highlights:_turn(not self.rightClickDownTime)\n    if self.rightClickDownTime then\n        local isValidClick, _isValidDrag, hasLeftDeadZone = _compute_mouse_interaction_state(\n            self.rightClickDownTime,\n            self.rightClickDownPosition,\n            self.hasRightClickLeftDeadZone)\n        self.hasRightClickLeftDeadZone = hasLeftDeadZone\n        self.isValidRightClick = isValidClick\n        -- It feels better if you can always move the camera while RMB is pressed. If we try to make\n        -- it a dual-purpose button, it leads to very uncanny jerkiness in the camera movement when\n        -- it transitions from \"click\" to \"drag\". Better to just let drag be always enabled while pressed.\n        self.isMovingCamera = true\n    end\n    -- Set position of any attached actors (only during drag)\n    if worldInteractionPoint and self.attachedActor and self.mouseInteractionType == \"Drag\" then\n        self.attachedActor:SetWorldPosition(worldInteractionPoint)\n    end\nend\n\nfunction INVENTORY:HandleRightMouseDown()\n    Events.Broadcast(P.INTERACTION.CameraScrollingBegin)\n    self.isValidRightClick = nil\n    self.isMovingCamera = nil\n    self.rightClickDownTime = time()\n    self.rightClickDownPosition = UI.GetCursorPosition()\n    self.hasRightClickLeftDeadZone = nil\n    self.cursorPosition = UI.GetCursorPosition()\n    _show_cursor(false)\nend\n\nfunction INVENTORY:HandleRightMouseUp()\n    Events.Broadcast(P.INTERACTION.CameraScrollingEnd)\n    -- A delete attempt can be made if you are not currently dragging an actor, and if you are allowed to interact with the cell beneath.\n    if self.isValidRightClick and not self.attachedActor then\n        if self.cellUnderCursor and self.cellUnderCursor.actor then\n            Events.Broadcast(P.INTERACTION.AttemptDelete, self.cellUnderCursor)\n        end\n    end\n    self.isValidRightClick = nil\n    self.isMovingCamera = nil\n    self.rightClickDownTime = nil\n    self.rightClickDownPosition = nil\n    self.hasRightClickLeftDeadZone = nil\n    self.cursorPosition = nil\n    _show_cursor(true)\nend\n\nfunction INVENTORY:HandleLeftMouseDown()\n    if not self.isInteractionEnabled then return end\n    self.mouseDownTime = time()\n    self.mouseDownCursorPosition = UI.GetCursorPosition()\n    self.mouseInteractionType = nil\n    self.hasMouseLeftDeadZone = nil\n    local actor = self.cellUnderCursor and self.cellUnderCursor.actor\n    if actor then\n        self.attachedActor = actor\n        self.moveOutcome = nil\n        -- When mousing down, end any ongoing animations immediately so the actor is locked into its base visual state.\n        actor:FinishAnimations()\n        Events.Broadcast(P.INTERACTION.ActorPickUp, actor)\n    end\nend\n\nlocal function _notify_server(type, dst_cell, src_cell, other_cell)\n    local function p(cell)\n        return cell and {cell.row, cell.col, cell.actor and cell.actor.id}\n    end\n    REvents.BroadcastToServer(P.CLIENT.TransmitInventoryModifications, type, p(dst_cell), p(src_cell), p(other_cell))\nend\n\nfunction INVENTORY:HandleLeftMouseUp()\n    if not self.isInteractionEnabled then return end\n    if not self.mouseDownTime then return end\n    self.mouseDownTime = nil\n    if self.attachedActor then\n        if self.mouseInteractionType == \"Click\" then\n            -- TODO: show info\n        elseif self.mouseInteractionType == \"Drag\" and self.moveOutcome then\n            local type, dst_cell, src_cell, other_cell = table.unpack(self.moveOutcome)\n            _notify_server(type, dst_cell, src_cell, other_cell)\n            local actor = self.attachedActor\n            assert(actor == src_cell.actor)\n            src_cell.actor = nil\n            local dst_actor = dst_cell.actor\n            -- apply changes:\n            -- {\"Merge\", dst_cell, src_cell, other_cell(mergable)}\n            -- {\"Swap\", dst_cell, src_cell}\n            -- {\"Pushout\", dst_cell, src_cell, other_cell(empty)}\n            -- {\"Basic\", dst_cell, src_cell}\n            if type == P.MOVE_OUTCOME.BASIC then\n                actor:SetHomeCell(dst_cell)\n            elseif type == P.MOVE_OUTCOME.PUSHOUT then\n                actor:SetHomeCell(dst_cell)\n                dst_actor:SetHomeCell(other_cell)\n            elseif type == P.MOVE_OUTCOME.SWAP then\n                dst_actor.actor = nil\n                actor:SetHomeCell(dst_cell)\n                dst_actor:SetHomeCell(src_cell)\n            elseif type == P.MOVE_OUTCOME.MERGE then\n                local actor3 = other_cell.actor\n                local ok, next_id = actor:CanUpgrade()\n                assert(ok)\n                dst_actor.actor, other_cell.actor = nil, nil\n                actor:Destroy()\n                dst_actor:Destroy()\n                actor3:Destroy()\n                Actor.New(next_id, dst_cell)\n            end\n        else\n            self.attachedActor:AnimateFlyHome()\n        end\n        self.moveOutcome = nil\n        self.attachedActor = nil\n    end\nend\n\nfunction INVENTORY:_StartCamera()\n    local grid = _maid.grid\n    local ext = grid:GetExtent()\n    ext.pos_x = ext.pos_x + SCROLL_LIMIT_ADJUST_TOP\n    ext.neg_x = math.min(ext.neg_x + SCROLL_LIMIT_ADJUST_BOTTOM, ext.pos_x)\n    ext.pos_y = ext.pos_y - SCROLL_LIMIT_ADJUST_SIDES\n    ext.neg_y = math.min(ext.neg_y + SCROLL_LIMIT_ADJUST_SIDES, ext.pos_y)\n    self.scrollExtent = ext\n    assert(script == INVENTORY_CAM.parent)\n    script:SetWorldTransform(INVENTORY_ROOT:GetTransform())\n    local startTile = grid:at(CAMERA_START_ROW, grid.w//2).tile\n    local initialTransform = CAMERA_RELATIVE_TRANSFORM * startTile:GetTransform()\n    local initialPosition = initialTransform:GetPosition()\n    local initialRotation = initialTransform:GetRotation()\n    initialPosition.x = CoreMath.Clamp(initialPosition.x, ext.neg_x, ext.pos_x)\n    initialPosition.y = CoreMath.Clamp(initialPosition.y, ext.neg_y, ext.pos_y)\n    INVENTORY_CAM:SetPosition(initialPosition)\n    INVENTORY_CAM:SetRotation(initialRotation)\n    LOCAL_PLAYER:SetDefaultCamera(INVENTORY_CAM)\n    self.interactionPlane = {\n        script:GetTransform():TransformPosition(Vector3.UP * INTERACTION_PLANE_HEIGHT),\n        script:GetTransform():GetUpVector()\n    }\n    grid:SetWorldToGridTransform(INVENTORY_ROOT:GetWorldTransform():GetInverse())\nend\n\nfunction INVENTORY:_UpdateCamera(dt)\n    if self.isMovingCamera then\n        local newCursorPositon = UI.GetCursorPosition()\n        local screenDelta = newCursorPositon - self.cursorPosition\n        self.cursorPosition = newCursorPositon \n        -- We must use the interaction coordinates to scroll properly. Remember screenspace Y goes downwards.\n        local localDelta =  CAMERA_YAW_ROTATION * Vector3.New(screenDelta, 0)\n        local scaledDelta = CAMERA_SCROLL_SPEED * dt * Vector3.New(-localDelta.y, localDelta.x, 0)\n        -- To \"drag\" the world, we move the camera in the inverse direction.\n        local localCameraPos = INVENTORY_CAM:GetPosition() - scaledDelta\n        -- We clamp to the board extent.\n        localCameraPos.x = CoreMath.Clamp(localCameraPos.x, self.scrollExtent.neg_x, self.scrollExtent.pos_x)\n        localCameraPos.y = CoreMath.Clamp(localCameraPos.y, self.scrollExtent.neg_y, self.scrollExtent.pos_y)\n        INVENTORY_CAM:SetPosition(localCameraPos)\n    end\nend\n\n-- Monkey patching Grid for highlights\nfunction INVENTORY._OnTileUnderCursorChanged(grid, cursor_cell, move_outcome)\n    local hl = grid._highlights\n    hl:_clear()\n    if move_outcome then\n        local type, dst_cell, src_cell, other_cell = table.unpack(move_outcome)\n        assert(not dst_cell or dst_cell == cursor_cell)\n        if not cursor_cell or cursor_cell.type ~= \"Cell\" or cursor_cell:IsNil() or not type then return end\n        if type == P.MOVE_OUTCOME.BASIC then\n            hl:_show(COLOR_DEFAULT, cursor_cell)\n        elseif type == P.MOVE_OUTCOME.PUSHOUT then\n            hl:_show(COLOR_MOVE, cursor_cell, other_cell)\n        elseif type == P.MOVE_OUTCOME.SWAP then\n            hl:_show(COLOR_MOVE, cursor_cell, src_cell)\n        elseif type == P.MOVE_OUTCOME.MERGE then\n            hl:_show(COLOR_MERGE, cursor_cell --[[, src_cell]], other_cell)\n        else warn(type)\n        end\n    else\n        hl:_show(COLOR_DEFAULT, cursor_cell)\n    end\nend\n\nfunction INVENTORY:HandleModal(modal_arg)\n    self.isInteractionEnabled = modal_arg < P.MODAL_ARG.OPEN\nend\n\n\n\n-----------------------------------------------------------------------------\n-- Main\n-----------------------------------------------------------------------------\ndo -- main\n    Client:Start()\n    ISM:SetBindingHandlers({\n        [\"ability_extra_27\"] = {\"_\", \"HandleInventoryBinding\"}, -- `I` button for inventory\n        [\"ability_primary\"] = {\"HandleLeftMouseDown\", \"HandleLeftMouseUp\"},\n        [\"ability_secondary\"] = {\"HandleRightMouseDown\", \"HandleRightMouseUp\"},\n        [P.CLIENT_LOCAL.MODAL] = {\"HandleModal\"} -- +1 arg\n    })\n    ISM:Connect(LOCAL_PLAYER.bindingPressedEvent, function(_player, binding) ISM:MapToStateHandler(binding, 1) end)\n    ISM:Connect(LOCAL_PLAYER.bindingReleasedEvent, function(_player, binding) ISM:MapToStateHandler(binding, 2) end)\n    ISM:Connect(Events, function(...) ISM:MapToStateHandler(P.CLIENT_LOCAL.MODAL, 1, ...) end, P.CLIENT_LOCAL.MODAL)\n\n    ISM:GoToState(INGAME)\n\n    -- DEBUG:\n    for k, v in pairs(P.INTERACTION) do\n        -- Events.Connect(v, function (...) print(pp{k, ...}) end)\n    end\n\nend\n"
+        Text: "local Maid = _G.req(\"_Maid\")\nlocal Grid = _G.req(\"_Grid\")\nlocal Base64 = _G.req(\"_Base64\")\nlocal REvents = _G.req(\"ReliableEvents\")\nlocal StateMachine = _G.req(\"StateMachine\")\nlocal P = _G.req(\"Protocols\")\nlocal S = _G.req(\"StaticData\")\nlocal pp = _G.req(\"_Luapp\").pp\nlocal DOWNLINK = script:GetCustomProperty(\"DOWNLINK\"):WaitForObject()\nlocal STATIC_CONTEXT = script:GetCustomProperty(\"StaticContext\"):WaitForObject()\nlocal LOCAL_PLAYER = Game.GetLocalPlayer()\nlocal INVENTORY_ROOT = assert(script:GetCustomProperty(\"InventoryRoot\"):WaitForObject())\nlocal INVENTORY_CAM = script:GetCustomProperty(\"InventoryCamera\"):WaitForObject()\nassert(not INVENTORY_CAM.followPlayer and not INVENTORY_CAM.useCameraSocket)\nlocal DEFAULT_CAM = LOCAL_PLAYER:GetActiveCamera()\nlocal Tile = require(script:GetCustomProperty(\"Tile\"))\nlocal Actor = require(script:GetCustomProperty(\"Actor\"))\nActor.SetDb(S.PetDb)\n\nlocal COLOR_DEFAULT = Color.New(1, 1, 1, 0.5)\nlocal COLOR_MOVE = Color.New(1, 1, 0, 0.5)\nlocal COLOR_MERGE = Color.New(0, 1, 0, 0.5)\n\nlocal SCROLL_LIMIT_ADJUST_TOP = -50 -- 100 -- -300 -- -200\nlocal SCROLL_LIMIT_ADJUST_SIDES = 0 -- -1000\nlocal SCROLL_LIMIT_ADJUST_BOTTOM = -150 -- 50 -- -100\nlocal CAMERA_START_ROW = 4\nlocal CAMERA_RELATIVE_YAW = 0\nlocal CAMERA_RELATIVE_PITCH = -60\nlocal CAMERA_RELATIVE_HEIGHT = 200\nlocal CAMERA_SCROLL_SPEED = 20 -- 50\nlocal INTERACTION_PLANE_HEIGHT = 75 --75\n\nlocal MOUSE_CLICK_TIMEOUT = 0.3\nlocal MOUSE_DRAG_DEADTIME = 0.06\nlocal MOUSE_DRAG_DEADZONE = 2\n\nlocal CAMERA_YAW_ROTATION = Rotation.New(0, 0, CAMERA_RELATIVE_YAW)\nlocal CAMERA_RELATIVE_TRANSFORM = Transform.New(\n    Rotation.New(0, CAMERA_RELATIVE_PITCH, CAMERA_RELATIVE_YAW),\n    Vector3.UP * CAMERA_RELATIVE_HEIGHT,\n    Vector3.ONE\n)\n\nlocal _maid = Maid.New(script)\n-----------------------------------------------------------------------------\n-- Client State Machine\n-----------------------------------------------------------------------------\nlocal ISM = StateMachine.New()\nlocal INGAME = ISM:AddState(\"InGame\")\nlocal INVENTORY = ISM:AddState(\"Inventory\")\n_maid.ISM = ISM\n\n-----------------------------------------------------------------------------\n-- Client\n-----------------------------------------------------------------------------\nlocal function _read_channel(channel)\n    local data = DOWNLINK:GetCustomProperty(channel)\n    if data and #data > 1 then return data end\nend\n\nlocal Client = {\n    channel = nil,\n    social = nil\n}\n\nfunction Client:Start()\n    self:_AwaitDownlinkChannel()\n    self:_SetupEventForwarding()\nend\n\nfunction Client:_AwaitDownlinkChannel()\n    while not self.channel do\n        Task.Wait(0.1)\n        for _, val in pairs(DOWNLINK:GetCustomProperties()) do\n            local player_id, channel, social = P.S2C.CHANNELS.unpack(val)\n            if player_id and player_id == LOCAL_PLAYER.id then\n                warn(pp{\"got channel\", LOCAL_PLAYER.name, player_id, channel, social})\n                self.channel = channel\n                self.social = social\n                break\n            end\n        end\n    end\n    _maid.downlink = DOWNLINK.networkedPropertyChangedEvent:Connect(function(_owner, prop)\n        local data = _read_channel(prop)\n        if not data or #data == 0 then return end\n        if prop == self.channel then\n            local b1, _, _ = Base64.dec3(data)\n            local op = string.char(b1)\n            if op == P.S2C.INVENTORY.op then\n                local grid = P.S2C.INVENTORY.unpack(data, Grid.deserialize)\n                _maid.grid = grid -- <- kill old inventory\n                ISM:GoToState(INGAME)\n                Task.Wait()\n                self:_InstantiateInventory(assert(grid))\n            elseif op == P.S2C.EGG.op then\n                local pet_id, egg, row, col = P.P.S2C.EGG.unpack(data)\n                ISM:GoToState(INGAME)\n                self:_HatchEgg(pet_id, row, col)\n                REvents.Broadcast(P.CLIENT_LOCAL.EGG_HATCHED, egg, pet_id)\n            else\n                warn(self.channel .. \", Unknown message:\\n\" .. data)\n            end\n        elseif prop == self.social then\n            P.SOCIAL.handle(data)\n        end\n    end)\n    -- ask for inventory\n    warn(pp{\"ask server for inventory\", LOCAL_PLAYER.name})\n    REvents.BroadcastToServer(P.C2S.GameInventoryRrequest)\nend\n\nfunction Client:_SetupEventForwarding()\n    -- DEBUG:\n    for _op, protocol in pairs(P.SOCIAL.protocols) do\n        local event = protocol.event\n        _maid:GiveTask(Events.Connect(event, function(...)\n            print(\"[SOCIAL DEBUG]\", event, ...)\n        end))\n    end\nend\n\nfunction Client:_HatchEgg(pet_id, row, col)\n    local grid = _maid.grid\n    local cell = grid:at(row, col)\n    assert(cell:IsFree())\n    Actor.New(pet_id. cell)\nend\n\nlocal Highlights = {}\nHighlights.__index = Highlights\nfunction Highlights.New()\n    return setmetatable({}, Highlights)\nend\nfunction Highlights:_show(color, ...) -- cells\n    local n = select(\"#\", ...)\n    for i=1, n do\n        local cell = select(i, ...)\n        local tile = cell.tile\n        self[tile] = true\n        tile.color.visibility = Visibility.INHERIT\n        tile.color:SetColor(color)\n    end\nend\n\nfunction Highlights:_clear()\n    for tile, _ in pairs(self) do\n        tile.color.visibility = Visibility.FORCE_OFF\n        self[tile] = nil\n    end\nend\n\nfunction Highlights:_turn(on)\n    for tile, _ in pairs(self) do\n        tile.color.visibility = on and Visibility.INHERIT or Visibility.FORCE_OFF\n    end\nend\n\nfunction Client:_InstantiateInventory(grid)\n    assert(grid)\n    local N = grid.w*grid.h\n    local maid = grid._maid\n    for i=1, N do\n        local cell = grid:at(i)\n        if not cell:IsNil() then\n            cell.tile = Tile.New(cell, INVENTORY_ROOT)\n            maid:GiveTask(cell.tile)\n            if cell.actor then\n                assert(type(cell.actor) == \"table\", \"not {id=pet_id}\")\n                Actor.New(cell.actor, cell)\n            end\n        end\n    end\n    -- Monkey patching grid for highlights support\n    grid._highlights = Highlights.New()\nend\n\n--------------------------\n-- In Game State\n--------------------------\nfunction INGAME:Enter(from)\n    print(\"InGame_Enter\")\n    self.isInteractionEnabled = true\n    REvents.BroadcastToServer(P.C2S.TurnEquipmentOn) -- for equipment server\nend\n\nfunction INGAME:Exit()\n    print(\"InGame_Exit\")\n    self.isInteractionEnabled = false\n    REvents.BroadcastToServer(P.C2S.TurnEquipmentOff)\nend\n\nfunction INGAME:HandleInventoryBinding()\n    ISM:GoToState(INVENTORY)\nend\n\nfunction INGAME:HandleModal(modal_arg)\n    self.isInteractionEnabled = modal_arg < P.MODAL_ARG.OPEN\nend\n\n--------------------------\n-- Inventory State\n--------------------------\nlocal function _show_cursor(show)\n    UI.SetCursorVisible(show)\n    UI.SetCursorLockedToViewport(not show)\n    UI.SetCanCursorInteractWithUI(show)\nend\n\nfunction INVENTORY:Check()\n    -- TODO: check cameras\n    return _maid.grid and true\nend\n\nfunction INVENTORY:Enter(from)\n    LOCAL_PLAYER.isVisibleToSelf = false\n    -- TODO: we should save override camera and set it back on exit\n    self:_StartCamera()\n    _show_cursor(true)\n    self.isInteractionEnabled = true\n    _maid.highlights = Events.Connect(P.INTERACTION.TileUnderCursorChanged, INVENTORY._OnTileUnderCursorChanged)\nend\n\nfunction INVENTORY:Exit()\n    LOCAL_PLAYER:SetDefaultCamera(DEFAULT_CAM)\n    LOCAL_PLAYER.isVisibleToSelf = true\n    _show_cursor(false)\n    self.isInteractionEnabled = false\n    _maid.highlights = nil\nend\n\nfunction INVENTORY:Update(dt)\n    self:_UpdateInteractions(dt)\n    self:_UpdateCamera(dt)\nend\n\nfunction INVENTORY:HandleInventoryBinding()\n    ISM:GoToState(INGAME)\nend\n\nlocal function _get_move_outcome(grid, src_cell, dst_cell)\n    assert(src_cell and src_cell.actor)\n    assert(grid.type == \"Grid\")\n    assert(src_cell.type == \"Cell\")\n    assert(not dst_cell or dst_cell.type == \"Cell\")\n\n    if src_cell == dst_cell or not dst_cell then return nil end\n\n    local function _get_mergable_neghbor(dst_cell, src_cell)\n        assert(dst_cell.actor.id == src_cell.actor.id)\n        local aid = src_cell.actor.id\n        return grid:Neighbor4(dst_cell, function(cell)\n            return cell ~= src_cell and cell.actor and cell.actor.id == aid\n        end)\n    end\n\n    local function _get_empty_neghbor(dst_cell)\n        return grid:Neighbor4(dst_cell, function (cell)\n            return not cell.actor\n        end)\n    end\n\n    if dst_cell.actor then\n        if src_cell:Distance(dst_cell) and src_cell.actor:CanUpgrade(dst_cell.actor) then\n            local cell_mergable = _get_mergable_neghbor(dst_cell, src_cell)\n            if cell_mergable then\n                return {P.MOVE_OUTCOME.MERGE, dst_cell, src_cell, cell_mergable}\n            end\n        end\n        local cell_empty = _get_empty_neghbor(dst_cell)\n        if cell_empty and src_cell:Distance(dst_cell) >= 2 then\n            return {P.MOVE_OUTCOME.PUSHOUT, dst_cell, src_cell, cell_empty}\n        else\n            return {P.MOVE_OUTCOME.SWAP, dst_cell, src_cell}\n        end\n    end\n    return {P.MOVE_OUTCOME.BASIC, dst_cell, src_cell}\nend\n\nlocal function _compute_mouse_interaction_state(mouseDownTime, mouseDownPosition, hasLeftDeadZone)\n    local isValidClick, isValidDrag = nil, nil\n    if mouseDownTime then\n        local mouseHoldTime = time() - mouseDownTime\n        local mouseDisplacement = UI.GetCursorPosition() - mouseDownPosition\n        hasLeftDeadZone = hasLeftDeadZone or mouseDisplacement.size > MOUSE_DRAG_DEADZONE\n        isValidClick = mouseHoldTime <= MOUSE_CLICK_TIMEOUT and not hasLeftDeadZone\n        isValidDrag = mouseHoldTime >= MOUSE_DRAG_DEADTIME and hasLeftDeadZone\n    end\n    return isValidClick, isValidDrag, hasLeftDeadZone\nend\n\nfunction INVENTORY:_UpdateInteractions(_dt)\n    local grid = _maid.grid\n    if not self.isInteractionEnabled then return end\n    local worldInteractionPoint = UI.GetCursorPlaneIntersection(table.unpack(self.interactionPlane))\n    local cell = grid:GetCellAtPoint(worldInteractionPoint)\n    if not cell:IsNil() then\n        local newCellUnderCursor = cell\n        -- DEBUG:\n        -- CoreDebug.DrawSphere(cell.tile.content:GetWorldPosition(), 20)\n        if newCellUnderCursor ~= self.cellUnderCursor then\n            self.tileActivationOutcome = nil\n            self.moveOutcome = nil\n            if self.attachedActor then\n                local src_cell = self.attachedActor.homeCell\n                local dst_cell = newCellUnderCursor\n                self.moveOutcome = _get_move_outcome(grid, src_cell, dst_cell)\n            elseif newCellUnderCursor and newCellUnderCursor.actor then\n                self.tileActivationOutcome = newCellUnderCursor.actor:GetActivationOutcome()\n            end\n            if not self.isHoveringUI then\n                -- 1. change color of tiles\n                -- 2. show hover animation\n                Events.Broadcast(P.INTERACTION.TileUnderCursorChanged, grid,\n                     newCellUnderCursor, self.moveOutcome, self.tileActivationOutcome)\n            end\n        end\n        self.cellUnderCursor = newCellUnderCursor\n    end\n    -- Update left mouse movement criteria and interaction type.\n    if self.mouseDownTime and self.attachedActor then\n        local isValidClick, isValidDrag, hasLeftDeadZone = _compute_mouse_interaction_state(\n            self.mouseDownTime,\n            self.mouseDownCursorPosition,\n            self.hasMouseLeftDeadZone)\n        self.hasMouseLeftDeadZone = hasLeftDeadZone\n        if isValidClick then\n            self.mouseInteractionType = \"Click\"\n        elseif isValidDrag then\n            self.mouseInteractionType = \"Drag\"\n            -- When entering drag state, disable actor animations.\n            self.attachedActor:FinishAnimations()\n        else\n            self.mouseInteractionType = nil\n        end\n    end\n    -- Update right mouse interactions.\n    grid._highlights:_turn(not self.rightClickDownTime)\n    if self.rightClickDownTime then\n        local isValidClick, _isValidDrag, hasLeftDeadZone = _compute_mouse_interaction_state(\n            self.rightClickDownTime,\n            self.rightClickDownPosition,\n            self.hasRightClickLeftDeadZone)\n        self.hasRightClickLeftDeadZone = hasLeftDeadZone\n        self.isValidRightClick = isValidClick\n        -- It feels better if you can always move the camera while RMB is pressed. If we try to make\n        -- it a dual-purpose button, it leads to very uncanny jerkiness in the camera movement when\n        -- it transitions from \"click\" to \"drag\". Better to just let drag be always enabled while pressed.\n        self.isMovingCamera = true\n    end\n    -- Set position of any attached actors (only during drag)\n    if worldInteractionPoint and self.attachedActor and self.mouseInteractionType == \"Drag\" then\n        self.attachedActor:SetWorldPosition(worldInteractionPoint)\n    end\nend\n\nfunction INVENTORY:HandleRightMouseDown()\n    Events.Broadcast(P.INTERACTION.CameraScrollingBegin)\n    self.isValidRightClick = nil\n    self.isMovingCamera = nil\n    self.rightClickDownTime = time()\n    self.rightClickDownPosition = UI.GetCursorPosition()\n    self.hasRightClickLeftDeadZone = nil\n    self.cursorPosition = UI.GetCursorPosition()\n    _show_cursor(false)\nend\n\nfunction INVENTORY:HandleRightMouseUp()\n    Events.Broadcast(P.INTERACTION.CameraScrollingEnd)\n    -- A delete attempt can be made if you are not currently dragging an actor, and if you are allowed to interact with the cell beneath.\n    if self.isValidRightClick and not self.attachedActor then\n        if self.cellUnderCursor and self.cellUnderCursor.actor then\n            Events.Broadcast(P.INTERACTION.AttemptDelete, self.cellUnderCursor)\n        end\n    end\n    self.isValidRightClick = nil\n    self.isMovingCamera = nil\n    self.rightClickDownTime = nil\n    self.rightClickDownPosition = nil\n    self.hasRightClickLeftDeadZone = nil\n    self.cursorPosition = nil\n    _show_cursor(true)\nend\n\nfunction INVENTORY:HandleLeftMouseDown()\n    if not self.isInteractionEnabled then return end\n    self.mouseDownTime = time()\n    self.mouseDownCursorPosition = UI.GetCursorPosition()\n    self.mouseInteractionType = nil\n    self.hasMouseLeftDeadZone = nil\n    local actor = self.cellUnderCursor and self.cellUnderCursor.actor\n    if actor then\n        self.attachedActor = actor\n        self.moveOutcome = nil\n        -- When mousing down, end any ongoing animations immediately so the actor is locked into its base visual state.\n        actor:FinishAnimations()\n        Events.Broadcast(P.INTERACTION.ActorPickUp, actor)\n    end\nend\n\nlocal function _notify_server(type, dst_cell, src_cell, other_cell)\n    local function p(cell)\n        return cell and {cell.row, cell.col, cell.actor and cell.actor.id}\n    end\n    REvents.BroadcastToServer(P.C2S.TransmitInventoryModifications, type, p(dst_cell), p(src_cell), p(other_cell))\nend\n\nfunction INVENTORY:HandleLeftMouseUp()\n    if not self.isInteractionEnabled then return end\n    if not self.mouseDownTime then return end\n    self.mouseDownTime = nil\n    if self.attachedActor then\n        if self.mouseInteractionType == \"Click\" then\n            -- TODO: show info\n        elseif self.mouseInteractionType == \"Drag\" and self.moveOutcome then\n            local type, dst_cell, src_cell, other_cell = table.unpack(self.moveOutcome)\n            _notify_server(type, dst_cell, src_cell, other_cell)\n            local actor = self.attachedActor\n            assert(actor == src_cell.actor)\n            src_cell.actor = nil\n            local dst_actor = dst_cell.actor\n            -- apply changes:\n            -- {\"Merge\", dst_cell, src_cell, other_cell(mergable)}\n            -- {\"Swap\", dst_cell, src_cell}\n            -- {\"Pushout\", dst_cell, src_cell, other_cell(empty)}\n            -- {\"Basic\", dst_cell, src_cell}\n            if type == P.MOVE_OUTCOME.BASIC then\n                actor:SetHomeCell(dst_cell)\n            elseif type == P.MOVE_OUTCOME.PUSHOUT then\n                actor:SetHomeCell(dst_cell)\n                dst_actor:SetHomeCell(other_cell)\n            elseif type == P.MOVE_OUTCOME.SWAP then\n                dst_actor.actor = nil\n                actor:SetHomeCell(dst_cell)\n                dst_actor:SetHomeCell(src_cell)\n            elseif type == P.MOVE_OUTCOME.MERGE then\n                local actor3 = other_cell.actor\n                local ok, next_id = actor:CanUpgrade()\n                assert(ok)\n                dst_actor.actor, other_cell.actor = nil, nil\n                actor:Destroy()\n                dst_actor:Destroy()\n                actor3:Destroy()\n                Actor.New(next_id, dst_cell)\n            end\n        else\n            self.attachedActor:AnimateFlyHome()\n        end\n        self.moveOutcome = nil\n        self.attachedActor = nil\n    end\nend\n\nfunction INVENTORY:_StartCamera()\n    local grid = _maid.grid\n    local ext = grid:GetExtent()\n    ext.pos_x = ext.pos_x + SCROLL_LIMIT_ADJUST_TOP\n    ext.neg_x = math.min(ext.neg_x + SCROLL_LIMIT_ADJUST_BOTTOM, ext.pos_x)\n    ext.pos_y = ext.pos_y - SCROLL_LIMIT_ADJUST_SIDES\n    ext.neg_y = math.min(ext.neg_y + SCROLL_LIMIT_ADJUST_SIDES, ext.pos_y)\n    self.scrollExtent = ext\n    assert(script == INVENTORY_CAM.parent)\n    script:SetWorldTransform(INVENTORY_ROOT:GetTransform())\n    local startTile = grid:at(CAMERA_START_ROW, grid.w//2).tile\n    local initialTransform = CAMERA_RELATIVE_TRANSFORM * startTile:GetTransform()\n    local initialPosition = initialTransform:GetPosition()\n    local initialRotation = initialTransform:GetRotation()\n    initialPosition.x = CoreMath.Clamp(initialPosition.x, ext.neg_x, ext.pos_x)\n    initialPosition.y = CoreMath.Clamp(initialPosition.y, ext.neg_y, ext.pos_y)\n    INVENTORY_CAM:SetPosition(initialPosition)\n    INVENTORY_CAM:SetRotation(initialRotation)\n    LOCAL_PLAYER:SetDefaultCamera(INVENTORY_CAM)\n    self.interactionPlane = {\n        script:GetTransform():TransformPosition(Vector3.UP * INTERACTION_PLANE_HEIGHT),\n        script:GetTransform():GetUpVector()\n    }\n    grid:SetWorldToGridTransform(INVENTORY_ROOT:GetWorldTransform():GetInverse())\nend\n\nfunction INVENTORY:_UpdateCamera(dt)\n    if self.isMovingCamera then\n        local newCursorPositon = UI.GetCursorPosition()\n        local screenDelta = newCursorPositon - self.cursorPosition\n        self.cursorPosition = newCursorPositon \n        -- We must use the interaction coordinates to scroll properly. Remember screenspace Y goes downwards.\n        local localDelta =  CAMERA_YAW_ROTATION * Vector3.New(screenDelta, 0)\n        local scaledDelta = CAMERA_SCROLL_SPEED * dt * Vector3.New(-localDelta.y, localDelta.x, 0)\n        -- To \"drag\" the world, we move the camera in the inverse direction.\n        local localCameraPos = INVENTORY_CAM:GetPosition() - scaledDelta\n        -- We clamp to the board extent.\n        localCameraPos.x = CoreMath.Clamp(localCameraPos.x, self.scrollExtent.neg_x, self.scrollExtent.pos_x)\n        localCameraPos.y = CoreMath.Clamp(localCameraPos.y, self.scrollExtent.neg_y, self.scrollExtent.pos_y)\n        INVENTORY_CAM:SetPosition(localCameraPos)\n    end\nend\n\n-- Monkey patching Grid for highlights\nfunction INVENTORY._OnTileUnderCursorChanged(grid, cursor_cell, move_outcome)\n    local hl = grid._highlights\n    hl:_clear()\n    if move_outcome then\n        local type, dst_cell, src_cell, other_cell = table.unpack(move_outcome)\n        assert(not dst_cell or dst_cell == cursor_cell)\n        if not cursor_cell or cursor_cell.type ~= \"Cell\" or cursor_cell:IsNil() or not type then return end\n        if type == P.MOVE_OUTCOME.BASIC then\n            hl:_show(COLOR_DEFAULT, cursor_cell)\n        elseif type == P.MOVE_OUTCOME.PUSHOUT then\n            hl:_show(COLOR_MOVE, cursor_cell, other_cell)\n        elseif type == P.MOVE_OUTCOME.SWAP then\n            hl:_show(COLOR_MOVE, cursor_cell, src_cell)\n        elseif type == P.MOVE_OUTCOME.MERGE then\n            hl:_show(COLOR_MERGE, cursor_cell --[[, src_cell]], other_cell)\n        else warn(type)\n        end\n    else\n        hl:_show(COLOR_DEFAULT, cursor_cell)\n    end\nend\n\nfunction INVENTORY:HandleModal(modal_arg)\n    self.isInteractionEnabled = modal_arg < P.MODAL_ARG.OPEN\nend\n\n\n\n-----------------------------------------------------------------------------\n-- Main\n-----------------------------------------------------------------------------\ndo -- main\n    Client:Start()\n    ISM:SetBindingHandlers({\n        [\"ability_extra_27\"] = {\"_\", \"HandleInventoryBinding\"}, -- `I` button for inventory\n        [\"ability_primary\"] = {\"HandleLeftMouseDown\", \"HandleLeftMouseUp\"},\n        [\"ability_secondary\"] = {\"HandleRightMouseDown\", \"HandleRightMouseUp\"},\n        [P.CLIENT_LOCAL.MODAL] = {\"HandleModal\"} -- +1 arg\n    })\n    ISM:Connect(LOCAL_PLAYER.bindingPressedEvent, function(_player, binding) ISM:MapToStateHandler(binding, 1) end)\n    ISM:Connect(LOCAL_PLAYER.bindingReleasedEvent, function(_player, binding) ISM:MapToStateHandler(binding, 2) end)\n    ISM:Connect(Events, function(...) ISM:MapToStateHandler(P.CLIENT_LOCAL.MODAL, 1, ...) end, P.CLIENT_LOCAL.MODAL)\n\n    ISM:GoToState(INGAME)\n\n    -- DEBUG:\n    for k, v in pairs(P.INTERACTION) do\n        -- Events.Connect(v, function (...) print(pp{k, ...}) end)\n    end\n\nend\n"
       }
     }
     Assets {
@@ -1937,7 +2829,7 @@ Assets {
       Name: "GameServer"
       PlatformAssetType: 3
       TextAsset {
-        Text: "if not _G.req then _G.req = require end\nlocal pp = _G.req(\"_Luapp\").pp\nlocal errfmt = _G.req(\"_Luapp\").errfmt\nlocal Grid = _G.req(\"_Grid\")\nlocal Bitarray = _G.req(\"_Bitarray\")\nlocal Maid = _G.req(\"_Maid\")\nlocal Trampoline = _G.req(\"_Trampoline\")\nlocal REvents = _G.req(\"_ReliableEvents\")\nlocal B = _G.req(\"BusinessLogic\")\nlocal P = _G.req(\"Protocols\")\nlocal S = _G.req(\"StaticData\")\nB.SetStaticData(S)\nlocal _maid = Maid.New(script)\nlocal NONCE_SYMBOLS = \'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/\'\nlocal UNNONCE_SYMBOL = \'*\'\n\nlocal DOWNLINK, CHANNELS, IN_USE, SOCIAL do\n    DOWNLINK = script:GetCustomProperty(\"DOWNLINK\"):WaitForObject()\n    CHANNELS= DOWNLINK:GetCustomProperties()\n    for k  in pairs(CHANNELS) do\n        if type(k) == \'string\' then\n            CHANNELS[#CHANNELS+1] = k\n            CHANNELS[k] = nil\n        end\n    end\n    assert(#CHANNELS == 16 + 1)\n    table.sort(CHANNELS, function(a, b) return tonumber(a:sub(2)) < tonumber(b:sub(2)) end)\n    IN_USE = Bitarray.new(#CHANNELS)\n    SOCIAL = CHANNELS[IN_USE:swap(#CHANNELS)]\nend\n\nlocal function _borrow_channel()\n    return CHANNELS[assert(IN_USE:find_and_swap())]\nend\n\nlocal function _free_chan(channel)\n    local idx = 0\n    for i=1, #CHANNELS do\n        if CHANNELS[i] == channel then idx = i break end\n    end\n    assert(idx ~= 0)\n    IN_USE:swap(idx)\n    return idx\nend\n\nlocal function _post_to_channel(channel, message)\n    if type(message) == \'string\' then\n        DOWNLINK:SetNetworkedCustomProperty(channel, message)\n    elseif type(message) == table then\n        DOWNLINK:SetNetworkedCustomProperty(channel, table.concat(message))\n    else\n        assert(false, errfmt(message) .. \'\\n\' .. CoreDebug.GetStackTrace())\n    end\nend\n\n-- can use it like method\nlocal function _nonce(self)\n    if not self._count then self._count = 0 end\n    local count = self._count + 1\n    self._count = count\n    local si = count%#NONCE_SYMBOLS + 1\n    return NONCE_SYMBOLS:sub(si, si)\nend\n\nlocal function _make_basic_inventory()\n    return Grid.New(5, 5, 100, 100):MakeHole(0,0):MakeHole(0,4)\nend\nlocal function _make_debug_inventory()\n    local gr = Grid.New(5,5,100,100):MakeHole(0,0):MakeHole(0,4)\n    for i = 1, gr.w*gr.h do\n        local cell = gr:at(i)\n        if not cell:IsNil() then\n            cell.actor = i%3 == 0 and {id = 1} or nil or {id = 4}\n        end\n    end\n    return gr\nend\n\n--------------------------------------------------------------------------------------------------\n-- PlayerConnection\n--------------------------------------------------------------------------------------------------\nlocal PlayerConnection = {}\nPlayerConnection.__index = PlayerConnection\n\nfunction PlayerConnection.New(player)\n    local playerData = B.LoadSave(player)\n    local saved_inventory = playerData[B.INVENTORY_KEY]\n    local inventory = saved_inventory and P.PROTOCOL_RECORD.unpack(saved_inventory, Grid.deserialize) or _make_debug_inventory()\n    local self = setmetatable({\n        _maid = Maid.New(),\n        player = player,\n        inventory = inventory,\n        channel = _borrow_channel(),\n        _count = 0\n    }, PlayerConnection)\n    B.RecalculatePetBonus(self.player, self.inventory)\n    self:Send(P.PROTOCOL_OWNER.pack(player.id, self.channel, SOCIAL, _nonce(self)))\n    self._maid:GiveTask(player.resourceChangedEvent:Connect(B.SaveKey))\n    return self\nend\n\nfunction PlayerConnection:Destroy()\n    DOWNLINK:SetNetworkedCustomProperty(self.channel, \"\")\n    _free_chan(self.channel)\n    self._maid:Destroy()\nend\n\nfunction PlayerConnection:Send(message)\n    _post_to_channel(self.channel, message)\nend\n\nfunction PlayerConnection:OnTHE(egg)\n    local ok, pet_id, cell = B.PurchaseEgg(self.player, egg, self.inventory)\n    if ok then\n        local packed = P.PROTOCOL_EGG.pack(pet_id, egg, cell.row, cell.col, _nonce(self))\n        self:Send(packed)\n        REvents.Broadcast(P.SOCIAL.HATCH.event, self.player, pet_id)\n        assert(not cell.actor)\n        cell.actor = {id=pet_id}\n        B.SaveKey(self.player, B.INVENTORY_KEY,  P.PROTOCOL_RECORD.pack(self.inventory:serialize(true), UNNONCE_SYMBOL))\n        -- B.RecalculatePetBonus(self.player, self.inventory) -- not needed, PurchaseEgg dont using equpping slots\n    else\n        -- TODO: what to do with reson at server?\n        local reason = pet_id\n        warn(pp{self.player, reason})\n    end\n    print(pp{\"on THE\", self.player.name})\nend\n\nfunction PlayerConnection:OnGIR()\n    local message = self.inventory:serialize(true)\n    local packed = P.PROTOCOL_RECORD.pack(message, _nonce(self))\n    B.SaveKey(self.player, B.INVENTORY_KEY, packed)\n    B.RecalculatePetBonus(self.player, self.inventory)\n    self:Send(packed)\n    print(pp{\"on GIR\", self.player.name})\nend\n\nfunction PlayerConnection:OnGRR()\n    B.ResetGame(self.player)\n    self.inventory = _make_basic_inventory()\n    self:OnGIR() -- send + save basic inventory\n    print(pp{\"on GRR\", self.player.name})\nend\n\nfunction PlayerConnection:OnTIM(...)\n    warn(pp{\"on TIM\", ..., self.player.name})\n    -- TODO: use checks on client too\n    local type, dst_cell, src_cell, other_cell = ...\n    local ok = false\n    if type == P.MOVE_OUTCOME.BASIC then\n        ok = self.inventory:Move(dst_cell, src_cell)\n    elseif type == P.MOVE_OUTCOME.PUSHOUT then\n        ok = self.inventory:Push(dst_cell, src_cell, other_cell)\n    elseif type == P.MOVE_OUTCOME.SWAP then\n        ok = self.inventory:Swap(dst_cell, src_cell)\n    elseif type == P.MOVE_OUTCOME.MERGE then\n        local _, _, pet_id = table.unpack(dst_cell)\n        assert(dst_cell)\n        local _, new_pet_id = S.PetDb:CanUpgrade(pet_id)\n        ok = self.inventory:Merge3(dst_cell, src_cell, other_cell, function() return {id=new_pet_id} end)\n        if ok then\n            REvents.Broadcast(P.SOCIAL.MERGE.event, self.player, new_pet_id)\n        end\n    else warn(type)\n    end\n    if ok then warn(pp{\"OK\", ...}) end\n    if ok then\n        B.SaveKey(self.player, B.INVENTORY_KEY,  P.PROTOCOL_RECORD.pack(self.inventory:serialize(true), UNNONCE_SYMBOL))\n        B.RecalculatePetBonus(self.player, self.inventory)\n    end\n    if not ok then\n        if Environment.IsPreview() then\n            Task.Wait() -- NOTE: seems like in editor Server event fires the same frame\n        end\n        self:OnGIR() -- reset client\'s inventory to server version\n    end\n    -- DEBUG:\n    -- if type == \"Pushout\" then self:OnGRR() end\nend\n\n--------------------------------------------------------------------------------------------------\n-- Server\n--------------------------------------------------------------------------------------------------\nlocal Server = {_count=0}\nServer.__index = Server\n\nfunction Server:Start()\n    warn(\"Server -- START\")\n    self.playerConnections = {}\n    Game.playerJoinedEvent:Connect(function(player) self:OnPlayerJoined(player) end)\n    Game.playerLeftEvent:Connect(function(player) self:OnPlayerLeft(player) end)\n    -- On preview clients, sometimes the playerJoined event gets missed. Here we hard force it.\n    for _,player in ipairs(Game.GetPlayers()) do self:OnPlayerJoined(player) end\n    -- event to player connection forwarding\n    for _name, event in pairs(P.CLIENT) do\n        local handler = \"On\" .. event\n        _maid:GiveTask(Events.ConnectForPlayer(event, function(player, ...)\n            local connection = self.playerConnections[player]\n            if connection and not connection[handler] then\n                warn(pp{\"connection -- no handler:\", handler, event, _name})\n            else\n                connection[handler](connection, ...)\n            end\n        end))\n    end\nend\n\nfunction Server:OnPlayerJoined(player)\n    if self.playerConnections[player] then return end\n    -- TODO: remove player data from args\n    self.playerConnections[player] = PlayerConnection.New(player)\nend\n\nfunction Server:OnPlayerLeft(player)\n    local connection = self.playerConnections[player]\n    self.playerConnections[player] = nil\n    connection:Destroy()\nend\n\nServer:Start()\n\n--------------------------------------------------------------------------------------------------\n-- Social\n--------------------------------------------------------------------------------------------------\nlocal SOCIAL_UPDATE_INTERVAL = 0.5\nlocal Social = {_count=0}\nSocial.__index = Social\n\nfunction Social.Start()\n    Social._social_tx = Trampoline.New(\n        function(message)\n            _post_to_channel(SOCIAL, message)\n            return true -- trampoline req\n        end,\n        SOCIAL_UPDATE_INTERVAL)\n    _maid:GiveTask(Social._social_tx)\n    for _op, protocol in pairs(P.SOCIAL.protocols) do\n        local event = protocol.event\n        _maid:GiveTask(Events.Connect(event, function(player, ...)\n            assert(player)\n            player = type(player) == \"string\" and player or player.id\n            local n = select(\"#\", ...)\n            assert(n == 0 or n == 1)\n            if n == 1 then\n                Social:Send(protocol.pack(player, (...), _nonce(Social)))\n            else\n                Social:Send(protocol.pack(player, _nonce(Social)))\n            end\n        end))\n    end\nend\n\nfunction Social:Send(message)\n    self._social_tx(message)\nend\n\nSocial.Start()\n\n\n\n\n"
+        Text: "if not _G.req then _G.req = require end\nlocal pp = _G.req(\"_Luapp\").pp\nlocal errfmt = _G.req(\"_Luapp\").errfmt\nlocal Grid = _G.req(\"_Grid\")\nlocal Bitarray = _G.req(\"_Bitarray\")\nlocal Maid = _G.req(\"_Maid\")\nlocal Trampoline = _G.req(\"_Trampoline\")\nlocal REvents = _G.req(\"_ReliableEvents\")\nlocal B = _G.req(\"BusinessLogic\")\nlocal P = _G.req(\"Protocols\")\nlocal S = _G.req(\"StaticData\")\nB.SetStaticData(S)\nlocal _maid = Maid.New(script)\nlocal NONCE_SYMBOLS = \'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/\'\nlocal UNNONCE_SYMBOL = \'*\'\n\nlocal DOWNLINK, CHANNELS, IN_USE, SOCIAL do\n    DOWNLINK = script:GetCustomProperty(\"DOWNLINK\"):WaitForObject()\n    CHANNELS= DOWNLINK:GetCustomProperties()\n    for k  in pairs(CHANNELS) do\n        if type(k) == \'string\' then\n            CHANNELS[#CHANNELS+1] = k\n            CHANNELS[k] = nil\n        end\n    end\n    assert(#CHANNELS == 16 + 1)\n    table.sort(CHANNELS, function(a, b) return tonumber(a:sub(2)) < tonumber(b:sub(2)) end)\n    IN_USE = Bitarray.new(#CHANNELS)\n    SOCIAL = CHANNELS[IN_USE:swap(#CHANNELS)]\nend\n\nlocal function _borrow_channel()\n    return CHANNELS[assert(IN_USE:find_and_swap())]\nend\n\nlocal function _free_chan(channel)\n    local idx = 0\n    for i=1, #CHANNELS do\n        if CHANNELS[i] == channel then idx = i break end\n    end\n    assert(idx ~= 0)\n    IN_USE:swap(idx)\n    return idx\nend\n\n-- FIXME: networked properties replication takes some time (at least 1 frame + latency)\n-- we need to protect *sending* by buffer and timestamp.\nlocal function _post_to_channel(channel, message)\n    if type(message) == \'string\' then\n        DOWNLINK:SetNetworkedCustomProperty(channel, message)\n    elseif type(message) == table then\n        DOWNLINK:SetNetworkedCustomProperty(channel, table.concat(message))\n    else\n        assert(false, errfmt(message) .. \'\\n\' .. CoreDebug.GetStackTrace())\n    end\nend\n\n-- can use it like method\nlocal function _nonce(self)\n    if not self._count then self._count = 0 end\n    local count = self._count + 1\n    self._count = count\n    local si = count%#NONCE_SYMBOLS + 1\n    return NONCE_SYMBOLS:sub(si, si)\nend\n\nlocal function _make_basic_inventory()\n    return Grid.New(5, 5, 100, 100):MakeHole(0,0):MakeHole(0,4)\nend\nlocal function _make_debug_inventory()\n    local gr = Grid.New(5,5,100,100):MakeHole(0,0):MakeHole(0,4)\n    for i = 1, gr.w*gr.h do\n        local cell = gr:at(i)\n        if not cell:IsNil() then\n            cell.actor = i%3 == 0 and {id = 1} or nil or {id = 4}\n        end\n    end\n    return gr\nend\n\n--------------------------------------------------------------------------------------------------\n-- PlayerConnection\n--------------------------------------------------------------------------------------------------\nlocal PlayerConnection = {}\nPlayerConnection.__index = PlayerConnection\n\nfunction PlayerConnection.New(player)\n    local playerData = B.LoadSave(player)\n    local saved_inventory = playerData[B.INVENTORY_KEY]\n    local inventory = saved_inventory and P.S2C.INVENTORY.unpack(saved_inventory, Grid.deserialize) or _make_debug_inventory()\n    local self = setmetatable({\n        _maid = Maid.New(),\n        player = player,\n        inventory = inventory,\n        channel = _borrow_channel(),\n        _count = 0\n    }, PlayerConnection)\n    B.RecalculatePetBonus(self.player, self.inventory)\n    self:Send(P.S2C.CHANNELS.pack(player.id, self.channel, SOCIAL, _nonce(self)))\n    self._maid:GiveTask(player.resourceChangedEvent:Connect(B.SaveKey))\n    return self\nend\n\nfunction PlayerConnection:Destroy()\n    DOWNLINK:SetNetworkedCustomProperty(self.channel, \"\")\n    _free_chan(self.channel)\n    self._maid:Destroy()\nend\n\nfunction PlayerConnection:Send(message)\n    _post_to_channel(self.channel, message)\nend\n\nfunction PlayerConnection:OnEON()\n    -- PASS\nend\n\nfunction PlayerConnection:OnEOF()\n    -- PASS\nend\n\nfunction PlayerConnection:OnAFR()\n    local ok, new_rebirth = B.doRebirth(self.player)\n    if ok then\n        REvents.Broadcast(P.SOCIAL.REBIRTH.event, self.player, new_rebirth)\n    end\n    print(pp{\"on AFR\", self.player.name})\nend\n\nfunction PlayerConnection:OnTHE(egg)\n    local ok, pet_id, cell = B.PurchaseEgg(self.player, egg, self.inventory)\n    if ok then\n        local packed = P.S2C.EGG.pack(pet_id, egg, cell.row, cell.col, _nonce(self))\n        self:Send(packed)\n        REvents.Broadcast(P.SOCIAL.HATCH.event, self.player, pet_id)\n        assert(not cell.actor)\n        cell.actor = {id=pet_id}\n        B.SaveKey(self.player, B.INVENTORY_KEY,  P.S2C.INVENTORY.pack(self.inventory:serialize(true), UNNONCE_SYMBOL))\n        -- B.RecalculatePetBonus(self.player, self.inventory) -- not needed, PurchaseEgg dont using equpping slots\n    else\n        -- TODO: what to do with reson at server?\n        local reason = pet_id\n        warn(pp{self.player, reason})\n    end\n    print(pp{\"on THE\", self.player.name})\nend\n\nfunction PlayerConnection:OnGIR()\n    local message = self.inventory:serialize(true)\n    local packed = P.S2C.INVENTORY.pack(message, _nonce(self))\n    B.SaveKey(self.player, B.INVENTORY_KEY, packed)\n    B.RecalculatePetBonus(self.player, self.inventory)\n    self:Send(packed)\n    print(pp{\"on GIR\", self.player.name})\nend\n\nfunction PlayerConnection:OnGRR()\n    B.ResetGame(self.player)\n    self.inventory = _make_basic_inventory()\n    self:OnGIR() -- send + save basic inventory\n    print(pp{\"on GRR\", self.player.name})\nend\n\nfunction PlayerConnection:OnTIM(...)\n    warn(pp{\"on TIM\", ..., self.player.name})\n    -- TODO: use checks on client too\n    local type, dst_cell, src_cell, other_cell = ...\n    local ok = false\n    if type == P.MOVE_OUTCOME.BASIC then\n        ok = self.inventory:Move(dst_cell, src_cell)\n    elseif type == P.MOVE_OUTCOME.PUSHOUT then\n        ok = self.inventory:Push(dst_cell, src_cell, other_cell)\n    elseif type == P.MOVE_OUTCOME.SWAP then\n        ok = self.inventory:Swap(dst_cell, src_cell)\n    elseif type == P.MOVE_OUTCOME.MERGE then\n        local _, _, pet_id = table.unpack(dst_cell)\n        assert(dst_cell)\n        local _, new_pet_id = S.PetDb:CanUpgrade(pet_id)\n        ok = self.inventory:Merge3(dst_cell, src_cell, other_cell, function() return {id=new_pet_id} end)\n        if ok then\n            REvents.Broadcast(P.SOCIAL.MERGE.event, self.player, new_pet_id)\n        end\n    else warn(type)\n    end\n    if ok then warn(pp{\"OK\", ...}) end\n    if ok then\n        B.SaveKey(self.player, B.INVENTORY_KEY,  P.S2C.INVENTORY.pack(self.inventory:serialize(true), UNNONCE_SYMBOL))\n        B.RecalculatePetBonus(self.player, self.inventory)\n    end\n    if not ok then\n        if Environment.IsPreview() then\n            Task.Wait() -- NOTE: seems like in editor Server event fires the same frame\n        end\n        self:OnGIR() -- reset client\'s inventory to server version\n    end\n    -- DEBUG:\n    -- if type == \"Pushout\" then self:OnGRR() end\nend\n\n--------------------------------------------------------------------------------------------------\n-- Server\n--------------------------------------------------------------------------------------------------\nlocal Server = {_count=0}\nServer.__index = Server\n\nfunction Server:Start()\n    warn(\"Server -- START\")\n    self.playerConnections = {}\n    Game.playerJoinedEvent:Connect(function(player) self:OnPlayerJoined(player) end)\n    Game.playerLeftEvent:Connect(function(player) self:OnPlayerLeft(player) end)\n    -- On preview clients, sometimes the playerJoined event gets missed. Here we hard force it.\n    for _,player in ipairs(Game.GetPlayers()) do self:OnPlayerJoined(player) end\n    -- event to player connection forwarding\n    for _name, event in pairs(P.C2S) do\n        local handler = \"On\" .. event\n        _maid:GiveTask(Events.ConnectForPlayer(event, function(player, ...)\n            local connection = self.playerConnections[player]\n            if connection and not connection[handler] then\n                warn(pp{\"connection -- no handler:\", handler, event, _name})\n            else\n                connection[handler](connection, ...)\n            end\n        end))\n    end\nend\n\nfunction Server:OnPlayerJoined(player)\n    if self.playerConnections[player] then return end\n    -- TODO: remove player data from args\n    self.playerConnections[player] = PlayerConnection.New(player)\nend\n\nfunction Server:OnPlayerLeft(player)\n    local connection = self.playerConnections[player]\n    self.playerConnections[player] = nil\n    connection:Destroy()\nend\n\nServer:Start()\n\n--------------------------------------------------------------------------------------------------\n-- Social\n--------------------------------------------------------------------------------------------------\nlocal SOCIAL_UPDATE_INTERVAL = 0.5\nlocal Social = {_count=0}\nSocial.__index = Social\n\nfunction Social.Start()\n    Social._social_tx = Trampoline.New(\n        function(message)\n            _post_to_channel(SOCIAL, message)\n            return true -- trampoline req\n        end,\n        SOCIAL_UPDATE_INTERVAL)\n    _maid:GiveTask(Social._social_tx)\n    for _op, protocol in pairs(P.SOCIAL.protocols) do\n        local event = protocol.event\n        _maid:GiveTask(Events.Connect(event, function(player, ...)\n            assert(player)\n            player = type(player) == \"string\" and player or player.id\n            local n = select(\"#\", ...)\n            assert(n == 0 or n == 1)\n            if n == 1 then\n                Social:Send(protocol.pack(player, (...), _nonce(Social)))\n            else\n                Social:Send(protocol.pack(player, _nonce(Social)))\n            end\n        end))\n    end\nend\n\nfunction Social:Send(message)\n    self._social_tx(message)\nend\n\nSocial.Start()\n\n\n\n\n"
       }
     }
     Assets {
@@ -1953,7 +2845,7 @@ Assets {
       Name: "EquipmentServer"
       PlatformAssetType: 3
       TextAsset {
-        Text: "local Maid = _G.req(\"_Maid\")\r\nlocal P = _G.req(\"Protocols\")\r\nlocal COMPONENT_ROOT = script:GetCustomProperty(\"ComponentRoot\"):WaitForObject()\r\nlocal EQUIPMENT_TEMPLATE = assert(COMPONENT_ROOT:GetCustomProperty(\"EquipmentTemplate\"))\r\nlocal _maid = Maid.New(script)\r\n\r\nfunction OnPlayerJoined(player)\r\n    _maid[player.id] = World.SpawnAsset(EQUIPMENT_TEMPLATE)\r\n    assert(_maid[player.id]:IsA(\"Equipment\"))\r\n    _maid[player.id]:Equip(player)\r\nend\r\n\r\nfunction OnPlayerLeft(player)\r\n    if _maid[player.id] and _maid[player.id]:IsValid() then\r\n        _maid[player.id]:Unequip(player)\r\n    end\r\n    _maid[player.id] = nil\r\nend\r\n\r\n_maid.playerJoinedEvent = Game.playerJoinedEvent:Connect(OnPlayerJoined)\r\n_maid.playerLeftEvent = Game.playerLeftEvent:Connect(OnPlayerLeft)\r\n_maid.equipment_on = Events.ConnectForPlayer(P.C2S.EQUIPMENT_ON, function(player)\r\n    if _maid[player.id] and _maid[player.id]:IsValid() then\r\n        _maid[player.id]:Equip(player)\r\n    end\r\nend)\r\n\r\n_maid.equipment_off = Events.ConnectForPlayer(P.C2S.EQUIPMENT_OFF, function(player)\r\n    if _maid[player.id] and _maid[player.id]:IsValid() then\r\n        _maid[player.id]:Unequip(player)\r\n    end\r\nend)"
+        Text: "local Maid = _G.req(\"_Maid\")\r\nlocal P = _G.req(\"Protocols\")\r\nlocal COMPONENT_ROOT = script:GetCustomProperty(\"ComponentRoot\"):WaitForObject()\r\nlocal EQUIPMENT_TEMPLATE = assert(COMPONENT_ROOT:GetCustomProperty(\"EquipmentTemplate\"))\r\nlocal _maid = Maid.New(script)\r\n\r\nfunction OnPlayerJoined(player)\r\n    _maid[player.id] = World.SpawnAsset(EQUIPMENT_TEMPLATE)\r\n    assert(_maid[player.id]:IsA(\"Equipment\"))\r\n    _maid[player.id]:Equip(player)\r\nend\r\n\r\nfunction OnPlayerLeft(player)\r\n    if _maid[player.id] and _maid[player.id]:IsValid() then\r\n        _maid[player.id]:Unequip(player)\r\n    end\r\n    _maid[player.id] = nil\r\nend\r\n\r\n_maid.playerJoinedEvent = Game.playerJoinedEvent:Connect(OnPlayerJoined)\r\n_maid.playerLeftEvent = Game.playerLeftEvent:Connect(OnPlayerLeft)\r\n_maid.TurnEquipmentOn = Events.ConnectForPlayer(P.C2S.TurnEquipmentOn, function(player)\r\n    if _maid[player.id] and _maid[player.id]:IsValid() then\r\n        _maid[player.id]:Equip(player)\r\n    end\r\nend)\r\n\r\n_maid.TurnEquipmentOff = Events.ConnectForPlayer(P.C2S.TurnEquipmentOff, function(player)\r\n    if _maid[player.id] and _maid[player.id]:IsValid() then\r\n        _maid[player.id]:Unequip(player)\r\n    end\r\nend)"
       }
     }
     Assets {

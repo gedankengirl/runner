@@ -19,13 +19,13 @@ end
 
 _maid.playerJoinedEvent = Game.playerJoinedEvent:Connect(OnPlayerJoined)
 _maid.playerLeftEvent = Game.playerLeftEvent:Connect(OnPlayerLeft)
-_maid.equipment_on = Events.ConnectForPlayer(P.C2S.EQUIPMENT_ON, function(player)
+_maid.TurnEquipmentOn = Events.ConnectForPlayer(P.C2S.TurnEquipmentOn, function(player)
     if _maid[player.id] and _maid[player.id]:IsValid() then
         _maid[player.id]:Equip(player)
     end
 end)
 
-_maid.equipment_off = Events.ConnectForPlayer(P.C2S.EQUIPMENT_OFF, function(player)
+_maid.TurnEquipmentOff = Events.ConnectForPlayer(P.C2S.TurnEquipmentOff, function(player)
     if _maid[player.id] and _maid[player.id]:IsValid() then
         _maid[player.id]:Unequip(player)
     end

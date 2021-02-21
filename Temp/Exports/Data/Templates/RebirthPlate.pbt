@@ -15,9 +15,9 @@ Assets {
             Z: 8
           }
         }
-        ParentId: 4781671109827199097
+        ParentId: 10966550013016146936
+        ChildIds: 6798591778138675252
         ChildIds: 15287037078876339536
-        ChildIds: 8418399231783793959
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -31,6 +31,66 @@ Assets {
           }
           TriggerShape_v2 {
             Value: "mc:etriggershape:sphere"
+          }
+        }
+      }
+      Objects {
+        Id: 6798591778138675252
+        Name: "ClientContext"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 4222691229199675037
+        ChildIds: 3226646465969827850
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        NetworkContext {
+        }
+      }
+      Objects {
+        Id: 3226646465969827850
+        Name: "RebirthPlateClient"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 0.125
+            Y: 0.125
+            Z: 0.125
+          }
+        }
+        ParentId: 6798591778138675252
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:RebirthPlate"
+            ObjectReference {
+              SubObjectId: 4222691229199675037
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 2436388842830682587
           }
         }
       }
@@ -174,76 +234,6 @@ Assets {
           }
         }
       }
-      Objects {
-        Id: 8418399231783793959
-        Name: "ServerContext"
-        Transform {
-          Location {
-            Y: 96.875
-          }
-          Rotation {
-          }
-          Scale {
-            X: 0.125
-            Y: 0.125
-            Z: 0.125
-          }
-        }
-        ParentId: 4222691229199675037
-        ChildIds: 2465698640615631114
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        NetworkContext {
-          Type: Server
-        }
-      }
-      Objects {
-        Id: 2465698640615631114
-        Name: "RebirthServer"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 8418399231783793959
-        UnregisteredParameters {
-          Overrides {
-            Name: "cs:Trigger"
-            ObjectReference {
-              SubObjectId: 4222691229199675037
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Script {
-          ScriptAsset {
-            Id: 8336394962520892309
-          }
-        }
-      }
-    }
-    Assets {
-      Id: 8336394962520892309
-      Name: "RebirthServer"
-      PlatformAssetType: 3
-      TextAsset {
-        Text: "local Maid = require(\'108BCE6EE4C80C2D:Maid\')\r\nlocal BusinessLogic = require(\'961D2BEB7E5DFB42:BusinessLogic\')\r\nlocal trigger = script:GetCustomProperty(\"Trigger\"):WaitForObject()\r\n\r\nlocal _maid = Maid.New()\r\n\r\n_maid.beginOverlapEvent = trigger.beginOverlapEvent:Connect(function(_, object)\r\n    if object and object:IsA(\"Player\") then\r\n        print(BusinessLogic.isRebirthPossible(object))\r\n        BusinessLogic.doRebirth(object)\r\n    end\r\nend)\r\n\r\n_maid.destroyEvent = trigger.destroyEvent:Connect(function()\r\n    _maid.Destroy()\r\nend)\r\n\r\n"
-      }
     }
     Assets {
       Id: 755036478599963226
@@ -281,11 +271,19 @@ Assets {
         AssetId: "sm_torus_002"
       }
     }
+    Assets {
+      Id: 2436388842830682587
+      Name: "RebirthPlateClient"
+      PlatformAssetType: 3
+      TextAsset {
+        Text: "local TRIGGER = script:GetCustomProperty(\"RebirthPlate\"):WaitForObject()\n\nlocal Maid = _G.req(\"_Maid\")\nlocal REvents = _G.req(\"ReliableEvents\")\nlocal P = _G.req(\"Protocols\")\nlocal B = _G.req(\"BusinessLogic\")\n\nlocal _maid = Maid.New(TRIGGER)\n\nlocal AskForRebirth do\n    local function connect()\n        _maid.trigger_connection = TRIGGER.beginOverlapEvent:Connect(AskForRebirth)\n    end\n    AskForRebirth = function(_trigger, player)\n        if player and player:IsA(\"Player\") then\n            _maid.trigger_connection = nil\n            if B.isRebirthPossible(player) then\n                REvents.Broadcast(P.CLIENT_LOCAL.POPUP, {\n                    text = \"Do you wanna rebirth? All your *Speed Coins* will be lost.\",\n                    yes = function()\n                        REvents.BroadcastToServer(P.C2S.AskForRebirth)\n                    end,\n                })\n            end\n            Task.Wait(1)\n            connect()\n        end\n    end\n    connect()\nend\n\n\n\n\n\n"
+      }
+    }
     PrimaryAssetId {
       AssetType: "None"
       AssetId: "None"
     }
   }
-  SerializationVersion: 73
+  SerializationVersion: 74
 }
 IncludesAllDependencies: true

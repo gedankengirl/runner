@@ -15,9 +15,9 @@ Assets {
             Z: 8
           }
         }
-        ParentId: 4781671109827199097
+        ParentId: 10966550013016146936
+        ChildIds: 6798591778138675252
         ChildIds: 15287037078876339536
-        ChildIds: 8418399231783793959
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -31,6 +31,66 @@ Assets {
           }
           TriggerShape_v2 {
             Value: "mc:etriggershape:sphere"
+          }
+        }
+      }
+      Objects {
+        Id: 6798591778138675252
+        Name: "ClientContext"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 4222691229199675037
+        ChildIds: 3226646465969827850
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        NetworkContext {
+        }
+      }
+      Objects {
+        Id: 3226646465969827850
+        Name: "RebirthPlateClient"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 0.125
+            Y: 0.125
+            Z: 0.125
+          }
+        }
+        ParentId: 6798591778138675252
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:RebirthPlate"
+            ObjectReference {
+              SubObjectId: 4222691229199675037
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 2436388842830682587
           }
         }
       }
@@ -171,68 +231,6 @@ Assets {
               Mass: 100
               LinearDamping: 0.01
             }
-          }
-        }
-      }
-      Objects {
-        Id: 8418399231783793959
-        Name: "ServerContext"
-        Transform {
-          Location {
-            Y: 96.875
-          }
-          Rotation {
-          }
-          Scale {
-            X: 0.125
-            Y: 0.125
-            Z: 0.125
-          }
-        }
-        ParentId: 4222691229199675037
-        ChildIds: 2465698640615631114
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        NetworkContext {
-          Type: Server
-        }
-      }
-      Objects {
-        Id: 2465698640615631114
-        Name: "RebirthServer"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 8418399231783793959
-        UnregisteredParameters {
-          Overrides {
-            Name: "cs:Trigger"
-            ObjectReference {
-              SubObjectId: 4222691229199675037
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Script {
-          ScriptAsset {
-            Id: 8336394962520892309
           }
         }
       }
