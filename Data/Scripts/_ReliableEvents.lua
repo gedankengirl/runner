@@ -61,7 +61,7 @@ local BroadcastFactory do
         return function (...)
             local event = select(1, ...)
             if not event or type(event) ~= "string" then
-                warn("Bad argument to brodcast\n" .. CoreDebug.GetStackTrace())
+                warn("ERROR: first argumenst have to be 'event' string\n" .. CoreDebug.GetStackTrace())
                 return
             end
             if txqueue:empty() then
@@ -100,8 +100,7 @@ local Broadcast do
             return -- !
         end
         while not txqueue:empty() do
-            local event = txqueue:pop()
-            Events.Broadcast(unpack(event))
+            Events.Broadcast(unpack(txqueue:pop()))
         end
         _in_trampoline = false
     end
