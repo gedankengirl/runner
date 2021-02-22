@@ -5,12 +5,16 @@
     * [de]serialize set of ints: utf8.char <-> utf8.codepoint. Max int = 2^21 (~2E+6).
     * TODO: For inspiration: https://github.com/rxi/lume/blob/master/lume.lua
     * math.random :: (nil) -> [0,1) | (a:int, b:int) -> [a,b] | (n:int) -> [1, n]
-    * TODO: pure lua xoshiro256
 --]]
 
-local abs = math.abs
-
 local CORE_ENV = CoreString and CoreMath
+
+local PI_2 = 2*math.pi
+
+local pairs, ipairs = pairs, ipairs
+local rand = math.random
+local abs, sqrt, cos, sin, log = math.abs, math.sqrt, math.cos, math.sin, math.log
+math.randomseed(os.time())
 
 local snippets = {}
 
@@ -81,11 +85,19 @@ end
 -- pythonic uniform
 local function uniform(a, b)
     assert(a < b, "empty interval")
-    return a + (b-a)*math.random()
+    return a + (b-a)*rand()
+end
+snippets.uniform = uniform
+
+-- gamma-corrected: rand^gamma, practical range for gamma: [3, 0.3]
+function snippets.skewed(a, b, gamma)
+    assert(a < b, "empty interval")
+    assert(gamma and type(gamma) == "number", "gamma undefined")
+    local r = rand()
+    return a + (b-a)*r^gamma
 end
 
 -- https://eli.thegreenplace.net/2010/01/22/weighted-random-generation-in-python
--- NOTE: sum * math.random() is biased, in practice use xoshiro256 with unbiased projection
 function snippets.weightedchoice(t)
     local sum = 0
     for _, w in pairs(t) do sum = sum + w end
@@ -95,7 +107,6 @@ function snippets.weightedchoice(t)
         if rnd < 0 then return k end
     end
 end
-
 
 do
     local NIBBLES = {[0]=
@@ -146,11 +157,12 @@ local function perfn(tag, times, thunk)
     return result
 end
 
--- exports
-function snippets.perf(tag, thunk)
+local function perf(tag, thunk)
     return perfn(tag, 1, thunk)
 end
+
 snippets.perfn = perfn
+snippets.perf = perf
 
 -- https://community.khronos.org/t/zoom-to-fit-screen/59857/12
 function snippets.fitSphereToCamera(r, fov)
@@ -200,7 +212,6 @@ local function deepcopy(orig)
     return copy
 end
 snippets.deepcopy = deepcopy
-
 
 -- pass value to observer before subscribe, like Rx's subject
 function snippets.Subject(obj, networkedProperty, callback)
