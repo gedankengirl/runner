@@ -14,8 +14,8 @@ Objects {
       Z: 1
     }
   }
-  ChildIds: 12083086909516339305
-  ChildIds: 16584166719041832993
+  ChildIds: 13998269120099198432
+  ChildIds: 11241210962460309157
   ChildIds: 4906105228638113618
   ChildIds: 10764064574047099998
   ChildIds: 16813558807825262224
@@ -1900,7 +1900,7 @@ Objects {
   }
 }
 Objects {
-  Id: 16584166719041832993
+  Id: 11241210962460309157
   Name: "@ClientServer"
   Transform {
     Scale {
@@ -1910,26 +1910,23 @@ Objects {
     }
   }
   ParentId: 4781671109827199097
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "_ClientServer"
-  }
-  InstanceHistory {
-    SelfId: 16584166719041832993
-    SubobjectId: 5300870412525512097
-    InstanceId: 13451739167729300045
-    TemplateId: 13073670985043419975
-    WasRoot: true
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 5300870412525512097
+      value {
+        Overrides {
+          Name: "Name"
+          String: "@ClientServer"
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 13073670985043419975
+    }
   }
 }
 Objects {
-  Id: 12083086909516339305
+  Id: 13998269120099198432
   Name: "@CoreModules"
   Transform {
     Scale {
@@ -1939,12 +1936,6 @@ Objects {
     }
   }
   ParentId: 4781671109827199097
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:forceoff"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:forceoff"
-  }
   TemplateInstance {
     ParameterOverrideMap {
       key: 16291094792229598910
@@ -1952,16 +1943,6 @@ Objects {
         Overrides {
           Name: "Name"
           String: "@CoreModules"
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-          }
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-          }
         }
       }
     }
