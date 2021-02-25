@@ -195,7 +195,6 @@ local params = {
 }
 --]]
 
-
 -- TODO: smarts
 function Spr:Target(obj, propkey, goal, onsleep)
     assert(propkey and type(propkey) == 'string', "no propkey")
@@ -209,26 +208,25 @@ function Spr:Target(obj, propkey, goal, onsleep)
     end
     local rot = propkey:find("Rotation")
     local pstate = states[propkey]
-    local value = _getPropValue(obj, propkey)
+    local current_value = _getPropValue(obj, propkey)
     pstate.d = self.dumping
     pstate.f = self.frequency
-    pstate.origin = not rot and value or Quaternion.New(value)
+    pstate.origin = not rot and current_value or Quaternion.New(current_value)
     pstate.goal = not rot and goal or Quaternion.New(goal)
     pstate.lerp = assert(_getLerp(pstate.origin), "no Lerp")
     pstate.p = 0
     pstate.v = 0
     pstate.onsleep = onsleep
+    return current_value
 end
 
 function Spr:Randomize(factor)
     factor = factor or 0.05
     factor = factor*(2*math.random() - 1)
     local d, f = self.dumping, self.frequency
-    self.dumping = d == 1 and 1 or d + d*factor
-    self.frequency = f + f*factor
-    return self
+    f = f*(1 + factor)
+    return Spr.New(d, f)
 end
-
 
 -- stops animating of prop or all props
 function Spr.Stop(obj, propkey)

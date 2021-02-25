@@ -9,37 +9,6 @@
 * SCPC = 3(base) + N-rebirth + Sum(equipped pet's bonus).
 * You can merge 3 equivalent pets to one `upgraded` pet. Now max upgrade is limited to 3-rd.
 * You can equip the limited number of pets: 3. You can upgrade this limit to 5.
-* Rebirth table (seed: 1000,exp: 1.618) :
-  rebirth	1	needs:	1000
-  rebirth	2	needs:	1620
-  rebirth	3	needs:	2620
-  rebirth	4	needs:	4240
-  rebirth	5	needs:	6850
-  rebirth	6	needs:	11100
-  rebirth	7	needs:	17900
-  rebirth	8	needs:	29000
-  rebirth	9	needs:	47000
-  rebirth	10	needs:	76000
-  rebirth	11	needs:	123K
-  rebirth	12	needs:	199K
-  rebirth	13	needs:	322K
-  rebirth	14	needs:	521K
-  rebirth	15	needs:	843K
-  rebirth	16	needs:	1.36M
-  rebirth	17	needs:	2.21M
-  rebirth	18	needs:	3.57M
-  rebirth	19	needs:	5.78M
-  rebirth	20	needs:	9.35M
-  rebirth	21	needs:	15.1M
-  rebirth	22	needs:	24.5M
-  rebirth	23	needs:	39.6M
-  rebirth	24	needs:	64M
-  rebirth	25	needs:	104M
-  rebirth	26	needs:	168M
-  rebirth	27	needs:	271M
-  rebirth	28	needs:	439M
-  rebirth	29	needs:	710M
-  rebirth	30	needs:	1.15B
 ]]
 -- constants
 local S -- uninitialized static data
@@ -67,6 +36,16 @@ local randomseed = xoshiro256.randomseed
 -- math utils
 --------------------
 
+local _tiers = {"K", "M", "B", "T", "Q"}
+local function formatNumber(n)
+    n = math.tointeger(n) or n//1
+    if n < 100000 then return tostring(n) end
+    local tier = math.log(n, 10)//3
+    n = n / 10^(3*tier)
+    return string.format("%.4g%s", n, _tiers[tier])
+end
+
+
 -- pythonic uniform
 local function uniform(a, b)
     assert(a < b, "empty interval")
@@ -93,15 +72,6 @@ local function roundToSignificantDigits(d, digits, trancate)
     return scale * math.floor(d/scale + (trancate and 0 or 0.5))
 end
 
-local _tiers = {"K", "M", "B", "T", "Q"}
-local function formatNumber(n)
-    n = math.tointeger(n) or n//1
-    if n < 100000 then return tostring(n) end
-    local tier = math.log(n, 10)//3
-    n = n / 10^(3*tier)
-    return string.format("%.4g%s", n, _tiers[tier])
-end
-
 local function geomNth(a, f, n, digits)
     return roundToSignificantDigits(a*f^n, digits)
 end
@@ -109,8 +79,6 @@ end
 local function calculateAfforadableAmount(initial, exp, owned, cash)
     return math.log(1 - cash * (1 - exp) / (initial * exp^owned)) / math.log(exp)
 end
-
-
 
 --------------------
 -- module
@@ -141,17 +109,18 @@ local function setSpeed(player, speedcoins)
 end
 
 local function neededForRebirth(rebirth)
-    assert(math.type(rebirth) == "integer")
     return geomNth(FIRST_REBIRTH, REBIRTH_EXP_RATE, rebirth)
 end
 
 --------------------
 -- Rebirth
 --------------------
+--[[ DEBUG: prints rebirth table to events log
 print("INFO: rebirth table:")
-for i=0, 29 do
+for i=0, 35 do
     print("  rebirth", i + 1, "needs:", formatNumber(neededForRebirth(i)))
 end
+--]]
 
 local function isRebirthPossible(player)
     local rebirth = player:GetResource(REBIRTH_KEY) or 0
@@ -166,7 +135,7 @@ local function doRebirth(player)
     if ok then
         player:SetResource(REBIRTH_KEY, rebirth + 1)
         setSpeed(player, 0)
-        return true
+        return true, rebirth + 1
     end
     return false, needed, has, rebirth
 end
@@ -231,14 +200,14 @@ local _retry_save = Trampoline.New(function(args)
 
 function BusinessLogic.SaveKey(player, key, datum)
     assert(key == COIN_KEY or key == REBIRTH_KEY or key == INVENTORY_KEY or key == PET_BONUS_KEY, CoreDebug.GetStackTrace())
-    -- PET_BONUS_KEY is a trancient, we don't save it
+    -- PET_BONUS_KEY is trancient, don't save it
     if key == PET_BONUS_KEY then return end
     local data = Storage.GetPlayerData(player)
     data[key] = datum
     local ok, message = Storage.SetPlayerData(player, data)
     if not ok then
        warn(message)
-       -- TODO: test it
+       -- TODO: test retry save
        _retry_save({player, data})
     end
 end
@@ -293,6 +262,7 @@ function BusinessLogic.ResetGame(player)
 end
 
 -- exports
+BusinessLogic.formatNumber = formatNumber
 BusinessLogic.onClick = onClick
 BusinessLogic.addCoins = addCoins
 BusinessLogic.isRebirthPossible = isRebirthPossible
@@ -304,8 +274,6 @@ BusinessLogic.PET_BONUS_KEY = PET_BONUS_KEY
 -- for resource display
 BusinessLogic.max = neededForRebirth
 BusinessLogic.MAX_KEY = REBIRTH_KEY
--- utility
-BusinessLogic.formatNumber = formatNumber
 
 local function _test()
     local t = {A=1, B=2, C=3}

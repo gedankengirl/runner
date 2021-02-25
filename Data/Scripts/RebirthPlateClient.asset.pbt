@@ -1,6 +1,6 @@
 Assets {
-  Id: 1192273502049668141
-  Name: "Maid"
+  Id: 2436388842830682587
+  Name: "RebirthPlateClient"
   PlatformAssetType: 3
   TextAsset {
   }

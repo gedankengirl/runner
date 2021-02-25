@@ -236,21 +236,12 @@ Assets {
       }
     }
     Assets {
-      Id: 8269622313995794195
-      Name: "Ring 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_torus_002"
-      }
-    }
-    Assets {
-      Id: 18202007265107996075
-      Name: "Metal Painted 01"
+      Id: 755036478599963226
+      Name: "Car Paint 01"
       PlatformAssetType: 2
       PrimaryAsset {
         AssetType: "MaterialAssetRef"
-        AssetId: "mi_metal_painted_new_001_uv"
+        AssetId: "mi_car-paint_001"
       }
     }
     Assets {
@@ -263,12 +254,29 @@ Assets {
       }
     }
     Assets {
-      Id: 755036478599963226
-      Name: "Car Paint 01"
+      Id: 18202007265107996075
+      Name: "Metal Painted 01"
       PlatformAssetType: 2
       PrimaryAsset {
         AssetType: "MaterialAssetRef"
-        AssetId: "mi_car-paint_001"
+        AssetId: "mi_metal_painted_new_001_uv"
+      }
+    }
+    Assets {
+      Id: 8269622313995794195
+      Name: "Ring 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_torus_002"
+      }
+    }
+    Assets {
+      Id: 2436388842830682587
+      Name: "RebirthPlateClient"
+      PlatformAssetType: 3
+      TextAsset {
+        Text: "local TRIGGER = script:GetCustomProperty(\"RebirthPlate\"):WaitForObject()\n\nlocal Maid = _G.req(\"_Maid\")\nlocal REvents = _G.req(\"ReliableEvents\")\nlocal P = _G.req(\"Protocols\")\nlocal B = _G.req(\"BusinessLogic\")\n\nlocal _maid = Maid.New(TRIGGER)\n\nlocal AskForRebirth do\n    local function connect()\n        _maid.trigger_connection = TRIGGER.beginOverlapEvent:Connect(AskForRebirth)\n    end\n    AskForRebirth = function(_trigger, player)\n        if player and player:IsA(\"Player\") then\n            _maid.trigger_connection = nil\n            if B.isRebirthPossible(player) then\n                REvents.Broadcast(P.CLIENT_LOCAL.POPUP, {\n                    text = \"Do you wanna rebirth? All your *Speed Coins* will be lost.\",\n                    yes = function()\n                        REvents.BroadcastToServer(P.C2S.AskForRebirth)\n                    end,\n                })\n            end\n            Task.Wait(1)\n            connect()\n        end\n    end\n    connect()\nend\n\n\n\n\n\n"
       }
     }
     PrimaryAssetId {
@@ -278,3 +286,4 @@ Assets {
   }
   SerializationVersion: 74
 }
+IncludesAllDependencies: true

@@ -6,10 +6,9 @@ local Bitarray = _G.req("_Bitarray")
 local Maid = _G.req("_Maid")
 local Trampoline = _G.req("_Trampoline")
 local REvents = _G.req("_ReliableEvents")
-local STATIC_CONTEXT = script:GetCustomProperty("StaticContext"):WaitForObject()
-local B = require(script.parent:GetCustomProperty("BusinessLogic"))
-local P = require(STATIC_CONTEXT:GetCustomProperty("Protocols"))
-local S = require(STATIC_CONTEXT:GetCustomProperty("StaticData"))
+local B = _G.req("BusinessLogic")
+local P = _G.req("Protocols")
+local S = _G.req("StaticData")
 B.SetStaticData(S)
 local _maid = Maid.New(script)
 local NONCE_SYMBOLS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/'
@@ -44,6 +43,8 @@ local function _free_chan(channel)
     return idx
 end
 
+-- FIXME: networked properties replication takes some time (at least 1 frame + latency)
+-- we need to protect *sending* by buffer and timestamp.
 local function _post_to_channel(channel, message)
     if type(message) == 'string' then
         DOWNLINK:SetNetworkedCustomProperty(channel, message)
@@ -86,7 +87,7 @@ PlayerConnection.__index = PlayerConnection
 function PlayerConnection.New(player)
     local playerData = B.LoadSave(player)
     local saved_inventory = playerData[B.INVENTORY_KEY]
-    local inventory = saved_inventory and P.PROTOCOL_RECORD.unpack(saved_inventory, Grid.deserialize) or _make_debug_inventory()
+    local inventory = saved_inventory and P.S2C.INVENTORY.unpack(saved_inventory, Grid.deserialize) or _make_debug_inventory()
     local self = setmetatable({
         _maid = Maid.New(),
         player = player,
@@ -95,7 +96,7 @@ function PlayerConnection.New(player)
         _count = 0
     }, PlayerConnection)
     B.RecalculatePetBonus(self.player, self.inventory)
-    self:Send(P.PROTOCOL_OWNER.pack(player.id, self.channel, SOCIAL, _nonce(self)))
+    self:Send(P.S2C.CHANNELS.pack(player.id, self.channel, SOCIAL, _nonce(self)))
     self._maid:GiveTask(player.resourceChangedEvent:Connect(B.SaveKey))
     return self
 end
@@ -110,15 +111,31 @@ function PlayerConnection:Send(message)
     _post_to_channel(self.channel, message)
 end
 
+function PlayerConnection:OnEON()
+    -- PASS
+end
+
+function PlayerConnection:OnEOF()
+    -- PASS
+end
+
+function PlayerConnection:OnAFR()
+    local ok, new_rebirth = B.doRebirth(self.player)
+    if ok then
+        REvents.Broadcast(P.SOCIAL.REBIRTH.event, self.player, new_rebirth)
+    end
+    print(pp{"on AFR", self.player.name})
+end
+
 function PlayerConnection:OnTHE(egg)
     local ok, pet_id, cell = B.PurchaseEgg(self.player, egg, self.inventory)
     if ok then
-        local packed = P.PROTOCOL_EGG.pack(pet_id, egg, cell.row, cell.col, _nonce(self))
+        local packed = P.S2C.EGG.pack(pet_id, egg, cell.row, cell.col, _nonce(self))
         self:Send(packed)
         REvents.Broadcast(P.SOCIAL.HATCH.event, self.player, pet_id)
         assert(not cell.actor)
         cell.actor = {id=pet_id}
-        B.SaveKey(self.player, B.INVENTORY_KEY,  P.PROTOCOL_RECORD.pack(self.inventory:serialize(true), UNNONCE_SYMBOL))
+        B.SaveKey(self.player, B.INVENTORY_KEY,  P.S2C.INVENTORY.pack(self.inventory:serialize(true), UNNONCE_SYMBOL))
         -- B.RecalculatePetBonus(self.player, self.inventory) -- not needed, PurchaseEgg dont using equpping slots
     else
         -- TODO: what to do with reson at server?
@@ -130,7 +147,7 @@ end
 
 function PlayerConnection:OnGIR()
     local message = self.inventory:serialize(true)
-    local packed = P.PROTOCOL_RECORD.pack(message, _nonce(self))
+    local packed = P.S2C.INVENTORY.pack(message, _nonce(self))
     B.SaveKey(self.player, B.INVENTORY_KEY, packed)
     B.RecalculatePetBonus(self.player, self.inventory)
     self:Send(packed)
@@ -167,7 +184,7 @@ function PlayerConnection:OnTIM(...)
     end
     if ok then warn(pp{"OK", ...}) end
     if ok then
-        B.SaveKey(self.player, B.INVENTORY_KEY,  P.PROTOCOL_RECORD.pack(self.inventory:serialize(true), UNNONCE_SYMBOL))
+        B.SaveKey(self.player, B.INVENTORY_KEY,  P.S2C.INVENTORY.pack(self.inventory:serialize(true), UNNONCE_SYMBOL))
         B.RecalculatePetBonus(self.player, self.inventory)
     end
     if not ok then
@@ -194,7 +211,7 @@ function Server:Start()
     -- On preview clients, sometimes the playerJoined event gets missed. Here we hard force it.
     for _,player in ipairs(Game.GetPlayers()) do self:OnPlayerJoined(player) end
     -- event to player connection forwarding
-    for _name, event in pairs(P.CLIENT) do
+    for _name, event in pairs(P.C2S) do
         local handler = "On" .. event
         _maid:GiveTask(Events.ConnectForPlayer(event, function(player, ...)
             local connection = self.playerConnections[player]
@@ -211,14 +228,12 @@ function Server:OnPlayerJoined(player)
     if self.playerConnections[player] then return end
     -- TODO: remove player data from args
     self.playerConnections[player] = PlayerConnection.New(player)
-    REvents.Broadcast(P.SOCIAL.CONNECT.event, player)
 end
 
 function Server:OnPlayerLeft(player)
     local connection = self.playerConnections[player]
     self.playerConnections[player] = nil
     connection:Destroy()
-    REvents.Broadcast(P.SOCIAL.DISCONNECT.event, player)
 end
 
 Server:Start()

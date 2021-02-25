@@ -1,5 +1,5 @@
 --[[
-    Max heap priority queue. Needs only `__le` metamethod to operate.
+    Max heap priority queue. Needs `__le` metamethod to operate.
     NOTE: It's x1.5 slower then naive array search for 100 entryes, but convinience is superb.
 --]]
 

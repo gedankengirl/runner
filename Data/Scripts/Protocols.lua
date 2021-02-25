@@ -7,8 +7,7 @@ Protocols.__index = Protocols
 local spack, sunpack = string.pack, string.unpack
 local enc, dec, testOp = Base64.encode, Base64.decode, Base64.test_prefix
 
-
-local PROTOCOL_OWNER do
+local PROTOCOL_CHANNELS do
     local op, fmt = "$", "c1 z c3 c3 c1"
     local function pack(player_id, channel, social, nonce)
         assert(nonce)
@@ -20,7 +19,7 @@ local PROTOCOL_OWNER do
             return player_id, channel, social
         end
     end
-    PROTOCOL_OWNER = {op=op, pack=pack, unpack=unpack}
+    PROTOCOL_CHANNELS = {op=op, pack=pack, unpack=unpack}
 end
 
 local PROTOCOL_EGG do
@@ -39,7 +38,7 @@ local PROTOCOL_EGG do
 end
 
 -- TODO: rename record to grid or inventory
-local PROTOCOL_RECORD do
+local PROTOCOL_INVENTORY do
     local op = "@"
     local function pack(frags, nonce)
         assert(nonce)
@@ -58,42 +57,19 @@ local PROTOCOL_RECORD do
             return record
         end
     end
-    PROTOCOL_RECORD = {op=op, pack=pack, unpack=unpack}
+    PROTOCOL_INVENTORY = {op=op, pack=pack, unpack=unpack}
 end
 
-Protocols.PROTOCOL_RECORD = PROTOCOL_RECORD
-Protocols.PROTOCOL_OWNER = PROTOCOL_OWNER
-Protocols.PROTOCOL_EGG = PROTOCOL_EGG
 
+-- S2C channel protocols
+Protocols.S2C = {
+    INVENTORY = PROTOCOL_INVENTORY,
+    CHANNELS = PROTOCOL_CHANNELS,
+    EGG = PROTOCOL_EGG,
+}
+
+-- S2CC social channel protosols
 local SOCIAL do
-    local CONNECT do
-        local op, event, fmt = "SC", "Social_Connect", "c2 z c1"
-        local function pack(player_id, nonce)
-            assert(nonce, CoreDebug.GetStackTrace())
-            return enc(spack(fmt, op, player_id, nonce))
-        end
-        local function unpack(msg)
-            if msg and type(msg) == "string" and #msg > 0 and testOp(msg, op) then
-                local _op, player_id, _nonce = sunpack(fmt, dec(msg))
-                return player_id
-            end
-        end
-        CONNECT = {op=op, event=event, pack=pack, unpack=unpack}
-    end
-    local DISCONNECT do
-        local op, event, fmt = "SD", "Social_Disconnect", "c2 z c1"
-        local function pack(player_id, nonce)
-            assert(nonce, CoreDebug.GetStackTrace())
-            return enc(spack(fmt, op, player_id, nonce))
-        end
-        local function unpack(msg)
-            if msg and type(msg) == "string" and #msg > 0 and testOp(msg, op) then
-                local _op, player_id, _nonce = sunpack(fmt, dec(msg))
-                return player_id
-            end
-        end
-        DISCONNECT = {op=op, event=event, pack=pack, unpack=unpack}
-    end
     local HATCH do
         local op, event, fmt = "SH", "Social_Hatch", "c2 z B c1"
         local function pack(player_id, pet_id, nonce)
@@ -125,14 +101,14 @@ local SOCIAL do
     end
 
     local REBIRTH do
-        local op, event, fmt = "SR", "Social_Rebirth", "c2 z i2 c1"
+        local op, event, fmt = "SR", "Social_Rebirth", "c2 z B c1"
         local function pack(player_id, nrebirth, nonce)
             assert(nonce)
             assert(math.type(nrebirth) == "integer")
-            return spack(fmt, op, player_id, nrebirth, nonce)
+            return enc(spack(fmt, op, player_id, nrebirth, nonce))
         end
         local function unpack(msg)
-            if msg and type(msg) == "string" and #msg > 0 and testOp(msg, op) == op then
+            if msg and type(msg) == "string" and #msg > 0 and testOp(msg, op) then
                 local _op, player_id, nrebirth, _nonce = sunpack(fmt, dec(msg))
                 return player_id, nrebirth
             end
@@ -144,10 +120,9 @@ local SOCIAL do
         [HATCH.op] = HATCH,
         [MERGE.op] = MERGE,
         [REBIRTH.op] = REBIRTH,
-        [CONNECT.op] = CONNECT,
-        [DISCONNECT.op] = DISCONNECT
     }
     local function handle_data(data)
+        assert(Environment.IsClient())
         for op, protocol in pairs(social_protocols) do
             if testOp(data, op) then
                 Events.Broadcast(protocol.event, protocol.unpack(data))
@@ -157,20 +132,22 @@ local SOCIAL do
     SOCIAL = {handle=handle_data, protocols=social_protocols}
     SOCIAL.HATCH = HATCH
     SOCIAL.MERGE = MERGE
-    SOCIAL.CONNECT = CONNECT
-    SOCIAL.DISCONNECT = DISCONNECT
     SOCIAL.REBIRTH = REBIRTH
 end
 
 Protocols.SOCIAL = SOCIAL
 
--- server to client
-Protocols.CLIENT = {
+-- C2S
+Protocols.C2S = {
     GameInventoryRrequest = "GIR",
     GameResetRequest = "GRR",
     TransmitInventoryModifications = "TIM",
     TransmitPetDeletion = "TPD", -- TODO: send and handle
-    TransmitHatchingEgg = "THE"
+    TransmitHatchingEgg = "THE", -- TODO: handle
+    AskForRebirth = "AFR",
+    -- for Equipment Server
+    TurnEquipmentOn = "EON",
+    TurnEquipmentOff = "EOF",
 }
 
 -- client only inventory events
@@ -179,7 +156,7 @@ Protocols.INTERACTION = {
     CameraScrollingBegin="Interaction_CameraScrollingBegin",
     CameraScrollingEnd = "Interaction_CameraScrollingEnd",
     TileUnderCursorChanged = "Interaction_TileUnderCursorChanged",
-    ActorPickUp = "Interaction_ActorPickUp"
+    ActorPickUp = "Interaction_ActorPickUp",
 }
 
 -- enum
@@ -187,13 +164,21 @@ Protocols.MOVE_OUTCOME = {
     BASIC = "Basic",
     PUSHOUT = "Pushout",
     SWAP = "Swap",
-    MERGE = "Merge"
+    MERGE = "Merge",
 }
 
 -- internal client events
 Protocols.CLIENT_LOCAL = {
     EGG_HATCHED = "Egg_Hatched",
+    MODAL = "Interactions_Modal",
+    POPUP = "Show_Popup",
+}
 
+Protocols.MODAL_ARG = {
+    X = -1,
+    NO = 0,
+    YES = 1,
+    OPEN = 2,
 }
 
 -- Environment

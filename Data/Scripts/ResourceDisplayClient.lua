@@ -14,6 +14,8 @@ local SHOW_PROGRESS_BAR = COMPONENT_ROOT:GetCustomProperty("ShowProgressBar")
 local SHOW_TEXT = COMPONENT_ROOT:GetCustomProperty("ShowText")
 local SHOW_MAX_IN_TEXT = COMPONENT_ROOT:GetCustomProperty("ShowMaxInText")
 
+local fmtn = BusinessLogic.formatNumber
+
 -- Constants
 local LOCAL_PLAYER = Game.GetLocalPlayer()
 
@@ -27,7 +29,6 @@ if SHOW_MAX_IN_TEXT and not SHOW_TEXT then
     SHOW_MAX_IN_TEXT = false
 end
 
-local fmtN = BusinessLogic.formatNumber
 
 
 -- Variables
@@ -52,9 +53,9 @@ function Tick(deltaTime)
 
         if SHOW_TEXT then
             if SHOW_MAX_IN_TEXT then
-                TEXT_BOX.text = string.format("%s / %s", fmtN(resource), fmtN(MAX_VALUE))
+                TEXT_BOX.text = string.format("%s / %s", fmtn(resource), fmtn(MAX_VALUE))
             else
-                TEXT_BOX.text = string.format("%s", fmtN(resource))
+                TEXT_BOX.text = string.format("%s", fmtn(resource))
             end
         end
     end
