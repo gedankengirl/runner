@@ -10,13 +10,13 @@ local DESTINATION_OFFSET = COMPONENT_ROOT:GetCustomProperty("DestinationOffset")
 local TELEPORTER_COOLDOWN = COMPONENT_ROOT:GetCustomProperty("TeleporterCooldown")
 local PER_PLAYER_COOLDOWN = COMPONENT_ROOT:GetCustomProperty("PerPlayerCooldown")
 
--- Customization values
+-- NB!: customization-related values
 local TELEPORTER = script.parent
 local LVL_REQ = TELEPORTER:GetCustomProperty("LevelReq") or 0
 local BUSINESS_LOGIC = _G.req("BusinessLogic")
 
 assert (LVL_REQ, "either the parent object or its custom property has not been found")
-
+assert (TARGET, "no target assigned")
 
 -- Check user properties
 if TELEPORTER_COOLDOWN < 0.0 then

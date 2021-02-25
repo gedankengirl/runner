@@ -64,6 +64,12 @@ Objects {
           Name: "cs:LevelReq"
           Int: 10
         }
+        Overrides {
+          Name: "cs:Target"
+          ObjectReference {
+            SelfId: 13070135974263690381
+          }
+        }
       }
     }
     TemplateAsset {

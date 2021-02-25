@@ -1,43 +1,13 @@
-Name: "Home base"
-RootId: 10665984139206756167
+Name: "Screenshot island"
+RootId: 12108043329569368714
 Objects {
-  Id: 14139637125947873166
-  Name: "Board"
+  Id: 11423145634959447863
+  Name: "Trees"
   Transform {
     Location {
-      X: 1094.31836
-      Y: -1692.19336
-      Z: 479.313416
-    }
-    Rotation {
-      Yaw: 150.273956
-    }
-    Scale {
-      X: 0.948308408
-      Y: 0.948308408
-      Z: 0.948308408
-    }
-  }
-  ParentId: 10665984139206756167
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "Board_1"
-  }
-}
-Objects {
-  Id: 9772076435338117303
-  Name: "Rebirth Plate"
-  Transform {
-    Location {
-      X: 2645.23633
-      Y: -1459.36914
-      Z: 784.036499
+      X: -636.345703
+      Y: 1223.77283
+      Z: 381.367065
     }
     Rotation {
     }
@@ -47,7 +17,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 10665984139206756167
+  ParentId: 12108043329569368714
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -56,17 +26,14 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Rebirth Plate"
+    FilePartitionName: "Trees"
   }
 }
 Objects {
-  Id: 10966550013016146936
-  Name: "Teleports"
+  Id: 6210973888000216498
+  Name: "Cat with the board"
   Transform {
     Location {
-      X: 1175.27539
-      Y: -1211.27734
-      Z: 786.129822
     }
     Rotation {
     }
@@ -76,7 +43,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 10665984139206756167
+  ParentId: 12108043329569368714
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -85,43 +52,14 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Teleports"
+    FilePartitionName: "Cat with the board"
   }
 }
 Objects {
-  Id: 2522660340735145273
-  Name: "Pets"
-  Transform {
-    Location {
-      Y: -1762.2832
-      Z: 795
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 10665984139206756167
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:forceoff"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "Pets"
-  }
-}
-Objects {
-  Id: 11063045104577878287
+  Id: 10468795016604011724
   Name: "Ground"
   Transform {
     Location {
-      Z: 399.036499
     }
     Rotation {
     }
@@ -131,10 +69,10 @@ Objects {
       Z: 0.5
     }
   }
-  ParentId: 10665984139206756167
-  ChildIds: 5714524340718522878
-  ChildIds: 18221833501667295546
-  ChildIds: 2835995945602512140
+  ParentId: 12108043329569368714
+  ChildIds: 17866367023311112473
+  ChildIds: 12610434833225537758
+  ChildIds: 9467328503188268335
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -146,7 +84,7 @@ Objects {
   }
 }
 Objects {
-  Id: 2835995945602512140
+  Id: 9467328503188268335
   Name: "Scene limit"
   Transform {
     Location {
@@ -160,7 +98,7 @@ Objects {
       Z: 49.3550491
     }
   }
-  ParentId: 11063045104577878287
+  ParentId: 10468795016604011724
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -196,7 +134,7 @@ Objects {
   }
 }
 Objects {
-  Id: 18221833501667295546
+  Id: 12610434833225537758
   Name: "Default Soil"
   Transform {
     Location {
@@ -211,7 +149,7 @@ Objects {
       Z: -12.4999981
     }
   }
-  ParentId: 11063045104577878287
+  ParentId: 10468795016604011724
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -263,7 +201,7 @@ Objects {
   }
 }
 Objects {
-  Id: 5714524340718522878
+  Id: 17866367023311112473
   Name: "Default Floor"
   Transform {
     Location {
@@ -279,12 +217,12 @@ Objects {
       Z: -1.4
     }
   }
-  ParentId: 11063045104577878287
+  ParentId: 10468795016604011724
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
       AssetReference {
-        Id: 931223171687548630
+        Id: 10215762961416278026
       }
     }
     Overrides {
@@ -302,8 +240,8 @@ Objects {
     Overrides {
       Name: "ma:Shared_BaseMaterial:color"
       Color {
-        R: 0.38095212
-        G: 1
+        R: 0.477301627
+        G: 0.97
         A: 1
       }
     }

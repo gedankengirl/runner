@@ -490,9 +490,9 @@ Objects {
   Name: "InventoryRoot"
   Transform {
     Location {
-      X: 1000
-      Y: 1000
-      Z: 1000
+      X: -21317.2813
+      Y: 27594.4121
+      Z: 4116.90332
     }
     Rotation {
     }

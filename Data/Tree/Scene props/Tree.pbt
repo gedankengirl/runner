@@ -1,6 +1,36 @@
 Name: "Scene props"
 RootId: 7553754998792656332
 Objects {
+  Id: 12108043329569368714
+  Name: "Screenshot island"
+  Transform {
+    Location {
+      X: -20409.582
+      Y: -15509.457
+      Z: -700
+    }
+    Rotation {
+      Yaw: -90
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 7553754998792656332
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "Screenshot island"
+  }
+}
+Objects {
   Id: 10665984139206756167
   Name: "Home base"
   Transform {
@@ -55,6 +85,33 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "Forest"
+  }
+}
+Objects {
+  Id: 2423505836595553228
+  Name: "Disco scene"
+  Transform {
+    Location {
+      Y: -17475.8066
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 7553754998792656332
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "Disco scene"
   }
 }
 Objects {
@@ -113,33 +170,6 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "Graveyard"
-  }
-}
-Objects {
-  Id: 2423505836595553228
-  Name: "Disco scene"
-  Transform {
-    Location {
-      Y: -17475.8066
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 7553754998792656332
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "Disco scene"
   }
 }
 Objects {

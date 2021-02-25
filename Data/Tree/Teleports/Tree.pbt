@@ -1,53 +1,6 @@
 Name: "Teleports"
 RootId: 10966550013016146936
 Objects {
-  Id: 2137261537859657176
-  Name: "RebirthPlate"
-  Transform {
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 10966550013016146936
-  TemplateInstance {
-    ParameterOverrideMap {
-      key: 4222691229199675037
-      value {
-        Overrides {
-          Name: "Name"
-          String: "RebirthPlate"
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-            X: 1469.96094
-            Y: -248.091797
-            Z: -2.09332275
-          }
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-          }
-        }
-        Overrides {
-          Name: "Scale"
-          Vector {
-            X: 8
-            Y: 8
-            Z: 8
-          }
-        }
-      }
-    }
-    TemplateAsset {
-      Id: 6997487586924821979
-    }
-  }
-}
-Objects {
   Id: 8242733357257470304
   Name: "Teleporter Landing"
   Transform {

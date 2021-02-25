@@ -25,7 +25,6 @@ Assets {
           Overrides {
             Name: "cs:Target"
             ObjectReference {
-              SelfId: 4231530394958152407
             }
           }
           Overrides {

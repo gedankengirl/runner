@@ -69,6 +69,12 @@ Objects {
           Rotator {
           }
         }
+        Overrides {
+          Name: "cs:Target"
+          ObjectReference {
+            SelfId: 2699211764763323712
+          }
+        }
       }
     }
     TemplateAsset {
