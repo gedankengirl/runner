@@ -7,12 +7,12 @@ Assets {
       RootId: 2968452554722626690
       Objects {
         Id: 2968452554722626690
-        Name: "Cat_3_ClientContext"
+        Name: "$Cat_3_ClientContext"
         Transform {
           Scale {
-            X: 1
-            Y: 1
-            Z: 1
+            X: 0.5
+            Y: 0.5
+            Z: 0.5
           }
         }
         ParentId: 8864733907737882616
@@ -32,6 +32,7 @@ Assets {
         Name: "ClientContext"
         Transform {
           Location {
+            Z: 173.966919
           }
           Rotation {
           }

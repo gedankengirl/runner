@@ -7,12 +7,12 @@ Assets {
       RootId: 5293780948621430166
       Objects {
         Id: 5293780948621430166
-        Name: "Gnome_2_ClientContext"
+        Name: "$Gnome_2_ClientContext"
         Transform {
           Scale {
-            X: 1
-            Y: 1
-            Z: 1
+            X: 0.5
+            Y: 0.5
+            Z: 0.5
           }
         }
         ParentId: 10149358099801352491

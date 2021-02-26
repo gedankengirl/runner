@@ -1,6 +1,47 @@
 Name: "vegetation_2"
 RootId: 3288142853916238356
 Objects {
+  Id: 18013948572659082857
+  Name: "Grass Tall"
+  Transform {
+    Location {
+      X: 5231.70264
+      Y: 11318.584
+    }
+    Rotation {
+      Yaw: -50.0000305
+    }
+    Scale {
+      X: 3.90000105
+      Y: 3.90000105
+      Z: 3.90000105
+    }
+  }
+  ParentId: 3288142853916238356
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 7511943678462946166
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    EnableCameraCollision: true
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+    }
+  }
+}
+Objects {
   Id: 16160423230498307867
   Name: "Branches Cluster Big"
   Transform {

@@ -7,12 +7,12 @@ Assets {
       RootId: 17080236375675580484
       Objects {
         Id: 17080236375675580484
-        Name: "BunnyClientContext_1"
+        Name: "$BunnyClientContext_1"
         Transform {
           Scale {
-            X: 1
-            Y: 1
-            Z: 1
+            X: 0.5
+            Y: 0.5
+            Z: 0.5
           }
         }
         ParentId: 17043490186478522665

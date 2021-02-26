@@ -7,12 +7,12 @@ Assets {
       RootId: 17159130496368863744
       Objects {
         Id: 17159130496368863744
-        Name: "MushroomClientContext_2"
+        Name: "$MushroomClientContext_2"
         Transform {
           Scale {
-            X: 1
-            Y: 1
-            Z: 1
+            X: 0.5
+            Y: 0.5
+            Z: 0.5
           }
         }
         ParentId: 96217471946232102

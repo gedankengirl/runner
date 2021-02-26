@@ -72,7 +72,7 @@ Objects {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   Text {
-    Text: "REBIRTH PLATE"
+    Text: "REBIRTH RINK"
     Color {
       R: 0.0242222659
       G: 0.218000054

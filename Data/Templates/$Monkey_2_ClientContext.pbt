@@ -7,12 +7,12 @@ Assets {
       RootId: 14263916479296054650
       Objects {
         Id: 14263916479296054650
-        Name: "Monkey_2_ClientContext"
+        Name: "$Monkey_2_ClientContext"
         Transform {
           Scale {
-            X: 1
-            Y: 1
-            Z: 1
+            X: 0.5
+            Y: 0.5
+            Z: 0.5
           }
         }
         ParentId: 15317849570465314173

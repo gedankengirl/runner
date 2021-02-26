@@ -27,6 +27,11 @@ Objects {
             Y: -1850.10913
           }
         }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
       }
     }
     TemplateAsset {
@@ -61,6 +66,11 @@ Objects {
             Y: -873.974487
           }
         }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
       }
     }
     TemplateAsset {
@@ -87,6 +97,16 @@ Objects {
         Overrides {
           Name: "Name"
           String: "$Ghost_1_ClientContext"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
         }
       }
     }

@@ -26,6 +26,11 @@ Objects {
             X: -1829.5293
           }
         }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
       }
     }
     TemplateAsset {
@@ -59,6 +64,11 @@ Objects {
             X: -845.496094
           }
         }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
       }
     }
     TemplateAsset {
@@ -85,6 +95,16 @@ Objects {
         Overrides {
           Name: "Name"
           String: "$Bull_1_ClientContext"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
         }
       }
     }

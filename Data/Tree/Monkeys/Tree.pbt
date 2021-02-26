@@ -28,6 +28,11 @@ Objects {
             Z: -3.05175781e-05
           }
         }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
       }
     }
     TemplateAsset {
@@ -63,6 +68,11 @@ Objects {
             Z: -3.05175781e-05
           }
         }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
       }
     }
     TemplateAsset {
@@ -95,6 +105,11 @@ Objects {
           Vector {
             Y: -238.923828
             Z: -3.05175781e-05
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
           }
         }
       }

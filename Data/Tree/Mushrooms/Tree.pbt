@@ -66,6 +66,11 @@ Objects {
             Y: 254.65625
           }
         }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
       }
     }
     TemplateAsset {
@@ -97,6 +102,11 @@ Objects {
           Name: "Position"
           Vector {
             Y: 254.65625
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
           }
         }
       }

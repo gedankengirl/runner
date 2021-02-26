@@ -232,7 +232,7 @@ Objects {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   Text {
-    Text: "CLICK THE MOUSE"
+    Text: "CLICK THE MOUSE TO"
     Color {
       G: 0.412222385
       B: 0.490000129

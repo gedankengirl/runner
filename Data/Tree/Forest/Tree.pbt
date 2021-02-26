@@ -16001,13 +16001,6 @@ Objects {
   Folder {
     IsGroup: true
   }
-  InstanceHistory {
-    SelfId: 7911184222413158446
-    SubobjectId: 7211869368397496173
-    InstanceId: 7801931388975814872
-    TemplateId: 9109379844744492242
-    WasRoot: true
-  }
 }
 Objects {
   Id: 14989573889512892594
@@ -16034,6 +16027,7 @@ Objects {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   Trigger {
+    Interactable: true
     TeamSettings {
       IsTeamCollisionEnabled: true
       IsEnemyCollisionEnabled: true
@@ -16041,12 +16035,6 @@ Objects {
     TriggerShape_v2 {
       Value: "mc:etriggershape:capsule"
     }
-  }
-  InstanceHistory {
-    SelfId: 11316483768346818469
-    SubobjectId: 10724094219624853734
-    InstanceId: 7801931388975814872
-    TemplateId: 9109379844744492242
   }
 }
 Objects {
@@ -16066,6 +16054,7 @@ Objects {
   ParentId: 12659792851489746978
   ChildIds: 14391818998513444702
   ChildIds: 1638657485022209517
+  ChildIds: 12325711741077463470
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -16077,11 +16066,93 @@ Objects {
   Folder {
     IsGroup: true
   }
-  InstanceHistory {
-    SelfId: 8580893857131319744
-    SubobjectId: 9136376097970247299
-    InstanceId: 7801931388975814872
-    TemplateId: 9109379844744492242
+}
+Objects {
+  Id: 12325711741077463470
+  Name: "Large Wood Beam 8m"
+  Transform {
+    Location {
+      X: -90.8114395
+      Y: -50.0212822
+      Z: 13.8609476
+    }
+    Rotation {
+      Yaw: 89.9999542
+      Roll: 129.999969
+    }
+    Scale {
+      X: 0.105815351
+      Y: 0.00781868584
+      Z: 0.433747023
+    }
+  }
+  ParentId: 7502355235522118518
+  ChildIds: 9893927767301909293
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 16006638254897947774
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    EnableCameraCollision: true
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+    }
+  }
+}
+Objects {
+  Id: 9893927767301909293
+  Name: "World Text"
+  Transform {
+    Location {
+      X: 394.092621
+      Y: -104.857826
+      Z: 24.6399269
+    }
+    Rotation {
+      Pitch: 0.000184415097
+      Yaw: -90.000061
+      Roll: 179.999954
+    }
+    Scale {
+      X: 4.72129297
+      Y: 63.5133095
+      Z: 1.15178931
+    }
+  }
+  ParentId: 12325711741077463470
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Text {
+    Text: "MAIN HUB"
+    Color {
+      R: 0.0242222659
+      G: 0.218000054
+      A: 1
+    }
+    HorizontalSize: 1
+    VerticalSize: 1
+    HorizontalAlignment {
+      Value: "mc:ecoretexthorizontalalign:center"
+    }
+    VerticalAlignment {
+      Value: "mc:ecoretextverticalalign:center"
+    }
   }
 }
 Objects {
@@ -16136,12 +16207,6 @@ Objects {
       }
     }
   }
-  InstanceHistory {
-    SelfId: 12747931295464499545
-    SubobjectId: 13345897567028325914
-    InstanceId: 7801931388975814872
-    TemplateId: 9109379844744492242
-  }
 }
 Objects {
   Id: 14391818998513444702
@@ -16186,12 +16251,6 @@ Objects {
       }
     }
   }
-  InstanceHistory {
-    SelfId: 15785950538192613123
-    SubobjectId: 15189918855055894592
-    InstanceId: 7801931388975814872
-    TemplateId: 9109379844744492242
-  }
 }
 Objects {
   Id: 2555384041378586184
@@ -16218,12 +16277,6 @@ Objects {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   NetworkContext {
-  }
-  InstanceHistory {
-    SelfId: 5541757943230638397
-    SubobjectId: 4987701010105380478
-    InstanceId: 7801931388975814872
-    TemplateId: 9109379844744492242
   }
 }
 Objects {
@@ -16259,12 +16312,6 @@ Objects {
     ScriptAsset {
       Id: 32149845205756334
     }
-  }
-  InstanceHistory {
-    SelfId: 11540182912301353681
-    SubobjectId: 12247943734813478290
-    InstanceId: 7801931388975814872
-    TemplateId: 9109379844744492242
   }
 }
 Objects {
@@ -16306,12 +16353,6 @@ Objects {
     ScriptAsset {
       Id: 7679653554725145050
     }
-  }
-  InstanceHistory {
-    SelfId: 5996356688896270881
-    SubobjectId: 6550712686097016162
-    InstanceId: 7801931388975814872
-    TemplateId: 9109379844744492242
   }
 }
 Objects {

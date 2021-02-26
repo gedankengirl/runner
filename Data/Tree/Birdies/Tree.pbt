@@ -12,6 +12,12 @@ Objects {
   }
   ParentId: 10212933596085455662
   WantsNetworking: true
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
   TemplateInstance {
     ParameterOverrideMap {
       key: 1894565761052519177
@@ -24,6 +30,12 @@ Objects {
           Name: "Position"
           Vector {
             X: -1815.76172
+            Z: -8.863
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
           }
         }
       }
@@ -45,6 +57,12 @@ Objects {
   }
   ParentId: 10212933596085455662
   WantsNetworking: true
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
   TemplateInstance {
     ParameterOverrideMap {
       key: 7120236046413373726
@@ -57,6 +75,12 @@ Objects {
           Name: "Position"
           Vector {
             X: -858.121094
+            Z: -8.863
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
           }
         }
       }
@@ -78,6 +102,12 @@ Objects {
   }
   ParentId: 10212933596085455662
   WantsNetworking: true
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
   TemplateInstance {
     ParameterOverrideMap {
       key: 6202053488135372535
@@ -85,6 +115,17 @@ Objects {
         Overrides {
           Name: "Name"
           String: "$Birdie_1_ClientContext"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            Z: -8.86328888
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
         }
       }
     }

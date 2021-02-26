@@ -24,7 +24,12 @@ Objects {
           Name: "Position"
           Vector {
             X: -1802.47852
-            Z: -53.5408936
+            Z: -7.65982056
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
           }
         }
       }
@@ -58,7 +63,12 @@ Objects {
           Name: "Position"
           Vector {
             X: -786.621094
-            Z: -53.5408936
+            Z: -7.65982056
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
           }
         }
       }
@@ -80,6 +90,12 @@ Objects {
   }
   ParentId: 9647420106749990554
   WantsNetworking: true
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
   TemplateInstance {
     ParameterOverrideMap {
       key: 7758740036848745766
@@ -91,7 +107,12 @@ Objects {
         Overrides {
           Name: "Position"
           Vector {
-            Z: -53.5408936
+            Z: -7.66
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
           }
         }
       }

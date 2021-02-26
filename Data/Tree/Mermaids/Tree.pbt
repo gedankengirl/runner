@@ -25,6 +25,11 @@ Objects {
             X: -1802.47852
           }
         }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
       }
     }
     TemplateAsset {
@@ -58,6 +63,11 @@ Objects {
             X: -786.621094
           }
         }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
       }
     }
     TemplateAsset {
@@ -77,6 +87,12 @@ Objects {
   }
   ParentId: 8303771595245639355
   WantsNetworking: true
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
   TemplateInstance {
     ParameterOverrideMap {
       key: 7196723035181198596
@@ -84,6 +100,16 @@ Objects {
         Overrides {
           Name: "Name"
           String: "$Mermaid_1_ClientContext"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
         }
       }
     }

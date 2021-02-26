@@ -12,6 +12,12 @@ Objects {
   }
   ParentId: 2966812490703732269
   WantsNetworking: true
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
   TemplateInstance {
     ParameterOverrideMap {
       key: 5121456759861225306
@@ -25,6 +31,13 @@ Objects {
           Vector {
             X: -0.000366210938
             Y: -1850.10913
+            Z: -17.1746216
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Yaw: 90
           }
         }
       }
@@ -46,6 +59,12 @@ Objects {
   }
   ParentId: 2966812490703732269
   WantsNetworking: true
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
   TemplateInstance {
     ParameterOverrideMap {
       key: 10626349075567989642
@@ -59,6 +78,13 @@ Objects {
           Vector {
             X: -0.000183105469
             Y: -873.974487
+            Z: -19.6043396
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Yaw: 90
           }
         }
       }
@@ -80,6 +106,12 @@ Objects {
   }
   ParentId: 2966812490703732269
   WantsNetworking: true
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
   TemplateInstance {
     ParameterOverrideMap {
       key: 11082395686700846055
@@ -87,6 +119,18 @@ Objects {
         Overrides {
           Name: "Name"
           String: "$Witch_1_ClientContext"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            Z: -21.4419098
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Yaw: 90
+          }
         }
       }
     }

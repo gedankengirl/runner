@@ -7,12 +7,12 @@ Assets {
       RootId: 3279962400782210056
       Objects {
         Id: 3279962400782210056
-        Name: "Flamingo_1_ClientContext"
+        Name: "$Flamingo_1_ClientContext"
         Transform {
           Scale {
-            X: 1
-            Y: 1
-            Z: 1
+            X: 0.5
+            Y: 0.5
+            Z: 0.5
           }
         }
         ParentId: 17958106882838060675

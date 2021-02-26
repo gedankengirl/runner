@@ -7,12 +7,12 @@ Assets {
       RootId: 17898800503539356200
       Objects {
         Id: 17898800503539356200
-        Name: "Crab_2_ClientContext"
+        Name: "$Crab_2_ClientContext"
         Transform {
           Scale {
-            X: 1
-            Y: 1
-            Z: 1
+            X: 0.5
+            Y: 0.5
+            Z: 0.5
           }
         }
         ParentId: 9647420106749990554

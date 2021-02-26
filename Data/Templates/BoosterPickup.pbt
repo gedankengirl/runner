@@ -1,6 +1,6 @@
 Assets {
   Id: 3815191084439700869
-  Name: "BosterPickup"
+  Name: "BoosterPickup"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {

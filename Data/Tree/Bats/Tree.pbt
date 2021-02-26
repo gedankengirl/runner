@@ -12,6 +12,12 @@ Objects {
   }
   ParentId: 4797334295332245929
   WantsNetworking: true
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
   TemplateInstance {
     ParameterOverrideMap {
       key: 5275712490008961784
@@ -25,6 +31,7 @@ Objects {
           Vector {
             X: -0.000244140625
             Y: -1868.5155
+            Z: -21.442
           }
         }
         Overrides {
@@ -52,6 +59,12 @@ Objects {
   }
   ParentId: 4797334295332245929
   WantsNetworking: true
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
   TemplateInstance {
     ParameterOverrideMap {
       key: 13334849323195590382
@@ -65,6 +78,7 @@ Objects {
           Vector {
             X: -0.000183105469
             Y: -892.380737
+            Z: -21.442
           }
         }
         Overrides {
@@ -92,6 +106,12 @@ Objects {
   }
   ParentId: 4797334295332245929
   WantsNetworking: true
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
   TemplateInstance {
     ParameterOverrideMap {
       key: 10254656520957202463
@@ -99,6 +119,18 @@ Objects {
         Overrides {
           Name: "Name"
           String: "$Bat_1_ClientContext"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            Z: -21.442
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Yaw: 90
+          }
         }
       }
     }

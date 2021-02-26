@@ -26,6 +26,11 @@ Objects {
             X: -1802.47852
           }
         }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
       }
     }
     TemplateAsset {
@@ -59,6 +64,11 @@ Objects {
             X: -786.621094
           }
         }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
       }
     }
     TemplateAsset {
@@ -85,6 +95,16 @@ Objects {
         Overrides {
           Name: "Name"
           String: "$Flamingo_1_ClientContext"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
         }
       }
     }

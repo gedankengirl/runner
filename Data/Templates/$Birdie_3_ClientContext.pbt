@@ -7,12 +7,12 @@ Assets {
       RootId: 1894565761052519177
       Objects {
         Id: 1894565761052519177
-        Name: "Birdie_3_ClientContext"
+        Name: "$Birdie_3_ClientContext"
         Transform {
           Scale {
-            X: 1
-            Y: 1
-            Z: 1
+            X: 0.5
+            Y: 0.5
+            Z: 0.5
           }
         }
         ParentId: 10212933596085455662
@@ -32,6 +32,7 @@ Assets {
         Name: "ClientContext"
         Transform {
           Location {
+            Z: 17.7259521
           }
           Rotation {
           }

@@ -7,12 +7,12 @@ Assets {
       RootId: 5121456759861225306
       Objects {
         Id: 5121456759861225306
-        Name: "Witch_3_ClientContext"
+        Name: "$Witch_3_ClientContext"
         Transform {
           Scale {
-            X: 1
-            Y: 1
-            Z: 1
+            X: 0.5
+            Y: 0.5
+            Z: 0.5
           }
         }
         ParentId: 2966812490703732269
@@ -32,8 +32,10 @@ Assets {
         Name: "ClientContext"
         Transform {
           Location {
+            Z: 34.3492432
           }
           Rotation {
+            Yaw: -89.9999771
           }
           Scale {
             X: 1

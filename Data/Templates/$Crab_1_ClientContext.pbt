@@ -7,12 +7,12 @@ Assets {
       RootId: 7758740036848745766
       Objects {
         Id: 7758740036848745766
-        Name: "Crab_1_ClientContext"
+        Name: "$Crab_1_ClientContext"
         Transform {
           Scale {
-            X: 1
-            Y: 1
-            Z: 1
+            X: 0.5
+            Y: 0.5
+            Z: 0.5
           }
         }
         ParentId: 9647420106749990554
@@ -32,6 +32,7 @@ Assets {
         Name: "ClientContext"
         Transform {
           Location {
+            Z: -8.74179077
           }
           Rotation {
           }
@@ -57,6 +58,7 @@ Assets {
         Name: "Crab_1"
         Transform {
           Location {
+            Z: 51.3128662
           }
           Rotation {
           }
@@ -91,7 +93,7 @@ Assets {
         Name: "Gem - Pear Polished"
         Transform {
           Location {
-            Z: 150.140778
+            Z: 79.9588
           }
           Rotation {
             Yaw: -90
@@ -147,7 +149,7 @@ Assets {
         Name: "Gem - Pear Polished"
         Transform {
           Location {
-            Z: 140.696014
+            Z: 70.5140381
           }
           Rotation {
             Yaw: -90
@@ -203,9 +205,9 @@ Assets {
         Name: "Left eye"
         Transform {
           Location {
-            X: 51.8225098
-            Y: 34.8652344
-            Z: 168.881317
+            X: 51.822197
+            Y: 34.8660774
+            Z: 98.6993256
           }
           Rotation {
             Yaw: -89.9999695
@@ -413,9 +415,9 @@ Assets {
         Name: "Right eye"
         Transform {
           Location {
-            X: 51.8225098
-            Y: -34.8652344
-            Z: 168.881317
+            X: 51.822197
+            Y: -34.8660774
+            Z: 98.6993256
           }
           Rotation {
             Yaw: -89.9999695
@@ -625,9 +627,9 @@ Assets {
         Name: "Left legs"
         Transform {
           Location {
-            X: -12.8980227
-            Y: 50.001564
-            Z: 125.257614
+            X: -12.8986578
+            Y: 50.001667
+            Z: 55.0756111
           }
           Rotation {
           }
@@ -1201,9 +1203,9 @@ Assets {
         Name: "Right legs"
         Transform {
           Location {
-            X: -12.8980227
-            Y: -45.8863564
-            Z: 125.257614
+            X: -12.8986578
+            Y: -45.8861046
+            Z: 55.0756111
           }
           Rotation {
           }
@@ -1777,8 +1779,8 @@ Assets {
         Name: "Cap"
         Transform {
           Location {
-            X: 3.23443604
-            Z: 165.88974
+            X: 3.23434806
+            Z: 95.7077484
           }
           Rotation {
             Pitch: 2.07204032
@@ -2113,11 +2115,11 @@ Assets {
         Name: "RockMove"
         Transform {
           Location {
-            Z: 159.847244
+            Z: 89.6652527
           }
           Rotation {
             Pitch: 28.2610874
-            Yaw: -20.8738956
+            Yaw: -20.8739014
             Roll: 4.36192659e-06
           }
           Scale {

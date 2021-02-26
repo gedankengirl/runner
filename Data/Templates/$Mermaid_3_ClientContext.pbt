@@ -7,12 +7,12 @@ Assets {
       RootId: 13491140555172990980
       Objects {
         Id: 13491140555172990980
-        Name: "Mermaid_3_ClientContext"
+        Name: "$Mermaid_3_ClientContext"
         Transform {
           Scale {
-            X: 1
-            Y: 1
-            Z: 1
+            X: 0.5
+            Y: 0.5
+            Z: 0.5
           }
         }
         ParentId: 8303771595245639355

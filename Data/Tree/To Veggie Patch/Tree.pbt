@@ -167,13 +167,6 @@ Objects {
   Folder {
     IsGroup: true
   }
-  InstanceHistory {
-    SelfId: 7911184222413158446
-    SubobjectId: 7211869368397496173
-    InstanceId: 7801931388975814872
-    TemplateId: 9109379844744492242
-    WasRoot: true
-  }
 }
 Objects {
   Id: 11316483768346818469
@@ -208,12 +201,6 @@ Objects {
       Value: "mc:etriggershape:capsule"
     }
   }
-  InstanceHistory {
-    SelfId: 11316483768346818469
-    SubobjectId: 10724094219624853734
-    InstanceId: 7801931388975814872
-    TemplateId: 9109379844744492242
-  }
 }
 Objects {
   Id: 8580893857131319744
@@ -242,12 +229,6 @@ Objects {
   }
   Folder {
     IsGroup: true
-  }
-  InstanceHistory {
-    SelfId: 8580893857131319744
-    SubobjectId: 9136376097970247299
-    InstanceId: 7801931388975814872
-    TemplateId: 9109379844744492242
   }
 }
 Objects {
@@ -302,12 +283,6 @@ Objects {
       }
     }
   }
-  InstanceHistory {
-    SelfId: 12747931295464499545
-    SubobjectId: 13345897567028325914
-    InstanceId: 7801931388975814872
-    TemplateId: 9109379844744492242
-  }
 }
 Objects {
   Id: 15785950538192613123
@@ -360,12 +335,6 @@ Objects {
       }
     }
   }
-  InstanceHistory {
-    SelfId: 15785950538192613123
-    SubobjectId: 15189918855055894592
-    InstanceId: 7801931388975814872
-    TemplateId: 9109379844744492242
-  }
 }
 Objects {
   Id: 5541757943230638397
@@ -392,12 +361,6 @@ Objects {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   NetworkContext {
-  }
-  InstanceHistory {
-    SelfId: 5541757943230638397
-    SubobjectId: 4987701010105380478
-    InstanceId: 7801931388975814872
-    TemplateId: 9109379844744492242
   }
 }
 Objects {
@@ -433,12 +396,6 @@ Objects {
     ScriptAsset {
       Id: 32149845205756334
     }
-  }
-  InstanceHistory {
-    SelfId: 11540182912301353681
-    SubobjectId: 12247943734813478290
-    InstanceId: 7801931388975814872
-    TemplateId: 9109379844744492242
   }
 }
 Objects {
@@ -480,11 +437,5 @@ Objects {
     ScriptAsset {
       Id: 7679653554725145050
     }
-  }
-  InstanceHistory {
-    SelfId: 5996356688896270881
-    SubobjectId: 6550712686097016162
-    InstanceId: 7801931388975814872
-    TemplateId: 9109379844744492242
   }
 }

@@ -7,12 +7,12 @@ Assets {
       RootId: 3714601513711761122
       Objects {
         Id: 3714601513711761122
-        Name: "FairyClientContext_3"
+        Name: "$FairyClientContext_3"
         Transform {
           Scale {
-            X: 1
-            Y: 1
-            Z: 1
+            X: 0.5
+            Y: 0.5
+            Z: 0.5
           }
         }
         ParentId: 10806057176125142267

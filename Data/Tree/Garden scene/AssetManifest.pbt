@@ -8,30 +8,12 @@ Assets {
   }
 }
 Assets {
-  Id: 15845913895978594457
-  Name: "Plastic Shiny"
-  PlatformAssetType: 2
-  PrimaryAsset {
-    AssetType: "MaterialAssetRef"
-    AssetId: "plastic_shiny_001"
-  }
-}
-Assets {
-  Id: 15257526862916167206
-  Name: "Text 03: ^"
+  Id: 16006638254897947774
+  Name: "Large Wood Beam 8m"
   PlatformAssetType: 1
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
-    AssetId: "F5_Text_042"
-  }
-}
-Assets {
-  Id: 15058687245682022704
-  Name: "Wedge - Corner-Aligned"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_wedge_002"
+    AssetId: "sm_large_beam_6m"
   }
 }
 Assets {
@@ -89,15 +71,6 @@ Assets {
   }
 }
 Assets {
-  Id: 10916514669082882369
-  Name: "Rubber Pattern 01"
-  PlatformAssetType: 2
-  PrimaryAsset {
-    AssetType: "MaterialAssetRef"
-    AssetId: "mi_scf_rubber_panels_003_uv"
-  }
-}
-Assets {
   Id: 10830521042113057013
   Name: "Ring - Extra Thick"
   PlatformAssetType: 1
@@ -122,15 +95,6 @@ Assets {
   PrimaryAsset {
     AssetType: "MaterialAssetRef"
     AssetId: "mi_basic_glass_refrac_001"
-  }
-}
-Assets {
-  Id: 7027494913329720896
-  Name: "Cone"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_cone_001"
   }
 }
 Assets {

@@ -7,12 +7,12 @@ Assets {
       RootId: 16574956057727820336
       Objects {
         Id: 16574956057727820336
-        Name: "Bee_3_ClientContext"
+        Name: "$Bee_3_ClientContext"
         Transform {
           Scale {
-            X: 1
-            Y: 1
-            Z: 1
+            X: 0.5
+            Y: 0.5
+            Z: 0.5
           }
         }
         ParentId: 7284708399235958616

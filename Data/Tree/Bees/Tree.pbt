@@ -26,6 +26,11 @@ Objects {
             X: -1831.11523
           }
         }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
       }
     }
     TemplateAsset {
@@ -59,6 +64,11 @@ Objects {
             X: -865.949219
           }
         }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
       }
     }
     TemplateAsset {
@@ -85,6 +95,16 @@ Objects {
         Overrides {
           Name: "Name"
           String: "$Bee_1_ClientContext"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
         }
       }
     }

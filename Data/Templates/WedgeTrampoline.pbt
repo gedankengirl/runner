@@ -10,23 +10,24 @@ Assets {
         Name: "WedgeTrampoline"
         Transform {
           Scale {
-            X: 2
-            Y: 2
-            Z: 2
+            X: 3.12436604
+            Y: 3.12436604
+            Z: 3.12436604
           }
         }
-        ParentId: 8568336417442047963
+        ParentId: 6715173734297073134
         ChildIds: 15565738699519683145
         ChildIds: 5352557490431415436
         ChildIds: 1810618377831597046
+        ChildIds: 7092020268041539991
         UnregisteredParameters {
           Overrides {
             Name: "cs:LaunchSpeed"
-            Float: 3000
+            Float: 2000
           }
           Overrides {
             Name: "cs:AddToPlayerVelocity"
-            Bool: true
+            Bool: false
           }
         }
         Collidable_v2 {
@@ -37,7 +38,6 @@ Assets {
         }
         Trigger {
           TeamSettings {
-            IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
           TriggerShape_v2 {
@@ -51,16 +51,16 @@ Assets {
         Transform {
           Location {
             X: -52.1286621
-            Y: -48.3287659
-            Z: -90.0322189
+            Y: -57.5899658
+            Z: -85.1776581
           }
           Rotation {
             Yaw: -179.999954
           }
           Scale {
-            X: 1
-            Y: 2
-            Z: 1
+            X: 1.02796555
+            Y: 2.05593109
+            Z: 1.02796555
           }
         }
         ParentId: 7139972749460444073
@@ -520,7 +520,7 @@ Assets {
             Z: 2.17162323
           }
           Rotation {
-            Roll: -27.4526367
+            Roll: -33.9569397
           }
           Scale {
             X: 0.2
@@ -554,6 +554,384 @@ Assets {
         CoreMesh {
           MeshAsset {
             Id: 7027494913329720896
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          EnableCameraCollision: true
+          StaticMesh {
+            Physics {
+              Mass: 100
+              LinearDamping: 0.01
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 7092020268041539991
+        Name: "Arrows"
+        Transform {
+          Location {
+            X: 0.230594009
+            Y: 45.217144
+            Z: -57.9632759
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 7139972749460444073
+        ChildIds: 17578001536692830322
+        ChildIds: 3877534497728814989
+        ChildIds: 8083184723561612840
+        ChildIds: 10659018903478650759
+        ChildIds: 13978379294091680842
+        ChildIds: 8672377167674194811
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Folder {
+          IsFilePartition: true
+        }
+      }
+      Objects {
+        Id: 17578001536692830322
+        Name: "Plane Triangle - One Sided Isosceles"
+        Transform {
+          Location {
+            X: -22.9225407
+            Y: -49.9999886
+            Z: 49.7912178
+          }
+          Rotation {
+            Roll: 25.999979
+          }
+          Scale {
+            X: 0.23500818
+            Y: 0.23500818
+            Z: 0.23500818
+          }
+        }
+        ParentId: 7092020268041539991
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 9046427925315019108
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              G: 0.946000099
+              B: 0.720761716
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 14627612958137750419
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          EnableCameraCollision: true
+          StaticMesh {
+            Physics {
+              Mass: 100
+              LinearDamping: 0.01
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 3877534497728814989
+        Name: "Plane Triangle - One Sided Isosceles"
+        Transform {
+          Location {
+            X: -22.9225407
+            Z: 24.6577911
+          }
+          Rotation {
+            Roll: 25.999979
+          }
+          Scale {
+            X: 0.23500818
+            Y: 0.23500818
+            Z: 0.23500818
+          }
+        }
+        ParentId: 7092020268041539991
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 9046427925315019108
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              G: 0.946000099
+              B: 0.720761716
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 14627612958137750419
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          EnableCameraCollision: true
+          StaticMesh {
+            Physics {
+              Mass: 100
+              LinearDamping: 0.01
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 8083184723561612840
+        Name: "Plane Triangle - One Sided Isosceles"
+        Transform {
+          Location {
+            X: -22.9225407
+            Y: 49.9999886
+          }
+          Rotation {
+            Roll: 25.999979
+          }
+          Scale {
+            X: 0.23500818
+            Y: 0.23500818
+            Z: 0.23500818
+          }
+        }
+        ParentId: 7092020268041539991
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 9046427925315019108
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              G: 0.946000099
+              B: 0.720761716
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 14627612958137750419
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          EnableCameraCollision: true
+          StaticMesh {
+            Physics {
+              Mass: 100
+              LinearDamping: 0.01
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 10659018903478650759
+        Name: "Plane Triangle - One Sided Isosceles"
+        Transform {
+          Location {
+            X: 22.9225407
+            Y: -49.9999886
+            Z: 49.7912178
+          }
+          Rotation {
+            Roll: 25.9999409
+          }
+          Scale {
+            X: 0.23500818
+            Y: 0.23500818
+            Z: 0.23500818
+          }
+        }
+        ParentId: 7092020268041539991
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 9046427925315019108
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              G: 0.946000099
+              B: 0.720761716
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 14627612958137750419
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          EnableCameraCollision: true
+          StaticMesh {
+            Physics {
+              Mass: 100
+              LinearDamping: 0.01
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 13978379294091680842
+        Name: "Plane Triangle - One Sided Isosceles"
+        Transform {
+          Location {
+            X: 22.9225407
+            Z: 24.6577911
+          }
+          Rotation {
+            Roll: 25.9999409
+          }
+          Scale {
+            X: 0.23500818
+            Y: 0.23500818
+            Z: 0.23500818
+          }
+        }
+        ParentId: 7092020268041539991
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 9046427925315019108
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              G: 0.946000099
+              B: 0.720761716
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 14627612958137750419
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          EnableCameraCollision: true
+          StaticMesh {
+            Physics {
+              Mass: 100
+              LinearDamping: 0.01
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 8672377167674194811
+        Name: "Plane Triangle - One Sided Isosceles"
+        Transform {
+          Location {
+            X: 22.9225407
+            Y: 49.9999886
+          }
+          Rotation {
+            Roll: 25.9999409
+          }
+          Scale {
+            X: 0.23500818
+            Y: 0.23500818
+            Z: 0.23500818
+          }
+        }
+        ParentId: 7092020268041539991
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 9046427925315019108
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              G: 0.946000099
+              B: 0.720761716
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 14627612958137750419
           }
           Teams {
             IsTeamCollisionEnabled: true
@@ -621,6 +999,24 @@ Assets {
       PrimaryAsset {
         AssetType: "MaterialAssetRef"
         AssetId: "mi_basic_pbr_material_001"
+      }
+    }
+    Assets {
+      Id: 14627612958137750419
+      Name: "Plane Triangle - One Sided Isosceles"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_plane_triangle_001"
+      }
+    }
+    Assets {
+      Id: 9046427925315019108
+      Name: "Basic Hologram"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "fxmi_basic_hologram"
       }
     }
     PrimaryAssetId {
