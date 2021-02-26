@@ -14,6 +14,7 @@ local PI_2 = 2*math.pi
 local pairs, ipairs = pairs, ipairs
 local rand = math.random
 local abs, sqrt, cos, sin, log = math.abs, math.sqrt, math.cos, math.sin, math.log
+local ceil, floor = math.ceil, math.floor
 math.randomseed(os.time())
 
 local snippets = {}
@@ -41,6 +42,10 @@ end
 snippets.utc_timestamp = utc_timestamp
 snippets.format_timestamp = format_timestamp
 
+-- rounds toward zero
+function snippets.round(x)
+    return x >= 0 and floor(x + 0.5) or ceil(x - 0.5)
+end
 
 -- ZigZag encoding for negative integers
 -- https://en.wikipedia.org/wiki/Variable-length_quantity#Zigzag_encoding
@@ -59,7 +64,7 @@ snippets.zigzag_decode = zigzag_decode
 
 -- Table optimizations
 -- ar_swap_remove: remove and swap with last element of array, O(1) and 10x faster then table.remove
-function snippets.ar_swap_remove(ar, idx)
+function snippets.array_swap_remove(ar, idx)
     local n = #ar
     local res = ar[idx]
     ar[idx] = ar[n]
@@ -67,17 +72,18 @@ function snippets.ar_swap_remove(ar, idx)
     return res
 end
 
-function snippets.table_clear(t)
+function snippets.table_clear(t, kvt_callback)
     -- NOTE: idiomatic way to `traverse & modify` table (`pairs` can cause errors)
     local k, v = next(t)
     while v ~= nil do
         t[k] = nil
         -- use k, v and modify table here ...
+        local _ = kvt_callback and kvt_callback(k, v, t)
         k, v = next(t)
     end
 end
 
-function snippets.ar_clear(ar)
+function snippets.array_clear(ar)
     local n = #ar
     for i=n, 1, -1 do ar[i] = nil end
 end
