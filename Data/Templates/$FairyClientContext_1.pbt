@@ -10,13 +10,13 @@ Assets {
         Name: "$FairyClientContext_1"
         Transform {
           Scale {
-            X: 0.5
-            Y: 0.5
-            Z: 0.5
+            X: 1
+            Y: 1
+            Z: 1
           }
         }
         ParentId: 10806057176125142267
-        ChildIds: 3536020340003430819
+        ChildIds: 12150677894928017407
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
@@ -28,28 +28,29 @@ Assets {
         }
       }
       Objects {
-        Id: 3536020340003430819
-        Name: "ClientContext"
+        Id: 12150677894928017407
+        Name: "TransformController"
         Transform {
           Location {
           }
           Rotation {
           }
           Scale {
-            X: 1
-            Y: 1
-            Z: 1
+            X: 0.6
+            Y: 0.6
+            Z: 0.6
           }
         }
         ParentId: 7710056397504195606
         ChildIds: 10315988618347265534
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
-        NetworkContext {
+        Folder {
+          IsFilePartition: true
         }
       }
       Objects {
@@ -66,7 +67,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 3536020340003430819
+        ParentId: 12150677894928017407
         ChildIds: 15726909741193389819
         ChildIds: 2934236426671568281
         ChildIds: 4445490280392978990

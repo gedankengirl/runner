@@ -10,13 +10,13 @@ Assets {
         Name: "$Monkey_2_ClientContext"
         Transform {
           Scale {
-            X: 0.5
-            Y: 0.5
-            Z: 0.5
+            X: 1
+            Y: 1
+            Z: 1
           }
         }
         ParentId: 15317849570465314173
-        ChildIds: 3992052401014167419
+        ChildIds: 10691971303635146872
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
@@ -28,29 +28,29 @@ Assets {
         }
       }
       Objects {
-        Id: 3992052401014167419
-        Name: "ClientContext"
+        Id: 10691971303635146872
+        Name: "Transform Controller"
         Transform {
           Location {
-            Z: 3.05175781e-05
           }
           Rotation {
           }
           Scale {
-            X: 1
-            Y: 1
-            Z: 1
+            X: 0.6
+            Y: 0.6
+            Z: 0.6
           }
         }
         ParentId: 14263916479296054650
         ChildIds: 6837354041371230196
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
-        NetworkContext {
+        Folder {
+          IsFilePartition: true
         }
       }
       Objects {
@@ -68,7 +68,7 @@ Assets {
             Z: 1.0980773
           }
         }
-        ParentId: 3992052401014167419
+        ParentId: 10691971303635146872
         ChildIds: 11884600747736057902
         ChildIds: 13227909327050522892
         ChildIds: 1886907423177077641

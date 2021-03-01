@@ -63,7 +63,6 @@ Objects {
       Y: 1867.16602
     }
     Rotation {
-      Yaw: -90
     }
     Scale {
       X: 1
@@ -90,7 +89,6 @@ Objects {
     Location {
       X: 7.3515625
       Y: 896.824219
-      Z: 4.50561523
     }
     Rotation {
     }

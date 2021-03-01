@@ -10,13 +10,13 @@ Assets {
         Name: "$Mermaid_3_ClientContext"
         Transform {
           Scale {
-            X: 0.5
-            Y: 0.5
-            Z: 0.5
+            X: 1
+            Y: 1
+            Z: 1
           }
         }
         ParentId: 8303771595245639355
-        ChildIds: 14532679277121525444
+        ChildIds: 1739401252057812252
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
         }
@@ -27,28 +27,29 @@ Assets {
         }
       }
       Objects {
-        Id: 14532679277121525444
-        Name: "ClientContext"
+        Id: 1739401252057812252
+        Name: "TransformController"
         Transform {
           Location {
           }
           Rotation {
           }
           Scale {
-            X: 1
-            Y: 1
-            Z: 1
+            X: 0.6
+            Y: 0.6
+            Z: 0.6
           }
         }
         ParentId: 13491140555172990980
         ChildIds: 1368586537107972426
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
-        NetworkContext {
+        Folder {
+          IsFilePartition: true
         }
       }
       Objects {
@@ -65,7 +66,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 14532679277121525444
+        ParentId: 1739401252057812252
         ChildIds: 8501901714285564446
         ChildIds: 12138912819343669149
         ChildIds: 5087323368653871035

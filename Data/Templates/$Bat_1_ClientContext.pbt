@@ -10,13 +10,13 @@ Assets {
         Name: "$Bat_1_ClientContext"
         Transform {
           Scale {
-            X: 0.5
-            Y: 0.5
-            Z: 0.5
+            X: 1
+            Y: 1
+            Z: 1
           }
         }
         ParentId: 4797334295332245929
-        ChildIds: 14301067914804231607
+        ChildIds: 7305780939982567550
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
@@ -28,76 +28,33 @@ Assets {
         }
       }
       Objects {
-        Id: 14301067914804231607
-        Name: "ClientContext"
+        Id: 7305780939982567550
+        Name: "TransformController"
         Transform {
           Location {
-            Z: 42.8840332
           }
           Rotation {
-            Yaw: -89.9999619
           }
           Scale {
-            X: 1
-            Y: 1
-            Z: 1
+            X: 0.6
+            Y: 0.6
+            Z: 0.6
           }
         }
         ParentId: 10254656520957202463
-        ChildIds: 1140892695826661716
         ChildIds: 2859270899433470293
         ChildIds: 4195613432573029343
         ChildIds: 14076132640737258622
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        NetworkContext {
-        }
-      }
-      Objects {
-        Id: 1140892695826661716
-        Name: "BatMovement"
-        Transform {
-          Location {
-            Z: 64.5686
-          }
-          Rotation {
-            Yaw: 89.9998703
-          }
-          Scale {
-            X: 2.29785371
-            Y: 2.29785371
-            Z: 2.29785371
-          }
-        }
-        ParentId: 14301067914804231607
-        UnregisteredParameters {
-          Overrides {
-            Name: "cs:Amplitude"
-            Int: 10
-          }
-          Overrides {
-            Name: "cs:Frequency"
-            Int: 3
-          }
-          Overrides {
-            Name: "cs:Rotation"
-            Int: 3
-          }
-        }
+        ChildIds: 1140892695826661716
+        ChildIds: 18009062959381016557
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
-        Script {
-          ScriptAsset {
-            Id: 11889895986251336049
-          }
+        Folder {
+          IsFilePartition: true
         }
       }
       Objects {
@@ -105,11 +62,11 @@ Assets {
         Name: "head"
         Transform {
           Location {
-            Y: 5.0136714
-            Z: 84.9224701
+            X: 15.6054688
+            Z: 127.968216
           }
           Rotation {
-            Yaw: 89.9998856
+            Yaw: -0.000187830185
           }
           Scale {
             X: 2.29785371
@@ -117,7 +74,7 @@ Assets {
             Z: 2.29785371
           }
         }
-        ParentId: 14301067914804231607
+        ParentId: 7305780939982567550
         ChildIds: 6802026346779798100
         ChildIds: 9976204681804220474
         ChildIds: 11821918508818028166
@@ -948,13 +905,13 @@ Assets {
         Name: "tail"
         Transform {
           Location {
-            Y: -49.6484337
-            Z: 64.5686
+            X: -39.0527344
+            Z: 107.614334
           }
           Rotation {
-            Pitch: 3.4150944e-05
-            Yaw: 5.28796299e-05
-            Roll: -110.008888
+            Pitch: 4.09811328e-05
+            Yaw: -89.9998779
+            Roll: -110.008766
           }
           Scale {
             X: 0.327310979
@@ -962,7 +919,7 @@ Assets {
             Z: 0.240223259
           }
         }
-        ParentId: 14301067914804231607
+        ParentId: 7305780939982567550
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -997,11 +954,11 @@ Assets {
         Name: "Wings"
         Transform {
           Location {
-            Y: 2.25195289
-            Z: 94.11409
+            X: 12.8450518
+            Z: 137.159805
           }
           Rotation {
-            Yaw: 89.9998856
+            Yaw: -0.000187830185
           }
           Scale {
             X: 1.02717483
@@ -1009,7 +966,7 @@ Assets {
             Z: 1.02717483
           }
         }
-        ParentId: 14301067914804231607
+        ParentId: 7305780939982567550
         ChildIds: 14160382783190321753
         ChildIds: 14935074764851274479
         UnregisteredParameters {
@@ -2952,6 +2909,76 @@ Assets {
           ScriptAsset {
             Id: 11889895986251336049
           }
+        }
+      }
+      Objects {
+        Id: 1140892695826661716
+        Name: "BatMovement"
+        Transform {
+          Location {
+            X: 10.5957031
+            Z: 107.614334
+          }
+          Rotation {
+            Yaw: -89.999939
+          }
+          Scale {
+            X: 2.29785371
+            Y: 2.29785371
+            Z: 2.29785371
+          }
+        }
+        ParentId: 7305780939982567550
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Amplitude"
+            Int: 10
+          }
+          Overrides {
+            Name: "cs:Frequency"
+            Int: 3
+          }
+          Overrides {
+            Name: "cs:Rotation"
+            Int: 3
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 11889895986251336049
+          }
+        }
+      }
+      Objects {
+        Id: 18009062959381016557
+        Name: "Bat"
+        Transform {
+          Location {
+            Z: 76.7978897
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 7305780939982567550
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
         }
       }
     }

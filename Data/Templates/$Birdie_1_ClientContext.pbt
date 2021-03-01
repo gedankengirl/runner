@@ -10,13 +10,13 @@ Assets {
         Name: "$Birdie_1_ClientContext"
         Transform {
           Scale {
-            X: 0.5
-            Y: 0.5
-            Z: 0.5
+            X: 1
+            Y: 1
+            Z: 1
           }
         }
         ParentId: 10212933596085455662
-        ChildIds: 6310307725290484603
+        ChildIds: 5581925201218316423
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
@@ -28,29 +28,29 @@ Assets {
         }
       }
       Objects {
-        Id: 6310307725290484603
-        Name: "ClientContext"
+        Id: 5581925201218316423
+        Name: "TransformController"
         Transform {
           Location {
-            Z: 17.7265625
           }
           Rotation {
           }
           Scale {
-            X: 1
-            Y: 1
-            Z: 1
+            X: 0.6
+            Y: 0.6
+            Z: 0.6
           }
         }
         ParentId: 6202053488135372535
         ChildIds: 12136762061099787782
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
-        NetworkContext {
+        Folder {
+          IsFilePartition: true
         }
       }
       Objects {
@@ -67,7 +67,7 @@ Assets {
             Z: 0.6
           }
         }
-        ParentId: 6310307725290484603
+        ParentId: 5581925201218316423
         ChildIds: 655773127246019044
         ChildIds: 17289423577267380326
         Collidable_v2 {

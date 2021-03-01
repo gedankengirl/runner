@@ -10,13 +10,13 @@ Assets {
         Name: "$BunnyClientContext_2"
         Transform {
           Scale {
-            X: 0.5
-            Y: 0.5
-            Z: 0.5
+            X: 1
+            Y: 1
+            Z: 1
           }
         }
         ParentId: 17043490186478522665
-        ChildIds: 7256311784016541180
+        ChildIds: 14010356382958989724
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
@@ -28,28 +28,29 @@ Assets {
         }
       }
       Objects {
-        Id: 7256311784016541180
-        Name: "ClientContext"
+        Id: 14010356382958989724
+        Name: "TransformController"
         Transform {
           Location {
           }
           Rotation {
           }
           Scale {
-            X: 1
-            Y: 1
-            Z: 1
+            X: 0.6
+            Y: 0.6
+            Z: 0.6
           }
         }
         ParentId: 16679427033803999805
         ChildIds: 15130564856022501176
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
-        NetworkContext {
+        Folder {
+          IsFilePartition: true
         }
       }
       Objects {
@@ -66,7 +67,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 7256311784016541180
+        ParentId: 14010356382958989724
         ChildIds: 12318405016780459915
         ChildIds: 12828479562767691965
         ChildIds: 8325646375129226993

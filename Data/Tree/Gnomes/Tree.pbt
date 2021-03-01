@@ -12,6 +12,12 @@ Objects {
   }
   ParentId: 10149358099801352491
   WantsNetworking: true
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
   TemplateInstance {
     ParameterOverrideMap {
       key: 7032207675925079003
@@ -24,7 +30,6 @@ Objects {
           Name: "Position"
           Vector {
             X: -1829.5293
-            Z: -1.69277954
           }
         }
         Overrides {
@@ -51,6 +56,12 @@ Objects {
   }
   ParentId: 10149358099801352491
   WantsNetworking: true
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
   TemplateInstance {
     ParameterOverrideMap {
       key: 5293780948621430166
@@ -63,7 +74,6 @@ Objects {
           Name: "Position"
           Vector {
             X: -845.496094
-            Z: -1.69277954
           }
         }
         Overrides {
@@ -90,6 +100,12 @@ Objects {
   }
   ParentId: 10149358099801352491
   WantsNetworking: true
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
   TemplateInstance {
     ParameterOverrideMap {
       key: 13653734154733917006
@@ -101,7 +117,6 @@ Objects {
         Overrides {
           Name: "Position"
           Vector {
-            Z: -1.69277954
           }
         }
         Overrides {

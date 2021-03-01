@@ -10,13 +10,13 @@ Assets {
         Name: "$Crab_2_ClientContext"
         Transform {
           Scale {
-            X: 0.5
-            Y: 0.5
-            Z: 0.5
+            X: 1
+            Y: 1
+            Z: 1
           }
         }
         ParentId: 9647420106749990554
-        ChildIds: 2625945998422679332
+        ChildIds: 5534681635870832357
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
@@ -28,28 +28,29 @@ Assets {
         }
       }
       Objects {
-        Id: 2625945998422679332
-        Name: "ClientContext"
+        Id: 5534681635870832357
+        Name: "TransformController"
         Transform {
           Location {
           }
           Rotation {
           }
           Scale {
-            X: 1
-            Y: 1
-            Z: 1
+            X: 0.6
+            Y: 0.6
+            Z: 0.6
           }
         }
         ParentId: 17898800503539356200
         ChildIds: 9419709391727124397
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
-        NetworkContext {
+        Folder {
+          IsFilePartition: true
         }
       }
       Objects {
@@ -57,6 +58,7 @@ Assets {
         Name: "Crab_2"
         Transform {
           Location {
+            Z: 60.2378235
           }
           Rotation {
           }
@@ -66,7 +68,7 @@ Assets {
             Z: 0.80677
           }
         }
-        ParentId: 2625945998422679332
+        ParentId: 5534681635870832357
         ChildIds: 2496866967657570381
         ChildIds: 9436450796274224906
         ChildIds: 12240602464008767754
@@ -92,15 +94,15 @@ Assets {
         Name: "Gem - Pear Polished"
         Transform {
           Location {
-            Z: 150.140778
+            Z: 56.4866295
           }
           Rotation {
-            Yaw: -90
+            Yaw: -89.9999847
           }
           Scale {
-            X: 2.57207751
+            X: 2.57207775
             Y: 1.69765437
-            Z: 2.29532862
+            Z: 2.29532886
           }
         }
         ParentId: 9419709391727124397
@@ -148,15 +150,15 @@ Assets {
         Name: "Gem - Pear Polished"
         Transform {
           Location {
-            Z: 140.696014
+            Z: 47.0418663
           }
           Rotation {
-            Yaw: -90
+            Yaw: -89.9999847
           }
           Scale {
             X: 2.64385533
             Y: 1.74503016
-            Z: 2.35938334
+            Z: 2.35938358
           }
         }
         ParentId: 9419709391727124397
@@ -204,12 +206,12 @@ Assets {
         Name: "Left eye"
         Transform {
           Location {
-            X: 51.8225098
-            Y: 34.8652344
-            Z: 168.881317
+            X: 51.822197
+            Y: 34.8660774
+            Z: 75.22715
           }
           Rotation {
-            Yaw: -89.9999695
+            Yaw: -89.9999542
           }
           Scale {
             X: 1.17350769
@@ -414,12 +416,12 @@ Assets {
         Name: "Right eye"
         Transform {
           Location {
-            X: 51.8225098
-            Y: -34.8652344
-            Z: 168.881317
+            X: 51.822197
+            Y: -34.8660774
+            Z: 75.22715
           }
           Rotation {
-            Yaw: -89.9999695
+            Yaw: -89.9999542
           }
           Scale {
             X: 1.17350769
@@ -626,9 +628,9 @@ Assets {
         Name: "Left legs"
         Transform {
           Location {
-            X: -12.8980227
-            Y: 50.001564
-            Z: 125.257614
+            X: -12.8986578
+            Y: 50.001667
+            Z: 31.6034355
           }
           Rotation {
           }
@@ -1202,9 +1204,9 @@ Assets {
         Name: "Right legs"
         Transform {
           Location {
-            X: -12.8980227
-            Y: -45.8863564
-            Z: 125.257614
+            X: -12.8986578
+            Y: -45.8861046
+            Z: 31.6034355
           }
           Rotation {
           }
@@ -1778,11 +1780,11 @@ Assets {
         Name: "Cap"
         Transform {
           Location {
-            X: 3.23443604
-            Z: 165.88974
+            X: 3.23434806
+            Z: 72.2355804
           }
           Rotation {
-            Pitch: 2.07204032
+            Pitch: 2.07202649
           }
           Scale {
             X: 1.42794502
@@ -2217,10 +2219,10 @@ Assets {
         Transform {
           Location {
             X: -52.1708107
-            Z: 227.500931
+            Z: 133.846802
           }
           Rotation {
-            Yaw: -6.10351381e-05
+            Yaw: -6.10351344e-05
           }
           Scale {
             X: 1.23951066
@@ -2268,12 +2270,12 @@ Assets {
         Name: "RockMove"
         Transform {
           Location {
-            Z: 159.847244
+            Z: 66.1930771
           }
           Rotation {
             Pitch: 28.2610874
-            Yaw: -20.8738728
-            Roll: 4.8465854e-06
+            Yaw: -20.8738594
+            Roll: 3.87726823e-06
           }
           Scale {
             X: 0.637438655

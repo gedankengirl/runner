@@ -10,13 +10,13 @@ Assets {
         Name: "$Bee_3_ClientContext"
         Transform {
           Scale {
-            X: 0.5
-            Y: 0.5
-            Z: 0.5
+            X: 1
+            Y: 1
+            Z: 1
           }
         }
         ParentId: 7284708399235958616
-        ChildIds: 6746630741258329661
+        ChildIds: 4354707392600184750
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
@@ -28,28 +28,29 @@ Assets {
         }
       }
       Objects {
-        Id: 6746630741258329661
-        Name: "ClientContext"
+        Id: 4354707392600184750
+        Name: "TransformController"
         Transform {
           Location {
           }
           Rotation {
           }
           Scale {
-            X: 1
-            Y: 1
-            Z: 1
+            X: 0.6
+            Y: 0.6
+            Z: 0.6
           }
         }
         ParentId: 16574956057727820336
         ChildIds: 5587026107058685019
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
-        NetworkContext {
+        Folder {
+          IsFilePartition: true
         }
       }
       Objects {
@@ -66,7 +67,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 6746630741258329661
+        ParentId: 4354707392600184750
         ChildIds: 17365019345358641814
         ChildIds: 6313698379609234096
         ChildIds: 14429557534745594464

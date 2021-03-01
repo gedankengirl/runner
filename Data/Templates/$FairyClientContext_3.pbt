@@ -10,14 +10,13 @@ Assets {
         Name: "$FairyClientContext_3"
         Transform {
           Scale {
-            X: 0.5
-            Y: 0.5
-            Z: 0.5
+            X: 1
+            Y: 1
+            Z: 1
           }
         }
         ParentId: 10806057176125142267
-        ChildIds: 8148061918271271362
-        ChildIds: 16298299947104846980
+        ChildIds: 7114617901346040981
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
@@ -29,28 +28,29 @@ Assets {
         }
       }
       Objects {
-        Id: 8148061918271271362
-        Name: "ClientContext"
+        Id: 7114617901346040981
+        Name: "TransformController"
         Transform {
           Location {
           }
           Rotation {
           }
           Scale {
-            X: 1
-            Y: 1
-            Z: 1
+            X: 0.6
+            Y: 0.6
+            Z: 0.6
           }
         }
         ParentId: 3714601513711761122
         ChildIds: 8782309469189699946
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
-        NetworkContext {
+        Folder {
+          IsFilePartition: true
         }
       }
       Objects {
@@ -67,7 +67,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 8148061918271271362
+        ParentId: 7114617901346040981
         ChildIds: 7965056163374622051
         ChildIds: 5265129698435970337
         ChildIds: 3395626390378318059
@@ -75,6 +75,7 @@ Assets {
         ChildIds: 7298700809030028491
         ChildIds: 11938663551870404649
         ChildIds: 15869699434845193318
+        ChildIds: 16298299947104846980
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -4205,10 +4206,10 @@ Assets {
         Name: "Outline Object"
         Transform {
           Location {
-            Z: 130.000046
+            Z: 130.000061
           }
           Rotation {
-            Yaw: -6.10351381e-05
+            Yaw: -6.10351344e-05
           }
           Scale {
             X: 1
@@ -4216,7 +4217,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 3714601513711761122
+        ParentId: 8782309469189699946
         UnregisteredParameters {
           Overrides {
             Name: "bp:Color A"

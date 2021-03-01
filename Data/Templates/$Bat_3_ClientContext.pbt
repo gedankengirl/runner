@@ -10,13 +10,13 @@ Assets {
         Name: "$Bat_3_ClientContext"
         Transform {
           Scale {
-            X: 1.149
-            Y: 1.149
-            Z: 1.149
+            X: 1
+            Y: 1
+            Z: 1
           }
         }
         ParentId: 4797334295332245929
-        ChildIds: 5839670827309791198
+        ChildIds: 15656079177242987034
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
@@ -28,19 +28,17 @@ Assets {
         }
       }
       Objects {
-        Id: 5839670827309791198
-        Name: "ClientContext"
+        Id: 15656079177242987034
+        Name: "TransformController"
         Transform {
           Location {
-            Z: 18.661459
           }
           Rotation {
-            Yaw: -1.70754956e-05
           }
           Scale {
-            X: 1
-            Y: 1
-            Z: 1
+            X: 0.6
+            Y: 0.6
+            Z: 0.6
           }
         }
         ParentId: 5275712490008961784
@@ -50,12 +48,13 @@ Assets {
         ChildIds: 11732285229197525241
         ChildIds: 17113710939108491378
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
-        NetworkContext {
+        Folder {
+          IsFilePartition: true
         }
       }
       Objects {
@@ -63,20 +62,20 @@ Assets {
         Name: "BatMovement"
         Transform {
           Location {
-            X: 8.01019192
-            Y: 2.00526738e-05
-            Z: 28.0995274
+            X: 15.338541
+            Y: 4.0849005e-05
+            Z: 112.907509
           }
           Rotation {
-            Yaw: -2.73207497e-05
+            Yaw: -3.05175781e-05
           }
           Scale {
-            X: 1
-            Y: 1
-            Z: 1
+            X: 1.91500008
+            Y: 1.91500008
+            Z: 1.91500008
           }
         }
-        ParentId: 5839670827309791198
+        ParentId: 15656079177242987034
         UnregisteredParameters {
           Overrides {
             Name: "cs:Amplitude"
@@ -108,18 +107,18 @@ Assets {
         Name: "Outline Object"
         Transform {
           Location {
-            Z: 50.4578781
+            Z: 155.72377
           }
           Rotation {
-            Yaw: 5.12264e-05
+            Yaw: 3.4150904e-05
           }
           Scale {
-            X: 0.435188711
-            Y: 0.435188711
-            Z: 0.435188711
+            X: 0.833386362
+            Y: 0.833386362
+            Z: 0.833386362
           }
         }
-        ParentId: 5839670827309791198
+        ParentId: 15656079177242987034
         UnregisteredParameters {
           Overrides {
             Name: "bp:Color A"
@@ -159,18 +158,18 @@ Assets {
         Name: "Outline Object"
         Transform {
           Location {
-            Z: 50.4578781
+            Z: 155.72377
           }
           Rotation {
-            Yaw: 5.12264e-05
+            Yaw: 3.4150904e-05
           }
           Scale {
-            X: 0.435188711
-            Y: 0.435188711
-            Z: 0.435188711
+            X: 0.833386362
+            Y: 0.833386362
+            Z: 0.833386362
           }
         }
-        ParentId: 5839670827309791198
+        ParentId: 15656079177242987034
         UnregisteredParameters {
           Overrides {
             Name: "bp:Color A"
@@ -210,20 +209,20 @@ Assets {
         Name: "Wings"
         Transform {
           Location {
-            X: 8.99021721
-            Y: 2.2506063e-05
-            Z: 40.9573898
+            X: 17.2167969
+            Y: 4.58511022e-05
+            Z: 137.530304
           }
           Rotation {
-            Yaw: -2.73207497e-05
+            Yaw: -3.05175781e-05
           }
           Scale {
-            X: 0.447014898
-            Y: 0.447014898
-            Z: 0.447014898
+            X: 1.027
+            Y: 1.027
+            Z: 1.027
           }
         }
-        ParentId: 5839670827309791198
+        ParentId: 15656079177242987034
         ChildIds: 15517478323150082194
         ChildIds: 3512839396667410986
         UnregisteredParameters {
@@ -2173,20 +2172,20 @@ Assets {
         Name: "Body"
         Transform {
           Location {
-            X: 10.1920853
-            Y: 2.55148152e-05
-            Z: 36.9573021
+            X: 19.5182285
+            Y: 5.1980187e-05
+            Z: 129.870148
           }
           Rotation {
-            Yaw: -2.73207497e-05
+            Yaw: -3.05175781e-05
           }
           Scale {
-            X: 1
-            Y: 1
-            Z: 1
+            X: 2.298
+            Y: 2.298
+            Z: 2.298
           }
         }
-        ParentId: 5839670827309791198
+        ParentId: 15656079177242987034
         ChildIds: 11652759822137404026
         ChildIds: 8161870490578317796
         ChildIds: 2375373007853794169

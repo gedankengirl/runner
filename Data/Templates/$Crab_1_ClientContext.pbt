@@ -10,13 +10,13 @@ Assets {
         Name: "$Crab_1_ClientContext"
         Transform {
           Scale {
-            X: 0.5
-            Y: 0.5
-            Z: 0.5
+            X: 1
+            Y: 1
+            Z: 1
           }
         }
         ParentId: 9647420106749990554
-        ChildIds: 1401971393046046476
+        ChildIds: 10615388736522315104
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
@@ -28,29 +28,29 @@ Assets {
         }
       }
       Objects {
-        Id: 1401971393046046476
-        Name: "ClientContext"
+        Id: 10615388736522315104
+        Name: "TransformController"
         Transform {
           Location {
-            Z: -8.74179077
           }
           Rotation {
           }
           Scale {
-            X: 1
-            Y: 1
-            Z: 1
+            X: 0.6
+            Y: 0.6
+            Z: 0.6
           }
         }
         ParentId: 7758740036848745766
         ChildIds: 11800494025674674117
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
-        NetworkContext {
+        Folder {
+          IsFilePartition: true
         }
       }
       Objects {
@@ -58,7 +58,7 @@ Assets {
         Name: "Crab_1"
         Transform {
           Location {
-            Z: 51.3128662
+            Z: 79.516777
           }
           Rotation {
           }
@@ -68,7 +68,7 @@ Assets {
             Z: 0.80677
           }
         }
-        ParentId: 1401971393046046476
+        ParentId: 10615388736522315104
         ChildIds: 16433791871017418806
         ChildIds: 6610094198808416728
         ChildIds: 325530670483433814

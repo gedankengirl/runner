@@ -29,15 +29,13 @@ Objects {
         Overrides {
           Name: "Position"
           Vector {
-            X: -0.000244140625
-            Y: -1868.5155
-            Z: -21.442
+            X: -1840.11328
           }
         }
         Overrides {
           Name: "Rotation"
           Rotator {
-            Yaw: 89.9998245
+            Yaw: -0.000152587891
           }
         }
       }
@@ -76,15 +74,12 @@ Objects {
         Overrides {
           Name: "Position"
           Vector {
-            X: -0.000183105469
-            Y: -892.380737
-            Z: -21.442
+            X: -887.564453
           }
         }
         Overrides {
           Name: "Rotation"
           Rotator {
-            Yaw: 89.9998703
           }
         }
       }
@@ -95,7 +90,7 @@ Objects {
   }
 }
 Objects {
-  Id: 17070210195568050274
+  Id: 17086790853097327434
   Name: "$Bat_1_ClientContext"
   Transform {
     Scale {
@@ -123,13 +118,11 @@ Objects {
         Overrides {
           Name: "Position"
           Vector {
-            Z: -21.442
           }
         }
         Overrides {
           Name: "Rotation"
           Rotator {
-            Yaw: 90
           }
         }
       }

@@ -10,13 +10,13 @@ Assets {
         Name: "$Gnome_2_ClientContext"
         Transform {
           Scale {
-            X: 0.5
-            Y: 0.5
-            Z: 0.5
+            X: 1
+            Y: 1
+            Z: 1
           }
         }
         ParentId: 10149358099801352491
-        ChildIds: 16114659041515018607
+        ChildIds: 7653866912214772171
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
@@ -28,29 +28,29 @@ Assets {
         }
       }
       Objects {
-        Id: 16114659041515018607
-        Name: "ClientContext"
+        Id: 7653866912214772171
+        Name: "TransformController"
         Transform {
           Location {
-            Z: -3.05175781e-05
           }
           Rotation {
           }
           Scale {
-            X: 1
-            Y: 1
-            Z: 1
+            X: 0.6
+            Y: 0.6
+            Z: 0.6
           }
         }
         ParentId: 5293780948621430166
         ChildIds: 15980454908161898700
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
-        NetworkContext {
+        Folder {
+          IsFilePartition: true
         }
       }
       Objects {
@@ -58,7 +58,6 @@ Assets {
         Name: "Gnome_2"
         Transform {
           Location {
-            Z: -3.05175781e-05
           }
           Rotation {
           }
@@ -68,7 +67,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 16114659041515018607
+        ParentId: 7653866912214772171
         ChildIds: 4848046373785420919
         ChildIds: 15200383155928966344
         ChildIds: 7119334787494918738

@@ -190,7 +190,7 @@ Objects {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   Text {
-    Text: "COLLECT SPEED COINS"
+    Text: "TO GAIN SPEED COINS"
     Color {
       G: 0.412222385
       B: 0.490000129
@@ -232,7 +232,7 @@ Objects {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   Text {
-    Text: "CLICK THE MOUSE TO"
+    Text: "CLICK THE MOUSE "
     Color {
       G: 0.412222385
       B: 0.490000129

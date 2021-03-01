@@ -10,13 +10,13 @@ Assets {
         Name: "$Witch_2_ClientContext"
         Transform {
           Scale {
-            X: 0.5
-            Y: 0.5
-            Z: 0.5
+            X: 1
+            Y: 1
+            Z: 1
           }
         }
         ParentId: 2966812490703732269
-        ChildIds: 18303340511641275401
+        ChildIds: 14358737767978712486
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
@@ -28,30 +28,29 @@ Assets {
         }
       }
       Objects {
-        Id: 18303340511641275401
-        Name: "ClientContext"
+        Id: 14358737767978712486
+        Name: "TransformController"
         Transform {
           Location {
-            Z: 39.2087402
           }
           Rotation {
-            Yaw: -89.9999619
           }
           Scale {
-            X: 1
-            Y: 1
-            Z: 1
+            X: 0.6
+            Y: 0.6
+            Z: 0.6
           }
         }
         ParentId: 10626349075567989642
         ChildIds: 2976896071545612889
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
-        NetworkContext {
+        Folder {
+          IsFilePartition: true
         }
       }
       Objects {
@@ -61,7 +60,7 @@ Assets {
           Location {
           }
           Rotation {
-            Yaw: 6.83018789e-06
+            Yaw: 6.83018561e-06
           }
           Scale {
             X: 1
@@ -69,7 +68,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 18303340511641275401
+        ParentId: 14358737767978712486
         ChildIds: 3733020469757330835
         ChildIds: 14092382273134543524
         ChildIds: 8518265301204798053
@@ -104,10 +103,10 @@ Assets {
         Name: "Sphere"
         Transform {
           Location {
-            Z: 132.827805
+            Z: 175.825134
           }
           Rotation {
-            Yaw: 89.9999771
+            Yaw: 2.39056644e-05
           }
           Scale {
             X: 0.988269627
@@ -161,12 +160,13 @@ Assets {
         Name: "Left eye"
         Transform {
           Location {
-            X: -23.8339787
-            Y: 40.1956787
-            Z: 141.812607
+            X: 40.1953278
+            Y: 23.8346062
+            Z: 184.809967
           }
           Rotation {
-            Roll: 10.1027765
+            Yaw: -89.999939
+            Roll: 10.1028042
           }
           Scale {
             X: 1.17350769
@@ -312,12 +312,13 @@ Assets {
         Name: "Right eye"
         Transform {
           Location {
-            X: 22.5488281
-            Y: 40.1955528
-            Z: 141.812897
+            X: 40.1952972
+            Y: -22.5456
+            Z: 184.810272
           }
           Rotation {
-            Roll: 10.1027765
+            Yaw: -89.999939
+            Roll: 10.1028042
           }
           Scale {
             X: 1.17350769
@@ -463,11 +464,12 @@ Assets {
         Name: "Hat"
         Transform {
           Location {
-            X: -2.38418579e-07
-            Y: -3.44494581
-            Z: 156.274384
+            X: -3.44401026
+            Y: 2.4633473e-06
+            Z: 199.271637
           }
           Rotation {
+            Yaw: -89.999939
           }
           Scale {
             X: 1
@@ -889,11 +891,12 @@ Assets {
         Name: "Bone arm"
         Transform {
           Location {
-            X: -1.52587891e-05
-            Y: -79.2812424
-            Z: 234.817108
+            X: -79.2805939
+            Y: 5.67058851e-05
+            Z: 277.814362
           }
           Rotation {
+            Yaw: -89.999939
           }
           Scale {
             X: 1
@@ -1097,9 +1100,10 @@ Assets {
         Name: "Body"
         Transform {
           Location {
-            Z: -16.2028809
+            Z: 26.7943573
           }
           Rotation {
+            Yaw: -89.999939
           }
           Scale {
             X: 1
@@ -1291,13 +1295,13 @@ Assets {
         Name: "Cylinder - Rounded Small"
         Transform {
           Location {
-            X: 27.4804688
-            Y: 0.246704102
-            Z: 73.5157547
+            X: 0.24609375
+            Y: -27.5703125
+            Z: 116.512482
           }
           Rotation {
-            Yaw: 90
-            Roll: -88.9724426
+            Yaw: 4.09204185e-05
+            Roll: -88.9724121
           }
           Scale {
             X: 0.299745172
@@ -1350,12 +1354,12 @@ Assets {
         Name: "Cylinder - Rounded Small"
         Transform {
           Location {
-            X: 46.4550781
-            Y: 0.246704102
-            Z: 73.5157547
+            X: 0.24609375
+            Y: -46.5410156
+            Z: 116.512482
           }
           Rotation {
-            Yaw: 89.9999924
+            Yaw: 2.91193519e-05
             Roll: -88.9724121
           }
           Scale {
@@ -1410,13 +1414,13 @@ Assets {
         Name: "Cylinder - Rounded Small"
         Transform {
           Location {
-            X: -47.0058594
-            Y: 0.246704102
-            Z: 55.3080826
+            X: 0.24609375
+            Y: 46.9160156
+            Z: 98.3046875
           }
           Rotation {
-            Yaw: 90
-            Roll: 147.833801
+            Yaw: 5.14726416e-05
+            Roll: 147.83374
           }
           Scale {
             X: 0.259883732
@@ -1470,13 +1474,13 @@ Assets {
         Name: "Cylinder - Rounded Small"
         Transform {
           Location {
-            X: -27.453125
-            Y: 0.246704102
-            Z: 87.366951
+            X: 0.24609375
+            Y: 27.3652344
+            Z: 130.363647
           }
           Rotation {
-            Yaw: 90
-            Roll: 147.833801
+            Yaw: 5.14726307e-05
+            Roll: 147.833755
           }
           Scale {
             X: 0.299745202
@@ -1529,12 +1533,12 @@ Assets {
         Name: "witch broom by staypunny"
         Transform {
           Location {
-            X: 74.9218674
-            Y: 6.42602539
-            Z: 23.0425415
+            X: 6.42572737
+            Y: -74.9218826
+            Z: 66.0397797
           }
           Rotation {
-            Yaw: 89.9999924
+            Yaw: 4.09811364e-05
           }
           Scale {
             X: 0.813805699
@@ -2666,11 +2670,12 @@ Assets {
         Name: "Crescent - 03"
         Transform {
           Location {
-            Y: 5.34484816
-            Z: 112.135895
+            X: 5.34505177
+            Y: -3.8230778e-06
+            Z: 155.133179
           }
           Rotation {
-            Yaw: 89.9999924
+            Yaw: 4.09811364e-05
           }
           Scale {
             X: 1.227283
@@ -2721,11 +2726,12 @@ Assets {
         Name: "Nose"
         Transform {
           Location {
-            Y: 47.8016319
-            Z: 111.369919
+            X: 47.7994766
+            Y: -3.41888372e-05
+            Z: 154.36731
           }
           Rotation {
-            Yaw: 89.9999924
+            Yaw: 4.09811364e-05
           }
           Scale {
             X: 0.140794322
@@ -2779,11 +2785,12 @@ Assets {
         Name: "Right ear"
         Transform {
           Location {
-            X: 45.9297256
-            Y: 1.04034424
-            Z: 108.529526
+            X: 1.0383786
+            Y: -45.9309883
+            Z: 151.526886
           }
           Rotation {
+            Yaw: -89.999939
           }
           Scale {
             X: 1
@@ -2935,11 +2942,12 @@ Assets {
         Name: "Left ear"
         Transform {
           Location {
-            X: -46.3095665
-            Y: 0.340454102
-            Z: 106.547928
+            X: 0.338574797
+            Y: 46.3085938
+            Z: 149.545212
           }
           Rotation {
+            Yaw: -89.999939
           }
           Scale {
             X: 1
@@ -3087,11 +3095,12 @@ Assets {
         Name: "Necklace"
         Transform {
           Location {
-            X: 0.0117200222
-            Y: 21.7488174
-            Z: 64.4088898
+            X: 21.7513
+            Y: -0.0130363908
+            Z: 107.406128
           }
           Rotation {
+            Yaw: -89.999939
           }
           Scale {
             X: 1
@@ -3305,10 +3314,10 @@ Assets {
         Name: "Outline Object"
         Transform {
           Location {
-            Z: 115.944824
+            Z: 158.9422
           }
           Rotation {
-            Yaw: 89.9999619
+            Yaw: 6.83019516e-06
           }
           Scale {
             X: 1
@@ -3356,14 +3365,14 @@ Assets {
         Name: "RockMove"
         Transform {
           Location {
-            X: 0.000183105469
-            Y: 873.974487
-            Z: 46.5354
+            X: 873.971313
+            Y: -0.000625112792
+            Z: 89.5326462
           }
           Rotation {
-            Pitch: 28.2610664
-            Yaw: 69.1260834
-            Roll: 7.75453555e-06
+            Pitch: 28.2610607
+            Yaw: -20.8738403
+            Roll: 8.23919345e-06
           }
           Scale {
             X: 0.514266312

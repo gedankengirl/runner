@@ -10,13 +10,13 @@ Assets {
         Name: "$Flamingo_2_ClientContext"
         Transform {
           Scale {
-            X: 0.5
-            Y: 0.5
-            Z: 0.5
+            X: 1
+            Y: 1
+            Z: 1
           }
         }
         ParentId: 17958106882838060675
-        ChildIds: 7491555683753844951
+        ChildIds: 3911597647969428213
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
@@ -28,28 +28,29 @@ Assets {
         }
       }
       Objects {
-        Id: 7491555683753844951
-        Name: "ClientContext"
+        Id: 3911597647969428213
+        Name: "TransformController"
         Transform {
           Location {
           }
           Rotation {
           }
           Scale {
-            X: 1
-            Y: 1
-            Z: 1
+            X: 0.6
+            Y: 0.6
+            Z: 0.6
           }
         }
         ParentId: 16494924866462239291
         ChildIds: 35213698589086373
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
-        NetworkContext {
+        Folder {
+          IsFilePartition: true
         }
       }
       Objects {
@@ -66,7 +67,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 7491555683753844951
+        ParentId: 3911597647969428213
         ChildIds: 16756405699750551480
         ChildIds: 7426235799600870747
         ChildIds: 6070931835269132889

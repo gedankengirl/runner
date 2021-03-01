@@ -5,10 +5,8 @@ Objects {
   Name: "Witches"
   Transform {
     Location {
-      Z: 28.883667
     }
     Rotation {
-      Yaw: 1.02452814e-05
     }
     Scale {
       X: 1
@@ -33,11 +31,9 @@ Objects {
   Name: "Bats"
   Transform {
     Location {
-      X: 284.779266
-      Z: 28.883667
+      Y: -284.779297
     }
     Rotation {
-      Yaw: 1.02452814e-05
     }
     Scale {
       X: 1
@@ -62,10 +58,9 @@ Objects {
   Name: "Ghosts"
   Transform {
     Location {
-      X: -212.791
+      Y: 212.791016
     }
     Rotation {
-      Yaw: 1.02452814e-05
     }
     Scale {
       X: 1

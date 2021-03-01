@@ -10,13 +10,13 @@ Assets {
         Name: "$MushroomClientContext_1"
         Transform {
           Scale {
-            X: 0.5
-            Y: 0.5
-            Z: 0.5
+            X: 1
+            Y: 1
+            Z: 1
           }
         }
         ParentId: 96217471946232102
-        ChildIds: 9848246490396812371
+        ChildIds: 3535909548976202778
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
@@ -28,28 +28,29 @@ Assets {
         }
       }
       Objects {
-        Id: 9848246490396812371
-        Name: "ClientContext"
+        Id: 3535909548976202778
+        Name: "TransformController"
         Transform {
           Location {
           }
           Rotation {
           }
           Scale {
-            X: 1
-            Y: 1
-            Z: 1
+            X: 0.6
+            Y: 0.6
+            Z: 0.6
           }
         }
         ParentId: 5803110417485138215
         ChildIds: 3099695504647755970
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
-        NetworkContext {
+        Folder {
+          IsFilePartition: true
         }
       }
       Objects {
@@ -66,7 +67,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 9848246490396812371
+        ParentId: 3535909548976202778
         ChildIds: 495221506616461630
         ChildIds: 547608939018106839
         ChildIds: 3627769892659245962

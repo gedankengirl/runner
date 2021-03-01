@@ -10,13 +10,13 @@ Assets {
         Name: "$Witch_3_ClientContext"
         Transform {
           Scale {
-            X: 0.5
-            Y: 0.5
-            Z: 0.5
+            X: 1
+            Y: 1
+            Z: 1
           }
         }
         ParentId: 2966812490703732269
-        ChildIds: 5910425734448946326
+        ChildIds: 439643023534077024
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
@@ -28,40 +28,38 @@ Assets {
         }
       }
       Objects {
-        Id: 5910425734448946326
-        Name: "ClientContext"
+        Id: 439643023534077024
+        Name: "TransformController"
         Transform {
           Location {
-            Z: 34.3492432
           }
           Rotation {
-            Yaw: -89.9999771
           }
           Scale {
-            X: 1
-            Y: 1
-            Z: 1
+            X: 0.6
+            Y: 0.6
+            Z: 0.6
           }
         }
         ParentId: 5121456759861225306
-        ChildIds: 11507697080637411261
+        ChildIds: 13655165843619991981
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
-        NetworkContext {
+        Folder {
+          IsFilePartition: true
         }
       }
       Objects {
-        Id: 11507697080637411261
+        Id: 13655165843619991981
         Name: "Witch_3"
         Transform {
           Location {
           }
           Rotation {
-            Yaw: 1.70754702e-05
           }
           Scale {
             X: 1
@@ -69,7 +67,8 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 5910425734448946326
+        ParentId: 439643023534077024
+        ChildIds: 10149836593357473649
         ChildIds: 14802648370447396468
         ChildIds: 8199217608758621542
         ChildIds: 1199624309365991655
@@ -85,7 +84,6 @@ Assets {
         ChildIds: 2836380891068872736
         ChildIds: 11558398845437211984
         ChildIds: 8273392849095358007
-        ChildIds: 10149836593357473649
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -94,7 +92,57 @@ Assets {
         }
         Folder {
           IsFilePartition: true
-          FilePartitionName: "Witch_3"
+        }
+      }
+      Objects {
+        Id: 10149836593357473649
+        Name: "RockMove"
+        Transform {
+          Location {
+            X: 1850.1106
+            Y: 0.00215245667
+            Z: 85.5665283
+          }
+          Rotation {
+            Pitch: 28.2610474
+            Yaw: -20.8738403
+            Roll: 1.16318e-05
+          }
+          Scale {
+            X: 0.514266312
+            Y: 0.514266312
+            Z: 0.514266312
+          }
+        }
+        ParentId: 13655165843619991981
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Object"
+            ObjectReference {
+              SubObjectId: 13655165843619991981
+            }
+          }
+          Overrides {
+            Name: "cs:Amplitude"
+            Vector {
+              Z: 10
+            }
+          }
+          Overrides {
+            Name: "cs:Period"
+            Float: 2.3
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 14863999780221077747
+          }
         }
       }
       Objects {
@@ -102,10 +150,10 @@ Assets {
         Name: "Sphere"
         Transform {
           Location {
-            Z: 132.827805
+            Z: 171.858978
           }
           Rotation {
-            Yaw: 89.9999771
+            Yaw: 2.39056571e-05
           }
           Scale {
             X: 0.988269627
@@ -113,7 +161,7 @@ Assets {
             Z: 0.988269627
           }
         }
-        ParentId: 11507697080637411261
+        ParentId: 13655165843619991981
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -159,12 +207,13 @@ Assets {
         Name: "Left eye"
         Transform {
           Location {
-            X: -23.8339787
-            Y: 40.1956787
-            Z: 141.812607
+            X: 40.1953239
+            Y: 23.8346119
+            Z: 180.843811
           }
           Rotation {
-            Roll: 10.1027765
+            Yaw: -89.999939
+            Roll: 10.1028156
           }
           Scale {
             X: 1.17350769
@@ -172,7 +221,7 @@ Assets {
             Z: 1.17350769
           }
         }
-        ParentId: 11507697080637411261
+        ParentId: 13655165843619991981
         ChildIds: 4078157773257983606
         ChildIds: 9469693636694228759
         Collidable_v2 {
@@ -310,12 +359,13 @@ Assets {
         Name: "Right eye"
         Transform {
           Location {
-            X: 22.5488281
-            Y: 40.1955528
-            Z: 141.812897
+            X: 40.1952972
+            Y: -22.5455971
+            Z: 180.844055
           }
           Rotation {
-            Roll: 10.1027765
+            Yaw: -89.999939
+            Roll: 10.1028156
           }
           Scale {
             X: 1.17350769
@@ -323,7 +373,7 @@ Assets {
             Z: 1.17350769
           }
         }
-        ParentId: 11507697080637411261
+        ParentId: 13655165843619991981
         ChildIds: 2150273841062422071
         ChildIds: 2728271100667213777
         Collidable_v2 {
@@ -461,11 +511,12 @@ Assets {
         Name: "Hat"
         Transform {
           Location {
-            X: -2.38418579e-07
-            Y: -3.44494581
-            Z: 156.274384
+            X: -3.44401026
+            Y: 2.05278957e-06
+            Z: 195.305573
           }
           Rotation {
+            Yaw: -89.999939
           }
           Scale {
             X: 1
@@ -473,7 +524,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 11507697080637411261
+        ParentId: 13655165843619991981
         ChildIds: 11855092212578878155
         ChildIds: 8094255204038142306
         ChildIds: 16538079156763431800
@@ -1399,9 +1450,10 @@ Assets {
         Name: "Body"
         Transform {
           Location {
-            Z: -16.2028809
+            Z: 22.8282661
           }
           Rotation {
+            Yaw: -89.999939
           }
           Scale {
             X: 1
@@ -1409,7 +1461,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 11507697080637411261
+        ParentId: 13655165843619991981
         ChildIds: 17774533391633968385
         ChildIds: 7907525325789677062
         ChildIds: 8893871761772983551
@@ -2757,11 +2809,12 @@ Assets {
         Name: "Right arm"
         Transform {
           Location {
-            X: 36.9677734
-            Y: 0.246704102
-            Z: 73.5157547
+            X: 0.247373804
+            Y: -36.9694
+            Z: 112.54689
           }
           Rotation {
+            Yaw: -89.999939
           }
           Scale {
             X: 1
@@ -2769,7 +2822,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 11507697080637411261
+        ParentId: 13655165843619991981
         ChildIds: 7322314987081749248
         ChildIds: 18446024899281302128
         ChildIds: 5826249181637304922
@@ -2969,11 +3022,12 @@ Assets {
         Name: "Left arm"
         Transform {
           Location {
-            X: -37.2294922
-            Y: 0.246704102
-            Z: 55.3080826
+            X: 0.247418031
+            Y: 37.2298164
+            Z: 94.3392181
           }
           Rotation {
+            Yaw: -89.999939
           }
           Scale {
             X: 1
@@ -2981,7 +3035,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 11507697080637411261
+        ParentId: 13655165843619991981
         ChildIds: 15122125562141247564
         ChildIds: 13879206924303694188
         ChildIds: 457313937337002538
@@ -3179,12 +3233,12 @@ Assets {
         Name: "witch broom by staypunny"
         Transform {
           Location {
-            X: 74.9218674
-            Y: 6.42602539
-            Z: 23.0425415
+            X: 6.42573643
+            Y: -74.9218826
+            Z: 62.0736694
           }
           Rotation {
-            Yaw: 89.9999924
+            Yaw: 4.09811291e-05
           }
           Scale {
             X: 0.813805699
@@ -3192,7 +3246,7 @@ Assets {
             Z: 0.813805699
           }
         }
-        ParentId: 11507697080637411261
+        ParentId: 13655165843619991981
         ChildIds: 10440275310735029366
         ChildIds: 7182716697462339815
         ChildIds: 16173875419748663440
@@ -4316,11 +4370,12 @@ Assets {
         Name: "Crescent - 03"
         Transform {
           Location {
-            Y: 5.34484816
-            Z: 112.135895
+            X: 5.34505177
+            Y: -3.18589855e-06
+            Z: 151.167038
           }
           Rotation {
-            Yaw: 89.9999924
+            Yaw: 4.09811291e-05
           }
           Scale {
             X: 1.227283
@@ -4328,7 +4383,7 @@ Assets {
             Z: 1.02583039
           }
         }
-        ParentId: 11507697080637411261
+        ParentId: 13655165843619991981
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -4371,11 +4426,12 @@ Assets {
         Name: "Nose"
         Transform {
           Location {
-            Y: 47.8016319
-            Z: 111.369919
+            X: 47.7994766
+            Y: -2.84907e-05
+            Z: 150.401077
           }
           Rotation {
-            Yaw: 89.9999924
+            Yaw: 4.09811291e-05
           }
           Scale {
             X: 0.140794322
@@ -4383,7 +4439,7 @@ Assets {
             Z: 0.140794322
           }
         }
-        ParentId: 11507697080637411261
+        ParentId: 13655165843619991981
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -4429,11 +4485,12 @@ Assets {
         Name: "Right ear"
         Transform {
           Location {
-            X: 45.9297256
-            Y: 1.04034424
-            Z: 108.529526
+            X: 1.03838396
+            Y: -45.9309883
+            Z: 147.560699
           }
           Rotation {
+            Yaw: -89.999939
           }
           Scale {
             X: 1
@@ -4441,7 +4498,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 11507697080637411261
+        ParentId: 13655165843619991981
         ChildIds: 5193974185375518929
         ChildIds: 13428160976536408982
         ChildIds: 2552141704640610733
@@ -4645,11 +4702,12 @@ Assets {
         Name: "Left ear"
         Transform {
           Location {
-            X: -46.3095665
-            Y: 0.340454102
-            Z: 106.547928
+            X: 0.338569254
+            Y: 46.3085938
+            Z: 145.579041
           }
           Rotation {
+            Yaw: -89.999939
           }
           Scale {
             X: 1
@@ -4657,7 +4715,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 11507697080637411261
+        ParentId: 13655165843619991981
         ChildIds: 14733161920981025833
         ChildIds: 16908333299838184520
         ChildIds: 6677556930516502347
@@ -4862,11 +4920,12 @@ Assets {
         Name: "Necklace"
         Transform {
           Location {
-            X: 0.0117200222
-            Y: 21.7488174
-            Z: 64.4088898
+            X: 21.7513
+            Y: -0.013033797
+            Z: 103.440041
           }
           Rotation {
+            Yaw: -89.999939
           }
           Scale {
             X: 1
@@ -4874,7 +4933,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 11507697080637411261
+        ParentId: 13655165843619991981
         ChildIds: 3451787318294756884
         ChildIds: 283044529147635484
         ChildIds: 3020341532803285223
@@ -5080,10 +5139,10 @@ Assets {
         Name: "Outline Object"
         Transform {
           Location {
-            Z: 115.944824
+            Z: 154.975983
           }
           Rotation {
-            Yaw: 89.9999619
+            Yaw: 6.83019516e-06
           }
           Scale {
             X: 1
@@ -5091,7 +5150,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 11507697080637411261
+        ParentId: 13655165843619991981
         UnregisteredParameters {
           Overrides {
             Name: "bp:Color A"
@@ -5104,7 +5163,7 @@ Assets {
           Overrides {
             Name: "bp:Object To Outline"
             ObjectReference {
-              SubObjectId: 11507697080637411261
+              SubObjectId: 13655165843619991981
             }
           }
           Overrides {
@@ -5131,11 +5190,12 @@ Assets {
         Name: "Bone arm"
         Transform {
           Location {
-            X: -3.05175781e-05
-            Y: -79.5527191
-            Z: 234.817108
+            X: -79.5507813
+            Y: 4.7415946e-05
+            Z: 273.848267
           }
           Rotation {
+            Yaw: -89.999939
           }
           Scale {
             X: 1
@@ -5143,7 +5203,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 11507697080637411261
+        ParentId: 13655165843619991981
         ChildIds: 16886966863951353562
         ChildIds: 10959816331327962099
         ChildIds: 264940380336285626
@@ -5331,57 +5391,6 @@ Assets {
               Mass: 100
               LinearDamping: 0.01
             }
-          }
-        }
-      }
-      Objects {
-        Id: 10149836593357473649
-        Name: "RockMove"
-        Transform {
-          Location {
-            X: 0.000732421875
-            Y: 1850.10913
-            Z: 46.5354
-          }
-          Rotation {
-            Pitch: 28.2610474
-            Yaw: 69.1260834
-            Roll: 9.69316625e-06
-          }
-          Scale {
-            X: 0.514266312
-            Y: 0.514266312
-            Z: 0.514266312
-          }
-        }
-        ParentId: 11507697080637411261
-        UnregisteredParameters {
-          Overrides {
-            Name: "cs:Object"
-            ObjectReference {
-              SubObjectId: 11507697080637411261
-            }
-          }
-          Overrides {
-            Name: "cs:Amplitude"
-            Vector {
-              Z: 10
-            }
-          }
-          Overrides {
-            Name: "cs:Period"
-            Float: 2.3
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Script {
-          ScriptAsset {
-            Id: 14863999780221077747
           }
         }
       }
