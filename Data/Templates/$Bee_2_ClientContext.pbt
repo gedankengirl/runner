@@ -1165,9 +1165,9 @@ Assets {
         Name: "Lens - Half"
         Transform {
           Location {
-            X: 34.9785156
-            Y: -22.7402344
-            Z: 141.92836
+            X: 34.8600235
+            Y: -22.943
+            Z: 141.928345
           }
           Rotation {
             Pitch: 69.9999847

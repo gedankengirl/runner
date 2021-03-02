@@ -165,8 +165,8 @@ Assets {
             Z: 9.09143257
           }
           Rotation {
-            Yaw: -89.9999084
-            Roll: 10.1028252
+            Yaw: -90
+            Roll: -0.114135742
           }
           Scale {
             X: 1.1874367
@@ -312,13 +312,13 @@ Assets {
         Name: "Right eye"
         Transform {
           Location {
-            X: 40.6724358
-            Y: -22.816431
-            Z: 9.09172535
+            X: 40.6724396
+            Y: -24.118
+            Z: 9.0914278
           }
           Rotation {
-            Yaw: -89.9999084
-            Roll: 10.1028252
+            Yaw: -90
+            Roll: -0.114135742
           }
           Scale {
             X: 1.1874367

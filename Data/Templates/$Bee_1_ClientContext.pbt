@@ -85,6 +85,7 @@ Assets {
         ChildIds: 2887742229771771855
         ChildIds: 8197474309122858576
         ChildIds: 5503933166370702010
+        ChildIds: 4258472198273291682
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -1211,9 +1212,9 @@ Assets {
         Name: "Lens - Half"
         Transform {
           Location {
-            X: 34.9785156
-            Y: -22.7402344
-            Z: 141.42836
+            X: 34.86
+            Y: -22.7408848
+            Z: 141.428345
           }
           Rotation {
             Pitch: 69.9999847
@@ -1483,6 +1484,64 @@ Assets {
         CoreMesh {
           MeshAsset {
             Id: 17348004700843477078
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          EnableCameraCollision: true
+          StaticMesh {
+            Physics {
+              Mass: 100
+              LinearDamping: 0.01
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 4258472198273291682
+        Name: "Lens - Half"
+        Transform {
+          Location {
+            X: 34.8600235
+            Y: 22.9427071
+            Z: 141.428345
+          }
+          Rotation {
+            Pitch: 70
+            Yaw: -169.999924
+            Roll: -19.9999866
+          }
+          Scale {
+            X: 0.3
+            Y: 0.3
+            Z: 0.3
+          }
+        }
+        ParentId: 7552648656453009417
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 10184847056121543272
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 9371661852199201852
           }
           Teams {
             IsTeamCollisionEnabled: true

@@ -281,9 +281,9 @@ Assets {
         Name: "Donut"
         Transform {
           Location {
-            X: 33.3333359
-            Y: -19.1796875
-            Z: 15.5555563
+            X: 33.3333321
+            Y: -25.264
+            Z: 15.5555439
           }
           Rotation {
             Pitch: 6.71770906
@@ -342,9 +342,9 @@ Assets {
         Name: "Lens - Half"
         Transform {
           Location {
-            X: 38.8650208
-            Y: -22.2222233
-            Z: 17.6981792
+            X: 38.7333603
+            Y: -28.534
+            Z: 17.6981888
           }
           Rotation {
             Pitch: 69.9999542
