@@ -385,15 +385,6 @@ Assets {
       }
     }
     Assets {
-      Id: 12814918634853164985
-      Name: "Icon Stamina"
-      PlatformAssetType: 9
-      PrimaryAsset {
-        AssetType: "PlatformBrushAssetRef"
-        AssetId: "Icon_Stamina"
-      }
-    }
-    Assets {
       Id: 14722254626056497452
       Name: "UI Basic Shape Hexagon"
       PlatformAssetType: 9
@@ -403,11 +394,12 @@ Assets {
       }
     }
     Assets {
-      Id: 7164645405691333363
-      Name: "BonusUIAnimation"
-      PlatformAssetType: 3
-      TextAsset {
-        Text: "local panel = script.parent\nlocal container = panel.parent\nlocal textui = panel:GetCustomProperty(\"UITextBox\"):WaitForObject()\n\nlocal size = UI.GetScreenSize()\n\nlocal start = time()\nlocal controls = panel:FindDescendantsByType(\"UIControl\")\nlocal colors = {}\nlocal endcolors = {}\nfor _, v in ipairs(controls) do\n    local color = v:GetColor()\n    table.insert(colors, color)\n    color = Color.New(color)\n    color.a = 0\n    table.insert(endcolors, color)\n    v:ScaleTo(Vector3.ZERO, 2)\nend\n\nfunction Tick(dt)\n    local sofar = time() - start\n    for i, v in ipairs(controls) do\n        v:SetColor(Color.Lerp(colors[i], endcolors[i], sofar - 1))\n    end\n    panel.y = sofar*500\n    if panel.y >= size.y then\n        print(sofar)\n        container:Destroy()\n    end\nend"
+      Id: 12814918634853164985
+      Name: "Icon Stamina"
+      PlatformAssetType: 9
+      PrimaryAsset {
+        AssetType: "PlatformBrushAssetRef"
+        AssetId: "Icon_Stamina"
       }
     }
     PrimaryAssetId {
@@ -417,4 +409,3 @@ Assets {
   }
   SerializationVersion: 74
 }
-IncludesAllDependencies: true

@@ -99,11 +99,11 @@ local PetDb, EggDb do
     }
 
     EggDb = {
-        First =  {gacha = {Bee=50, Gnome=30, Birdie=20},      price = 500},
-        Second = {gacha = {Monkey=50, Bull=35, Cat=15},       price = 5000},
-        Third =  {gacha = {Bat=60, Ghost=35, Witch=5},        price = 30000},
-        Fourth = {gacha = {Flamingo=50, Crab=40, Mermaid=10}, price = 100000},
-        Fifth =  {gacha = {Mushroom=60, Bunny=30, Fairy=10},  price = 175000},
+        Garden =  {gacha = {Bee=50, Gnome=30, Birdie=20},      price = 500},
+        Disco = {gacha = {Monkey=50, Bull=35, Cat=15},       price = 5000},
+        Graveyard =  {gacha = {Bat=60, Ghost=35, Witch=5},        price = 30000},
+        Tropical = {gacha = {Flamingo=50, Crab=40, Mermaid=10}, price = 100000},
+        Forest =  {gacha = {Mushroom=60, Bunny=30, Fairy=10},  price = 175000},
     }
     ---------------------------
     -- Pets
@@ -129,6 +129,17 @@ local PetDb, EggDb do
     function PetDb:GetRarity(id)
         local n = self[id][kRarity]
         return n, RARITY_NAMES[n]
+    end
+
+    -- ASSUME: pets are arranged by their upgrade order; unupgraded pet comes first
+    function PetDb:GetIDByName(petName)
+        assert(petName and type(petName) == "string")
+        for id,_rec in ipairs(self) do
+            local name = self:GetName(id)
+            if name == petName then
+                return id
+            end
+        end
     end
 
     function PetDb:CanUpgrade(id1, id2)
