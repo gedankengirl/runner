@@ -88,6 +88,15 @@ function snippets.array_clear(ar)
     for i=n, 1, -1 do ar[i] = nil end
 end
 
+ -- Fisher-YatesS shaffle (https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle)
+function snippets.array_shuffle(ar)
+	for i = #ar, 2, -1 do
+		local r = rand(i)
+		ar[i], ar[r] = ar[r], ar[i]
+	end
+	return ar
+end
+
 -- pythonic uniform
 local function uniform(a, b)
     assert(a < b, "empty interval")
