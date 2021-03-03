@@ -27,7 +27,7 @@ Assets {
           }
           Overrides {
             Name: "cs:UniqueID"
-            String: "BeginnerEggs"
+            String: "Garden"
           }
         }
         Collidable_v2 {
@@ -2204,19 +2204,19 @@ Assets {
           Overrides {
             Name: "cs:PetTemplate1"
             AssetReference {
-              Id: 9889374898609203065
+              Id: 6395600123492979439
             }
           }
           Overrides {
             Name: "cs:PetTemplate2"
             AssetReference {
-              Id: 3527553101691293166
+              Id: 7309792642642967800
             }
           }
           Overrides {
             Name: "cs:PetTemplate3"
             AssetReference {
-              Id: 12576279861042362053
+              Id: 17667672887959461199
             }
           }
           Overrides {
@@ -2279,8 +2279,8 @@ Assets {
         Name: "1"
         Transform {
           Location {
-            X: -85
-            Z: 330
+            X: -84.9999924
+            Z: 399.966248
           }
           Rotation {
           }
@@ -2306,9 +2306,8 @@ Assets {
         Name: "2"
         Transform {
           Location {
-            X: -40
-            Y: 15
-            Z: 435
+            Y: 14.9999981
+            Z: 450
           }
           Rotation {
           }
@@ -2334,9 +2333,8 @@ Assets {
         Name: "3"
         Transform {
           Location {
-            X: 40
-            Y: 15
-            Z: 435
+            X: 84.9999924
+            Z: 399.966248
           }
           Rotation {
           }
@@ -2362,8 +2360,8 @@ Assets {
         Name: "4"
         Transform {
           Location {
-            X: 85
-            Z: 330
+            X: 84.9999924
+            Z: 399.966248
           }
           Rotation {
           }

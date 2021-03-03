@@ -1,6 +1,66 @@
 Name: "Boosters"
 RootId: 15462755105733782301
 Objects {
+  Id: 16978329166081610836
+  Name: "StaticContext"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 15462755105733782301
+  ChildIds: 3498640267200241699
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  NetworkContext {
+    Type: RuntimeStatic
+  }
+}
+Objects {
+  Id: 3498640267200241699
+  Name: "StaticPickup-Scheduled"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 16978329166081610836
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 10004856662147233897
+      value {
+        Overrides {
+          Name: "Name"
+          String: "StaticPickup-Scheduled"
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 13437164073840223858
+    }
+  }
+}
+Objects {
   Id: 17619711486668341062
   Name: "BosterPickup"
   Transform {
