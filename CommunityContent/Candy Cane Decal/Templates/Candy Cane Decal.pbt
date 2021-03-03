@@ -85,6 +85,7 @@ Assets {
           }
           DisableDistanceFieldLighting: true
           EnableCameraCollision: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -148,6 +149,7 @@ Assets {
           }
           DisableDistanceFieldLighting: true
           EnableCameraCollision: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -211,6 +213,7 @@ Assets {
           }
           DisableDistanceFieldLighting: true
           EnableCameraCollision: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -274,6 +277,7 @@ Assets {
           }
           DisableDistanceFieldLighting: true
           EnableCameraCollision: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -334,6 +338,7 @@ Assets {
           }
           DisableDistanceFieldLighting: true
           EnableCameraCollision: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -385,6 +390,6 @@ Assets {
   Marketplace {
     Description: "Candy Cane Decal made for toxo.\r\n\r\nMy Social Links:\r\n\r\nTwitter: https://twitter.com/AnthonyRSaephan\r\nYouTube: https://www.youtube.com/channel/UCdv7b9iclm9HHb4ezLm6eqg\r\nTwitch: https://www.twitch.tv/lnsertyourself\r\nCore: https://www.coregames.com/user/229a28a1da4b445f85e74ab878ae9646\r\nInstagram: https://www.instagram.com/insertyourself_core/\r\nDiscord Server: https://discord.gg/vMpfwDBrnZ\r\nDiscord Tag: Insert#0865"
   }
-  SerializationVersion: 74
+  SerializationVersion: 76
   DirectlyPublished: true
 }

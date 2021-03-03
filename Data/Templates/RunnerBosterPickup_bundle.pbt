@@ -40,5 +40,5 @@ Assets {
     Version: "1.0.0"
     Description: "RunnerBosterPickup"
   }
-  SerializationVersion: 74
+  SerializationVersion: 76
 }

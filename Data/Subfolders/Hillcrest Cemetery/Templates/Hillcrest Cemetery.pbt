@@ -40,5 +40,5 @@ Assets {
     Version: "1.0.0"
     Description: "A cemetery I made with all basic shapes. If you use this and find it useful please leave a rewiew for me. \r\nEnjoy :)"
   }
-  SerializationVersion: 74
+  SerializationVersion: 76
 }

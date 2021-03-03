@@ -2,7 +2,7 @@ Assets {
   Id: 17210547027535489338
   Name: "Custom Yellow Butterfly"
   PlatformAssetType: 13
-  SerializationVersion: 74
+  SerializationVersion: 76
   CustomMaterialAsset {
     BaseMaterialId: 15480416849143904933
     ParameterOverrides {

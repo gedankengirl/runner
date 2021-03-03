@@ -2,7 +2,7 @@ Assets {
   Id: 13309346029814269858
   Name: "Diamond Wallpaper Polka Dot"
   PlatformAssetType: 13
-  SerializationVersion: 74
+  SerializationVersion: 76
   CustomMaterialAsset {
     BaseMaterialId: 6488236446163016965
     ParameterOverrides {

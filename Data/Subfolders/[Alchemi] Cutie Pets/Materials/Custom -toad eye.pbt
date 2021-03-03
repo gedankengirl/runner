@@ -2,7 +2,7 @@ Assets {
   Id: 15298486915241358877
   Name: "Custom -toad eye"
   PlatformAssetType: 13
-  SerializationVersion: 74
+  SerializationVersion: 76
   CustomMaterialAsset {
     BaseMaterialId: 3258049989165847300
     ParameterOverrides {

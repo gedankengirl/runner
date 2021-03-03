@@ -46,5 +46,5 @@ Assets {
     Version: "1.5.0"
     Description: "My tribute to the inspiring Alice in Wonderland submissions.\r\nGreat job! <3 (equipment)\r\n\r\n-updated camera collision\r\n\r\nThank you Codexier for the playing cards!"
   }
-  SerializationVersion: 74
+  SerializationVersion: 76
 }

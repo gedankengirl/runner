@@ -25,6 +25,8 @@ Objects {
   }
   Text {
     Text: "THE NEED FOR SPEED!"
+    FontAsset {
+    }
     Color {
       R: 0.802000046
       G: 0.761186302
@@ -66,6 +68,8 @@ Objects {
   }
   Text {
     Text: "DO YOU FEEL THE NEED?"
+    FontAsset {
+    }
     Color {
       G: 0.412222385
       B: 0.490000129
@@ -130,6 +134,7 @@ Objects {
       IsEnemyCollisionEnabled: true
     }
     EnableCameraCollision: true
+    InteractWithTriggers: true
     StaticMesh {
       Physics {
         Mass: 100

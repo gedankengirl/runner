@@ -2,7 +2,7 @@ Assets {
   Id: 2482510762028700951
   Name: "Electric Surface_enhanced"
   PlatformAssetType: 13
-  SerializationVersion: 74
+  SerializationVersion: 76
   CustomMaterialAsset {
     BaseMaterialId: 18394305983786224728
     ParameterOverrides {

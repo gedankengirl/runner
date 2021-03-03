@@ -26,6 +26,8 @@ Objects {
   }
   Text {
     Text: "HAVE FUN"
+    FontAsset {
+    }
     Color {
       G: 0.570000172
       B: 0.0271427613
@@ -67,6 +69,8 @@ Objects {
   }
   Text {
     Text: "GET PETS"
+    FontAsset {
+    }
     Color {
       R: 0.866000056
       B: 0.343651146
@@ -108,6 +112,8 @@ Objects {
   }
   Text {
     Text: "GET RICH"
+    FontAsset {
+    }
     Color {
       R: 0.778000116
       G: 0.148190483
@@ -149,6 +155,8 @@ Objects {
   }
   Text {
     Text: "GET FAST"
+    FontAsset {
+    }
     Color {
       R: 0.802000046
       G: 0.761186302
@@ -191,6 +199,8 @@ Objects {
   }
   Text {
     Text: "TO GAIN SPEED COINS"
+    FontAsset {
+    }
     Color {
       G: 0.412222385
       B: 0.490000129
@@ -233,6 +243,8 @@ Objects {
   }
   Text {
     Text: "CLICK THE MOUSE "
+    FontAsset {
+    }
     Color {
       G: 0.412222385
       B: 0.490000129
@@ -297,6 +309,7 @@ Objects {
       IsEnemyCollisionEnabled: true
     }
     EnableCameraCollision: true
+    InteractWithTriggers: true
     StaticMesh {
       Physics {
         Mass: 100

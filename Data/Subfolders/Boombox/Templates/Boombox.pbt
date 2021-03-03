@@ -46,5 +46,5 @@ Assets {
     Version: "1.0.0"
     Description: "A pretty basic boombox model."
   }
-  SerializationVersion: 74
+  SerializationVersion: 76
 }

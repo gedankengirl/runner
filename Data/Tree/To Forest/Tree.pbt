@@ -118,6 +118,7 @@ Objects {
       IsEnemyCollisionEnabled: true
     }
     EnableCameraCollision: true
+    InteractWithTriggers: true
     StaticMesh {
       Physics {
         Mass: 100
@@ -154,6 +155,8 @@ Objects {
   }
   Text {
     Text: "FAIRY FOREST"
+    FontAsset {
+    }
     Color {
       R: 0.0242222659
       G: 0.218000054

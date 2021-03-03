@@ -2,7 +2,7 @@ Assets {
   Id: 1141267203961742429
   Name: "Custom -Fish Bubble"
   PlatformAssetType: 13
-  SerializationVersion: 74
+  SerializationVersion: 76
   CustomMaterialAsset {
     BaseMaterialId: 13542265519619239198
     ParameterOverrides {

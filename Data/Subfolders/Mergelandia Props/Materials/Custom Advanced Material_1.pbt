@@ -2,7 +2,7 @@ Assets {
   Id: 5466689968759488103
   Name: "Custom Advanced Material_1"
   PlatformAssetType: 13
-  SerializationVersion: 74
+  SerializationVersion: 76
   CustomMaterialAsset {
     BaseMaterialId: 2997523849870225317
     ParameterOverrides {

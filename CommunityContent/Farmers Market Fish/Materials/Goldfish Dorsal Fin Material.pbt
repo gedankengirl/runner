@@ -2,7 +2,7 @@ Assets {
   Id: 10739482901937011426
   Name: "Goldfish Dorsal Fin Material"
   PlatformAssetType: 13
-  SerializationVersion: 74
+  SerializationVersion: 76
   CustomMaterialAsset {
     BaseMaterialId: 14722796561991146384
     ParameterOverrides {

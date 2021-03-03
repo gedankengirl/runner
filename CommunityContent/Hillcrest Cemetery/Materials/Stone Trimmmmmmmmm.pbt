@@ -2,7 +2,7 @@ Assets {
   Id: 11459389742783232310
   Name: "Stone Trimmmmmmmmm"
   PlatformAssetType: 13
-  SerializationVersion: 74
+  SerializationVersion: 76
   CustomMaterialAsset {
     BaseMaterialId: 6771927536007814449
     ParameterOverrides {

@@ -2,7 +2,7 @@ Assets {
   Id: 6444890610919955733
   Name: "Red_tomato"
   PlatformAssetType: 13
-  SerializationVersion: 74
+  SerializationVersion: 76
   CustomMaterialAsset {
     BaseMaterialId: 10184847056121543272
     ParameterOverrides {

@@ -86,6 +86,7 @@ Assets {
             IsEnemyCollisionEnabled: true
           }
           EnableCameraCollision: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -172,6 +173,7 @@ Assets {
             IsEnemyCollisionEnabled: true
           }
           EnableCameraCollision: true
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
             }
@@ -202,5 +204,5 @@ Assets {
       AssetId: "tm_fan_candle_002_lit_01"
     }
   }
-  SerializationVersion: 74
+  SerializationVersion: 76
 }
