@@ -28,6 +28,8 @@ local Maid = _G.req("Maid")
 local _maid = Maid.New()
 local ReliableEvents = _G.req("ReliableEvents")
 local Spr = _G.req("Spr")
+local SAnim = _G.req("_SpringAnimator")
+local SParam = SAnim.SpringParams
 local S = _G.req("StaticData")
 
 local egg = assert(S.EggDb[UNIQUE_ID], "wrong egg ID")
@@ -46,8 +48,9 @@ local function ResetTextTask()
 end
 
 local PETS = {}
+local spawn_params = {parent=PET_MARKS_ROOT, scale=0.2*Vector3.ONE, rotation = Rotation.New(0,0,90)}
 for _, petMuid in ipairs(PET_TEMPLATES) do
-    PETS[#PETS+1] = World.SpawnAsset(petMuid, {parent=PET_MARKS_ROOT, scale=0.2*Vector3.ONE, rotation = Rotation.New(0,0,90)})
+    PETS[#PETS+1] = World.SpawnAsset(petMuid, spawn_params)
 end
 
 local function OnInteracted(trigger, player)

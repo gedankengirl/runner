@@ -12,6 +12,7 @@
 
 -- mostly for testing in console
 local CORE_ENV = CoreMath and CoreString
+local _DUMMY = CORE_ENV and World.GetRootObject()
 
 local EPS = 0.001 -- 0.0001 will stay awake a little longer
 local MIN_OFFSET_SQ = EPS*EPS
@@ -188,7 +189,8 @@ local _SETTING_METHODS = not CORE_ENV and {} or {
     }
 }
 
-local function _get_setting_methods(instance, propkey)
+local function _get_setting_methods(propkey, instance)
+    instance = instance or _DUMMY
     if not _SETTING_METHODS[propkey] then _SETTING_METHODS[propkey] = {} end
     local methods = _SETTING_METHODS[propkey]
     methods.get = methods.get or assert(instance["Get" .. propkey], "not found Get" .. propkey)
@@ -275,15 +277,12 @@ function Spring:_set_pos_vel(pos,vel)
     self[P_IDX], self[V_IDX] = pos, vel
 end
 
-local _unpack = Spring._unpack
-
 -- @ Spring.Update :: self, dt ^-> pos', vel', goal
 function Spring:Update(dt)
-    local d, o, p, v, g = _unpack(self)
-    local p, v = spring_solver(dt, d, o, p, v, g)
+    local p, v = spring_solver(dt, self[D_IDX], self[O_IDX], self[P_IDX], self[V_IDX], self[G_IDX])
     -- update state
     self:_set_pos_vel(p, v)
-    return p, v, g
+    return p, v
 end
 
 -- @ Spring.SetGoal :: self, goal ^-> self
@@ -405,14 +404,14 @@ local function _sa_states_add(spr_anim)
         states[propkey] = nil
     end
     -- actualize origin and goal
-    local instance = spr_anim:_get_instance()
-    if not instance then return end
     local methods = spr_anim._methods
     local get, wrap, add = methods.get, methods.wrap, methods.add
     local value = get(instance)
     value = wrap and wrap(value) or value
     spr_anim._origin = value
-    if spr_anim._offset then
+    if spr_anim._goal then
+        spr_anim._goal = wrap and wrap(spr_anim._goal) or spr_anim._goal
+    elseif spr_anim._offset then
         local offset = spr_anim._offset
         offset = wrap and wrap(offset) or offset
         spr_anim._goal = add and add(spr_anim._origin, offset) or spr_anim._origin + offset
@@ -452,8 +451,8 @@ _sa_worker = function()
             for propkey, anim in pairs(animations) do
                 -- for our normalized offsets, p should be *precisely* at [0, 2], and goal at `1`
                 local spring = anim._spring
-                local d, o, p, v, _ = _unpack(spring)
-                local p, v = spring_solver(dt, d, o, p, v, 1)
+                local d, o, p0, v0, _ = _unpack(spring)
+                local p, v = spring_solver(dt, d, o, p0, v0, 1)
                 -- clamp p to [0, 2] sharp - miniscule overshoots possible with zero dumping
                 p = p < 0 and 0 or p
                 p = p > 2 and 2 or p
@@ -527,38 +526,73 @@ end
 -- TODO: cycle breaker
 -- TODO: smart properties support
 
--- @ SpringAnimator.New :: SpringParams, instance, proprkey -> new SpringAnimator
+-- @ SpringAnimator.New :: SpringParams, instance, proprkey, random_cactor -> new SpringAnimator
 -- instance :: `CoreObject`, `UIControl` or user-object with according API.
 -- Constructs animation object and sets animation `origin` to current value of instance property.
 -- Supported propkeys for `CoreObject`: '[World]Position', '[World]Rotation', 'Scale', 'Color', 'alpha'
 -- Supprted propkeys for `UIControl`: 'size', 'offset', 'rotationAndle', 'Color', 'alpha'
-function SpringAnimator.New(spring_params, instance, propkey)
+function SpringAnimator.New(spring_params, instance, propkey, random_factor)
     assert(_type(spring_params, SpringParams.type, "spring_params"))
     assert(instance and (type(instance) == "userdata" or type(instance) == "table"), "no instance")
     if instance.IsValid and not instance:IsValid() then
         error("invalid object instance")
     end
     assert(_type(propkey, "string", "propkey"))
-    local self = setmetatable({}, SpringAnimator)
-    self._spring = Spring.New(spring_params, 0)
-    self._methods = _get_setting_methods(instance, propkey)
+    local self = spring_params:ToAnim(random_factor, random_factor)
+    -- target -----------------------------------
+    self._propkey = propkey
+    self(instance)
+    self._methods = _get_setting_methods(self._propkey, instance)
     self._origin = nil
     self._goal = nil
     self._offset = nil
     self._swap = false
-    -- weak reference to instance
-    self._instance = setmetatable({instance}, _weak_val_mt)
-    self._propkey = propkey
-    self._next = nil
-    self._onFinish = _noop
-    self._onCancel = _noop
-    self._periodic_delay = 0
-    self._run_at = 0
-    -- save state for reset
-    self._p0 = self._spring:GetPosition()
-    self._v0 = self._spring:GetVelocity()
     return self
 end
+
+function SpringParams:ToAnim(randomize, factor)
+    local anim = setmetatable({}, SpringAnimator)
+    local params = randomize and anim:RandomizeFrequency(factor) or self:Copy()
+    anim._spring = Spring.New(params, 0)
+    -- save state for reset
+    anim._p0 = anim._spring:GetPosition()
+    anim._v0 = anim._spring:GetVelocity()
+    -- etc. -------------------------------------
+    anim._next = nil
+    anim._onFinish = _noop
+    anim._onCancel = _noop
+    anim._periodic_delay = 0
+    anim._run_at = 0
+    return anim
+end
+
+-- Next 4 methods is a new API
+function SpringAnimator:Target(propkey, goal)
+    self._propkey = propkey
+    self._methods = _get_setting_methods(self._propkey)
+    self:SetGoal(goal)
+    return self
+end
+
+function SpringAnimator:Offset(propkey, offset)
+    self._propkey = propkey
+    self._methods = _get_setting_methods(self._propkey)
+    self:SetGoalByOffset(offset)
+    return self
+end
+
+function SpringAnimator:Impulse(propkey, radius)
+    self._propkey = propkey
+    self._methods = _get_setting_methods(self._propkey)
+    self:Nudge(radius)
+    return self
+end
+
+function SpringAnimator:__call(instance)
+    self._instance = setmetatable({instance}, _weak_val_mt)
+    return self
+end
+
 
 -- @ SpringAnimator.SetDelay :: self, delay:sec ^-> self
 -- Every time when animation run, it will wait `delay` second in scheduler.
@@ -611,6 +645,7 @@ end
 -- @ SpringAnimator.Run :: self[, delay] ^-> nil
 -- Starts animation next frame or after `delay`, will add `delay` to `periodic delay` for this run.
 function SpringAnimator:Run(delay)
+    assert(self._periodic_delay, CoreDebug.GetStackTrace())
     delay = delay or 0
     delay = self._periodic_delay + delay
     if delay <= 0 then
@@ -666,43 +701,38 @@ function SpringAnimator:Reset()
 end
 
 function SpringAnimator:_get_instance()
-    local instance  = self._instance[1]
-    if not instance then warn("no instance") return end
-    if instance and instance._IsValid and not instance:IsValid() then warn("invalid instance") return end
+    local instance  = self._instance and self._instance[1]
+    if instance and instance._IsValid and not instance:IsValid() then return end
     return instance
 end
 
 -- Sets animation `goal` to goal value
 function SpringAnimator:SetGoal(goal)
-    local instance = self:_get_instance()
-    if instance then
-        local value = self._methods.get(instance)
-        assert(_same_type(value, goal))
-        local wrap = self._methods.wrap
-        self._goal = wrap and wrap(goal) or goal
-    end
+    assert(self._methods, "no methods")
+    local instance = self:_get_instance() or _DUMMY
+    local value = self._methods.get(instance)
+    assert(_same_type(value, goal))
+    self._goal = goal
     return self
 end
 
 -- Sets animation goal by adding `offset` to itanstance's `origin` property value.
 function SpringAnimator:SetGoalByOffset(offset)
-    local instance = self:_get_instance()
-    if instance then
-        local value = self._methods.get(instance)
-        assert(_same_type(value, offset))
+    assert(self._methods, "no methods")
+    local instance = self:_get_instance() or _DUMMY
+    local value = self._methods.get(instance)
+    assert(_same_type(value, offset))
     self._offset = offset
-    end
     return self
 end
 
 -- Adds impulse to radius direction, with undumped amplitude = 2*radius
 function SpringAnimator:Nudge(radius)
-    local instance = self:_get_instance()
-    if instance then
-        local value = self._methods.get(instance)
-        assert(_same_type(value, radius))
-        self._offset = radius
-    end
+    assert(self._methods, "no methods")
+    local instance = self:_get_instance() or _DUMMY
+    local value = self._methods.get(instance)
+    assert(_same_type(value, radius))
+    self._offset = radius
     -- swap origin and goal, set state to (p = 1, v = -omega)
     self._swap = true
     local omega = self._spring:GetAngularFrequency()
