@@ -1976,6 +1976,7 @@ Assets {
         Name: "EggGroup"
         Transform {
           Location {
+            Z: 130
           }
           Rotation {
           }
@@ -1986,7 +1987,6 @@ Assets {
           }
         }
         ParentId: 9583416130571679258
-        ChildIds: 365476097471122520
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -1995,58 +1995,6 @@ Assets {
         }
         Folder {
           IsGroup: true
-        }
-      }
-      Objects {
-        Id: 365476097471122520
-        Name: "Egg"
-        Transform {
-          Location {
-            Z: 130
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1.5
-            Y: 1.5
-            Z: 2
-          }
-        }
-        ParentId: 18113796287324508472
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 18089353565678693831
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:smart"
-            Bool: false
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 7044204559462368590
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          EnableCameraCollision: true
-          InteractWithTriggers: true
-          StaticMesh {
-            Physics {
-              Mass: 100
-              LinearDamping: 0.01
-            }
-          }
         }
       }
       Objects {
@@ -2535,15 +2483,6 @@ Assets {
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
         AssetId: "sm_pipe_001"
-      }
-    }
-    Assets {
-      Id: 7044204559462368590
-      Name: "Ball"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_sphere_001"
       }
     }
     PrimaryAssetId {
