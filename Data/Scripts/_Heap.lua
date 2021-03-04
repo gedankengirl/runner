@@ -116,7 +116,7 @@ local function _test()
             out[#out+1] = pqmin:Pop()
             _assert_heap_invariant(pqmin)
         end
-        assert(pqmin:IsEmpty() and pqmin:Count() == 0 and #pqmin._pq == 0)
+        assert(pqmin:IsEmpty() and pqmin:Count() == 0 and pqmin:Peek() == nil and #pqmin._pq == 0)
         assert(out[1] == 1 and out[2] == 2 and out[3] == 3 and out[4] == 4 and out[5] == 5)
     end
 
