@@ -1,13 +1,13 @@
 Assets {
-  Id: 12241722171541477132
-  Name: "EggGroup"
+  Id: 7968194041630034903
+  Name: "$$EggGroup_Disco"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {
-      RootId: 892419342348043475
+      RootId: 7248740072616033974
       Objects {
-        Id: 892419342348043475
-        Name: "EggGroup"
+        Id: 7248740072616033974
+        Name: "EggGroup_Disco"
         Transform {
           Scale {
             X: 1
@@ -15,9 +15,8 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 13434468852867565712
-        ChildIds: 13931721322663611984
-        ChildIds: 4314449770256043580
+        ParentId: 4781671109827199097
+        ChildIds: 11767018482791163116
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -29,34 +28,7 @@ Assets {
         }
       }
       Objects {
-        Id: 13931721322663611984
-        Name: "EggShake"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 892419342348043475
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Script {
-          ScriptAsset {
-            Id: 3219712446833639660
-          }
-        }
-      }
-      Objects {
-        Id: 4314449770256043580
+        Id: 11767018482791163116
         Name: "Egg"
         Transform {
           Location {
@@ -69,17 +41,17 @@ Assets {
             Z: 2
           }
         }
-        ParentId: 892419342348043475
+        ParentId: 7248740072616033974
         UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 18089353565678693831
-            }
-          }
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
             Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 5468898726551871058
+            }
           }
         }
         Collidable_v2 {

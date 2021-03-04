@@ -1,13 +1,13 @@
 Assets {
-  Id: 10575798498185546668
-  Name: "EggGroup_Forest"
+  Id: 1760718819750895563
+  Name: "$$EggGroup_Tropical"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {
-      RootId: 14264318612934107128
+      RootId: 9001660905659333289
       Objects {
-        Id: 14264318612934107128
-        Name: "EggGroup_Forest"
+        Id: 9001660905659333289
+        Name: "EggGroup_Tropical"
         Transform {
           Scale {
             X: 1
@@ -16,8 +16,7 @@ Assets {
           }
         }
         ParentId: 4781671109827199097
-        ChildIds: 14282210002817346377
-        ChildIds: 6534993969512557604
+        ChildIds: 10628023909800274728
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -29,34 +28,7 @@ Assets {
         }
       }
       Objects {
-        Id: 14282210002817346377
-        Name: "EggShake"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 14264318612934107128
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Script {
-          ScriptAsset {
-            Id: 3219712446833639660
-          }
-        }
-      }
-      Objects {
-        Id: 6534993969512557604
+        Id: 10628023909800274728
         Name: "Egg"
         Transform {
           Location {
@@ -64,12 +36,12 @@ Assets {
           Rotation {
           }
           Scale {
-            X: 1.42859292
-            Y: 1.42859292
-            Z: 1.904791
+            X: 1.5
+            Y: 1.5
+            Z: 2
           }
         }
-        ParentId: 14264318612934107128
+        ParentId: 9001660905659333289
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
@@ -78,7 +50,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 4570926464546345075
+              Id: 9681649166594749507
             }
           }
         }
@@ -114,15 +86,6 @@ Assets {
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
         AssetId: "sm_sphere_001"
-      }
-    }
-    Assets {
-      Id: 4570926464546345075
-      Name: "Birch Leaves 01"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_leaves_birch_001"
       }
     }
     PrimaryAssetId {

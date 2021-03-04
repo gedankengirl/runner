@@ -1,13 +1,13 @@
 Assets {
-  Id: 17967005672819088078
-  Name: "EggGroup_Graveyard"
+  Id: 10575798498185546668
+  Name: "$$EggGroup_Forest"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {
-      RootId: 17324376376709567855
+      RootId: 14264318612934107128
       Objects {
-        Id: 17324376376709567855
-        Name: "EggGroup_Graveyard"
+        Id: 14264318612934107128
+        Name: "EggGroup_Forest"
         Transform {
           Scale {
             X: 1
@@ -16,8 +16,7 @@ Assets {
           }
         }
         ParentId: 4781671109827199097
-        ChildIds: 11801576153350200049
-        ChildIds: 14233776860344385406
+        ChildIds: 6534993969512557604
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -29,34 +28,7 @@ Assets {
         }
       }
       Objects {
-        Id: 11801576153350200049
-        Name: "EggShake"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 17324376376709567855
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Script {
-          ScriptAsset {
-            Id: 3219712446833639660
-          }
-        }
-      }
-      Objects {
-        Id: 14233776860344385406
+        Id: 6534993969512557604
         Name: "Egg"
         Transform {
           Location {
@@ -64,22 +36,22 @@ Assets {
           Rotation {
           }
           Scale {
-            X: 1.42859292
-            Y: 1.42859292
-            Z: 1.904791
+            X: 1.5
+            Y: 1.5
+            Z: 2
           }
         }
-        ParentId: 17324376376709567855
+        ParentId: 14264318612934107128
         UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 16935372493134720526
-            }
-          }
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
             Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 4570926464546345075
+            }
           }
         }
         Collidable_v2 {
@@ -114,6 +86,15 @@ Assets {
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
         AssetId: "sm_sphere_001"
+      }
+    }
+    Assets {
+      Id: 4570926464546345075
+      Name: "Birch Leaves 01"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_leaves_birch_001"
       }
     }
     PrimaryAssetId {
