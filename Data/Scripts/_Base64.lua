@@ -199,7 +199,7 @@ local dec do
 
     -- dec3 :: base64 -> byte1, byte2, byte3
     local function dec3(s64)
-        assert(s64 and #s64 > 4, "length of encoded string should be > 4")
+        assert(s64 and #s64 >= 4, "length of encoded string should be >= 4")
         local a1, b1, c1, d1 = byte(s64, 1, 4)
         a1, b1, c1, d1 = DEC[a1], DEC[b1], DEC[c1], DEC[d1]
         return a1<<2&0xFC|b1>>4&0x03, b1<<4&0xF0|c1>>2&0x0F, c1<<6&0xC0|d1>>0&0x3F
@@ -248,6 +248,8 @@ local function _self_test()
     assert(base64.test_prefix(s64, "79"))
     assert(base64.test_prefix(s64, "790"))
     assert(base64.select_prefix(s64, "AA", "BB", "79", "85") == 3)
+
+    assert(base64.test_prefix("REVG", "DEF"))
 
     -- test bugfix (dec returned 2 value)
     local id = "eec0239c0d644f5bb9f59779307edb17"
