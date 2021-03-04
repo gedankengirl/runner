@@ -274,6 +274,7 @@ BusinessLogic.PET_BONUS_KEY = PET_BONUS_KEY
 -- for resource display
 BusinessLogic.max = neededForRebirth
 BusinessLogic.MAX_KEY = REBIRTH_KEY
+BusinessLogic.EQUIPPED_ROW = EQUIPPED_ROW
 
 local function _test()
     local t = {A=1, B=2, C=3}

@@ -1,8 +1,10 @@
-local pp = _G.req("_Luapp").pp
-local Spr = _G.req("_Spr")
+local SpringAnimator = _G.req("_SpringAnimator")
+local SpringParams = SpringAnimator.SpringParams
 local Maid = _G.req("_Maid")
-local FLY_HOME = Spr.New(0.7, 1)
-local BOUNCE_FAST = Spr.New(0.2, 2)
+local B = _G.req("BusinessLogic")
+local SPR_FAST = SpringParams.New(1, 5)
+local SPR_SLOW = SpringParams.New(0.7, 1)
+local SPR_BOUNCE = SpringParams.New(0.1, 2)
 
 local PET_DB = nil
 local Actor = {type="Actor"}
@@ -12,6 +14,7 @@ function Actor.SetDb(pet_db)
     assert(pet_db and type(pet_db) == "table" and pet_db ~= Actor, "maybe `:` instead of `.`")
     PET_DB= pet_db
 end
+
 
 function Actor.New(pet_id, homeCell)
     local self = pet_id and type(pet_id) == "table" and pet_id or {id=pet_id}
@@ -46,15 +49,21 @@ function Actor:SetHomeCell(cell, instant)
     self.root.parent = cell.tile.content
     self.homePosition = cell.tile.content:GetWorldPosition()
     if instant then
-        self.root:SetPosition(Vector3.ZERO + 50*Vector3.UP)
-        BOUNCE_FAST:Target(self.root, "Position", Vector3.ZERO)
+        SpringAnimator.New(SPR_FAST, self.root, "Position")
+            :SetGoal(Vector3.ZERO)
+            :Chain(SpringAnimator.New(SPR_BOUNCE, self.root, "Position"):Nudge(50*Vector3.UP))
+            :Run()
     else
         self:AnimateFlyHome()
     end
+    -- rotate 180 at first row
+    SpringAnimator.New(SPR_BOUNCE, self.root, "WorldRotation")
+        :SetGoal(Rotation.New(0, 0, cell.row == B.EQUIPPED_ROW and 180 or 0))
+        :Run()
 end
 
 function Actor:AnimateFlyHome()
-    FLY_HOME:Target(self.root, "WorldPosition", self.homePosition)
+    SpringAnimator.New(SPR_SLOW, self.root, "WorldPosition"):SetGoal(self.homePosition):Run()
 end
 
 function Actor:SetAnimationEnabled(enabled)
@@ -62,7 +71,7 @@ function Actor:SetAnimationEnabled(enabled)
 end
 
 function Actor:FinishAnimations()
-    Spr.Finalize(self.root)
+    SpringAnimator.Finalize(self.root)
 end
 
 function Actor:SetWorldPosition(pos)
