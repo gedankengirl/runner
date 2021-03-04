@@ -99,11 +99,11 @@ local PetDb, EggDb do
     }
 
     EggDb = {
-        Garden =  {gacha = {Bee=50, Gnome=30, Birdie=20},      price = 500},
-        Disco = {gacha = {Monkey=50, Bull=35, Cat=15},       price = 5000},
-        Graveyard =  {gacha = {Bat=60, Ghost=35, Witch=5},        price = 30000},
-        Tropical = {gacha = {Flamingo=50, Crab=40, Mermaid=10}, price = 100000},
-        Forest =  {gacha = {Mushroom=60, Bunny=30, Fairy=10},  price = 175000},
+        Garden =  {price = 500, gacha = {Bee=50, Gnome=30, Birdie=20}, muid = "6BF1AD3640E72529:EggGroup_Garden"},
+        Disco = {price = 5000, gacha = {Monkey=50, Bull=35, Cat=15}, muid = "6E94B64378BE0BD7:EggGroup_Disco"},
+        Graveyard =  {price = 30000, gacha = {Bat=60, Ghost=35, Witch=5}, muid = "F957A07755CF5ACE:EggGroup_Graveyard"},
+        Tropical = {price = 100000, gacha = {Flamingo=50, Crab=40, Mermaid=10}, muid = "186F54701898DFCB:EggGroup_Tropical"},
+        Forest =  {price = 175000, gacha = {Mushroom=60, Bunny=30, Fairy=10},  muid = "92C4C8B37C758BAC:EggGroup_Forest"},
     }
     ---------------------------
     -- Pets

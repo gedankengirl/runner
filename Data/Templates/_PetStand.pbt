@@ -2202,30 +2202,6 @@ Assets {
             }
           }
           Overrides {
-            Name: "cs:PetTemplate1"
-            AssetReference {
-              Id: 6395600123492979439
-            }
-          }
-          Overrides {
-            Name: "cs:PetTemplate2"
-            AssetReference {
-              Id: 7309792642642967800
-            }
-          }
-          Overrides {
-            Name: "cs:PetTemplate3"
-            AssetReference {
-              Id: 17667672887959461199
-            }
-          }
-          Overrides {
-            Name: "cs:PetTemplate4"
-            AssetReference {
-              Id: 10748233622100198544
-            }
-          }
-          Overrides {
             Name: "cs:PetMarks"
             ObjectReference {
               SubObjectId: 17580675709234821621
