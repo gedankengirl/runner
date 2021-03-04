@@ -20,45 +20,21 @@ Assets {
         ChildIds: 2709063500133343796
         UnregisteredParameters {
           Overrides {
-            Name: "cs:_Deque"
+            Name: "cs:BusinessLogic"
             AssetReference {
-              Id: 410319700329875550
+              Id: 18342435553950571227
             }
           }
           Overrides {
-            Name: "cs:_Heap"
+            Name: "cs:Protocols"
             AssetReference {
-              Id: 2361961766352951098
+              Id: 5305102967692430199
             }
           }
           Overrides {
-            Name: "cs:_Maid"
+            Name: "cs:StaticData"
             AssetReference {
-              Id: 10304107291754736192
-            }
-          }
-          Overrides {
-            Name: "cs:_PQmax"
-            AssetReference {
-              Id: 16283193609845389182
-            }
-          }
-          Overrides {
-            Name: "cs:_PQmin"
-            AssetReference {
-              Id: 9342788341295903362
-            }
-          }
-          Overrides {
-            Name: "cs:_ReliableEvents"
-            AssetReference {
-              Id: 14454691258374778668
-            }
-          }
-          Overrides {
-            Name: "cs:_Spring"
-            AssetReference {
-              Id: 17918387935289379105
+              Id: 14856984160948620178
             }
           }
           Overrides {
@@ -68,9 +44,45 @@ Assets {
             }
           }
           Overrides {
-            Name: "cs:_Ascii85"
+            Name: "cs:_Bitarray"
             AssetReference {
-              Id: 5070080147057503107
+              Id: 4327176263148897822
+            }
+          }
+          Overrides {
+            Name: "cs:_Deque"
+            AssetReference {
+              Id: 410319700329875550
+            }
+          }
+          Overrides {
+            Name: "cs:_Grid"
+            AssetReference {
+              Id: 12769054960477199651
+            }
+          }
+          Overrides {
+            Name: "cs:_Heap"
+            AssetReference {
+              Id: 2361961766352951098
+            }
+          }
+          Overrides {
+            Name: "cs:_Luapp"
+            AssetReference {
+              Id: 7243897883920053925
+            }
+          }
+          Overrides {
+            Name: "cs:_Maid"
+            AssetReference {
+              Id: 10304107291754736192
+            }
+          }
+          Overrides {
+            Name: "cs:_ReliableEvents"
+            AssetReference {
+              Id: 14454691258374778668
             }
           }
           Overrides {
@@ -92,24 +104,6 @@ Assets {
             }
           }
           Overrides {
-            Name: "cs:_Grid"
-            AssetReference {
-              Id: 12769054960477199651
-            }
-          }
-          Overrides {
-            Name: "cs:_Bitarray"
-            AssetReference {
-              Id: 4327176263148897822
-            }
-          }
-          Overrides {
-            Name: "cs:_Luapp"
-            AssetReference {
-              Id: 7243897883920053925
-            }
-          }
-          Overrides {
             Name: "cs:_Trampoline"
             AssetReference {
               Id: 3973205370573435669
@@ -119,24 +113,6 @@ Assets {
             Name: "cs:_Xoshiro256"
             AssetReference {
               Id: 9765507830262698727
-            }
-          }
-          Overrides {
-            Name: "cs:BusinessLogic"
-            AssetReference {
-              Id: 18342435553950571227
-            }
-          }
-          Overrides {
-            Name: "cs:Protocols"
-            AssetReference {
-              Id: 5305102967692430199
-            }
-          }
-          Overrides {
-            Name: "cs:StaticData"
-            AssetReference {
-              Id: 14856984160948620178
             }
           }
         }
