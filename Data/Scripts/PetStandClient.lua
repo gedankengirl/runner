@@ -1,3 +1,11 @@
+local Maid = _G.req("Maid")
+local _maid = Maid.New()
+local ReliableEvents = _G.req("ReliableEvents")
+local Spr = _G.req("Spr")
+local SAnim = _G.req("_SpringAnimator")
+local SParam = SAnim.SpringParams
+local S = _G.req("StaticData")
+
 local TRIGGER = script:GetCustomProperty("Trigger"):WaitForObject()
 local CAMERA = script:GetCustomProperty("Camera"):WaitForObject()
 local PET_STAND = script:GetCustomProperty("PetStand"):WaitForObject()
@@ -8,8 +16,7 @@ local UNIQUE_ID = PET_STAND:GetCustomProperty("UniqueID")
 local SIGNBOARD = script:GetCustomProperty("DroidGeo"):WaitForObject()
 local PIPE = script:GetCustomProperty("Pipe"):WaitForObject()
 local PIPE_TR = PIPE:GetTransform()
-local EGG_GROUP = script:GetCustomProperty("Egg"):WaitForObject()
-local EGG_TR = EGG_GROUP:GetTransform()
+
 local SIGNBOARD_AMPLITUDE = Vector3.New(0, 0, 20)
 local PURCHASE_AUDIO1 = script:GetCustomProperty("PurchaseAudio1"):WaitForObject()
 local PURCHASE_AUDIO2 = script:GetCustomProperty("PurchaseAudio2"):WaitForObject()
@@ -24,19 +31,15 @@ local PET_MARKS = PET_MARKS_ROOT:GetChildren()
 
 local LOCAL_PLAYER = Game.GetLocalPlayer()
 
-local Maid = _G.req("Maid")
-local _maid = Maid.New()
-local ReliableEvents = _G.req("ReliableEvents")
-local Spr = _G.req("Spr")
-local SAnim = _G.req("_SpringAnimator")
-local SParam = SAnim.SpringParams
-local S = _G.req("StaticData")
+local EGG_ROOT = script:GetCustomProperty("Egg"):WaitForObject()
+local EGG_DATA = assert(S.EggDb[UNIQUE_ID], UNIQUE_ID)
+local EGG_GROUP = World.SpawnAsset(EGG_DATA.muid, {parent=EGG_ROOT})
+local EGG_TR = EGG_GROUP:GetTransform()
 
-local egg = assert(S.EggDb[UNIQUE_ID], "wrong egg ID")
-for petName, _weight in pairs(egg.gacha) do
+for petName, _weight in pairs(EGG_DATA.gacha) do
     local id = S.PetDb:GetIDByName(petName)
     local muid = S.PetDb:GetMuid(id)
-    table.insert(PET_TEMPLATES, muid)
+    table.insert(PET_TEMPLATES, {id, muid})
 end
 
 local SIGNBOARD_SPR = Spr.New(0, 0.4)
@@ -49,8 +52,9 @@ end
 
 local PETS = {}
 local spawn_params = {parent=PET_MARKS_ROOT, scale=0.2*Vector3.ONE, rotation = Rotation.New(0,0,90)}
-for _, petMuid in ipairs(PET_TEMPLATES) do
-    PETS[#PETS+1] = World.SpawnAsset(petMuid, spawn_params)
+for _i , petMuid in ipairs(PET_TEMPLATES) do
+    local _id, muid = table.unpack(petMuid)
+    PETS[#PETS+1] = World.SpawnAsset(muid, spawn_params)
 end
 
 local function OnInteracted(trigger, player)
