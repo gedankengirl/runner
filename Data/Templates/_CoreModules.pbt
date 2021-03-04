@@ -98,6 +98,12 @@ Assets {
             }
           }
           Overrides {
+            Name: "cs:_SpringAnimator"
+            AssetReference {
+              Id: 15795618890956269941
+            }
+          }
+          Overrides {
             Name: "cs:_StateMachine"
             AssetReference {
               Id: 15572707156245510975
