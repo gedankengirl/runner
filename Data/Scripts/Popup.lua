@@ -2,8 +2,7 @@ local Maid = _G.req("_Maid")
 local REvents = _G.req("ReliableEvents")
 local Deque = _G.req("_Deque")
 local P = _G.req("Protocols")
--- TODO: windows animation with Spr
-local Spr = _G.req("Spr")
+-- TODO: windows animation with springs
 local PANEL = script.parent
 assert(PANEL:IsA("UIPanel"))
 assert(Environment.IsClient())

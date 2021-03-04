@@ -4,8 +4,7 @@
    Core version by https://github.com/zoon
 ]]
 
--- TODO:
--- * proxy object for props without lerp: create :: obj, lerp, get, set, target -> proxy
+warn("~~~~> _Spr.lua is DEPRECATED!"..'\n'..CoreDebug.GetStackTrace())
 
 local Spr = {}
 Spr.__index = Spr
