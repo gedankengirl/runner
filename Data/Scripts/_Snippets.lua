@@ -97,6 +97,26 @@ function snippets.array_shuffle(ar)
 	return ar
 end
 
+
+-- insertion sort: stable, effective for near-sorted arrays
+do
+    local function _less(lhs, rhs) return lhs < rhs end
+
+    function snippets.array_sort(array, compare)
+        compare = compare or _less
+        local n = #array
+        for i = 2, n do
+            local key = array[i]
+            local j = i - 1
+            while j > 0 and compare(key, array[j]) do
+                array[j + 1] = array[j]
+                j = j - 1
+            end
+            array[j + 1] = key
+        end
+        return array
+    end
+end
 -- pythonic uniform
 local function uniform(a, b)
     assert(a < b, "empty interval")
