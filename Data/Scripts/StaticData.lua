@@ -157,25 +157,36 @@ local PetDb, EggDb do
 end -- do
 
 local FancyPetNames = {
-    Bee="Bee",
-    Gnome="Gnome",
-    Birdie="Birdie",
-    Monkey="Monkey",
-    Bull="Bull",
-    Cat ="Cat",
-    Bat="Bat",
-    Ghost="Ghost",
-    Witch="Witch",
-    Flamingo="Flamingo",
-    Crab="Crab",
-    Mermaid="Mermaid",
-    Mushroom="Mushroom",
-    Bunny="Bunny",
-    Fairy="Fairy",
+    Bee = "Busy B.",
+    Gnome = "Gnome Phenom",
+    Birdie = "Nerdy Birdie",
+    Monkey = "Monkey",
+    Bull = "Bull",
+    Cat = "Cat",
+    Bat = "Bat",
+    Ghost = "Ghost",
+    Witch = "Witch",
+    Flamingo = "Flamingo",
+    Crab = "Crab",
+    Mermaid = "Mermaid",
+    Mushroom = "Mushroom",
+    Bunny = "Bunny",
+    Fairy = "Fairy",
+}
+
+local ColorCodes = {
+    [RARITY.COMMON] = Color.TAN,
+    [RARITY.UNIQUE] = Color.EMERALD,
+    [RARITY.RARE] = Color.New(0, 0.2, 0.3),
+    [RARITY.EPIC] = Color.RUBY,
+    [RARITY.LEGENDARY] = Color.ORANGE,
+    [RARITY.MYTHIC] = Color.CYAN,
+    [RARITY.GODLY] = Color.MAGENTA
 }
 
 StaticData.PetDb = PetDb
 StaticData.EggDb = EggDb
 StaticData.FancyPetNames = FancyPetNames
+StaticData.ColorCodes = ColorCodes
 
 return StaticData

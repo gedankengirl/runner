@@ -1,6 +1,35 @@
 Name: "Garden scene"
 RootId: 15346583032969552003
 Objects {
+  Id: 11441125597506148112
+  Name: "Board"
+  Transform {
+    Location {
+      X: -2497.79419
+      Y: -2444.93286
+      Z: -220.686584
+    }
+    Rotation {
+    }
+    Scale {
+      X: 0.948308408
+      Y: 0.948308408
+      Z: 0.948308408
+    }
+  }
+  ParentId: 15346583032969552003
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "Board_2"
+  }
+}
+Objects {
   Id: 6715173734297073134
   Name: "Trampolines"
   Transform {
