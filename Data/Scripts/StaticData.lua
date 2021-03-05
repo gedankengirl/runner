@@ -134,7 +134,7 @@ local PetDb, EggDb do
     -- ASSUME: pets are arranged by their upgrade order; unupgraded pet comes first
     function PetDb:GetIDByName(petName)
         assert(petName and type(petName) == "string")
-        for id,_rec in ipairs(self) do
+        for id, _rec in ipairs(self) do
             local name = self:GetName(id)
             if name == petName then
                 return id
@@ -154,9 +154,28 @@ local PetDb, EggDb do
             PetDb[PetDb:GetName(id)] = id
         end
     end
-end
+end -- do
+
+local FancyPetNames = {
+    Bee="Bee",
+    Gnome="Gnome",
+    Birdie="Birdie",
+    Monkey="Monkey",
+    Bull="Bull",
+    Cat ="Cat",
+    Bat="Bat",
+    Ghost="Ghost",
+    Witch="Witch",
+    Flamingo="Flamingo",
+    Crab="Crab",
+    Mermaid="Mermaid",
+    Mushroom="Mushroom",
+    Bunny="Bunny",
+    Fairy="Fairy",
+}
 
 StaticData.PetDb = PetDb
 StaticData.EggDb = EggDb
+StaticData.FancyPetNames = FancyPetNames
 
 return StaticData
