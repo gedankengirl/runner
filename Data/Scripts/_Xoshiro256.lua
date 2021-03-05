@@ -2,12 +2,12 @@
 -- Copyright (C) 2021 by Andrew Zhilin <andrew.zhilin@gmail.com>
 -- Distributed under MIT license.
 --[===========================================================================[
-    `Xoshiro256` is a pure lua 5.3 implementation of xoshiro256**
-    algorithm, that is fully compatible with lua 5.4 API and implementation of
-    `math.random` and `math.randomseed`. It has a reasonable performance and
-    passes all random related tests from lua 5.4 test suite.
+    `xoshiro256` is a pure Lua 5.3 implementation of xoshiro256**, all-purpose,
+    rock-solid random generator, that is fully compatible with Lua 5.4 API and
+    implementation of `math.random` and `math.randomseed`. It has a reasonable
+    performance and passes all random-related tests from Lua 5.4 test suite.
 
-    * xoshiro256.random([m[, n]]
+    * xoshiro256.random([m[, n]])
     When called without arguments, returns a pseudo-random float with uniform
     distribution in the range [0,1). When called with two integers m and n,
     xoshiro256.random returns a pseudo-random integer with uniform
@@ -36,7 +36,7 @@ assert(_VERSION:find("Lua 5.3"))
 local xoshiro256 = {}
 do
     local select, ult = select, math.ult
-    local DBL_CONV_MULT = 1/2^53 -- http://prng.di.unimi.it/
+    local DBL_CONV_MULT = 1/2^53 -- reference: http://prng.di.unimi.it/
     local s0, s1, s2, s3 = 0x00, 0x00, 0x00, 0x00
     local function next_rand()
         local x, k = s1*5, 7
@@ -120,9 +120,13 @@ do
     xoshiro256.randomseed = randomseed
 end
 
+-------------------------------------------------------------------------------
 local function _test()
+    print("xoshiro256 -- testing ...")
     local random, max, min = xoshiro256.random, math.max, math.min
-    -- all `random` tests from lua-5.4.2-tests/math.lua
+
+    -- All below is a snippets from lua-5.4.2-tests/math.lua
+
     local minint = math.mininteger
     local maxint = math.maxinteger
     local intbits = math.floor(math.log(maxint, 2) + 0.5) + 1
@@ -387,29 +391,65 @@ end
 local CORE_ENV = CoreString and CoreMath
 
 local function _test_perf()
-    ---[[
-        _G.req = _G.req or require
-        local perfn = _G.req("_Snippets").perfn
+
+    -- PERF: 1000000   math.random ints        time: 0.1780s mem: 0.00K
+    -- PERF: 1000000   xoshiro256.lua ints     time: 1.3688s mem: 1.02K
+    -- PERF: 1000000   math.random double      time: 0.1410s mem: 0.00K
+    -- PERF: 1000000   xoshiro256.lua double   time: 0.6312s mem: 0.95K
+
+    --[==[
+        local clock do
+            if not CORE_ENV then
+                local ok, socket = pcall(require, "socket")
+                clock = ok and socket.gettime or os.clock
+            else
+                clock = os.clock
+            end
+        end
+        local function perfn(tag, times, thunk)
+            if not CORE_ENV then
+                collectgarbage("collect")
+                collectgarbage("stop")
+            end
+            local m1 = collectgarbage("count")
+            local t1 = clock()
+            local result = nil
+            for i = 1, times do
+                result = thunk()
+            end
+            local t2 = clock()
+            local m2 = collectgarbage("count")
+            if not CORE_ENV then
+                collectgarbage("restart")
+            end
+            local tmstr = string.format("time: %0.4fs mem: %0.2fK", t2 - t1, m2 - m1)
+            if times <= 1 then
+                print("REPF:", tag, tmstr)
+            else
+                print(string.format("PERF: %d", times), tag, tmstr)
+            end
+            return result
+        end
+
         local N = CORE_ENV and 1000 or 1000000
-        perfn("math ints", N, function()
+        perfn("math.random ints", N, function()
             math.random(12345, 1234567890)
         end)
-        perfn("xoroshiro ints", N, function()
+        perfn("xoshiro256.lua ints", N, function()
             xoshiro256.random(123451, 1234567890)
         end)
-        perfn("math double", N, function()
+        perfn("math.random double", N, function()
             math.random()
         end)
-        perfn("xoroshiro double", N, function()
+        perfn("xoshiro256.lua double", N, function()
             xoshiro256.random()
         end)
-    --]]
+    --]==]
 end
 
 if not CORE_ENV then -- Core has too low instruction limit
     _test()
 end
-
 -- _test_perf()
 
 return xoshiro256

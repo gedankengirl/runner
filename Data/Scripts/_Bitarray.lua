@@ -10,6 +10,7 @@ function bitarray.new(size, default)
     size = size or 32
     local n = nbytes(size)
     local _size = size
+    -- hide _size in closure upvalue
     local self = {size=function() return _size end}
 
     local fill = default and 0xFF or 0x00

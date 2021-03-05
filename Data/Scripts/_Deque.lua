@@ -1,6 +1,6 @@
 --[[
     Deque
-    A double ended queue object.
+    A double ended queue from PIL.
 --]]
 
 local Deque = {}
@@ -78,14 +78,13 @@ function Deque:PopFront()
     end
 end
 
-
-
--- extra exports
+-- aloases
 Deque.PeekFront = Deque.Front
 Deque.PeekBack = Deque.Back
+
 Deque.Push = Deque.PushBack
 Deque.Pop = Deque.PopFront
-Deque.Peek = Deque.Front
+Deque.Peek = Deque.PeekFront
 Deque.IsEmpty = Deque.Empty
 
 local function _test()

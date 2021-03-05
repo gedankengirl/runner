@@ -550,6 +550,7 @@ function SpringAnimator.New(spring_params, instance, propkey, random_factor)
     return self
 end
 
+-- To make `SpringAnimator` from `SpringParams`
 function SpringParams:ToAnim(randomize, factor)
     local anim = setmetatable({}, SpringAnimator)
     local params = randomize and anim:RandomizeFrequency(factor) or self:Copy()
@@ -566,7 +567,7 @@ function SpringParams:ToAnim(randomize, factor)
     return anim
 end
 
--- Next 4 methods is a new API
+-- Next 4 methods are the new API
 function SpringAnimator:Target(propkey, goal)
     self._propkey = propkey
     self._methods = _get_setting_methods(self._propkey)
@@ -588,13 +589,15 @@ function SpringAnimator:Impulse(propkey, radius)
     return self
 end
 
+-- To bind instance with premade SpringAnimator
+-- local premade = SpringParams.New(1,1):ToAnim():Impulse(50*Vector3.UP)
+-- ... premade(self._geo):Run()
 function SpringAnimator:__call(instance)
     self._instance = setmetatable({instance}, _weak_val_mt)
     return self
 end
 
-
--- @ SpringAnimator.SetDelay :: self, delay:sec ^-> self
+-- @ SpringAnimator.SetPeriodicDelay :: self, delay:sec ^-> self
 -- Every time when animation run, it will wait `delay` second in scheduler.
 function SpringAnimator:SetPeriodicDelay(delay)
     self._periodic_delay = delay
@@ -645,7 +648,7 @@ end
 -- @ SpringAnimator.Run :: self[, delay] ^-> nil
 -- Starts animation next frame or after `delay`, will add `delay` to `periodic delay` for this run.
 function SpringAnimator:Run(delay)
-    assert(self._periodic_delay, CoreDebug.GetStackTrace())
+    assert(self._periodic_delay)
     delay = delay or 0
     delay = self._periodic_delay + delay
     if delay <= 0 then

@@ -6,22 +6,23 @@
     -x, +row
 ]]
 
+local CORE_ENV = CoreString and CoreMath
 if not _G.req then _G.req = require end
+
+local abs, sqrt = math.abs, math.sqrt
+
 local Maid = _G.req("_Maid")
 local Deque = _G.req("_Deque")
 local Bitarray = _G.req("_Bitarray")
 local Base64 = _G.req("_Base64")
-local pp = _G.req("_Luapp").pp
+
 local Grid = {type = "Grid"}
 Grid.__index = Grid
-local abs, sqrt = math.abs, math.sqrt
-
-local CORE_ENV = CoreString and CoreMath
 
 local Cell = {type="Cell"}
 Cell.__index = Cell
 
-local CELL_NIL, CELL_CENTER do
+local CELL_NIL, _cell_center_global do
     function Cell.New(row, col, posx, posy, actor)
         assert(not actor or type(actor) == "number")
         return setmetatable({
@@ -30,7 +31,7 @@ local CELL_NIL, CELL_CENTER do
     end
 
     CELL_NIL = Cell.New()
-    CELL_CENTER = CELL_NIL
+    _cell_center_global = CELL_NIL
 end
 
 function Cell.__tostring(c)
@@ -67,12 +68,8 @@ function Cell:IsFree()
 end
 
 function Cell:Destroy()
-    if self.tile then
-        Maid.safeDestroy(self.tile)
-    end
-    if self.actor then
-        Maid.safeDestroy(self.actor)
-    end
+    Maid.safeDestroy(self.tile)
+    Maid.safeDestroy(self.actor)
 end
 
 local function idx2rc(idx, width)
@@ -226,7 +223,7 @@ function Grid:GetCellAt(x, y)
     end
     return CELL_NIL
 end
--- roe, col, actor_id -> ok, local_cell, local_actor_id
+-- row, col, actor_id -> ok, local_cell, local_actor_id
 function Grid:_move_precheck(row, col, actor_id)
     local loc = self:at(row, col)
     local loc_actor = loc.actor
@@ -280,7 +277,7 @@ end
 -- search_closest :: cell, predicate -> [cell], center excluded
 do
     local function comparer(c1, c2)
-        return CELL_CENTER:ManhattanDistance(c1) < CELL_CENTER:ManhattanDistance(c2)
+        return _cell_center_global:ManhattanDistance(c1) < _cell_center_global:ManhattanDistance(c2)
     end
     function Grid:SearchClosest(center, predicate)
         local out, cells, n = {}, self.cells, self.w * self.h
@@ -288,9 +285,9 @@ do
             local c = cells[i]
             if c ~= center and predicate(c) then out[#out + 1] = c end
         end
-        CELL_CENTER = center
+        _cell_center_global = center
         table.sort(out, comparer)
-        CELL_CENTER = CELL_NIL
+        _cell_center_global = CELL_NIL
         return out
     end
 end
@@ -298,7 +295,7 @@ end
 -- -- SearchClosest is faster for < 50 cells and uses 3x less memory - don't use BFS if you can
 -- -- returns array + set of satisfied cells, excludes origin
 do
-    local SEARCH_PATTERN = {1, 0, -1, 0, 1}
+    local SEARCH_PATTERN = {1, 0, -1, 0, 1} -- without diagonals
     local all = function() return true end
     function Grid:Bfs(origin, predicate, limit)
         predicate = predicate or all
@@ -340,7 +337,7 @@ do
         for dr = -1, 1 do
             for dc = -1, 1 do
                 local cell = self:at(r + dr, c + dc)
-                if cell ~= CELL_NIL and cell ~= origin and predicate(cell) then 
+                if cell ~= CELL_NIL and cell ~= origin and predicate(cell) then
                     return cell
                 end
             end

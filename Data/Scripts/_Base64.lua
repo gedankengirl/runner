@@ -247,11 +247,11 @@ local function _self_test()
     assert(base64.test_prefix(s64, "7"))
     assert(base64.test_prefix(s64, "79"))
     assert(base64.test_prefix(s64, "790"))
-    assert(base64.select_prefix(s64, "AA", "BB", "79", "85") == 3)
+    assert(base64.select_prefix(s64, "A", "BB", "790", "CCC") == 3)
 
     assert(base64.test_prefix("REVG", "DEF"))
 
-    -- test bugfix (dec returned 2 value)
+    -- test bugfix (dec returns 2 values)
     local id = "eec0239c0d644f5bb9f59779307edb17"
     local fmt = "c1 z c3"
     local x = string.pack(fmt, "$", id, "C09")
