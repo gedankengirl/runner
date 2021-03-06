@@ -20,16 +20,20 @@ local UPGRADE_NAMES = {
 
 local RARITY = {
     COMMON = 1,
-    UNIQUE = 2,
-    RARE = 3,
-    EPIC = 4,
-    LEGENDARY = 5,
-    MYTHIC = 6,
-    GODLY = 7
+    RARE = 2,
+    EPIC = 3,
+    LEGENDARY = 4,
+    MYTHIC = 5,
+    GODLY = 6
 }
 
-local RARITY_NAMES = {
-    "Common", "Unique", "Rare", "Epic", "Legendary", "Mythic", "Godly"
+local RARITY_INFO = {
+    [RARITY.COMMON] = {name="common", color=Color.TAN},
+    [RARITY.RARE] = {name="rare", color=Color.New(0, 0.28, 0.8)},
+    [RARITY.EPIC] = {name="epic", color=Color.RUBY},
+    [RARITY.LEGENDARY] = {name="legendary", color=Color.ORANGE},
+    [RARITY.MYTHIC] = {name="mythic", color=Color.CYAN},
+    [RARITY.GODLY] = {name="godly", color=Color.MAGENTA},
 }
 
 -- name, rarity, upgrade, bonus, muid, [next upgrade id]
@@ -128,7 +132,7 @@ local PetDb, EggDb do
 
     function PetDb:GetRarity(id)
         local n = self[id][kRarity]
-        return n, RARITY_NAMES[n]
+        return n, RARITY_INFO[n]
     end
 
     -- ASSUME: pets are arranged by their upgrade order; unupgraded pet comes first
@@ -156,7 +160,7 @@ local PetDb, EggDb do
     end
 end -- do
 
-local FancyPetNames = {
+local FancyPetNamesByName = {
     Bee = "Busy B.",
     Gnome = "Gnome Phenom",
     Birdie = "Nerdy Birdie",
@@ -174,19 +178,11 @@ local FancyPetNames = {
     Fairy = "Fairy",
 }
 
-local ColorCodes = {
-    [RARITY.COMMON] = Color.TAN,
-    [RARITY.UNIQUE] = Color.EMERALD,
-    [RARITY.RARE] = Color.New(0, 0.2, 0.3),
-    [RARITY.EPIC] = Color.RUBY,
-    [RARITY.LEGENDARY] = Color.ORANGE,
-    [RARITY.MYTHIC] = Color.CYAN,
-    [RARITY.GODLY] = Color.MAGENTA
-}
 
 StaticData.PetDb = PetDb
 StaticData.EggDb = EggDb
-StaticData.FancyPetNames = FancyPetNames
-StaticData.ColorCodes = ColorCodes
+StaticData.FancyPetNamesByName = FancyPetNamesByName
+StaticData.RARITY = RARITY
+StaticData.RARITY_INFO = RARITY_INFO
 
 return StaticData

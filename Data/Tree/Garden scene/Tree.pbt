@@ -1,32 +1,37 @@
 Name: "Garden scene"
 RootId: 15346583032969552003
 Objects {
-  Id: 11441125597506148112
-  Name: "Board"
+  Id: 1452372637683445400
+  Name: "PetAnnouncementBoard"
   Transform {
-    Location {
-      X: -2497.79419
-      Y: -2444.93286
-      Z: -220.686584
-    }
-    Rotation {
-    }
     Scale {
-      X: 0.948308408
-      Y: 0.948308408
-      Z: 0.948308408
+      X: 1
+      Y: 1
+      Z: 1
     }
   }
   ParentId: 15346583032969552003
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "Board_2"
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 2533209053318533829
+      value {
+        Overrides {
+          Name: "Name"
+          String: "PetAnnouncementBoard"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -2497.79419
+            Y: -2444.93286
+            Z: -220.686584
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 8644461188066657337
+    }
   }
 }
 Objects {
