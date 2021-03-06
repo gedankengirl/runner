@@ -19,15 +19,14 @@ Assets {
         ChildIds: 15153006723321519993
         ChildIds: 9624464633999526755
         ChildIds: 9583416130571679258
-        ChildIds: 14068085521995783966
         UnregisteredParameters {
           Overrides {
             Name: "cs:TImeToShow"
             Float: 5
           }
           Overrides {
-            Name: "cs:UniqueID"
-            String: "Garden"
+            Name: "cs:EggId"
+            String: "Disco"
           }
         }
         Collidable_v2 {
@@ -846,6 +845,7 @@ Assets {
           }
         }
         ParentId: 533442655076706862
+        ChildIds: 5087964486264413219
         ChildIds: 1844729030372781078
         ChildIds: 2436293567738665060
         ChildIds: 2508992384837161296
@@ -862,6 +862,136 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         NetworkContext {
+        }
+      }
+      Objects {
+        Id: 5087964486264413219
+        Name: "UI Container"
+        Transform {
+          Location {
+            X: 235.128891
+            Y: -0.5703125
+            Z: 94.9999695
+          }
+          Rotation {
+            Yaw: -129.999985
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 9583416130571679258
+        ChildIds: 17144577203694290820
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Control {
+          RenderTransformPivot {
+            Anchor {
+              Value: "mc:euianchor:middlecenter"
+            }
+          }
+          Canvas {
+          }
+          AnchorLayout {
+            SelfAnchor {
+              Anchor {
+                Value: "mc:euianchor:topleft"
+              }
+            }
+            TargetAnchor {
+              Anchor {
+                Value: "mc:euianchor:topleft"
+              }
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 17144577203694290820
+        Name: "BuyButton"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 5087964486264413219
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Control {
+          Width: 320
+          Height: 120
+          UIY: -100
+          RenderTransformPivot {
+            Anchor {
+              Value: "mc:euianchor:middlecenter"
+            }
+          }
+          Button {
+            Label: "Buy 500"
+            FontColor {
+              A: 1
+            }
+            FontSize: 48
+            ButtonColor {
+              R: 1
+              G: 1
+              B: 1
+              A: 1
+            }
+            HoveredColor {
+              R: 1
+              G: 1
+              B: 1
+              A: 1
+            }
+            PressedColor {
+              R: 1
+              G: 1
+              B: 1
+              A: 1
+            }
+            DisabledColor {
+              R: 1
+              G: 1
+              B: 1
+              A: 0.995000064
+            }
+            Brush {
+              Id: 841534158063459245
+            }
+            OnlyUseMainColor: true
+            ClickMode {
+              Value: "mc:ebuttonclickmode:default"
+            }
+          }
+          AnchorLayout {
+            SelfAnchor {
+              Anchor {
+                Value: "mc:euianchor:bottomcenter"
+              }
+            }
+            TargetAnchor {
+              Anchor {
+                Value: "mc:euianchor:bottomcenter"
+              }
+            }
+          }
         }
       }
       Objects {
@@ -2002,7 +2132,7 @@ Assets {
         Name: "Camera"
         Transform {
           Location {
-            Y: 200
+            Y: 199.999985
             Z: 120
           }
           Rotation {
@@ -2155,6 +2285,12 @@ Assets {
               SubObjectId: 17580675709234821621
             }
           }
+          Overrides {
+            Name: "cs:BuyButton"
+            ObjectReference {
+              SubObjectId: 17144577203694290820
+            }
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -2230,7 +2366,6 @@ Assets {
         Name: "2"
         Transform {
           Location {
-            Y: 14.9999981
             Z: 450
           }
           Rotation {
@@ -2284,8 +2419,7 @@ Assets {
         Name: "4"
         Transform {
           Location {
-            X: 84.9999924
-            Z: 399.966248
+            Z: 400
           }
           Rotation {
           }
@@ -2304,67 +2438,6 @@ Assets {
         }
         Folder {
           IsGroup: true
-        }
-      }
-      Objects {
-        Id: 14068085521995783966
-        Name: "Server"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 533442655076706862
-        ChildIds: 11287686966096444114
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        NetworkContext {
-          Type: Server
-        }
-      }
-      Objects {
-        Id: 11287686966096444114
-        Name: "PetStandServer"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 14068085521995783966
-        UnregisteredParameters {
-          Overrides {
-            Name: "cs:PetStand"
-            ObjectReference {
-              SubObjectId: 533442655076706862
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Script {
-          ScriptAsset {
-            Id: 6971660793922158603
-          }
         }
       }
     }

@@ -9,7 +9,6 @@ local REvents = _G.req("_ReliableEvents")
 local B = _G.req("BusinessLogic")
 local P = _G.req("Protocols")
 local S = _G.req("StaticData")
-B.SetStaticData(S)
 local _maid = Maid.New(script)
 local NONCE_SYMBOLS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/'
 local UNNONCE_SYMBOL = '*'

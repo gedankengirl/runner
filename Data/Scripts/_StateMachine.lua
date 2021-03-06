@@ -8,10 +8,10 @@
 ]]
 
 local Maid = _G.req("Maid")
-local StateMachine = {}
+local StateMachine = {type="StateMachine"}
 StateMachine.__index = StateMachine
 
-local State = {}
+local State = {type="StateMachine.State"}
 State.__index = State
 local START = setmetatable({name="$START"}, State)
 

@@ -3,6 +3,7 @@ local Grid = _G.req("_Grid")
 local Base64 = _G.req("_Base64")
 local REvents = _G.req("ReliableEvents")
 local StateMachine = _G.req("StateMachine")
+local B = _G.req("BusinessLogic")
 local P = _G.req("Protocols")
 local S = _G.req("StaticData")
 local pp = _G.req("_Luapp").pp
@@ -42,6 +43,8 @@ local CAMERA_RELATIVE_TRANSFORM = Transform.New(
     Vector3.ONE
 )
 
+local INGAME_CAMERA = LOCAL_PLAYER:GetDefaultCamera()
+
 local _maid = Maid.New(script)
 -----------------------------------------------------------------------------
 -- Client State Machine
@@ -49,7 +52,20 @@ local _maid = Maid.New(script)
 local ISM = StateMachine.New()
 local INGAME = ISM:AddState("InGame")
 local INVENTORY = ISM:AddState("Inventory")
+local SHOP = ISM:AddState("Shop")
 _maid.ISM = ISM
+
+local function _check_inventory()
+    if not _maid.grid then
+        local error = "Inventory nor ready."
+        REvents.Broadcast(P.CLIENT_LOCAL.POPUP, {
+            ok = function() warn("ERROR", error) end,
+            text = error
+        })
+        return false
+    end
+    return true
+end
 
 -----------------------------------------------------------------------------
 -- Client
@@ -96,6 +112,7 @@ function Client:_AwaitDownlinkChannel()
                 self:_InstantiateInventory(assert(grid))
             elseif op == P.S2C.EGG.op then
                 local pet_id, egg, row, col = P.P.S2C.EGG.unpack(data)
+                -- FIXME: In what state we will hatch egg?
                 ISM:GoToState(INGAME)
                 self:_HatchEgg(pet_id, row, col)
                 REvents.Broadcast(P.CLIENT_LOCAL.EGG_HATCHED, egg, pet_id)
@@ -126,6 +143,7 @@ function Client:_HatchEgg(pet_id, row, col)
     local cell = grid:at(row, col)
     assert(cell:IsFree())
     Actor.New(pet_id. cell)
+    -- TODO: some animation
 end
 
 local Highlights = {}
@@ -179,23 +197,72 @@ end
 --------------------------
 -- In Game State
 --------------------------
-function INGAME:Enter(from)
-    print("InGame_Enter")
+function INGAME:Enter(_from)
     self.isInteractionEnabled = true
-    REvents.BroadcastToServer(P.C2S.TurnEquipmentOn) -- for equipment server
+    if LOCAL_PLAYER:GetDefaultCamera() ~= DEFAULT_CAM then
+        LOCAL_PLAYER:SetDefaultCamera(DEFAULT_CAM)
+    end
+    REvents.BroadcastToServer(P.C2S.TurnEquipmentOn)
 end
 
 function INGAME:Exit()
-    print("InGame_Exit")
     self.isInteractionEnabled = false
-    REvents.BroadcastToServer(P.C2S.TurnEquipmentOff)
+    REvents.BroadcastToServer(P.C2S.TurnEquipmentOff) -- TODO: stop moving on this event
 end
 
 function INGAME:HandleInventoryBinding()
-    ISM:GoToState(INVENTORY)
+    if self.isInteractionEnabled then
+        ISM:GoToState(INVENTORY)
+    end
+end
+
+function INGAME:HandleShopEnter(...)
+    if self.isInteractionEnabled then
+        ISM:GoToState(SHOP, ...)
+    end
 end
 
 function INGAME:HandleModal(modal_arg)
+    self.isInteractionEnabled = modal_arg < P.MODAL_ARG.OPEN
+end
+
+--------------------------
+-- Shop State
+--------------------------
+function SHOP:Check()
+    return _check_inventory()
+end
+
+function SHOP:Enter(from, shop_id, egg_id, camera)
+    self._from = from
+    if from == INGAME then
+        self._shop_id = shop_id
+        self._egg_id = egg_id
+        self._camera = camera
+    end
+    self.isInteractionEnabled = true
+    LOCAL_PLAYER:SetDefaultCamera(self._camera)
+    local ok, msg = B.CanBuyEgg(LOCAL_PLAYER, self._egg_id, _maid.grid)
+    REvents.Broadcast("SHOP:Enter", self._shop_id, ok, msg)
+end
+
+function SHOP:Exit()
+    self.isInteractionEnabled = false
+    self._from, self._shop_id = nil, nil
+end
+
+function SHOP:HandleInventoryBinding()
+    if self.isInteractionEnabled then
+        ISM:GoToState(INVENTORY)
+    end
+end
+
+function SHOP:HandleShopLeave()
+    local from = self._from
+    ISM:GoToState(from)
+end
+
+function SHOP:HandleModal(modal_arg)
     self.isInteractionEnabled = modal_arg < P.MODAL_ARG.OPEN
 end
 
@@ -209,21 +276,20 @@ local function _show_cursor(show)
 end
 
 function INVENTORY:Check()
-    -- TODO: check cameras
-    return _maid.grid and true
+    return _check_inventory()
 end
 
 function INVENTORY:Enter(from)
+    self._from = from
+    self.isInteractionEnabled = true
     LOCAL_PLAYER.isVisibleToSelf = false
-    -- TODO: we should save override camera and set it back on exit
     self:_StartCamera()
     _show_cursor(true)
-    self.isInteractionEnabled = true
     _maid.highlights = Events.Connect(P.INTERACTION.TileUnderCursorChanged, INVENTORY._OnTileUnderCursorChanged)
 end
 
 function INVENTORY:Exit()
-    LOCAL_PLAYER:SetDefaultCamera(DEFAULT_CAM)
+    self._from = nil
     LOCAL_PLAYER.isVisibleToSelf = true
     _show_cursor(false)
     self.isInteractionEnabled = false
@@ -236,7 +302,9 @@ function INVENTORY:Update(dt)
 end
 
 function INVENTORY:HandleInventoryBinding()
-    ISM:GoToState(INGAME)
+    if self.isInteractionEnabled then
+        ISM:GoToState(self._from)
+    end
 end
 
 local function _get_move_outcome(grid, src_cell, dst_cell)
@@ -482,7 +550,7 @@ function INVENTORY:_UpdateCamera(dt)
     if self.isMovingCamera then
         local newCursorPositon = UI.GetCursorPosition()
         local screenDelta = newCursorPositon - self.cursorPosition
-        self.cursorPosition = newCursorPositon 
+        self.cursorPosition = newCursorPositon
         -- We must use the interaction coordinates to scroll properly. Remember screenspace Y goes downwards.
         local localDelta =  CAMERA_YAW_ROTATION * Vector3.New(screenDelta, 0)
         local scaledDelta = CAMERA_SCROLL_SPEED * dt * Vector3.New(-localDelta.y, localDelta.x, 0)
@@ -522,8 +590,6 @@ function INVENTORY:HandleModal(modal_arg)
     self.isInteractionEnabled = modal_arg < P.MODAL_ARG.OPEN
 end
 
-
-
 -----------------------------------------------------------------------------
 -- Main
 -----------------------------------------------------------------------------
@@ -533,11 +599,17 @@ do -- main
         ["ability_extra_27"] = {"_", "HandleInventoryBinding"}, -- `I` button for inventory
         ["ability_primary"] = {"HandleLeftMouseDown", "HandleLeftMouseUp"},
         ["ability_secondary"] = {"HandleRightMouseDown", "HandleRightMouseUp"},
-        [P.CLIENT_LOCAL.MODAL] = {"HandleModal"} -- +1 arg
+        [P.CLIENT_LOCAL.MODAL] = {"HandleModal"}, -- +1 arg
+        [P.CLIENT_LOCAL.EGG_HATCHED] = {"HandleEggHatched"},
+        [P.CLIENT_LOCAL.ENTER_SHOP]  = {"HandleShopEnter"},
+        [P.CLIENT_LOCAL.LEAVE_SHOP]  = {"HandleShopLeave"},
     })
     ISM:Connect(LOCAL_PLAYER.bindingPressedEvent, function(_player, binding) ISM:MapToStateHandler(binding, 1) end)
     ISM:Connect(LOCAL_PLAYER.bindingReleasedEvent, function(_player, binding) ISM:MapToStateHandler(binding, 2) end)
     ISM:Connect(Events, function(...) ISM:MapToStateHandler(P.CLIENT_LOCAL.MODAL, 1, ...) end, P.CLIENT_LOCAL.MODAL)
+    ISM:Connect(Events, function(...) ISM:MapToStateHandler(P.CLIENT_LOCAL.EGG_HATCHED, 1, ...) end, P.CLIENT_LOCAL.EGG_HATCHED)
+    ISM:Connect(Events, function(...) ISM:MapToStateHandler(P.CLIENT_LOCAL.ENTER_SHOP, 1, ...) end, P.CLIENT_LOCAL.ENTER_SHOP)
+    ISM:Connect(Events, function(...) ISM:MapToStateHandler(P.CLIENT_LOCAL.LEAVE_SHOP, 1, ...) end, P.CLIENT_LOCAL.LEAVE_SHOP)
 
     ISM:GoToState(INGAME)
 

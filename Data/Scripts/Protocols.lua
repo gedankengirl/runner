@@ -25,7 +25,7 @@ end
 local PROTOCOL_EGG do
     local op, fmt = "#", "c1 B z B B"
     local function pack(pet_id, egg_id, row, col, nonce)
-        assert(nonce, CoreDebug.GetStackTrace())
+        assert(nonce)
         return enc(spack(fmt, op, pet_id, egg_id, row, col, nonce))
     end
     local function unpack(msg)
@@ -169,9 +169,11 @@ Protocols.MOVE_OUTCOME = {
 
 -- internal client events
 Protocols.CLIENT_LOCAL = {
-    EGG_HATCHED = "Egg_Hatched",
-    MODAL = "Interactions_Modal",
-    POPUP = "Show_Popup",
+    EGG_HATCHED = "%Egg_Hatched",  -- + egg, pet_id
+    MODAL = "%Interactions_Modal", -- + 1 modal_arg
+    POPUP = "%Show_Popup",
+    ENTER_SHOP = "%EnterShop",
+    LEAVE_SHOP = "%LiveShop",
 }
 
 Protocols.MODAL_ARG = {

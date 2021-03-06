@@ -1,18 +1,19 @@
 local Maid = _G.req("Maid")
-local _maid = Maid.New()
-local ReliableEvents = _G.req("ReliableEvents")
-local Spr = _G.req("Spr")
-local SAnim = _G.req("_SpringAnimator")
-local SParam = SAnim.SpringParams
+local REvents = _G.req("ReliableEvents")
+local SA = _G.req("_SpringAnimator")
+local SP = SA.SpringParams
 local S = _G.req("StaticData")
+local P = _G.req("Protocols")
+local B = _G.req("BusinessLogic")
+local _maid = Maid.New(script)
 
 local TRIGGER = script:GetCustomProperty("Trigger"):WaitForObject()
 local CAMERA = script:GetCustomProperty("Camera"):WaitForObject()
 local PET_STAND = script:GetCustomProperty("PetStand"):WaitForObject()
-local THIS_ID = PET_STAND.id
+local THIS_STAND_ID = PET_STAND.id
 local TIME_TO_SHOW = PET_STAND:GetCustomProperty("TimeToShow")
-local UNIQUE_ID = PET_STAND:GetCustomProperty("UniqueID")
--- TODO: get pets from StaticData
+local EGG_ID = PET_STAND:GetCustomProperty("EggId")
+
 local SIGNBOARD = script:GetCustomProperty("DroidGeo"):WaitForObject()
 local PIPE = script:GetCustomProperty("Pipe"):WaitForObject()
 local PIPE_TR = PIPE:GetTransform()
@@ -32,20 +33,22 @@ local PET_MARKS = PET_MARKS_ROOT:GetChildren()
 local LOCAL_PLAYER = Game.GetLocalPlayer()
 
 local EGG_ROOT = script:GetCustomProperty("Egg"):WaitForObject()
-local EGG_DATA = assert(S.EggDb[UNIQUE_ID], UNIQUE_ID)
+local EGG_DATA = assert(S.EggDb[EGG_ID], EGG_ID)
 local EGG_GROUP = World.SpawnAsset(EGG_DATA.muid, {parent=EGG_ROOT})
 local EGG_TR = EGG_GROUP:GetTransform()
 
+local sort = _G.req("_Snippets").array_sort
 for petName, _weight in pairs(EGG_DATA.gacha) do
     local id = S.PetDb:GetIDByName(petName)
     local muid = S.PetDb:GetMuid(id)
     table.insert(PET_TEMPLATES, {id, muid})
 end
+sort(PET_TEMPLATES, function(a,b) return b[1] < a[1] end)
 
-local SIGNBOARD_SPR = Spr.New(0, 0.4)
-SIGNBOARD_SPR:Target(SIGNBOARD, "Position", SIGNBOARD_AMPLITUDE)
+-- Droid persistent animation
+SP.New(0, 0.4):ToAnim():Impulse("Position", SIGNBOARD_AMPLITUDE)(SIGNBOARD):Run()
 
-local function ResetTextTask()
+local function ResetTextWorker()
     Task.Wait(2.0)
     WORLD_TEXT.text = DEFAULT_TEXT
 end
@@ -57,18 +60,28 @@ for _i , petMuid in ipairs(PET_TEMPLATES) do
     PETS[#PETS+1] = World.SpawnAsset(muid, spawn_params)
 end
 
-local function OnInteracted(trigger, player)
+-- 1. event to change state to Shop
+-- 2. BL check for slots and money, activete Buy button
+local function OnInteractedEvent(_trigger, player)
     if player:IsA("Player") and player == LOCAL_PLAYER then
-        ReliableEvents.BroadcastToServer("RequestInteraction", player, UNIQUE_ID)
-        Events.Broadcast("ToggleUI", UNIQUE_ID, true)
+        REvents.Broadcast(P.CLIENT_LOCAL.ENTER_SHOP, THIS_STAND_ID, EGG_ID, CAMERA)
+        _maid.onInteractedEvent = nil
     end
 end
+_maid.onInteractedEvent = TRIGGER.interactedEvent:Connect(OnInteractedEvent)
+
+Events.Connect("SHOP:Enter", function(shop_id, arg)
+    if shop_id == THIS_STAND_ID then
+        print("@@@", shop_id, arg)
+    end
+end)
 
 function OnToggleUI(uniqueId, toggle)
-    if uniqueId == UNIQUE_ID then
+    if uniqueId == EGG_ID then
         if toggle then
             TRIGGER.isInteractable = false
             LOCAL_PLAYER.isVisibleToSelf = false
+            -- TODO: shold be default cam
             LOCAL_PLAYER:SetOverrideCamera(CAMERA, .1)
             local pipeSpr = Spr.New(1, 2)
             pipeSpr:Target(PIPE, "Scale", Vector3.New(7,7,7))
@@ -117,7 +130,6 @@ function OnToggleUI(uniqueId, toggle)
 end
 
 _maid.toggleUI = Events.Connect("ToggleUI", OnToggleUI)
-_maid.triggerInteraction = TRIGGER.interactedEvent:Connect(OnInteracted)
 
 function OnEggPurchased(id, player)
     -- if not player == LOCAL_PLAYER then return end
@@ -131,9 +143,9 @@ function OnEggPurchased(id, player)
 end
 
 function OnItemPurchased(id, player)
-    if id == THIS_ID then
+    if id == THIS_STAND_ID then
         WORLD_TEXT.text = "Enjoy!"
-        _maid.textResetTask = Task.Spawn(ResetTextTask)
+        _maid.textResetTask = Task.Spawn(ResetTextWorker)
         if player == LOCAL_PLAYER then
             UI.ShowFlyUpText(
                 string.format("-%d gold", 0 --[[STAND_KEY]]), -- FIXME: should be COST
@@ -146,18 +158,17 @@ function OnItemPurchased(id, player)
 end
 
 function OnItemPurchaseFailed(id)
-    if id == THIS_ID then
+    if id == THIS_STAND_ID then
         UI.ShowFlyUpText(
-            string.format("-%d gold", UNIQUE_ID), -- FIXME: should be COST
+            string.format("-%d gold", EGG_ID), -- FIXME: should be COST
             LOCAL_PLAYER:GetWorldPosition() + Vector3.UP * 120.0, FLY_UP_TEXT_BIG_RED)
     end
 end
 
-_maid.triggerInteraction = TRIGGER.interactedEvent:Connect(OnInteracted)
-_maid.triggerLeave = TRIGGER.endOverlapEvent:Connect(function(trigger, player)
-    print("endOverlapEvent")
-    OnToggleUI(UNIQUE_ID, false)
-end)
+-- _maid.triggerLeave = TRIGGER.endOverlapEvent:Connect(function(trigger, player)
+--     print("endOverlapEvent")
+--     OnToggleUI(EGG_ID, false)
+-- end)
 
 Events.Connect("EggPurchased", OnEggPurchased)
 Events.Connect("ItemPurchased", OnItemPurchased)
