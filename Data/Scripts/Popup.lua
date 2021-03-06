@@ -46,11 +46,13 @@ _hide_panel()
 
 local function _do_show_popup(params)
     TEXT.text = params.text or "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    assert(params.yes and not params.ok or params.ok and not params.yes, "'yes' and 'ok' are mutually exclusive")
     local is_yes_no = params.yes
     _popup_maid.on_close = params.on_close -- will fire at maid destroy
     _popup_maid.on_yes = YES.clickedEvent:Connect(params.yes or _noop)
     _popup_maid.on_no = NO.clickedEvent:Connect(params.no or _noop)
-    _popup_maid.on_x = OK.clickedEvent:Connect(params.ok or _noop)
+    _popup_maid.on_ok = OK.clickedEvent:Connect(params.ok or _noop)
+    _popup_maid.on_x = X.clickedEvent:Connect(params.ok or params.no or _noop)
     YES.visibility = is_yes_no and Visibility.INHERIT or Visibility.FORCE_OFF
     NO.visibility = is_yes_no and Visibility.INHERIT or Visibility.FORCE_OFF
     OK.visibility = is_yes_no and Visibility.FORCE_OFF or Visibility.INHERIT
