@@ -2,21 +2,24 @@
     Slightly abstracted state-machine from Mergelandia
     Predefined state callbacks (all optional):
         Check :: state -> bool
-        Enter :: state, ... -> nil
-        Exit  :: state -> nil
+        Enter :: state, ... -> nil (+event)
+        Exit  :: state -> nil      (+event)
         Update :: state, dt -> nil
 ]]
 
+local REvents = _G.req("ReliableEvents")
 local Maid = _G.req("Maid")
 local StateMachine = {type="StateMachine"}
 StateMachine.__index = StateMachine
 
 local State = {type="StateMachine.State"}
 State.__index = State
-local START = setmetatable({name="$START"}, State)
+local START = setmetatable({name="_START"}, State)
 
-function StateMachine.New()
+function StateMachine.New(name)
+    name = name or "SM"
     return setmetatable({
+        name = name,
         states = {},
         _maid = Maid.New(),
         currentState = START,
@@ -56,20 +59,32 @@ local function _spawnUpdate(self, update)
     end)
 end
 
-function StateMachine:GoToState(state, ...)
-    assert(state)
-    state = getmetatable(state) == State and state or self.states[state]
-    if state.Check and not state:Check() then return end
-    if self.currentState and self.currentState.name == state then return end
-    if self.currentState and self.currentState.Exit then self.currentState:Exit() end
-    local from = self.currentState
-    self.currentState = state
-    if state.Enter then state:Enter(from, ...) end
-    self._maid.update = state.Update and _spawnUpdate(state, state.Update) or nil
+-- @arg nextState: State|string
+function StateMachine:GoToState(nextState, ...)
+    assert(nextState)
+    nextState = getmetatable(nextState) == State and nextState or self.states[nextState]
+    if nextState.Check and not nextState:Check() then return end
+    local previousState = self.currentState
+    if previousState and previousState.name == nextState then return end
+    if previousState and previousState.Exit then
+        previousState:Exit()
+        REvents.Broadcast(previousState.exit_event)
+    end
+    self.currentState = nextState
+    if nextState.Enter then
+        nextState:Enter(previousState, ...)
+        REvents.Broadcast(nextState.enter_event)
+    end
+    self._maid.update = nextState.Update and _spawnUpdate(nextState, nextState.Update)
 end
 
 function StateMachine:AddState(name)
-    local state = setmetatable({name=name, _sm = self}, State)
+    local state = setmetatable({
+        name=name,
+        _sm = self,
+        enter_event = string.format("%s:%s:Enter", self.name, name),
+        exit_event = string.format("%s:%s:Exit", self.name, name)
+        }, State)
     self.states[name] = state
     return state
 end

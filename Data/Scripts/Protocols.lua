@@ -168,12 +168,13 @@ Protocols.MOVE_OUTCOME = {
 }
 
 -- internal client events
-Protocols.CLIENT_LOCAL = {
+Protocols.CLIENT = {
     EGG_HATCHED = "%Egg_Hatched",  -- + egg, pet_id
     MODAL = "%Interactions_Modal", -- + 1 modal_arg
     POPUP = "%Show_Popup",
-    ENTER_SHOP = "%EnterShop",
-    LEAVE_SHOP = "%LiveShop",
+    SHOP_INTERACTED = "%ShopInteracted",
+    ENTER_SHOP_STATE = "%EnterShopState",
+    EXIT_SHOP = "%ExitShop",
 }
 
 Protocols.MODAL_ARG = {
