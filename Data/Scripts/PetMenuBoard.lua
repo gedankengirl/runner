@@ -10,7 +10,9 @@ local COLOR_CODES_USED = {S.RARITY.COMMON, S.RARITY.RARE, S.RARITY.EPIC, S.RARIT
 local INTERLINE_SPACE_SMALL = -20
 local COLOR_CODES_STARTING_HEIGHT = -140
 
-local UNIQUE_ID = script:GetCustomProperty("UniqueID")
+local PET_STAND = script:GetCustomProperty("PetStand"):WaitForObject()
+assert (PET_STAND, PET_STAND)
+local UNIQUE_ID = PET_STAND:GetCustomProperty("UniqueID")
 local EGG_DATA = assert(S.EggDb[UNIQUE_ID], UNIQUE_ID)
 local PET_INFO = {}
 

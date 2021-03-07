@@ -23,7 +23,6 @@ Objects {
   ChildIds: 12187569197149205462
   ChildIds: 3924873657808812146
   ChildIds: 7553754998792656332
-  ChildIds: 748185562021921416
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -33,52 +32,6 @@ Objects {
     Value: "mc:evisibilitysetting:forceon"
   }
   Folder {
-  }
-}
-Objects {
-  Id: 748185562021921416
-  Name: "@PetStand"
-  Transform {
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 4781671109827199097
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  TemplateInstance {
-    ParameterOverrideMap {
-      key: 533442655076706862
-      value {
-        Overrides {
-          Name: "Name"
-          String: "@PetStand"
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-            X: -2359.42969
-            Y: -1869.87109
-            Z: 70.0000305
-          }
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-            Yaw: -90
-          }
-        }
-      }
-    }
-    TemplateAsset {
-      Id: 12943947732222281349
-    }
   }
 }
 Objects {

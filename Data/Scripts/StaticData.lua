@@ -30,10 +30,10 @@ local RARITY = {
 local RARITY_INFO = {
     [RARITY.COMMON] = {name="common", color=Color.TAN},
     [RARITY.RARE] = {name="rare", color=Color.New(0, 0.28, 0.8)},
-    [RARITY.EPIC] = {name="epic", color=Color.RUBY},
-    [RARITY.LEGENDARY] = {name="legendary", color=Color.ORANGE},
+    [RARITY.EPIC] = {name="epic", color=Color.New(0.86, 0, 0.35)},
+    [RARITY.LEGENDARY] = {name="legendary", color=Color.New(0.85, 0.25, 0)},
     [RARITY.MYTHIC] = {name="mythic", color=Color.CYAN},
-    [RARITY.GODLY] = {name="godly", color=Color.MAGENTA},
+    [RARITY.GODLY] = {name="godly", color=Color.YELLOW},
 }
 
 -- name, rarity, upgrade, bonus, muid, [next upgrade id]
@@ -103,7 +103,7 @@ local PetDb, EggDb do
     }
 
     EggDb = {
-        Garden =  {price = 500, gacha = {Bee=50, Gnome=30, Birdie=20}, muid = "6BF1AD3640E72529:EggGroup_Garden"},
+        Garden =  {price = 500, gacha = {Bee=40, Gnome=40, Birdie=20}, muid = "6BF1AD3640E72529:EggGroup_Garden"},
         Disco = {price = 5000, gacha = {Monkey=50, Bull=35, Cat=15}, muid = "6E94B64378BE0BD7:EggGroup_Disco"},
         Graveyard =  {price = 30000, gacha = {Bat=60, Ghost=35, Witch=5}, muid = "F957A07755CF5ACE:EggGroup_Graveyard"},
         Tropical = {price = 100000, gacha = {Flamingo=50, Crab=40, Mermaid=10}, muid = "186F54701898DFCB:EggGroup_Tropical"},
@@ -164,18 +164,18 @@ local FancyPetNamesByName = {
     Bee = "Busy B.",
     Gnome = "Gnome Phenom",
     Birdie = "Nerdy Birdie",
-    Monkey = "Monkey",
-    Bull = "Bull",
-    Cat = "Cat",
-    Bat = "Bat",
-    Ghost = "Ghost",
-    Witch = "Witch",
-    Flamingo = "Flamingo",
-    Crab = "Crab",
-    Mermaid = "Mermaid",
-    Mushroom = "Mushroom",
-    Bunny = "Bunny",
-    Fairy = "Fairy",
+    Monkey = "Dance Monkey",
+    Bull = "Party Animal",
+    Cat = "Kool Kat",
+    Bat = "Alpha Bat",
+    Ghost = "Ghost w/the most",
+    Witch = "Basic Witch",
+    Flamingo = "Go-go Flamingo",
+    Crab = "Cash Crab",
+    Mermaid = "Murky Mermaid",
+    Mushroom = "Mushy Mushroom",
+    Bunny = "Money Bunny",
+    Fairy = "Tricksy Pixie",
 }
 
 

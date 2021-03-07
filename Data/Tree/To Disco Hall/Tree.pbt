@@ -62,7 +62,7 @@ Objects {
         }
         Overrides {
           Name: "cs:LevelReq"
-          Int: 15
+          Int: 5
         }
         Overrides {
           Name: "cs:Target"

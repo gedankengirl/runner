@@ -1,8 +1,8 @@
 Name: "Garden scene"
 RootId: 15346583032969552003
 Objects {
-  Id: 1452372637683445400
-  Name: "PetAnnouncementBoard"
+  Id: 17690120525878603008
+  Name: "@PetCorner"
   Transform {
     Scale {
       X: 1
@@ -13,24 +13,26 @@ Objects {
   ParentId: 15346583032969552003
   TemplateInstance {
     ParameterOverrideMap {
-      key: 2533209053318533829
+      key: 6036975505189753006
       value {
         Overrides {
           Name: "Name"
-          String: "PetAnnouncementBoard"
+          String: "@PetCorner"
         }
         Overrides {
           Name: "Position"
           Vector {
-            X: -2497.79419
-            Y: -2444.93286
-            Z: -220.686584
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
           }
         }
       }
     }
     TemplateAsset {
-      Id: 8644461188066657337
+      Id: 8850272282534292144
     }
   }
 }
