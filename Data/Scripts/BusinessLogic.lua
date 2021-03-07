@@ -11,7 +11,7 @@
 * You can equip the limited number of pets: 3. You can upgrade this limit to 5.
 ]]
 -- constants
-local S -- uninitialized static data
+local S = _G.req("StaticData")
 local BASE_SPEED = 100
 local MAX_MULTIPLIER = 25
 local BASE_CPS = 3
@@ -86,11 +86,6 @@ end
 
 local BusinessLogic = {type = 'BusinessLogic'}
 BusinessLogic.__index = BusinessLogic
-
-function BusinessLogic.SetStaticData(data)
-    assert(data.EggDb and data.PetDb)
-    S = data
-end
 
 --- Returns a new BusinessLogic object
 -- @return BusinessLogic
@@ -212,25 +207,44 @@ function BusinessLogic.SaveKey(player, key, datum)
     end
 end
 
-function BusinessLogic.PurchaseEgg(player, egg_name, grid)
-    assert(Environment.IsServer())
-    assert(grid and grid.type == "Grid")
-    local egg = S.EggDb[egg_name]
+function BusinessLogic.CanBuyEgg(player, egg_id, grid)
+    if not grid then
+        return false, "Inventory not ready."
+    end
+    local egg = S.EggDb[egg_id]
     local price = egg.price
     local free_cell = grid:Search(function(cell)
         return cell:IsFree() and cell.row ~ EQUIPPED_ROW
     end)
     if not free_cell then
-        return false, "No free inventory space"
+        return false, "No free inventory space."
     end
-    local ok, msg = subtractCoins(player, price)
+    local coins = player:GetResource(COIN_KEY) or 1
+    if price > coins then
+        return false, "Insufficient funds."
+    end
+    return true
+end
+
+function BusinessLogic.PurchaseEgg(player, egg_id, grid)
+    assert(Environment.IsServer())
+    local ok, message = BusinessLogic.CanBuyEgg(player, egg_id, grid)
+    if not ok then
+        return false, message
+    end
+    local egg = S.EggDb[egg_id]
+    local price = egg.price
+    ok, message = subtractCoins(player, price)
     if ok then
+        local free_cell = grid:Search(function(cell)
+            return cell:IsFree() and cell.row ~ EQUIPPED_ROW
+        end)
         local gacha = egg.gacha
         local pet_name = weightedchoice(gacha)
-        local pet_id = S.PetDb[pet_name]
+        local pet_id = S.PetDb:GetIDByName(pet_name)
         return true, pet_id, free_cell
     else
-        return false, msg
+        return false, message
     end
 end
 
