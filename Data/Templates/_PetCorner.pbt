@@ -48,14 +48,13 @@ Assets {
         ChildIds: 12560866295110116536
         ChildIds: 13847719050970940002
         ChildIds: 2439615722584785640
-        ChildIds: 17563319391129215218
         UnregisteredParameters {
           Overrides {
             Name: "cs:TImeToShow"
             Float: 5
           }
           Overrides {
-            Name: "cs:UniqueID"
+            Name: "cs:EggId"
             String: "Tropical"
           }
         }
@@ -2333,67 +2332,6 @@ Assets {
         }
         Folder {
           IsGroup: true
-        }
-      }
-      Objects {
-        Id: 17563319391129215218
-        Name: "Server"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 6183703522751024346
-        ChildIds: 13909000587788564532
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        NetworkContext {
-          Type: Server
-        }
-      }
-      Objects {
-        Id: 13909000587788564532
-        Name: "PetStandServer"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 17563319391129215218
-        UnregisteredParameters {
-          Overrides {
-            Name: "cs:PetStand"
-            ObjectReference {
-              SubObjectId: 6183703522751024346
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Script {
-          ScriptAsset {
-            Id: 6971660793922158603
-          }
         }
       }
       Objects {

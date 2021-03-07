@@ -12,7 +12,7 @@ local COLOR_CODES_STARTING_HEIGHT = -140
 
 local PET_STAND = script:GetCustomProperty("PetStand"):WaitForObject()
 assert (PET_STAND, PET_STAND)
-local UNIQUE_ID = PET_STAND:GetCustomProperty("UniqueID")
+local UNIQUE_ID = PET_STAND:GetCustomProperty("EggId")
 local EGG_DATA = assert(S.EggDb[UNIQUE_ID], UNIQUE_ID)
 local PET_INFO = {}
 
