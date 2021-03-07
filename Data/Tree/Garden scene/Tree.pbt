@@ -1,39 +1,31 @@
 Name: "Garden scene"
 RootId: 15346583032969552003
 Objects {
-  Id: 17690120525878603008
-  Name: "@PetCorner"
+  Id: 5243894877939740741
+  Name: "Pet Corner"
   Transform {
+    Location {
+      X: -5971.18506
+      Z: -71.0074463
+    }
+    Rotation {
+    }
     Scale {
-      X: 1
-      Y: 1
-      Z: 1
+      X: 1.70761383
+      Y: 1.70761383
+      Z: 1.70761383
     }
   }
   ParentId: 15346583032969552003
-  TemplateInstance {
-    ParameterOverrideMap {
-      key: 6036975505189753006
-      value {
-        Overrides {
-          Name: "Name"
-          String: "@PetCorner"
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-          }
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-          }
-        }
-      }
-    }
-    TemplateAsset {
-      Id: 8850272282534292144
-    }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "Pet Corner"
   }
 }
 Objects {
@@ -63,503 +55,48 @@ Objects {
   }
 }
 Objects {
-  Id: 7843818512278903822
+  Id: 11799830920155333411
   Name: "Teleporter Home"
   Transform {
-    Location {
-      X: 5288.45605
-      Y: -225.774414
-      Z: 68.1726074
-    }
-    Rotation {
-    }
     Scale {
-      X: 2.3926425
-      Y: 2.3926425
-      Z: 2.3926425
+      X: 1
+      Y: 1
+      Z: 1
     }
   }
   ParentId: 15346583032969552003
-  ChildIds: 7668909290268979141
-  ChildIds: 1331085897759944072
-  ChildIds: 14736431780931444699
-  ChildIds: 7371514647375761342
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:Target"
-      ObjectReference {
-        SelfId: 16778533508368500714
-      }
-    }
-    Overrides {
-      Name: "cs:DestinationOffset"
-      Vector {
-      }
-    }
-    Overrides {
-      Name: "cs:StartPointEffects"
-      AssetReference {
-        Id: 851976022591200177
-      }
-    }
-    Overrides {
-      Name: "cs:EndPointEffects"
-      AssetReference {
-        Id: 851976022591200177
-      }
-    }
-    Overrides {
-      Name: "cs:TeleporterCooldown"
-      Float: 0
-    }
-    Overrides {
-      Name: "cs:PerPlayerCooldown"
-      Float: 0
-    }
-    Overrides {
-      Name: "cs:Target:tooltip"
-      String: "Target object to teleport to. Leave blank to just use DestinationOffset as a world position."
-    }
-    Overrides {
-      Name: "cs:DestinationOffset:tooltip"
-      String: "Offset from the target to teleport to. If no target, instead this is a world position."
-    }
-    Overrides {
-      Name: "cs:TeleporterCooldown:tooltip"
-      String: "Cooldown period before another player can teleport from this teleporter"
-    }
-    Overrides {
-      Name: "cs:PerPlayerCooldown:tooltip"
-      String: "Cooldown period on the player before they can teleport again at any teleporter"
-    }
-  }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
-  Folder {
-    IsGroup: true
-  }
-  InstanceHistory {
-    SelfId: 7843818512278903822
-    SubobjectId: 5286474185563256762
-    InstanceId: 11799830920155333411
-    TemplateId: 829631626122322619
-    WasRoot: true
-  }
-}
-Objects {
-  Id: 7371514647375761342
-  Name: "Trigger"
-  Transform {
-    Location {
-      Z: 75
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1.5
-      Y: 1.5
-      Z: 2
-    }
-  }
-  ParentId: 7843818512278903822
-  UnregisteredParameters {
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Trigger {
-    Interactable: true
-    TeamSettings {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    TriggerShape_v2 {
-      Value: "mc:etriggershape:capsule"
-    }
-  }
-  InstanceHistory {
-    SelfId: 7371514647375761342
-    SubobjectId: 4885106693142914058
-    InstanceId: 11799830920155333411
-    TemplateId: 829631626122322619
-  }
-}
-Objects {
-  Id: 14736431780931444699
-  Name: "Geo"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 7843818512278903822
-  ChildIds: 2728928943083197494
-  ChildIds: 8482399315974993193
-  ChildIds: 11551669162493690443
-  UnregisteredParameters {
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Folder {
-    IsGroup: true
-  }
-  InstanceHistory {
-    SelfId: 14736431780931444699
-    SubobjectId: 16791057146643182703
-    InstanceId: 11799830920155333411
-    TemplateId: 829631626122322619
-  }
-}
-Objects {
-  Id: 11551669162493690443
-  Name: "Pipe (thin)"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1.8
-      Y: 1.8
-      Z: 0.1
-    }
-  }
-  ParentId: 14736431780931444699
-  UnregisteredParameters {
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 10184847056121543272
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 5286474185563256762
+      value {
+        Overrides {
+          Name: "Name"
+          String: "Teleporter Home"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: 5288.45605
+            Y: -225.774414
+            Z: 68.1726074
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
       }
     }
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:color"
-      Color {
-        R: 0.955973685
-        G: 0.356400251
-        B: 0.010329823
-        A: 1
-      }
+    TemplateAsset {
+      Id: 829631626122322619
     }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:forceoff"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CoreMesh {
-    MeshAsset {
-      Id: 5836430349218932838
-    }
-    Teams {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    EnableCameraCollision: true
-    InteractWithTriggers: true
-    StaticMesh {
-      Physics {
-      }
-    }
-  }
-  InstanceHistory {
-    SelfId: 11551669162493690443
-    SubobjectId: 9640032817572489727
-    InstanceId: 11799830920155333411
-    TemplateId: 829631626122322619
-  }
-}
-Objects {
-  Id: 8482399315974993193
-  Name: "Cylinder - Rounded Bottom-Aligned"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 2
-      Y: 2
-      Z: 0.05
-    }
-  }
-  ParentId: 14736431780931444699
-  UnregisteredParameters {
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 10184847056121543272
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CoreMesh {
-    MeshAsset {
-      Id: 13629958479359906438
-    }
-    Teams {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    EnableCameraCollision: true
-    InteractWithTriggers: true
-    StaticMesh {
-      Physics {
-      }
-    }
-  }
-  InstanceHistory {
-    SelfId: 8482399315974993193
-    SubobjectId: 5778129453741104797
-    InstanceId: 11799830920155333411
-    TemplateId: 829631626122322619
-  }
-}
-Objects {
-  Id: 2728928943083197494
-  Name: "Large Wood Beam 8m"
-  Transform {
-    Location {
-      X: -90.8114395
-      Y: -50.0212822
-      Z: 13.8609476
-    }
-    Rotation {
-      Yaw: 89.9999542
-      Roll: 129.999969
-    }
-    Scale {
-      X: 0.105815351
-      Y: 0.00781868584
-      Z: 0.433747023
-    }
-  }
-  ParentId: 14736431780931444699
-  ChildIds: 9576075101801679728
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CoreMesh {
-    MeshAsset {
-      Id: 16006638254897947774
-    }
-    Teams {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    EnableCameraCollision: true
-    InteractWithTriggers: true
-    StaticMesh {
-      Physics {
-        Mass: 100
-        LinearDamping: 0.01
-      }
-    }
-  }
-  InstanceHistory {
-    SelfId: 2728928943083197494
-    SubobjectId: 24938340755242882
-    InstanceId: 11799830920155333411
-    TemplateId: 829631626122322619
-  }
-}
-Objects {
-  Id: 9576075101801679728
-  Name: "World Text"
-  Transform {
-    Location {
-      X: 394.092621
-      Y: -104.857826
-      Z: 24.6399269
-    }
-    Rotation {
-      Pitch: 0.000184415097
-      Yaw: -90.000061
-      Roll: 179.999954
-    }
-    Scale {
-      X: 4.72129297
-      Y: 63.5133095
-      Z: 1.15178931
-    }
-  }
-  ParentId: 2728928943083197494
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Text {
-    Text: "MAIN HUB"
-    FontAsset {
-    }
-    Color {
-      R: 0.0242222659
-      G: 0.218000054
-      A: 1
-    }
-    HorizontalSize: 1
-    VerticalSize: 1
-    HorizontalAlignment {
-      Value: "mc:ecoretexthorizontalalign:center"
-    }
-    VerticalAlignment {
-      Value: "mc:ecoretextverticalalign:center"
-    }
-  }
-  InstanceHistory {
-    SelfId: 9576075101801679728
-    SubobjectId: 11629014083023102148
-    InstanceId: 11799830920155333411
-    TemplateId: 829631626122322619
-  }
-}
-Objects {
-  Id: 1331085897759944072
-  Name: "ClientContext"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 7843818512278903822
-  ChildIds: 17810639672758253432
-  UnregisteredParameters {
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  NetworkContext {
-  }
-  InstanceHistory {
-    SelfId: 1331085897759944072
-    SubobjectId: 4035072098836809276
-    InstanceId: 11799830920155333411
-    TemplateId: 829631626122322619
-  }
-}
-Objects {
-  Id: 17810639672758253432
-  Name: "TeleporterClient"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 1331085897759944072
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:ComponentRoot"
-      ObjectReference {
-        SelfId: 7843818512278903822
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Script {
-    ScriptAsset {
-      Id: 32149845205756334
-    }
-  }
-  InstanceHistory {
-    SelfId: 17810639672758253432
-    SubobjectId: 15180395508985060556
-    InstanceId: 11799830920155333411
-    TemplateId: 829631626122322619
-  }
-}
-Objects {
-  Id: 7668909290268979141
-  Name: "TeleporterServer"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 7843818512278903822
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:ComponentRoot"
-      ObjectReference {
-        SelfId: 7843818512278903822
-      }
-    }
-    Overrides {
-      Name: "cs:Trigger"
-      ObjectReference {
-        SelfId: 7371514647375761342
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Script {
-    ScriptAsset {
-      Id: 7679653554725145050
-    }
-  }
-  InstanceHistory {
-    SelfId: 7668909290268979141
-    SubobjectId: 5758682794140992625
-    InstanceId: 11799830920155333411
-    TemplateId: 829631626122322619
   }
 }
 Objects {

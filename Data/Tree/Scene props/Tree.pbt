@@ -35,8 +35,8 @@ Objects {
   Name: "Home base"
   Transform {
     Location {
-      X: -20409.582
-      Y: 18704.2148
+      X: -18700.4844
+      Y: 20009.2949
       Z: -700
     }
     Rotation {

@@ -285,7 +285,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         Text {
-          Text: "MAIN HUB"
+          Text: "TRAVEL HUB"
           FontAsset {
           }
           Color {

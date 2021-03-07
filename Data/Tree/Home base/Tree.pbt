@@ -7,7 +7,7 @@ Objects {
     Location {
       X: 1094.31836
       Y: -1692.19336
-      Z: 479.313416
+      Z: 859.977783
     }
     Rotation {
       Yaw: 150.273956
@@ -37,7 +37,7 @@ Objects {
     Location {
       X: 2645.23633
       Y: -1459.36914
-      Z: 784.036499
+      Z: 1165.95776
     }
     Rotation {
     }
@@ -66,7 +66,7 @@ Objects {
     Location {
       X: 1175.27539
       Y: -1211.27734
-      Z: 786.129822
+      Z: 1166.79443
     }
     Rotation {
     }
@@ -94,7 +94,7 @@ Objects {
   Transform {
     Location {
       Y: -1762.2832
-      Z: 795
+      Z: 1175.66455
     }
     Rotation {
     }
@@ -126,9 +126,9 @@ Objects {
     Rotation {
     }
     Scale {
-      X: 0.5
-      Y: 0.5
-      Z: 0.5
+      X: 1
+      Y: 1
+      Z: 1
     }
   }
   ParentId: 10665984139206756167

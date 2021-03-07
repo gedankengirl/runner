@@ -8,15 +8,6 @@ Assets {
   }
 }
 Assets {
-  Id: 16006638254897947774
-  Name: "Large Wood Beam 8m"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_large_beam_6m"
-  }
-}
-Assets {
   Id: 15305471345784383605
   Name: "Cube - Polished"
   PlatformAssetType: 1
@@ -32,15 +23,6 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_girder_19th_century_4m_001"
-  }
-}
-Assets {
-  Id: 13629958479359906438
-  Name: "Cylinder - Rounded Bottom-Aligned"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_cylinder_rounded_001"
   }
 }
 Assets {
@@ -98,24 +80,6 @@ Assets {
   }
 }
 Assets {
-  Id: 10184847056121543272
-  Name: "Basic Material"
-  PlatformAssetType: 2
-  PrimaryAsset {
-    AssetType: "MaterialAssetRef"
-    AssetId: "mi_basic_pbr_material_001"
-  }
-}
-Assets {
-  Id: 9049285641785345315
-  Name: "Emissive Glow Transparent"
-  PlatformAssetType: 2
-  PrimaryAsset {
-    AssetType: "MaterialAssetRef"
-    AssetId: "mi_basic_emissive_001"
-  }
-}
-Assets {
   Id: 8111577575790295902
   Name: "Cabinet Door - Upper"
   PlatformAssetType: 1
@@ -140,15 +104,6 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_urb_sub_craftsman_stairs_001_150cm"
-  }
-}
-Assets {
-  Id: 5836430349218932838
-  Name: "Pipe - Thin"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_pipe_003"
   }
 }
 Assets {
