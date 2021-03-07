@@ -866,7 +866,7 @@ Assets {
       }
       Objects {
         Id: 5087964486264413219
-        Name: "UI Container"
+        Name: "StandUIContainer"
         Transform {
           Location {
             X: 235.128891
@@ -884,11 +884,12 @@ Assets {
         }
         ParentId: 9583416130571679258
         ChildIds: 17144577203694290820
+        ChildIds: 17532657271730734529
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
+          Value: "mc:evisibilitysetting:forceoff"
         }
         Control {
           RenderTransformPivot {
@@ -936,7 +937,7 @@ Assets {
         Control {
           Width: 320
           Height: 120
-          UIY: -100
+          UIY: -260
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
@@ -944,6 +945,89 @@ Assets {
           }
           Button {
             Label: "Buy 500"
+            FontColor {
+              A: 1
+            }
+            FontSize: 48
+            ButtonColor {
+              R: 1
+              G: 1
+              B: 1
+              A: 1
+            }
+            HoveredColor {
+              R: 0.479867518
+              G: 1
+              B: 0.339999974
+              A: 1
+            }
+            PressedColor {
+              R: 0.44834435
+              G: 1
+              B: 0.3
+              A: 1
+            }
+            DisabledColor {
+              R: 1
+              G: 1
+              B: 1
+              A: 0.452000022
+            }
+            Brush {
+              Id: 841534158063459245
+            }
+            IsButtonEnabled: true
+            ClickMode {
+              Value: "mc:ebuttonclickmode:default"
+            }
+          }
+          AnchorLayout {
+            SelfAnchor {
+              Anchor {
+                Value: "mc:euianchor:bottomcenter"
+              }
+            }
+            TargetAnchor {
+              Anchor {
+                Value: "mc:euianchor:bottomcenter"
+              }
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 17532657271730734529
+        Name: "ExitButton"
+        Transform {
+          Location {
+          }
+          Rotation {
+            Yaw: 2.9882076e-06
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 5087964486264413219
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Control {
+          Width: 320
+          Height: 120
+          UIY: -100
+          RenderTransformPivot {
+            Anchor {
+              Value: "mc:euianchor:middlecenter"
+            }
+          }
+          Button {
+            Label: "EXIT"
             FontColor {
               A: 1
             }
@@ -975,6 +1059,7 @@ Assets {
             Brush {
               Id: 841534158063459245
             }
+            IsButtonEnabled: true
             OnlyUseMainColor: true
             ClickMode {
               Value: "mc:ebuttonclickmode:default"
@@ -2286,9 +2371,21 @@ Assets {
             }
           }
           Overrides {
+            Name: "cs:StandUIContainer"
+            ObjectReference {
+              SubObjectId: 5087964486264413219
+            }
+          }
+          Overrides {
             Name: "cs:BuyButton"
             ObjectReference {
               SubObjectId: 17144577203694290820
+            }
+          }
+          Overrides {
+            Name: "cs:ExitButton"
+            ObjectReference {
+              SubObjectId: 17532657271730734529
             }
           }
         }

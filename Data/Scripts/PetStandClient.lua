@@ -4,7 +4,6 @@ local SA = _G.req("_SpringAnimator")
 local SP = SA.SpringParams
 local S = _G.req("StaticData")
 local P = _G.req("Protocols")
-local B = _G.req("BusinessLogic")
 local _maid = Maid.New(script)
 
 local TRIGGER = script:GetCustomProperty("Trigger"):WaitForObject()
@@ -17,6 +16,12 @@ local EGG_ID = PET_STAND:GetCustomProperty("EggId")
 local SIGNBOARD = script:GetCustomProperty("DroidGeo"):WaitForObject()
 local PIPE = script:GetCustomProperty("Pipe"):WaitForObject()
 local PIPE_TR = PIPE:GetTransform()
+
+-- UI
+local UI_CONTAINER = script:GetCustomProperty("StandUIContainer"):WaitForObject()
+local BUY_BUTTON = script:GetCustomProperty("BuyButton"):WaitForObject()
+BUY_BUTTON.text = tostring(S.EggDb[EGG_ID].price).."SC"
+local EXIT_BUTTON = script:GetCustomProperty("ExitButton"):WaitForObject()
 
 local SIGNBOARD_AMPLITUDE = Vector3.New(0, 0, 20)
 local PURCHASE_AUDIO1 = script:GetCustomProperty("PurchaseAudio1"):WaitForObject()
@@ -60,15 +65,57 @@ for _i , petMuid in ipairs(PET_TEMPLATES) do
     PETS[#PETS+1] = World.SpawnAsset(muid, spawn_params)
 end
 
--- 1. event to change state to Shop
--- 2. BL check for slots and money, activete Buy button
-local function OnInteractedEvent(_trigger, player)
-    if player:IsA("Player") and player == LOCAL_PLAYER then
-        REvents.Broadcast(P.CLIENT_LOCAL.ENTER_SHOP, THIS_STAND_ID, EGG_ID, CAMERA)
-        _maid.onInteractedEvent = nil
+local PIPE_SPR = SP.New(1,2)
+
+local OnEnterShopState, OnShopExit do
+    -- 1. event to change state to Shop
+    -- 2. BL check for slots and money, activete Buy button
+    local function OnInteractedEvent(_trigger, player)
+        if player:IsA("Player") and player == LOCAL_PLAYER then
+            _maid.waitForResponse = Events.Connect(P.CLIENT.ENTER_SHOP_STATE, OnEnterShopState)
+            _maid.onInteractedEvent = nil
+            REvents.Broadcast(P.CLIENT.SHOP_INTERACTED, THIS_STAND_ID, EGG_ID, CAMERA)
+        end
     end
-end
-_maid.onInteractedEvent = TRIGGER.interactedEvent:Connect(OnInteractedEvent)
+    _maid.onInteractedEvent = TRIGGER.interactedEvent:Connect(OnInteractedEvent)
+
+    OnEnterShopState = function(shop_id, can_buy, msg)
+        assert(shop_id == THIS_STAND_ID)
+        _maid.waitForResponse = nil
+        TRIGGER.isInteractable = false
+        _maid.onShopExit = Events.Connect("ISM:InGame:Enter", OnShopExit)
+        BUY_BUTTON.isInteractable = can_buy
+        --TODO: change stand's look
+    end
+
+    Events.Connect("ISM:Shop:Enter", function()
+        UI_CONTAINER.visibility = Visibility.INHERIT
+
+    end)
+
+    Events.Connect("ISM:Shop:Exit", function()
+        UI_CONTAINER.visibility = Visibility.FORCE_OFF
+
+    end)
+
+
+
+    OnShopExit = function()
+        _maid.onInteractedEvent = TRIGGER.interactedEvent:Connect(OnInteractedEvent)
+        TRIGGER.isInteractable = true
+        --TODO: restore stand's look
+    end
+end -- do
+
+-- UI
+_maid.buy = BUY_BUTTON.clickedEvent:Connect(function()
+    REvents.BroadcastToServer(P.C2S.TransmitHatchingEgg, EGG_ID)
+end)
+
+_maid.exit = EXIT_BUTTON.clickedEvent:Connect(function()
+    REvents.Broadcast(P.CLIENT.EXIT_SHOP)
+end)
+
 
 Events.Connect("SHOP:Enter", function(shop_id, arg)
     if shop_id == THIS_STAND_ID then

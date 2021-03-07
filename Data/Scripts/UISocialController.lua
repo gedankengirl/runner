@@ -44,7 +44,7 @@ local CHAR_WIDTHS = {
     A = 0.62, B = 0.69, C = 0.69, D = 0.69, E = 0.54, F = 0.54, G = 0.69, H = 0.69, I = 0.33, J = 0.46, K = 0.62, L = 0.54, M = 0.85,
     N = 0.69, O = 0.69, P = 0.62, Q = 0.69, R = 0.69, S = 0.62, T = 0.54, U = 0.69, V = 0.62, W = 1.01, X = 0.62, Y = 0.62, Z = 0.54,
 
-    ["0"] = 0.69, ["1"] = 0.54, ["2"] = 0.62, ["3"] = 0.62, ["4"] = 0.62, ["5"] = 0.62, ["6"] = 0.62, ["7"] = 0.54, ["8"] = 0.62, ["9"] = 0.62, 
+    ["0"] = 0.69, ["1"] = 0.54, ["2"] = 0.62, ["3"] = 0.62, ["4"] = 0.62, ["5"] = 0.62, ["6"] = 0.62, ["7"] = 0.54, ["8"] = 0.62, ["9"] = 0.62,
 
     [" "] = 0.31, ["."] = 0.31, ["!"] = 0.31, ["?"] = 0.62,
 }
@@ -225,26 +225,28 @@ local SocialHandlers = {}
 function SocialHandlers.OnSocial_Hatch(player_id, pet_id)
     local player = GetPlayerById(player_id)
     if not player then return end
-    local pet = S.PetDb:GetName(pet_id)
-    local _, rarity = S.PetDb:GetRarity(pet_id)
+    local pet_name = S.PetDb:GetName(pet_id)
+    local fancy_name = S.FancyPetNamesByName[pet_name] or pet_name
+    local _, rarity_info = S.PetDb:GetRarity(pet_id)
     PushOntoAppropriateQueue{
         type = "Hatch",
         player = player,
         actorRank = player:GetResource(B.REBIRTH_KEY) or 0,
-        message = string.format("%s hatched %s %s", player.name, rarity, pet)
+        message = string.format("%s hatched %s %s", player.name, rarity_info.name, fancy_name)
     }
 end
 
 function SocialHandlers.OnSocial_Merge(player_id, pet_id)
     local player = GetPlayerById(player_id)
     if not player then return end
-    local pet = S.PetDb:GetName(pet_id)
+    local pet_name = S.PetDb:GetName(pet_id)
+    local fancy_name = S.FancyPetNamesByName[pet_name] or pet_name
     local _, upgrade = S.PetDb:GetUpgradeStatus(pet_id)
     PushOntoAppropriateQueue{
         type = "Merge",
         player = player,
         actorRank = player:GetResource(B.REBIRTH_KEY) or 0,
-        message = string.format("%s merged %s %s", player.name, upgrade, pet)
+        message = string.format("%s merged %s %s", player.name, upgrade, fancy_name)
     }
 end
 

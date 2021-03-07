@@ -59,22 +59,23 @@ local function _spawnUpdate(self, update)
     end)
 end
 
-function StateMachine:GoToState(state, ...)
-    assert(state)
-    state = getmetatable(state) == State and state or self.states[state]
-    if state.Check and not state:Check() then return end
-    if self.currentState and self.currentState.name == state then return end
-    if self.currentState and self.currentState.Exit then
-        self.currentState:Exit()
-        REvents.Broadcast(state.exit_event)
+-- @arg nextState: State|string
+function StateMachine:GoToState(nextState, ...)
+    assert(nextState)
+    nextState = getmetatable(nextState) == State and nextState or self.states[nextState]
+    if nextState.Check and not nextState:Check() then return end
+    local previousState = self.currentState
+    if previousState and previousState.name == nextState then return end
+    if previousState and previousState.Exit then
+        previousState:Exit()
+        REvents.Broadcast(previousState.exit_event)
     end
-    local from = self.currentState
-    self.currentState = state
-    if state.Enter then
-        state:Enter(from, ...)
-        REvents.Broadcast(state.enter_event)
+    self.currentState = nextState
+    if nextState.Enter then
+        nextState:Enter(previousState, ...)
+        REvents.Broadcast(nextState.enter_event)
     end
-    self._maid.update = state.Update and _spawnUpdate(state, state.Update)
+    self._maid.update = nextState.Update and _spawnUpdate(nextState, nextState.Update)
 end
 
 function StateMachine:AddState(name)

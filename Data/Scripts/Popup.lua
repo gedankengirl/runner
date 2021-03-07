@@ -77,38 +77,38 @@ _maid.trampoline.repeatCount = -1
 _maid.trampoline.repeatInterval = NEXT_POPUP_INTERVAL
 
 -- show events
-_maid.SHOW = Events.Connect(P.CLIENT_LOCAL.POPUP, OnShowPopup)
+_maid.SHOW = Events.Connect(P.CLIENT.POPUP, OnShowPopup)
 
 -- closed events
 _maid.X = X.clickedEvent:Connect(function(...)
     _hide_panel(...)
-    REvents.Broadcast(P.CLIENT_LOCAL.MODAL, P.MODAL_ARG.X)
+    REvents.Broadcast(P.CLIENT.MODAL, P.MODAL_ARG.X)
 end)
 _maid.YES = YES.clickedEvent:Connect(function(...)
     _hide_panel(...)
-    REvents.Broadcast(P.CLIENT_LOCAL.MODAL, P.MODAL_ARG.YES)
+    REvents.Broadcast(P.CLIENT.MODAL, P.MODAL_ARG.YES)
 end)
 _maid.NO = NO.clickedEvent:Connect(function(...)
     _hide_panel(...)
-    REvents.Broadcast(P.CLIENT_LOCAL.MODAL, P.MODAL_ARG.NO)
+    REvents.Broadcast(P.CLIENT.MODAL, P.MODAL_ARG.NO)
 end)
 _maid.OK = OK.clickedEvent:Connect(function(...)
     _hide_panel(...)
-    REvents.Broadcast(P.CLIENT_LOCAL.MODAL, P.MODAL_ARG.X)
+    REvents.Broadcast(P.CLIENT.MODAL, P.MODAL_ARG.X)
 end)
 
 -- self test
 local function _test()
     Task.Wait(3)
-    REvents.Broadcast(P.CLIENT_LOCAL.POPUP, {
+    REvents.Broadcast(P.CLIENT.POPUP, {
         ok = function() print("@@@ OK") end,
         text = "Test OK"
     })
-    REvents.Broadcast(P.CLIENT_LOCAL.POPUP, {
+    REvents.Broadcast(P.CLIENT.POPUP, {
         yes = function() print("@@@ Yes") end,
         text = "Test Yes/No"
     })
-    REvents.Broadcast(P.CLIENT_LOCAL.POPUP, {
+    REvents.Broadcast(P.CLIENT.POPUP, {
         ok = function() print("@@@ Yes") end,
         text = nil
     })

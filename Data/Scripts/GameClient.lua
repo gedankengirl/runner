@@ -49,7 +49,7 @@ local _maid = Maid.New(script)
 -----------------------------------------------------------------------------
 -- Client State Machine
 -----------------------------------------------------------------------------
-local ISM = StateMachine.New()
+local ISM = StateMachine.New("ISM")
 local INGAME = ISM:AddState("InGame")
 local INVENTORY = ISM:AddState("Inventory")
 local SHOP = ISM:AddState("Shop")
@@ -58,13 +58,19 @@ _maid.ISM = ISM
 local function _check_inventory()
     if not _maid.grid then
         local error = "Inventory nor ready."
-        REvents.Broadcast(P.CLIENT_LOCAL.POPUP, {
+        REvents.Broadcast(P.CLIENT.POPUP, {
             ok = function() warn("ERROR", error) end,
             text = error
         })
         return false
     end
     return true
+end
+
+local function _show_cursor(show)
+    UI.SetCursorVisible(show)
+    UI.SetCursorLockedToViewport(not show)
+    UI.SetCanCursorInteractWithUI(show)
 end
 
 -----------------------------------------------------------------------------
@@ -111,11 +117,11 @@ function Client:_AwaitDownlinkChannel()
                 Task.Wait()
                 self:_InstantiateInventory(assert(grid))
             elseif op == P.S2C.EGG.op then
-                local pet_id, egg, row, col = P.P.S2C.EGG.unpack(data)
+                local pet_id, egg, row, col = P.S2C.EGG.unpack(data)
                 -- FIXME: In what state we will hatch egg?
                 ISM:GoToState(INGAME)
                 self:_HatchEgg(pet_id, row, col)
-                REvents.Broadcast(P.CLIENT_LOCAL.EGG_HATCHED, egg, pet_id)
+                REvents.Broadcast(P.CLIENT.EGG_HATCHED, egg, pet_id)
             else
                 warn(self.channel .. ", Unknown message:\n" .. data)
             end
@@ -142,7 +148,7 @@ function Client:_HatchEgg(pet_id, row, col)
     local grid = _maid.grid
     local cell = grid:at(row, col)
     assert(cell:IsFree())
-    Actor.New(pet_id. cell)
+    Actor.New(pet_id, cell)
     -- TODO: some animation
 end
 
@@ -216,7 +222,7 @@ function INGAME:HandleInventoryBinding()
     end
 end
 
-function INGAME:HandleShopEnter(...)
+function INGAME:HandleShopInteraction(...)
     if self.isInteractionEnabled then
         ISM:GoToState(SHOP, ...)
     end
@@ -241,13 +247,15 @@ function SHOP:Enter(from, shop_id, egg_id, camera)
         self._camera = camera
     end
     self.isInteractionEnabled = true
+    _show_cursor(true)
     LOCAL_PLAYER:SetDefaultCamera(self._camera)
     local ok, msg = B.CanBuyEgg(LOCAL_PLAYER, self._egg_id, _maid.grid)
-    REvents.Broadcast("SHOP:Enter", self._shop_id, ok, msg)
+    REvents.Broadcast(P.CLIENT.ENTER_SHOP_STATE, self._shop_id, ok, msg)
 end
 
 function SHOP:Exit()
     self.isInteractionEnabled = false
+    _show_cursor(false)
     self._from, self._shop_id = nil, nil
 end
 
@@ -257,9 +265,8 @@ function SHOP:HandleInventoryBinding()
     end
 end
 
-function SHOP:HandleShopLeave()
-    local from = self._from
-    ISM:GoToState(from)
+function SHOP:HandleExitShop()
+    ISM:GoToState(INGAME)
 end
 
 function SHOP:HandleModal(modal_arg)
@@ -269,11 +276,6 @@ end
 --------------------------
 -- Inventory State
 --------------------------
-local function _show_cursor(show)
-    UI.SetCursorVisible(show)
-    UI.SetCursorLockedToViewport(not show)
-    UI.SetCanCursorInteractWithUI(show)
-end
 
 function INVENTORY:Check()
     return _check_inventory()
@@ -599,17 +601,17 @@ do -- main
         ["ability_extra_27"] = {"_", "HandleInventoryBinding"}, -- `I` button for inventory
         ["ability_primary"] = {"HandleLeftMouseDown", "HandleLeftMouseUp"},
         ["ability_secondary"] = {"HandleRightMouseDown", "HandleRightMouseUp"},
-        [P.CLIENT_LOCAL.MODAL] = {"HandleModal"}, -- +1 arg
-        [P.CLIENT_LOCAL.EGG_HATCHED] = {"HandleEggHatched"},
-        [P.CLIENT_LOCAL.ENTER_SHOP]  = {"HandleShopEnter"},
-        [P.CLIENT_LOCAL.LEAVE_SHOP]  = {"HandleShopLeave"},
+        [P.CLIENT.MODAL] = {"HandleModal"}, -- +1 arg
+        [P.CLIENT.EGG_HATCHED] = {"HandleEggHatched"},
+        [P.CLIENT.SHOP_INTERACTED]  = {"HandleShopInteraction"},
+        [P.CLIENT.EXIT_SHOP]  = {"HandleExitShop"},
     })
     ISM:Connect(LOCAL_PLAYER.bindingPressedEvent, function(_player, binding) ISM:MapToStateHandler(binding, 1) end)
     ISM:Connect(LOCAL_PLAYER.bindingReleasedEvent, function(_player, binding) ISM:MapToStateHandler(binding, 2) end)
-    ISM:Connect(Events, function(...) ISM:MapToStateHandler(P.CLIENT_LOCAL.MODAL, 1, ...) end, P.CLIENT_LOCAL.MODAL)
-    ISM:Connect(Events, function(...) ISM:MapToStateHandler(P.CLIENT_LOCAL.EGG_HATCHED, 1, ...) end, P.CLIENT_LOCAL.EGG_HATCHED)
-    ISM:Connect(Events, function(...) ISM:MapToStateHandler(P.CLIENT_LOCAL.ENTER_SHOP, 1, ...) end, P.CLIENT_LOCAL.ENTER_SHOP)
-    ISM:Connect(Events, function(...) ISM:MapToStateHandler(P.CLIENT_LOCAL.LEAVE_SHOP, 1, ...) end, P.CLIENT_LOCAL.LEAVE_SHOP)
+    ISM:Connect(Events, function(...) ISM:MapToStateHandler(P.CLIENT.MODAL, 1, ...) end, P.CLIENT.MODAL)
+    ISM:Connect(Events, function(...) ISM:MapToStateHandler(P.CLIENT.EGG_HATCHED, 1, ...) end, P.CLIENT.EGG_HATCHED)
+    ISM:Connect(Events, function(...) ISM:MapToStateHandler(P.CLIENT.SHOP_INTERACTED, 1, ...) end, P.CLIENT.SHOP_INTERACTED)
+    ISM:Connect(Events, function(...) ISM:MapToStateHandler(P.CLIENT.EXIT_SHOP, 1, ...) end, P.CLIENT.EXIT_SHOP)
 
     ISM:GoToState(INGAME)
 

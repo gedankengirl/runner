@@ -15,7 +15,7 @@ local AskForRebirth do
         if player and player:IsA("Player") then
             _maid.trigger_connection = nil
             if B.isRebirthPossible(player) then
-                REvents.Broadcast(P.CLIENT_LOCAL.POPUP, {
+                REvents.Broadcast(P.CLIENT.POPUP, {
                     text = "Do you want to do a rebirth? All your *Speed Coins* will be spent.",
                     yes = function()
                         REvents.BroadcastToServer(P.C2S.AskForRebirth)
