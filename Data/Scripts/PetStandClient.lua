@@ -59,10 +59,10 @@ local function ResetTextWorker()
 end
 
 local PETS = {}
-local spawn_params = {parent=PET_MARKS_ROOT, scale=0.2*Vector3.ONE, rotation = Rotation.New(0,0,90)}
+local PET_SPAWN_PARAMS = {parent=PET_MARKS_ROOT, scale=0.2*Vector3.ONE, rotation = Rotation.New(0,0,90)}
 for _i , petMuid in ipairs(PET_TEMPLATES) do
     local _id, muid = table.unpack(petMuid)
-    PETS[#PETS+1] = World.SpawnAsset(muid, spawn_params)
+    PETS[#PETS+1] = World.SpawnAsset(muid, PET_SPAWN_PARAMS)
 end
 
 local PIPE_SPR = SP.New(1,2)
@@ -88,22 +88,34 @@ local OnEnterShopState, OnShopExit do
         --TODO: change stand's look
     end
 
-    Events.Connect("ISM:Shop:Enter", function()
+    _maid:GiveTask(Events.Connect("ISM:Shop:Enter", function()
         UI_CONTAINER.visibility = Visibility.INHERIT
+    end))
 
-    end)
-
-    Events.Connect("ISM:Shop:Exit", function()
+    _maid:GiveTask(Events.Connect("ISM:Shop:Exit", function()
         UI_CONTAINER.visibility = Visibility.FORCE_OFF
+    end))
 
-    end)
+    do -- hides annoying shop interactivity prompt in inventory
+        local _save_TRIGGER_isInteractable = false
+        _maid:GiveTask(Events.Connect("ISM:Inventory:Enter", function()
+            _save_TRIGGER_isInteractable = TRIGGER.isInteractable
+            TRIGGER.isInteractable = false
+        end))
 
-
+        _maid:GiveTask(Events.Connect("ISM:Inventory:Exit", function()
+            TRIGGER.isInteractable = _save_TRIGGER_isInteractable
+        end))
+    end
 
     OnShopExit = function()
+        --TODO: restore stand's look
+
+
+        -- shoul be at the end of the callback
+        Task.Wait(0.5)
         _maid.onInteractedEvent = TRIGGER.interactedEvent:Connect(OnInteractedEvent)
         TRIGGER.isInteractable = true
-        --TODO: restore stand's look
     end
 end -- do
 
