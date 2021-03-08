@@ -1,17 +1,18 @@
 local S = _G.req("StaticData")
 local sort = _G.req("_Snippets").array_sort
 
-local PET_LIST_ROOT = script:GetCustomProperty("PetList"):WaitForObject()
-local INTERLINE_SPACE = -50
-local TEXTLINE_TEMPLATE = script:GetCustomProperty("TextLineTemplate")
-local COLOR_CODES_ROOT = script:GetCustomProperty("ColorCodesRoot"):WaitForObject()
-local COLOR_CODE_TEMPLATE = script:GetCustomProperty("ColorCodeTemplate")
+local PET_BOARD_ROOT = script.parent.parent.parent
+local PET_LIST_ROOT = PET_BOARD_ROOT:GetCustomProperty("PetListRoot"):WaitForObject()
+local TEXTLINE_TEMPLATE = PET_BOARD_ROOT:GetCustomProperty("TextLineTemplate")
+local COLOR_CODES_ROOT = PET_BOARD_ROOT:GetCustomProperty("ColorCodesRoot"):WaitForObject()
+local COLOR_CODE_TEMPLATE = PET_BOARD_ROOT:GetCustomProperty("ColorCodeTemplate")
 local COLOR_CODES_USED = {S.RARITY.COMMON, S.RARITY.RARE, S.RARITY.EPIC, S.RARITY.LEGENDARY}
 local INTERLINE_SPACE_SMALL = -20
 local COLOR_CODES_STARTING_HEIGHT = -140
-
-local PET_STAND = script:GetCustomProperty("PetStand"):WaitForObject()
-assert (PET_STAND, PET_STAND)
+local INTERLINE_SPACE = -50
+local INGAME_WAITIN_DUR = Environment.IsPreview() and 1 or nil
+local PET_STAND = PET_BOARD_ROOT:GetCustomProperty("PetStand"):WaitForObject(INGAME_WAITIN_DUR)
+assert(PET_STAND, "missing PET_Stand reference")
 local UNIQUE_ID = PET_STAND:GetCustomProperty("EggId")
 local EGG_DATA = assert(S.EggDb[UNIQUE_ID], UNIQUE_ID)
 local PET_INFO = {}

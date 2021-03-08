@@ -11,21 +11,13 @@ Objects {
     }
   }
   ParentId: 5243894877939740741
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
   TemplateInstance {
-    ParameterOverrideMap {
-      key: 973490565226707146
-      value {
-        Overrides {
-          Name: "cs:PetStand"
-          ObjectReference {
-            SelfId: 18413709342580736122
-            SubObjectId: 533442655076706862
-            InstanceId: 17452128419200206930
-            TemplateId: 12943947732222281349
-          }
-        }
-      }
-    }
     ParameterOverrideMap {
       key: 2533209053318533829
       value {
@@ -34,11 +26,22 @@ Objects {
           String: "@PetMenuBoard"
         }
         Overrides {
-          Name: "Scale"
+          Name: "Position"
           Vector {
-            X: 0.948308408
-            Y: 0.948308408
-            Z: 0.948308408
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
+        Overrides {
+          Name: "cs:PetStand"
+          ObjectReference {
+            SelfId: 6958221722442217909
+            SubObjectId: 533442655076706862
+            InstanceId: 16821036535158127246
+            TemplateId: 12943947732222281349
           }
         }
       }
@@ -49,13 +52,13 @@ Objects {
   }
 }
 Objects {
-  Id: 17452128419200206930
+  Id: 16821036535158127246
   Name: "@PetStand"
   Transform {
     Scale {
-      X: 1
-      Y: 1
-      Z: 1
+      X: 0.585612476
+      Y: 0.585612476
+      Z: 0.585612476
     }
   }
   ParentId: 5243894877939740741
@@ -70,28 +73,27 @@ Objects {
         Overrides {
           Name: "Scale"
           Vector {
-            X: 1
-            Y: 1
-            Z: 1
+            X: 0.948308408
+            Y: 0.948308408
+            Z: 0.948308408
           }
-        }
-        Overrides {
-          Name: "cs:EggId"
-          String: "Garden"
         }
         Overrides {
           Name: "Position"
           Vector {
-            X: 166.842361
-            Y: 468.776184
-            Z: 60.0117645
+            Y: 379.782959
+            Z: 51.0152321
           }
         }
         Overrides {
           Name: "Rotation"
           Rotator {
-            Yaw: -90
+            Yaw: -89.9999847
           }
+        }
+        Overrides {
+          Name: "cs:EggId"
+          String: "Garden"
         }
       }
     }

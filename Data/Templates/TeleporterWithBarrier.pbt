@@ -15,7 +15,7 @@ Assets {
             Z: 2.3926425
           }
         }
-        ParentId: 10966550013016146936
+        ParentId: 4781671109827199097
         ChildIds: 15674299218032213132
         ChildIds: 4130428672868525244
         ChildIds: 13008710138128883285
@@ -53,8 +53,8 @@ Assets {
             Float: 0
           }
           Overrides {
-            Name: "cs:LevelReq"
-            Int: 0
+            Name: "cs:Area"
+            String: ""
           }
           Overrides {
             Name: "cs:Target:tooltip"

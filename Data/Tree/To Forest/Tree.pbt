@@ -46,6 +46,18 @@ Objects {
           String: "TeleporterWithBarrier"
         }
         Overrides {
+          Name: "Position"
+          Vector {
+            X: 43.720459
+            Y: 27.3649788
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
+        Overrides {
           Name: "Scale"
           Vector {
             X: 1
@@ -54,20 +66,8 @@ Objects {
           }
         }
         Overrides {
-          Name: "Position"
-          Vector {
-            X: 43.720459
-            Y: 27.3649788
-          }
-        }
-        Overrides {
-          Name: "cs:LevelReq"
-          Int: 20
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-          }
+          Name: "cs:Area"
+          String: "Forest"
         }
         Overrides {
           Name: "cs:Target"

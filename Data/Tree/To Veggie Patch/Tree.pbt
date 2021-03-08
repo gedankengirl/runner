@@ -1,6 +1,83 @@
 Name: "To Veggie Patch"
 RootId: 8628129298483782844
 Objects {
+  Id: 16603885974417735808
+  Name: "TeleporterWithBarrier"
+  Transform {
+    Scale {
+      X: 0.417947948
+      Y: 0.417947948
+      Z: 0.417947948
+    }
+  }
+  ParentId: 8628129298483782844
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 6042895824561963697
+      value {
+        Overrides {
+          Name: "ma:Shared_BaseMaterial:color"
+          Color {
+            R: 0.123650923
+            G: 0.410000205
+            A: 1
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 10040832043993394563
+      value {
+        Overrides {
+          Name: "ma:Shared_BaseMaterial:color"
+          Color {
+            R: 0.123650923
+            G: 0.410000205
+            A: 1
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 15353425564796802316
+      value {
+        Overrides {
+          Name: "Name"
+          String: "TeleporterWithBarrier"
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: 43.720459
+            Y: 27.3649788
+          }
+        }
+        Overrides {
+          Name: "cs:Area"
+          String: "Garden"
+        }
+        Overrides {
+          Name: "cs:Target"
+          ObjectReference {
+            SelfId: 568350938697228134
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 8013303162601780039
+    }
+  }
+}
+Objects {
   Id: 11650872443762669323
   Name: "Large Wood Beam 8m"
   Transform {
@@ -88,359 +165,6 @@ Objects {
     }
     VerticalAlignment {
       Value: "mc:ecoretextverticalalign:center"
-    }
-  }
-}
-Objects {
-  Id: 7911184222413158446
-  Name: "Teleporter"
-  Transform {
-    Location {
-      X: 43.7207031
-      Y: 27.3652344
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 8628129298483782844
-  ChildIds: 5996356688896270881
-  ChildIds: 5541757943230638397
-  ChildIds: 8580893857131319744
-  ChildIds: 11316483768346818469
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:Target"
-      ObjectReference {
-        SelfId: 568350938697228134
-      }
-    }
-    Overrides {
-      Name: "cs:DestinationOffset"
-      Vector {
-      }
-    }
-    Overrides {
-      Name: "cs:StartPointEffects"
-      AssetReference {
-        Id: 851976022591200177
-      }
-    }
-    Overrides {
-      Name: "cs:EndPointEffects"
-      AssetReference {
-        Id: 851976022591200177
-      }
-    }
-    Overrides {
-      Name: "cs:TeleporterCooldown"
-      Float: 0
-    }
-    Overrides {
-      Name: "cs:PerPlayerCooldown"
-      Float: 0
-    }
-    Overrides {
-      Name: "cs:Target:tooltip"
-      String: "Target object to teleport to. Leave blank to just use DestinationOffset as a world position."
-    }
-    Overrides {
-      Name: "cs:DestinationOffset:tooltip"
-      String: "Offset from the target to teleport to. If no target, instead this is a world position."
-    }
-    Overrides {
-      Name: "cs:TeleporterCooldown:tooltip"
-      String: "Cooldown period before another player can teleport from this teleporter"
-    }
-    Overrides {
-      Name: "cs:PerPlayerCooldown:tooltip"
-      String: "Cooldown period on the player before they can teleport again at any teleporter"
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Folder {
-    IsGroup: true
-  }
-}
-Objects {
-  Id: 11316483768346818469
-  Name: "Trigger"
-  Transform {
-    Location {
-      Z: 75
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1.5
-      Y: 1.5
-      Z: 2
-    }
-  }
-  ParentId: 7911184222413158446
-  UnregisteredParameters {
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Trigger {
-    TeamSettings {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    TriggerShape_v2 {
-      Value: "mc:etriggershape:capsule"
-    }
-  }
-}
-Objects {
-  Id: 8580893857131319744
-  Name: "Geo"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 7911184222413158446
-  ChildIds: 15785950538192613123
-  ChildIds: 12747931295464499545
-  UnregisteredParameters {
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Folder {
-    IsGroup: true
-  }
-}
-Objects {
-  Id: 12747931295464499545
-  Name: "Pipe (thin)"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1.8
-      Y: 1.8
-      Z: 0.1
-    }
-  }
-  ParentId: 8580893857131319744
-  UnregisteredParameters {
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 10184847056121543272
-      }
-    }
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:color"
-      Color {
-        R: 0.955973685
-        G: 0.356400251
-        B: 0.010329823
-        A: 1
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:forceoff"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CoreMesh {
-    MeshAsset {
-      Id: 5836430349218932838
-    }
-    Teams {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    EnableCameraCollision: true
-    InteractWithTriggers: true
-    StaticMesh {
-      Physics {
-      }
-    }
-  }
-}
-Objects {
-  Id: 15785950538192613123
-  Name: "Cylinder - Rounded Bottom-Aligned"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 2
-      Y: 2
-      Z: 0.05
-    }
-  }
-  ParentId: 8580893857131319744
-  UnregisteredParameters {
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 10184847056121543272
-      }
-    }
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:color"
-      Color {
-        R: 0.123650923
-        G: 0.410000205
-        A: 1
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CoreMesh {
-    MeshAsset {
-      Id: 13629958479359906438
-    }
-    Teams {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    EnableCameraCollision: true
-    InteractWithTriggers: true
-    StaticMesh {
-      Physics {
-      }
-    }
-  }
-}
-Objects {
-  Id: 5541757943230638397
-  Name: "ClientContext"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 7911184222413158446
-  ChildIds: 11540182912301353681
-  UnregisteredParameters {
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  NetworkContext {
-  }
-}
-Objects {
-  Id: 11540182912301353681
-  Name: "TeleporterClient"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 5541757943230638397
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:ComponentRoot"
-      ObjectReference {
-        SelfId: 7911184222413158446
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Script {
-    ScriptAsset {
-      Id: 32149845205756334
-    }
-  }
-}
-Objects {
-  Id: 5996356688896270881
-  Name: "TeleporterServer"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 7911184222413158446
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:ComponentRoot"
-      ObjectReference {
-        SelfId: 7911184222413158446
-      }
-    }
-    Overrides {
-      Name: "cs:Trigger"
-      ObjectReference {
-        SelfId: 11316483768346818469
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Script {
-    ScriptAsset {
-      Id: 7679653554725145050
     }
   }
 }

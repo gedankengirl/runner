@@ -54,9 +54,9 @@ local PetDb, EggDb do
         {"Birdie",   RARITY.RARE, UPGRADE.GOLDEN,         10,  "F1DE16434F864AD5:$Birdie_2_ClientContext"},
         {"Birdie",   RARITY.RARE, UPGRADE.DIAMOND,        14, "B3958F910891BB16:$Birdie_3_ClientContext"},
         -- 2 -- TODO: bonuses for later arenas
-        {"Monkey",   RARITY.COMMON, UPGRADE.NO_UPGRADE,   4,  "DA2AF5973CC4AAC7:$Monkey_1_ClientContext"},
-        {"Monkey",   RARITY.COMMON, UPGRADE.GOLDEN,       8,  "4921CFB551E57DF0:$Monkey_2_ClientContext"},
-        {"Monkey",   RARITY.COMMON, UPGRADE.DIAMOND,      12, "EA4B79D1C34D0C57:$Monkey_3_ClientContext"},
+        {"Monkey",   RARITY.RARE, UPGRADE.NO_UPGRADE,     4,  "DA2AF5973CC4AAC7:$Monkey_1_ClientContext"},
+        {"Monkey",   RARITY.RARE, UPGRADE.GOLDEN,         8,  "4921CFB551E57DF0:$Monkey_2_ClientContext"},
+        {"Monkey",   RARITY.RARE, UPGRADE.DIAMOND,        12, "EA4B79D1C34D0C57:$Monkey_3_ClientContext"},
 
         {"Bull",     RARITY.RARE, UPGRADE.NO_UPGRADE,     4,  "8B6E8CCC1AD210FF:$Bull_1_ClientContext"},
         {"Bull",     RARITY.RARE, UPGRADE.GOLDEN,         8,  "44C36F7D9935979F:$Bull_2_ClientContext"},
@@ -66,9 +66,9 @@ local PetDb, EggDb do
         {"Cat",      RARITY.EPIC, UPGRADE.GOLDEN,         8,  "DFE30E8B8B8E3A13:$Cat_2_ClientContext"},
         {"Cat",      RARITY.EPIC, UPGRADE.DIAMOND,        12, "CB0B715CE9DAAB6B:$Cat_3_ClientContext"},
         -- 3
-        {"Bat",      RARITY.RARE, UPGRADE.NO_UPGRADE,      4,  "0CFD2C321CA36B14:$Bat_1_ClientContext"},
-        {"Bat",      RARITY.RARE, UPGRADE.GOLDEN,          8,  "9456CF56DF2AAE9F:$Bat_2_ClientContext"},
-        {"Bat",      RARITY.RARE, UPGRADE.DIAMOND,         12, "C21E3BB91DE75225:$Bat_3_ClientContext"},
+        {"Bat",      RARITY.COMMON, UPGRADE.NO_UPGRADE,    4,  "0CFD2C321CA36B14:$Bat_1_ClientContext"},
+        {"Bat",      RARITY.COMMON, UPGRADE.GOLDEN,        8,  "9456CF56DF2AAE9F:$Bat_2_ClientContext"},
+        {"Bat",      RARITY.COMMON, UPGRADE.DIAMOND,       12, "C21E3BB91DE75225:$Bat_3_ClientContext"},
 
         {"Ghost",    RARITY.EPIC, UPGRADE.NO_UPGRADE,     4,  "CF55C15AEFAE9044:$Ghost_1_ClientContext"},
         {"Ghost",    RARITY.EPIC, UPGRADE.GOLDEN,         8,  "BA0A766F76B7E34A:$Ghost_2_ClientContext"},
@@ -103,10 +103,11 @@ local PetDb, EggDb do
         {"Fairy",    RARITY.EPIC, UPGRADE.DIAMOND,         12, "B6EC162A0D0221EA:$FairyClientContext_3"},
     }
 
+    -- TODO: revise gacha drop rate and price according to pet rank
     EggDb = {
-        Garden =  {price = 500, gacha = {Bee=40, Gnome=40, Birdie=20}, muid = "6BF1AD3640E72529:EggGroup_Garden"},
-        Disco = {price = 5000, gacha = {Monkey=50, Bull=35, Cat=15}, muid = "6E94B64378BE0BD7:EggGroup_Disco"},
-        Graveyard =  {price = 30000, gacha = {Bat=60, Ghost=35, Witch=5}, muid = "F957A07755CF5ACE:EggGroup_Graveyard"},
+        Garden =  {price = 500, gacha = {Bee=45, Gnome=35, Birdie=20}, muid = "6BF1AD3640E72529:EggGroup_Garden"},
+        Disco = {price = 5000, gacha = {Monkey=45, Bull=40, Cat=15}, muid = "6E94B64378BE0BD7:EggGroup_Disco"},
+        Graveyard =  {price = 30000, gacha = {Bat=55, Ghost=35, Witch=10}, muid = "F957A07755CF5ACE:EggGroup_Graveyard"},
         Tropical = {price = 100000, gacha = {Flamingo=50, Crab=40, Mermaid=10}, muid = "186F54701898DFCB:EggGroup_Tropical"},
         Forest =  {price = 175000, gacha = {Mushroom=60, Bunny=30, Fairy=10},  muid = "92C4C8B37C758BAC:EggGroup_Forest"},
     }
@@ -179,10 +180,20 @@ local FancyPetNamesByName = {
     Fairy = "Tricksy Pixie",
 }
 
+local AreaLvlReq = {
+
+    Hub = 0,
+    Garden = 0,
+    Graveyard = 5,
+    Tropical = 10,
+    Disco = 15,
+    Forest = 20
+}
 
 StaticData.PetDb = PetDb
 StaticData.EggDb = EggDb
 StaticData.FancyPetNamesByName = FancyPetNamesByName
+StaticData.AreaLvlReq = AreaLvlReq
 StaticData.RARITY = RARITY
 StaticData.RARITY_INFO = RARITY_INFO
 

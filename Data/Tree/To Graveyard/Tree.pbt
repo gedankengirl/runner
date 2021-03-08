@@ -46,8 +46,8 @@ Objects {
           }
         }
         Overrides {
-          Name: "cs:LevelReq"
-          Int: 15
+          Name: "cs:Area"
+          String: "Graveyard"
         }
         Overrides {
           Name: "cs:Target"
@@ -68,7 +68,7 @@ Objects {
   Transform {
     Location {
       X: -47.8036118
-      Y: -33.6358299
+      Y: -40.6340103
       Z: 10.9439154
     }
     Rotation {
@@ -76,7 +76,7 @@ Objects {
       Roll: 130
     }
     Scale {
-      X: 0.156376019
+      X: 0.16
       Y: 0.00781866163
       Z: 0.433747
     }

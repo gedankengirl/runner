@@ -12,10 +12,11 @@ local PER_PLAYER_COOLDOWN = COMPONENT_ROOT:GetCustomProperty("PerPlayerCooldown"
 
 -- NB!: customization-related values
 local TELEPORTER = script.parent
-local LVL_REQ = TELEPORTER:GetCustomProperty("LevelReq") or 0
-local BUSINESS_LOGIC = _G.req("BusinessLogic")
+local S = _G.req("StaticData")
+local B = _G.req("BusinessLogic")
+local AREA = TELEPORTER:GetCustomProperty("Area") or "Hub"
+local LVL_REQ = assert(S.AreaLvlReq[AREA], AREA)
 
-assert (LVL_REQ, "either the parent object or its custom property has not been found")
 assert (TARGET, "no target assigned")
 
 -- Check user properties
@@ -36,7 +37,7 @@ local useTime = 0.0
 -- Try to teleport the player, checking appropriate conditions
 function TryTeleportPlayer(player)
 	-- Check if Player's level meets the teleporter's level requirement
-	local level = player:GetResource(BUSINESS_LOGIC.REBIRTH_KEY)
+	local level = player:GetResource(B.REBIRTH_KEY)
     if level < LVL_REQ then
 		return
 	end
@@ -70,7 +71,7 @@ function TryTeleportPlayer(player)
 
 	useTime = time()
 	player.serverUserData.TeleporterServer_TeleportTime = time()
-	
+
 	_G.TeleporterServer.isTeleporting = false
 end
 

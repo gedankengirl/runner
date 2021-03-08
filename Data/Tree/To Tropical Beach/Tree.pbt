@@ -46,6 +46,18 @@ Objects {
           String: "TeleporterWithBarrier"
         }
         Overrides {
+          Name: "Position"
+          Vector {
+            X: 43.720459
+            Y: 27.3649788
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
+        Overrides {
           Name: "Scale"
           Vector {
             X: 1
@@ -54,15 +66,8 @@ Objects {
           }
         }
         Overrides {
-          Name: "Position"
-          Vector {
-            X: 43.720459
-            Y: 27.3649788
-          }
-        }
-        Overrides {
-          Name: "cs:LevelReq"
-          Int: 10
+          Name: "cs:Area"
+          String: "Tropical"
         }
         Overrides {
           Name: "cs:Target"
@@ -83,7 +88,7 @@ Objects {
   Transform {
     Location {
       X: -47.8027954
-      Y: -29.4481888
+      Y: -32.0415878
       Z: 10.9439154
     }
     Rotation {

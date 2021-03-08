@@ -1,8 +1,9 @@
-local teleporter = script:FindAncestorByName("TeleporterWithBarrier")
-local levelReq = teleporter:GetCustomProperty("LevelReq")
+local TELEPORTER = script:FindAncestorByName("TeleporterWithBarrier")
+local S = _G.req("StaticData")
+local AREA = TELEPORTER:GetCustomProperty("Area")
+local LVL_REQ = assert(S.AreaLvlReq[AREA], AREA)
 local textDisplay = script.parent
 
-assert (teleporter, "no script's parent named Teleporter was found")
-assert (levelReq > 0, "level requirement for a padlock must be greater than zero")
+assert (TELEPORTER, "no script's parent named Teleporter was found")
 
-textDisplay.text = string.format("%d", levelReq)
+textDisplay.text = string.format("%d", LVL_REQ)

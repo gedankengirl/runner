@@ -1,10 +1,10 @@
 local trigger = script.parent
 local teleporter = trigger.parent
-local levelRequirement = teleporter:GetCustomProperty("LevelReq")
 local businessLogic = _G.req("BusinessLogic")
+local S = _G.req("StaticData")
+local AREA = teleporter:GetCustomProperty("Area")
+local levelRequirement = assert(S.AreaLvlReq[AREA], AREA)
 
-assert (levelRequirement, "either the parent object or its custom property has not been found")
-assert (levelRequirement > 0, "the field value must be greater than zero")
 assert (trigger:IsA("Trigger"), "no trigger has been found")
 
 local THROWBACK_DISTANCE = 50

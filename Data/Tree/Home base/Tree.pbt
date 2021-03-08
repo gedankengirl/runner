@@ -1,6 +1,75 @@
 Name: "Home base"
 RootId: 10665984139206756167
 Objects {
+  Id: 7713243401267170714
+  Name: "Veggie Village Buildings"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 10665984139206756167
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 94875799561014693
+      value {
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: 3320.14063
+            Y: 4561.45703
+            Z: 106.411743
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 14147038148445772823
+      value {
+        Overrides {
+          Name: "Name"
+          String: "Veggie Village Buildings"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            Z: 1035.26855
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 14898788673487367498
+      value {
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -2747.35938
+            Y: 4856.57031
+            Z: 106.411743
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 78287327798386972
+    }
+  }
+}
+Objects {
   Id: 14139637125947873166
   Name: "Board"
   Transform {
@@ -284,28 +353,29 @@ Objects {
   ParentId: 11063045104577878287
   UnregisteredParameters {
     Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: true
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:utile"
+      Float: 64
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:vtile"
+      Float: 64
+    }
+    Overrides {
       Name: "ma:Shared_BaseMaterial:id"
       AssetReference {
         Id: 931223171687548630
       }
     }
     Overrides {
-      Name: "ma:Shared_BaseMaterial:smart"
-      Bool: false
-    }
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:utile"
-      Float: 62.2771759
-    }
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:vtile"
-      Float: 62.2771759
-    }
-    Overrides {
       Name: "ma:Shared_BaseMaterial:color"
       Color {
-        R: 0.38095212
+        R: 0.560000181
         G: 1
+        B: 0.370000064
         A: 1
       }
     }

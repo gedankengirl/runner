@@ -15,12 +15,43 @@ Assets {
             Z: 0.948308408
           }
         }
-        ParentId: 15346583032969552003
+        ParentId: 4781671109827199097
         ChildIds: 11509079182486098657
         ChildIds: 5237423950651846820
         ChildIds: 3031795039480674306
         ChildIds: 3257178673025151841
         ChildIds: 11365938226586189180
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:PetStand"
+            ObjectReference {
+            }
+          }
+          Overrides {
+            Name: "cs:PetListRoot"
+            ObjectReference {
+              SubObjectId: 14388256271650388985
+            }
+          }
+          Overrides {
+            Name: "cs:TextLineTemplate"
+            AssetReference {
+              Id: 14391479455143692041
+            }
+          }
+          Overrides {
+            Name: "cs:ColorCodesRoot"
+            ObjectReference {
+              SubObjectId: 58584741166383620
+            }
+          }
+          Overrides {
+            Name: "cs:ColorCodeTemplate"
+            AssetReference {
+              Id: 5147190332510817502
+            }
+          }
+        }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -29,6 +60,7 @@ Assets {
         }
         Folder {
           IsFilePartition: true
+          FilePartitionName: "_PetMenuBoard"
         }
       }
       Objects {
@@ -351,9 +383,9 @@ Assets {
           Overrides {
             Name: "cs:PetStand"
             ObjectReference {
-              SelfId: 18231602413142375651
+              SelfId: 6958221722442217909
               SubObjectId: 533442655076706862
-              InstanceId: 748185562021921416
+              InstanceId: 16821036535158127246
               TemplateId: 12943947732222281349
             }
           }
