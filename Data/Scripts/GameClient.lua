@@ -8,15 +8,18 @@ local P = _G.req("Protocols")
 local S = _G.req("StaticData")
 local pp = _G.req("_Luapp").pp
 local DOWNLINK = script:GetCustomProperty("DOWNLINK"):WaitForObject()
-local STATIC_CONTEXT = script:GetCustomProperty("StaticContext"):WaitForObject()
 local LOCAL_PLAYER = Game.GetLocalPlayer()
 local INVENTORY_ROOT = assert(script:GetCustomProperty("InventoryRoot"):WaitForObject())
+
+local INGAME_CAMERA = LOCAL_PLAYER:GetDefaultCamera()
 local INVENTORY_CAM = script:GetCustomProperty("InventoryCamera"):WaitForObject()
 assert(not INVENTORY_CAM.followPlayer and not INVENTORY_CAM.useCameraSocket)
-local DEFAULT_CAM = LOCAL_PLAYER:GetActiveCamera()
+local CAMERA_LERP_TIME = 0.5
+
+
 local Tile = require(script:GetCustomProperty("Tile"))
 local Actor = require(script:GetCustomProperty("Actor"))
-Actor.SetDb(S.PetDb)
+Actor.SetDb(S.PetDb) -- FIXME: to req
 
 local COLOR_DEFAULT = Color.New(1, 1, 1, 0.5)
 local COLOR_MOVE = Color.New(1, 1, 0, 0.5)
@@ -43,7 +46,6 @@ local CAMERA_RELATIVE_TRANSFORM = Transform.New(
     Vector3.ONE
 )
 
-local INGAME_CAMERA = LOCAL_PLAYER:GetDefaultCamera()
 
 local _maid = Maid.New(script)
 -----------------------------------------------------------------------------
@@ -71,6 +73,12 @@ local function _show_cursor(show)
     UI.SetCursorVisible(show)
     UI.SetCursorLockedToViewport(not show)
     UI.SetCanCursorInteractWithUI(show)
+end
+
+local function _set_camera(cam, instant)
+    if LOCAL_PLAYER:GetDefaultCamera() ~= cam then
+        LOCAL_PLAYER:SetDefaultCamera(cam, instant and 0 or CAMERA_LERP_TIME)
+    end
 end
 
 -----------------------------------------------------------------------------
@@ -203,11 +211,9 @@ end
 --------------------------
 -- In Game State
 --------------------------
-function INGAME:Enter(_from)
+function INGAME:Enter(from)
     self.isInteractionEnabled = true
-    if LOCAL_PLAYER:GetDefaultCamera() ~= DEFAULT_CAM then
-        LOCAL_PLAYER:SetDefaultCamera(DEFAULT_CAM)
-    end
+    _set_camera(INGAME_CAMERA, from == INVENTORY and "instant")
     REvents.BroadcastToServer(P.C2S.TurnEquipmentOn)
 end
 
@@ -248,7 +254,7 @@ function SHOP:Enter(from, shop_id, egg_id, camera)
     end
     self.isInteractionEnabled = true
     _show_cursor(true)
-    LOCAL_PLAYER:SetDefaultCamera(self._camera)
+    _set_camera(self._camera)
     local ok, msg = B.CanBuyEgg(LOCAL_PLAYER, self._egg_id, _maid.grid)
     REvents.Broadcast(P.CLIENT.ENTER_SHOP_STATE, self._shop_id, ok, msg)
 end
@@ -540,7 +546,7 @@ function INVENTORY:_StartCamera()
     initialPosition.y = CoreMath.Clamp(initialPosition.y, ext.neg_y, ext.pos_y)
     INVENTORY_CAM:SetPosition(initialPosition)
     INVENTORY_CAM:SetRotation(initialRotation)
-    LOCAL_PLAYER:SetDefaultCamera(INVENTORY_CAM)
+    _set_camera(INVENTORY_CAM, "instant")
     self.interactionPlane = {
         script:GetTransform():TransformPosition(Vector3.UP * INTERACTION_PLANE_HEIGHT),
         script:GetTransform():GetUpVector()
