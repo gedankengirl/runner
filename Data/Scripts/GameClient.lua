@@ -611,6 +611,7 @@ do -- main
         [P.CLIENT.EGG_HATCHED] = {"HandleEggHatched"},
         [P.CLIENT.SHOP_INTERACTED]  = {"HandleShopInteraction"},
         [P.CLIENT.EXIT_SHOP]  = {"HandleExitShop"},
+        ["ability_extra_33"]  = {"HandleExitShop"}, -- press `F` to live the shop
     })
     ISM:Connect(LOCAL_PLAYER.bindingPressedEvent, function(_player, binding) ISM:MapToStateHandler(binding, 1) end)
     ISM:Connect(LOCAL_PLAYER.bindingReleasedEvent, function(_player, binding) ISM:MapToStateHandler(binding, 2) end)

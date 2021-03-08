@@ -109,9 +109,13 @@ local OnEnterShopState, OnShopExit do
     end
 
     OnShopExit = function()
+        --TODO: restore stand's look
+
+
+        -- shoul be at the end of the callback
+        Task.Wait(0.5)
         _maid.onInteractedEvent = TRIGGER.interactedEvent:Connect(OnInteractedEvent)
         TRIGGER.isInteractable = true
-        --TODO: restore stand's look
     end
 end -- do
 
