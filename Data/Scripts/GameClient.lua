@@ -213,7 +213,7 @@ end
 --------------------------
 function INGAME:Enter(from)
     self.isInteractionEnabled = true
-    _set_camera(INGAME_CAMERA, from == INVENTORY and "instant")
+    _set_camera(INGAME_CAMERA, "instant")
     REvents.BroadcastToServer(P.C2S.TurnEquipmentOn)
 end
 
