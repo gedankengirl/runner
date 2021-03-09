@@ -14,13 +14,18 @@ local TIME_TO_SHOW = PET_STAND:GetCustomProperty("TimeToShow")
 local EGG_ID = PET_STAND:GetCustomProperty("EggId")
 
 local SIGNBOARD = script:GetCustomProperty("DroidGeo"):WaitForObject()
+
+
 local PIPE = script:GetCustomProperty("Pipe"):WaitForObject()
 local PIPE_TR = PIPE:GetTransform()
+local PIPE_COLOR = Color.FromLinearHex("23EAFF41")
+PIPE:SetColor(PIPE_COLOR) -- Core qwirk: can't GetColor before SetColor from script!
+local PIPE_COLOR_BW = PIPE_COLOR:GetDesaturated(0.5)
 
 -- UI
 local UI_CONTAINER = script:GetCustomProperty("StandUIContainer"):WaitForObject()
 local BUY_BUTTON = script:GetCustomProperty("BuyButton"):WaitForObject()
-BUY_BUTTON.text = tostring(S.EggDb[EGG_ID].price).."SC"
+BUY_BUTTON.text = tostring(S.EggDb[EGG_ID].price).." Speed"
 local EXIT_BUTTON = script:GetCustomProperty("ExitButton"):WaitForObject()
 
 local SIGNBOARD_AMPLITUDE = Vector3.New(0, 0, 20)
@@ -71,18 +76,19 @@ for _i , petMuid in ipairs(PET_TEMPLATES) do
     PETS[#PETS+1] = World.SpawnAsset(muid, PET_SPAWN_PARAMS)
 end
 
+-- TEMP Color.FromLinearHex("23EAFF41")
 local function _show_or_hide_pipe(show)
     if show then
-        PIPE_SPR:ToAnim():Target("Scale", Vector3.New(7,7,7))(PIPE):Run()
+        PIPE_SPR:ToAnim()(PIPE):Target("Scale", Vector3.New(7,7,7))(PIPE):Run()
         PIPE_SPR:ToAnim():Target("Position", Vector3.New(0,0,-290))(PIPE):Run()
-        PIPE_SPR:ToAnim():Target("Color", Color.FromLinearHex("23EAFF41"):GetDesaturated(0.5))(PIPE):Run()
+        PIPE_SPR:ToAnim():Target("Color", PIPE_COLOR_BW)(PIPE):Run()
         PIPE_SPR:ToAnim():Target("Scale", 0.5*EGG_TR:GetScale())(EGG_GROUP):Run()
         PIPE_SPR:ToAnim():Target("Position", Vector3.New(0, 0, -50))(EGG_GROUP):Run()
         PIPE_SPR:ToAnim():Target("Position", Vector3.New(0, 300, 0))(SIGNBOARD):Run()
     else
         PIPE_SPR:ToAnim():Target("Scale", PIPE_TR:GetScale())(PIPE):Run()
         PIPE_SPR:ToAnim():Target("Position", PIPE_TR:GetScale())(PIPE):Run()
-        PIPE_SPR:ToAnim():Target("Color", Color.FromLinearHex("23EAFF41"))(PIPE):Run()
+        PIPE_SPR:ToAnim():Target("Color", PIPE_COLOR)(PIPE):Run()
         PIPE_SPR:ToAnim():Target("Scale", EGG_TR:GetScale())(EGG_GROUP):Run()
         PIPE_SPR:ToAnim():Target("Position", Vector3.ZERO)(EGG_GROUP):Run()
         PIPE_SPR:ToAnim():Target("Position", Vector3.ZERO)(SIGNBOARD):Run()
@@ -112,57 +118,65 @@ local function _show_or_hide_pets(show)
     end
 end
 
-local OnEnterShopState, OnShopExit do
+-- Flow: interaction -> wait for Shop state -> wait for Ingame state
+local OnEnterShop, OnLeaveShop, OnCanBuyEgg do
 
     local function OnInteractedEvent(_trigger, player)
         if player:IsA("Player") and player == LOCAL_PLAYER then
-            _maid.waitForResponse = Events.Connect(P.CLIENT.ENTER_SHOP_STATE, OnEnterShopState)
-            _maid.onInteractedEvent = nil
+            _maid.onCanBuyEgg = Events.Connect(P.CLIENT.CAN_BUY_EGG, OnCanBuyEgg)
+            _maid.shop_flow = Events.Connect("ISM:Shop:Entered", OnEnterShop)
             REvents.Broadcast(P.CLIENT.SHOP_INTERACTED, THIS_STAND_ID, EGG_ID, CAMERA)
         end
     end
-    _maid.onInteractedEvent = TRIGGER.interactedEvent:Connect(OnInteractedEvent)
+    -- _maid.onInteractedEvent = TRIGGER.interactedEvent:Connect(OnInteractedEvent)
+    _maid.shop_flow = TRIGGER.interactedEvent:Connect(OnInteractedEvent)
 
     -- TODO: use cant_buy_reason in UI (notification)
-    OnEnterShopState = function(shop_id, can_buy, cant_buy_reason)
-        assert(shop_id == THIS_STAND_ID)
-        _maid.waitForResponse = nil
+    OnEnterShop = function()
         TRIGGER.isInteractable = false
-        _maid.onShopExit = Events.Connect("ISM:InGame:Enter", OnShopExit)
-        BUY_BUTTON.isInteractable = can_buy
+        _maid.shop_flow = Events.Connect("ISM:InGame:Entering", OnLeaveShop)
         -- change stand's look
         _show_or_hide_pipe("show")
         _show_or_hide_pets("show")
     end
 
-    _maid:GiveTask(Events.Connect("ISM:Shop:Enter", function()
+    OnLeaveShop = function()
+        _show_or_hide_pipe(not "show")
+        _show_or_hide_pets(not "show")
+        _maid.onCanBuyEgg = nil
+        _maid.shop_flow = nil
+        -- should be at the end of the callback: wait before turn-on shop's interactivity
+        Task.Wait(0.5)
+        _maid.onInteractedEvent = TRIGGER.interactedEvent:Connect(OnInteractedEvent)
+        TRIGGER.isInteractable = true
+    end
+
+    OnCanBuyEgg = function(shop_id, can_buy, cant_buy_reason)
+        assert(shop_id == THIS_STAND_ID)
+        BUY_BUTTON.isInteractable = can_buy
+    end
+
+     _maid:GiveTask(Events.Connect("ISM:Shop:Entered", function()
         UI_CONTAINER.visibility = Visibility.INHERIT
     end))
 
-    _maid:GiveTask(Events.Connect("ISM:Shop:Exit", function()
+    _maid:GiveTask(Events.Connect("ISM:Shop:Exited", function()
         UI_CONTAINER.visibility = Visibility.FORCE_OFF
     end))
 
     do -- hides annoying shop interactivity prompt in inventory
         local _save_TRIGGER_isInteractable = false
-        _maid:GiveTask(Events.Connect("ISM:Inventory:Enter", function()
+        _maid:GiveTask(Events.Connect("ISM:Inventory:Entering", function()
             _save_TRIGGER_isInteractable = TRIGGER.isInteractable
             TRIGGER.isInteractable = false
         end))
 
-        _maid:GiveTask(Events.Connect("ISM:Inventory:Exit", function()
+        _maid:GiveTask(Events.Connect("ISM:Inventory:Exiting", function()
             TRIGGER.isInteractable = _save_TRIGGER_isInteractable
         end))
     end
 
-    OnShopExit = function()
-        _show_or_hide_pipe(not "show")
-        _show_or_hide_pets(not "show")
-        -- should be at the end of the callback
-        Task.Wait(0.5)
-        _maid.onInteractedEvent = TRIGGER.interactedEvent:Connect(OnInteractedEvent)
-        TRIGGER.isInteractable = true
-    end
+
 end -- do
 
 
@@ -171,7 +185,7 @@ _maid.buy = BUY_BUTTON.clickedEvent:Connect(function()
 end)
 
 _maid.exit = EXIT_BUTTON.clickedEvent:Connect(function()
-    REvents.Broadcast(P.CLIENT.EXIT_SHOP)
+    REvents.Broadcast(P.CLIENT.LEAVE_SHOP)
 end)
 
 

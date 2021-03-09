@@ -75,9 +75,9 @@ local function _show_cursor(show)
     UI.SetCanCursorInteractWithUI(show)
 end
 
-local function _set_camera(cam, instant)
+local function _set_camera(cam, lerp)
     if LOCAL_PLAYER:GetDefaultCamera() ~= cam then
-        LOCAL_PLAYER:SetDefaultCamera(cam, instant and 0 or CAMERA_LERP_TIME)
+        LOCAL_PLAYER:SetDefaultCamera(cam, lerp and CAMERA_LERP_TIME or 0)
     end
 end
 
@@ -213,7 +213,7 @@ end
 --------------------------
 function INGAME:Enter(from)
     self.isInteractionEnabled = true
-    _set_camera(INGAME_CAMERA, "instant")
+    _set_camera(INGAME_CAMERA)
     REvents.BroadcastToServer(P.C2S.TurnEquipmentOn)
 end
 
@@ -247,22 +247,21 @@ end
 
 function SHOP:Enter(from, shop_id, egg_id, camera)
     self._from = from
-    if from == INGAME then
+    if shop_id then
         self._shop_id = shop_id
-        self._egg_id = egg_id
-        self._camera = camera
+        self._egg_id = assert(egg_id)
+        self._camera = assert(camera)
     end
     self.isInteractionEnabled = true
     _show_cursor(true)
-    _set_camera(self._camera)
+    _set_camera(self._camera, from ~= INVENTORY)
     local ok, msg = B.CanBuyEgg(LOCAL_PLAYER, self._egg_id, _maid.grid)
-    REvents.Broadcast(P.CLIENT.ENTER_SHOP_STATE, self._shop_id, ok, msg)
+    REvents.Broadcast(P.CLIENT.CAN_BUY_EGG, self._shop_id, ok, msg)
 end
 
 function SHOP:Exit()
     self.isInteractionEnabled = false
     _show_cursor(false)
-    self._from, self._shop_id = nil, nil
 end
 
 function SHOP:HandleInventoryBinding()
@@ -273,6 +272,7 @@ end
 
 function SHOP:HandleExitShop()
     ISM:GoToState(INGAME)
+    self._from, self._shop_id = nil, nil
 end
 
 function SHOP:HandleModal(modal_arg)
@@ -546,7 +546,7 @@ function INVENTORY:_StartCamera()
     initialPosition.y = CoreMath.Clamp(initialPosition.y, ext.neg_y, ext.pos_y)
     INVENTORY_CAM:SetPosition(initialPosition)
     INVENTORY_CAM:SetRotation(initialRotation)
-    _set_camera(INVENTORY_CAM, "instant")
+    _set_camera(INVENTORY_CAM)
     self.interactionPlane = {
         script:GetTransform():TransformPosition(Vector3.UP * INTERACTION_PLANE_HEIGHT),
         script:GetTransform():GetUpVector()
@@ -610,7 +610,7 @@ do -- main
         [P.CLIENT.MODAL] = {"HandleModal"}, -- +1 arg
         [P.CLIENT.EGG_HATCHED] = {"HandleEggHatched"},
         [P.CLIENT.SHOP_INTERACTED]  = {"HandleShopInteraction"},
-        [P.CLIENT.EXIT_SHOP]  = {"HandleExitShop"},
+        [P.CLIENT.LEAVE_SHOP]  = {"HandleExitShop"},
         ["ability_extra_33"]  = {"HandleExitShop"}, -- press `F` to live the shop
     })
     ISM:Connect(LOCAL_PLAYER.bindingPressedEvent, function(_player, binding) ISM:MapToStateHandler(binding, 1) end)
@@ -618,7 +618,7 @@ do -- main
     ISM:Connect(Events, function(...) ISM:MapToStateHandler(P.CLIENT.MODAL, 1, ...) end, P.CLIENT.MODAL)
     ISM:Connect(Events, function(...) ISM:MapToStateHandler(P.CLIENT.EGG_HATCHED, 1, ...) end, P.CLIENT.EGG_HATCHED)
     ISM:Connect(Events, function(...) ISM:MapToStateHandler(P.CLIENT.SHOP_INTERACTED, 1, ...) end, P.CLIENT.SHOP_INTERACTED)
-    ISM:Connect(Events, function(...) ISM:MapToStateHandler(P.CLIENT.EXIT_SHOP, 1, ...) end, P.CLIENT.EXIT_SHOP)
+    ISM:Connect(Events, function(...) ISM:MapToStateHandler(P.CLIENT.LEAVE_SHOP, 1, ...) end, P.CLIENT.LEAVE_SHOP)
 
     ISM:GoToState(INGAME)
 

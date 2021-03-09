@@ -173,8 +173,8 @@ Protocols.CLIENT = {
     MODAL = "%Interactions_Modal", -- + 1 modal_arg
     POPUP = "%Show_Popup",
     SHOP_INTERACTED = "%ShopInteracted",
-    ENTER_SHOP_STATE = "%EnterShopState",
-    EXIT_SHOP = "%ExitShop",
+    CAN_BUY_EGG = "%CanBuyEgg",
+    LEAVE_SHOP = "%LeaveShop",
 }
 
 Protocols.MODAL_ARG = {
