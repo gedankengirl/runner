@@ -23,6 +23,7 @@ Objects {
   ChildIds: 12187569197149205462
   ChildIds: 3924873657808812146
   ChildIds: 7553754998792656332
+  ChildIds: 12745252973911407533
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -32,6 +33,35 @@ Objects {
     Value: "mc:evisibilitysetting:forceon"
   }
   Folder {
+  }
+}
+Objects {
+  Id: 12745252973911407533
+  Name: "LightningSymbols"
+  Transform {
+    Location {
+      X: -16538.8477
+      Y: 22172.0254
+      Z: 1004.20795
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "LightningSymbols"
   }
 }
 Objects {
