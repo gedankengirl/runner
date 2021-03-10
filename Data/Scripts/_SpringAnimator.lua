@@ -8,6 +8,8 @@
     Copyright (c) 2020 Parker Stebbins. All rights reserved.
 
     Distributed under the MIT license.
+
+    NOTE: I'm not happy with API, in the future we should use spr's wrap-unwrap technique and lua arrays.
 ]]
 
 -- mostly for testing in console
@@ -121,12 +123,6 @@ local function _typeof(v)
     return (lua_type == "userdata" or lua_type == "table") and v.type and v.type or lua_type
 end
 
-local function _same_type(a, b)
-    local ta, tb = _typeof(a), _typeof(b)
-    if ta == tb then  return true end
-    return false, string.format("arguments not the same type: '%s' and '%s'", ta, tb)
-end
-
 local function _type(val, type, msg)
     local tval = _typeof(val)
     if tval == type then return true end
@@ -184,7 +180,11 @@ local _SETTING_METHODS = not CORE_ENV and {} or {
         lerp = _lerp_02
     },
     Color = {
-        -- TODO: good color space for lerping color (cieluv?)
+        -- CoreObject does not have Get/SetColor, CoreMesh does
+        get=function(obj)
+            return obj:GetColor()
+        end,
+        set=function(obj, c) obj:SetColor(c) end,
         lerp = _lerp_color_02
     }
 }
@@ -553,7 +553,7 @@ end
 -- To make `SpringAnimator` from `SpringParams`
 function SpringParams:ToAnim(randomize, factor)
     local anim = setmetatable({}, SpringAnimator)
-    local params = randomize and anim:RandomizeFrequency(factor) or self:Copy()
+    local params = randomize and self:RandomizeFrequency(factor) or self:Copy()
     anim._spring = Spring.New(params, 0)
     -- save state for reset
     anim._p0 = anim._spring:GetPosition()
@@ -711,30 +711,18 @@ end
 
 -- Sets animation `goal` to goal value
 function SpringAnimator:SetGoal(goal)
-    assert(self._methods, "no methods")
-    local instance = self:_get_instance() or _DUMMY
-    local value = self._methods.get(instance)
-    assert(_same_type(value, goal))
     self._goal = goal
     return self
 end
 
 -- Sets animation goal by adding `offset` to itanstance's `origin` property value.
 function SpringAnimator:SetGoalByOffset(offset)
-    assert(self._methods, "no methods")
-    local instance = self:_get_instance() or _DUMMY
-    local value = self._methods.get(instance)
-    assert(_same_type(value, offset))
     self._offset = offset
     return self
 end
 
 -- Adds impulse to radius direction, with undumped amplitude = 2*radius
 function SpringAnimator:Nudge(radius)
-    assert(self._methods, "no methods")
-    local instance = self:_get_instance() or _DUMMY
-    local value = self._methods.get(instance)
-    assert(_same_type(value, radius))
     self._offset = radius
     -- swap origin and goal, set state to (p = 1, v = -omega)
     self._swap = true

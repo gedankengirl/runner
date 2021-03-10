@@ -85,7 +85,7 @@ end
 
 -- test helper
 local function _assert_heap_invariant(self, k)
-    local msg =  "ERROR -- order invariant not hold"
+    local msg =  "ERROR -- order invariant does not hold."
     k = k or 1
     local comp = self._comp
     if k > self._n then

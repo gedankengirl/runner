@@ -64,7 +64,9 @@ local function _nonce(self)
 end
 
 local function _make_basic_inventory()
-    return Grid.New(5, 5, 100, 100):MakeHole(0,0):MakeHole(0,4)
+    return Grid.New(5, 6, 100, 100)
+        :MakeHole(0,0):MakeHole(0,4)
+        :MakeHole(1,0):MakeHole(1,1):MakeHole(1,2):MakeHole(1,3):MakeHole(1,4)
 end
 local function _make_debug_inventory()
     local gr = Grid.New(5,5,100,100):MakeHole(0,0):MakeHole(0,4)
@@ -86,7 +88,7 @@ PlayerConnection.__index = PlayerConnection
 function PlayerConnection.New(player)
     local playerData = B.LoadSave(player)
     local saved_inventory = playerData[B.INVENTORY_KEY]
-    local inventory = saved_inventory and P.S2C.INVENTORY.unpack(saved_inventory, Grid.deserialize) or _make_debug_inventory()
+    local inventory = saved_inventory and P.S2C.INVENTORY.unpack(saved_inventory, Grid.deserialize) or _make_basic_inventory()
     local self = setmetatable({
         _maid = Maid.New(),
         player = player,
@@ -135,7 +137,7 @@ function PlayerConnection:OnTHE(egg)
         assert(not cell.actor)
         cell.actor = {id=pet_id}
         B.SaveKey(self.player, B.INVENTORY_KEY,  P.S2C.INVENTORY.pack(self.inventory:serialize(true), UNNONCE_SYMBOL))
-        -- B.RecalculatePetBonus(self.player, self.inventory) -- not needed, PurchaseEgg dont using equpping slots
+        B.RecalculatePetBonus(self.player, self.inventory)
     else
         -- TODO: what to do with reson at server?
         local reason = pet_id

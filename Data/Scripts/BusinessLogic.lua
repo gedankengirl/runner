@@ -213,9 +213,7 @@ function BusinessLogic.CanBuyEgg(player, egg_id, grid)
     end
     local egg = S.EggDb[egg_id]
     local price = egg.price
-    local free_cell = grid:Search(function(cell)
-        return cell:IsFree() and cell.row ~ EQUIPPED_ROW
-    end)
+    local free_cell = grid:Search(function(cell) return cell:IsFree() end)
     if not free_cell then
         return false, "No free inventory space."
     end
@@ -236,9 +234,7 @@ function BusinessLogic.PurchaseEgg(player, egg_id, grid)
     local price = egg.price
     ok, message = subtractCoins(player, price)
     if ok then
-        local free_cell = grid:Search(function(cell)
-            return cell:IsFree() and cell.row ~ EQUIPPED_ROW
-        end)
+        local free_cell = grid:Search(function(cell) return cell:IsFree() end)
         local gacha = egg.gacha
         local pet_name = weightedchoice(gacha)
         local pet_id = S.PetDb:GetIDByName(pet_name)

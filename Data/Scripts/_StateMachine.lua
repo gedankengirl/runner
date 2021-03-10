@@ -16,8 +16,9 @@ local State = {type="StateMachine.State"}
 State.__index = State
 local START = setmetatable({name="_START"}, State)
 
+-- @param name: string
 function StateMachine.New(name)
-    name = name or "SM"
+    assert(name and type(name) == "string")
     return setmetatable({
         name = name,
         states = {},
@@ -67,13 +68,15 @@ function StateMachine:GoToState(nextState, ...)
     local previousState = self.currentState
     if previousState and previousState.name == nextState then return end
     if previousState and previousState.Exit then
+        REvents.Broadcast(previousState.exiting_event)
         previousState:Exit()
-        REvents.Broadcast(previousState.exit_event)
+        REvents.Broadcast(previousState.exited_event)
     end
     self.currentState = nextState
     if nextState.Enter then
+        REvents.Broadcast(nextState.entering_event)
         nextState:Enter(previousState, ...)
-        REvents.Broadcast(nextState.enter_event)
+        REvents.Broadcast(nextState.entered_event)
     end
     self._maid.update = nextState.Update and _spawnUpdate(nextState, nextState.Update)
 end
@@ -82,8 +85,10 @@ function StateMachine:AddState(name)
     local state = setmetatable({
         name=name,
         _sm = self,
-        enter_event = string.format("%s:%s:Enter", self.name, name),
-        exit_event = string.format("%s:%s:Exit", self.name, name)
+        entering_event = string.format("%s:%s:Entering", self.name, name),
+        exiting_event = string.format("%s:%s:Exiting", self.name, name),
+        entered_event = string.format("%s:%s:Entered", self.name, name),
+        exited_event = string.format("%s:%s:Exited", self.name, name),
         }, State)
     self.states[name] = state
     return state

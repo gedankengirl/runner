@@ -26,7 +26,7 @@ Assets {
           }
           Overrides {
             Name: "cs:EggId"
-            String: "Disco"
+            String: "Garden"
           }
         }
         Collidable_v2 {
@@ -47,6 +47,7 @@ Assets {
             Z: 98.6982117
           }
           Rotation {
+            Yaw: -90
           }
           Scale {
             X: 1.57538247
@@ -1147,6 +1148,7 @@ Assets {
           Location {
           }
           Rotation {
+            Yaw: 90
           }
           Scale {
             X: 1
@@ -2163,7 +2165,7 @@ Assets {
           }
         }
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
+          Value: "mc:ecollisionsetting:forceoff"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
@@ -2188,7 +2190,7 @@ Assets {
       }
       Objects {
         Id: 18113796287324508472
-        Name: "EggGroup"
+        Name: "EggRoot"
         Transform {
           Location {
             Z: 130
@@ -2203,7 +2205,7 @@ Assets {
         }
         ParentId: 9583416130571679258
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
+          Value: "mc:ecollisionsetting:forceoff"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
@@ -2217,11 +2219,10 @@ Assets {
         Name: "Camera"
         Transform {
           Location {
-            Y: 199.999985
-            Z: 120
+            X: -200
+            Z: 130
           }
           Rotation {
-            Yaw: -90
           }
           Scale {
             X: 0.99999994
@@ -2230,6 +2231,7 @@ Assets {
           }
         }
         ParentId: 9583416130571679258
+        ChildIds: 8931169506861916804
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -2250,6 +2252,33 @@ Assets {
           }
           MinPitch: -89
           MaxPitch: 89
+        }
+      }
+      Objects {
+        Id: 8931169506861916804
+        Name: "LookAtMark"
+        Transform {
+          Location {
+            X: 50
+            Z: -55
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 12335828607542351436
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
         }
       }
       Objects {
@@ -2359,7 +2388,7 @@ Assets {
             }
           }
           Overrides {
-            Name: "cs:Egg"
+            Name: "cs:EggRoot"
             ObjectReference {
               SubObjectId: 18113796287324508472
             }
@@ -2388,6 +2417,12 @@ Assets {
               SubObjectId: 17532657271730734529
             }
           }
+          Overrides {
+            Name: "cs:LookAtMark"
+            ObjectReference {
+              SubObjectId: 8931169506861916804
+            }
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -2409,6 +2444,7 @@ Assets {
             Z: -315
           }
           Rotation {
+            Yaw: 180
           }
           Scale {
             X: 0.99999994
@@ -2436,8 +2472,9 @@ Assets {
         Name: "1"
         Transform {
           Location {
-            X: -84.9999924
-            Z: 399.966248
+            X: -2.02655774e-05
+            Y: -84.9999695
+            Z: 380
           }
           Rotation {
           }
@@ -2489,8 +2526,9 @@ Assets {
         Name: "3"
         Transform {
           Location {
-            X: 84.9999924
-            Z: 399.966248
+            X: 2.02655774e-05
+            Y: 84.9999695
+            Z: 380
           }
           Rotation {
           }
