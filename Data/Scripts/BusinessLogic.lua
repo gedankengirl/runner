@@ -97,10 +97,19 @@ function BusinessLogic:IsA(typename)
     return typename == BusinessLogic.type and getmetatable(self) == BusinessLogic
 end
 
-local function setSpeed(player, speedcoins)
+local function _setSpeed(player, speedcoins)
     speedcoins = speedcoins <= 0 and 1 or speedcoins
     player:SetResource(COIN_KEY, speedcoins)
     player.maxWalkSpeed = BASE_SPEED + calculateAfforadableAmount(1, COIN_TO_SPEED_RATE, 0, speedcoins)//1
+end
+
+local function enforceSpeed(player, speed)
+    if not speed or type(speed) ~= "number" then
+        local speedcoins = player:GetResource(COIN_KEY) or 1
+        player.maxWalkSpeed = BASE_SPEED + calculateAfforadableAmount(1, COIN_TO_SPEED_RATE, 0, speedcoins)//1
+    else
+        player.maxWalkSpeed = speed
+    end
 end
 
 local function neededForRebirth(rebirth)
@@ -129,7 +138,7 @@ local function doRebirth(player)
     local ok, needed, has, rebirth = isRebirthPossible(player)
     if ok then
         player:SetResource(REBIRTH_KEY, rebirth + 1)
-        setSpeed(player, 0)
+        _setSpeed(player, 0)
         return true, rebirth + 1
     end
     return false, needed, has, rebirth
@@ -143,7 +152,7 @@ local function addCoins(player, multiplier)
     local rebirth = player:GetResource(REBIRTH_KEY) or 0
     local n =  (BASE_CPS + rebirth + petsBonus) * multiplier
     local coins = n + (player:GetResource(COIN_KEY) or 1)
-    setSpeed(player, coins)
+    _setSpeed(player, coins)
     -- DEBUG:
     print(string.format("%s %d %d %d", player.name, n//1, coins//1, player.maxWalkSpeed//1))
 end
@@ -155,7 +164,7 @@ local function subtractCoins(player, price)
     local coins = player:GetResource(COIN_KEY) or 1
     if price <= coins then
        coins = coins - price
-       setSpeed(player, coins)
+       _setSpeed(player, coins)
        return true
     else
         return false, "Insufficient Speed"
@@ -179,7 +188,7 @@ function BusinessLogic.LoadSave(player)
     -- speedcoins
     data[COIN_KEY] = data[COIN_KEY] or 1
     player:SetResource(COIN_KEY, data[COIN_KEY])
-    setSpeed(player, data[COIN_KEY])
+    _setSpeed(player, data[COIN_KEY])
     return data
 end
 
@@ -263,7 +272,7 @@ function BusinessLogic.ResetGame(player)
     player:SetResource(REBIRTH_KEY, data[REBIRTH_KEY])
     data[COIN_KEY] = 1
     player:SetResource(COIN_KEY, data[COIN_KEY])
-    setSpeed(player, data[COIN_KEY])
+    _setSpeed(player, data[COIN_KEY])
     local ok, message = Storage.SetPlayerData(player, data)
     if not ok then
        warn(message)
@@ -277,6 +286,7 @@ BusinessLogic.onClick = onClick
 BusinessLogic.addCoins = addCoins
 BusinessLogic.isRebirthPossible = isRebirthPossible
 BusinessLogic.doRebirth = doRebirth
+BusinessLogic.enforceSpeed = enforceSpeed
 BusinessLogic.COIN_KEY = COIN_KEY
 BusinessLogic.REBIRTH_KEY = REBIRTH_KEY
 BusinessLogic.INVENTORY_KEY = INVENTORY_KEY

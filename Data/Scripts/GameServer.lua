@@ -6,12 +6,35 @@ local Bitarray = _G.req("_Bitarray")
 local Maid = _G.req("_Maid")
 local Trampoline = _G.req("_Trampoline")
 local REvents = _G.req("_ReliableEvents")
+local Heap = _G.req("_Heap")
 local B = _G.req("BusinessLogic")
 local P = _G.req("Protocols")
 local S = _G.req("StaticData")
 local _maid = Maid.New(script)
 local NONCE_SYMBOLS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/'
 local UNNONCE_SYMBOL = '*'
+local PET_HATCH_SOCIAL_DELAY = 10
+
+-- _defer_queue entry:: {fire_at, thunk}, max 10 entries per second
+local _defer_queue = Heap.New(function(a, b) return a[1] < b[1] end)
+_maid.defer_queue = Task.Spawn(function()
+    while true do
+        Task.Wait(0.1)
+        local entry = _defer_queue:Peek()
+        if entry and entry[1] <= time() then
+            local ok, msg = pcall(entry[2])
+            _defer_queue:Pop()
+            if not ok then
+                warn(string.format("SERVER: _defer_queue catch error: %s", msg))
+            end
+        end
+    end
+end)
+
+local function _defer_queue_add(delay, thunk)
+    assert(delay > 0 and type(thunk) == "function")
+    return _defer_queue:Push({time()+delay, thunk})
+end
 
 local DOWNLINK, CHANNELS, IN_USE, SOCIAL do
     DOWNLINK = script:GetCustomProperty("DOWNLINK"):WaitForObject()
@@ -112,18 +135,20 @@ function PlayerConnection:Send(message)
     _post_to_channel(self.channel, message)
 end
 
+-- equipment on
 function PlayerConnection:OnEON()
-    -- PASS
+    -- PASS, see EquipmentServer
 end
 
+-- equipment off
 function PlayerConnection:OnEOF()
-    -- PASS
+    -- PASS, see EquipmentServer
 end
 
 function PlayerConnection:OnAFR()
     local ok, new_rebirth = B.doRebirth(self.player)
     if ok then
-        REvents.Broadcast(P.SOCIAL.REBIRTH.event, self.player, new_rebirth)
+        REvents.Broadcast(P.SOCIAL.REBIRTH.event, self.player.id, new_rebirth)
     end
     print(pp{"on AFR", self.player.name})
 end
@@ -133,7 +158,10 @@ function PlayerConnection:OnTHE(egg)
     if ok then
         local packed = P.S2C.EGG.pack(pet_id, egg, cell.row, cell.col, _nonce(self))
         self:Send(packed)
-        REvents.Broadcast(P.SOCIAL.HATCH.event, self.player, pet_id)
+        local player_id = self.player.id
+        _defer_queue_add(PET_HATCH_SOCIAL_DELAY, function()
+            REvents.Broadcast(P.SOCIAL.HATCH.event, player_id, pet_id)
+        end)
         assert(not cell.actor)
         cell.actor = {id=pet_id}
         B.SaveKey(self.player, B.INVENTORY_KEY,  P.S2C.INVENTORY.pack(self.inventory:serialize(true), UNNONCE_SYMBOL))
@@ -179,7 +207,7 @@ function PlayerConnection:OnTIM(...)
         local _, new_pet_id = S.PetDb:CanUpgrade(pet_id)
         ok = self.inventory:Merge3(dst_cell, src_cell, other_cell, function() return {id=new_pet_id} end)
         if ok then
-            REvents.Broadcast(P.SOCIAL.MERGE.event, self.player, new_pet_id)
+            REvents.Broadcast(P.SOCIAL.MERGE.event, self.player.id, new_pet_id)
         end
     else warn(type)
     end
@@ -256,15 +284,17 @@ function Social.Start()
     _maid:GiveTask(Social._social_tx)
     for _op, protocol in pairs(P.SOCIAL.protocols) do
         local event = protocol.event
-        _maid:GiveTask(Events.Connect(event, function(player, ...)
-            assert(player)
-            player = type(player) == "string" and player or player.id
+        _maid:GiveTask(Events.Connect(event, function(player_id, ...)
+            assert(player_id)
+            if type(player_id) ~= "string" then
+                warn("social broadcast shold use player.id, not player\n"..CoreDebug.GetStackTrace())
+            end
             local n = select("#", ...)
             assert(n == 0 or n == 1)
             if n == 1 then
-                Social:Send(protocol.pack(player, (...), _nonce(Social)))
+                Social:Send(protocol.pack(player_id, (...), _nonce(Social)))
             else
-                Social:Send(protocol.pack(player, _nonce(Social)))
+                Social:Send(protocol.pack(player_id, _nonce(Social)))
             end
         end))
     end

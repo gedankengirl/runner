@@ -7,7 +7,7 @@ Assets {
       RootId: 892419342348043475
       Objects {
         Id: 892419342348043475
-        Name: "EggGroup"
+        Name: "$$EggGroup"
         Transform {
           Scale {
             X: 1
@@ -68,7 +68,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          EnableCameraCollision: true
           InteractWithTriggers: true
           StaticMesh {
             Physics {

@@ -17,9 +17,9 @@ Maid.__index = Maid
 --- Returns a new Maid object
 -- @return Maid
 function Maid.New(core_obj)
-    local self = setmetatable({_tasks = {}}, Maid)
-    if CORE_ENV and core_obj then
-        self:GiveTask(core_obj.destroyEvent:Connect(self))
+    local self = setmetatable({_tasks = {}, }, Maid)
+    if  CORE_ENV and core_obj then
+        self.__parent = core_obj.destroyEvent:Connect(self)
     end
     return self
 end
@@ -96,9 +96,9 @@ function Maid:__newindex(index, newTask)
     _cleanupTask(oldTask)
 end
 
-
 function Maid:__call()
     self:Destroy()
+    _cleanupTask(self.__parent)
 end
 
 --- Same as indexing, but uses an incremented number as a key.
@@ -138,7 +138,7 @@ end
 --- Cleans up all tasks.
 function Maid:Destroy()
     local tasks = self._tasks
-
+    assert(self and self.type == Maid.type, "use `:` not `.`")
     -- Clear out tasks table completely, even if clean up tasks add more tasks to the maid
     local index, task = next(tasks)
     while task ~= nil do
@@ -166,4 +166,5 @@ _test()
 
 -- utility function - destroy something with all nessesary checks
 Maid.safeDestroy = _cleanupTask
+Maid.Reset = Maid.Destroy
 return Maid

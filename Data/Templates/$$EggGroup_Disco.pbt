@@ -7,7 +7,7 @@ Assets {
       RootId: 7248740072616033974
       Objects {
         Id: 7248740072616033974
-        Name: "EggGroup_Disco"
+        Name: "$$EggGroup_Disco"
         Transform {
           Scale {
             X: 1
@@ -68,7 +68,6 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          EnableCameraCollision: true
           InteractWithTriggers: true
           StaticMesh {
             Physics {

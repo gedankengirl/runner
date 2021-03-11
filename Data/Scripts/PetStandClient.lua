@@ -5,12 +5,12 @@ local SP = SA.SpringParams
 local S = _G.req("StaticData")
 local P = _G.req("Protocols")
 local _maid = Maid.New(script)
+local _pmaid = Maid.New(script)
 
 local TRIGGER = script:GetCustomProperty("Trigger"):WaitForObject()
 local CAMERA = script:GetCustomProperty("Camera"):WaitForObject()
 local PET_STAND = script:GetCustomProperty("PetStand"):WaitForObject()
 local THIS_STAND_ID = PET_STAND.id
-local TIME_TO_SHOW = PET_STAND:GetCustomProperty("TimeToShow")
 local EGG_ID = PET_STAND:GetCustomProperty("EggId")
 
 local SIGNBOARD = script:GetCustomProperty("DroidGeo"):WaitForObject()
@@ -26,7 +26,9 @@ local PIPE_COLOR_BW = PIPE_COLOR:GetDesaturated(0.5)
 local UI_CONTAINER = script:GetCustomProperty("StandUIContainer"):WaitForObject()
 local BUY_BUTTON = script:GetCustomProperty("BuyButton"):WaitForObject()
 BUY_BUTTON.text = tostring(S.EggDb[EGG_ID].price).." Speed"
+local BUY_BUTTON_POS = Vector2.New(BUY_BUTTON.x, BUY_BUTTON.y)
 local EXIT_BUTTON = script:GetCustomProperty("ExitButton"):WaitForObject()
+local EXIT_BUTTON_POS = Vector2.New(EXIT_BUTTON.x, EXIT_BUTTON.y)
 
 local SIGNBOARD_AMPLITUDE = Vector3.New(0, 0, 20)
 local PURCHASE_AUDIO1 = script:GetCustomProperty("PurchaseAudio1"):WaitForObject()
@@ -65,19 +67,39 @@ end
 local DROID_SPR = SP.New(0, 0.4)
 local PIPE_SPR = SP.New(1, 4)
 local PET_SPR = SP.New(0.5, 1.5)
+local HATCH_SPR = SP.New(0.05, 10)
+local PET_PRESENT_SPR = SP.New(0.05, 1)
 
 local PETS = {}
 local PET_SPAWN_PARAMS = {
     parent=PET_MARKS_ROOT,
     scale=0.2*Vector3.ONE,
 }
+local PETS_BY_ID = {}
 for _i , petMuid in ipairs(PET_TEMPLATES) do
-    local _id, muid = table.unpack(petMuid)
-    PETS[#PETS+1] = World.SpawnAsset(muid, PET_SPAWN_PARAMS)
+    local pet_id, muid = table.unpack(petMuid)
+    local pet = World.SpawnAsset(muid, PET_SPAWN_PARAMS)
+    PETS[#PETS+1] = pet
+    PETS_BY_ID[pet_id] = pet
 end
 
--- TEMP Color.FromLinearHex("23EAFF41")
+local B_SPR = SP.New(0.4, 2)
+local B_BOTTOM = Vector2.New(0, 500)
+local function _show_or_hide_buy_button(show, both)
+    if show then
+        B_SPR:ToAnim()(BUY_BUTTON):Target("offset", BUY_BUTTON_POS):Run()
+        B_SPR:ToAnim()(EXIT_BUTTON):Target("offset", EXIT_BUTTON_POS):Run()
+    else
+        local v2 = Vector2.New(0, 500)
+        B_SPR:ToAnim()(BUY_BUTTON):Target("offset", B_BOTTOM):Run()
+        if both then
+            B_SPR:ToAnim()(EXIT_BUTTON):Target("offset", B_BOTTOM):Run()
+        end
+    end
+end
+
 local function _show_or_hide_pipe(show)
+    PIPE_SPR:ToAnim():Target("Rotation", Rotation.ZERO)(EGG_GROUP):Run()
     if show then
         PIPE_SPR:ToAnim()(PIPE):Target("Scale", Vector3.New(7,7,7))(PIPE):Run()
         PIPE_SPR:ToAnim():Target("Position", Vector3.New(0,0,-290))(PIPE):Run()
@@ -97,6 +119,7 @@ local function _show_or_hide_pipe(show)
 end
 -- initial setup:
 _show_or_hide_pipe(not "show")
+_show_or_hide_buy_button(not "show", "both")
 
 local function _show_or_hide_pets(show)
     if show then
@@ -105,12 +128,13 @@ local function _show_or_hide_pets(show)
             PET_SPR:ToAnim():Target("Scale", scale*Vector3.ONE)(pet):Run()
             PET_SPR:ToAnim("randomize"):Target("Position", PET_MARKS[i]:GetPosition())(pet):Run()
                 :SetOnFinish(function()
-                pet:LookAtContinuous(LOOK_AT_MARK, false, 1)
+                    pet:LookAtContinuous(LOOK_AT_MARK, false, 1)
             end)
         end
     else
         for _i, pet in ipairs(PETS) do
             local scale = 0.2
+            pet:StopRotate() -- stops LookAtContinuous
             PET_SPR:ToAnim():Target("Scale", scale*Vector3.ONE)(pet):Run()
             PET_SPR:ToAnim():Target("Position", PET_MARKS_ROOT:GetPosition())(pet):Run()
             PET_SPR:ToAnim():Target("Rotation", Rotation.ZERO)(pet):Run()
@@ -119,75 +143,101 @@ local function _show_or_hide_pets(show)
 end
 
 -- Flow: interaction -> wait for Shop state -> wait for Ingame state
-local OnEnterShop, OnLeaveShop, OnCanBuyEgg do
+local OnEnterShop, OnLeaveShop, OnCanBuyEgg, OnEggHatched do
 
     local function OnInteractedEvent(_trigger, player)
         if player:IsA("Player") and player == LOCAL_PLAYER then
+            BUY_BUTTON.isInteractable = false
+            _show_or_hide_buy_button("show")
             _maid.onCanBuyEgg = Events.Connect(P.CLIENT.CAN_BUY_EGG, OnCanBuyEgg)
             _maid.shop_flow = Events.Connect("ISM:Shop:Entered", OnEnterShop)
+            _maid.egg_hatch = Events.Connect(P.CLIENT.EGG_HATCHED_IN_SHOP, OnEggHatched)
+            _maid.buy = BUY_BUTTON.clickedEvent:Connect(function()
+                _show_or_hide_buy_button(not "show")
+                REvents.BroadcastToServer(P.C2S.TransmitHatchingEgg, EGG_ID)
+                PURCHASE_AUDIO1:Play()
+            end)
+            _maid.exit = EXIT_BUTTON.clickedEvent:Connect(function()
+                REvents.Broadcast(P.CLIENT.LEAVE_SHOP)
+            end)
             REvents.Broadcast(P.CLIENT.SHOP_INTERACTED, THIS_STAND_ID, EGG_ID, CAMERA)
         end
     end
-    -- _maid.onInteractedEvent = TRIGGER.interactedEvent:Connect(OnInteractedEvent)
     _maid.shop_flow = TRIGGER.interactedEvent:Connect(OnInteractedEvent)
+
+    OnEggHatched = function(shop_id, pet_id)
+        if shop_id ~= THIS_STAND_ID then return end
+        _show_or_hide_pets(not "show")
+        local pet = PETS_BY_ID[pet_id]
+        local mark = PET_MARKS[#PET_MARKS] -- last mark for hatching
+        PIPE_SPR:ToAnim():Target("Scale", EGG_TR:GetScale())(EGG_GROUP):Run()
+            :Chain(
+                HATCH_SPR:ToAnim():Impulse("Rotation", Rotation.New(45, 0, 0))(EGG_GROUP),
+                HATCH_SPR:ToAnim():Impulse("Position", Vector3.New(0, 45, 0))(EGG_GROUP),
+                HATCH_SPR:ToAnim():Impulse("Scale", 0.5*Vector3.ONE)(EGG_GROUP)
+                    :SetOnFinish(function()
+                        PURCHASE_AUDIO2:Play()
+                        -- TODO: some VFX here
+                        PIPE_SPR:ToAnim():Target("Scale", Vector3.ZERO)(EGG_GROUP):Run()
+                        PIPE_SPR:ToAnim():Target("Position", mark:GetPosition())(pet):Run()
+                        PIPE_SPR:ToAnim():Target("Scale", Vector3.ONE)(pet):Run()
+                            :Chain(PET_PRESENT_SPR:ToAnim():Impulse("Rotation", Rotation.New(0, 0, 90))(pet))
+                    end)
+            )
+    end
 
     -- TODO: use cant_buy_reason in UI (notification)
     OnEnterShop = function()
         TRIGGER.isInteractable = false
+        UI_CONTAINER.visibility = Visibility.INHERIT
         _maid.shop_flow = Events.Connect("ISM:InGame:Entering", OnLeaveShop)
         -- change stand's look
         _show_or_hide_pipe("show")
         _show_or_hide_pets("show")
+        _maid:GiveTask(Events.Connect("ISM:Shop:Entered", function()
+            UI_CONTAINER.visibility = Visibility.INHERIT
+        end))
+        _maid:GiveTask(Events.Connect("ISM:Shop:Exited", function()
+            UI_CONTAINER.visibility = Visibility.FORCE_OFF
+        end))
     end
 
     OnLeaveShop = function()
+        -- stop hatching animations
+        for _, pet in ipairs(PETS) do SA.Stop(pet) end
+        SA.Stop(EGG_GROUP)
         _show_or_hide_pipe(not "show")
         _show_or_hide_pets(not "show")
-        _maid.onCanBuyEgg = nil
-        _maid.shop_flow = nil
+        _show_or_hide_buy_button(not "show", "both")
         -- should be at the end of the callback: wait before turn-on shop's interactivity
+        _maid:Reset()
         Task.Wait(0.5)
-        _maid.onInteractedEvent = TRIGGER.interactedEvent:Connect(OnInteractedEvent)
+        _maid.shop_flow = TRIGGER.interactedEvent:Connect(OnInteractedEvent)
         TRIGGER.isInteractable = true
     end
 
     OnCanBuyEgg = function(shop_id, can_buy, cant_buy_reason)
         assert(shop_id == THIS_STAND_ID)
         BUY_BUTTON.isInteractable = can_buy
+        print("OnCanBuyEgg", can_buy, cant_buy_reason, BUY_BUTTON.isInteractable)
+        if not can_buy and cant_buy_reason then
+            warn(cant_buy_reason)
+        end
     end
 
-     _maid:GiveTask(Events.Connect("ISM:Shop:Entered", function()
-        UI_CONTAINER.visibility = Visibility.INHERIT
-    end))
-
-    _maid:GiveTask(Events.Connect("ISM:Shop:Exited", function()
-        UI_CONTAINER.visibility = Visibility.FORCE_OFF
-    end))
-
-    do -- hides annoying shop interactivity prompt in inventory
+    do -- (All Shops) hides annoying shop interactivity prompt in inventory
         local _save_TRIGGER_isInteractable = false
-        _maid:GiveTask(Events.Connect("ISM:Inventory:Entering", function()
+        _pmaid:GiveTask(Events.Connect("ISM:Inventory:Entering", function()
             _save_TRIGGER_isInteractable = TRIGGER.isInteractable
             TRIGGER.isInteractable = false
         end))
 
-        _maid:GiveTask(Events.Connect("ISM:Inventory:Exiting", function()
+        _pmaid:GiveTask(Events.Connect("ISM:Inventory:Exiting", function()
             TRIGGER.isInteractable = _save_TRIGGER_isInteractable
         end))
     end
 
-
 end -- do
-
-
-_maid.buy = BUY_BUTTON.clickedEvent:Connect(function()
-    REvents.BroadcastToServer(P.C2S.TransmitHatchingEgg, EGG_ID)
-end)
-
-_maid.exit = EXIT_BUTTON.clickedEvent:Connect(function()
-    REvents.Broadcast(P.CLIENT.LEAVE_SHOP)
-end)
-
 
 -------------------
 -- TODO: purchase animation, sounds, VFX
