@@ -153,7 +153,10 @@ end
 local _SETTING_METHODS = not CORE_ENV and {} or {
     -- offset, size rotationAngle fo UIControl
     offset = {
-        get=function(obj) return Vector2.New(obj.x, obj.y) end,
+        get=function(obj)
+            print(type(obj), obj.type)
+            print(CoreDebug.GetStackTrace())
+            return Vector2.New(obj.x, obj.y) end,
         set=function(obj, vec2) obj.x, obj.y = _round_vec2(vec2) end,
     },
     size = {
@@ -190,7 +193,7 @@ local _SETTING_METHODS = not CORE_ENV and {} or {
 }
 
 local function _get_setting_methods(propkey, instance)
-    instance = instance or _DUMMY
+    instance = instance or _DUMMY -- NOTE: there is no dummy for UIControl
     if not _SETTING_METHODS[propkey] then _SETTING_METHODS[propkey] = {} end
     local methods = _SETTING_METHODS[propkey]
     methods.get = methods.get or assert(instance["Get" .. propkey], "not found Get" .. propkey)
@@ -424,7 +427,7 @@ end
 
 local function _sa_scheduler_remove(instance, propkey)
     _sa_scheduler:_for_each(function(spr_anim)
-        if spr_anim._instance[1] == instance and not propkey or spr_anim._propkey == propkey then
+        if spr_anim:_get_instance() == instance and not propkey or spr_anim._propkey == propkey then
             spr_anim._instance[1] = nil -- nil instance for (lazy) remove it later
             local ok, msg = pcall(spr_anim._onCancel)
             if not ok then warn(msg) end
@@ -506,7 +509,7 @@ end
 _sa_scheduler_worker = function()
     while not _sa_scheduler:IsEmpty() do
         local spr_anim = _sa_scheduler:Peek()
-        if not spr_anim._instance[1] then -- i.e marked to remove by scheduler or instance destroyed
+        if not spr_anim:_get_instance() then -- i.e marked to remove by scheduler or instance destroyed
             _sa_scheduler:Pop()
         elseif spr_anim._run_at <= time() then
             _sa_scheduler:Pop()
@@ -539,9 +542,9 @@ function SpringAnimator.New(spring_params, instance, propkey, random_factor)
     end
     assert(_type(propkey, "string", "propkey"))
     local self = spring_params:ToAnim(random_factor, random_factor)
+    self(instance)
     -- target -----------------------------------
     self._propkey = propkey
-    self(instance)
     self._methods = _get_setting_methods(self._propkey, instance)
     self._origin = nil
     self._goal = nil
@@ -553,6 +556,7 @@ end
 -- To make `SpringAnimator` from `SpringParams`
 function SpringParams:ToAnim(randomize, factor)
     local anim = setmetatable({}, SpringAnimator)
+    anim._instance = setmetatable({}, _weak_val_mt)
     local params = randomize and self:RandomizeFrequency(factor) or self:Copy()
     anim._spring = Spring.New(params, 0)
     -- save state for reset
@@ -570,21 +574,21 @@ end
 -- Next 4 methods are the new API
 function SpringAnimator:Target(propkey, goal)
     self._propkey = propkey
-    self._methods = _get_setting_methods(self._propkey)
+    self._methods = _get_setting_methods(self._propkey, self:_get_instance())
     self:SetGoal(goal)
     return self
 end
 
 function SpringAnimator:Offset(propkey, offset)
     self._propkey = propkey
-    self._methods = _get_setting_methods(self._propkey)
+    self._methods = _get_setting_methods(self._propkey, self:_get_instance())
     self:SetGoalByOffset(offset)
     return self
 end
 
 function SpringAnimator:Impulse(propkey, radius)
     self._propkey = propkey
-    self._methods = _get_setting_methods(self._propkey)
+    self._methods = _get_setting_methods(self._propkey, self:_get_instance())
     self:Nudge(radius)
     return self
 end
@@ -593,7 +597,8 @@ end
 -- local premade = SpringParams.New(1,1):ToAnim():Impulse(50*Vector3.UP)
 -- ... premade(self._geo):Run()
 function SpringAnimator:__call(instance)
-    self._instance = setmetatable({instance}, _weak_val_mt)
+    assert(instance)
+    self._instance[1] = instance
     return self
 end
 
@@ -705,7 +710,7 @@ end
 
 function SpringAnimator:_get_instance()
     local instance  = self._instance and self._instance[1]
-    if instance and instance._IsValid and not instance:IsValid() then return end
+    if instance and instance._IsValid and not instance:IsValid() then return nil end
     return instance
 end
 

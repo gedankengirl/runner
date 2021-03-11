@@ -126,8 +126,6 @@ function Client:_AwaitDownlinkChannel()
                 self:_InstantiateInventory(assert(grid))
             elseif op == P.S2C.EGG.op then
                 local pet_id, egg, row, col = P.S2C.EGG.unpack(data)
-                -- FIXME: In what state we will hatch egg?
-                ISM:GoToState(INGAME)
                 self:_HatchEgg(pet_id, row, col)
                 REvents.Broadcast(P.CLIENT.EGG_HATCHED, egg, pet_id)
             else
@@ -254,6 +252,7 @@ function SHOP:Enter(from, shop_id, egg_id, camera)
     end
     self.isInteractionEnabled = true
     _show_cursor(true)
+    LOCAL_PLAYER.isVisibleToSelf = false
     _set_camera(self._camera, from ~= INVENTORY)
     local ok, msg = B.CanBuyEgg(LOCAL_PLAYER, self._egg_id, _maid.grid)
     REvents.Broadcast(P.CLIENT.CAN_BUY_EGG, self._shop_id, ok, msg)
@@ -262,6 +261,13 @@ end
 function SHOP:Exit()
     self.isInteractionEnabled = false
     _show_cursor(false)
+    LOCAL_PLAYER.isVisibleToSelf = true
+end
+
+function SHOP:HandleEggHatched(egg_id, pet_id)
+    local shop_id = self._shop_id
+    if not shop_id then return end
+    REvents.Broadcast(P.CLIENT.EGG_HATCHED_IN_SHOP, shop_id, pet_id)
 end
 
 function SHOP:HandleInventoryBinding()
@@ -608,7 +614,7 @@ do -- main
         ["ability_primary"] = {"HandleLeftMouseDown", "HandleLeftMouseUp"},
         ["ability_secondary"] = {"HandleRightMouseDown", "HandleRightMouseUp"},
         [P.CLIENT.MODAL] = {"HandleModal"}, -- +1 arg
-        [P.CLIENT.EGG_HATCHED] = {"HandleEggHatched"},
+        [P.CLIENT.EGG_HATCHED] = {"HandleEggHatched"}, -- TODO:
         [P.CLIENT.SHOP_INTERACTED]  = {"HandleShopInteraction"},
         [P.CLIENT.LEAVE_SHOP]  = {"HandleExitShop"},
         ["ability_extra_33"]  = {"HandleExitShop"}, -- press `F` to live the shop

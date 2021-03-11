@@ -1,5 +1,6 @@
 ﻿local Maid = _G.req("_Maid")
 local P = _G.req("Protocols")
+local B = _G.req("BusinessLogic")
 local COMPONENT_ROOT = script:GetCustomProperty("ComponentRoot"):WaitForObject()
 local EQUIPMENT_TEMPLATE = assert(COMPONENT_ROOT:GetCustomProperty("EquipmentTemplate"))
 local _maid = Maid.New(script)
@@ -22,11 +23,13 @@ _maid.playerLeftEvent = Game.playerLeftEvent:Connect(OnPlayerLeft)
 _maid.TurnEquipmentOn = Events.ConnectForPlayer(P.C2S.TurnEquipmentOn, function(player)
     if _maid[player.id] and _maid[player.id]:IsValid() then
         _maid[player.id]:Equip(player)
+        B.enforceSpeed(player)
     end
 end)
 
 _maid.TurnEquipmentOff = Events.ConnectForPlayer(P.C2S.TurnEquipmentOff, function(player)
     if _maid[player.id] and _maid[player.id]:IsValid() then
         _maid[player.id]:Unequip(player)
+        B.enforceSpeed(player, 0)
     end
 end)

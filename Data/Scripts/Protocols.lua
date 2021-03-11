@@ -170,6 +170,7 @@ Protocols.MOVE_OUTCOME = {
 -- internal client events
 Protocols.CLIENT = {
     EGG_HATCHED = "%Egg_Hatched",  -- + egg, pet_id
+    EGG_HATCHED_IN_SHOP = "%Egg_Hatched_In_Shop", -- + shop_id, pet_id
     MODAL = "%Interactions_Modal", -- + 1 modal_arg
     POPUP = "%Show_Popup",
     SHOP_INTERACTED = "%ShopInteracted",
