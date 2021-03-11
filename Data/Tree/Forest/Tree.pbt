@@ -16085,16 +16085,16 @@ Objects {
   Name: "Tree_Birch_02"
   Transform {
     Location {
-      X: -3031.27173
-      Y: -2441.06543
+      X: -2563.33423
+      Y: -2347.51758
       Z: -30.4004669
     }
     Rotation {
     }
     Scale {
-      X: 5.52793264
-      Y: 5.52793264
-      Z: 5.52793264
+      X: 2.37344027
+      Y: 2.37344027
+      Z: 2.37344027
     }
   }
   ParentId: 353201241216446971
@@ -16272,7 +16272,7 @@ Objects {
 }
 Objects {
   Id: 6043336544795926621
-  Name: "Ground"
+  Name: "Ground+BGM"
   Transform {
     Location {
       Z: -700
@@ -16354,8 +16354,6 @@ Objects {
   Name: "Default Soil"
   Transform {
     Location {
-      X: -25
-      Y: -15
     }
     Rotation {
     }
@@ -16422,8 +16420,6 @@ Objects {
   Name: "Default Floor"
   Transform {
     Location {
-      X: -25
-      Y: -15
       Z: 700
     }
     Rotation {
@@ -16435,6 +16431,7 @@ Objects {
     }
   }
   ParentId: 6043336544795926621
+  ChildIds: 4655272783785559430
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -16482,6 +16479,105 @@ Objects {
     StaticMesh {
       Physics {
       }
+    }
+  }
+}
+Objects {
+  Id: 4655272783785559430
+  Name: "BGMClientContext"
+  Transform {
+    Location {
+      Z: -285.026093
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1.00000012
+    }
+  }
+  ParentId: 8571062207732517539
+  ChildIds: 4131413103882891263
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  NetworkContext {
+  }
+}
+Objects {
+  Id: 4131413103882891263
+  Name: "Casual & Fun Music Score Set 01"
+  Transform {
+    Location {
+      Y: 1.52587891e-05
+      Z: 6.10351563e-05
+    }
+    Rotation {
+    }
+    Scale {
+      X: 0.0065616793
+      Y: 0.0065616793
+      Z: -0.714285851
+    }
+  }
+  ParentId: 4655272783785559430
+  ChildIds: 2124587071321786526
+  UnregisteredParameters {
+    Overrides {
+      Name: "bp:Type"
+      Enum {
+        Value: "mc:emx_casualmusic:41"
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 11538952637992464408
+    }
+    TeamSettings {
+    }
+    AudioBP {
+      Volume: 1
+      IsAttenuationEnabled: true
+    }
+  }
+}
+Objects {
+  Id: 2124587071321786526
+  Name: "Music_GetAttenuationRadius"
+  Transform {
+    Location {
+      Y: 0.001953125
+      Z: -9.15527198e-05
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 0.999999881
+    }
+  }
+  ParentId: 4131413103882891263
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 3432003954219396446
     }
   }
 }

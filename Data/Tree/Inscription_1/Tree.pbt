@@ -198,7 +198,7 @@ Objects {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   Text {
-    Text: "TO GAIN SPEED COINS"
+    Text: "TO GAIN SPEED"
     FontAsset {
     }
     Color {

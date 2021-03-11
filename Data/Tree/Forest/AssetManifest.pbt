@@ -251,6 +251,15 @@ Assets {
   }
 }
 Assets {
+  Id: 11538952637992464408
+  Name: "Casual & Fun Music Score Set 01"
+  PlatformAssetType: 10
+  PrimaryAsset {
+    AssetType: "AudioBlueprintAssetRef"
+    AssetId: "abp_CasualMusic_ref"
+  }
+}
+Assets {
   Id: 10973485403045053923
   Name: "Rock 03"
   PlatformAssetType: 1

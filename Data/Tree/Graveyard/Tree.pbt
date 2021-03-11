@@ -11143,7 +11143,7 @@ Objects {
 }
 Objects {
   Id: 15953365687059277970
-  Name: "Ground"
+  Name: "Ground+BGM"
   Transform {
     Location {
     }
@@ -11224,8 +11224,6 @@ Objects {
   Name: "Default Soil"
   Transform {
     Location {
-      X: -25
-      Y: -15
     }
     Rotation {
     }
@@ -11292,8 +11290,6 @@ Objects {
   Name: "Default Floor"
   Transform {
     Location {
-      X: -25
-      Y: -15
       Z: 700
     }
     Rotation {
@@ -11305,6 +11301,7 @@ Objects {
     }
   }
   ParentId: 15953365687059277970
+  ChildIds: 2487912908735559687
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -11352,6 +11349,105 @@ Objects {
     StaticMesh {
       Physics {
       }
+    }
+  }
+}
+Objects {
+  Id: 2487912908735559687
+  Name: "BGMClientContext"
+  Transform {
+    Location {
+      Z: -285.026093
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1.00000012
+    }
+  }
+  ParentId: 16218303156478813679
+  ChildIds: 15983683780902548137
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  NetworkContext {
+  }
+}
+Objects {
+  Id: 15983683780902548137
+  Name: "Casual & Fun Music Score Set 01"
+  Transform {
+    Location {
+      Y: 1.52587891e-05
+      Z: 6.10351563e-05
+    }
+    Rotation {
+    }
+    Scale {
+      X: 0.0065616793
+      Y: 0.0065616793
+      Z: -0.714285851
+    }
+  }
+  ParentId: 2487912908735559687
+  ChildIds: 3879879051940790089
+  UnregisteredParameters {
+    Overrides {
+      Name: "bp:Type"
+      Enum {
+        Value: "mc:emx_casualmusic:59"
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 11538952637992464408
+    }
+    TeamSettings {
+    }
+    AudioBP {
+      Volume: 1
+      IsAttenuationEnabled: true
+    }
+  }
+}
+Objects {
+  Id: 3879879051940790089
+  Name: "Music_GetAttenuationRadius"
+  Transform {
+    Location {
+      Y: 0.001953125
+      Z: -9.15527198e-05
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 0.999999881
+    }
+  }
+  ParentId: 15983683780902548137
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 3432003954219396446
     }
   }
 }

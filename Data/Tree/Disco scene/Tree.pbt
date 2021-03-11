@@ -3985,7 +3985,7 @@ Objects {
 }
 Objects {
   Id: 16353040790119869907
-  Name: "Ground"
+  Name: "Ground+BGM"
   Transform {
     Location {
       Z: -700
@@ -4123,6 +4123,7 @@ Objects {
     }
   }
   ParentId: 16353040790119869907
+  ChildIds: 13949678445995367306
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -4162,6 +4163,627 @@ Objects {
     StaticMesh {
       Physics {
       }
+    }
+  }
+}
+Objects {
+  Id: 13949678445995367306
+  Name: "BGMClientContext"
+  Transform {
+    Location {
+      Z: -285.026093
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1.00000012
+    }
+  }
+  ParentId: 12320743041193027882
+  ChildIds: 798401675308295178
+  ChildIds: 16875137481120217780
+  ChildIds: 14608306241719443737
+  ChildIds: 7411828532303050619
+  ChildIds: 3887411879668657871
+  ChildIds: 12676796214081908127
+  ChildIds: 2757671544159914900
+  ChildIds: 7137172140485877812
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  NetworkContext {
+  }
+}
+Objects {
+  Id: 7137172140485877812
+  Name: "Trigger"
+  Transform {
+    Location {
+      X: -36.1537971
+      Y: -0.281616211
+      Z: -0.966339111
+    }
+    Rotation {
+    }
+    Scale {
+      X: 0.0133246882
+      Y: 0.0133246882
+      Z: -1.45048714
+    }
+  }
+  ParentId: 13949678445995367306
+  ChildIds: 17691430170856322273
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceon"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Trigger {
+    Interactable: true
+    TeamSettings {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    TriggerShape_v2 {
+      Value: "mc:etriggershape:box"
+    }
+  }
+}
+Objects {
+  Id: 17691430170856322273
+  Name: "MusicSwitch"
+  Transform {
+    Location {
+      X: 2713.29395
+      Y: 21.1337891
+      Z: -0.66621691
+    }
+    Rotation {
+    }
+    Scale {
+      X: 0.49244526
+      Y: 0.49244526
+      Z: 0.492445379
+    }
+  }
+  ParentId: 7137172140485877812
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 9564883177374774700
+    }
+  }
+}
+Objects {
+  Id: 2757671544159914900
+  Name: "Casual & Fun Music Score Set 01"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 0.0065616793
+      Y: 0.0065616793
+      Z: -0.714285851
+    }
+  }
+  ParentId: 13949678445995367306
+  ChildIds: 10789640532497337711
+  UnregisteredParameters {
+    Overrides {
+      Name: "bp:Type"
+      Enum {
+        Value: "mc:emx_casualmusic:66"
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 11538952637992464408
+    }
+    TeamSettings {
+    }
+    AudioBP {
+      Volume: 1
+      IsAttenuationEnabled: true
+    }
+  }
+}
+Objects {
+  Id: 10789640532497337711
+  Name: "Music_GetAttenuationRadius"
+  Transform {
+    Location {
+      Y: 0.001953125
+      Z: -9.15527198e-05
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 0.999999881
+    }
+  }
+  ParentId: 2757671544159914900
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 3432003954219396446
+    }
+  }
+}
+Objects {
+  Id: 12676796214081908127
+  Name: "Casual & Fun Music Score Set 01"
+  Transform {
+    Location {
+      Y: -3.05175781e-05
+    }
+    Rotation {
+    }
+    Scale {
+      X: 0.0065616793
+      Y: 0.0065616793
+      Z: -0.714285851
+    }
+  }
+  ParentId: 13949678445995367306
+  ChildIds: 16668670441670867746
+  UnregisteredParameters {
+    Overrides {
+      Name: "bp:Type"
+      Enum {
+        Value: "mc:emx_casualmusic:64"
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 11538952637992464408
+    }
+    TeamSettings {
+    }
+    AudioBP {
+      Volume: 1
+      IsAttenuationEnabled: true
+    }
+  }
+}
+Objects {
+  Id: 16668670441670867746
+  Name: "Music_GetAttenuationRadius"
+  Transform {
+    Location {
+      Y: 0.001953125
+      Z: -9.15527198e-05
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 0.999999881
+    }
+  }
+  ParentId: 12676796214081908127
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 3432003954219396446
+    }
+  }
+}
+Objects {
+  Id: 3887411879668657871
+  Name: "Casual & Fun Music Score Set 01"
+  Transform {
+    Location {
+      Y: -1.52587891e-05
+    }
+    Rotation {
+    }
+    Scale {
+      X: 0.0065616793
+      Y: 0.0065616793
+      Z: -0.714285851
+    }
+  }
+  ParentId: 13949678445995367306
+  ChildIds: 16101025147428420335
+  UnregisteredParameters {
+    Overrides {
+      Name: "bp:Type"
+      Enum {
+        Value: "mc:emx_casualmusic:53"
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 11538952637992464408
+    }
+    TeamSettings {
+    }
+    AudioBP {
+      Volume: 1
+      IsAttenuationEnabled: true
+    }
+  }
+}
+Objects {
+  Id: 16101025147428420335
+  Name: "Music_GetAttenuationRadius"
+  Transform {
+    Location {
+      Y: 0.001953125
+      Z: -9.15527198e-05
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 0.999999881
+    }
+  }
+  ParentId: 3887411879668657871
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 3432003954219396446
+    }
+  }
+}
+Objects {
+  Id: 7411828532303050619
+  Name: "Electronic Music Score Set 01"
+  Transform {
+    Location {
+      Y: -1.52587891e-05
+    }
+    Rotation {
+    }
+    Scale {
+      X: 0.0065616793
+      Y: 0.0065616793
+      Z: -0.714285672
+    }
+  }
+  ParentId: 13949678445995367306
+  ChildIds: 18396261578422724642
+  UnregisteredParameters {
+    Overrides {
+      Name: "bp:Type"
+      Enum {
+        Value: "mc:emx_electronicmusic:17"
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 3443146613648162212
+    }
+    TeamSettings {
+    }
+    AudioBP {
+      Volume: 1
+      Falloff: 3600
+      Radius: 400
+      EnableOcclusion: true
+      IsSpatializationEnabled: true
+      IsAttenuationEnabled: true
+    }
+  }
+}
+Objects {
+  Id: 18396261578422724642
+  Name: "Music_GetAttenuationRadius"
+  Transform {
+    Location {
+      Y: 0.005859375
+      Z: -0.000335693359
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1.00000012
+    }
+  }
+  ParentId: 7411828532303050619
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 3432003954219396446
+    }
+  }
+}
+Objects {
+  Id: 14608306241719443737
+  Name: "Electronic Music Score Set 01"
+  Transform {
+    Location {
+      Y: -2.28881836e-05
+      Z: -3.05175781e-05
+    }
+    Rotation {
+    }
+    Scale {
+      X: 0.0065616793
+      Y: 0.0065616793
+      Z: -0.714285672
+    }
+  }
+  ParentId: 13949678445995367306
+  ChildIds: 9954341931088737510
+  UnregisteredParameters {
+    Overrides {
+      Name: "bp:Type"
+      Enum {
+        Value: "mc:emx_electronicmusic:42"
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 3443146613648162212
+    }
+    TeamSettings {
+    }
+    AudioBP {
+      Volume: 1
+      Falloff: 3600
+      Radius: 400
+      EnableOcclusion: true
+      IsSpatializationEnabled: true
+      IsAttenuationEnabled: true
+    }
+  }
+}
+Objects {
+  Id: 9954341931088737510
+  Name: "Music_GetAttenuationRadius"
+  Transform {
+    Location {
+      Y: 0.005859375
+      Z: -0.000335693359
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1.00000012
+    }
+  }
+  ParentId: 14608306241719443737
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 3432003954219396446
+    }
+  }
+}
+Objects {
+  Id: 16875137481120217780
+  Name: "Electronic Music Score Set 01"
+  Transform {
+    Location {
+      Y: -1.28157799e-05
+      Z: -2.17982688e-05
+    }
+    Rotation {
+    }
+    Scale {
+      X: 0.0065616793
+      Y: 0.0065616793
+      Z: -0.714285672
+    }
+  }
+  ParentId: 13949678445995367306
+  ChildIds: 16263440258720012735
+  UnregisteredParameters {
+    Overrides {
+      Name: "bp:Type"
+      Enum {
+        Value: "mc:emx_electronicmusic:38"
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 3443146613648162212
+    }
+    TeamSettings {
+    }
+    AudioBP {
+      Volume: 1
+      Falloff: 3600
+      Radius: 400
+      EnableOcclusion: true
+      IsSpatializationEnabled: true
+      IsAttenuationEnabled: true
+    }
+  }
+}
+Objects {
+  Id: 16263440258720012735
+  Name: "Music_GetAttenuationRadius"
+  Transform {
+    Location {
+      Y: 0.005859375
+      Z: -0.000335693359
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1.00000012
+    }
+  }
+  ParentId: 16875137481120217780
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 3432003954219396446
+    }
+  }
+}
+Objects {
+  Id: 798401675308295178
+  Name: "Electronic Music Score Set 01"
+  Transform {
+    Location {
+      Y: -5.34057617e-05
+      Z: -3.05175781e-05
+    }
+    Rotation {
+    }
+    Scale {
+      X: 0.0065616793
+      Y: 0.0065616793
+      Z: -0.714285672
+    }
+  }
+  ParentId: 13949678445995367306
+  ChildIds: 16214342120231212528
+  UnregisteredParameters {
+    Overrides {
+      Name: "bp:Type"
+      Enum {
+        Value: "mc:emx_electronicmusic:55"
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 3443146613648162212
+    }
+    TeamSettings {
+    }
+    AudioBP {
+      Volume: 1
+      Falloff: 3600
+      Radius: 400
+      EnableOcclusion: true
+      IsSpatializationEnabled: true
+      IsAttenuationEnabled: true
+    }
+  }
+}
+Objects {
+  Id: 16214342120231212528
+  Name: "Music_GetAttenuationRadius"
+  Transform {
+    Location {
+      Y: 0.005859375
+      Z: -0.000335693359
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1.00000012
+    }
+  }
+  ParentId: 798401675308295178
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 3432003954219396446
     }
   }
 }

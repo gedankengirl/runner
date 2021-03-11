@@ -6,7 +6,7 @@ Objects {
   Transform {
     Location {
       X: -20409.582
-      Y: -15509.457
+      Y: -22346.1641
       Z: -700
     }
     Rotation {
@@ -92,7 +92,7 @@ Objects {
   Name: "Disco scene"
   Transform {
     Location {
-      Y: -17475.8066
+      Y: -20009.2949
     }
     Rotation {
     }
@@ -148,7 +148,7 @@ Objects {
   Name: "Graveyard"
   Transform {
     Location {
-      X: -18700.4844
+      X: -21373.9355
       Y: 550
       Z: -700
     }
