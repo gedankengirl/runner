@@ -26,7 +26,7 @@ Assets {
           }
           Overrides {
             Name: "cs:EggId"
-            String: "Garden"
+            String: "Graveyard"
           }
         }
         Collidable_v2 {
