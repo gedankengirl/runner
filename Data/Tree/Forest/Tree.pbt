@@ -16211,6 +16211,12 @@ Objects {
     }
   }
   ParentId: 12794903354937555053
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
   TemplateInstance {
     ParameterOverrideMap {
       key: 5286474185563256762
@@ -16220,19 +16226,16 @@ Objects {
           String: "Teleporter Home"
         }
         Overrides {
-          Name: "Scale"
-          Vector {
-            X: 2.3926425
-            Y: 2.3926425
-            Z: 2.3926425
-          }
-        }
-        Overrides {
           Name: "Position"
           Vector {
             X: 5811.96631
             Y: 573.929688
             Z: 68.1765137
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
           }
         }
       }

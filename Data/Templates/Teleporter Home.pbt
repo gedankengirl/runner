@@ -136,6 +136,7 @@ Assets {
         }
         ParentId: 5286474185563256762
         ChildIds: 15180395508985060556
+        ChildIds: 14240621921202635885
         UnregisteredParameters {
         }
         Collidable_v2 {
@@ -179,6 +180,41 @@ Assets {
         Script {
           ScriptAsset {
             Id: 32149845205756334
+          }
+        }
+      }
+      Objects {
+        Id: 14240621921202635885
+        Name: "TeleporterHomeGenerateVFX"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 0.417947948
+            Y: 0.417947948
+            Z: 0.417947948
+          }
+        }
+        ParentId: 4035072098836809276
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:VFXTemplate"
+            AssetReference {
+              Id: 8437439857966599344
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 10578145508764984589
           }
         }
       }
@@ -427,7 +463,6 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         Trigger {
-          Interactable: true
           TeamSettings {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true

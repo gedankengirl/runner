@@ -193,19 +193,16 @@ Objects {
           String: "Teleporter Home"
         }
         Overrides {
-          Name: "Scale"
-          Vector {
-            X: 2.3926425
-            Y: 2.3926425
-            Z: 2.3926425
-          }
-        }
-        Overrides {
           Name: "Position"
           Vector {
             X: 5732.68359
             Y: 304.185547
             Z: 86.6817
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
           }
         }
       }
@@ -4171,6 +4168,7 @@ Objects {
   Name: "BGMClientContext"
   Transform {
     Location {
+      Y: -1.52587891e-05
       Z: -285.026093
     }
     Rotation {

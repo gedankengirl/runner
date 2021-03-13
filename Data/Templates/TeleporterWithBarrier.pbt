@@ -25,6 +25,7 @@ Assets {
           Overrides {
             Name: "cs:Target"
             ObjectReference {
+              SelfId: 4231530394958152407
             }
           }
           Overrides {
@@ -54,7 +55,7 @@ Assets {
           }
           Overrides {
             Name: "cs:Area"
-            String: ""
+            String: "Graveyard"
           }
           Overrides {
             Name: "cs:Target:tooltip"
@@ -850,6 +851,12 @@ Assets {
             Name: "cs:Teleporter"
             ObjectReference {
               SubObjectId: 15353425564796802316
+            }
+          }
+          Overrides {
+            Name: "cs:CalloutVFXTemplate"
+            AssetReference {
+              Id: 8437439857966599344
             }
           }
         }

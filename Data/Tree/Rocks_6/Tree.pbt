@@ -1,6 +1,63 @@
 Name: "Rocks_6"
 RootId: 7419492899618266131
 Objects {
+  Id: 17930861121180219191
+  Name: "Rock 02"
+  Transform {
+    Location {
+      X: -18.4509754
+      Y: 204.430283
+      Z: 409.547333
+    }
+    Rotation {
+      Pitch: -77.4568176
+      Yaw: 32.9179802
+      Roll: -177.102936
+    }
+    Scale {
+      X: 2.18285179
+      Y: 2.75
+      Z: 1.50000429
+    }
+  }
+  ParentId: 7419492899618266131
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 15050262795654144928
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 4839613605086708204
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    EnableCameraCollision: true
+    InteractWithTriggers: true
+    StaticMesh {
+      Physics {
+      }
+    }
+  }
+  InstanceHistory {
+    SelfId: 5824070733108613216
+    SubobjectId: 5183270334401768452
+    InstanceId: 5289051581721734545
+    TemplateId: 8965823007101946117
+  }
+}
+Objects {
   Id: 1299327246678578208
   Name: "Rock 01"
   Transform {

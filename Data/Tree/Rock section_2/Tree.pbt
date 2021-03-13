@@ -683,8 +683,8 @@ Objects {
       Z: 60
     }
     Rotation {
-      Pitch: -72.2040787
-      Yaw: -20.2311497
+      Pitch: -72.204071
+      Yaw: -20.2311401
       Roll: -122.583908
     }
     Scale {
@@ -855,7 +855,7 @@ Objects {
     }
     Rotation {
       Pitch: -76.7794189
-      Yaw: -52.1744957
+      Yaw: -52.1745
       Roll: 110.031693
     }
     Scale {
@@ -911,7 +911,7 @@ Objects {
       Z: 0.599243164
     }
     Rotation {
-      Pitch: -8.52374077
+      Pitch: -8.52374268
       Yaw: 44.579071
       Roll: 3.57275939
     }
@@ -1041,63 +1041,6 @@ Objects {
   InstanceHistory {
     SelfId: 11718376012211797531
     SubobjectId: 13086868381962977919
-    InstanceId: 5289051581721734545
-    TemplateId: 8965823007101946117
-  }
-}
-Objects {
-  Id: 3064086266139796332
-  Name: "Rock Flat 02"
-  Transform {
-    Location {
-      X: 171.305206
-      Y: -565.316528
-      Z: 329.400696
-    }
-    Rotation {
-      Pitch: -64.5212326
-      Yaw: -90.2996597
-      Roll: 115.174675
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 966458721006036012
-  UnregisteredParameters {
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 15050262795654144928
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CoreMesh {
-    MeshAsset {
-      Id: 11677843177636809244
-    }
-    Teams {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    EnableCameraCollision: true
-    InteractWithTriggers: true
-    StaticMesh {
-      Physics {
-      }
-    }
-  }
-  InstanceHistory {
-    SelfId: 958677443825110411
-    SubobjectId: 1905028822903189999
     InstanceId: 5289051581721734545
     TemplateId: 8965823007101946117
   }

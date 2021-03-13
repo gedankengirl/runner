@@ -1,6 +1,58 @@
 Name: "Home base"
 RootId: 10665984139206756167
 Objects {
+  Id: 1936773926731709969
+  Name: "FenceContainer"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 10665984139206756167
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "FenceContainer"
+  }
+}
+Objects {
+  Id: 8302413848649510927
+  Name: "Vegetation"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 10665984139206756167
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "Vegetation_3"
+  }
+}
+Objects {
   Id: 10907345231434236569
   Name: "Speedster Village Buildings"
   Transform {
@@ -11,7 +63,39 @@ Objects {
     }
   }
   ParentId: 10665984139206756167
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
   TemplateInstance {
+    ParameterOverrideMap {
+      key: 94875799561014693
+      value {
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: 3320.14063
+            Y: 4252.74072
+            Z: 106.411743
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 9099648944395776039
+      value {
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: 4978.35547
+            Y: 162.756
+            Z: 121.967834
+          }
+        }
+      }
+    }
     ParameterOverrideMap {
       key: 14147038148445772823
       value {
@@ -22,7 +106,25 @@ Objects {
         Overrides {
           Name: "Position"
           Vector {
-            Z: 1035.26855
+            Z: -50
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 15343717991521774494
+      value {
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -6678.57813
+            Y: -162.755859
+            Z: 3.96942139
           }
         }
       }
@@ -39,7 +141,7 @@ Objects {
     Location {
       X: 1094.31836
       Y: -1692.19336
-      Z: 859.977783
+      Z: -239.591125
     }
     Rotation {
       Yaw: 180
@@ -69,7 +171,7 @@ Objects {
     Location {
       X: 2645.23633
       Y: -1459.36914
-      Z: 1165.95776
+      Z: 66.388855
     }
     Rotation {
     }
@@ -98,7 +200,7 @@ Objects {
     Location {
       X: 1175.27539
       Y: -1211.27734
-      Z: 1166.79443
+      Z: 67.2255249
     }
     Rotation {
     }
@@ -126,7 +228,7 @@ Objects {
   Transform {
     Location {
       Y: -1762.2832
-      Z: 1175.66455
+      Z: 76.0956421
     }
     Rotation {
     }
@@ -153,7 +255,7 @@ Objects {
   Name: "Ground+BGM"
   Transform {
     Location {
-      Z: 399.036499
+      Z: -700
     }
     Rotation {
     }

@@ -5,10 +5,11 @@ Objects {
   Name: "Pet Corner"
   Transform {
     Location {
-      X: -5971.18506
+      X: 6224.03223
       Z: -32.5696716
     }
     Rotation {
+      Yaw: 180
     }
     Scale {
       X: 1.3827877
@@ -82,8 +83,8 @@ Objects {
         Overrides {
           Name: "Position"
           Vector {
-            X: 5288.45605
-            Y: -225.774414
+            X: 6363.77539
+            Y: 879.728516
             Z: 68.1726074
           }
         }

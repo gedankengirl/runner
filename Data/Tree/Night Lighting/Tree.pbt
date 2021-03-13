@@ -122,10 +122,6 @@ Objects {
       Float: 0
     }
     Overrides {
-      Name: "bp:Intensity"
-      Float: 1.20470452
-    }
-    Overrides {
       Name: "bp:Occlusion Contrast"
       Float: 0
     }
@@ -151,15 +147,6 @@ Objects {
       }
     }
     Overrides {
-      Name: "bp:Tint Color"
-      Color {
-        R: 0.398230284
-        G: 0.454848647
-        B: 0.576041698
-        A: 1
-      }
-    }
-    Overrides {
       Name: "bp:Enabled"
       Bool: true
     }
@@ -171,6 +158,18 @@ Objects {
         B: 0.00999999
         A: 1
       }
+    }
+    Overrides {
+      Name: "bp:Tint Color"
+      Color {
+        G: 0.206349537
+        B: 0.650000095
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "bp:Intensity"
+      Float: 2.57177448
     }
   }
   Collidable_v2 {

@@ -1,61 +1,18 @@
 Name: "Rock group 2_1"
-RootId: 8816595637115914772
+RootId: 13367985225593421290
 Objects {
-  Id: 579870666998221779
-  Name: "Rock Flat 01"
-  Transform {
-    Location {
-      X: -332.648895
-      Y: -1704.66748
-      Z: 856.997192
-    }
-    Rotation {
-      Pitch: 64.8128
-      Yaw: -56.455719
-      Roll: -39.278717
-    }
-    Scale {
-      X: 2.25000072
-      Y: 4.75000238
-      Z: 5.9516511
-    }
-  }
-  ParentId: 8816595637115914772
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CoreMesh {
-    MeshAsset {
-      Id: 10561038649745416493
-    }
-    Teams {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    EnableCameraCollision: true
-    InteractWithTriggers: true
-    StaticMesh {
-      Physics {
-      }
-    }
-  }
-}
-Objects {
-  Id: 7821082100232298594
+  Id: 7676368502955639341
   Name: "Rock 02"
   Transform {
     Location {
-      X: 38.6370659
-      Y: -406.892914
-      Z: 402.96582
+      X: -33.2468643
+      Y: -387.348297
+      Z: 430.869385
     }
     Rotation {
-      Pitch: -83.8481445
-      Yaw: -118.906982
-      Roll: -70.9272461
+      Pitch: -83.8480835
+      Yaw: -118.907074
+      Roll: -70.927124
     }
     Scale {
       X: 4.49999285
@@ -63,7 +20,7 @@ Objects {
       Z: 3.3750186
     }
   }
-  ParentId: 8816595637115914772
+  ParentId: 13367985225593421290
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -95,13 +52,13 @@ Objects {
   }
 }
 Objects {
-  Id: 1038123224647564337
+  Id: 10146312029730912077
   Name: "Rock Flat 02"
   Transform {
     Location {
-      X: 589.378723
-      Y: 1035.6731
-      Z: 249.738953
+      X: 141.913712
+      Y: 1157.33655
+      Z: -14.1257973
     }
     Rotation {
       Pitch: 75.0325089
@@ -114,7 +71,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 8816595637115914772
+  ParentId: 13367985225593421290
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -138,13 +95,13 @@ Objects {
   }
 }
 Objects {
-  Id: 16064521024099594788
+  Id: 18190871467885533418
   Name: "Rock Flat 01"
   Transform {
     Location {
-      X: 441.407227
-      Y: 696.595459
-      Z: 343.672882
+      X: 222.658691
+      Y: 756.071289
+      Z: 428.58609
     }
     Rotation {
       Pitch: 64.8128052
@@ -157,7 +114,7 @@ Objects {
       Z: 2.25
     }
   }
-  ParentId: 8816595637115914772
+  ParentId: 13367985225593421290
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -181,7 +138,7 @@ Objects {
   }
 }
 Objects {
-  Id: 4000944035307219986
+  Id: 4184308030710687329
   Name: "Rock Pile 002"
   Transform {
     Location {
@@ -199,7 +156,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 8816595637115914772
+  ParentId: 13367985225593421290
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -223,49 +180,7 @@ Objects {
   }
 }
 Objects {
-  Id: 16934818631991201086
-  Name: "Rock 01"
-  Transform {
-    Location {
-      X: 229.802231
-      Y: -213.194702
-      Z: 552.96582
-    }
-    Rotation {
-      Yaw: 5.53995605e-08
-      Roll: -14.9133
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 8816595637115914772
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CoreMesh {
-    MeshAsset {
-      Id: 14431767805421956439
-    }
-    Teams {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    EnableCameraCollision: true
-    InteractWithTriggers: true
-    StaticMesh {
-      Physics {
-      }
-    }
-  }
-}
-Objects {
-  Id: 11389212385080962842
+  Id: 15472331334046519593
   Name: "Rock Flat 01"
   Transform {
     Location {
@@ -284,7 +199,7 @@ Objects {
       Z: 2.25001264
     }
   }
-  ParentId: 8816595637115914772
+  ParentId: 13367985225593421290
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -316,7 +231,7 @@ Objects {
   }
 }
 Objects {
-  Id: 6724415729915039013
+  Id: 7049824631224351911
   Name: "Rock Flat 02"
   Transform {
     Location {
@@ -325,7 +240,7 @@ Objects {
       Z: 292.432556
     }
     Rotation {
-      Pitch: -70.1685333
+      Pitch: -70.1685181
       Yaw: 131.679886
       Roll: -161.521103
     }
@@ -335,7 +250,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 8816595637115914772
+  ParentId: 13367985225593421290
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -367,18 +282,18 @@ Objects {
   }
 }
 Objects {
-  Id: 14187901066361796623
+  Id: 2011506919834829747
   Name: "Rock Flat 01"
   Transform {
     Location {
-      X: -269.477234
-      Y: -457.536102
-      Z: 299.438354
+      X: -269.477478
+      Y: -457.53598
+      Z: 299.438446
     }
     Rotation {
-      Pitch: 65.3042297
-      Yaw: -58.3431702
-      Roll: -6.82272339
+      Pitch: 61.7859955
+      Yaw: -52.1400757
+      Roll: -16.201355
     }
     Scale {
       X: 3.37499475
@@ -386,7 +301,7 @@ Objects {
       Z: 2.25001264
     }
   }
-  ParentId: 8816595637115914772
+  ParentId: 13367985225593421290
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -418,7 +333,7 @@ Objects {
   }
 }
 Objects {
-  Id: 14621427136237660891
+  Id: 9496466775692009731
   Name: "Rock Flat 01"
   Transform {
     Location {
@@ -437,7 +352,7 @@ Objects {
       Z: 2.25001264
     }
   }
-  ParentId: 8816595637115914772
+  ParentId: 13367985225593421290
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -469,13 +384,13 @@ Objects {
   }
 }
 Objects {
-  Id: 2397590890758311625
+  Id: 18095734678310297222
   Name: "Rock 02"
   Transform {
     Location {
-      X: 253.95015
-      Y: 261.047516
-      Z: 20.3096924
+      X: 35.2015762
+      Y: 320.523285
+      Z: 105.222641
     }
     Rotation {
       Pitch: -83.8481445
@@ -488,7 +403,7 @@ Objects {
       Z: 3.3750186
     }
   }
-  ParentId: 8816595637115914772
+  ParentId: 13367985225593421290
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"

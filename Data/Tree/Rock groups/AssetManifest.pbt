@@ -1,13 +1,4 @@
 Assets {
-  Id: 16593169243176712161
-  Name: "Container - Square Thin 01"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_container_square_thin_ref"
-  }
-}
-Assets {
   Id: 15934210186397621780
   Name: "Cylinder - Rounded"
   PlatformAssetType: 1
@@ -32,24 +23,6 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_rock_generic_001"
-  }
-}
-Assets {
-  Id: 12249585289919208147
-  Name: "Dirt 01"
-  PlatformAssetType: 2
-  PrimaryAsset {
-    AssetType: "MaterialAssetRef"
-    AssetId: "dirt_001"
-  }
-}
-Assets {
-  Id: 12095835209017042614
-  Name: "Cube"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_cube_002"
   }
 }
 Assets {
@@ -89,15 +62,6 @@ Assets {
   }
 }
 Assets {
-  Id: 7055655178099606474
-  Name: "Glass 01"
-  PlatformAssetType: 2
-  PrimaryAsset {
-    AssetType: "MaterialAssetRef"
-    AssetId: "mi_basic_glass_refrac_001"
-  }
-}
-Assets {
   Id: 5891317505873994422
   Name: "Waterfall 90 Outer Corner"
   PlatformAssetType: 1
@@ -122,15 +86,6 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_rock_generic_002_sm_rock_generic_002_LOD0"
-  }
-}
-Assets {
-  Id: 1481744078696836815
-  Name: "Sand 01"
-  PlatformAssetType: 2
-  PrimaryAsset {
-    AssetType: "MaterialAssetRef"
-    AssetId: "mi_sand_001_uv"
   }
 }
 Assets {

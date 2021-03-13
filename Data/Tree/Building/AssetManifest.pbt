@@ -44,12 +44,12 @@ Assets {
   }
 }
 Assets {
-  Id: 4270067979873565735
-  Name: "Stained Glass 01"
+  Id: 4638403997232070072
+  Name: "Metal Abstract Tech Panel 01"
   PlatformAssetType: 2
   PrimaryAsset {
     AssetType: "MaterialAssetRef"
-    AssetId: "mi_glass_stained_manticore_001"
+    AssetId: "mi_scf_abstract_tech_panel_001_uv"
   }
 }
 Assets {
@@ -59,5 +59,14 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_container_rectangle_thin_ref"
+  }
+}
+Assets {
+  Id: 3552212087010440286
+  Name: "Stained Glass 01"
+  PlatformAssetType: 2
+  PrimaryAsset {
+    AssetType: "MaterialAssetRef"
+    AssetId: "mi_glass_stained_manticore_001"
   }
 }

@@ -31,35 +31,6 @@ Objects {
   }
 }
 Objects {
-  Id: 10665984139206756167
-  Name: "Home base"
-  Transform {
-    Location {
-      X: -18700.4844
-      Y: 20009.2949
-      Z: -700
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 7553754998792656332
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "Home base"
-  }
-}
-Objects {
   Id: 12794903354937555053
   Name: "Forest"
   Transform {
@@ -92,7 +63,7 @@ Objects {
   Name: "Disco scene"
   Transform {
     Location {
-      Y: -20009.2949
+      Y: -22098.1016
     }
     Rotation {
     }
@@ -177,6 +148,8 @@ Objects {
   Name: "Garden scene"
   Transform {
     Location {
+      X: -21496.8398
+      Y: 20009.2949
     }
     Rotation {
     }
@@ -196,5 +169,31 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "Garden scene"
+  }
+}
+Objects {
+  Id: 10665984139206756167
+  Name: "Home base"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 7553754998792656332
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "Home base"
   }
 }

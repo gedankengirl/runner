@@ -20,18 +20,15 @@ Objects {
           String: "Teleporter Home"
         }
         Overrides {
-          Name: "Scale"
-          Vector {
-            X: 2.3926425
-            Y: 2.3926425
-            Z: 2.3926425
-          }
-        }
-        Overrides {
           Name: "Position"
           Vector {
             X: 6621.95508
             Z: 768.176514
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
           }
         }
       }
