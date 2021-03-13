@@ -101,7 +101,7 @@ end
 local function _show_or_hide_pipe(show)
     PIPE_SPR:ToAnim():Target("Rotation", Rotation.ZERO)(EGG_GROUP):Run()
     if show then
-        PIPE_SPR:ToAnim()(PIPE):Target("Scale", Vector3.New(7,7,7))(PIPE):Run()
+        PIPE_SPR:ToAnim():Target("Scale", Vector3.New(7,7,7))(PIPE):Run()
         PIPE_SPR:ToAnim():Target("Position", Vector3.New(0,0,-290))(PIPE):Run()
         PIPE_SPR:ToAnim():Target("Color", PIPE_COLOR_BW)(PIPE):Run()
         PIPE_SPR:ToAnim():Target("Scale", 0.5*EGG_TR:GetScale())(EGG_GROUP):Run()
@@ -240,7 +240,9 @@ local OnEnterShop, OnLeaveShop, OnCanBuyEgg, OnEggHatched do
 end -- do
 
 -------------------
--- TODO: purchase animation, sounds, VFX
+-- TODO: purchase VFX
+-- TODO: obliterate all below
+
 
 --[[
 function OnToggleUI(uniqueId, toggle)
