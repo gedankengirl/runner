@@ -103,12 +103,12 @@ local function _setSpeed(player, speedcoins)
     player.maxWalkSpeed = BASE_SPEED + calculateAfforadableAmount(1, COIN_TO_SPEED_RATE, 0, speedcoins)//1
 end
 
-local function enforceSpeed(player, speed)
-    if not speed or type(speed) ~= "number" then
-        local speedcoins = player:GetResource(COIN_KEY) or 1
-        player.maxWalkSpeed = BASE_SPEED + calculateAfforadableAmount(1, COIN_TO_SPEED_RATE, 0, speedcoins)//1
+local function immobilizePlayer(player, restore)
+    if restore then
+        player.movementControlMode = MovementControlMode.LOOK_RELATIVE
     else
-        player.maxWalkSpeed = speed
+        player:ResetVelocity()
+        player.movementControlMode = MovementControlMode.NONE
     end
 end
 
@@ -286,7 +286,7 @@ BusinessLogic.onClick = onClick
 BusinessLogic.addCoins = addCoins
 BusinessLogic.isRebirthPossible = isRebirthPossible
 BusinessLogic.doRebirth = doRebirth
-BusinessLogic.enforceSpeed = enforceSpeed
+BusinessLogic.immobilizePlayer = immobilizePlayer
 BusinessLogic.COIN_KEY = COIN_KEY
 BusinessLogic.REBIRTH_KEY = REBIRTH_KEY
 BusinessLogic.INVENTORY_KEY = INVENTORY_KEY

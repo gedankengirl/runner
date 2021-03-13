@@ -23,13 +23,14 @@ _maid.playerLeftEvent = Game.playerLeftEvent:Connect(OnPlayerLeft)
 _maid.TurnEquipmentOn = Events.ConnectForPlayer(P.C2S.TurnEquipmentOn, function(player)
     if _maid[player.id] and _maid[player.id]:IsValid() then
         _maid[player.id]:Equip(player)
-        B.enforceSpeed(player)
+        print("movement mode", player.movementControlMode)
+        B.immobilizePlayer(player, "restore")
     end
 end)
 
 _maid.TurnEquipmentOff = Events.ConnectForPlayer(P.C2S.TurnEquipmentOff, function(player)
     if _maid[player.id] and _maid[player.id]:IsValid() then
         _maid[player.id]:Unequip(player)
-        B.enforceSpeed(player, 0)
+        B.immobilizePlayer(player)
     end
 end)
