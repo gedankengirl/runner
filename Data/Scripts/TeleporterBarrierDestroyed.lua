@@ -9,8 +9,8 @@ local AREA = teleporter:GetCustomProperty("Area")
 local rebirthRequirement = assert(S.AreaLvlReq[AREA], AREA)
 local LOCAL_PLAYER = Game.GetLocalPlayer()
 local _maid = Maid.New(script)
-_maid.padlock = padlock
-_maid.barrier = barrier
+_maid.padlock = function() padlock.isEnabled = false end
+_maid.barrier = function() barrier.isEnabled = false end
 
 local VFXFlag = false
 function CheckRebirths()
@@ -19,7 +19,7 @@ function CheckRebirths()
         _maid.padlock = nil
         _maid.barrier = nil
         if not VFXFlag then
-            World.SpawnAsset(calloutVFX, {parent = script.parent, position = Vector3.New(0,0,10), scale = Vector3.ONE*3})
+            World.SpawnAsset(calloutVFX, {parent = script.parent, position = Vector3.New(0,0,10), scale = Vector3.ONE*7})
             VFXFlag = true
         end
     end

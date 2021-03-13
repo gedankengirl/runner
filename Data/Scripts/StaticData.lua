@@ -190,10 +190,21 @@ local AreaLvlReq = {
     Forest = 20
 }
 
+local AreaColor = {
+
+    Hub = Color.New(.97,.83,.0),
+    Garden = Color.New(.34,1,.006),
+    Graveyard = Color.New(.062,0,.15),
+    Tropical = Color.New(.106,.745,1),
+    Disco = Color.New(.76,0,.12),
+    Forest = Color.New(.96,0,.66)
+}
+
 StaticData.PetDb = PetDb
 StaticData.EggDb = EggDb
 StaticData.FancyPetNamesByName = FancyPetNamesByName
 StaticData.AreaLvlReq = AreaLvlReq
+StaticData.AreaColor = AreaColor
 StaticData.RARITY = RARITY
 StaticData.RARITY_INFO = RARITY_INFO
 

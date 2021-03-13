@@ -10,24 +10,17 @@ Assets {
         Name: "TeleporterWithBarrier"
         Transform {
           Scale {
-            X: 2.3926425
-            Y: 2.3926425
-            Z: 2.3926425
+            X: 1
+            Y: 1
+            Z: 1
           }
         }
         ParentId: 4781671109827199097
         ChildIds: 15674299218032213132
-        ChildIds: 4130428672868525244
-        ChildIds: 13008710138128883285
+        ChildIds: 15482925449092887975
         ChildIds: 15195691694134708619
         ChildIds: 12612973847289186230
         UnregisteredParameters {
-          Overrides {
-            Name: "cs:Target"
-            ObjectReference {
-              SelfId: 4231530394958152407
-            }
-          }
           Overrides {
             Name: "cs:DestinationOffset"
             Vector {
@@ -46,6 +39,11 @@ Assets {
             }
           }
           Overrides {
+            Name: "cs:Target"
+            ObjectReference {
+            }
+          }
+          Overrides {
             Name: "cs:TeleporterCooldown"
             Float: 0
           }
@@ -55,11 +53,7 @@ Assets {
           }
           Overrides {
             Name: "cs:Area"
-            String: "Graveyard"
-          }
-          Overrides {
-            Name: "cs:Target:tooltip"
-            String: "Target object to teleport to. Leave blank to just use DestinationOffset as a world position."
+            String: ""
           }
           Overrides {
             Name: "cs:DestinationOffset:tooltip"
@@ -126,7 +120,7 @@ Assets {
         }
       }
       Objects {
-        Id: 4130428672868525244
+        Id: 15482925449092887975
         Name: "ClientContext"
         Transform {
           Location {
@@ -140,208 +134,13 @@ Assets {
           }
         }
         ParentId: 15353425564796802316
-        ChildIds: 2379259184612552412
-        UnregisteredParameters {
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        NetworkContext {
-        }
-      }
-      Objects {
-        Id: 2379259184612552412
-        Name: "TeleporterClient"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 4130428672868525244
-        UnregisteredParameters {
-          Overrides {
-            Name: "cs:ComponentRoot"
-            ObjectReference {
-              SubObjectId: 15353425564796802316
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Script {
-          ScriptAsset {
-            Id: 32149845205756334
-          }
-        }
-      }
-      Objects {
-        Id: 13008710138128883285
-        Name: "Geo"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 15353425564796802316
-        ChildIds: 6042895824561963697
-        ChildIds: 3314013700781789238
-        ChildIds: 15482925449092887975
-        UnregisteredParameters {
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        Folder {
-          IsGroup: true
-        }
-      }
-      Objects {
-        Id: 6042895824561963697
-        Name: "Cylinder - Rounded Bottom-Aligned"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 2
-            Y: 2
-            Z: 0.05
-          }
-        }
-        ParentId: 13008710138128883285
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 10184847056121543272
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.0793968216
-              B: 0.122000098
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 13629958479359906438
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          EnableCameraCollision: true
-          InteractWithTriggers: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 3314013700781789238
-        Name: "Pipe (thin)"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1.8
-            Y: 1.8
-            Z: 0.1
-          }
-        }
-        ParentId: 13008710138128883285
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 10184847056121543272
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.955973685
-              G: 0.356400251
-              B: 0.010329823
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 5836430349218932838
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          EnableCameraCollision: true
-          InteractWithTriggers: true
-          StaticMesh {
-            Physics {
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 15482925449092887975
-        Name: "BarrierClientContext"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 13008710138128883285
         ChildIds: 10040832043993394563
         ChildIds: 2403240422868690117
+        ChildIds: 2379259184612552412
         ChildIds: 13081050738683069084
+        ChildIds: 6042895824561963697
+        ChildIds: 3314013700781789238
+        ChildIds: 11217645391476636058
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
         }
@@ -360,9 +159,9 @@ Assets {
           Rotation {
           }
           Scale {
-            X: 1.64083469
-            Y: 1.64083469
-            Z: 1.49843
+            X: 3.92593074
+            Y: 3.92593074
+            Z: 3.58520722
           }
         }
         ParentId: 15482925449092887975
@@ -376,8 +175,9 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 0.0793968216
-              B: 0.122000098
+              R: 0.759374917
+              G: 0.627286196
+              B: 0.303681433
               A: 1
             }
           }
@@ -409,15 +209,15 @@ Assets {
         Name: "Padlock - 3 digits"
         Transform {
           Location {
-            Z: 152.731705
+            Z: 365.432373
           }
           Rotation {
-            Yaw: 180
+            Yaw: -179.999969
           }
           Scale {
-            X: 0.358229309
-            Y: 0.358229309
-            Z: 0.358229309
+            X: 0.857114673
+            Y: 0.857114673
+            Z: 0.857114673
           }
         }
         ParentId: 15482925449092887975
@@ -820,6 +620,41 @@ Assets {
         }
       }
       Objects {
+        Id: 2379259184612552412
+        Name: "TeleporterClient"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 2.3926425
+            Y: 2.3926425
+            Z: 2.3926425
+          }
+        }
+        ParentId: 15482925449092887975
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:ComponentRoot"
+            ObjectReference {
+              SubObjectId: 15353425564796802316
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 32149845205756334
+          }
+        }
+      }
+      Objects {
         Id: 13081050738683069084
         Name: "TeleporterBarrierDestroyed"
         Transform {
@@ -828,9 +663,9 @@ Assets {
           Rotation {
           }
           Scale {
-            X: 0.417947948
-            Y: 0.417947948
-            Z: 0.417947948
+            X: 1
+            Y: 1
+            Z: 1
           }
         }
         ParentId: 15482925449092887975
@@ -873,18 +708,167 @@ Assets {
         }
       }
       Objects {
-        Id: 15195691694134708619
-        Name: "Teleport trigger"
+        Id: 6042895824561963697
+        Name: "Cylinder - Rounded Bottom-Aligned"
         Transform {
           Location {
-            Z: 75
           }
           Rotation {
           }
           Scale {
-            X: 1.5
-            Y: 1.5
-            Z: 2
+            X: 4.785285
+            Y: 4.785285
+            Z: 0.119632125
+          }
+        }
+        ParentId: 15482925449092887975
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 10184847056121543272
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.759374917
+              G: 0.627286196
+              B: 0.303681433
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 13629958479359906438
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          EnableCameraCollision: true
+          InteractWithTriggers: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 3314013700781789238
+        Name: "Pipe (thin)"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 4.3067565
+            Y: 4.3067565
+            Z: 0.23926425
+          }
+        }
+        ParentId: 15482925449092887975
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 10184847056121543272
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.955973685
+              G: 0.356400251
+              B: 0.010329823
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 5836430349218932838
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          EnableCameraCollision: true
+          InteractWithTriggers: true
+          StaticMesh {
+            Physics {
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 11217645391476636058
+        Name: "TeleporterGetCustomColor"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 15482925449092887975
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Barrier"
+            ObjectReference {
+              SubObjectId: 10040832043993394563
+            }
+          }
+          Overrides {
+            Name: "cs:TeleporterBase"
+            ObjectReference {
+              SubObjectId: 6042895824561963697
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 8098868276589411472
+          }
+        }
+      }
+      Objects {
+        Id: 15195691694134708619
+        Name: "Teleport trigger"
+        Transform {
+          Location {
+            Z: 179.448181
+          }
+          Rotation {
+          }
+          Scale {
+            X: 3.58896375
+            Y: 3.58896375
+            Z: 4.785285
           }
         }
         ParentId: 15353425564796802316
@@ -911,14 +895,14 @@ Assets {
         Name: "Force field trigger"
         Transform {
           Location {
-            Z: 75
+            Z: 179.448181
           }
           Rotation {
           }
           Scale {
-            X: 2.00795507
-            Y: 2.00795507
-            Z: 2.22683978
+            X: 4.80431843
+            Y: 4.80431843
+            Z: 5.32803154
           }
         }
         ParentId: 15353425564796802316
@@ -967,33 +951,6 @@ Assets {
             Id: 12301155947735466898
           }
         }
-      }
-    }
-    Assets {
-      Id: 13629958479359906438
-      Name: "Cylinder - Rounded Bottom-Aligned"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_cylinder_rounded_001"
-      }
-    }
-    Assets {
-      Id: 10184847056121543272
-      Name: "Basic Material"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_basic_pbr_material_001"
-      }
-    }
-    Assets {
-      Id: 5836430349218932838
-      Name: "Pipe - Thin"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_pipe_003"
       }
     }
     Assets {
@@ -1048,6 +1005,33 @@ Assets {
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
         AssetId: "sm_quarter_torus_003"
+      }
+    }
+    Assets {
+      Id: 13629958479359906438
+      Name: "Cylinder - Rounded Bottom-Aligned"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_cylinder_rounded_001"
+      }
+    }
+    Assets {
+      Id: 10184847056121543272
+      Name: "Basic Material"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_basic_pbr_material_001"
+      }
+    }
+    Assets {
+      Id: 5836430349218932838
+      Name: "Pipe - Thin"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_pipe_003"
       }
     }
     PrimaryAssetId {
