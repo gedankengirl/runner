@@ -44,7 +44,7 @@ function Maid.New(coreObject)
     local self = setmetatable({_tasks = {}}, Maid)
     if CORE_ENV and coreObject then
         self:GiveTask(coreObject.destroyEvent:Connect(self))
-    else
+    elseif coreObject then
         warn("Outside Core argument will be ignored")
     end
     return self
