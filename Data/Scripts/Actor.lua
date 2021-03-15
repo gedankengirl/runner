@@ -2,25 +2,18 @@ local SpringAnimator = _G.req("_SpringAnimator")
 local SpringParams = SpringAnimator.SpringParams
 local Maid = _G.req("_Maid")
 local B = _G.req("BusinessLogic")
+local S = _G.req("StaticData")
 local SPR_FAST = SpringParams.New(1, 5)
 local SPR_SLOW = SpringParams.New(0.7, 1)
 local SPR_BOUNCE = SpringParams.New(0.1, 2)
 
-local PET_DB = nil
 local Actor = {type="Actor"}
 Actor.__index = Actor
-
-function Actor.SetDb(pet_db)
-    assert(pet_db and type(pet_db) == "table" and pet_db ~= Actor, "maybe `:` instead of `.`")
-    PET_DB= pet_db
-end
-
 
 function Actor.New(pet_id, homeCell)
     local self = pet_id and type(pet_id) == "table" and pet_id or {id=pet_id}
     assert(self.id and type(self.id) == "number")
-    assert(PET_DB)
-    local muid = PET_DB:GetMuid(self.id)
+    local muid = S.PetDb:GetMuid(self.id)
     local root = World.SpawnAsset(muid)
     self.root = root
     self.homeCell = nil
@@ -81,7 +74,7 @@ function Actor:SetWorldPosition(pos)
 end
 
 function Actor:CanUpgrade(another)
-    return PET_DB:CanUpgrade(self.id, another and another.id)
+    return S.PetDb:CanUpgrade(self.id, another and another.id)
 end
 
 function Actor:GetActivationOutcome()

@@ -7,6 +7,7 @@ local Maid = _G.req("_Maid")
 local Trampoline = _G.req("_Trampoline")
 local REvents = _G.req("_ReliableEvents")
 local Heap = _G.req("_Heap")
+local B64 = _G.req("_Base64")
 local B = _G.req("BusinessLogic")
 local P = _G.req("Protocols")
 local S = _G.req("StaticData")
@@ -36,7 +37,7 @@ local function _defer_queue_add(delay, thunk)
     return _defer_queue:Push({time()+delay, thunk})
 end
 
-local DOWNLINK, CHANNELS, IN_USE, SOCIAL do
+local DOWNLINK, CHANNELS, IN_USE, SOCIAL, PET_CHAN do
     DOWNLINK = script:GetCustomProperty("DOWNLINK"):WaitForObject()
     CHANNELS= DOWNLINK:GetCustomProperties()
     for k  in pairs(CHANNELS) do
@@ -45,10 +46,11 @@ local DOWNLINK, CHANNELS, IN_USE, SOCIAL do
             CHANNELS[k] = nil
         end
     end
-    assert(#CHANNELS == 16 + 1)
+    assert(#CHANNELS == 16 + 2)
     table.sort(CHANNELS, function(a, b) return tonumber(a:sub(2)) < tonumber(b:sub(2)) end)
     IN_USE = Bitarray.new(#CHANNELS)
     SOCIAL = CHANNELS[IN_USE:swap(#CHANNELS)]
+    PET_CHAN = CHANNELS[IN_USE:swap(#CHANNELS-1)]
 end
 
 local function _borrow_channel()
@@ -120,7 +122,7 @@ function PlayerConnection.New(player)
         _count = 0
     }, PlayerConnection)
     B.RecalculatePetBonus(self.player, self.inventory)
-    self:Send(P.S2C.CHANNELS.pack(player.id, self.channel, SOCIAL, _nonce(self)))
+    self:Send(P.S2C.CHANNELS.pack(player.id, self.channel, PET_CHAN, SOCIAL, _nonce(self)))
     self._maid:GiveTask(player.resourceChangedEvent:Connect(B.SaveKey))
     return self
 end
@@ -268,6 +270,41 @@ end
 Server:Start()
 
 --------------------------------------------------------------------------------------------------
+-- Pets Equip
+--------------------------------------------------------------------------------------------------
+local PETS_UPDATE_INTERVAL = 1.4142
+local EquippedPets = {_count=0, _state={}}
+
+function EquippedPets.OnPetsChanged()
+    local out = {}
+    for player, connection in pairs(Server.playerConnections) do
+        if player and player:IsValid() and connection and connection.inventory then
+            local pets = B.GetEqippedPets(connection.inventory)
+            out[#out+1] = P.PETS.pack(player.id, pets)
+        end
+        EquippedPets._state = out
+    end
+end
+
+function EquippedPets.tx()
+    if #EquippedPets._state <= 0 then return end
+    local state = EquippedPets._state
+    state = table.move(state, 1, #state, 2, {P.PETS.op})
+    state[#state+1] = _nonce(EquippedPets)
+    state = B64.encode(table.concat(state))
+    _post_to_channel(PET_CHAN, state)
+end
+
+function EquippedPets.Start()
+    _maid.pets = Events.Connect("!RecalculatePetBonus", EquippedPets.OnPetsChanged)
+    _maid.pets_tx = Task.Spawn(EquippedPets.tx)
+    _maid.pets_tx.repeatCount = -1
+    _maid.pets_tx.repeatInterval = PETS_UPDATE_INTERVAL
+end
+
+EquippedPets.Start()
+
+--------------------------------------------------------------------------------------------------
 -- Social
 --------------------------------------------------------------------------------------------------
 local SOCIAL_UPDATE_INTERVAL = 0.5
@@ -305,6 +342,10 @@ function Social:Send(message)
 end
 
 Social.Start()
+
+--------------------------------------------------------------------------------------------------
+
+
 
 
 

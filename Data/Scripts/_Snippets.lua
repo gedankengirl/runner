@@ -72,13 +72,12 @@ function snippets.array_swap_remove(ar, idx)
     return res
 end
 
-function snippets.table_clear(t, kvt_callback)
-    -- NOTE: idiomatic way to `traverse & modify` table (`pairs` can cause errors)
+function snippets.table_clear(t)
+    -- NOTE: idiomatic way to `erase & modify` table (using `pairs` will cause errors if `t[k] = nil` has side effects to `t`)
     local k, v = next(t)
     while v ~= nil do
         t[k] = nil
         -- use k, v and modify table here ...
-        local _ = kvt_callback and kvt_callback(k, v, t)
         k, v = next(t)
     end
 end

@@ -7,16 +7,17 @@ Protocols.__index = Protocols
 local spack, sunpack = string.pack, string.unpack
 local enc, dec, testOp = Base64.encode, Base64.decode, Base64.test_prefix
 
+-- TODO: what format better for player_id, 'z' or 's1'?
 local PROTOCOL_CHANNELS do
-    local op, fmt = "$", "c1 z c3 c3 c1"
-    local function pack(player_id, channel, social, nonce)
+    local op, fmt = "$", "c1 z c3 c3 c3 c1"
+    local function pack(player_id, channel, pets, social, nonce)
         assert(nonce)
-        return enc(spack(fmt, op, player_id, channel, social, nonce))
+        return enc(spack(fmt, op, player_id, channel, pets, social, nonce))
     end
     local function unpack(msg)
         if msg and type(msg) == "string" and #msg > 0 and testOp(msg, op) then
-            local _op, player_id, channel, social, _nonce = sunpack(fmt, dec(msg))
-            return player_id, channel, social
+            local _op, player_id, channel, pets, social, _nonce = sunpack(fmt, dec(msg))
+            return player_id, channel, pets, social
         end
     end
     PROTOCOL_CHANNELS = {op=op, pack=pack, unpack=unpack}
@@ -61,12 +62,37 @@ local PROTOCOL_INVENTORY do
 end
 
 
+local PROTOCOL_PETS do
+    local op, fmt = "!", "z s1"
+    -- NOTE: packs 1, unpacks all
+    local function pack(player_id, pets)
+        return string.pack(fmt, player_id, string.char(table.unpack(pets)))
+    end
+    local function unpack(msg)
+        if msg and type(msg) == "string" and #msg > 0 and testOp(msg, op) then
+            local decoded = dec(msg)
+            local from, player_id, pets = #op + 1, nil, nil
+            local out = {}
+            while from < #decoded do
+                player_id, pets, from = sunpack(fmt, decoded, from)
+                out[player_id] = {string.byte(pets, 1, #pets)}
+            end
+            return out
+        end
+    end
+    PROTOCOL_PETS = {op=op, pack=pack, unpack=unpack}
+end
+
+
 -- S2C channel protocols
 Protocols.S2C = {
     INVENTORY = PROTOCOL_INVENTORY,
     CHANNELS = PROTOCOL_CHANNELS,
     EGG = PROTOCOL_EGG,
 }
+
+-- S2C pets channel protocol
+Protocols.PETS = PROTOCOL_PETS
 
 -- S2CC social channel protosols
 local SOCIAL do

@@ -253,6 +253,7 @@ function BusinessLogic.PurchaseEgg(player, egg_id, grid)
     end
 end
 
+-- RecalculatePetBonus :: player, grid ^- nil
 function BusinessLogic.RecalculatePetBonus(player, grid)
     assert(Environment.IsServer())
     assert(grid and grid.type == "Grid")
@@ -262,7 +263,20 @@ function BusinessLogic.RecalculatePetBonus(player, grid)
     end
     local bonus = grid:Fold(sum_bonuses, 0)
     player:SetResource(PET_BONUS_KEY, bonus)
-    return bonus
+    Events.Broadcast("!RecalculatePetBonus")
+end
+
+-- GetEqippedPets :: grid -> {pet_id}
+function BusinessLogic.GetEqippedPets(grid)
+    assert(grid and grid.type == "Grid")
+    local function sum_pets(seed, cell)
+        local row, _, id = cell:Unpack()
+        if id and row == EQUIPPED_ROW then
+            seed[#seed+1] = id
+        end
+        return seed
+    end
+    return grid:Fold(sum_pets, {})
 end
 
 function BusinessLogic.ResetGame(player)
