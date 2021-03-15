@@ -264,9 +264,6 @@ function PetMaster.Update(dt)
     end
 end
 
-function Tick(dt)
-    PetMaster.Update(dt)
-end
 -----------------------------------------------------------------------------
 -- Client
 -----------------------------------------------------------------------------
@@ -414,6 +411,10 @@ function INGAME:HandleInventoryBinding()
     if self.isInteractionEnabled then
         ISM:GoToState(INVENTORY)
     end
+end
+
+function INGAME:Update(dt)
+    PetMaster.Update(dt)
 end
 
 function INGAME:HandleShopInteraction(...)

@@ -55,7 +55,8 @@ local function _spawnUpdate(self, update)
     return Task.Spawn(function()
         while true do
             local dt = Task.Wait()
-            update(self, dt)
+            local ok, m = pcall(update, self, dt)
+            if not ok then warn(m) end
         end
     end)
 end

@@ -332,8 +332,8 @@ Assets {
         Transform {
           Location {
             X: 1000
-            Y: 1000
-            Z: 1000
+            Y: -36955.8438
+            Z: -4361.69336
           }
           Rotation {
           }
@@ -1475,6 +1475,10 @@ Assets {
         ParentId: 5300870412525512097
         UnregisteredParameters {
           Overrides {
+            Name: "cs:C98"
+            String: ""
+          }
+          Overrides {
             Name: "cs:C99"
             String: ""
           }
@@ -1608,6 +1612,10 @@ Assets {
           }
           Overrides {
             Name: "cs:C16:isrep"
+            Bool: true
+          }
+          Overrides {
+            Name: "cs:C98:isrep"
             Bool: true
           }
         }
