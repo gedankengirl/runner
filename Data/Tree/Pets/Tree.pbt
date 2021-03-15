@@ -1,6 +1,60 @@
 Name: "Pets"
 RootId: 2522660340735145273
 Objects {
+  Id: 14216477141313801599
+  Name: "Basic"
+  Transform {
+    Location {
+      Y: -582.323242
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 2522660340735145273
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "Basic"
+  }
+}
+Objects {
+  Id: 16993028767693296824
+  Name: "Specials"
+  Transform {
+    Location {
+      Y: -1039.51709
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 2522660340735145273
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "Specials"
+  }
+}
+Objects {
   Id: 9403604496505621632
   Name: "Forest group"
   Transform {
@@ -115,7 +169,7 @@ Objects {
   Name: "Garden group"
   Transform {
     Location {
-      Y: -286.732422
+      Y: -73.0510254
     }
     Rotation {
     }

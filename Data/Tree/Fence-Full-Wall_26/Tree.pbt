@@ -2833,9 +2833,9 @@ Objects {
   Name: "Large Wood Board 8m"
   Transform {
     Location {
-      X: -125.657104
-      Y: 0.00454711914
-      Z: 89.2057343
+      X: -125.657127
+      Y: 78.7615
+      Z: 89.2057419
     }
     Rotation {
       Pitch: 44.9998169

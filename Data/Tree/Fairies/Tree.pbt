@@ -45,9 +45,14 @@ Objects {
   }
 }
 Objects {
-  Id: 5222821408549078414
+  Id: 3394960284154792270
   Name: "$FairyClientContext_2"
   Transform {
+    Location {
+      X: -786.621094
+    }
+    Rotation {
+    }
     Scale {
       X: 1
       Y: 1
@@ -55,6 +60,7 @@ Objects {
     }
   }
   ParentId: 10806057176125142267
+  ChildIds: 1118695170761358525
   WantsNetworking: true
   Collidable_v2 {
     Value: "mc:ecollisionsetting:forceoff"
@@ -62,30 +68,46 @@ Objects {
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
-  TemplateInstance {
-    ParameterOverrideMap {
-      key: 1351880239996746024
-      value {
-        Overrides {
-          Name: "Name"
-          String: "$FairyClientContext_2"
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-            X: -786.621094
-          }
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-          }
-        }
-      }
+  NetworkContext {
+  }
+  InstanceHistory {
+    SelfId: 3394960284154792270
+    SubobjectId: 1351880239996746024
+    InstanceId: 5222821408549078414
+    TemplateId: 15874215729247429874
+    WasRoot: true
+  }
+}
+Objects {
+  Id: 1118695170761358525
+  Name: "TransformController"
+  Transform {
+    Location {
     }
-    TemplateAsset {
-      Id: 15874215729247429874
+    Rotation {
     }
+    Scale {
+      X: 0.6
+      Y: 0.6
+      Z: 0.6
+    }
+  }
+  ParentId: 3394960284154792270
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "TransformController"
+  }
+  InstanceHistory {
+    SelfId: 1118695170761358525
+    SubobjectId: 3628180404535020763
+    InstanceId: 5222821408549078414
+    TemplateId: 15874215729247429874
   }
 }
 Objects {

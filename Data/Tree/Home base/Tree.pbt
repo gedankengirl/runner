@@ -135,6 +135,36 @@ Objects {
   }
 }
 Objects {
+  Id: 9803862681446895524
+  Name: "Board"
+  Transform {
+    Location {
+      X: 120.010864
+      Y: 5985.26855
+      Z: -239.591125
+    }
+    Rotation {
+      Yaw: -102.418884
+    }
+    Scale {
+      X: 0.948308408
+      Y: 0.948308408
+      Z: 0.948308408
+    }
+  }
+  ParentId: 10665984139206756167
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "Board_1"
+  }
+}
+Objects {
   Id: 14139637125947873166
   Name: "Board"
   Transform {
@@ -161,7 +191,7 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Board_1"
+    FilePartitionName: "Board_2"
   }
 }
 Objects {
@@ -169,11 +199,12 @@ Objects {
   Name: "Rebirth Plate"
   Transform {
     Location {
-      X: 2645.23633
-      Y: -1459.36914
+      X: -583.924805
+      Y: 5709.1792
       Z: 66.388855
     }
     Rotation {
+      Yaw: 90
     }
     Scale {
       X: 1
@@ -227,6 +258,7 @@ Objects {
   Name: "Pets"
   Transform {
     Location {
+      X: -2685.85327
       Y: -1762.2832
       Z: 76.0956421
     }
