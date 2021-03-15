@@ -103,12 +103,12 @@ local function _setSpeed(player, speedcoins)
     player.maxWalkSpeed = BASE_SPEED + calculateAfforadableAmount(1, COIN_TO_SPEED_RATE, 0, speedcoins)//1
 end
 
-local function enforceSpeed(player, speed)
-    if not speed or type(speed) ~= "number" then
-        local speedcoins = player:GetResource(COIN_KEY) or 1
-        player.maxWalkSpeed = BASE_SPEED + calculateAfforadableAmount(1, COIN_TO_SPEED_RATE, 0, speedcoins)//1
+local function immobilizePlayer(player, restore)
+    if restore then
+        player.movementControlMode = MovementControlMode.LOOK_RELATIVE
     else
-        player.maxWalkSpeed = speed
+        player:ResetVelocity()
+        player.movementControlMode = MovementControlMode.NONE
     end
 end
 
@@ -253,6 +253,7 @@ function BusinessLogic.PurchaseEgg(player, egg_id, grid)
     end
 end
 
+-- RecalculatePetBonus :: player, grid ^- nil
 function BusinessLogic.RecalculatePetBonus(player, grid)
     assert(Environment.IsServer())
     assert(grid and grid.type == "Grid")
@@ -262,7 +263,20 @@ function BusinessLogic.RecalculatePetBonus(player, grid)
     end
     local bonus = grid:Fold(sum_bonuses, 0)
     player:SetResource(PET_BONUS_KEY, bonus)
-    return bonus
+    Events.Broadcast("!RecalculatePetBonus")
+end
+
+-- GetEqippedPets :: grid -> {pet_id}
+function BusinessLogic.GetEqippedPets(grid)
+    assert(grid and grid.type == "Grid")
+    local function sum_pets(seed, cell)
+        local row, _, id = cell:Unpack()
+        if id and row == EQUIPPED_ROW then
+            seed[#seed+1] = id
+        end
+        return seed
+    end
+    return grid:Fold(sum_pets, {})
 end
 
 function BusinessLogic.ResetGame(player)
@@ -286,7 +300,7 @@ BusinessLogic.onClick = onClick
 BusinessLogic.addCoins = addCoins
 BusinessLogic.isRebirthPossible = isRebirthPossible
 BusinessLogic.doRebirth = doRebirth
-BusinessLogic.enforceSpeed = enforceSpeed
+BusinessLogic.immobilizePlayer = immobilizePlayer
 BusinessLogic.COIN_KEY = COIN_KEY
 BusinessLogic.REBIRTH_KEY = REBIRTH_KEY
 BusinessLogic.INVENTORY_KEY = INVENTORY_KEY

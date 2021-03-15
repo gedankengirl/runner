@@ -153,10 +153,7 @@ end
 local _SETTING_METHODS = not CORE_ENV and {} or {
     -- offset, size rotationAngle fo UIControl
     offset = {
-        get=function(obj)
-            print(type(obj), obj.type)
-            print(CoreDebug.GetStackTrace())
-            return Vector2.New(obj.x, obj.y) end,
+        get=function(obj) return Vector2.New(obj.x, obj.y) end,
         set=function(obj, vec2) obj.x, obj.y = _round_vec2(vec2) end,
     },
     size = {

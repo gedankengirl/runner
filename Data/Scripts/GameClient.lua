@@ -3,6 +3,9 @@ local Grid = _G.req("_Grid")
 local Base64 = _G.req("_Base64")
 local REvents = _G.req("ReliableEvents")
 local StateMachine = _G.req("StateMachine")
+local SA = _G.req("SpringAnimator")
+local SP = SA.SpringParams
+local Spring = SA.Spring
 local B = _G.req("BusinessLogic")
 local P = _G.req("Protocols")
 local S = _G.req("StaticData")
@@ -19,7 +22,6 @@ local CAMERA_LERP_TIME = 0.5
 
 local Tile = require(script:GetCustomProperty("Tile"))
 local Actor = require(script:GetCustomProperty("Actor"))
-Actor.SetDb(S.PetDb) -- FIXME: to req
 
 local COLOR_DEFAULT = Color.New(1, 1, 1, 0.5)
 local COLOR_MOVE = Color.New(1, 1, 0, 0.5)
@@ -81,6 +83,190 @@ local function _set_camera(cam, lerp)
     end
 end
 
+local function _randomize(x, factor)
+    local a, b = x*(1-factor), x*(1+factor)
+    assert(a < b, "empty interval")
+    return a + (b-a)*math.random()
+end
+
+-----------------------------------------------------------------------------
+-- Pet animator
+-----------------------------------------------------------------------------
+local PetMaster = {type="PetMaster", _state = {}}
+PetMaster.__index = PetMaster
+local PetAnimator = {type="PetAnimator"}
+PetAnimator.__index = PetAnimator
+local MIN_SPR = SP.New(0.7, 0.5)
+local MAX_SPR = SP.New(0.7, 1.0)
+local SOFT_SPR = SP.New(0.2, 1)
+local HEAVEN = Vector3.New(0,0, 2000)
+local _pet_params = {position=HEAVEN}
+local SLOW_SQ = 1E6
+
+
+local _get_goal do
+    -- TODO: add up to 5 spots
+    local alpha = math.rad(60)
+    local R = 200
+    local V = R*math.cos(alpha)
+    local U = R*math.sin(alpha)
+
+    _get_goal = function(master_pos, dir, pos_idx, n_pets)
+        local cross = dir^Vector3.UP
+        if  n_pets == 1 then
+            pos_idx = 2
+        elseif n_pets == 2 and pos_idx == 2 then
+            pos_idx = 3
+        end
+
+        if pos_idx == 1 then return master_pos - cross*U - dir*V end
+        if pos_idx == 2 then return master_pos - dir*R end
+        if pos_idx == 3 then return master_pos + cross*U - dir*V end
+        error(pos_idx)
+    end
+end
+
+function PetAnimator.New(pet_id, pos_idx, player)
+    assert(player and player:IsValid(), CoreDebug.GetStackTrace())
+    _pet_params.position = player:GetWorldPosition() + HEAVEN
+    local self = {
+        -- TODO: defer spawn to 1 per frame
+        pet = World.SpawnAsset(S.PetDb:GetMuid(pet_id), _pet_params),
+        pet_id=pet_id,
+        pos_idx=pos_idx,
+        min_spr=MIN_SPR:RandomizeFrequency(0.25),
+        max_spr=MAX_SPR:RandomizeFrequency(0.25),
+        look_at_speed = _randomize(math.pi, 0.25),
+        spring = Spring.New(MAX_SPR, _pet_params.position)
+    }
+    self.pet:LookAtContinuous(player)
+    return setmetatable(self, PetAnimator)
+end
+
+local PET_ANIMATOR_NIL = setmetatable({pet_id=-1}, PetAnimator)
+
+function PetAnimator:ChangePositionIndex(idx)
+    assert(idx == 1 or idx == 2 or idx == 3)
+    self.pos_idx = idx
+end
+
+function PetAnimator:Update(dt, target_transform, target_velocity, n_pets)
+    local pet = self.pet
+    if not pet then return end
+    local is_slow = target_velocity.sizeSquared < SLOW_SQ
+    local spring = self.spring
+    spring:SetSpringParams(is_slow and self.min_spr or self.max_spr)
+    spring:SetPosition(pet:GetWorldPosition())
+    local direction = is_slow and target_transform:GetForwardVector() or target_velocity:GetNormalized()
+    spring:SetGoal(_get_goal(target_transform:GetPosition(), direction, self.pos_idx, n_pets))
+    spring:Update(dt)
+    pet:SetWorldPosition(spring:GetPosition())
+end
+
+function PetAnimator:Destroy()
+    if self == PET_ANIMATOR_NIL then return end
+    local pet = self.pet
+    pet:StopRotate() -- to stop LookAtContinuous
+    SOFT_SPR:ToAnim()(pet):Offset("Rotation", Rotation.New(0, 0, 180)):Run()
+    self.min_spr:ToAnim()(pet):Target("WorldPosition", pet:GetWorldPosition()+HEAVEN):Run(1)
+        :SetOnFinish(function() Maid.safeDestroy(pet) end)
+
+end
+
+local _pet_animators_to_destroy = {}
+-- pdata: [pet_id]
+-- pstae: [{pet_id=pet_id}]
+local function _harmonize(pdata, pstate, player)
+    pdata = pdata or {}
+    pstate = pstate or {}
+    -- is ok?
+    if #pdata == #pstate then
+        local eq = true
+        for i=1, #pdata do
+            eq = eq and pdata[i] == pstate[i].pet_id
+        end
+        if eq then
+            return pstate
+        end
+    end
+    -- need to harmonize
+    for idx, pet_id in ipairs(pdata) do
+        local found do
+            for i, pa in ipairs(pstate) do
+                if pa.pet_id == pet_id then
+                    found, pstate[i] = pa, PET_ANIMATOR_NIL
+                    break
+                end
+            end
+        end
+        if found then
+            found.pos_idx = idx
+            pdata[idx] = found
+        else
+            pdata[idx] = PetAnimator.New(pet_id, idx, player)
+        end
+    end
+    -- destroy exceeding pets
+    for _, pa in ipairs(pstate) do
+        pa:Destroy()
+    end
+    return pdata
+end
+
+-- in  {player_id=[pet_id]}
+-- out [player]
+local _ignore_local = {ignorePlayers=LOCAL_PLAYER}
+function PetMaster.SetState(data)
+    -- local player excluded
+    local state = PetMaster._state
+    local players = Game.GetPlayers(_ignore_local)
+    -- {player_id=player}
+    for i, player in ipairs(players) do
+        players[player.id] = player
+        players[i] = nil
+    end
+    -- clean-up state
+    for player_id, pstate in pairs(state) do
+        if player_id ~= LOCAL_PLAYER.id and not players[player_id] then
+            for _, pa in pairs(pstate) do
+                pa:Destroy()
+            end
+            state[player_id] = nil
+        end
+    end
+    -- update state
+    for player_id, player in pairs(players) do
+        state[player_id] = _harmonize(data[player_id], state[player_id], player)
+    end
+end
+
+function PetMaster.Update(dt)
+    local state = PetMaster._state
+    -- TODO: handle local player here
+    if (_maid.grid) then
+        state[LOCAL_PLAYER.id] = _harmonize(B.GetEqippedPets(_maid.grid), state[LOCAL_PLAYER.id], LOCAL_PLAYER)
+    end
+    local players = Game.GetPlayers()
+    -- {player_id=player}
+    for i, player in ipairs(players) do
+        players[player.id] = player
+        players[i] = nil
+    end
+    for player_id, panims in pairs(state) do
+        local player = players[player_id]
+        if player and player:IsValid() then
+            local tr, vel = player:GetWorldTransform(), player:GetVelocity()
+            local n_pets = #panims
+            for i=1, n_pets do
+                panims[i]:Update(dt, tr, vel, n_pets)
+            end
+        end
+    end
+end
+
+function Tick(dt)
+    PetMaster.Update(dt)
+end
 -----------------------------------------------------------------------------
 -- Client
 -----------------------------------------------------------------------------
@@ -103,11 +289,12 @@ function Client:_AwaitDownlinkChannel()
     while not self.channel do
         Task.Wait(0.1)
         for _, val in pairs(DOWNLINK:GetCustomProperties()) do
-            local player_id, channel, social = P.S2C.CHANNELS.unpack(val)
+            local player_id, channel, pets, social = P.S2C.CHANNELS.unpack(val)
             if player_id and player_id == LOCAL_PLAYER.id then
                 warn(pp{"got channel", LOCAL_PLAYER.name, player_id, channel, social})
                 self.channel = channel
-                self.social = social
+                self.pets_chan = pets
+                self.social_chan = social
                 break
             end
         end
@@ -131,7 +318,10 @@ function Client:_AwaitDownlinkChannel()
             else
                 warn(self.channel .. ", Unknown message:\n" .. data)
             end
-        elseif prop == self.social then
+        elseif prop == self.pets_chan then
+            local pets = P.PETS.unpack(data)
+            PetMaster.SetState(pets)
+        elseif prop == self.social_chan then
             P.SOCIAL.handle(data)
         end
     end)

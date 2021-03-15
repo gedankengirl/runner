@@ -1,16 +1,17 @@
--- fixed size bitarray
+-- fixed size compact, serializable bitarray
 local bitarray = {}
 bitarray.__index = bitarray
 
 local function nbytes(size)
-    return size%8 == 0 and size//8 or size//8 + 1
+    local r, n = size%8, size//8
+    return r == 0 and n or n+1, r
 end
 
 function bitarray.new(size, default)
     size = size or 32
     local n = nbytes(size)
     local _size = size
-    -- hide _size in closure upvalue
+    -- hide _size in closure
     local self = {size=function() return _size end}
 
     local fill = default and 0xFF or 0x00
@@ -20,18 +21,29 @@ function bitarray.new(size, default)
     return setmetatable(self, bitarray)
 end
 
--- eq :: self, other -> bool
+-- bitarray.eq :: self, other -> bool
+-- assume only [1..size] bits must be the same, fill not
+local rawequal = rawequal
 function bitarray:eq(other)
-    if self == other then return true end
-    if self.size() ~= other.size() then return false end
-    local n = nbytes(self.size())
-    for i=1, n do
+    if rawequal(self, other) then return true end
+    if other.type ~= bitarray.type then return false end
+    local size = self.size()
+    if size ~= other.size() then return false end
+    local n, r = nbytes(size)
+     for i=1, n-1 do
         if self[i] ~= other[i] then return false end
     end
-    return true
+    if r == 0 then
+        return self[n] == other[n]
+    else
+        return (self[n] ~ other[n]) & ~(-1 << r) == 0
+    end
 end
 
--- sel :: self, i, bool ^-> self
+-- `==` overload
+bitarray.__eq = bitarray.eq
+
+-- @ bitarray.set :: self, i, bool ^-> self
 function bitarray:set(i, val)
     assert(i >= 1 and i <= self.size())
     local idx, bit = (i-1)//8 + 1, (i-1)%8
@@ -41,14 +53,15 @@ function bitarray:set(i, val)
     return self
 end
 
--- get :: self, i -> bool
+-- @ bitarray.get :: self, i -> bool
 function bitarray:get(i)
     assert(i >= 1 and i <= self.size())
     local idx, bit = (i-1)//8 + 1, (i-1)%8
     return self[idx] & (1 << bit) ~= 0
 end
 
--- find_and_swap :: self, i ^-> i | nil
+-- @ bitarray.find_and_swap :: self[, bool=false] ^-> i | nil
+-- finds first asked boolean value, swap it and return it's index
 function bitarray:find_and_swap(bool)
     bool = bool and true or false
     for i = 1, self.size() do
@@ -59,7 +72,8 @@ function bitarray:find_and_swap(bool)
     end
 end
 
--- swap :: self, i ^-> i
+-- @ bitarray.swap :: self, i ^-> i
+-- swap boolean at index i
 function bitarray:swap(i)
     assert(i > 0 and i <= self.size())
     local val = self:get(i)
@@ -67,7 +81,8 @@ function bitarray:swap(i)
     return i
 end
 
--- serialize :: self -> string
+-- @ bitarray.serialize :: self -> string
+-- NOTE: serialize size to variable lenght utf8 codepoint
 function bitarray:serialize()
     local size = utf8.char(self.size())
     if #size == 1 then
@@ -78,7 +93,7 @@ function bitarray:serialize()
     return size..s
 end
 
--- deserialize :: string, first_byte -> bitarray, next_byte
+-- @ bitarray.deserialize :: string, first_byte_idx -> bitarray, next_byte_idx
 function bitarray.deserialize(str, from)
     from = from or 1
     local _size = utf8.codepoint(str, from)
@@ -88,10 +103,12 @@ function bitarray.deserialize(str, from)
     return setmetatable(self, bitarray), offset + n
 end
 
+-------------------------------------------------------------------------------
 local function _bitarray_test()
     local ba1 = bitarray.new(9, true)
     assert(ba1.size() == 9)
     assert(ba1:eq(ba1))
+    assert(ba1 ==  ba1)
     ba1:set(1, nil)
     assert(not ba1:get(1))
     assert(ba1:get(2) and ba1:get(9))
@@ -114,6 +131,8 @@ local function _bitarray_test()
     assert(#ba2s == 2 and string.byte(ba2s) == 7 and string.byte(ba2s, 2, 2) == 66)
     local ba21 = bitarray.deserialize(ba2s)
     assert(ba2:eq(ba21))
+    assert(ba2 == ba21)
+    assert(ba2 ~= ba1)
 
     -- limits
     local N = 10000 -- tested up to 1MM
@@ -122,6 +141,7 @@ local function _bitarray_test()
     local ba10Ks = ba10K:serialize()
     local ba10K1 = bitarray.deserialize(ba10Ks)
     assert(ba10K:eq(ba10K1))
+    assert(ba10K == ba10K1)
     assert(not ba10K1:get(N//2))
 
     -- part string
@@ -140,8 +160,19 @@ local function _bitarray_test()
     local ba11, next = bitarray.deserialize(s, utf8.offset(s, 3, 5))
     assert(ba11:eq(ba))
     assert(s:sub(next) == 'tail')
+
+    -- still equal with different fills
+    local ba71 = bitarray.new(7, true)
+    local ba72 = bitarray.new(7, false)
+    for i=1, ba72.size() do ba72:set(i, true) end
+    assert(ba71:eq(ba72))
+    ba71:set(2, nil)
+    ba72:set(2, nil)
+    assert(ba71:eq(ba72))
+
     --
     print("bitarray -- ok")
+
  end
 
 _bitarray_test()

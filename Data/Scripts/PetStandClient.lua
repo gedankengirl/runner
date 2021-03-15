@@ -5,7 +5,8 @@ local SP = SA.SpringParams
 local S = _G.req("StaticData")
 local P = _G.req("Protocols")
 local _maid = Maid.New(script)
-local _pmaid = Maid.New(script)
+local _session_maid = Maid.New()
+_maid.session_maid = _session_maid
 
 local TRIGGER = script:GetCustomProperty("Trigger"):WaitForObject()
 local CAMERA = script:GetCustomProperty("Camera"):WaitForObject()
@@ -101,7 +102,7 @@ end
 local function _show_or_hide_pipe(show)
     PIPE_SPR:ToAnim():Target("Rotation", Rotation.ZERO)(EGG_GROUP):Run()
     if show then
-        PIPE_SPR:ToAnim()(PIPE):Target("Scale", Vector3.New(7,7,7))(PIPE):Run()
+        PIPE_SPR:ToAnim():Target("Scale", Vector3.New(7,7,7))(PIPE):Run()
         PIPE_SPR:ToAnim():Target("Position", Vector3.New(0,0,-290))(PIPE):Run()
         PIPE_SPR:ToAnim():Target("Color", PIPE_COLOR_BW)(PIPE):Run()
         PIPE_SPR:ToAnim():Target("Scale", 0.5*EGG_TR:GetScale())(EGG_GROUP):Run()
@@ -149,21 +150,21 @@ local OnEnterShop, OnLeaveShop, OnCanBuyEgg, OnEggHatched do
         if player:IsA("Player") and player == LOCAL_PLAYER then
             BUY_BUTTON.isInteractable = false
             _show_or_hide_buy_button("show")
-            _maid.onCanBuyEgg = Events.Connect(P.CLIENT.CAN_BUY_EGG, OnCanBuyEgg)
-            _maid.shop_flow = Events.Connect("ISM:Shop:Entered", OnEnterShop)
-            _maid.egg_hatch = Events.Connect(P.CLIENT.EGG_HATCHED_IN_SHOP, OnEggHatched)
-            _maid.buy = BUY_BUTTON.clickedEvent:Connect(function()
+            _session_maid.onCanBuyEgg = Events.Connect(P.CLIENT.CAN_BUY_EGG, OnCanBuyEgg)
+            _session_maid.shop_flow = Events.Connect("ISM:Shop:Entered", OnEnterShop)
+            _session_maid.egg_hatch = Events.Connect(P.CLIENT.EGG_HATCHED_IN_SHOP, OnEggHatched)
+            _session_maid.buy = BUY_BUTTON.clickedEvent:Connect(function()
                 _show_or_hide_buy_button(not "show")
                 REvents.BroadcastToServer(P.C2S.TransmitHatchingEgg, EGG_ID)
                 PURCHASE_AUDIO1:Play()
             end)
-            _maid.exit = EXIT_BUTTON.clickedEvent:Connect(function()
+            _session_maid.exit = EXIT_BUTTON.clickedEvent:Connect(function()
                 REvents.Broadcast(P.CLIENT.LEAVE_SHOP)
             end)
             REvents.Broadcast(P.CLIENT.SHOP_INTERACTED, THIS_STAND_ID, EGG_ID, CAMERA)
         end
     end
-    _maid.shop_flow = TRIGGER.interactedEvent:Connect(OnInteractedEvent)
+    _session_maid.shop_flow = TRIGGER.interactedEvent:Connect(OnInteractedEvent)
 
     OnEggHatched = function(shop_id, pet_id)
         if shop_id ~= THIS_STAND_ID then return end
@@ -190,14 +191,14 @@ local OnEnterShop, OnLeaveShop, OnCanBuyEgg, OnEggHatched do
     OnEnterShop = function()
         TRIGGER.isInteractable = false
         UI_CONTAINER.visibility = Visibility.INHERIT
-        _maid.shop_flow = Events.Connect("ISM:InGame:Entering", OnLeaveShop)
+        _session_maid.shop_flow = Events.Connect("ISM:InGame:Entering", OnLeaveShop)
         -- change stand's look
         _show_or_hide_pipe("show")
         _show_or_hide_pets("show")
-        _maid:GiveTask(Events.Connect("ISM:Shop:Entered", function()
+        _session_maid:GiveTask(Events.Connect("ISM:Shop:Entered", function()
             UI_CONTAINER.visibility = Visibility.INHERIT
         end))
-        _maid:GiveTask(Events.Connect("ISM:Shop:Exited", function()
+        _session_maid:GiveTask(Events.Connect("ISM:Shop:Exited", function()
             UI_CONTAINER.visibility = Visibility.FORCE_OFF
         end))
     end
@@ -210,9 +211,9 @@ local OnEnterShop, OnLeaveShop, OnCanBuyEgg, OnEggHatched do
         _show_or_hide_pets(not "show")
         _show_or_hide_buy_button(not "show", "both")
         -- should be at the end of the callback: wait before turn-on shop's interactivity
-        _maid:Reset()
+        _session_maid:Reset()
         Task.Wait(0.5)
-        _maid.shop_flow = TRIGGER.interactedEvent:Connect(OnInteractedEvent)
+        _session_maid.shop_flow = TRIGGER.interactedEvent:Connect(OnInteractedEvent)
         TRIGGER.isInteractable = true
     end
 
@@ -227,12 +228,12 @@ local OnEnterShop, OnLeaveShop, OnCanBuyEgg, OnEggHatched do
 
     do -- (All Shops) hides annoying shop interactivity prompt in inventory
         local _save_TRIGGER_isInteractable = false
-        _pmaid:GiveTask(Events.Connect("ISM:Inventory:Entering", function()
+        _maid:GiveTask(Events.Connect("ISM:Inventory:Entering", function()
             _save_TRIGGER_isInteractable = TRIGGER.isInteractable
             TRIGGER.isInteractable = false
         end))
 
-        _pmaid:GiveTask(Events.Connect("ISM:Inventory:Exiting", function()
+        _maid:GiveTask(Events.Connect("ISM:Inventory:Exiting", function()
             TRIGGER.isInteractable = _save_TRIGGER_isInteractable
         end))
     end
@@ -240,7 +241,9 @@ local OnEnterShop, OnLeaveShop, OnCanBuyEgg, OnEggHatched do
 end -- do
 
 -------------------
--- TODO: purchase animation, sounds, VFX
+-- TODO: purchase VFX
+-- TODO: obliterate all below
+
 
 --[[
 function OnToggleUI(uniqueId, toggle)
@@ -312,7 +315,7 @@ end
 function OnItemPurchased(id, player)
     if id == THIS_STAND_ID then
         WORLD_TEXT.text = "Enjoy!"
-        _maid.textResetTask = Task.Spawn(ResetTextWorker)
+        _session_maid.textResetTask = Task.Spawn(ResetTextWorker)
         if player == LOCAL_PLAYER then
             UI.ShowFlyUpText(
                 string.format("-%d gold", 0 --[[STAND_KEY]]), -- FIXME: should be COST

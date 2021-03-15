@@ -5,27 +5,49 @@
     * Manages the cleaning of events and other things.
     * Useful for encapsulating state and make deconstructors easy.
     * Adapted for Core by zoon (https://github.com/zoon).
+    * Supports (and do all necessary checks for):
+        - regular callbacks (call them on Maid:Destroy())
+        - CoreObject (:Destroy)
+        - Events and Hooks (:Disconnect)
+        - Tasks (:Cancel)
+        - any type that realize any of this methods
+    * Usage (in Core):
+    local Maid = require(`some_muid:Maid.lua`)
+    -- will call _maid:OnDestroy() when this `script` is destroyed
+    local _maid = Maid.New(script)
+    ...
+    _maid.cool_event_connection = Events.Connect("MyCoolEvent", OnMyCoolEvent)
+    -- diconnect MyCoolEvent after 1 sec
+    Task.Wait(1)
+    _maid.cool_event_connection = nil
+    -- will destroy spawned object when _maid:Destroy() is called
+    _maid:GiveTask(World.SpawnAsset(SOME_TEMPLATE))
+    _maid.my_cool_pet = World.SpawnAssets(BRONZE_PET_TEMPLATE)
+    ...
+    -- will destroy instance of BRONZE_PET_TEMPLATE and keep the ref to SILVER_PET_TEMPLATE instance
+    _maid.my_cool_pet = World.SpawnAssets(SILVER_PET_TEMPLATE)
+    * Quenty has a good post about Maid:
+    https://medium.com/roblox-development/how-to-use-a-maid-class-on-roblox-to-manage-state-651bf74de98b
+    * For people with Unity background: Maid is like Rx's CompositeDisposable on steroids.
 ]]
 
 local CORE_ENV = CoreString and CoreMath
-local stacktrace = (CoreDebug and CoreDebug.GetStackTrace) or debug.traceback
+local stacktrace = (CORE_ENV and CoreDebug.GetStackTrace) or debug.traceback
 local warn = warn or print
 
 local Maid = {type="Maid"}
 Maid.__index = Maid
 
---- Returns a new Maid object
+--- Returns a new Maid object that can be connected to `destroyEvent` of any Core object
 -- @return Maid
-function Maid.New(core_obj)
-    local self = setmetatable({_tasks = {}, }, Maid)
-    if  CORE_ENV and core_obj then
-        self.__parent = core_obj.destroyEvent:Connect(self)
+function Maid.New(coreObject)
+    local self = setmetatable({_tasks = {}}, Maid)
+    if CORE_ENV and coreObject then
+        self:GiveTask(coreObject.destroyEvent:Connect(self))
+    elseif coreObject then
+        warn("Outside Core argument will be ignored")
     end
     return self
-end
-
-function Maid:IsA(typename)
-    return getmetatable(self) == Maid and typename == "Maid"
 end
 
 --- Returns Maid[key] if not part of Maid metatable
@@ -53,7 +75,7 @@ local function _cleanupTask(task)
             task:Cancel()
         end
     else
-        -- user types, assume `table type` or `userdata type` not in CORE_ENV
+        -- user types, assume thet `table type` or `userdata type` are not Core objects
         if task.Disconnect then
             task:Disconnect()
         elseif task.Cancel then
@@ -98,7 +120,6 @@ end
 
 function Maid:__call()
     self:Destroy()
-    _cleanupTask(self.__parent)
 end
 
 --- Same as indexing, but uses an incremented number as a key.
@@ -122,24 +143,21 @@ function Maid:GivePromise(promise)
     if not promise:IsPending() then
         return promise
     end
-
     local newPromise = promise.resolved(promise)
     local id = self:GiveTask(newPromise)
-
     -- Ensure GC
     newPromise:Finally(function()
         self[id] = nil
     end)
-
     return newPromise
 end
 --]]
 
---- Cleans up all tasks.
+--- Cleans up all tasks
 function Maid:Destroy()
     local tasks = self._tasks
-    assert(self and self.type == Maid.type, "use `:` not `.`")
-    -- Clear out tasks table completely, even if clean up tasks add more tasks to the maid
+
+    -- Clear out tasks table completely, even if cleaning up tasks adds more tasks to this maid
     local index, task = next(tasks)
     while task ~= nil do
         tasks[index] = nil
@@ -147,6 +165,8 @@ function Maid:Destroy()
         index, task = next(tasks)
     end
 end
+
+-- --------------------------------------------------------------------------
 
 local function _test()
     do -- resursive tasks
@@ -156,7 +176,7 @@ local function _test()
             inner1 = true
             m.x = function() inner2 = true end
         end})
-            m:Destroy()
+        m:Destroy()
         assert(inner1)
         assert(inner2)
     end
@@ -164,7 +184,10 @@ local function _test()
 end
 _test()
 
--- utility function - destroy something with all nessesary checks
+-- extra export: clean-up or destroy something with all nessesary checks
 Maid.safeDestroy = _cleanupTask
+
+-- alias
 Maid.Reset = Maid.Destroy
+
 return Maid
