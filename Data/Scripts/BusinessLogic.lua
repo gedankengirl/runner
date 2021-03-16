@@ -11,6 +11,7 @@
 * You can equip the limited number of pets: 3. You can upgrade this limit to 5.
 ]]
 -- constants
+local pp = _G.req("_Luapp").pp
 local S = _G.req("StaticData")
 local BASE_SPEED = 100
 local MAX_MULTIPLIER = 25
@@ -18,10 +19,22 @@ local BASE_CPS = 3
 local FIRST_REBIRTH = 1000
 local REBIRTH_EXP_RATE = 1.618
 local COIN_TO_SPEED_RATE = 1.001
+local COIN_CAP = 2E9//1
 local COIN_KEY = "SpeedCoin"
 local REBIRTH_KEY = "Rebirth"
 local INVENTORY_KEY = "Inventory"
+local EQUIP_LVL_KEY = "EquipLVL"
+local INVENTORY_LVL_KEY = "InventoryLVL"
 local PET_BONUS_KEY = "PetBonus" -- not persist
+
+local _KEY_DEFAULTS = {
+    [COIN_KEY] = 1,
+    [REBIRTH_KEY] = 0,
+    [INVENTORY_KEY] = "",
+    [EQUIP_LVL_KEY] = 1,
+    [INVENTORY_LVL_KEY] = 1,
+    [PET_BONUS_KEY] = 0,
+}
 
 local EQUIPPED_ROW = 0
 
@@ -44,7 +57,6 @@ local function formatNumber(n)
     n = n / 10^(3*tier)
     return string.format("%.4g%s", n, _tiers[tier])
 end
-
 
 -- pythonic uniform
 local function uniform(a, b)
@@ -97,8 +109,10 @@ function BusinessLogic:IsA(typename)
     return typename == BusinessLogic.type and getmetatable(self) == BusinessLogic
 end
 
+local min, max = math.min, math.max
 local function _setSpeed(player, speedcoins)
-    speedcoins = speedcoins <= 0 and 1 or speedcoins
+    assert(speedcoins)
+    speedcoins = min(max(_KEY_DEFAULTS[COIN_KEY], speedcoins), COIN_CAP)
     player:SetResource(COIN_KEY, speedcoins)
     player.maxWalkSpeed = BASE_SPEED + calculateAfforadableAmount(1, COIN_TO_SPEED_RATE, 0, speedcoins)//1
 end
@@ -127,8 +141,8 @@ end
 --]]
 
 local function isRebirthPossible(player)
-    local rebirth = player:GetResource(REBIRTH_KEY) or 0
-    local coins = player:GetResource(COIN_KEY) or 1
+    local rebirth = player:GetResource(REBIRTH_KEY) or _KEY_DEFAULTS[REBIRTH_KEY]
+    local coins = player:GetResource(COIN_KEY) or _KEY_DEFAULTS[COIN_KEY]
     local needed = neededForRebirth(rebirth)
     return  coins >= needed, needed, coins, rebirth
 end
@@ -148,10 +162,10 @@ local function addCoins(player, multiplier)
     assert(Environment.IsServer())
     assert(player and player:IsA('Player'))
     assert(type(multiplier) == 'number' and multiplier >= 1 and multiplier <= MAX_MULTIPLIER)
-    local petsBonus = player:GetResource(PET_BONUS_KEY) or 0
-    local rebirth = player:GetResource(REBIRTH_KEY) or 0
+    local petsBonus = player:GetResource(PET_BONUS_KEY) or _KEY_DEFAULTS[PET_BONUS_KEY]
+    local rebirth = player:GetResource(REBIRTH_KEY) or _KEY_DEFAULTS[REBIRTH_KEY]
     local n =  (BASE_CPS + rebirth + petsBonus) * multiplier
-    local coins = n + (player:GetResource(COIN_KEY) or 1)
+    local coins = n + (player:GetResource(COIN_KEY) or _KEY_DEFAULTS[COIN_KEY])
     _setSpeed(player, coins)
     -- DEBUG:
     print(string.format("%s %d %d %d", player.name, n//1, coins//1, player.maxWalkSpeed//1))
@@ -161,7 +175,7 @@ local function subtractCoins(player, price)
     assert(price >= 0)
     assert(Environment.IsServer())
     assert(player and player:IsA('Player'))
-    local coins = player:GetResource(COIN_KEY) or 1
+    local coins = player:GetResource(COIN_KEY) or _KEY_DEFAULTS[COIN_KEY]
     if price <= coins then
        coins = coins - price
        _setSpeed(player, coins)
@@ -173,7 +187,7 @@ local function subtractCoins(player, price)
     print(string.format("%s %d %d", player.name, coins//1, player.maxWalkSpeed//1))
 end
 
-local function onClick(ability)
+local function onSpeedAbilityClick(ability)
     if ability and ability.owner then
         addCoins(ability.owner, 1)
     end
@@ -182,28 +196,22 @@ end
 function BusinessLogic.LoadSave(player)
     assert(Environment.IsServer())
     local data = Storage.GetPlayerData(player)
-    -- rebirth
-    data[REBIRTH_KEY] = data[REBIRTH_KEY] or 0
-    player:SetResource(REBIRTH_KEY, data[REBIRTH_KEY])
-    -- speedcoins
-    data[COIN_KEY] = data[COIN_KEY] or 1
-    player:SetResource(COIN_KEY, data[COIN_KEY])
+    for key, default in pairs(_KEY_DEFAULTS) do
+        data[key] = data[key] or default
+        if math.type(data[key] == "integer") then
+            player:SetResource(key, data[key])
+        end
+    end
     _setSpeed(player, data[COIN_KEY])
     return data
 end
 
-function BusinessLogic.LoadKey(player, key)
-    assert(key == COIN_KEY or key == REBIRTH_KEY or key == INVENTORY_KEY or key == PET_BONUS_KEY)
-    local data = Storage.GetPlayerData(player)
-    return data[key]
-end
-
 local _retry_save = Trampoline.New(function(args)
     return Storage.SetPlayerData(table.unpack(args))
- end)
+end)
 
 function BusinessLogic.SaveKey(player, key, datum)
-    assert(key == COIN_KEY or key == REBIRTH_KEY or key == INVENTORY_KEY or key == PET_BONUS_KEY, CoreDebug.GetStackTrace())
+    assert(_KEY_DEFAULTS[key], key)
     -- PET_BONUS_KEY is trancient, don't save it
     if key == PET_BONUS_KEY then return end
     local data = Storage.GetPlayerData(player)
@@ -282,10 +290,12 @@ end
 function BusinessLogic.ResetGame(player)
     assert(Environment.IsServer())
     local data = {}
-    data[REBIRTH_KEY] = 0
-    player:SetResource(REBIRTH_KEY, data[REBIRTH_KEY])
-    data[COIN_KEY] = 1
-    player:SetResource(COIN_KEY, data[COIN_KEY])
+    for key, default in pairs(_KEY_DEFAULTS) do
+        if key ~= PET_BONUS_KEY then
+            data[key] = default
+            player:SetResource(key, data[key])
+        end
+    end
     _setSpeed(player, data[COIN_KEY])
     local ok, message = Storage.SetPlayerData(player, data)
     if not ok then
@@ -296,14 +306,17 @@ end
 
 -- exports
 BusinessLogic.formatNumber = formatNumber
-BusinessLogic.onClick = onClick
+BusinessLogic.onClick = onSpeedAbilityClick
 BusinessLogic.addCoins = addCoins
 BusinessLogic.isRebirthPossible = isRebirthPossible
 BusinessLogic.doRebirth = doRebirth
 BusinessLogic.immobilizePlayer = immobilizePlayer
 BusinessLogic.COIN_KEY = COIN_KEY
+BusinessLogic.COIN_CAP = COIN_CAP
 BusinessLogic.REBIRTH_KEY = REBIRTH_KEY
 BusinessLogic.INVENTORY_KEY = INVENTORY_KEY
+BusinessLogic.INVENTORY_LVL_KEY = INVENTORY_LVL_KEY
+BusinessLogic.EQUIP_LVL_KEY = EQUIP_LVL_KEY
 BusinessLogic.PET_BONUS_KEY = PET_BONUS_KEY
 -- for resource display
 BusinessLogic.max = neededForRebirth
