@@ -61,6 +61,8 @@ end
 
 local function OnShowPopup(params)
     assert(type(params) == "table")
+    local top = _popup_stack:Peek()
+    if top and top.text == params.text then return end
     _popup_stack:Push(params)
     if _is_vacant then
         _do_show_popup(params)
