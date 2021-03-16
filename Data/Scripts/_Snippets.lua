@@ -29,6 +29,21 @@ local clock do
 end
 snippets.clock = clock
 
+-- formatting
+function snippets.formatOrdinal(n)
+    assert(n >= 1)
+    local num = string.format("%d", n//1)
+    local last2 = string.sub(num, -2)
+    if last2 == "11" then return num .. "th" end
+    if last2 == "12" then return num .. "th" end
+    if last2 == "13" then return num .. "th" end
+    local last = string.sub(num, -1)
+    if last == "1" then return num .. "st" end
+    if last == "2" then return num .. "nd" end
+    if last == "3" then return num .. "rd" end
+    return num .. 'th'
+end
+
 -- timestamps
 local os_time, os_date = os.time, os.date
 local function utc_timestamp()
