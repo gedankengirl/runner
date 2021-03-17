@@ -192,7 +192,7 @@ local OnEnterShop, OnLeaveShop, OnCanBuyEgg, OnEggHatched do
         TRIGGER.isInteractable = false
         UI_CONTAINER.visibility = Visibility.INHERIT
         _session_maid.shop_flow = Events.Connect("ISM:InGame:Entering", OnLeaveShop)
-        -- change stand's look
+        -- changes stand's look
         _show_or_hide_pipe("show")
         _show_or_hide_pets("show")
         _session_maid:GiveTask(Events.Connect("ISM:Shop:Entered", function()
@@ -240,9 +240,9 @@ local OnEnterShop, OnLeaveShop, OnCanBuyEgg, OnEggHatched do
 
 end -- do
 
--------------------
 -- TODO: purchase VFX
 -- TODO: obliterate all below
+-------------------
 
 
 --[[
