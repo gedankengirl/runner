@@ -19,6 +19,9 @@ Assets {
             Z: 1
           }
         }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
         Folder {
           BundleDummy {
             ReferencedAssets {
@@ -40,5 +43,5 @@ Assets {
     Version: "1.0.0"
     Description: "Some translucent night time vegetation. \r\n(Made for PIRATES! but if you folks want to use it as well, here it is!)"
   }
-  SerializationVersion: 76
+  SerializationVersion: 78
 }

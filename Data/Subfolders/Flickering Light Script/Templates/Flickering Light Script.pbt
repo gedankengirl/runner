@@ -27,6 +27,9 @@ Assets {
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
         Folder {
           BundleDummy {
             ReferencedAssets {
@@ -48,5 +51,5 @@ Assets {
     Version: "1.0.0"
     Description: "A basic script and example for flickering lights. \r\n\r\nProvides a few different types of flicker:  Single sin, double sin, random flicker, stepped flicker.  \r\n\r\nUseful for light tubes on the fritz, a campfire, strobes, siren lights etc.  "
   }
-  SerializationVersion: 76
+  SerializationVersion: 78
 }

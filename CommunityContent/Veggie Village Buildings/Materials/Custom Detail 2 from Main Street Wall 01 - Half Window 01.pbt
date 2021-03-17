@@ -2,7 +2,7 @@ Assets {
   Id: 5961638012854940943
   Name: "Custom Detail 2 from Main Street Wall 01 - Half Window 01"
   PlatformAssetType: 13
-  SerializationVersion: 76
+  SerializationVersion: 78
   CustomMaterialAsset {
     BaseMaterialId: 4998604761052846712
     ParameterOverrides {

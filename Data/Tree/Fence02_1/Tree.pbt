@@ -18,6 +18,9 @@ Objects {
     }
   }
   ParentId: 15210395562427601787
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
   TemplateInstance {
     ParameterOverrideMap {
       key: 2930946233843972535
@@ -261,6 +264,9 @@ Objects {
     }
   }
   ParentId: 15210395562427601787
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
   TemplateInstance {
     ParameterOverrideMap {
       key: 2930946233843972535
@@ -504,6 +510,9 @@ Objects {
     }
   }
   ParentId: 15210395562427601787
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
   TemplateInstance {
     ParameterOverrideMap {
       key: 2930946233843972535
@@ -783,6 +792,9 @@ Objects {
     }
   }
   ParentId: 15210395562427601787
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
   TemplateInstance {
     ParameterOverrideMap {
       key: 2930946233843972535
@@ -1026,6 +1038,9 @@ Objects {
     }
   }
   ParentId: 15210395562427601787
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
   TemplateInstance {
     ParameterOverrideMap {
       key: 2930946233843972535

@@ -1,5 +1,98 @@
-Name: "Home base"
+Name: "Turbo Town"
 RootId: 10665984139206756167
+Objects {
+  Id: 9842931298712202320
+  Name: "Balloons group"
+  Transform {
+    Location {
+      X: 4825.98
+      Y: 11.1235809
+      Z: 1823.17456
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 10665984139206756167
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "Balloons group"
+  }
+}
+Objects {
+  Id: 14375542069325144156
+  Name: "Balloons group"
+  Transform {
+    Location {
+      X: 4823.05078
+      Y: 1390.9541
+      Z: 1856.52295
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 10665984139206756167
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "Balloons group_1"
+  }
+}
+Objects {
+  Id: 9168930659997010632
+  Name: "Info Boards"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 10665984139206756167
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "Info Boards"
+  }
+}
 Objects {
   Id: 1936773926731709969
   Name: "FenceContainer"
@@ -20,6 +113,9 @@ Objects {
   }
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Folder {
     IsFilePartition: true
@@ -47,6 +143,9 @@ Objects {
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
   Folder {
     IsFilePartition: true
     FilePartitionName: "Vegetation_3"
@@ -71,32 +170,6 @@ Objects {
   }
   TemplateInstance {
     ParameterOverrideMap {
-      key: 94875799561014693
-      value {
-        Overrides {
-          Name: "Position"
-          Vector {
-            X: 3320.14063
-            Y: 4252.74072
-            Z: 106.411743
-          }
-        }
-      }
-    }
-    ParameterOverrideMap {
-      key: 9099648944395776039
-      value {
-        Overrides {
-          Name: "Position"
-          Vector {
-            X: 4978.35547
-            Y: 162.756
-            Z: 121.967834
-          }
-        }
-      }
-    }
-    ParameterOverrideMap {
       key: 14147038148445772823
       value {
         Overrides {
@@ -116,82 +189,9 @@ Objects {
         }
       }
     }
-    ParameterOverrideMap {
-      key: 15343717991521774494
-      value {
-        Overrides {
-          Name: "Position"
-          Vector {
-            X: -6678.57813
-            Y: -162.755859
-            Z: 3.96942139
-          }
-        }
-      }
-    }
     TemplateAsset {
       Id: 15904085984438255415
     }
-  }
-}
-Objects {
-  Id: 9803862681446895524
-  Name: "Board"
-  Transform {
-    Location {
-      X: 120.010864
-      Y: 5985.26855
-      Z: -239.591125
-    }
-    Rotation {
-      Yaw: -102.418884
-    }
-    Scale {
-      X: 0.948308408
-      Y: 0.948308408
-      Z: 0.948308408
-    }
-  }
-  ParentId: 10665984139206756167
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "Board_1"
-  }
-}
-Objects {
-  Id: 14139637125947873166
-  Name: "Board"
-  Transform {
-    Location {
-      X: 1094.31836
-      Y: -1692.19336
-      Z: -239.591125
-    }
-    Rotation {
-      Yaw: 180
-    }
-    Scale {
-      X: 0.948308408
-      Y: 0.948308408
-      Z: 0.948308408
-    }
-  }
-  ParentId: 10665984139206756167
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "Board_2"
   }
 }
 Objects {
@@ -218,6 +218,9 @@ Objects {
   }
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Folder {
     IsFilePartition: true
@@ -248,6 +251,9 @@ Objects {
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
   Folder {
     IsFilePartition: true
     FilePartitionName: "Teleports"
@@ -276,6 +282,9 @@ Objects {
   }
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Folder {
     IsFilePartition: true
@@ -306,6 +315,9 @@ Objects {
   }
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Folder {
     IsGroup: true
@@ -341,6 +353,9 @@ Objects {
   Visible_v2 {
     Value: "mc:evisibilitysetting:forceoff"
   }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceon"
+  }
   CoreMesh {
     MeshAsset {
       Id: 16593169243176712161
@@ -352,7 +367,6 @@ Objects {
     DisableDistanceFieldLighting: true
     DisableCastShadows: true
     DisableReceiveDecals: true
-    EnableCameraCollision: true
     InteractWithTriggers: true
     StaticMesh {
       Physics {
@@ -412,6 +426,9 @@ Objects {
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceon"
+  }
   CoreMesh {
     MeshAsset {
       Id: 12095835209017042614
@@ -420,7 +437,6 @@ Objects {
       IsTeamCollisionEnabled: true
       IsEnemyCollisionEnabled: true
     }
-    EnableCameraCollision: true
     InteractWithTriggers: true
     StaticMesh {
       Physics {
@@ -480,6 +496,9 @@ Objects {
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceon"
+  }
   CoreMesh {
     MeshAsset {
       Id: 12095835209017042614
@@ -488,7 +507,6 @@ Objects {
       IsTeamCollisionEnabled: true
       IsEnemyCollisionEnabled: true
     }
-    EnableCameraCollision: true
     InteractWithTriggers: true
     StaticMesh {
       Physics {
@@ -520,6 +538,9 @@ Objects {
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
   NetworkContext {
   }
 }
@@ -546,6 +567,9 @@ Objects {
   }
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Blueprint {
     BlueprintAsset {
@@ -581,6 +605,9 @@ Objects {
   }
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Script {
     ScriptAsset {

@@ -25,6 +25,9 @@ Assets {
         Visible_v2 {
           Value: "mc:evisibilitysetting:forceon"
         }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
         Folder {
           BundleDummy {
             ReferencedAssets {
@@ -46,5 +49,5 @@ Assets {
     Version: "1.5.0"
     Description: "My tribute to the inspiring Alice in Wonderland submissions.\r\nGreat job! <3 (equipment)\r\n\r\n-updated camera collision\r\n\r\nThank you Codexier for the playing cards!"
   }
-  SerializationVersion: 76
+  SerializationVersion: 78
 }

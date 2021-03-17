@@ -19,6 +19,9 @@ Assets {
             Z: 1
           }
         }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
         Folder {
           BundleDummy {
             ReferencedAssets {
@@ -43,5 +46,5 @@ Assets {
     Version: "1.0.0"
     Description: "A toy bucket and shovel for playing in the sand :)"
   }
-  SerializationVersion: 76
+  SerializationVersion: 78
 }

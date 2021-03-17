@@ -19,6 +19,9 @@ Assets {
             Z: 1
           }
         }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
         Folder {
           BundleDummy {
             ReferencedAssets {
@@ -46,5 +49,5 @@ Assets {
     Version: "1.0.0"
     Description: "Trellis/Wood Panels in 3 sizes\r\nWindow Fill\r\nHalf Wall\r\nFull Wall\r\n\r\nSimple but useful :-)"
   }
-  SerializationVersion: 76
+  SerializationVersion: 78
 }

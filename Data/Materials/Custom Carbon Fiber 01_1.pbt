@@ -2,7 +2,7 @@ Assets {
   Id: 2722883864485145715
   Name: "Custom Carbon Fiber 01_1"
   PlatformAssetType: 13
-  SerializationVersion: 76
+  SerializationVersion: 78
   CustomMaterialAsset {
     BaseMaterialId: 2249794126015640337
     ParameterOverrides {

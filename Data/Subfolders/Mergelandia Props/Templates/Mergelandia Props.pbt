@@ -19,6 +19,9 @@ Assets {
             Z: 1
           }
         }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
         Folder {
           BundleDummy {
             ReferencedAssets {
@@ -40,5 +43,5 @@ Assets {
     Version: "1.0.0"
     Description: "This contains food, coins, trees, crates, chests, mana crystals, and statues from Mergelandia. Enjoy!\r\n\r\nBig props to the Merglandia team for such awesome content!"
   }
-  SerializationVersion: 76
+  SerializationVersion: 78
 }

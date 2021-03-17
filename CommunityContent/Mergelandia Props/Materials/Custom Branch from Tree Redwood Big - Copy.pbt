@@ -2,7 +2,7 @@ Assets {
   Id: 18165298561830092214
   Name: "Custom Branch from Tree Redwood Big - Copy"
   PlatformAssetType: 13
-  SerializationVersion: 76
+  SerializationVersion: 78
   CustomMaterialAsset {
     BaseMaterialId: 3952907309936083081
     ParameterOverrides {

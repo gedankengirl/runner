@@ -19,6 +19,9 @@ Assets {
             Z: 1
           }
         }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
         Folder {
           BundleDummy {
             ReferencedAssets {
@@ -43,5 +46,5 @@ Assets {
     Version: "1.1.0"
     Description: "The are the fish used in Farmers Market. "
   }
-  SerializationVersion: 76
+  SerializationVersion: 78
 }

@@ -27,6 +27,9 @@ Assets {
         Visible_v2 {
           Value: "mc:evisibilitysetting:forceon"
         }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
         Folder {
           BundleDummy {
             ReferencedAssets {
@@ -48,5 +51,5 @@ Assets {
     Version: "1.0.0"
     Description: "A torch and crown. Demonstrates how two equipments can behave as a single one."
   }
-  SerializationVersion: 76
+  SerializationVersion: 78
 }

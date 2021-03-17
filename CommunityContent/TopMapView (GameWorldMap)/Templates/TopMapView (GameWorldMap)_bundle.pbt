@@ -19,6 +19,9 @@ Assets {
             Z: 1
           }
         }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
         Folder {
           BundleDummy {
             ReferencedAssets {
@@ -40,5 +43,5 @@ Assets {
     Version: "1.1.0"
     Description: "ONLY \"M\" default Key, same to open and close.\r\nFull Screen Size World Map with custom icons, Follow the player (Center of map) and you can zoom in/out with mouse."
   }
-  SerializationVersion: 76
+  SerializationVersion: 78
 }

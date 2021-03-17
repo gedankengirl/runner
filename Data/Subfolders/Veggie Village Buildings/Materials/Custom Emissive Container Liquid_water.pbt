@@ -2,7 +2,7 @@ Assets {
   Id: 4306519331640542766
   Name: "Custom Emissive Container Liquid_water"
   PlatformAssetType: 13
-  SerializationVersion: 76
+  SerializationVersion: 78
   CustomMaterialAsset {
     BaseMaterialId: 4079164913229030135
     ParameterOverrides {

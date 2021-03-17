@@ -89,6 +89,15 @@ Assets {
   }
 }
 Assets {
+  Id: 1405358172309419029
+  Name: "Waterfall Small SFX"
+  PlatformAssetType: 7
+  PrimaryAsset {
+    AssetType: "AudioAssetRef"
+    AssetId: "sfx_waterfall_Cue"
+  }
+}
+Assets {
   Id: 1272761305013892500
   Name: "Generic Water"
   PlatformAssetType: 2

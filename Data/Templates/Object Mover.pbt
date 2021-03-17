@@ -167,6 +167,9 @@ Assets {
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
         Script {
           ScriptAsset {
             Id: 6126478455621128065
@@ -179,5 +182,5 @@ Assets {
       AssetId: "Object_Mover"
     }
   }
-  SerializationVersion: 76
+  SerializationVersion: 78
 }

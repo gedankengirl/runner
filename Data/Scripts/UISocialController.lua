@@ -3,6 +3,7 @@ local Maid = _G.req("_Maid")
 local B = _G.req("BusinessLogic")
 local P = _G.req("Protocols")
 local S = _G.req("StaticData")
+local Snippets = _G.req("Snippets")
 local SOCIAL_LINE_ITEM = script:GetCustomProperty("SocialLineItem")
 local MAX_LINES = script:GetCustomProperty("MaxLines")
 local ROOT = script:GetCustomProperty("Root"):WaitForObject()
@@ -252,12 +253,13 @@ end
 
 function SocialHandlers.OnSocial_Rebirth(player_id, rebirth)
     local player = GetPlayerById(player_id)
+    local suffixedRebirth = Snippets.formatOrdinal(rebirth)
     if not player then return end
     PushOntoAppropriateQueue{
         type = "Rebirth",
         player = player,
         actorRank = player:GetResource(B.REBIRTH_KEY) or 0,
-        message = string.format("%s rebirthed %d-th time", player.name, rebirth)
+        message = string.format("%s, happy %s rebirthday!", player.name, suffixedRebirth)
     }
 end
 
@@ -267,7 +269,7 @@ function SocialHandlers.OnSocial_Connect_Local(player)
         type = "Connect",
         player = player,
         actorRank = player:GetResource(B.REBIRTH_KEY) or 0,
-        message = string.format("%s join the game", player.name)
+        message = string.format("%s joined the game", player.name)
     }
 end
 

@@ -12,6 +12,9 @@ Objects {
   }
   ParentId: 14216477141313801599
   WantsNetworking: true
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
   TemplateInstance {
     ParameterOverrideMap {
       key: 18305993070514492454
@@ -45,6 +48,9 @@ Objects {
   }
   ParentId: 14216477141313801599
   WantsNetworking: true
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
   TemplateInstance {
     ParameterOverrideMap {
       key: 9171825906149297273
@@ -78,6 +84,9 @@ Objects {
   }
   ParentId: 14216477141313801599
   WantsNetworking: true
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
   TemplateInstance {
     ParameterOverrideMap {
       key: 10763795704435313060

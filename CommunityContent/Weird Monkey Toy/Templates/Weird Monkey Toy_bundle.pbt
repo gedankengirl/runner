@@ -27,6 +27,9 @@ Assets {
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
         Folder {
           BundleDummy {
             ReferencedAssets {
@@ -48,5 +51,5 @@ Assets {
     Version: "1.4.0"
     Description: "Feed me bananas\r\n\r\nThank you LuckOfBuck, Joviex, CodeHeavy, and tjarvis for their help with the code! :D"
   }
-  SerializationVersion: 76
+  SerializationVersion: 78
 }

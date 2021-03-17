@@ -2,7 +2,7 @@ Assets {
   Id: 6332955919933114484
   Name: "Knifejaw Fins"
   PlatformAssetType: 13
-  SerializationVersion: 76
+  SerializationVersion: 78
   CustomMaterialAsset {
     BaseMaterialId: 2988642617099388749
     ParameterOverrides {

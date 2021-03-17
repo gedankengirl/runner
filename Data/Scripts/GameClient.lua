@@ -99,14 +99,17 @@ PetAnimator.__index = PetAnimator
 local MIN_SPR = SP.New(0.7, 0.5)
 local MAX_SPR = SP.New(0.7, 1.0)
 local SOFT_SPR = SP.New(0.2, 1)
-local HEAVEN = Vector3.New(0,0, 2000)
-local _pet_params = {position=HEAVEN}
+local HEAVEN = Vector3.New(0,0, 200)
 local SLOW_SQ = 1E6
+local Z_OFFSET = Vector3.UP*-65
 
+local PET_LOOKAT_TARGET = World.SpawnAsset("15DDE9D1C41FD428:EmptyObject")
+PET_LOOKAT_TARGET:AttachToPlayer(LOCAL_PLAYER, "pelvis")
+PET_LOOKAT_TARGET:SetPosition(Vector3.UP*(Z_OFFSET.z-10))
 
 local _get_goal do
     -- TODO: add up to 5 spots
-    local alpha = math.rad(60)
+    local alpha = math.rad(40)
     local R = 200
     local V = R*math.cos(alpha)
     local U = R*math.sin(alpha)
@@ -126,6 +129,8 @@ local _get_goal do
     end
 end
 
+local _pet_params = {position=HEAVEN, scale=.8*Vector3.ONE}
+
 function PetAnimator.New(pet_id, pos_idx, player)
     assert(player and player:IsValid(), CoreDebug.GetStackTrace())
     _pet_params.position = player:GetWorldPosition() + HEAVEN
@@ -134,12 +139,12 @@ function PetAnimator.New(pet_id, pos_idx, player)
         pet = World.SpawnAsset(S.PetDb:GetMuid(pet_id), _pet_params),
         pet_id=pet_id,
         pos_idx=pos_idx,
-        min_spr=MIN_SPR:RandomizeFrequency(0.25),
-        max_spr=MAX_SPR:RandomizeFrequency(0.25),
-        look_at_speed = _randomize(math.pi, 0.25),
+        min_spr=MIN_SPR:RandomizeFrequency(0.15),
+        max_spr=MAX_SPR:RandomizeFrequency(0.15),
+        look_at_speed = _randomize(math.pi/4, 0.15),
         spring = Spring.New(MAX_SPR, _pet_params.position)
     }
-    self.pet:LookAtContinuous(player)
+    self.pet:LookAtContinuous(PET_LOOKAT_TARGET)
     return setmetatable(self, PetAnimator)
 end
 
@@ -158,7 +163,7 @@ function PetAnimator:Update(dt, target_transform, target_velocity, n_pets)
     spring:SetSpringParams(is_slow and self.min_spr or self.max_spr)
     spring:SetPosition(pet:GetWorldPosition())
     local direction = is_slow and target_transform:GetForwardVector() or target_velocity:GetNormalized()
-    spring:SetGoal(_get_goal(target_transform:GetPosition(), direction, self.pos_idx, n_pets))
+    spring:SetGoal(_get_goal(target_transform:GetPosition() + Z_OFFSET, direction, self.pos_idx, n_pets))
     spring:Update(dt)
     pet:SetWorldPosition(spring:GetPosition())
 end

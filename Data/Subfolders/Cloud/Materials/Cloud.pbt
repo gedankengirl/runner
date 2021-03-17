@@ -2,7 +2,7 @@ Assets {
   Id: 3911774043783354903
   Name: "Cloud"
   PlatformAssetType: 13
-  SerializationVersion: 76
+  SerializationVersion: 78
   CustomMaterialAsset {
     BaseMaterialId: 1256144587397548301
     ParameterOverrides {

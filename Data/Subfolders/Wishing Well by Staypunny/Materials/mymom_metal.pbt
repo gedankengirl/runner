@@ -2,7 +2,7 @@ Assets {
   Id: 12275496099651836530
   Name: "mymom_metal"
   PlatformAssetType: 13
-  SerializationVersion: 76
+  SerializationVersion: 78
   CustomMaterialAsset {
     BaseMaterialId: 4855960652393685277
     ParameterOverrides {

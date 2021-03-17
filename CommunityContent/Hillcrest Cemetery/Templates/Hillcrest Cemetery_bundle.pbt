@@ -19,6 +19,9 @@ Assets {
             Z: 1
           }
         }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
         Folder {
           BundleDummy {
             ReferencedAssets {
@@ -40,5 +43,5 @@ Assets {
     Version: "1.0.0"
     Description: "A cemetery I made with all basic shapes. If you use this and find it useful please leave a rewiew for me. \r\nEnjoy :)"
   }
-  SerializationVersion: 76
+  SerializationVersion: 78
 }

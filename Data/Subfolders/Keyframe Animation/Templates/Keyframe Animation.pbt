@@ -19,6 +19,9 @@ Assets {
             Z: 1
           }
         }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
         Folder {
           BundleDummy {
             ReferencedAssets {
@@ -40,5 +43,5 @@ Assets {
     Version: "1.9.0"
     Description: "KeyFrame Animation Tool to Animate objects using keyframes.  Animation Objects must be put into a Root group otherwise Get Child is off ."
   }
-  SerializationVersion: 76
+  SerializationVersion: 78
 }
