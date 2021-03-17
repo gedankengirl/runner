@@ -46,7 +46,7 @@ local DOWNLINK, CHANNELS, IN_USE, SOCIAL, PET_CHAN do
             CHANNELS[k] = nil
         end
     end
-    assert(#CHANNELS == 16 + 2)
+    assert(#CHANNELS == 16 + 2, #CHANNELS)
     table.sort(CHANNELS, function(a, b) return tonumber(a:sub(2)) < tonumber(b:sub(2)) end)
     IN_USE = Bitarray.new(#CHANNELS)
     SOCIAL = CHANNELS[IN_USE:swap(#CHANNELS)]
@@ -88,20 +88,32 @@ local function _nonce(self)
     return NONCE_SYMBOLS:sub(si, si)
 end
 
-local function _make_basic_inventory()
-    return Grid.New(5, 6, 100, 100)
-        :MakeHole(0,0):MakeHole(0,4)
-        :MakeHole(1,0):MakeHole(1,1):MakeHole(1,2):MakeHole(1,3):MakeHole(1,4)
+local function _make_inventory(inv_level, equip_level)
+    inv_level = inv_level or 1
+    equip_level = equip_level or 1
+    local shape = S.INVENTORY_SHAPE[inv_level]
+    assert(shape and shape.width, "inv_level is too high")
+    local width = shape.width
+    local grid = Grid.New(width, #shape//width, 100, 100)
+    for i=1, #shape do
+        local code = shape[i]
+        if code == 0 or code > equip_level then
+            local idx = i - 1 -- grid is 0-indexed
+            grid:MakeHole(idx//width, idx%width)
+        end
+    end
+    return grid
 end
-local function _make_debug_inventory()
-    local gr = Grid.New(5,5,100,100):MakeHole(0,0):MakeHole(0,4)
-    for i = 1, gr.w*gr.h do
-        local cell = gr:at(i)
-        if not cell:IsNil() then
+
+local function _make_debug_inventory(inv_level, equip_level)
+    local grid = _make_inventory(inv_level, equip_level)
+    for i = 1, grid.w*grid.h do
+        local cell = grid:at(i)
+        if not cell:IsNil() and cell.row ~= 0 then
             cell.actor = i%3 == 0 and {id = 1} or nil or {id = 4}
         end
     end
-    return gr
+    return grid
 end
 
 --------------------------------------------------------------------------------------------------
@@ -109,11 +121,13 @@ end
 --------------------------------------------------------------------------------------------------
 local PlayerConnection = {}
 PlayerConnection.__index = PlayerConnection
-
+-- TODO: inventory upgrade
 function PlayerConnection.New(player)
     local playerData = B.LoadSave(player)
     local saved_inventory = playerData[B.INVENTORY_KEY]
-    local inventory = saved_inventory and P.S2C.INVENTORY.unpack(saved_inventory, Grid.deserialize) or _make_basic_inventory()
+    local inventory = saved_inventory and P.S2C.INVENTORY.unpack(saved_inventory, Grid.deserialize)
+        or _make_inventory()
+        -- or _make_debug_inventory(1, 1) -- DEBUG:
     local self = setmetatable({
         _maid = Maid.New(),
         player = player,
@@ -187,7 +201,7 @@ end
 
 function PlayerConnection:OnGRR()
     B.ResetGame(self.player)
-    self.inventory = _make_basic_inventory()
+    self.inventory = _make_inventory()
     self:OnGIR() -- send + save basic inventory
     print(pp{"on GRR", self.player.name})
 end
@@ -264,7 +278,7 @@ end
 function Server:OnPlayerLeft(player)
     local connection = self.playerConnections[player]
     self.playerConnections[player] = nil
-    connection:Destroy()
+    Maid.safeDestroy(connection)
 end
 
 Server:Start()
