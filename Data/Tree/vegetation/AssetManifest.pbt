@@ -8,6 +8,15 @@ Assets {
   }
 }
 Assets {
+  Id: 15896819511333123642
+  Name: "Roof Asphalt 02"
+  PlatformAssetType: 2
+  PrimaryAsset {
+    AssetType: "MaterialAssetRef"
+    AssetId: "mi_roof_asphalt_002_uv"
+  }
+}
+Assets {
   Id: 14244220615398841767
   Name: "Flower Daisy Patch 01"
   PlatformAssetType: 1
@@ -68,15 +77,6 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_foliage_gen_flower_wild_lily_001_ref"
-  }
-}
-Assets {
-  Id: 3850835316358332222
-  Name: "Wood Floor Herringbone Light"
-  PlatformAssetType: 2
-  PrimaryAsset {
-    AssetType: "MaterialAssetRef"
-    AssetId: "mi_wood_floor_herringbone_light_001_uv"
   }
 }
 Assets {

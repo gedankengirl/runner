@@ -1,5 +1,154 @@
-Name: "Rock groups"
+Name: "Trees+Rocks+Misc"
 RootId: 16132288479880245220
+Objects {
+  Id: 955406968631436561
+  Name: "Rock Pile 002"
+  Transform {
+    Location {
+      X: -384.957031
+      Y: 8461.62793
+      Z: 378.273804
+    }
+    Rotation {
+      Yaw: 18.6828346
+    }
+    Scale {
+      X: 0.984566748
+      Y: 0.348275
+      Z: 0.348275
+    }
+  }
+  ParentId: 16132288479880245220
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 5119651858357045976
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+    }
+  }
+}
+Objects {
+  Id: 14503233309964571232
+  Name: "Rock Pile 001"
+  Transform {
+    Location {
+      X: -708.550781
+      Y: 8345.57324
+      Z: 378.273926
+    }
+    Rotation {
+    }
+    Scale {
+      X: 0.622364759
+      Y: 0.622364759
+      Z: 0.622364759
+    }
+  }
+  ParentId: 16132288479880245220
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.934375
+        G: 0.934375
+        B: 0.934375
+        A: 1
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 11865225340998629423
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+    }
+  }
+}
+Objects {
+  Id: 7670350300807307698
+  Name: "Hill 03"
+  Transform {
+    Location {
+      X: -144.519531
+      Y: -5377.91748
+      Z: 394.09137
+    }
+    Rotation {
+    }
+    Scale {
+      X: 3.67981553
+      Y: 2.3320322
+      Z: 0.195634693
+    }
+  }
+  ParentId: 16132288479880245220
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 1272761305013892500
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 15143766926267315553
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+    }
+  }
+}
 Objects {
   Id: 1764271583373458377
   Name: "Rock Flat 02"
@@ -666,7 +815,6 @@ Objects {
   ChildIds: 8816595637115914772
   ChildIds: 5906521257693713909
   ChildIds: 13367985225593421290
-  ChildIds: 4791238707987909652
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -678,48 +826,6 @@ Objects {
   }
   Folder {
     IsGroup: true
-  }
-}
-Objects {
-  Id: 4791238707987909652
-  Name: "Waterfall Small SFX"
-  Transform {
-    Location {
-      X: -370.623413
-      Y: 636.388245
-      Z: 564.627808
-    }
-    Rotation {
-      Yaw: 3.4150944e-06
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 3461287734356480881
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  AudioInstance {
-    AudioAsset {
-      Id: 1405358172309419029
-    }
-    AutoPlay: true
-    Repeat: true
-    Volume: 2
-    Falloff: 3000
-    Radius: 1500
-    EnableOcclusion: true
-    IsSpatializationEnabled: true
-    IsAttenuationEnabled: true
   }
 }
 Objects {

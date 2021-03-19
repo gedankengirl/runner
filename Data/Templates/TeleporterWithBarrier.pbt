@@ -144,9 +144,11 @@ Assets {
         ChildIds: 2403240422868690117
         ChildIds: 2379259184612552412
         ChildIds: 13081050738683069084
+        ChildIds: 11217645391476636058
+        ChildIds: 12927467268289404322
         ChildIds: 6042895824561963697
         ChildIds: 3314013700781789238
-        ChildIds: 11217645391476636058
+        ChildIds: 9739752728402323625
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
         }
@@ -748,6 +750,94 @@ Assets {
         }
       }
       Objects {
+        Id: 11217645391476636058
+        Name: "TeleporterGetCustomColor"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 15482925449092887975
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Barrier"
+            ObjectReference {
+              SubObjectId: 10040832043993394563
+            }
+          }
+          Overrides {
+            Name: "cs:TeleporterBase"
+            ObjectReference {
+              SubObjectId: 6042895824561963697
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 8098868276589411472
+          }
+        }
+      }
+      Objects {
+        Id: 12927467268289404322
+        Name: "TeleporterBarrierSound"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 15482925449092887975
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:ForceFieldTrigger"
+            ObjectReference {
+              SubObjectId: 12612973847289186230
+            }
+          }
+          Overrides {
+            Name: "cs:Sound"
+            ObjectReference {
+              SubObjectId: 9739752728402323625
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 49106711454933872
+          }
+        }
+      }
+      Objects {
         Id: 6042895824561963697
         Name: "Cylinder - Rounded Bottom-Aligned"
         Transform {
@@ -860,10 +950,11 @@ Assets {
         }
       }
       Objects {
-        Id: 11217645391476636058
-        Name: "TeleporterGetCustomColor"
+        Id: 9739752728402323625
+        Name: "Cinematic Boomy Impacts and Hits Set 01 SFX"
         Transform {
           Location {
+            Z: 179.448181
           }
           Rotation {
           }
@@ -876,15 +967,9 @@ Assets {
         ParentId: 15482925449092887975
         UnregisteredParameters {
           Overrides {
-            Name: "cs:Barrier"
-            ObjectReference {
-              SubObjectId: 10040832043993394563
-            }
-          }
-          Overrides {
-            Name: "cs:TeleporterBase"
-            ObjectReference {
-              SubObjectId: 6042895824561963697
+            Name: "bp:Type"
+            Enum {
+              Value: "mc:esfx_cinematic_boomy_impacts_01:20"
             }
           }
         }
@@ -897,9 +982,19 @@ Assets {
         CameraCollidable {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
-        Script {
-          ScriptAsset {
-            Id: 8098868276589411472
+        Blueprint {
+          BlueprintAsset {
+            Id: 15127183796455832460
+          }
+          TeamSettings {
+          }
+          AudioBP {
+            Volume: 1
+            Falloff: 3600
+            Radius: 400
+            EnableOcclusion: true
+            IsSpatializationEnabled: true
+            IsAttenuationEnabled: true
           }
         }
       }
@@ -1088,6 +1183,15 @@ Assets {
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
         AssetId: "sm_pipe_003"
+      }
+    }
+    Assets {
+      Id: 15127183796455832460
+      Name: "Cinematic Boomy Impacts and Hits Set 01 SFX"
+      PlatformAssetType: 10
+      PrimaryAsset {
+        AssetType: "AudioBlueprintAssetRef"
+        AssetId: "sfxabp_cinematic_boomy_impacts_01_ref"
       }
     }
     PrimaryAssetId {

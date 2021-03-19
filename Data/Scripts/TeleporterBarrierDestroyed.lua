@@ -25,11 +25,11 @@ function CheckRebirths()
     end
 end
 
--- initial check
-CheckRebirths()
-
 _maid.checkRebirths = LOCAL_PLAYER.resourceChangedEvent:Connect(function(player, key, amount)
     if key == BusinessLogic.REBIRTH_KEY then
         CheckRebirths()
     end
 end)
+
+-- initial check
+CheckRebirths()

@@ -1,6 +1,35 @@
 Name: "Tropical"
 RootId: 8313710388303195555
 Objects {
+  Id: 4873045616788719507
+  Name: "Ambient audio"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 8313710388303195555
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "Ambient audio"
+  }
+}
+Objects {
   Id: 8707621430905398058
   Name: "Teleporter Home"
   Transform {
@@ -107,7 +136,7 @@ Objects {
 }
 Objects {
   Id: 16132288479880245220
-  Name: "Rock groups"
+  Name: "Trees+Rocks+Misc"
   Transform {
     Location {
       X: -2966.49854
@@ -134,7 +163,7 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Rock groups"
+    FilePartitionName: "Trees+Rocks+Misc"
   }
 }
 Objects {

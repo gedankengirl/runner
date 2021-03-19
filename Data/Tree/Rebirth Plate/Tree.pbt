@@ -1,73 +1,23 @@
 Name: "Rebirth Plate"
 RootId: 9772076435338117303
 Objects {
-  Id: 8589061132237908455
-  Name: "Large Wood Beam 8m"
+  Id: 10893929899540758619
+  Name: "Sign"
   Transform {
     Location {
-      X: -392.542969
-      Y: -118.142578
-      Z: 30.3804626
+      X: 717.467224
+      Y: 566.440674
+      Z: 183.611084
     }
     Rotation {
-      Yaw: 89.9999542
-      Roll: 129.999969
     }
     Scale {
-      X: 0.253178298
-      Y: 0.0187073201
-      Z: 1.0378015
+      X: 1.07131016
+      Y: 1.07131016
+      Z: 1.07131016
     }
   }
   ParentId: 9772076435338117303
-  ChildIds: 12257413883104167307
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:forceon"
-  }
-  CoreMesh {
-    MeshAsset {
-      Id: 16006638254897947774
-    }
-    Teams {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    InteractWithTriggers: true
-    StaticMesh {
-      Physics {
-        Mass: 100
-        LinearDamping: 0.01
-      }
-    }
-  }
-}
-Objects {
-  Id: 12257413883104167307
-  Name: "World Text"
-  Transform {
-    Location {
-      X: 400.116333
-      Y: -104.861908
-      Z: 24.6398506
-    }
-    Rotation {
-      Pitch: 0.000184415097
-      Yaw: -90.000061
-      Roll: 179.999954
-    }
-    Scale {
-      X: 4.72129297
-      Y: 63.5133095
-      Z: 1.15178931
-    }
-  }
-  ParentId: 8589061132237908455
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -77,23 +27,9 @@ Objects {
   CameraCollidable {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
-  Text {
-    Text: "REBIRTH RINK"
-    FontAsset {
-    }
-    Color {
-      R: 0.0242222659
-      G: 0.218000054
-      A: 1
-    }
-    HorizontalSize: 1
-    VerticalSize: 1
-    HorizontalAlignment {
-      Value: "mc:ecoretexthorizontalalign:center"
-    }
-    VerticalAlignment {
-      Value: "mc:ecoretextverticalalign:center"
-    }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "Sign"
   }
 }
 Objects {

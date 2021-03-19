@@ -106,6 +106,52 @@ Objects {
         }
       }
     }
+    ParameterOverrideMap {
+      key: 842550804680092769
+      value {
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: 6.04162835e-07
+            Z: 5.06808567
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1.21459806
+            Y: 1.30667269
+            Z: 1.36052668
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 3183916411842143509
+      value {
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -3.81861496
+            Y: -1.24009037
+            Z: 2.5905323
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 17249068815776298993
+      value {
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -4.11467934
+            Y: -0.291964799
+            Z: 7.49505854
+          }
+        }
+      }
+    }
     TemplateAsset {
       Id: 12943947732222281349
     }

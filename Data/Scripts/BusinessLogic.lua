@@ -198,7 +198,7 @@ function BusinessLogic.LoadSave(player)
     local data = Storage.GetPlayerData(player)
     for key, default in pairs(_KEY_DEFAULTS) do
         data[key] = data[key] or default
-        if math.type(data[key] == "integer") then
+        if math.type(data[key]) == "integer" then
             player:SetResource(key, data[key])
         end
     end

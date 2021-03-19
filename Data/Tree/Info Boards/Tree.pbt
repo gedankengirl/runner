@@ -38,12 +38,12 @@ Objects {
   Name: "Board"
   Transform {
     Location {
-      X: 120.010864
+      X: 210.785156
       Y: 5985.26855
       Z: 68.8156891
     }
     Rotation {
-      Yaw: -102.418884
+      Yaw: -118.331909
     }
     Scale {
       X: 0.948308408

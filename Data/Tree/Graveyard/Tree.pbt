@@ -12090,7 +12090,7 @@ Objects {
     Scale {
       X: 140
       Y: 140
-      Z: 1
+      Z: 60.777
     }
   }
   ParentId: 5814591562192750468
@@ -12102,7 +12102,7 @@ Objects {
     Overrides {
       Name: "bp:Volume Type"
       Enum {
-        Value: "mc:evfxvolumetype:1"
+        Value: "mc:evfxvolumetype:0"
       }
     }
     Overrides {
@@ -12142,7 +12142,7 @@ Objects {
     }
   }
   Relevance {
-    Value: "mc:eproxyrelevance:critical"
+    Value: "mc:eproxyrelevance:medium"
   }
 }
 Objects {
@@ -12159,7 +12159,7 @@ Objects {
     Scale {
       X: 140
       Y: 140
-      Z: 1
+      Z: 60.7774353
     }
   }
   ParentId: 5814591562192750468
@@ -12171,7 +12171,7 @@ Objects {
     Overrides {
       Name: "bp:Volume Type"
       Enum {
-        Value: "mc:evfxvolumetype:1"
+        Value: "mc:evfxvolumetype:0"
       }
     }
     Overrides {
@@ -12211,7 +12211,7 @@ Objects {
     }
   }
   Relevance {
-    Value: "mc:eproxyrelevance:critical"
+    Value: "mc:eproxyrelevance:medium"
   }
 }
 Objects {
@@ -12545,10 +12545,6 @@ Objects {
       Float: -1
     }
     Overrides {
-      Name: "bp:Intensity"
-      Float: 1.34681809
-    }
-    Overrides {
       Name: "bp:Unbounded"
       Bool: false
     }
@@ -12557,6 +12553,10 @@ Objects {
       Enum {
         Value: "mc:evolumetype:0"
       }
+    }
+    Overrides {
+      Name: "bp:Intensity"
+      Float: 1.347
     }
   }
   Collidable_v2 {
