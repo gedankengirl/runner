@@ -48,21 +48,21 @@ local RARITY_INFO = {
 local PetDb, EggDb do
     local kName, kRarity, kUpgrade, kBonus, kMuid, kNextUpgradeId = 1, 2, 3, 4, 5
     PetDb = {
-        -- 0 TODO: Chick Muid
-        [01]  = {"Chick",   RARITY.COMMON, UPGRADE.NO_UPGRADE,    1, "657199ADF67F7CF8:$Bee_1_ClientContext"},
-        [02]  = {"Chick",   RARITY.COMMON, UPGRADE.GOLDEN,        2, "657199ADF67F7CF8:$Bee_1_ClientContext"},
-        [03]  = {"Chick",   RARITY.COMMON, UPGRADE.DIAMOND,       3, "657199ADF67F7CF8:$Bee_1_ClientContext"},
-        [04]  = {"Chick",   RARITY.COMMON, UPGRADE.EMERALD,       4, "657199ADF67F7CF8:$Bee_1_ClientContext"},
-        [05]  = {"Chick",   RARITY.COMMON, UPGRADE.RUBY,          5, "657199ADF67F7CF8:$Bee_1_ClientContext"},
+        -- 0
+        [01]  = {"Chick",   RARITY.COMMON, UPGRADE.NO_UPGRADE,    1, "821511D1C7002F28:$Chick_1_ClientContext"},
+        [02]  = {"Chick",   RARITY.COMMON, UPGRADE.GOLDEN,        2, "AE88EDEA52C27A49:$Chick_2_ClientContext"},
+        [03]  = {"Chick",   RARITY.COMMON, UPGRADE.DIAMOND,       3, "5E8CE4DCFD91C75E:$Chick_3_ClientContext"},
+        [04]  = {"Chick",   RARITY.COMMON, UPGRADE.EMERALD,       4, "5E8CE4DCFD91C75E:$Chick_3_ClientContext"},
+        [05]  = {"Chick",   RARITY.COMMON, UPGRADE.RUBY,          5, "5E8CE4DCFD91C75E:$Chick_3_ClientContext"},
 
         -- 1
         [06]  = {"Bee",     RARITY.COMMON, UPGRADE.NO_UPGRADE,    6,  "657199ADF67F7CF8:$Bee_1_ClientContext"},
-        [07]  = {"Bee",     RARITY.COMMON, UPGRADE.GOLDEN,        9, "F13AA8B68801D8BD:$Bee_2_ClientContext"},
+        [07]  = {"Bee",     RARITY.COMMON, UPGRADE.GOLDEN,        9,  "F13AA8B68801D8BD:$Bee_2_ClientContext"},
         [08]  = {"Bee",     RARITY.COMMON, UPGRADE.DIAMOND,       14, "FF21F3E0457977D1:$Bee_3_ClientContext"},
         [09]  = {"Bee",     RARITY.COMMON, UPGRADE.EMERALD,       20, "FF21F3E0457977D1:$Bee_3_ClientContext"},
         [10]  = {"Bee",     RARITY.COMMON, UPGRADE.RUBY,          30, "FF21F3E0457977D1:$Bee_3_ClientContext"},
 
-        [11] = {"Gnome",    RARITY.UNCOMMON, UPGRADE.NO_UPGRADE,  7, "F5302EE25E9F9D4F:$Gnome_1_ClientContext"},
+        [11] = {"Gnome",    RARITY.UNCOMMON, UPGRADE.NO_UPGRADE,  7,  "F5302EE25E9F9D4F:$Gnome_1_ClientContext"},
         [12] = {"Gnome",    RARITY.UNCOMMON, UPGRADE.GOLDEN,      11, "D24270AC73BE7243:$Gnome_2_ClientContext"},
         [13] = {"Gnome",    RARITY.UNCOMMON, UPGRADE.DIAMOND,     16, "630295E0FE016E5B:$Gnome_3_ClientContext"},
         [14] = {"Gnome",    RARITY.UNCOMMON, UPGRADE.EMERALD,     24, "630295E0FE016E5B:$Gnome_3_ClientContext"},
@@ -111,38 +111,38 @@ local PetDb, EggDb do
         [46] = {"Mermaid",  RARITY.LEGENDARY, UPGRADE.NO_UPGRADE, 25,  "2DBDC09751CE4485:$Mermaid_1_ClientContext"},
         [47] = {"Mermaid",  RARITY.LEGENDARY, UPGRADE.GOLDEN,     38,  "1796205E3ECA0CA6:$Mermaid_2_ClientContext"},
         [48] = {"Mermaid",  RARITY.LEGENDARY, UPGRADE.DIAMOND,    57,  "6C8621CFD91213A9:$Mermaid_3_ClientContext"},
-        [49] = {"Mermaid",  RARITY.LEGENDARY, UPGRADE.EMERALD,    85, "6C8621CFD91213A9:$Mermaid_3_ClientContext"},
+        [49] = {"Mermaid",  RARITY.LEGENDARY, UPGRADE.EMERALD,    85,  "6C8621CFD91213A9:$Mermaid_3_ClientContext"},
         [50] = {"Mermaid",  RARITY.LEGENDARY, UPGRADE.RUBY,       127, "6C8621CFD91213A9:$Mermaid_3_ClientContext"},
 
         -- 4
         [51] = {"Monkey",   RARITY.UNCOMMON, UPGRADE.NO_UPGRADE,  21,  "DA2AF5973CC4AAC7:$Monkey_1_ClientContext"},
         [52] = {"Monkey",   RARITY.UNCOMMON, UPGRADE.GOLDEN,      31,  "4921CFB551E57DF0:$Monkey_2_ClientContext"},
-        [53] = {"Monkey",   RARITY.UNCOMMON, UPGRADE.DIAMOND,     46, "EA4B79D1C34D0C57:$Monkey_3_ClientContext"},
-        [54] = {"Monkey",   RARITY.UNCOMMON, UPGRADE.EMERALD,     70, "EA4B79D1C34D0C57:$Monkey_3_ClientContext"},
+        [53] = {"Monkey",   RARITY.UNCOMMON, UPGRADE.DIAMOND,     46,  "EA4B79D1C34D0C57:$Monkey_3_ClientContext"},
+        [54] = {"Monkey",   RARITY.UNCOMMON, UPGRADE.EMERALD,     70,  "EA4B79D1C34D0C57:$Monkey_3_ClientContext"},
         [55] = {"Monkey",   RARITY.UNCOMMON, UPGRADE.RUBY,        104, "EA4B79D1C34D0C57:$Monkey_3_ClientContext"},
 
         [56] = {"Bull",     RARITY.RARE, UPGRADE.NO_UPGRADE,      25,  "8B6E8CCC1AD210FF:$Bull_1_ClientContext"},
         [57] = {"Bull",     RARITY.RARE, UPGRADE.GOLDEN,          37,  "44C36F7D9935979F:$Bull_2_ClientContext"},
-        [58] = {"Bull",     RARITY.RARE, UPGRADE.DIAMOND,         56, "4B40EAF86CA2C086:$Bull_3_ClientContext"},
-        [59] = {"Bull",     RARITY.RARE, UPGRADE.EMERALD,         84, "4B40EAF86CA2C086:$Bull_3_ClientContext"},
+        [58] = {"Bull",     RARITY.RARE, UPGRADE.DIAMOND,         56,  "4B40EAF86CA2C086:$Bull_3_ClientContext"},
+        [59] = {"Bull",     RARITY.RARE, UPGRADE.EMERALD,         84,  "4B40EAF86CA2C086:$Bull_3_ClientContext"},
         [60] = {"Bull",     RARITY.RARE, UPGRADE.RUBY,            125, "4B40EAF86CA2C086:$Bull_3_ClientContext"},
 
         [61] = {"Cat",      RARITY.EPIC, UPGRADE.NO_UPGRADE,      30,  "0C4EB2DA3414B14F:$Cat_1_ClientContext"},
         [62] = {"Cat",      RARITY.EPIC, UPGRADE.GOLDEN,          45,  "DFE30E8B8B8E3A13:$Cat_2_ClientContext"},
-        [63] = {"Cat",      RARITY.EPIC, UPGRADE.DIAMOND,         67, "CB0B715CE9DAAB6B:$Cat_3_ClientContext"},
+        [63] = {"Cat",      RARITY.EPIC, UPGRADE.DIAMOND,         67,  "CB0B715CE9DAAB6B:$Cat_3_ClientContext"},
         [64] = {"Cat",      RARITY.EPIC, UPGRADE.EMERALD,         100, "CB0B715CE9DAAB6B:$Cat_3_ClientContext"},
         [65] = {"Cat",      RARITY.EPIC, UPGRADE.RUBY,            151, "CB0B715CE9DAAB6B:$Cat_3_ClientContext"},
 
         -- 5
         [66] = {"Mushroom", RARITY.RARE, UPGRADE.NO_UPGRADE,      35,  "2E8C4BA2B95B6991:$MushroomClientContext_1"},
         [67] = {"Mushroom", RARITY.RARE, UPGRADE.GOLDEN,          53,  "6E09632F0C956DC8:$MushroomClientContext_2"},
-        [68] = {"Mushroom", RARITY.RARE, UPGRADE.DIAMOND,         79, "CB4E4FEC8EF5E4B6:$MushroomClientContext_3"},
+        [68] = {"Mushroom", RARITY.RARE, UPGRADE.DIAMOND,         79,  "CB4E4FEC8EF5E4B6:$MushroomClientContext_3"},
         [69] = {"Mushroom", RARITY.RARE, UPGRADE.EMERALD,         119, "CB4E4FEC8EF5E4B6:$MushroomClientContext_3"},
         [70] = {"Mushroom", RARITY.RARE, UPGRADE.RUBY,            178, "CB4E4FEC8EF5E4B6:$MushroomClientContext_3"},
 
         [71] = {"Bunny",    RARITY.EPIC, UPGRADE.NO_UPGRADE,      42,  "5898683E0D7F13F3:$BunnyClientContext_1"},
         [72] = {"Bunny",    RARITY.EPIC, UPGRADE.GOLDEN,          63,  "7FB6E2346C48F56F:$BunnyClientContext_2"},
-        [73] = {"Bunny",    RARITY.EPIC, UPGRADE.DIAMOND,         95, "3BAE097EAFBDE1C1:$BunnyClientContext_3"},
+        [73] = {"Bunny",    RARITY.EPIC, UPGRADE.DIAMOND,         95,  "3BAE097EAFBDE1C1:$BunnyClientContext_3"},
         [74] = {"Bunny",    RARITY.EPIC, UPGRADE.EMERALD,         143, "3BAE097EAFBDE1C1:$BunnyClientContext_3"},
         [75] = {"Bunny",    RARITY.EPIC, UPGRADE.RUBY,            214, "3BAE097EAFBDE1C1:$BunnyClientContext_3"},
 
@@ -154,7 +154,7 @@ local PetDb, EggDb do
     }
 
     EggDb = {
-        Hub = {price=100, gacha={Chick=100}, "6BF1AD3640E72529:EggGroup_Garden"}, -- TODO: egg muid
+        Hub = {price = 100, gacha = {Chick=100}, muid="35C8AE01462F650D:EggGroup_Hub"},
         Garden =  {price = 3000, gacha = {Bee=45, Gnome=35, Birdie=20}, muid = "6BF1AD3640E72529:EggGroup_Garden"},
         Graveyard =  {price = 10000, gacha = {Bat=55, Ghost=35, Witch=10}, muid = "F957A07755CF5ACE:EggGroup_Graveyard"},
         Tropical = {price = 45000, gacha = {Flamingo=50, Crab=40, Mermaid=10}, muid = "186F54701898DFCB:EggGroup_Tropical"},
