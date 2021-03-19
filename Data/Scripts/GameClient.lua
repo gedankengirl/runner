@@ -27,9 +27,9 @@ local COLOR_DEFAULT = Color.New(1, 1, 1, 0.5)
 local COLOR_MOVE = Color.New(1, 1, 0, 0.5)
 local COLOR_MERGE = Color.New(0, 1, 0, 0.5)
 
-local SCROLL_LIMIT_ADJUST_TOP = -50 -- 100 -- -300 -- -200
-local SCROLL_LIMIT_ADJUST_SIDES = 0 -- -1000
-local SCROLL_LIMIT_ADJUST_BOTTOM = -150 -- 50 -- -100
+local SCROLL_LIMIT_ADJUST_TOP = -50
+local SCROLL_LIMIT_ADJUST_SIDES = 0
+local SCROLL_LIMIT_ADJUST_BOTTOM = -150
 local CAMERA_START_ROW = 2
 local CAMERA_RELATIVE_YAW = 0
 local CAMERA_RELATIVE_PITCH = -60
@@ -84,6 +84,7 @@ local function _set_camera(cam, lerp)
 end
 
 local function _randomize(x, factor)
+    assert(factor < 1)
     local a, b = x*(1-factor), x*(1+factor)
     assert(a < b, "empty interval")
     return a + (b-a)*math.random()
@@ -178,7 +179,6 @@ function PetAnimator:Destroy()
 
 end
 
-local _pet_animators_to_destroy = {}
 -- pdata: [pet_id]
 -- pstae: [{pet_id=pet_id}]
 local function _harmonize(pdata, pstate, player)
@@ -279,7 +279,8 @@ end
 
 local Client = {
     channel = nil,
-    social = nil
+    pets_chan = nil,
+    social_chan = nil
 }
 
 function Client:Start()
