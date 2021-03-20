@@ -36,7 +36,7 @@ local RARITY = {
 -- FIXME: capitalize rarity names back
 local RARITY_INFO = {
     [RARITY.COMMON] = {name="Common", color=Color.TAN},
-    [RARITY.UNCOMMON] = {name="Uncommon", color=Color.GREEN},
+    [RARITY.UNCOMMON] = {name="Uncommon", color=Color.New(.043, 0.42, 0)},
     [RARITY.RARE] = {name="Rare", color=Color.New(0, 0.28, 0.8)},
     [RARITY.EPIC] = {name="Epic", color=Color.New(0.86, 0, 0.35)},
     [RARITY.LEGENDARY] = {name="Legendary", color=Color.New(0.85, 0.25, 0)},
@@ -218,6 +218,7 @@ local PetDb, EggDb do
 end -- do
 
 local FancyPetNamesByName = {
+    Chick = "Chubby Chick",
     Bee = "Busy B.",
     Gnome = "Gnome Phenom",
     Birdie = "Nerdy Birdie",
