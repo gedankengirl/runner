@@ -1,3 +1,4 @@
+local DEBUG = true
 local Maid = _G.req("_Maid")
 local Grid = _G.req("_Grid")
 local Base64 = _G.req("_Base64")
@@ -23,9 +24,9 @@ local CAMERA_LERP_TIME = 0.5
 local Tile = require(script:GetCustomProperty("Tile"))
 local Actor = require(script:GetCustomProperty("Actor"))
 
-local COLOR_DEFAULT = Color.New(1, 1, 1, 0.5)
-local COLOR_MOVE = Color.New(1, 1, 0, 0.5)
-local COLOR_MERGE = Color.New(0, 1, 0, 0.5)
+local COLOR_DEFAULT = Color.New(1, 1, 1, 0.25)
+local COLOR_MOVE = Color.New(1, 1, 0, 0.25)
+local COLOR_MERGE = Color.New(0, 1, 0, 0.25)
 
 local SCROLL_LIMIT_ADJUST_TOP = -50
 local SCROLL_LIMIT_ADJUST_SIDES = 0
@@ -35,7 +36,7 @@ local CAMERA_RELATIVE_YAW = 0
 local CAMERA_RELATIVE_PITCH = -60
 local CAMERA_RELATIVE_HEIGHT = 200
 local CAMERA_SCROLL_SPEED = 20 -- 50
-local INTERACTION_PLANE_HEIGHT = 75 --75
+local INTERACTION_PLANE_HEIGHT = 10 --75
 
 local MOUSE_CLICK_TIMEOUT = 0.3
 local MOUSE_DRAG_DEADTIME = 0.06
@@ -47,7 +48,6 @@ local CAMERA_RELATIVE_TRANSFORM = Transform.New(
     Vector3.UP * CAMERA_RELATIVE_HEIGHT,
     Vector3.ONE
 )
-
 
 local _maid = Maid.New(script)
 -----------------------------------------------------------------------------
@@ -97,10 +97,11 @@ local PetMaster = {type="PetMaster", _state = {}}
 PetMaster.__index = PetMaster
 local PetAnimator = {type="PetAnimator"}
 PetAnimator.__index = PetAnimator
-local MIN_SPR = SP.New(0.7, 0.5)
+local MIN_SPR = SP.New(0.6, 0.5)
 local MAX_SPR = SP.New(0.7, 1.0)
-local SOFT_SPR = SP.New(0.2, 1)
-local HEAVEN = Vector3.New(0,0, 200)
+local Z_SPR = SP.New(0.9, 1.0)
+local AWAY_SPR = SP.New(1, 0.5)
+local HEAVEN = Vector3.New(0, 0, 700)
 local SLOW_SQ = 1E6
 local Z_OFFSET = Vector3.UP*-65
 
@@ -141,9 +142,10 @@ function PetAnimator.New(pet_id, pos_idx, player)
         pet_id=pet_id,
         pos_idx=pos_idx,
         min_spr=MIN_SPR:RandomizeFrequency(0.15),
-        max_spr=MAX_SPR:RandomizeFrequency(0.15),
+        max_spr=MAX_SPR:RandomizeFrequency(0.25),
         look_at_speed = _randomize(math.pi/4, 0.15),
-        spring = Spring.New(MAX_SPR, _pet_params.position)
+        spring = Spring.New(MAX_SPR, _pet_params.position),
+        zspring = Spring.New(Z_SPR, _pet_params.position.z)
     }
     self.pet:LookAtContinuous(PET_LOOKAT_TARGET)
     return setmetatable(self, PetAnimator)
@@ -160,23 +162,30 @@ function PetAnimator:Update(dt, target_transform, target_velocity, n_pets)
     local pet = self.pet
     if not pet then return end
     local is_slow = target_velocity.sizeSquared < SLOW_SQ
-    local spring = self.spring
+    local spring, zspring = self.spring, self.zspring
     spring:SetSpringParams(is_slow and self.min_spr or self.max_spr)
+    local pet_pos, master_pos = pet:GetWorldPosition(), target_transform:GetPosition() + Z_OFFSET
     spring:SetPosition(pet:GetWorldPosition())
     local direction = is_slow and target_transform:GetForwardVector() or target_velocity:GetNormalized()
-    spring:SetGoal(_get_goal(target_transform:GetPosition() + Z_OFFSET, direction, self.pos_idx, n_pets))
+    spring:SetGoal(_get_goal(master_pos, direction, self.pos_idx, n_pets))
     spring:Update(dt)
-    pet:SetWorldPosition(spring:GetPosition())
+    zspring:SetPosition(pet_pos.z)
+    zspring:SetGoal(master_pos.z)
+    zspring:Update(dt)
+    local pos = spring:GetPosition()
+    local z = zspring:GetPosition()
+    pos.z = z
+    pet:SetWorldPosition(pos)
 end
 
 function PetAnimator:Destroy()
     if self == PET_ANIMATOR_NIL then return end
     local pet = self.pet
-    pet:StopRotate() -- to stop LookAtContinuous
-    SOFT_SPR:ToAnim()(pet):Offset("Rotation", Rotation.New(0, 0, 180)):Run()
-    self.min_spr:ToAnim()(pet):Target("WorldPosition", pet:GetWorldPosition()+HEAVEN):Run(1)
+     -- to stop LookAtContinuous
+    pet:StopRotate()
+    AWAY_SPR:ToAnim()(pet):Target("Scale", Vector3.ZERO):Run()
         :SetOnFinish(function() Maid.safeDestroy(pet) end)
-
+    AWAY_SPR:ToAnim()(pet):Target("WorldPosition", pet:GetWorldPosition()+HEAVEN):Run(0.1)
 end
 
 -- pdata: [pet_id]
@@ -247,7 +256,6 @@ end
 
 function PetMaster.Update(dt)
     local state = PetMaster._state
-    -- TODO: handle local player here
     if (_maid.grid) then
         state[LOCAL_PLAYER.id] = _harmonize(B.GetEqippedPets(_maid.grid), state[LOCAL_PLAYER.id], LOCAL_PLAYER)
     end
@@ -348,7 +356,6 @@ function Client:_HatchEgg(pet_id, row, col)
     local cell = grid:at(row, col)
     assert(cell:IsFree())
     Actor.New(pet_id, cell)
-    -- TODO: some animation
 end
 
 local Highlights = {}
@@ -461,7 +468,7 @@ function SHOP:Exit()
     LOCAL_PLAYER.isVisibleToSelf = true
 end
 
-function SHOP:HandleEggHatched(egg_id, pet_id)
+function SHOP:HandleEggHatched(_egg_id, pet_id)
     local shop_id = self._shop_id
     if not shop_id then return end
     REvents.Broadcast(P.CLIENT.EGG_HATCHED_IN_SHOP, shop_id, pet_id)
@@ -529,13 +536,13 @@ local function _get_move_outcome(grid, src_cell, dst_cell)
     local function _get_mergable_neghbor(dst_cell, src_cell)
         assert(dst_cell.actor.id == src_cell.actor.id)
         local aid = src_cell.actor.id
-        return grid:Neighbor4(dst_cell, function(cell)
+        return grid:Neighbor44(dst_cell, function(cell)
             return cell ~= src_cell and cell.actor and cell.actor.id == aid
         end)
     end
 
     local function _get_empty_neghbor(dst_cell)
-        return grid:Neighbor4(dst_cell, function (cell)
+        return grid:Neighbor44(dst_cell, function (cell)
             return not cell.actor
         end)
     end
@@ -573,6 +580,9 @@ function INVENTORY:_UpdateInteractions(_dt)
     local grid = _maid.grid
     if not self.isInteractionEnabled then return end
     local worldInteractionPoint = UI.GetCursorPlaneIntersection(table.unpack(self.interactionPlane))
+    if DEBUG and worldInteractionPoint then
+        CoreDebug.DrawSphere(worldInteractionPoint, 4)
+    end
     local cell = grid:GetCellAtPoint(worldInteractionPoint)
     if not cell:IsNil() then
         local newCellUnderCursor = cell
@@ -596,6 +606,11 @@ function INVENTORY:_UpdateInteractions(_dt)
             end
         end
         self.cellUnderCursor = newCellUnderCursor
+    else -- cell under cursor is nil
+        if self.cellUnderCursor then
+            self.cellUnderCursor = nil
+            Events.Broadcast(P.INTERACTION.TileUnderCursorChanged, grid, nil, nil, nil)
+        end
     end
     -- Update left mouse movement criteria and interaction type.
     if self.mouseDownTime and self.attachedActor then
@@ -776,6 +791,7 @@ end
 
 -- Monkey patching Grid for highlights
 function INVENTORY._OnTileUnderCursorChanged(grid, cursor_cell, move_outcome)
+    print(pp{cursor_cell, move_outcome, time()})
     local hl = grid._highlights
     hl:_clear()
     if move_outcome then
@@ -792,7 +808,7 @@ function INVENTORY._OnTileUnderCursorChanged(grid, cursor_cell, move_outcome)
             hl:_show(COLOR_MERGE, cursor_cell --[[, src_cell]], other_cell)
         else warn(type)
         end
-    else
+    elseif cursor_cell then
         hl:_show(COLOR_DEFAULT, cursor_cell)
     end
 end
