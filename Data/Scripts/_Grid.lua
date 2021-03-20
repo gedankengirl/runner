@@ -76,8 +76,9 @@ local function idx2rc(idx, width)
     return (idx - 1)//width, (idx - 1)%width -- 0-idx
 end
 
+-- rc2idx :: r0, c0, w -> idx|-1
 local function rc2idx(row0, col0, width)
-    return row0 >= 0 and col0 >= 0 and row0*width + col0 + 1 or -1
+    return row0 >= 0 and col0 >= 0 and col0 < width and row0*width + col0 + 1 or -1
 end
 
 -- TODO: factor out geometry: dims, transform etc.
@@ -334,6 +335,19 @@ do
         end
     end
 
+    function Grid:Neighbor44(origin, predicate)
+        predicate = predicate or all
+        local r, c = origin.row, origin.col
+        for i = 1, 4 do
+            local row, col = r + SEARCH_PATTERN[i], c + SEARCH_PATTERN[i+1]
+            local cell = self:at(row, col)
+            if cell ~= CELL_NIL and cell ~= origin and predicate(cell) then
+                return cell
+            end
+        end
+        return self:Neighbor8(origin, predicate)
+    end
+
     function Grid:Neighbor8(origin, predicate)
         predicate = predicate or all
         local r, c = origin.row, origin.col
@@ -357,7 +371,9 @@ end
 local function _test()
 
     local g0 = Grid.New(7, 5, 100,100)
-    print(g0:GetCellAt(-300, -10))
+    local c30 = g0:GetCellAt(-300, -10)
+    assert(c30.row == 3 and c30.col == 0)
+    assert(rc2idx(2,7,7) == -1)
 
     -- g1
     local W, H, DimX, DimY = 5, 4, 50, 100
