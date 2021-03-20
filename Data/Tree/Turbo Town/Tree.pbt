@@ -1,6 +1,39 @@
 Name: "Turbo Town"
 RootId: 10665984139206756167
 Objects {
+  Id: 9018911021117700934
+  Name: "Pet Corner"
+  Transform {
+    Location {
+      X: 5807.33789
+      Y: -1990.14917
+      Z: -32.5696716
+    }
+    Rotation {
+      Yaw: -179.999954
+    }
+    Scale {
+      X: 1.3827877
+      Y: 1.3827877
+      Z: 1.3827877
+    }
+  }
+  ParentId: 10665984139206756167
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "Pet Corner_1"
+  }
+}
+Objects {
   Id: 9842931298712202320
   Name: "Balloons group"
   Transform {

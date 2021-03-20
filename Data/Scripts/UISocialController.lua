@@ -233,7 +233,7 @@ function SocialHandlers.OnSocial_Hatch(player_id, pet_id)
         type = "Hatch",
         player = player,
         actorRank = player:GetResource(B.REBIRTH_KEY) or 0,
-        message = string.format("%s hatched %s %s", player.name, rarity_info.name, fancy_name)
+        message = string.format("%s hatched %s %s", player.name, rarity_info.name:lower(), fancy_name)
     }
 end
 

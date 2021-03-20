@@ -6,9 +6,9 @@ local PET_LIST_ROOT = PET_BOARD_ROOT:GetCustomProperty("PetListRoot"):WaitForObj
 local TEXTLINE_TEMPLATE = PET_BOARD_ROOT:GetCustomProperty("TextLineTemplate")
 local COLOR_CODES_ROOT = PET_BOARD_ROOT:GetCustomProperty("ColorCodesRoot"):WaitForObject()
 local COLOR_CODE_TEMPLATE = PET_BOARD_ROOT:GetCustomProperty("ColorCodeTemplate")
-local COLOR_CODES_USED = {S.RARITY.COMMON, S.RARITY.RARE, S.RARITY.EPIC, S.RARITY.LEGENDARY}
+local COLOR_CODES_USED = {S.RARITY.COMMON, S.RARITY.UNCOMMON, S.RARITY.RARE, S.RARITY.EPIC, S.RARITY.LEGENDARY, S.RARITY.MYTHIC}
 local INTERLINE_SPACE_SMALL = -20
-local COLOR_CODES_STARTING_HEIGHT = -140
+local COLOR_CODES_STARTING_HEIGHT = -125
 local INTERLINE_SPACE = -50
 local INGAME_WAITIN_DUR = Environment.IsPreview() and 1 or nil
 local PET_STAND = PET_BOARD_ROOT:GetCustomProperty("PetStand"):WaitForObject(INGAME_WAITIN_DUR)
@@ -56,5 +56,5 @@ for i = 1, colorCodesArrayLength do
     local colorName = colorCodeEntry:GetCustomProperty("ColorName"):WaitForObject()
     local color = S.RARITY_INFO[COLOR_CODES_USED[i]].color
     colorSample:SetColor(color)
-    colorName.text = S.RARITY_INFO[COLOR_CODES_USED[i]].name
+    colorName.text = S.RARITY_INFO[COLOR_CODES_USED[i]].name:lower()
 end

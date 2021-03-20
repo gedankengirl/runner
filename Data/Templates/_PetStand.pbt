@@ -3366,13 +3366,14 @@ Assets {
         Name: "Trigger"
         Transform {
           Location {
+            Y: 42.8544922
             Z: 20
           }
           Rotation {
           }
           Scale {
             X: 3
-            Y: 3
+            Y: 3.58789539
             Z: 6.80000114
           }
         }
