@@ -1,6 +1,36 @@
 Name: "Graveyard"
 RootId: 4293257082225003563
 Objects {
+  Id: 16765078477078614408
+  Name: "Ambient audio"
+  Transform {
+    Location {
+      Z: 700
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4293257082225003563
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "Ambient audio_1"
+  }
+}
+Objects {
   Id: 1541465352563483936
   Name: "Teleporter Home"
   Transform {
