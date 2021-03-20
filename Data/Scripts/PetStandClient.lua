@@ -127,6 +127,8 @@ local function _show_or_hide_pets(show)
         for i, pet in ipairs(PETS) do
             local scale = 0.6
             PET_SPR:ToAnim():Target("Scale", scale*Vector3.ONE)(pet):Run()
+            i = #PETS == 1 and 2 or i
+            i = #PETS == 2 and i == 2 and 3 or i
             PET_SPR:ToAnim("randomize"):Target("Position", PET_MARKS[i]:GetPosition())(pet):Run()
                 :SetOnFinish(function()
                     pet:LookAtContinuous(LOOK_AT_MARK, false, 1)

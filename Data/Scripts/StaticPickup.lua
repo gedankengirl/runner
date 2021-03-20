@@ -18,6 +18,7 @@ local function OnBeginOverlap(_trigger, player)
     end
     REvents.Broadcast("@StaticPickup", player, RESOURCE_TAG, RESOURCE_AMOUNT, TRIGGER:GetWorldPosition())
     SCHEDULER.Add(RESPAWN_DELAY + time(), TEMPLATE, TRIGGER.parent, TRIGGER:GetPosition())
+    -- NOTE: `isEnabled` is *not* supported in Static Context
     TRIGGER:Destroy()
 end
 

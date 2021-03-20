@@ -94,8 +94,11 @@ function Grid.New(w, h, dimx, dimy)
     local self = setmetatable({_maid=_maid}, Grid)
     self.w, self.h, self.dimx, self.dimy, self.cells = w, h, dimx, dimy, cells
     -- add spatial extent
-    self.pos_x, self.neg_x = 0, -dimx*h
-    self.pos_y, self.neg_y = dimy*w, 0
+    -- local dimx, dimy = self.dimx, self.dimy
+    -- local row = (-x + dimx/2)//dimx
+    -- local col = (y + dimy/2)//dimy
+    self.pos_x, self.neg_x = dimx/2, -dimx*h + dimx/2
+    self.pos_y, self.neg_y = dimy*w - dimy/2, -dimy/2
     if CORE_ENV then
         self.worldToGrid = Transform.IDENTITY
     end
@@ -352,6 +355,10 @@ if CORE_ENV then
 end
 
 local function _test()
+
+    local g0 = Grid.New(7, 5, 100,100)
+    print(g0:GetCellAt(-300, -10))
+
     -- g1
     local W, H, DimX, DimY = 5, 4, 50, 100
     local g1 = Grid.New(W, H, DimX, DimY)
@@ -364,7 +371,6 @@ local function _test()
     assert(c34.row == 3 and c34.col == 4)
     local c32 = g1:GetCellAt(-149.999, 199.999)
     assert(c32.row == 3 and c32.col == 2)
-    assert(g1:GetCellAt(-1,-10) == CELL_NIL)
 
     if CORE_ENV then
         local tr = Transform.IDENTITY

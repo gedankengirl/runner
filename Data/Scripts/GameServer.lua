@@ -40,7 +40,7 @@ end
 local DOWNLINK, CHANNELS, IN_USE, SOCIAL, PET_CHAN do
     DOWNLINK = script:GetCustomProperty("DOWNLINK"):WaitForObject()
     CHANNELS= DOWNLINK:GetCustomProperties()
-    for k  in pairs(CHANNELS) do
+    for k, _ in pairs(CHANNELS) do
         if type(k) == 'string' then
             CHANNELS[#CHANNELS+1] = k
             CHANNELS[k] = nil
@@ -110,7 +110,7 @@ local function _make_debug_inventory(inv_level, equip_level)
     for i = 1, grid.w*grid.h do
         local cell = grid:at(i)
         if not cell:IsNil() and cell.row ~= 0 then
-            cell.actor = i%3 == 0 and {id = 1} or nil or {id = 4}
+            cell.actor = i%3 == 0 and {id = 6} or nil or {id = 11}
         end
     end
     return grid
