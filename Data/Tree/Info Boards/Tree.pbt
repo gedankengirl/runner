@@ -35,7 +35,7 @@ Objects {
 }
 Objects {
   Id: 9803862681446895524
-  Name: "Board"
+  Name: "RebirthBoard"
   Transform {
     Location {
       X: 210.785156
@@ -63,12 +63,12 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Board_1"
+    FilePartitionName: "RebirthBoard"
   }
 }
 Objects {
   Id: 14139637125947873166
-  Name: "Board"
+  Name: "IntroductionBoard"
   Transform {
     Location {
       X: 1094.31836
@@ -96,6 +96,6 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Board_2"
+    FilePartitionName: "IntroductionBoard"
   }
 }

@@ -1,6 +1,39 @@
 Name: "Tropical"
 RootId: 8313710388303195555
 Objects {
+  Id: 16457199922135749855
+  Name: "Pet Corner"
+  Transform {
+    Location {
+      X: 6401.17
+      Y: -637.332031
+      Z: 667.430298
+    }
+    Rotation {
+      Yaw: -179.999954
+    }
+    Scale {
+      X: 1.3827877
+      Y: 1.3827877
+      Z: 1.3827877
+    }
+  }
+  ParentId: 8313710388303195555
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "Pet Corner_2"
+  }
+}
+Objects {
   Id: 4873045616788719507
   Name: "Ambient audio"
   Transform {
@@ -26,7 +59,7 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Ambient audio"
+    FilePartitionName: "Ambient audio_1"
   }
 }
 Objects {

@@ -1,7 +1,7 @@
 Name: "LightningBolt_silhouette"
-RootId: 8416701436039608980
+RootId: 1109736920719034448
 Objects {
-  Id: 17801259726818213387
+  Id: 18287528351694108055
   Name: "Prism - 3-Sided"
   Transform {
     Location {
@@ -20,7 +20,7 @@ Objects {
       Z: -0.08
     }
   }
-  ParentId: 8416701436039608980
+  ParentId: 1109736920719034448
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -34,17 +34,15 @@ Objects {
     }
     Overrides {
       Name: "ma:Shared_BaseMaterial:utile"
-      Float: 1
+      Float: 0.428385466
     }
     Overrides {
       Name: "ma:Shared_BaseMaterial:vtile"
-      Float: 1
+      Float: 0.481217235
     }
     Overrides {
       Name: "ma:Shared_BaseMaterial:color"
       Color {
-        G: 0.412222147
-        B: 0.490000129
         A: 1
       }
     }
@@ -74,14 +72,14 @@ Objects {
     }
   }
   InstanceHistory {
-    SelfId: 7936277200351421402
-    SubobjectId: 12959021496801820772
-    InstanceId: 18193526266088711028
-    TemplateId: 1851792044134233516
+    SelfId: 18287528351694108055
+    SubobjectId: 4033563617931696421
+    InstanceId: 10907345231434236569
+    TemplateId: 15904085984438255415
   }
 }
 Objects {
-  Id: 8821380457280597278
+  Id: 13438186586843566256
   Name: "Prism - 3-Sided"
   Transform {
     Location {
@@ -100,7 +98,7 @@ Objects {
       Z: -0.08
     }
   }
-  ParentId: 8416701436039608980
+  ParentId: 1109736920719034448
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -114,17 +112,15 @@ Objects {
     }
     Overrides {
       Name: "ma:Shared_BaseMaterial:utile"
-      Float: 1
+      Float: 0.428385466
     }
     Overrides {
       Name: "ma:Shared_BaseMaterial:vtile"
-      Float: 1
+      Float: 0.481217235
     }
     Overrides {
       Name: "ma:Shared_BaseMaterial:color"
       Color {
-        G: 0.412222147
-        B: 0.490000129
         A: 1
       }
     }
@@ -154,9 +150,9 @@ Objects {
     }
   }
   InstanceHistory {
-    SelfId: 16673461367213199483
-    SubobjectId: 4220132004551553989
-    InstanceId: 18193526266088711028
-    TemplateId: 1851792044134233516
+    SelfId: 13438186586843566256
+    SubobjectId: 8092481554533874690
+    InstanceId: 10907345231434236569
+    TemplateId: 15904085984438255415
   }
 }

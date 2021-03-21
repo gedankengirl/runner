@@ -1,4 +1,4 @@
-Name: "Board_2"
+Name: "IntroductionBoard"
 RootId: 14139637125947873166
 Objects {
   Id: 7159837182385950453

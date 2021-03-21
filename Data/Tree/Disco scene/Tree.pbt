@@ -1,6 +1,39 @@
 Name: "Disco scene"
 RootId: 2423505836595553228
 Objects {
+  Id: 12575432090368883756
+  Name: "Pet Corner"
+  Transform {
+    Location {
+      X: 6412.19
+      Y: -402.101563
+      Z: -12.7101135
+    }
+    Rotation {
+      Yaw: -179.999954
+    }
+    Scale {
+      X: 1.3827877
+      Y: 1.3827877
+      Z: 1.3827877
+    }
+  }
+  ParentId: 2423505836595553228
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "Pet Corner"
+  }
+}
+Objects {
   Id: 6612141579144997591
   Name: "Big lights client context"
   Transform {
@@ -216,7 +249,7 @@ Objects {
         Overrides {
           Name: "Position"
           Vector {
-            X: 5732.68359
+            X: 6276.18457
             Y: 304.185547
             Z: 86.6817
           }

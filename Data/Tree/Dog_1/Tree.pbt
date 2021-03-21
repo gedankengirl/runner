@@ -2101,7 +2101,7 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Body_1"
+    FilePartitionName: "Body_3"
   }
 }
 Objects {

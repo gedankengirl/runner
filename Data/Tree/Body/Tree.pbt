@@ -1,104 +1,21 @@
 Name: "Body"
-RootId: 9520761569291139991
+RootId: 8162531628001667194
 Objects {
-  Id: 15509100961027623906
-  Name: "Aura"
+  Id: 7437514779730193585
+  Name: "Plumage"
   Transform {
     Location {
+      Z: 112.673538
     }
     Rotation {
     }
     Scale {
-      X: 1.23737466
-      Y: 1.23737466
-      Z: 1.09777021
+      X: 0.653146327
+      Y: 0.653146327
+      Z: 0.653146327
     }
   }
-  ParentId: 9520761569291139991
-  UnregisteredParameters {
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 2482510762028700951
-      }
-    }
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:color"
-      Color {
-        G: 0.412222147
-        B: 0.490000129
-        A: 1
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:forceon"
-  }
-  CoreMesh {
-    MeshAsset {
-      Id: 15961349352539224933
-    }
-    Teams {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    StaticMesh {
-      Physics {
-        Mass: 100
-        LinearDamping: 0.01
-      }
-    }
-  }
-}
-Objects {
-  Id: 10560709201376440387
-  Name: "2D Basic Shapes Decal"
-  Transform {
-    Location {
-      X: 33.6897774
-      Y: -37.5301094
-      Z: 0.898793519
-    }
-    Rotation {
-      Roll: -70.4429855
-    }
-    Scale {
-      X: 0.277583599
-      Y: 0.0278935302
-      Z: 0.333269417
-    }
-  }
-  ParentId: 9520761569291139991
-  UnregisteredParameters {
-    Overrides {
-      Name: "bp:Sides"
-      Int: 3
-    }
-    Overrides {
-      Name: "bp:Color"
-      Color {
-        R: 0.0412562713
-        G: 0.134837672
-        B: 0.322000146
-        A: 1
-      }
-    }
-    Overrides {
-      Name: "bp:Stroke Color"
-      Color {
-        R: 0.0412562713
-        G: 0.134837672
-        B: 0.322000146
-        A: 1
-      }
-    }
-  }
+  ParentId: 8162531628001667194
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -108,62 +25,37 @@ Objects {
   CameraCollidable {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
-  Blueprint {
-    BlueprintAsset {
-      Id: 6185017546957884116
-    }
-    TeamSettings {
-    }
-    DecalBP {
-    }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "Plumage"
   }
-  Relevance {
-    Value: "mc:eproxyrelevance:critical"
+  InstanceHistory {
+    SelfId: 15836200141752685825
+    SubobjectId: 979406545004641143
+    InstanceId: 5519564275000209712
+    TemplateId: 12943947732222281349
   }
 }
 Objects {
-  Id: 559607262446513552
-  Name: "2D Basic Shapes Decal"
+  Id: 2608421393141613547
+  Name: "Beak"
   Transform {
     Location {
-      X: 33.6897774
-      Y: -35.4679337
-      Z: 7.95595789
+      X: 41.9641113
+      Z: 71.0561218
     }
     Rotation {
-      Roll: -70.4429855
+      Pitch: 6.83018879e-06
+      Yaw: -3.05175781e-05
+      Roll: -3.05175781e-05
     }
     Scale {
-      X: 0.277583599
-      Y: 0.0278935302
-      Z: 0.333269417
+      X: 0.709102869
+      Y: 0.709102869
+      Z: 0.709102869
     }
   }
-  ParentId: 9520761569291139991
-  UnregisteredParameters {
-    Overrides {
-      Name: "bp:Sides"
-      Int: 3
-    }
-    Overrides {
-      Name: "bp:Color"
-      Color {
-        R: 0.0412562713
-        G: 0.134837672
-        B: 0.322000146
-        A: 1
-      }
-    }
-    Overrides {
-      Name: "bp:Stroke Color"
-      Color {
-        R: 0.0412562713
-        G: 0.134837672
-        B: 0.322000146
-        A: 1
-      }
-    }
-  }
+  ParentId: 8162531628001667194
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -173,62 +65,38 @@ Objects {
   CameraCollidable {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
-  Blueprint {
-    BlueprintAsset {
-      Id: 6185017546957884116
-    }
-    TeamSettings {
-    }
-    DecalBP {
-    }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "Beak"
   }
-  Relevance {
-    Value: "mc:eproxyrelevance:critical"
+  InstanceHistory {
+    SelfId: 10654164521454678596
+    SubobjectId: 5010750599738252338
+    InstanceId: 5519564275000209712
+    TemplateId: 12943947732222281349
   }
 }
 Objects {
-  Id: 12482794757052243475
-  Name: "2D Basic Shapes Decal"
+  Id: 14346323471275049206
+  Name: "Left Eye"
   Transform {
     Location {
-      X: 33.6897774
-      Y: 37.5305176
-      Z: 0.898793519
+      X: 36.4034
+      Y: 27.1126289
+      Z: 85.1404266
     }
     Rotation {
-      Roll: 70.4426498
+      Pitch: 2.73207552e-05
+      Yaw: -56.9997864
+      Roll: -89.999939
     }
     Scale {
-      X: 0.277583599
-      Y: 0.0278935302
-      Z: 0.333269417
+      X: 1.18183815
+      Y: 1.18183815
+      Z: 1.18183815
     }
   }
-  ParentId: 9520761569291139991
-  UnregisteredParameters {
-    Overrides {
-      Name: "bp:Sides"
-      Int: 3
-    }
-    Overrides {
-      Name: "bp:Color"
-      Color {
-        R: 0.0412562713
-        G: 0.134837672
-        B: 0.322000146
-        A: 1
-      }
-    }
-    Overrides {
-      Name: "bp:Stroke Color"
-      Color {
-        R: 0.0412562713
-        G: 0.134837672
-        B: 0.322000146
-        A: 1
-      }
-    }
-  }
+  ParentId: 8162531628001667194
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -238,62 +106,37 @@ Objects {
   CameraCollidable {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
-  Blueprint {
-    BlueprintAsset {
-      Id: 6185017546957884116
-    }
-    TeamSettings {
-    }
-    DecalBP {
-    }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "Left Eye"
   }
-  Relevance {
-    Value: "mc:eproxyrelevance:critical"
+  InstanceHistory {
+    SelfId: 3059260374051675795
+    SubobjectId: 18169311080828776677
+    InstanceId: 5519564275000209712
+    TemplateId: 12943947732222281349
   }
 }
 Objects {
-  Id: 1989997721979008959
-  Name: "2D Basic Shapes Decal"
+  Id: 2446282370852597938
+  Name: "Right Eye"
   Transform {
     Location {
-      X: 33.6897774
-      Y: 35.4675293
-      Z: 7.95595789
+      X: 36.4034
+      Y: -27.1126289
+      Z: 85.1404266
     }
     Rotation {
-      Roll: 70.4426498
+      Yaw: -123.125
+      Roll: -89.999939
     }
     Scale {
-      X: 0.277583599
-      Y: 0.0278935302
-      Z: 0.333269417
+      X: 1.18183815
+      Y: 1.18183815
+      Z: 1.18183815
     }
   }
-  ParentId: 9520761569291139991
-  UnregisteredParameters {
-    Overrides {
-      Name: "bp:Sides"
-      Int: 3
-    }
-    Overrides {
-      Name: "bp:Color"
-      Color {
-        R: 0.0412562713
-        G: 0.134837672
-        B: 0.322000146
-        A: 1
-      }
-    }
-    Overrides {
-      Name: "bp:Stroke Color"
-      Color {
-        R: 0.0412562713
-        G: 0.134837672
-        B: 0.322000146
-        A: 1
-      }
-    }
-  }
+  ParentId: 8162531628001667194
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -303,34 +146,36 @@ Objects {
   CameraCollidable {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
-  Blueprint {
-    BlueprintAsset {
-      Id: 6185017546957884116
-    }
-    TeamSettings {
-    }
-    DecalBP {
-    }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "Right Eye"
   }
-  Relevance {
-    Value: "mc:eproxyrelevance:critical"
+  InstanceHistory {
+    SelfId: 15118964188712531976
+    SubobjectId: 541462074142135934
+    InstanceId: 5519564275000209712
+    TemplateId: 12943947732222281349
   }
 }
 Objects {
-  Id: 16267067446960085499
-  Name: "Body"
+  Id: 10110304808969239490
+  Name: "Capsule"
   Transform {
     Location {
+      Z: 58.7496185
     }
     Rotation {
+      Pitch: 6.83018879e-06
+      Yaw: -3.05175781e-05
+      Roll: -3.05175781e-05
     }
     Scale {
-      X: 1.20048618
-      Y: 1.20048618
-      Z: 1.06504369
+      X: 0.900590718
+      Y: 0.900590658
+      Z: 0.601249278
     }
   }
-  ParentId: 9520761569291139991
+  ParentId: 8162531628001667194
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -341,8 +186,8 @@ Objects {
     Overrides {
       Name: "ma:Shared_BaseMaterial:color"
       Color {
-        R: 0.321874946
-        G: 0.137946457
+        R: 0.674000144
+        G: 0.213968292
         A: 1
       }
     }
@@ -370,5 +215,11 @@ Objects {
         LinearDamping: 0.01
       }
     }
+  }
+  InstanceHistory {
+    SelfId: 2183081814138621501
+    SubobjectId: 14418604505643901003
+    InstanceId: 5519564275000209712
+    TemplateId: 12943947732222281349
   }
 }

@@ -25,7 +25,7 @@ for petName, _weight in pairs(EGG_DATA.gacha) do
     PET_INFO[#PET_INFO+1] = {id=id, fullName=fullName, rarity=rarity, rarityId=rarityId, hatchChance=hatchChance}
 end
 
-sort(PET_INFO, function(a, b) return a.hatchChance < b.hatchChance end)
+sort(PET_INFO, function(a, b) return a.hatchChance > b.hatchChance end)
 
 for i = 1, #PET_INFO do
     local info = PET_INFO[i]

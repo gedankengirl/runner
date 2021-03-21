@@ -28,7 +28,7 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "LightningBolt_silhouette"
+    FilePartitionName: "LightningBolt_silhouette_12"
   }
   InstanceHistory {
     SelfId: 966519676111359520

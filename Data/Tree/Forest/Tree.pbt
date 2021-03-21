@@ -1,6 +1,68 @@
 Name: "Forest"
 RootId: 12794903354937555053
 Objects {
+  Id: 7305742105173918935
+  Name: "Ambient Audio"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 12794903354937555053
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "Ambient Audio"
+  }
+}
+Objects {
+  Id: 15600559215102569728
+  Name: "Pet Corner"
+  Transform {
+    Location {
+      X: 6027.4248
+      Y: 234.736328
+      Z: -32.5697021
+    }
+    Rotation {
+      Yaw: -179.999954
+    }
+    Scale {
+      X: 1.3827877
+      Y: 1.3827877
+      Z: 1.3827877
+    }
+  }
+  ParentId: 12794903354937555053
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "Pet Corner_1"
+  }
+}
+Objects {
   Id: 2634985509649805994
   Name: "Surrounding Rocks"
   Transform {
@@ -17084,7 +17146,7 @@ Objects {
           Name: "Position"
           Vector {
             X: 5811.96631
-            Y: 573.929688
+            Y: 830.960938
             Z: 68.1765137
           }
         }

@@ -16,12 +16,3 @@ Assets {
     AssetId: "mi_basic_pbr_material_001"
   }
 }
-Assets {
-  Id: 6185017546957884116
-  Name: "2D Basic Shapes Decal"
-  PlatformAssetType: 14
-  PrimaryAsset {
-    AssetType: "DecalBlueprintAssetRef"
-    AssetId: "dcl_basicShapes"
-  }
-}

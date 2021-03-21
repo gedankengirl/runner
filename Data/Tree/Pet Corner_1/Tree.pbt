@@ -1,7 +1,7 @@
 Name: "Pet Corner_1"
-RootId: 9018911021117700934
+RootId: 15600559215102569728
 Objects {
-  Id: 5045749890391368922
+  Id: 10264836744900294395
   Name: "@PetMenuBoard"
   Transform {
     Scale {
@@ -10,7 +10,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 9018911021117700934
+  ParentId: 15600559215102569728
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -27,9 +27,9 @@ Objects {
         Overrides {
           Name: "cs:PetStand"
           ObjectReference {
-            SelfId: 15636738135296142780
+            SelfId: 7053548130849482035
             SubObjectId: 533442655076706862
-            InstanceId: 847248007277048120
+            InstanceId: 16322187568445921251
             TemplateId: 12943947732222281349
           }
         }
@@ -57,9 +57,9 @@ Objects {
         Overrides {
           Name: "cs:PetStand"
           ObjectReference {
-            SelfId: 15636738135296142780
+            SelfId: 7053548130849482035
             SubObjectId: 533442655076706862
-            InstanceId: 847248007277048120
+            InstanceId: 16322187568445921251
             TemplateId: 12943947732222281349
           }
         }
@@ -71,7 +71,7 @@ Objects {
   }
 }
 Objects {
-  Id: 847248007277048120
+  Id: 16322187568445921251
   Name: "@PetStand"
   Transform {
     Scale {
@@ -80,7 +80,7 @@ Objects {
       Z: 0.585612476
     }
   }
-  ParentId: 9018911021117700934
+  ParentId: 15600559215102569728
   CameraCollidable {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -137,7 +137,7 @@ Objects {
         }
         Overrides {
           Name: "cs:EggId"
-          String: "Hub"
+          String: "Forest"
         }
       }
     }

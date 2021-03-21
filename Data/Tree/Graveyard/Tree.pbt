@@ -1,6 +1,39 @@
 Name: "Graveyard"
 RootId: 4293257082225003563
 Objects {
+  Id: 11299321951879026473
+  Name: "Pet Corner"
+  Transform {
+    Location {
+      X: 6352.87
+      Y: -1088.32788
+      Z: 667.430298
+    }
+    Rotation {
+      Yaw: -179.999954
+    }
+    Scale {
+      X: 1.3827877
+      Y: 1.3827877
+      Z: 1.3827877
+    }
+  }
+  ParentId: 4293257082225003563
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "Pet Corner_3"
+  }
+}
+Objects {
   Id: 16765078477078614408
   Name: "Ambient audio"
   Transform {
@@ -27,7 +60,7 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Ambient audio_1"
+    FilePartitionName: "Ambient audio_2"
   }
 }
 Objects {

@@ -29,7 +29,7 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Pet Corner"
+    FilePartitionName: "Pet Corner_4"
   }
 }
 Objects {

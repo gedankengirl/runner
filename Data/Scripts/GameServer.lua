@@ -94,7 +94,7 @@ local function _make_inventory(inv_level, equip_level)
     local shape = S.INVENTORY_SHAPE[inv_level]
     assert(shape and shape.width, "inv_level is too high")
     local width = shape.width
-    local grid = Grid.New(width, #shape//width, 100, 100)
+    local grid = Grid.New(width, #shape//width, 120, 120)
     for i=1, #shape do
         local code = shape[i]
         if code == 0 or code > equip_level then

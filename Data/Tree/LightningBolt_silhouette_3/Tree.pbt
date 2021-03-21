@@ -1,7 +1,7 @@
 Name: "LightningBolt_silhouette_3"
-RootId: 8983641273957351497
+RootId: 8752751279303816033
 Objects {
-  Id: 2137163822450512749
+  Id: 16688608239992453964
   Name: "Prism - 3-Sided"
   Transform {
     Location {
@@ -20,12 +20,12 @@ Objects {
       Z: -0.08
     }
   }
-  ParentId: 8983641273957351497
+  ParentId: 8752751279303816033
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
       AssetReference {
-        Id: 14613802976288032229
+        Id: 10184847056121543272
       }
     }
     Overrides {
@@ -34,18 +34,15 @@ Objects {
     }
     Overrides {
       Name: "ma:Shared_BaseMaterial:utile"
-      Float: 1
+      Float: 0.428385466
     }
     Overrides {
       Name: "ma:Shared_BaseMaterial:vtile"
-      Float: 1
+      Float: 0.481217235
     }
     Overrides {
       Name: "ma:Shared_BaseMaterial:color"
       Color {
-        R: 0.417708397
-        G: 0.417708397
-        B: 0.417708397
         A: 1
       }
     }
@@ -75,14 +72,14 @@ Objects {
     }
   }
   InstanceHistory {
-    SelfId: 7936277200351421402
-    SubobjectId: 12959021496801820772
-    InstanceId: 18193526266088711028
-    TemplateId: 1851792044134233516
+    SelfId: 16688608239992453964
+    SubobjectId: 3290330738321692670
+    InstanceId: 10907345231434236569
+    TemplateId: 15904085984438255415
   }
 }
 Objects {
-  Id: 15637108532709760021
+  Id: 5999146116563199193
   Name: "Prism - 3-Sided"
   Transform {
     Location {
@@ -101,12 +98,12 @@ Objects {
       Z: -0.08
     }
   }
-  ParentId: 8983641273957351497
+  ParentId: 8752751279303816033
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
       AssetReference {
-        Id: 14613802976288032229
+        Id: 10184847056121543272
       }
     }
     Overrides {
@@ -115,18 +112,15 @@ Objects {
     }
     Overrides {
       Name: "ma:Shared_BaseMaterial:utile"
-      Float: 1
+      Float: 0.428385466
     }
     Overrides {
       Name: "ma:Shared_BaseMaterial:vtile"
-      Float: 1
+      Float: 0.481217235
     }
     Overrides {
       Name: "ma:Shared_BaseMaterial:color"
       Color {
-        R: 0.417708397
-        G: 0.417708397
-        B: 0.417708397
         A: 1
       }
     }
@@ -156,9 +150,9 @@ Objects {
     }
   }
   InstanceHistory {
-    SelfId: 16673461367213199483
-    SubobjectId: 4220132004551553989
-    InstanceId: 18193526266088711028
-    TemplateId: 1851792044134233516
+    SelfId: 5999146116563199193
+    SubobjectId: 11056756008355842155
+    InstanceId: 10907345231434236569
+    TemplateId: 15904085984438255415
   }
 }
