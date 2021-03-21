@@ -104,7 +104,7 @@ function bitarray.deserialize(str, from)
 end
 
 -------------------------------------------------------------------------------
--- bitarray32
+-- bitvector32
 -------------------------------------------------------------------------------
 local bitvector32 = {}
 function bitvector32.new(data)
@@ -124,8 +124,8 @@ function bitvector32:__newindex(i, v)
     self.data = v and self.data | (1 << bit) or self.data & ~(1 << bit)
 end
 
-
-
+bitarray.bitvec32 = bitvector32
+bitarray.bitvector32 = bitvector32
 -------------------------------------------------------------------------------
 local function _bitarray_test()
     local ba1 = bitarray.new(9, true)
