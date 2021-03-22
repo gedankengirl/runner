@@ -17,6 +17,15 @@ Assets {
   }
 }
 Assets {
+  Id: 9913994307010722851
+  Name: "Flare Billboard"
+  PlatformAssetType: 6
+  PrimaryAsset {
+    AssetType: "BlueprintAssetRef"
+    AssetId: "fxbp_flare_object"
+  }
+}
+Assets {
   Id: 5196377603841433560
   Name: "BG Gradient 001"
   PlatformAssetType: 9

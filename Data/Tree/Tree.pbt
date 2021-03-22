@@ -23,6 +23,7 @@ Objects {
   ChildIds: 12187569197149205462
   ChildIds: 3924873657808812146
   ChildIds: 7553754998792656332
+  ChildIds: 14928620690148562315
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -35,6 +36,278 @@ Objects {
     Value: "mc:ecollisionsetting:forceon"
   }
   Folder {
+  }
+}
+Objects {
+  Id: 14928620690148562315
+  Name: "BoostersStaticContext"
+  Transform {
+    Location {
+      X: -1381.75842
+      Y: -1529.82678
+      Z: 130.665802
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  ChildIds: 16401663127648083011
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  NetworkContext {
+    Type: RuntimeStatic
+  }
+}
+Objects {
+  Id: 16401663127648083011
+  Name: "BoosterPickup-Static"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 14928620690148562315
+  ChildIds: 6672043072771307569
+  ChildIds: 9898156074156781517
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:ResourceTag"
+      String: "Multiplier"
+    }
+    Overrides {
+      Name: "cs:ResourceAmount"
+      Int: 3
+    }
+    Overrides {
+      Name: "cs:RespawnDelay"
+      Float: 3
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Trigger {
+    TeamSettings {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    TriggerShape_v2 {
+      Value: "mc:etriggershape:sphere"
+    }
+  }
+  InstanceHistory {
+    SelfId: 16401663127648083011
+    SubobjectId: 10004856662147233897
+    InstanceId: 5686467612826275223
+    TemplateId: 13437164073840223858
+    WasRoot: true
+  }
+}
+Objects {
+  Id: 9898156074156781517
+  Name: "ClientContext"
+  Transform {
+    Location {
+      Z: 117.236053
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 16401663127648083011
+  ChildIds: 13074032959005541688
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  NetworkContext {
+  }
+}
+Objects {
+  Id: 13074032959005541688
+  Name: "Flare Billboard"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 9898156074156781517
+  UnregisteredParameters {
+    Overrides {
+      Name: "bp:Flare Shape"
+      Int: 8
+    }
+    Overrides {
+      Name: "bp:Emissive Boost"
+      Float: 4
+    }
+    Overrides {
+      Name: "bp:Color Offset A"
+      Float: 0.875366151
+    }
+    Overrides {
+      Name: "bp:Color Offset B"
+      Float: 0.6
+    }
+    Overrides {
+      Name: "bp:Color Offset C"
+      Float: 0.4
+    }
+    Overrides {
+      Name: "bp:Color C"
+      Color {
+        R: 0.715693474
+        B: 0.439656824
+      }
+    }
+    Overrides {
+      Name: "bp:Color B"
+      Color {
+        R: 0.710000038
+        B: 0.437284648
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "bp:Color"
+      Color {
+        R: 0.715693474
+        B: 0.439656824
+      }
+    }
+    Overrides {
+      Name: "bp:Rotation"
+      Float: 0
+    }
+    Overrides {
+      Name: "bp:Auto Rotate"
+      Bool: false
+    }
+    Overrides {
+      Name: "bp:Rotation Rate"
+      Float: -172.526398
+    }
+    Overrides {
+      Name: "bp:Width"
+      Float: 1.3
+    }
+    Overrides {
+      Name: "bp:Height"
+      Float: 1.3
+    }
+    Overrides {
+      Name: "bp:Rotate Texture"
+      Bool: false
+    }
+    Overrides {
+      Name: "bp:Orient To Camera"
+      Bool: true
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 9913994307010722851
+    }
+    TeamSettings {
+    }
+  }
+  InstanceHistory {
+    SelfId: 9615777983767729865
+    SubobjectId: 383085339025727372
+    InstanceId: 4482921410689426743
+    TemplateId: 3815191084439700869
+  }
+}
+Objects {
+  Id: 6672043072771307569
+  Name: "StaticPickup"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 16401663127648083011
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:StaticPickupScheduler"
+      AssetReference {
+        Id: 13344792958351855706
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 16660452335456744765
+    }
+  }
+  InstanceHistory {
+    SelfId: 6672043072771307569
+    SubobjectId: 3878116343035845659
+    InstanceId: 5686467612826275223
+    TemplateId: 13437164073840223858
   }
 }
 Objects {

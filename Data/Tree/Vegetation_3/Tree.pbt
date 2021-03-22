@@ -1076,9 +1076,8 @@ Objects {
     Overrides {
       Name: "ma:Nature_Leaves:color"
       Color {
-        R: 0.927380919
-        G: 1
-        B: 0.428125083
+        R: 0.219682664
+        G: 0.346000075
         A: 1
       }
     }
