@@ -1,4 +1,5 @@
 local DEBUG = true
+local debug = function(...) if DEBUG then print("[D]", ...) end end
 local Maid = _G.req("_Maid")
 local Grid = _G.req("_Grid")
 local Base64 = _G.req("_Base64")
@@ -40,7 +41,7 @@ local INTERACTION_PLANE_HEIGHT = 10 --75
 
 local MOUSE_CLICK_TIMEOUT = 0.3
 local MOUSE_DRAG_DEADTIME = 0.06
-local MOUSE_DRAG_DEADZONE = 2
+local MOUSE_DRAG_DEADZONE = 10 -- 2
 
 local CAMERA_YAW_ROTATION = Rotation.New(0, 0, CAMERA_RELATIVE_YAW)
 local CAMERA_RELATIVE_TRANSFORM = Transform.New(
@@ -134,7 +135,7 @@ end
 local _pet_params = {position=HEAVEN, scale=.8*Vector3.ONE}
 
 function PetAnimator.New(pet_id, pos_idx, player)
-    assert(player and player:IsValid(), CoreDebug.GetStackTrace())
+    assert(player and player:IsValid())
     _pet_params.position = player:GetWorldPosition() + HEAVEN
     local self = {
         -- TODO: defer spawn to 1 per frame
@@ -330,7 +331,7 @@ function Client:_AwaitDownlinkChannel()
                 warn(self.channel .. ", Unknown message:\n" .. data)
             end
         elseif prop == self.pets_chan then
-            local pets = P.PETS.unpack(data)
+            local pets = P.EQIPPED_PETS.unpack(data)
             PetMaster.SetState(pets)
         elseif prop == self.social_chan then
             P.SOCIAL.handle(data)
@@ -346,7 +347,7 @@ function Client:_SetupEventForwarding()
     for _op, protocol in pairs(P.SOCIAL.protocols) do
         local event = protocol.event
         _maid:GiveTask(Events.Connect(event, function(...)
-            print("[SOCIAL DEBUG]", event, ...)
+            debug("[SOCIAL DEBUG]", event, ...)
         end))
     end
 end
@@ -503,7 +504,7 @@ function INVENTORY:Enter(from)
     LOCAL_PLAYER.isVisibleToSelf = false
     self:_StartCamera()
     _show_cursor(true)
-    _maid.highlights = Events.Connect(P.INTERACTION.TileUnderCursorChanged, INVENTORY._OnTileUnderCursorChanged)
+    _maid.highlights_connect = Events.Connect(P.INTERACTION.TileUnderCursorChanged, INVENTORY._OnTileUnderCursorChanged)
 end
 
 function INVENTORY:Exit()
@@ -511,7 +512,9 @@ function INVENTORY:Exit()
     LOCAL_PLAYER.isVisibleToSelf = true
     _show_cursor(false)
     self.isInteractionEnabled = false
-    _maid.highlights = nil
+    _maid.highlights_connect = nil
+    _maid.grid._highlights:_clear()
+
 end
 
 function INVENTORY:Update(dt)
@@ -660,12 +663,28 @@ function INVENTORY:HandleRightMouseDown()
     _show_cursor(false)
 end
 
+local function _notify_server(type, dst_cell, src_cell, other_cell)
+    local function p(cell)
+        return cell and {cell.row, cell.col, cell.actor and cell.actor.id}
+    end
+    REvents.BroadcastToServer(P.C2S.TransmitInventoryModifications, type, p(dst_cell), p(src_cell), p(other_cell))
+end
+
 function INVENTORY:HandleRightMouseUp()
     Events.Broadcast(P.INTERACTION.CameraScrollingEnd)
     -- A delete attempt can be made if you are not currently dragging an actor, and if you are allowed to interact with the cell beneath.
     if self.isValidRightClick and not self.attachedActor then
         if self.cellUnderCursor and self.cellUnderCursor.actor then
-            Events.Broadcast(P.INTERACTION.AttemptDelete, self.cellUnderCursor)
+            local cell, actor = self.cellUnderCursor, self.cellUnderCursor.actor
+            REvents.Broadcast(P.INTERACTION.AttemptDelete, cell)
+            REvents.Broadcast(P.CLIENT.POPUP, {
+                text = string.format("Do you want to delete %s?", S.PetDb:FullPetNameById(actor.id)),
+                yes = function()
+                    _notify_server(P.MOVE_OUTCOME.DELETE, cell)
+                    cell.actor = nil
+                    actor:Destroy()
+                end,
+            })
         end
     end
     self.isValidRightClick = nil
@@ -693,12 +712,7 @@ function INVENTORY:HandleLeftMouseDown()
     end
 end
 
-local function _notify_server(type, dst_cell, src_cell, other_cell)
-    local function p(cell)
-        return cell and {cell.row, cell.col, cell.actor and cell.actor.id}
-    end
-    REvents.BroadcastToServer(P.C2S.TransmitInventoryModifications, type, p(dst_cell), p(src_cell), p(other_cell))
-end
+
 
 function INVENTORY:HandleLeftMouseUp()
     if not self.isInteractionEnabled then return end
@@ -791,10 +805,10 @@ end
 
 -- Monkey patching Grid for highlights
 function INVENTORY._OnTileUnderCursorChanged(grid, cursor_cell, move_outcome)
-    print(pp{cursor_cell, move_outcome, time()})
+    debug(pp{"#", cursor_cell, move_outcome or {}, time()})
     local hl = grid._highlights
     hl:_clear()
-    if move_outcome then
+    if move_outcome and INVENTORY.isInteractionEnabled then
         local type, dst_cell, src_cell, other_cell = table.unpack(move_outcome)
         assert(not dst_cell or dst_cell == cursor_cell)
         if not cursor_cell or cursor_cell.type ~= "Cell" or cursor_cell:IsNil() or not type then return end
@@ -842,8 +856,10 @@ do -- main
     ISM:GoToState(INGAME)
 
     -- DEBUG:
-    for k, v in pairs(P.INTERACTION) do
-        -- Events.Connect(v, function (...) print(pp{k, ...}) end)
+    if DEBUG then
+        for k, v in pairs(P.INTERACTION) do
+            Events.Connect(v, function (...) debug(pp{k, ...}) end)
+        end
     end
 
 end

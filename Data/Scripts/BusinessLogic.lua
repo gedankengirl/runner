@@ -1,3 +1,4 @@
+local DEBUG = Environment.IsPreview()
 --[[ Game Rules
 * Speed Coin (SC) is the currency of the game.
 * You can buy eggs for SC. You hatching pets from eggs.
@@ -183,8 +184,9 @@ local function addCoins(player, multiplier)
     local n =  (BASE_CPS + rebirth + petsBonus) * multiplier
     local coins = n + (player:GetResource(COIN_KEY) or _KEY_DEFAULTS[COIN_KEY])
     _setSpeed(player, coins)
-    -- DEBUG:
-    print(string.format("%s %d %d %d", player.name, n//1, coins//1, player.maxWalkSpeed//1))
+    if DEBUG then
+        print(string.format("%s %d %d %d", player.name, n//1, coins//1, player.maxWalkSpeed//1))
+    end
 end
 
 local function addGems(player, ng)
@@ -222,7 +224,9 @@ local function subtractCoins(player, price)
         return false, "Insufficient Speed"
     end
     -- DEBUG:
-    print(string.format("%s %d %d", player.name, coins//1, player.maxWalkSpeed//1))
+    if DEBUG then
+        print(string.format("%s %d %d", player.name, coins//1, player.maxWalkSpeed//1))
+    end
 end
 
 local function onSpeedAbilityClick(ability)

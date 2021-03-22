@@ -161,6 +161,7 @@ function PlayerConnection:OnEOF()
     -- PASS, see EquipmentServer
 end
 
+-- ask for rebirth
 function PlayerConnection:OnAFR()
     local ok, new_rebirth = B.doRebirth(self.player)
     if ok then
@@ -169,6 +170,7 @@ function PlayerConnection:OnAFR()
     print(pp{"on AFR", self.player.name})
 end
 
+-- egg hatch
 function PlayerConnection:OnTHE(egg)
     local ok, pet_id, cell = B.PurchaseEgg(self.player, egg, self.inventory)
     if ok then
@@ -199,6 +201,7 @@ function PlayerConnection:OnGIR()
     print(pp{"on GIR", self.player.name})
 end
 
+-- reset request
 function PlayerConnection:OnGRR()
     B.ResetGame(self.player)
     self.inventory = _make_inventory()
@@ -206,6 +209,7 @@ function PlayerConnection:OnGRR()
     print(pp{"on GRR", self.player.name})
 end
 
+-- inventory modification
 function PlayerConnection:OnTIM(...)
     warn(pp{"on TIM", ..., self.player.name})
     -- TODO: use checks on client too
@@ -225,6 +229,8 @@ function PlayerConnection:OnTIM(...)
         if ok then
             REvents.Broadcast(P.SOCIAL.MERGE.event, self.player.id, new_pet_id)
         end
+    elseif type == P.MOVE_OUTCOME.DELETE then
+        ok = self.inventory:Delete(dst_cell)
     else warn(type)
     end
     if ok then warn(pp{"OK", ...}) end
@@ -294,7 +300,7 @@ function EquippedPets.OnPetsChanged()
     for player, connection in pairs(Server.playerConnections) do
         if player and player:IsValid() and connection and connection.inventory then
             local pets = B.GetEqippedPets(connection.inventory)
-            out[#out+1] = P.PETS.pack(player.id, pets)
+            out[#out+1] = P.EQIPPED_PETS.pack(player.id, pets)
         end
         EquippedPets._state = out
     end
@@ -303,7 +309,7 @@ end
 function EquippedPets.tx()
     if #EquippedPets._state <= 0 then return end
     local state = EquippedPets._state
-    state = table.move(state, 1, #state, 2, {P.PETS.op})
+    state = table.move(state, 1, #state, 2, {P.EQIPPED_PETS.op})
     state[#state+1] = _nonce(EquippedPets)
     state = B64.encode(table.concat(state))
     _post_to_channel(PET_CHAN, state)
