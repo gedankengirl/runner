@@ -174,13 +174,10 @@ Objects {
   }
 }
 Objects {
-  Id: 15462755105733782301
-  Name: "Boosters"
+  Id: 18206553643601552712
+  Name: "BoosterStaticContext"
   Transform {
     Location {
-      X: 295.776855
-      Y: 559.225586
-      Z: 164.996094
     }
     Rotation {
     }
@@ -191,6 +188,7 @@ Objects {
     }
   }
   ParentId: 15346583032969552003
+  ChildIds: 7840506983982606435
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -200,9 +198,59 @@ Objects {
   CameraCollidable {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "Boosters"
+  NetworkContext {
+    Type: RuntimeStatic
+  }
+}
+Objects {
+  Id: 7840506983982606435
+  Name: "BoosterPickup-Static"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 18206553643601552712
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 10004856662147233897
+      value {
+        Overrides {
+          Name: "Name"
+          String: "BoosterPickup-Static"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            Z: 113.268829
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 13437164073840223858
+    }
   }
 }
 Objects {

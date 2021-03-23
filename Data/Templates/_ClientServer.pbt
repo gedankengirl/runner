@@ -368,6 +368,7 @@ Assets {
           }
         }
         ParentId: 2415398450263118494
+        ChildIds: 9711971517685216634
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -379,6 +380,47 @@ Assets {
         }
         Folder {
           IsGroup: true
+        }
+      }
+      Objects {
+        Id: 9711971517685216634
+        Name: "\"8-Bit Funland\" Music Construction Kit (Sections) 01"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 11557133986988323875
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Blueprint {
+          BlueprintAsset {
+            Id: 7427369144061046377
+          }
+          TeamSettings {
+          }
+          AudioBP {
+            AutoPlay: true
+            Repeat: true
+            Volume: 1
+            Falloff: 100
+            Radius: 2000
+            IsSpatializationEnabled: true
+            IsAttenuationEnabled: true
+          }
         }
       }
       Objects {
@@ -1721,6 +1763,15 @@ Assets {
           IsFilePartition: true
           FilePartitionName: "DOWNLINK"
         }
+      }
+    }
+    Assets {
+      Id: 7427369144061046377
+      Name: "\"8-Bit Funland\" Music Construction Kit (Sections) 01"
+      PlatformAssetType: 10
+      PrimaryAsset {
+        AssetType: "AudioBlueprintAssetRef"
+        AssetId: "abp_8bit_funland_sections_kit_ref"
       }
     }
     Assets {

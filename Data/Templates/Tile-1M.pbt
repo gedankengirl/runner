@@ -75,7 +75,16 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 2722883864485145715
+              Id: 8165143622034885339
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.00174530037
+              G: 0.0510417633
+              B: 0.0404946618
+              A: 1
             }
           }
         }
@@ -199,6 +208,15 @@ Assets {
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
         AssetId: "sm_plane_1m_001"
+      }
+    }
+    Assets {
+      Id: 8165143622034885339
+      Name: "Carbon Fiber 01"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_carbon-fiber_001"
       }
     }
     PrimaryAssetId {

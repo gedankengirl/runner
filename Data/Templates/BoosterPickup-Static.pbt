@@ -1,13 +1,13 @@
 Assets {
   Id: 13437164073840223858
-  Name: "StaticPickup-Scheduled"
+  Name: "BoosterPickup-Static"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {
       RootId: 10004856662147233897
       Objects {
         Id: 10004856662147233897
-        Name: "StaticPickup-Scheduled"
+        Name: "BoosterPickup-Static"
         Transform {
           Scale {
             X: 1
@@ -15,7 +15,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 11797294740091652029
+        ParentId: 4781671109827199097
         ChildIds: 3878116343035845659
         ChildIds: 14847675545254908902
         UnregisteredParameters {
@@ -30,6 +30,12 @@ Assets {
           Overrides {
             Name: "cs:RespawnDelay"
             Float: 3
+          }
+          Overrides {
+            Name: "cs:GeoTemplate"
+            AssetReference {
+              Id: 11123662174602906545
+            }
           }
         }
         Collidable_v2 {
