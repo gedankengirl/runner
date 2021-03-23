@@ -45,6 +45,7 @@ end
 _hide_panel()
 
 local function _do_show_popup(params)
+    REvents.Broadcast(P.CLIENT.MODAL, P.MODAL_ARG.OPEN)
     TEXT.text = params.text or "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
     assert(params.yes and not params.ok or params.ok and not params.yes, "'yes' and 'ok' are mutually exclusive")
     local is_yes_no = params.yes

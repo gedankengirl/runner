@@ -794,7 +794,7 @@ local function lua2doc(_u27,_u28)
           end
         end
         for i=ii,ii+length-1 do
-          res[i] = value(sorted[i][2],key(i),...)
+          res[i] = value((sorted[i] or {})[2],key(i),...)
         end
         render_nonarray_part(ii+length,sorted,res,...)
         return tag+tabled(res)

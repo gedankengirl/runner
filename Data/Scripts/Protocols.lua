@@ -61,10 +61,9 @@ local PROTOCOL_INVENTORY do
     PROTOCOL_INVENTORY = {op=op, pack=pack, unpack=unpack}
 end
 
-
-local PROTOCOL_PETS do
+local PROTOCOL_EQUIPPED_PETS do
     local op, fmt = "!", "z s1"
-    -- NOTE: packs 1, unpacks all
+    -- NOTE: packs for 1 player, unpacks for all players
     local function pack(player_id, pets)
         return string.pack(fmt, player_id, string.char(table.unpack(pets)))
     end
@@ -80,7 +79,7 @@ local PROTOCOL_PETS do
             return out
         end
     end
-    PROTOCOL_PETS = {op=op, pack=pack, unpack=unpack}
+    PROTOCOL_EQUIPPED_PETS = {op=op, pack=pack, unpack=unpack}
 end
 
 
@@ -92,7 +91,7 @@ Protocols.S2C = {
 }
 
 -- S2C pets channel protocol
-Protocols.PETS = PROTOCOL_PETS
+Protocols.EQIPPED_PETS = PROTOCOL_EQUIPPED_PETS
 
 -- S2CC social channel protosols
 local SOCIAL do
@@ -191,6 +190,7 @@ Protocols.MOVE_OUTCOME = {
     PUSHOUT = "Pushout",
     SWAP = "Swap",
     MERGE = "Merge",
+    DELETE = "Delete"
 }
 
 -- internal client events

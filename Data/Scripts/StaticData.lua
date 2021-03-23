@@ -236,6 +236,20 @@ local FancyPetNamesByName = {
     Fairy = "Tricksy Pixie",
 }
 
+function PetDb:FullPetNameById(id)
+    local n, upgrade = self:GetUpgradeStatus(id)
+    local _, rarity = self:GetRarity(id)
+    local pet_name = self:GetName(id)
+    rarity = string.lower(rarity.name)
+    upgrade = string.lower(upgrade)
+    local fancy_name = FancyPetNamesByName[pet_name] or pet_name
+    local name = fancy_name or pet_name
+    if n == 1 then
+        return string.format("[%s] *%s*", rarity, name)
+    end
+    return string.format("[%s] [%s] *%s*", rarity, upgrade, name)
+end
+
 -- NOTE: Rebirth hard cap = 31 (1.86B)
 local AreaLvlReq = {
     Hub       = 0,  -- 0

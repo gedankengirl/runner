@@ -1,3 +1,4 @@
+local DEBUG = Environment.IsPreview()
 --[[ Game Rules
 * Speed Coin (SC) is the currency of the game.
 * You can buy eggs for SC. You hatching pets from eggs.
@@ -13,6 +14,7 @@
 -- constants
 local pp = _G.req("_Luapp").pp
 local S = _G.req("StaticData")
+local bitvec32 = _G.req("_Bitarray").bitvec32
 local BASE_SPEED = 100
 local MAX_MULTIPLIER = 25
 local BASE_CPS = 3
@@ -20,19 +22,27 @@ local FIRST_REBIRTH = 1000
 local REBIRTH_EXP_RATE = 1.618
 local COIN_TO_SPEED_RATE = 1.001
 local COIN_CAP = 2E9//1
+local LIFETIME_COINS_KEY_DIV = 4096.0
+
 local COIN_KEY = "SpeedCoin"
+local LIFETIME_COINS_KEY = "LivetimeCoins"
+local GEM_KEY = "Gems"
 local REBIRTH_KEY = "Rebirth"
 local INVENTORY_KEY = "Inventory"
 local EQUIP_LVL_KEY = "EquipLVL"
 local INVENTORY_LVL_KEY = "InventoryLVL"
+local BITSTATE_KEY = "BitState"
 local PET_BONUS_KEY = "PetBonus" -- not persist
 
 local _KEY_DEFAULTS = {
     [COIN_KEY] = 1,
+    [LIFETIME_COINS_KEY] = 0.1,
+    [GEM_KEY] = 0,
     [REBIRTH_KEY] = 0,
     [INVENTORY_KEY] = "",
     [EQUIP_LVL_KEY] = 1,
     [INVENTORY_LVL_KEY] = 1,
+    [BITSTATE_KEY] = 0,
     [PET_BONUS_KEY] = 0,
 }
 
@@ -135,7 +145,7 @@ end
 --------------------
 --[[ DEBUG: prints rebirth table to events log
 print("INFO: rebirth table:")
-for i=0, 35 do
+for i=0, 31 do
     print("  rebirth", i + 1, "needs:", formatNumber(neededForRebirth(i)))
 end
 --]]
@@ -158,6 +168,13 @@ local function doRebirth(player)
     return false, needed, has, rebirth
 end
 
+local function addLifetimeCoins(player, n)
+    if n <= 0 then return end
+    local data = Storage.GetPlayerData(player)
+    local coins_div = data[LIFETIME_COINS_KEY] or _KEY_DEFAULTS[LIFETIME_COINS_KEY]
+    BusinessLogic.SaveKey(player, LIFETIME_COINS_KEY, coins_div + n/LIFETIME_COINS_KEY_DIV)
+end
+
 local function addCoins(player, multiplier)
     assert(Environment.IsServer())
     assert(player and player:IsA('Player'))
@@ -167,13 +184,36 @@ local function addCoins(player, multiplier)
     local n =  (BASE_CPS + rebirth + petsBonus) * multiplier
     local coins = n + (player:GetResource(COIN_KEY) or _KEY_DEFAULTS[COIN_KEY])
     _setSpeed(player, coins)
-    -- DEBUG:
-    print(string.format("%s %d %d %d", player.name, n//1, coins//1, player.maxWalkSpeed//1))
+    if DEBUG then
+        print(string.format("%s %d %d %d", player.name, n//1, coins//1, player.maxWalkSpeed//1))
+    end
+end
+
+local function addGems(player, ng)
+    if ng <= 0 then return end
+    assert(Environment.IsServer())
+    assert(player and player:IsA('Player'))
+    local gems = ng + player:GetResource(GEM_KEY) or _KEY_DEFAULTS[GEM_KEY]
+    player:SetResource(GEM_KEY, gems)
+end
+
+local function subtractGems(player, price)
+    assert(Environment.IsServer())
+    assert(price >= 0)
+    assert(player and player:IsA('Player'))
+    local gems = player:GetResource(GEM_KEY) or _KEY_DEFAULTS[GEM_KEY]
+    if price <= gems then
+        gems = gems - price
+        player:SetResource(GEM_KEY, gems)
+        return true
+    else
+        return false, "insufficient funds"
+    end
 end
 
 local function subtractCoins(player, price)
-    assert(price >= 0)
     assert(Environment.IsServer())
+    assert(price >= 0)
     assert(player and player:IsA('Player'))
     local coins = player:GetResource(COIN_KEY) or _KEY_DEFAULTS[COIN_KEY]
     if price <= coins then
@@ -184,7 +224,9 @@ local function subtractCoins(player, price)
         return false, "Insufficient Speed"
     end
     -- DEBUG:
-    print(string.format("%s %d %d", player.name, coins//1, player.maxWalkSpeed//1))
+    if DEBUG then
+        print(string.format("%s %d %d", player.name, coins//1, player.maxWalkSpeed//1))
+    end
 end
 
 local function onSpeedAbilityClick(ability)
@@ -207,7 +249,12 @@ function BusinessLogic.LoadSave(player)
 end
 
 local _retry_save = Trampoline.New(function(args)
-    return Storage.SetPlayerData(table.unpack(args))
+    local player, data = args[1], args[2]
+    if player and  player:IsValid() then
+        return Storage.SetPlayerData(player, data)
+    end
+    warn("ALERT: data loss\n" + pp(data))
+    return true
 end)
 
 function BusinessLogic.SaveKey(player, key, datum)
@@ -308,6 +355,8 @@ end
 BusinessLogic.formatNumber = formatNumber
 BusinessLogic.onClick = onSpeedAbilityClick
 BusinessLogic.addCoins = addCoins
+BusinessLogic.addGems = addGems
+BusinessLogic.subtractGems = subtractGems
 BusinessLogic.isRebirthPossible = isRebirthPossible
 BusinessLogic.doRebirth = doRebirth
 BusinessLogic.immobilizePlayer = immobilizePlayer

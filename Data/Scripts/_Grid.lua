@@ -145,6 +145,28 @@ function Grid:serialize(exploded)
     return exploded and out or table.concat(out)
 end
 
+function Grid:__tostring()
+    local out = {}
+    out[#out+1] = string.format("width=%d height=%d dimx=%d dimy=%d\n", self.w, self.h, self.dimx, self.dimy)
+    local rmax, cmax = self.h-1, self.w-1
+    for row = 0, rmax do
+        for col=1, cmax do
+            local cell = self:at(row, col)
+            if cell == CELL_NIL then
+                out[#out+1] = "| |"
+            elseif cell.actor then
+                out[#out+1]=string.format("%.3d", cell.actor.id)
+            else
+                out[#out+1] = "[_]"
+            end
+            if col == cmax then
+                out[#out+1] = "\n"
+            end
+        end
+    end
+    return table.concat(out)
+end
+
 function Grid.deserialize(s, from, to)
     from, to = from or 1, to or #s
     assert(string.sub(s, from, from + #FOURCC - 1) == FOURCC)
@@ -274,6 +296,15 @@ function Grid:Merge3(dest, src, other, factory, check)
     if ok and not check then
         local new_actor = assert(factory())
         dloc.actor, sloc.actor, oloc.actor = new_actor, nil, nil
+    end
+    return ok
+end
+
+function Grid:Delete(src, check)
+    assert(src, CoreDebug.GetStackTrace())
+    local ok, sloc, _sactor = self:_move_precheck(table.unpack(src))
+    if ok and not check then
+        sloc.actor = nil
     end
     return ok
 end

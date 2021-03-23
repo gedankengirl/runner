@@ -104,6 +104,29 @@ function bitarray.deserialize(str, from)
 end
 
 -------------------------------------------------------------------------------
+-- bitvector32
+-------------------------------------------------------------------------------
+local bitvector32 = {}
+function bitvector32.new(data)
+    return setmetatable({data=data and (data & 0xFFFFFFFF) or 0}, bitvector32)
+end
+
+-- 1 based indices
+function bitvector32:__index(i)
+    assert(i > 0 and i <= 32)
+    local bit = i - 1
+    return self.data & (1 << bit) ~= 0
+end
+
+function bitvector32:__newindex(i, v)
+    assert(i > 0 and i <= 32)
+    local bit = i - 1
+    self.data = v and self.data | (1 << bit) or self.data & ~(1 << bit)
+end
+
+bitarray.bitvec32 = bitvector32
+bitarray.bitvector32 = bitvector32
+-------------------------------------------------------------------------------
 local function _bitarray_test()
     local ba1 = bitarray.new(9, true)
     assert(ba1.size() == 9)
@@ -169,12 +192,42 @@ local function _bitarray_test()
     ba71:set(2, nil)
     ba72:set(2, nil)
     assert(ba71:eq(ba72))
-
     --
     print("bitarray -- ok")
-
- end
-
+end
 _bitarray_test()
 
+local function _bitvector32_test()
+    local bv = bitvector32.new()
+    assert(not bv[1])
+    bv[1] = 1
+    assert(bv[1])
+    assert(not bv[32])
+    bv[32] = 1
+    assert(bv[32])
+    print(bv.data)
+
+    local bv2 = bitvector32.new(4294967295)
+    for i = 1,32  do
+        print(bv2[i] and "1" or "0")
+    end
+
+    if CoreDebug and Environment.IsServer() then
+        local bv3 = bitvector32.new(-1)
+        local PLAYER = Game.GetPlayers()[1]
+        PLAYER:SetResource("@@@", bv3.data)
+        local bv4 = bitvector32.new(PLAYER:GetResource("@@@"))
+        assert(bv3.data == bv4.data)
+        local pdata = Storage.GetPlayerData(PLAYER)
+        if pdata["@@@"] then
+            local bv5 = bitvector32.new(pdata["@@@"])
+            assert(bv5.data == bv3.data)
+        else
+            pdata["@@@"] = bv3.data
+            Storage.SetPlayerData(PLAYER, pdata)
+        end
+    end
+    print("bitvector32 -- ok")
+end
+-- _bitvector32_test()
 return bitarray
