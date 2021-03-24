@@ -138,8 +138,8 @@ function PlayerConnection.New(player)
     local playerData = B.LoadSave(player)
     local saved_inventory = playerData[B.INVENTORY_KEY]
     local inventory = saved_inventory and P.S2C.INVENTORY.unpack(saved_inventory, Grid.deserialize)
-        -- or _make_inventory()
-        or _make_debug_inventory(12, 3) -- DEBUG: inventory[1,12] equip [1,3]
+        or _make_inventory()
+        -- or _make_debug_inventory(12, 3) -- DEBUG: inventory[1,12] equip [1,3]
     local self = setmetatable({
         _maid = Maid.New(),
         player = player,
