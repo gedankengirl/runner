@@ -202,7 +202,7 @@ local PetDb, EggDb do
     function PetDb:CanUpgrade(id1, id2)
         local u1 = self:GetUpgradeStatus(id1)
         local rec = self[id1]
-        return u1 ~= UPGRADE.MAX and (not id2 or id1 == id2), rec[kNextUpgradeId] or id1+1
+        return u1 < UPGRADE.MAX and (not id2 or id1 == id2), rec[kNextUpgradeId] or id1+1
     end
 
     -- add id by name
@@ -414,12 +414,15 @@ INVENTORY_SHAPE[11] = {
     1,1,1,1,1,1,1,1,1,1,1,1,1,
     1,1,1,1,1,1,1,1,1,1,1,1,1,
     1,1,1,1,1,1,1,1,1,1,1,1,1,
+    1,1,1,1,1,1,1,1,1,1,1,1,1,
 }
 -- 146+2 13x13
 INVENTORY_SHAPE[12] = {
     width=13,
     0,0,0,0,2,1,1,1,3,0,0,0,0,
     0,0,0,0,0,0,0,0,0,0,0,0,0,
+    1,1,1,1,1,1,1,1,1,1,1,1,1,
+    1,1,1,1,1,1,1,1,1,1,1,1,1,
     1,1,1,1,1,1,1,1,1,1,1,1,1,
     1,1,1,1,1,1,1,1,1,1,1,1,1,
     1,1,1,1,1,1,1,1,1,1,1,1,1,
