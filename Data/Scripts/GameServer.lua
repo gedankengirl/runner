@@ -39,14 +39,18 @@ end
 
 local DOWNLINK, CHANNELS, IN_USE, SOCIAL, PET_CHAN do
     DOWNLINK = script:GetCustomProperty("DOWNLINK"):WaitForObject()
-    CHANNELS= DOWNLINK:GetCustomProperties()
-    for k, _ in pairs(CHANNELS) do
+    local chans = DOWNLINK:GetCustomProperties()
+    CHANNELS = {}
+    for k, _ in pairs(chans) do
         if type(k) == 'string' then
             CHANNELS[#CHANNELS+1] = k
-            CHANNELS[k] = nil
         end
     end
-    assert(#CHANNELS == 16 + 2, #CHANNELS)
+    if #CHANNELS ~= 16 + 2 then
+        warn(pp(CHANNELS))
+        warn(pp(chans))
+        error("wrong number of channels")
+    end
     table.sort(CHANNELS, function(a, b) return tonumber(a:sub(2)) < tonumber(b:sub(2)) end)
     IN_USE = Bitarray.new(#CHANNELS)
     SOCIAL = CHANNELS[IN_USE:swap(#CHANNELS)]
@@ -94,7 +98,7 @@ local function _make_inventory(inv_level, equip_level)
     local shape = S.INVENTORY_SHAPE[inv_level]
     assert(shape and shape.width, "inv_level is too high")
     local width = shape.width
-    local grid = Grid.New(width, #shape//width, 120, 120)
+    local grid = Grid.New(width, #shape//width, 125, 125)
     for i=1, #shape do
         local code = shape[i]
         if code == 0 or code > equip_level then
@@ -110,9 +114,17 @@ local function _make_debug_inventory(inv_level, equip_level)
     for i = 1, grid.w*grid.h do
         local cell = grid:at(i)
         if not cell:IsNil() and cell.row ~= 0 then
-            cell.actor = i%3 == 0 and {id = 6} or nil or {id = 11}
+            cell.actor = i%11 == 0 and {id = 26} or nil
         end
     end
+    local eq = grid:at(0, grid.w//2)
+        if not eq.actor then
+            eq.actor = {id = 26}
+        end
+        local last = grid:at(grid.w*grid.h)
+        if not last.actor then
+            last.actor = {id = 26}
+        end
     return grid
 end
 
@@ -126,8 +138,8 @@ function PlayerConnection.New(player)
     local playerData = B.LoadSave(player)
     local saved_inventory = playerData[B.INVENTORY_KEY]
     local inventory = saved_inventory and P.S2C.INVENTORY.unpack(saved_inventory, Grid.deserialize)
-        or _make_inventory()
-        -- or _make_debug_inventory(1, 1) -- DEBUG:
+        -- or _make_inventory()
+        or _make_debug_inventory(12, 3) -- DEBUG: inventory[1,12] equip [1,3]
     local self = setmetatable({
         _maid = Maid.New(),
         player = player,
@@ -242,6 +254,7 @@ function PlayerConnection:OnTIM(...)
         if Environment.IsPreview() then
             Task.Wait() -- NOTE: seems like in editor Server event fires the same frame
         end
+        warn(string.format("inventory out of sinc, reseting"))
         self:OnGIR() -- reset client's inventory to server version
     end
     -- DEBUG:

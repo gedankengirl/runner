@@ -56,7 +56,7 @@ local function _spawnUpdate(self, update)
         while true do
             local dt = Task.Wait()
             local ok, m = pcall(update, self, dt)
-            if not ok then warn(m) end
+            if not ok then warn(string.format("result:%q message:%q", ok, m)) end
         end
     end)
 end
