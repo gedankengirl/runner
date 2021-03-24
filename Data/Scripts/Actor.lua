@@ -23,6 +23,10 @@ function Actor.New(pet_id, homeCell)
     return self
 end
 
+function Actor:__tostring()
+    return string.format("Actor{id=%d}@%s", self.id, self.homeCell)
+end
+
 function Actor:GetHomeCell()
     return self.homeCell
 end
@@ -78,7 +82,8 @@ function Actor:CanUpgrade(another)
 end
 
 function Actor:GetActivationOutcome()
-    -- TODO: anything?
+    -- TODO: events with actor info
+    -- print("GetActivationOutcome", self)
     return nil
 end
 
