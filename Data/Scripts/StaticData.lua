@@ -13,14 +13,14 @@ local UPGRADE = {
     EMERALD = 4,
     RUBY = 5,
     DARK = 6,
-    PERLECENT = 7
+    PEARLESCENT = 7
 }
 
 -- limit max upgrade
 UPGRADE.MAX = UPGRADE.DIAMOND
 
 local UPGRADE_NAMES = {
- "", "Golden", "Diamond", "Emerald", "Ruby", "Dark", "Perlecent"
+ "", "Golden", "Diamond", "Emerald", "Ruby", "Dark", "Pearlescent"
 }
 
 local RARITY = {

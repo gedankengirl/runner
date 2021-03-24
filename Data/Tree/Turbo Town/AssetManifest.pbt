@@ -512,15 +512,6 @@ Assets {
   }
 }
 Assets {
-  Id: 15978286784744689084
-  Name: "Play Bold"
-  PlatformAssetType: 28
-  PrimaryAsset {
-    AssetType: "FontAssetRef"
-    AssetId: "PlayBold_ref"
-  }
-}
-Assets {
   Id: 15851271444363751188
   Name: "Whitebox Window Insert - Basic Frame"
   PlatformAssetType: 1

@@ -1,37 +1,8 @@
 Name: "UI"
 RootId: 4963320541580283836
 Objects {
-  Id: 9264143757617120103
-  Name: "Controls Reference-Inventory"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 4963320541580283836
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:forceoff"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "Controls Reference-Inventory"
-  }
-}
-Objects {
   Id: 18097477410966627507
-  Name: "Controls Reference-Field"
+  Name: "Controls Reference"
   Transform {
     Location {
     }
@@ -55,7 +26,7 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Controls Reference-Field"
+    FilePartitionName: "Controls Reference"
   }
 }
 Objects {

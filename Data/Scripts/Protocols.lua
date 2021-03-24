@@ -202,6 +202,7 @@ Protocols.CLIENT = {
     SHOP_INTERACTED = "%ShopInteracted",
     CAN_BUY_EGG = "%CanBuyEgg",
     LEAVE_SHOP = "%LeaveShop",
+    INVENTORY_USER_BINDING = "%InventoryUserBinding"
 }
 
 Protocols.MODAL_ARG = {

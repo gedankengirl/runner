@@ -15,8 +15,10 @@ Assets {
             Z: 3.12436604
           }
         }
-        ParentId: 4781671109827199097
-        ChildIds: 15565738699519683145
+        ParentId: 6715173734297073134
+        ChildIds: 11877145807508158947
+        ChildIds: 6302588642069640755
+        ChildIds: 4462911195346280531
         ChildIds: 5352557490431415436
         ChildIds: 1810618377831597046
         UnregisteredParameters {
@@ -48,12 +50,11 @@ Assets {
         }
       }
       Objects {
-        Id: 15565738699519683145
-        Name: "Wedge - Corner-Aligned"
+        Id: 11877145807508158947
+        Name: "Wedge - Polished"
         Transform {
           Location {
-            X: -52.1286621
-            Y: -57.5899658
+            Y: 43.9445419
             Z: -85.1776581
           }
           Rotation {
@@ -74,14 +75,149 @@ Assets {
             }
           }
           Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              G: 0.416092694
+              B: 0.61
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 1
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 1
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 3322603125244548472
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          StaticMesh {
+            Physics {
+              Mass: 100
+              LinearDamping: 0.01
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 6302588642069640755
+        Name: "Wedge - Polished"
+        Transform {
+          Location {
+            Y: 40.9320526
+            Z: -84.4241791
+          }
+          Rotation {
+            Yaw: 180
+            Roll: -1
+          }
+          Scale {
+            X: 1.19577801
+            Y: 2.1
+            Z: 1
+          }
+        }
+        ParentId: 7139972749460444073
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 90264950113277889
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 1
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 1
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 3322603125244548472
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          StaticMesh {
+            Physics {
+              Mass: 100
+              LinearDamping: 0.01
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 4462911195346280531
+        Name: "Cube - Rounded"
+        Transform {
+          Location {
+            Y: 40.1944046
+            Z: -84.27
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1.37562501
+            Y: 2.16017747
+            Z: 0.0660560951
+          }
+        }
+        ParentId: 7139972749460444073
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 90264950113277889
+            }
+          }
+          Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
             Bool: false
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              G: 0.416092694
-              B: 0.61
+              R: 1
+              G: 1
+              B: 1
               A: 1
             }
           }
@@ -93,17 +229,16 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:forceon"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         CoreMesh {
           MeshAsset {
-            Id: 15058687245682022704
+            Id: 10397718742664464874
           }
           Teams {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          InteractWithTriggers: true
           StaticMesh {
             Physics {
               Mass: 100
@@ -117,7 +252,7 @@ Assets {
         Name: "Group"
         Transform {
           Location {
-            X: -42.0072708
+            X: -41
             Y: 55.9013405
             Z: -57.1962814
           }
@@ -599,12 +734,12 @@ Assets {
       }
     }
     Assets {
-      Id: 15058687245682022704
-      Name: "Wedge - Corner-Aligned"
+      Id: 3322603125244548472
+      Name: "Wedge - Polished"
       PlatformAssetType: 1
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_wedge_002"
+        AssetId: "sm_wedge_hq_001"
       }
     }
     Assets {
@@ -614,6 +749,24 @@ Assets {
       PrimaryAsset {
         AssetType: "MaterialAssetRef"
         AssetId: "mi_scf_rubber_panels_003_uv"
+      }
+    }
+    Assets {
+      Id: 90264950113277889
+      Name: "Wood Raw"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_wood_raw_001_uv"
+      }
+    }
+    Assets {
+      Id: 10397718742664464874
+      Name: "Cube - Rounded"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_cube_rounded_002"
       }
     }
     Assets {

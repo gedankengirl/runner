@@ -6,7 +6,14 @@ local RESOURCE_TAG = TRIGGER:GetCustomProperty("ResourceTag")
 local RESOURCE_AMOUNT = TRIGGER:GetCustomProperty("ResourceAmount")
 local TEMPLATE = assert(TRIGGER.sourceTemplateId, "template must not be deinstantiated")
 local GEO_TEMPLATE = TRIGGER:GetCustomProperty("GeoTemplate")
+local GEO_DUMMY = TRIGGER:GetCustomProperty("GeoDummy"):WaitForObject()
+
 local REvents = _G.req("_ReliableEvents")
+local CURRENT_SCALE = Vector3.ONE
+
+if CURRENT_SCALE == Vector3.ONE*3 then
+    print("Current scale of booster pickups is 3")
+end
 
 if Environment.IsPreview() then
     local context = TRIGGER:FindAncestorByType("NetworkContext")
@@ -14,7 +21,8 @@ if Environment.IsPreview() then
 end
 
 if Environment.IsClient() then
-    World.SpawnAsset(GEO_TEMPLATE, {parent = TRIGGER, scale = Vector3.ONE *3})
+    GEO_DUMMY:Destroy()
+    World.SpawnAsset(GEO_TEMPLATE, {parent = TRIGGER, scale = CURRENT_SCALE})
 end
 
 local function OnBeginOverlap(_trigger, player)
