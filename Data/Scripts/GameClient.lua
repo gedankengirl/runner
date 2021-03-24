@@ -1,4 +1,4 @@
-local DEBUG = true
+local DEBUG = Environment.IsPreview()
 local debug = function(...) if DEBUG then print("[D]", ...) end end
 local Maid = _G.req("_Maid")
 local Grid = _G.req("_Grid")
@@ -14,13 +14,11 @@ local S = _G.req("StaticData")
 local pp = _G.req("_Luapp").pp
 local DOWNLINK = script:GetCustomProperty("DOWNLINK"):WaitForObject()
 local LOCAL_PLAYER = Game.GetLocalPlayer()
-local INVENTORY_ROOT = assert(script:GetCustomProperty("InventoryRoot"):WaitForObject())
 
 local INGAME_CAMERA = LOCAL_PLAYER:GetDefaultCamera()
 local INVENTORY_CAM = script:GetCustomProperty("InventoryCamera"):WaitForObject()
 assert(not INVENTORY_CAM.followPlayer and not INVENTORY_CAM.useCameraSocket)
 local CAMERA_LERP_TIME = 0.5
-
 
 local Tile = require(script:GetCustomProperty("Tile"))
 local Actor = require(script:GetCustomProperty("Actor"))
@@ -29,26 +27,13 @@ local COLOR_DEFAULT = Color.New(1, 1, 1, 0.25)
 local COLOR_MOVE = Color.New(1, 1, 0, 0.25)
 local COLOR_MERGE = Color.New(0, 1, 0, 0.25)
 
-local SCROLL_LIMIT_ADJUST_TOP = -50
-local SCROLL_LIMIT_ADJUST_SIDES = 0
-local SCROLL_LIMIT_ADJUST_BOTTOM = -150
-local CAMERA_START_ROW = 2
-local CAMERA_RELATIVE_YAW = 0
-local CAMERA_RELATIVE_PITCH = -60
-local CAMERA_RELATIVE_HEIGHT = 200
-local CAMERA_SCROLL_SPEED = 20 -- 50
-local INTERACTION_PLANE_HEIGHT = 10 --75
-
-local MOUSE_CLICK_TIMEOUT = 0.3
-local MOUSE_DRAG_DEADTIME = 0.06
-local MOUSE_DRAG_DEADZONE = 10 -- 2
-
-local CAMERA_YAW_ROTATION = Rotation.New(0, 0, CAMERA_RELATIVE_YAW)
-local CAMERA_RELATIVE_TRANSFORM = Transform.New(
-    Rotation.New(0, CAMERA_RELATIVE_PITCH, CAMERA_RELATIVE_YAW),
-    Vector3.UP * CAMERA_RELATIVE_HEIGHT,
-    Vector3.ONE
-)
+local INV_ROOT = assert(script:GetCustomProperty("InventoryRoot"):WaitForObject())
+local INV_CAMERA_RELATIVE_PITCH = -60 -- -60, degrees
+local INV_INTERACTION_PLANE_HEIGHT = 10
+local INV_CAMERA_SCROLL_SPEED = 20 -- 50
+local INV_MOUSE_CLICK_TIMEOUT = 0.3
+local INV_MOUSE_DRAG_DEADTIME = 0.06
+local INV_MOUSE_DRAG_DEADZONE = 10
 
 local _maid = Maid.New(script)
 -----------------------------------------------------------------------------
@@ -91,6 +76,29 @@ local function _randomize(x, factor)
     return a + (b-a)*math.random()
 end
 
+local function _fitSphereToCamera(r, fov)
+    local scr = UI.GetScreenSize()
+    local halfMinFov = 0.5 * math.rad(fov)
+    local aspect = scr.x/scr.y
+    if aspect < 1 then
+        halfMinFov = math.atan(aspect * math.tan(halfMinFov))
+    end
+    return r / math.sin(halfMinFov)
+end
+
+local function _set_inv_cam_limits(grid)
+    if not grid then return end
+    local w, h, dimx, dimy = grid.w, grid.h, grid.dimx, grid.dimy
+    local pitchr = math.rad(-INV_CAMERA_RELATIVE_PITCH)
+    local sn, cs = math.sin(pitchr), math.cos(pitchr)
+    local r = (h + 1.8 + w/h)*dimx/2
+    local distance = _fitSphereToCamera(r, INVENTORY_CAM.fieldOfView)
+    INVENTORY_CAM.minDistance = -cs*distance + 2*dimx
+    INVENTORY_CAM.maxDistance = cs*distance
+    INVENTORY_CAM.currentDistance = cs*distance
+    return distance, sn, cs
+end
+
 -----------------------------------------------------------------------------
 -- Pet animator
 -----------------------------------------------------------------------------
@@ -103,7 +111,7 @@ local MAX_SPR = SP.New(0.7, 1.0)
 local Z_SPR = SP.New(0.9, 1.0)
 local AWAY_SPR = SP.New(1, 0.5)
 local HEAVEN = Vector3.New(0, 0, 700)
-local SLOW_SQ = 1E6
+local SLOW_SQ = 1E4
 local Z_OFFSET = Vector3.UP*-65
 
 local PET_LOOKAT_TARGET = World.SpawnAsset("15DDE9D1C41FD428:EmptyObject")
@@ -112,23 +120,34 @@ PET_LOOKAT_TARGET:SetPosition(Vector3.UP*(Z_OFFSET.z-10))
 
 local _get_goal do
     -- TODO: add up to 5 spots
-    local alpha = math.rad(40)
+    local alpha = math.rad(35)
     local R = 200
-    local V = R*math.cos(alpha)
-    local U = R*math.sin(alpha)
-
+    local V1 = R*math.cos(alpha)
+    local V2 = R*math.cos(2*alpha)
+    local U1 = R*math.sin(alpha)
+    local U2 = R*math.sin(2*alpha)
+    local POS = {
+        function(dir, pos) return pos - (dir^Vector3.UP)*U2 - dir*V2 end,
+        function(dir, pos) return pos - (dir^Vector3.UP)*U1 - dir*V1 end,
+        function(dir, pos) return pos - dir*R end,
+        function(dir, pos) return pos + (dir^Vector3.UP)*U1 - dir*V1 end,
+        function(dir, pos) return pos + (dir^Vector3.UP)*U2 - dir*V2 end,
+    }
     _get_goal = function(master_pos, dir, pos_idx, n_pets)
-        local cross = dir^Vector3.UP
         if  n_pets == 1 then
-            pos_idx = 2
-        elseif n_pets == 2 and pos_idx == 2 then
             pos_idx = 3
+        elseif n_pets == 2 then
+            pos_idx = 2*pos_idx
+        elseif n_pets == 3 then
+            pos_idx = 1 + pos_idx
+        elseif n_pets == 4 and pos_idx > 2 then
+            pos_idx = 1 + pos_idx
         end
-
-        if pos_idx == 1 then return master_pos - cross*U - dir*V end
-        if pos_idx == 2 then return master_pos - dir*R end
-        if pos_idx == 3 then return master_pos + cross*U - dir*V end
-        error(pos_idx)
+        if pos_idx >= 1 and pos_idx <= 5 then
+            return POS[pos_idx](dir, master_pos)
+        else
+            error(string.format("wrong pet index %q", pos_idx))
+        end
     end
 end
 
@@ -320,6 +339,7 @@ function Client:_AwaitDownlinkChannel()
             if op == P.S2C.INVENTORY.op then
                 local grid = P.S2C.INVENTORY.unpack(data, Grid.deserialize)
                 _maid.grid = grid -- <- kill old inventory
+                _set_inv_cam_limits(grid)
                 ISM:GoToState(INGAME)
                 Task.Wait()
                 self:_InstantiateInventory(assert(grid))
@@ -395,11 +415,15 @@ function Client:_InstantiateInventory(grid)
     for i=1, N do
         local cell = grid:at(i)
         if not cell:IsNil() then
-            cell.tile = Tile.New(cell, INVENTORY_ROOT)
+            cell.tile = Tile.New(cell, INV_ROOT)
             maid:GiveTask(cell.tile)
             if cell.actor then
                 assert(type(cell.actor) == "table", "not {id=pet_id}")
-                Actor.New(cell.actor, cell)
+                if S.PetDb[cell.actor.id] then
+                    Actor.New(cell.actor, cell)
+                else
+                    warn("SKIP: no pet with id: " .. cell.actor.id)
+                end
             end
         end
     end
@@ -488,6 +512,9 @@ end
 
 function SHOP:HandleModal(modal_arg)
     self.isInteractionEnabled = modal_arg < P.MODAL_ARG.OPEN
+    if self.isInteractionEnabled then
+        _show_cursor(true)
+    end
 end
 
 --------------------------
@@ -513,7 +540,26 @@ function INVENTORY:Exit()
     _show_cursor(false)
     self.isInteractionEnabled = false
     _maid.highlights_connect = nil
-    _maid.grid._highlights:_clear()
+    if _maid.grid and _maid.grid._highlights then
+        _maid.grid._highlights:_clear()
+    end
+    -- reset left drag
+    if self.attachedActor then
+        local actor = self.attachedActor
+        self.attachedActor = nil
+        actor:AnimateFlyHome()
+    end
+    -- reset right drag
+    if self.rightClickDownTime then
+        Events.Broadcast(P.INTERACTION.CameraScrollingEnd)
+        self.isValidRightClick = nil
+        self.isMovingCamera = nil
+        self.rightClickDownTime = nil
+        self.rightClickDownPosition = nil
+        self.hasRightClickLeftDeadZone = nil
+        self.cursorPosition = nil
+    end
+    _set_inv_cam_limits(_maid.grid)
 
 end
 
@@ -572,9 +618,9 @@ local function _compute_mouse_interaction_state(mouseDownTime, mouseDownPosition
     if mouseDownTime then
         local mouseHoldTime = time() - mouseDownTime
         local mouseDisplacement = UI.GetCursorPosition() - mouseDownPosition
-        hasLeftDeadZone = hasLeftDeadZone or mouseDisplacement.size > MOUSE_DRAG_DEADZONE
-        isValidClick = mouseHoldTime <= MOUSE_CLICK_TIMEOUT and not hasLeftDeadZone
-        isValidDrag = mouseHoldTime >= MOUSE_DRAG_DEADTIME and hasLeftDeadZone
+        hasLeftDeadZone = hasLeftDeadZone or mouseDisplacement.size > INV_MOUSE_DRAG_DEADZONE
+        isValidClick = mouseHoldTime <= INV_MOUSE_CLICK_TIMEOUT and not hasLeftDeadZone
+        isValidDrag = mouseHoldTime >= INV_MOUSE_DRAG_DEADTIME and hasLeftDeadZone
     end
     return isValidClick, isValidDrag, hasLeftDeadZone
 end
@@ -712,8 +758,6 @@ function INVENTORY:HandleLeftMouseDown()
     end
 end
 
-
-
 function INVENTORY:HandleLeftMouseUp()
     if not self.isInteractionEnabled then return end
     if not self.mouseDownTime then return end
@@ -760,18 +804,51 @@ function INVENTORY:HandleLeftMouseUp()
     end
 end
 
+local K = {
+    [7*5] = 2,
+    [7*6] = 2,
+    [9*6] = 2,
+    [9*7] = 2,
+    [11*7] = 1.3,
+    [11*8] = 1.3,
+    [11*9] = 1.3,
+    [11*10] = 1.3,
+    [11*10] = 1.3,
+    [11*11] = 1.3,
+    [13*11] = 1.3,
+    [13*11] = 1.3,
+    [13*12] = 1.3,
+    [13*13] = 1.0
+}
 function INVENTORY:_StartCamera()
     local grid = _maid.grid
+    local w, h, dimx, dimy = grid.w, grid.h, grid.dimx, grid.dimy
+    local distance, sin, cos = _set_inv_cam_limits(grid)
+    local CAMERA_RELATIVE_HEIGHT = cos*distance
+    INVENTORY_CAM.currentDistance = distance
+    local k_extra = assert(K[w*h], w*h)
+    local startTransform = Transform.New(
+        Quaternion.IDENTITY,
+        Vector3.New(-distance + k_extra*dimx, (w-1)*dimy/2, INV_INTERACTION_PLANE_HEIGHT),
+        Vector3.ONE)
+
+    local CAMERA_RELATIVE_TRANSFORM = Transform.New(
+        Rotation.New(0, INV_CAMERA_RELATIVE_PITCH, 0),
+        Vector3.UP * CAMERA_RELATIVE_HEIGHT,
+        Vector3.ONE
+    )
     local ext = grid:GetExtent()
+    local SCROLL_LIMIT_ADJUST_TOP = -2*dimx
+    local SCROLL_LIMIT_ADJUST_SIDES = 0
+    local SCROLL_LIMIT_ADJUST_BOTTOM = -0.5*dimx
     ext.pos_x = ext.pos_x + SCROLL_LIMIT_ADJUST_TOP
     ext.neg_x = math.min(ext.neg_x + SCROLL_LIMIT_ADJUST_BOTTOM, ext.pos_x)
     ext.pos_y = ext.pos_y - SCROLL_LIMIT_ADJUST_SIDES
     ext.neg_y = math.min(ext.neg_y + SCROLL_LIMIT_ADJUST_SIDES, ext.pos_y)
     self.scrollExtent = ext
     assert(script == INVENTORY_CAM.parent)
-    script:SetWorldTransform(INVENTORY_ROOT:GetTransform())
-    local startTile = grid:at(CAMERA_START_ROW, grid.w//2).tile
-    local initialTransform = CAMERA_RELATIVE_TRANSFORM * startTile:GetTransform()
+    script:SetWorldTransform(INV_ROOT:GetTransform())
+    local initialTransform = CAMERA_RELATIVE_TRANSFORM * startTransform
     local initialPosition = initialTransform:GetPosition()
     local initialRotation = initialTransform:GetRotation()
     initialPosition.x = CoreMath.Clamp(initialPosition.x, ext.neg_x, ext.pos_x)
@@ -780,10 +857,10 @@ function INVENTORY:_StartCamera()
     INVENTORY_CAM:SetRotation(initialRotation)
     _set_camera(INVENTORY_CAM)
     self.interactionPlane = {
-        script:GetTransform():TransformPosition(Vector3.UP * INTERACTION_PLANE_HEIGHT),
+        script:GetTransform():TransformPosition(Vector3.UP * INV_INTERACTION_PLANE_HEIGHT),
         script:GetTransform():GetUpVector()
     }
-    grid:SetWorldToGridTransform(INVENTORY_ROOT:GetWorldTransform():GetInverse())
+    grid:SetWorldToGridTransform(INV_ROOT:GetWorldTransform():GetInverse())
 end
 
 function INVENTORY:_UpdateCamera(dt)
@@ -792,8 +869,9 @@ function INVENTORY:_UpdateCamera(dt)
         local screenDelta = newCursorPositon - self.cursorPosition
         self.cursorPosition = newCursorPositon
         -- We must use the interaction coordinates to scroll properly. Remember screenspace Y goes downwards.
-        local localDelta =  CAMERA_YAW_ROTATION * Vector3.New(screenDelta, 0)
-        local scaledDelta = CAMERA_SCROLL_SPEED * dt * Vector3.New(-localDelta.y, localDelta.x, 0)
+        local localDelta =  --[[CAMERA_YAW_ROTATION*]] Vector3.New(screenDelta, 0)
+        -- TODO: spring
+        local scaledDelta = INV_CAMERA_SCROLL_SPEED * dt * Vector3.New(-localDelta.y, localDelta.x, 0)
         -- To "drag" the world, we move the camera in the inverse direction.
         local localCameraPos = INVENTORY_CAM:GetPosition() - scaledDelta
         -- We clamp to the board extent.
@@ -829,6 +907,9 @@ end
 
 function INVENTORY:HandleModal(modal_arg)
     self.isInteractionEnabled = modal_arg < P.MODAL_ARG.OPEN
+    if self.isInteractionEnabled then
+        _show_cursor(true)
+    end
 end
 
 -----------------------------------------------------------------------------
