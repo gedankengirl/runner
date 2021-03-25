@@ -1,18 +1,9 @@
 Assets {
-  Id: 16957605919230160676
-  Name: "Icon Player Move"
-  PlatformAssetType: 9
+  Id: 12095835209017042614
+  Name: "Cube"
+  PlatformAssetType: 1
   PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "Icon_PlayerMove"
-  }
-}
-Assets {
-  Id: 5196377603841433560
-  Name: "BG Gradient 001"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "BackgroundFlat_020"
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_cube_002"
   }
 }

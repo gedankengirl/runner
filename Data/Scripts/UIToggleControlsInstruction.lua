@@ -5,7 +5,7 @@ local _maid = Maid.New(script)
 local fieldInstructions = script:GetCustomProperty("FieldInstructions"):WaitForObject()
 local inventoryInstructions = script:GetCustomProperty("InventoryInstructions"):WaitForObject()
 local closeWindBtn = script:GetCustomProperty("CloseWindowButton"):WaitForObject()
-local closeInventoryImage = closeWindBtn.parent
+local closeInventoryImage = script:GetCustomProperty("CloseInvImg"):WaitForObject()
 
 
 function OpenInventoryInstructions()

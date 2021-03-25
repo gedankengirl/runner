@@ -417,7 +417,7 @@ Assets {
             Repeat: true
             Volume: 1
             Falloff: 100
-            Radius: 2000
+            Radius: 4000
             IsSpatializationEnabled: true
             IsAttenuationEnabled: true
           }

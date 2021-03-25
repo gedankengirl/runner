@@ -9,11 +9,9 @@ local GEO_TEMPLATE = TRIGGER:GetCustomProperty("GeoTemplate")
 local GEO_DUMMY = TRIGGER:GetCustomProperty("GeoDummy"):WaitForObject()
 
 local REvents = _G.req("_ReliableEvents")
-local CURRENT_SCALE = Vector3.ONE
+local P = _G.req("Protocols")
 
-if CURRENT_SCALE == Vector3.ONE*3 then
-    print("Current scale of booster pickups is 3")
-end
+local CURRENT_SCALE = Vector3.ONE
 
 if Environment.IsPreview() then
     local context = TRIGGER:FindAncestorByType("NetworkContext")
@@ -29,7 +27,7 @@ local function OnBeginOverlap(_trigger, player)
     if not player or not player:IsA("Player") then
         return
     end
-    REvents.Broadcast("@StaticPickup", player, RESOURCE_TAG, RESOURCE_AMOUNT, TRIGGER:GetWorldPosition())
+    REvents.Broadcast(P.STATIC.StaticPickup, player, RESOURCE_TAG, RESOURCE_AMOUNT, TRIGGER:GetWorldPosition())
     SCHEDULER.Add(RESPAWN_DELAY + time(), TEMPLATE, TRIGGER.parent, TRIGGER:GetPosition())
     -- NOTE: `isEnabled` is *not* supported in Static Context
     TRIGGER:Destroy()

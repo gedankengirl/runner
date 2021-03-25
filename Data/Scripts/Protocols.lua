@@ -162,6 +162,11 @@ end
 
 Protocols.SOCIAL = SOCIAL
 
+-- Static
+Protocols.STATIC = {
+    StaticPickup = "@StaticPickup" -- player, tag, amount, pos
+}
+
 -- C2S
 Protocols.C2S = {
     GameInventoryRrequest = "GIR",

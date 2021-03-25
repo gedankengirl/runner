@@ -63,6 +63,12 @@ Objects {
         SelfId: 1947380173840988092
       }
     }
+    Overrides {
+      Name: "cs:CloseInvImg"
+      ObjectReference {
+        SelfId: 18239345799016865281
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -145,7 +151,7 @@ Objects {
     }
   }
   ParentId: 1672551587219337553
-  ChildIds: 16771282214758840619
+  ChildIds: 18239345799016865281
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -182,7 +188,7 @@ Objects {
   }
 }
 Objects {
-  Id: 16771282214758840619
+  Id: 18239345799016865281
   Name: "CloseInventoryImage"
   Transform {
     Location {
@@ -196,6 +202,66 @@ Objects {
     }
   }
   ParentId: 6040805777582092259
+  ChildIds: 16771282214758840619
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Control {
+    Width: 90
+    Height: 90
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Image {
+      Brush {
+        Id: 5110366118142503592
+      }
+      Color {
+        R: 0.0718750954
+        G: 0.0718750954
+        B: 0.0718750954
+        A: 1
+      }
+      TeamSettings {
+      }
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 16771282214758840619
+  Name: "Image"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 18239345799016865281
   ChildIds: 1947380173840988092
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -219,7 +285,10 @@ Objects {
         Id: 5110366118142503592
       }
       Color {
-        A: 0.3
+        R: 0.201041698
+        G: 0.201041698
+        B: 0.201041698
+        A: 1
       }
       TeamSettings {
       }

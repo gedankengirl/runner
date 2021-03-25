@@ -54,16 +54,16 @@ Assets {
       }
       Objects {
         Id: 7511925018274840224
-        Name: "Tile Plane 1m - One Sided"
+        Name: "Cube_Rounded"
         Transform {
           Location {
           }
           Rotation {
           }
           Scale {
-            X: 0.95
-            Y: 0.95
-            Z: 1
+            X: 1.2
+            Y: 1.2
+            Z: 0.01
           }
         }
         ParentId: 9311761055328694080
@@ -99,7 +99,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 11011881755036046467
+            Id: 10397718742664464874
           }
           Teams {
             IsTeamCollisionEnabled: true
@@ -115,7 +115,7 @@ Assets {
       }
       Objects {
         Id: 9143747612092318071
-        Name: "Color Plane 1m - One Sided"
+        Name: "Color_Cube-Rounded"
         Transform {
           Location {
             Z: 1
@@ -123,9 +123,9 @@ Assets {
           Rotation {
           }
           Scale {
-            X: 0.9
-            Y: 0.9
-            Z: 1
+            X: 1.1
+            Y: 1.1
+            Z: 0.01
           }
         }
         ParentId: 9311761055328694080
@@ -157,7 +157,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 11011881755036046467
+            Id: 10397718742664464874
           }
           Teams {
             IsTeamCollisionEnabled: true
@@ -202,12 +202,12 @@ Assets {
       }
     }
     Assets {
-      Id: 11011881755036046467
-      Name: "Plane 1m - One Sided"
+      Id: 10397718742664464874
+      Name: "Cube - Rounded"
       PlatformAssetType: 1
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_plane_1m_001"
+        AssetId: "sm_cube_rounded_002"
       }
     }
     Assets {

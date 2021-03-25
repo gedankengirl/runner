@@ -1,4 +1,13 @@
 Assets {
+  Id: 16957605919230160676
+  Name: "Icon Player Move"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "Icon_PlayerMove"
+  }
+}
+Assets {
   Id: 10414207800896120430
   Name: "4 Point Star"
   PlatformAssetType: 9

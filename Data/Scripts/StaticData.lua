@@ -157,7 +157,7 @@ local PetDb, EggDb do
         Hub = {price = 100, gacha = {Chick=100}, muid="35C8AE01462F650D:EggGroup_Hub"},
         Garden =  {price = 3000, gacha = {Bee=45, Gnome=35, Birdie=20}, muid = "6BF1AD3640E72529:EggGroup_Garden"},
         Graveyard =  {price = 10000, gacha = {Bat=60, Ghost=35, Witch=5}, muid = "F957A07755CF5ACE:EggGroup_Graveyard"},
-        Tropical = {price = 45000, gacha = {Flamingo=50, Crab=45, Mermaid=5}, muid = "186F54701898DFCB:EggGroup_Tropical"},
+        Tropical = {price = 45000, gacha = {Flamingo=55, Crab=40, Mermaid=5}, muid = "186F54701898DFCB:EggGroup_Tropical"},
         Disco = {price = 175000, gacha = {Monkey=50, Bull=35, Cat=15}, muid = "6E94B64378BE0BD7:EggGroup_Disco"},
         Forest = {price = 750000, gacha = {Mushroom=65, Bunny=30, Fairy=5},  muid = "92C4C8B37C758BAC:EggGroup_Forest"},
     }

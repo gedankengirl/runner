@@ -23,7 +23,7 @@ local CAMERA_LERP_TIME = 0.5
 local Tile = require(script:GetCustomProperty("Tile"))
 local Actor = require(script:GetCustomProperty("Actor"))
 
-local COLOR_DEFAULT = Color.New(1, 1, 1, 0.25)
+local COLOR_DEFAULT = Color.New(.6, 1, .9, 0.25)
 local COLOR_MOVE = Color.New(1, 1, 0, 0.25)
 local COLOR_MERGE = Color.New(0, 1, 0, 0.25)
 
