@@ -270,8 +270,13 @@ Server.__index = Server
 function Server:Start()
     warn("Server -- START")
     self.playerConnections = {}
-    Game.playerJoinedEvent:Connect(function(player) self:OnPlayerJoined(player) end)
-    Game.playerLeftEvent:Connect(function(player) self:OnPlayerLeft(player) end)
+    _maid.server_joined = Game.playerJoinedEvent:Connect(function(player) self:OnPlayerJoined(player) end)
+    _maid.server_left = Game.playerLeftEvent:Connect(function(player) self:OnPlayerLeft(player) end)
+    _maid.static_booster = Events.Connect("@StaticPickup", function(player, tag, amount, _pos)
+        local connection = self.playerConnections[player]
+        if not connection --[[FIXME: and tag == ]] then return end
+        B.addCoins(player, amount)
+    end)
     -- On preview clients, sometimes the playerJoined event gets missed. Here we hard force it.
     for _,player in ipairs(Game.GetPlayers()) do self:OnPlayerJoined(player) end
     -- event to player connection forwarding
