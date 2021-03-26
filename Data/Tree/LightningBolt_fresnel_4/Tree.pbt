@@ -1,7 +1,7 @@
 Name: "LightningBolt_fresnel_4"
-RootId: 9041635321004041628
+RootId: 7565976451296814879
 Objects {
-  Id: 5536422021233651490
+  Id: 2485737202346857358
   Name: "Cylinder"
   Transform {
     Location {
@@ -17,7 +17,7 @@ Objects {
       Z: 0.0135293715
     }
   }
-  ParentId: 9041635321004041628
+  ParentId: 7565976451296814879
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -28,8 +28,8 @@ Objects {
     Overrides {
       Name: "ma:Shared_BaseMaterial:color"
       Color {
-        R: 0.866000056
-        G: 0.0824761912
+        R: 0.866666734
+        G: 0.0823529437
         A: 1
       }
     }
@@ -59,14 +59,14 @@ Objects {
     }
   }
   InstanceHistory {
-    SelfId: 5536422021233651490
-    SubobjectId: 11135048163173417300
+    SelfId: 2373365998835337163
+    SubobjectId: 17779387783610853821
     InstanceId: 5519564275000209712
     TemplateId: 12943947732222281349
   }
 }
 Objects {
-  Id: 10671957808491322116
+  Id: 5383537862708517124
   Name: "Prism - 3-Sided"
   Transform {
     Location {
@@ -84,7 +84,7 @@ Objects {
       Z: -0.0481789336
     }
   }
-  ParentId: 9041635321004041628
+  ParentId: 7565976451296814879
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -138,14 +138,14 @@ Objects {
     }
   }
   InstanceHistory {
-    SelfId: 10671957808491322116
-    SubobjectId: 4776234693090456946
+    SelfId: 14640775977295917964
+    SubobjectId: 2124728284977749498
     InstanceId: 5519564275000209712
     TemplateId: 12943947732222281349
   }
 }
 Objects {
-  Id: 8766446525967214743
+  Id: 1141614523633949915
   Name: "Prism - 3-Sided"
   Transform {
     Location {
@@ -163,7 +163,7 @@ Objects {
       Z: -0.0481789336
     }
   }
-  ParentId: 9041635321004041628
+  ParentId: 7565976451296814879
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -217,8 +217,8 @@ Objects {
     }
   }
   InstanceHistory {
-    SelfId: 8766446525967214743
-    SubobjectId: 12680550623232575201
+    SelfId: 4841614065159887679
+    SubobjectId: 10764218180172428617
     InstanceId: 5519564275000209712
     TemplateId: 12943947732222281349
   }

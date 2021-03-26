@@ -1498,7 +1498,7 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "LightningBolt_fresnel"
+    FilePartitionName: "LightningBolt_fresnel_1"
   }
   InstanceHistory {
     SelfId: 9041635321004041628
@@ -1536,7 +1536,7 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "LightningBolt_fresnel_1"
+    FilePartitionName: "LightningBolt_fresnel_2"
   }
   InstanceHistory {
     SelfId: 4719846510102767826
@@ -1574,7 +1574,7 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "LightningBolt_fresnel_2"
+    FilePartitionName: "LightningBolt_fresnel_3"
   }
   InstanceHistory {
     SelfId: 16616603693758989989
@@ -1612,7 +1612,7 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "LightningBolt_fresnel_3"
+    FilePartitionName: "LightningBolt_fresnel_4"
   }
   InstanceHistory {
     SelfId: 3950211348400932046

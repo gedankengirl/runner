@@ -1,16 +1,13 @@
 Name: "Ambient audio_1"
 RootId: 4873045616788719507
 Objects {
-  Id: 4791238707987909652
-  Name: "Waterfall Small SFX"
+  Id: 8575734226450930608
+  Name: "ClientContext"
   Transform {
     Location {
-      X: 6623.39258
-      Y: 4817.44043
-      Z: 1311.66199
+      Z: 700
     }
     Rotation {
-      Yaw: -30.2159214
     }
     Scale {
       X: 1
@@ -19,6 +16,43 @@ Objects {
     }
   }
   ParentId: 4873045616788719507
+  ChildIds: 867067797310783736
+  ChildIds: 11976709315004319242
+  ChildIds: 15358238956950491964
+  ChildIds: 1423298432749172638
+  ChildIds: 11770688659607540656
+  ChildIds: 4791238707987909652
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  NetworkContext {
+  }
+}
+Objects {
+  Id: 4791238707987909652
+  Name: "Waterfall Small SFX"
+  Transform {
+    Location {
+      X: 7023.78711
+      Y: 4817.44043
+      Z: 611.662
+    }
+    Rotation {
+      Yaw: -30.2159119
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 8575734226450930608
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -44,12 +78,10 @@ Objects {
 }
 Objects {
   Id: 11770688659607540656
-  Name: "Nature Pond Birds Ambience Loop 01 SFX"
+  Name: "Nature Pond Birds Ambience Loop 01 (higher pitch)SFX"
   Transform {
     Location {
-      X: 4480.95117
-      Y: 6460.2915
-      Z: 896.47345
+      Z: 196.47345
     }
     Rotation {
     }
@@ -59,7 +91,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 4873045616788719507
+  ParentId: 8575734226450930608
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -73,14 +105,11 @@ Objects {
     AudioAsset {
       Id: 11613197061544053954
     }
-    AutoPlay: true
-    Repeat: true
+    Pitch: 1310.45142
     Volume: 1.33660138
     Falloff: 400
     Radius: 1000
-    EnableOcclusion: true
-    IsSpatializationEnabled: true
-    IsAttenuationEnabled: true
+    StopTime: 6
   }
 }
 Objects {
@@ -88,19 +117,17 @@ Objects {
   Name: "Nature Pond Birds Ambience Loop 01 SFX"
   Transform {
     Location {
-      X: -3596.53906
-      Y: 5909.95752
-      Z: 896.47345
+      Z: 196.47345
     }
     Rotation {
     }
     Scale {
-      X: 1
-      Y: 1
+      X: 0.99999994
+      Y: 0.99999994
       Z: 1
     }
   }
-  ParentId: 4873045616788719507
+  ParentId: 8575734226450930608
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -114,14 +141,10 @@ Objects {
     AudioAsset {
       Id: 11613197061544053954
     }
-    AutoPlay: true
-    Repeat: true
     Volume: 1.33660138
     Falloff: 400
     Radius: 1000
-    EnableOcclusion: true
-    IsSpatializationEnabled: true
-    IsAttenuationEnabled: true
+    StopTime: 5
   }
 }
 Objects {
@@ -129,8 +152,8 @@ Objects {
   Name: "Nature Beach Small Waves Loop 01 SFX"
   Transform {
     Location {
-      X: 310.337891
       Y: -9143.51172
+      Z: -700
     }
     Rotation {
     }
@@ -140,7 +163,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 4873045616788719507
+  ParentId: 8575734226450930608
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -162,5 +185,140 @@ Objects {
     EnableOcclusion: true
     IsSpatializationEnabled: true
     IsAttenuationEnabled: true
+  }
+}
+Objects {
+  Id: 11976709315004319242
+  Name: "_RSoundTrigger"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 8575734226450930608
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 6283574561774308347
+      value {
+        Overrides {
+          Name: "Name"
+          String: "_RSoundTrigger"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -4249.20898
+            Y: -1684.07275
+            Z: 74.5741577
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 8638409400582938100
+      value {
+        Overrides {
+          Name: "cs:CooldownPeriod"
+          Float: 20
+        }
+        Overrides {
+          Name: "cs:Sound"
+          ObjectReference {
+            SelfId: 1423298432749172638
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 15901767622543304405
+    }
+  }
+}
+Objects {
+  Id: 867067797310783736
+  Name: "Trigger(higher pitched birdsong)"
+  Transform {
+    Location {
+      X: 3966.16602
+      Y: 4066.87939
+      Z: 74.5741577
+    }
+    Rotation {
+    }
+    Scale {
+      X: 24.7059517
+      Y: 24.7059517
+      Z: 16.3366718
+    }
+  }
+  ParentId: 8575734226450930608
+  ChildIds: 12040269783845261838
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceon"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Trigger {
+    TeamSettings {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    TriggerShape_v2 {
+      Value: "mc:etriggershape:sphere"
+    }
+  }
+}
+Objects {
+  Id: 12040269783845261838
+  Name: "PlaySoundOnTrigger"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 0.175214157
+      Y: 0.175214157
+      Z: 0.264976501
+    }
+  }
+  ParentId: 867067797310783736
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Sound"
+      ObjectReference {
+        SelfId: 11770688659607540656
+      }
+    }
+    Overrides {
+      Name: "cs:CooldownPeriod"
+      Float: 15
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 17870403668611754621
+    }
   }
 }

@@ -1,7 +1,7 @@
 Name: "LightningBolt_silhouette_12"
-RootId: 8416701436039608980
+RootId: 2733126446953330543
 Objects {
-  Id: 17801259726818213387
+  Id: 16132579529038028490
   Name: "Prism - 3-Sided"
   Transform {
     Location {
@@ -20,12 +20,12 @@ Objects {
       Z: -0.08
     }
   }
-  ParentId: 8416701436039608980
+  ParentId: 2733126446953330543
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
       AssetReference {
-        Id: 10184847056121543272
+        Id: 14613802976288032229
       }
     }
     Overrides {
@@ -34,19 +34,11 @@ Objects {
     }
     Overrides {
       Name: "ma:Shared_BaseMaterial:utile"
-      Float: 1
+      Float: 0.428385466
     }
     Overrides {
       Name: "ma:Shared_BaseMaterial:vtile"
-      Float: 1
-    }
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:color"
-      Color {
-        G: 0.412222147
-        B: 0.490000129
-        A: 1
-      }
+      Float: 0.481217235
     }
   }
   Collidable_v2 {
@@ -74,14 +66,14 @@ Objects {
     }
   }
   InstanceHistory {
-    SelfId: 7936277200351421402
-    SubobjectId: 12959021496801820772
-    InstanceId: 18193526266088711028
-    TemplateId: 1851792044134233516
+    SelfId: 16132579529038028490
+    SubobjectId: 1572368706994074232
+    InstanceId: 10907345231434236569
+    TemplateId: 15904085984438255415
   }
 }
 Objects {
-  Id: 8821380457280597278
+  Id: 17457255707202876440
   Name: "Prism - 3-Sided"
   Transform {
     Location {
@@ -100,12 +92,12 @@ Objects {
       Z: -0.08
     }
   }
-  ParentId: 8416701436039608980
+  ParentId: 2733126446953330543
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
       AssetReference {
-        Id: 10184847056121543272
+        Id: 14613802976288032229
       }
     }
     Overrides {
@@ -114,19 +106,11 @@ Objects {
     }
     Overrides {
       Name: "ma:Shared_BaseMaterial:utile"
-      Float: 1
+      Float: 0.428385466
     }
     Overrides {
       Name: "ma:Shared_BaseMaterial:vtile"
-      Float: 1
-    }
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:color"
-      Color {
-        G: 0.412222147
-        B: 0.490000129
-        A: 1
-      }
+      Float: 0.481217235
     }
   }
   Collidable_v2 {
@@ -154,9 +138,9 @@ Objects {
     }
   }
   InstanceHistory {
-    SelfId: 16673461367213199483
-    SubobjectId: 4220132004551553989
-    InstanceId: 18193526266088711028
-    TemplateId: 1851792044134233516
+    SelfId: 17457255707202876440
+    SubobjectId: 4068126000538605738
+    InstanceId: 10907345231434236569
+    TemplateId: 15904085984438255415
   }
 }

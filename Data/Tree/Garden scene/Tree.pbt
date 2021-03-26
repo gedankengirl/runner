@@ -245,6 +245,9 @@ Objects {
   ChildIds: 10740842081577221391
   ChildIds: 4088144150824050955
   ChildIds: 11646304792292780814
+  ChildIds: 6333588044706435777
+  ChildIds: 12287871486558676478
+  ChildIds: 2728039743014918282
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -256,6 +259,176 @@ Objects {
   }
   NetworkContext {
     Type: RuntimeStatic
+  }
+}
+Objects {
+  Id: 2728039743014918282
+  Name: "BoosterPickupLarge-Static-Rare"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 18206553643601552712
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 11125786215701865419
+      value {
+        Overrides {
+          Name: "Name"
+          String: "BoosterPickupLarge-Static-Rare"
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 4.5
+            Y: 4.5
+            Z: 4.5
+          }
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -2506.27734
+            Y: -3767.15234
+            Z: 1011.00415
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 2386519090117798936
+    }
+  }
+}
+Objects {
+  Id: 12287871486558676478
+  Name: "BoosterPickupLarge-Static-Uncommon"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 18206553643601552712
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 1485507658815784485
+      value {
+        Overrides {
+          Name: "Name"
+          String: "BoosterPickupLarge-Static-Uncommon"
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 4.5
+            Y: 4.5
+            Z: 4.5
+          }
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -3580.85156
+            Y: 1514.83984
+            Z: 1011.00415
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Yaw: 90
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 14958463691473147442
+    }
+  }
+}
+Objects {
+  Id: 6333588044706435777
+  Name: "BoosterPickupLarge-Static-Common"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 18206553643601552712
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 12973968196682318365
+      value {
+        Overrides {
+          Name: "Name"
+          String: "BoosterPickupLarge-Static-Common"
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 4.5
+            Y: 4.5
+            Z: 4.5
+          }
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: 3186.00391
+            Y: 3270.4043
+            Z: 1011.00415
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 17958295190702993033
+      value {
+        Overrides {
+          Name: "Position"
+          Vector {
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 3850641548163729284
+    }
   }
 }
 Objects {

@@ -22,8 +22,6 @@ Objects {
   ChildIds: 4963320541580283836
   ChildIds: 7553754998792656332
   ChildIds: 6850213620070595094
-  ChildIds: 17694729315504415440
-  ChildIds: 17848254656594334078
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -36,111 +34,6 @@ Objects {
     Value: "mc:ecollisionsetting:forceon"
   }
   Folder {
-  }
-}
-Objects {
-  Id: 17848254656594334078
-  Name: "Cube"
-  Transform {
-    Location {
-      X: -943.240356
-      Y: 1100.43225
-      Z: 85.9564056
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 0.01
-    }
-  }
-  ParentId: 4781671109827199097
-  UnregisteredParameters {
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 12155145479834995323
-      }
-    }
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:color"
-      Color {
-        R: 0.634
-        G: 1
-        B: 0.86638087
-        A: 0.25
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  CoreMesh {
-    MeshAsset {
-      Id: 12095835209017042614
-    }
-    Teams {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    StaticMesh {
-      Physics {
-        Mass: 100
-        LinearDamping: 0.01
-      }
-    }
-  }
-}
-Objects {
-  Id: 17694729315504415440
-  Name: "Tile-1M"
-  Transform {
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 4781671109827199097
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  TemplateInstance {
-    ParameterOverrideMap {
-      key: 9311761055328694080
-      value {
-        Overrides {
-          Name: "Name"
-          String: "Tile-1M"
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-            X: -928.090515
-            Y: 1254.14673
-            Z: 88.823082
-          }
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-          }
-        }
-      }
-    }
-    TemplateAsset {
-      Id: 13051420648622565002
-    }
   }
 }
 Objects {

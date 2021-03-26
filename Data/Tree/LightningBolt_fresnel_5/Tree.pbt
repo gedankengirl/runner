@@ -1,7 +1,7 @@
 Name: "LightningBolt_fresnel_5"
-RootId: 4719846510102767826
+RootId: 9041635321004041628
 Objects {
-  Id: 6036908092830785890
+  Id: 5536422021233651490
   Name: "Cylinder"
   Transform {
     Location {
@@ -17,7 +17,7 @@ Objects {
       Z: 0.0135293715
     }
   }
-  ParentId: 4719846510102767826
+  ParentId: 9041635321004041628
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -59,14 +59,14 @@ Objects {
     }
   }
   InstanceHistory {
-    SelfId: 6036908092830785890
-    SubobjectId: 9625765652933725972
+    SelfId: 5536422021233651490
+    SubobjectId: 11135048163173417300
     InstanceId: 5519564275000209712
     TemplateId: 12943947732222281349
   }
 }
 Objects {
-  Id: 9007778064270276537
+  Id: 10671957808491322116
   Name: "Prism - 3-Sided"
   Transform {
     Location {
@@ -84,7 +84,7 @@ Objects {
       Z: -0.0481789336
     }
   }
-  ParentId: 4719846510102767826
+  ParentId: 9041635321004041628
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -138,14 +138,14 @@ Objects {
     }
   }
   InstanceHistory {
-    SelfId: 9007778064270276537
-    SubobjectId: 12344647352797878735
+    SelfId: 10671957808491322116
+    SubobjectId: 4776234693090456946
     InstanceId: 5519564275000209712
     TemplateId: 12943947732222281349
   }
 }
 Objects {
-  Id: 8833119005756792913
+  Id: 8766446525967214743
   Name: "Prism - 3-Sided"
   Transform {
     Location {
@@ -163,7 +163,7 @@ Objects {
       Z: -0.0481789336
     }
   }
-  ParentId: 4719846510102767826
+  ParentId: 9041635321004041628
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -217,8 +217,8 @@ Objects {
     }
   }
   InstanceHistory {
-    SelfId: 8833119005756792913
-    SubobjectId: 12450055896228941351
+    SelfId: 8766446525967214743
+    SubobjectId: 12680550623232575201
     InstanceId: 5519564275000209712
     TemplateId: 12943947732222281349
   }
