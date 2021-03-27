@@ -186,6 +186,15 @@ local _SETTING_METHODS = not CORE_ENV and {} or {
         end,
         set=function(obj, c) obj:SetColor(c) end,
         lerp = _lerp_color_02
+    },
+    -- `U` Prefix for "User defined objects"
+    UPosition = {
+        get=function(obj) return obj:GetPosition() end,
+        set=function(obj, v) obj:SetPosition(v) end,
+    },
+    UScale = {
+        get=function(obj) return obj:GetScale() end,
+        set=function(obj, v) obj:SetScale(v) end,
     }
 }
 
@@ -484,7 +493,7 @@ _sa_worker = function()
             local onFinish = _on_finish_to_run[i]
             _on_finish_to_run[i] = nil
             local ok, msg = pcall(onFinish)
-            if not ok then warn(msg) end
+            if not ok then warn("ERROR: onFinish: " .. msg) end
         end
         -- add pending animations
         for i=1, #_animations_to_run do

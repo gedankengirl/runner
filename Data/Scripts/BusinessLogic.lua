@@ -175,19 +175,26 @@ local function addLifetimeCoins(player, n)
     BusinessLogic.SaveKey(player, LIFETIME_COINS_KEY, coins_div + n/LIFETIME_COINS_KEY_DIV)
 end
 
-local function addCoins(player, multiplier)
-    assert(Environment.IsServer())
+local function calcCoinPortion(player, multiplier)
     assert(player and player:IsA('Player'))
     assert(type(multiplier) == 'number' and multiplier >= 1 and multiplier <= MAX_MULTIPLIER)
     local petsBonus = player:GetResource(PET_BONUS_KEY) or _KEY_DEFAULTS[PET_BONUS_KEY]
     local rebirth = player:GetResource(REBIRTH_KEY) or _KEY_DEFAULTS[REBIRTH_KEY]
-    local n =  (BASE_CPS + rebirth + petsBonus) * multiplier
-    local coins = n + (player:GetResource(COIN_KEY) or _KEY_DEFAULTS[COIN_KEY])
+    local portion =  (BASE_CPS + rebirth + petsBonus) * multiplier
+    return portion
+end
+
+local function addCoins(player, multiplier)
+    assert(Environment.IsServer())
+    local portion = calcCoinPortion(player, multiplier)
+    local coins = portion + (player:GetResource(COIN_KEY) or _KEY_DEFAULTS[COIN_KEY])
     _setSpeed(player, coins)
     if DEBUG then
-        print(string.format("%s %d %d %d", player.name, n//1, coins//1, player.maxWalkSpeed//1))
+        print(string.format("%s %d %d %d", player.name, portion//1, coins//1, player.maxWalkSpeed//1))
     end
 end
+
+
 
 local function addGems(player, ng)
     if ng <= 0 then return end
@@ -269,6 +276,12 @@ function BusinessLogic.SaveKey(player, key, datum)
        -- TODO: test retry save
        _retry_save({player, data})
     end
+end
+
+function BusinessLogic.GetResource(player, key)
+    assert(player)
+    assert(_KEY_DEFAULTS[key], key)
+    return player:GetResource(key) or _KEY_DEFAULTS[key]
 end
 
 function BusinessLogic.CanBuyEgg(player, egg_id, grid)
@@ -355,6 +368,7 @@ end
 BusinessLogic.formatNumber = formatNumber
 BusinessLogic.onClick = onSpeedAbilityClick
 BusinessLogic.addCoins = addCoins
+BusinessLogic.calcCoinPortion = calcCoinPortion
 BusinessLogic.addGems = addGems
 BusinessLogic.subtractGems = subtractGems
 BusinessLogic.isRebirthPossible = isRebirthPossible

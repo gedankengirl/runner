@@ -215,16 +215,11 @@ Assets {
           }
         }
         ParentId: 5300870412525512097
+        ChildIds: 8347669733277354332
         ChildIds: 13007847853423586101
         ChildIds: 11557133986988323875
         ChildIds: 1096840467246655666
         UnregisteredParameters {
-          Overrides {
-            Name: "cs:DOWNLINK"
-            ObjectReference {
-              SubObjectId: 8236639499394735860
-            }
-          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
@@ -236,6 +231,35 @@ Assets {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
         NetworkContext {
+        }
+      }
+      Objects {
+        Id: 8347669733277354332
+        Name: "LocalViewPool"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 2415398450263118494
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsFilePartition: true
+          FilePartitionName: "LocalViewPool"
         }
       }
       Objects {
@@ -438,6 +462,7 @@ Assets {
           }
         }
         ParentId: 2415398450263118494
+        ChildIds: 5386499221420762344
         ChildIds: 3161102089242200769
         ChildIds: 6644879288469022771
         Collidable_v2 {
@@ -469,6 +494,227 @@ Assets {
               }
             }
           }
+        }
+      }
+      Objects {
+        Id: 5386499221420762344
+        Name: "HUD"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 1096840467246655666
+        ChildIds: 10528142225235023619
+        ChildIds: 9061630006185558539
+        ChildIds: 8671233795141583232
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Control {
+          Width: 100
+          Height: 120
+          RenderTransformPivot {
+            Anchor {
+              Value: "mc:euianchor:middlecenter"
+            }
+          }
+          UseParentWidth: true
+          Panel {
+          }
+          AnchorLayout {
+            SelfAnchor {
+              Anchor {
+                Value: "mc:euianchor:topcenter"
+              }
+            }
+            TargetAnchor {
+              Anchor {
+                Value: "mc:euianchor:topcenter"
+              }
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 10528142225235023619
+        Name: "HUD_SpeedCoinCount"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 5386499221420762344
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Control {
+          Width: 200
+          Height: 60
+          UIX: 150
+          UIY: 12
+          RenderTransformPivot {
+            Anchor {
+              Value: "mc:euianchor:middlecenter"
+            }
+          }
+          UseParentHeight: true
+          Text {
+            Label: "9999K"
+            Color {
+              R: 1
+              G: 1
+              B: 1
+              A: 1
+            }
+            Size: 48
+            Justification {
+              Value: "mc:etextjustify:left"
+            }
+            AutoWrapText: true
+            Font {
+              Id: 841534158063459245
+            }
+          }
+          AnchorLayout {
+            SelfAnchor {
+              Anchor {
+                Value: "mc:euianchor:topcenter"
+              }
+            }
+            TargetAnchor {
+              Anchor {
+                Value: "mc:euianchor:topcenter"
+              }
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 9061630006185558539
+        Name: "GameClientHUD"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 5386499221420762344
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:HUD"
+            ObjectReference {
+              SubObjectId: 5386499221420762344
+            }
+          }
+          Overrides {
+            Name: "cs:SpeedCoinsText"
+            ObjectReference {
+              SubObjectId: 10528142225235023619
+            }
+          }
+          Overrides {
+            Name: "cs:LocalViewPool"
+            ObjectReference {
+              SubObjectId: 8347669733277354332
+            }
+          }
+          Overrides {
+            Name: "cs:LocalViewBonus"
+            AssetReference {
+              Id: 8102172570516142940
+            }
+          }
+          Overrides {
+            Name: "cs:UI_BonusText32"
+            AssetReference {
+              Id: 3689252144332479829
+            }
+          }
+          Overrides {
+            Name: "cs:LightningBolt_Icon"
+            AssetReference {
+              Id: 14130570800347747792
+            }
+          }
+          Overrides {
+            Name: "cs:PopSound"
+            ObjectReference {
+              SelfId: 3274377218464808505
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 2763577414449177397
+          }
+        }
+      }
+      Objects {
+        Id: 8671233795141583232
+        Name: "BonusTextPool"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 5386499221420762344
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsFilePartition: true
+          FilePartitionName: "BonusTextPool"
         }
       }
       Objects {
