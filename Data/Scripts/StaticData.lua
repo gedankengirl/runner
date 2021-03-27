@@ -44,6 +44,30 @@ local RARITY_INFO = {
     [RARITY.GODLY] = {name="Godly", color=Color.YELLOW},
 }
 
+local BonusDb do
+    BonusDb = {
+        [01] = {"Orb" , rarity=RARITY.COMMON, mult=2},
+        [02] = {"Orb" , rarity=RARITY.UNCOMMON, mult=3},
+        [03] = {"Orb" , rarity=RARITY.RARE, mult=4},
+        [04] = {"Orb" , rarity=RARITY.EPIC, mult=5},
+        [05] = {"Orb" , rarity=RARITY.LEGENDARY, mult=6},
+        [06] = {"Orb" , rarity=RARITY.MYTHIC, mult=7},
+        [07] = {"Orb" , rarity=RARITY.GODLY, mult=8},
+        [08] = {},
+        [09] = {},
+        [10] = {},
+        [11] = {"Hoop" , rarity=RARITY.COMMON, mult=6},
+        [12] = {"Hoop" , rarity=RARITY.UNCOMMON, mult=7},
+        [13] = {"Hoop" , rarity=RARITY.RARE, mult=8},
+        [14] = {"Hoop" , rarity=RARITY.EPIC, mult=9},
+        [15] = {"Hoop" , rarity=RARITY.LEGENDARY, mult=10},
+        [16] = {"Hoop" , rarity=RARITY.MYTHIC, mult=11},
+        [17] = {"Hoop" , rarity=RARITY.GODLY, mult=12},
+        [18] = {},
+        [19] = {},
+        [20] = {},
+    }
+end
 -- name, rarity, upgrade, bonus, muid, [next upgrade id]
 local PetDb, EggDb do
     local kName, kRarity, kUpgrade, kBonus, kMuid, kNextUpgradeId = 1, 2, 3, 4, 5
@@ -434,6 +458,7 @@ INVENTORY_SHAPE[12] = {
     1,1,1,1,1,1,1,1,1,1,1,1,1,
 }
 
+StaticData.BonusDb = BonusDb
 StaticData.PetDb = PetDb
 StaticData.EggDb = EggDb
 StaticData.FancyPetNamesByName = FancyPetNamesByName
