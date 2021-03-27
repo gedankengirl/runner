@@ -49,11 +49,11 @@ local PetDb, EggDb do
     local kName, kRarity, kUpgrade, kBonus, kMuid, kNextUpgradeId = 1, 2, 3, 4, 5
     PetDb = {
         -- 0
-        [01]  = {"Chick",   RARITY.COMMON, UPGRADE.NO_UPGRADE,    1, "821511D1C7002F28:$Chick_1_ClientContext"},
-        [02]  = {"Chick",   RARITY.COMMON, UPGRADE.GOLDEN,        2, "AE88EDEA52C27A49:$Chick_2_ClientContext"},
-        [03]  = {"Chick",   RARITY.COMMON, UPGRADE.DIAMOND,       3, "5E8CE4DCFD91C75E:$Chick_3_ClientContext"},
-        [04]  = {"Chick",   RARITY.COMMON, UPGRADE.EMERALD,       4, "5E8CE4DCFD91C75E:$Chick_3_ClientContext"},
-        [05]  = {"Chick",   RARITY.COMMON, UPGRADE.RUBY,          5, "5E8CE4DCFD91C75E:$Chick_3_ClientContext"},
+        [01]  = {"Chick",   RARITY.COMMON, UPGRADE.NO_UPGRADE,    2, "821511D1C7002F28:$Chick_1_ClientContext"},
+        [02]  = {"Chick",   RARITY.COMMON, UPGRADE.GOLDEN,        3, "AE88EDEA52C27A49:$Chick_2_ClientContext"},
+        [03]  = {"Chick",   RARITY.COMMON, UPGRADE.DIAMOND,       5, "5E8CE4DCFD91C75E:$Chick_3_ClientContext"},
+        [04]  = {"Chick",   RARITY.COMMON, UPGRADE.EMERALD,       7, "5E8CE4DCFD91C75E:$Chick_3_ClientContext"},
+        [05]  = {"Chick",   RARITY.COMMON, UPGRADE.RUBY,          9, "5E8CE4DCFD91C75E:$Chick_3_ClientContext"},
 
         -- 1
         [06]  = {"Bee",     RARITY.COMMON, UPGRADE.NO_UPGRADE,    6,  "657199ADF67F7CF8:$Bee_1_ClientContext"},
