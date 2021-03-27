@@ -111,7 +111,7 @@ local MAX_SPR = SP.New(0.7, 1.0)
 local Z_SPR = SP.New(0.9, 1.0)
 local AWAY_SPR = SP.New(1, 0.5)
 local HEAVEN = Vector3.New(0, 0, 700)
-local SLOW_SQ = 1E4
+local SLOW_SQ = 1E6
 local Z_OFFSET = Vector3.UP*-65
 
 local PET_LOOKAT_TARGET = World.SpawnAsset("15DDE9D1C41FD428:EmptyObject")
@@ -181,6 +181,7 @@ end
 function PetAnimator:Update(dt, target_transform, target_velocity, n_pets)
     local pet = self.pet
     if not pet then return end
+    target_velocity.z = 0
     local is_slow = target_velocity.sizeSquared < SLOW_SQ
     local spring, zspring = self.spring, self.zspring
     spring:SetSpringParams(is_slow and self.min_spr or self.max_spr)
