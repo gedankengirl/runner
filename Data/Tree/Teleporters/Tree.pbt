@@ -1,4 +1,4 @@
-Name: "Teleports"
+Name: "Teleporters"
 RootId: 10966550013016146936
 Objects {
   Id: 8242733357257470304

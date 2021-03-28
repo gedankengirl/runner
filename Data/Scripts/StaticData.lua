@@ -279,10 +279,10 @@ end
 local AreaLvlReq = {
     Hub       = 0,  -- 0
     Garden    = 1,  -- 1K
-    Graveyard = 10, -- 76K
+    Graveyard = 6, -- 76K
     Tropical  = 12, -- 200K
     Disco     = 15, -- 843K
-    Forest    = 18, -- 3.57MM
+    Forest    = 20, -- 3.57MM
 }
 
 local AreaColor = {

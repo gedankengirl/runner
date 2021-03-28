@@ -77,7 +77,7 @@ Objects {
         }
         Overrides {
           Name: "cs:CooldownPeriod"
-          Float: 15
+          Float: 30
         }
       }
     }
