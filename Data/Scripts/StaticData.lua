@@ -276,13 +276,16 @@ function PetDb:FullPetNameById(id)
 end
 
 -- NOTE: Rebirth hard cap = 31 (1.86B)
+-- 01=1K   02=2K   03=3K   04=4.K  05=7K   06=11K  07=18K  08=30K  09=47K  10=76K
+-- 11=123K 12=200K 13=320K 14=520K 15=840K 16=1.4M 17=2.2M 18=3.6M 19=5.8M 20=9.4M
+-- 21=15M  22=25M  23=40M  24=64M  25=104M 26=168M 27=271M 28=439M 29=710M 30=1.2B
 local AreaLvlReq = {
     Hub       = 0,  -- 0
     Garden    = 1,  -- 1K
-    Graveyard = 6, -- 76K
+    Graveyard = 6,  -- 11K
     Tropical  = 12, -- 200K
     Disco     = 15, -- 843K
-    Forest    = 20, -- 3.57MM
+    Forest    = 20, -- 9.35M
 }
 
 local AreaColor = {
