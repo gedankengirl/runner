@@ -52,6 +52,7 @@ Assets {
         }
         ParentId: 3638747790057736030
         ChildIds: 11443770541514338263
+        ChildIds: 18098018971099837701
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -140,6 +141,73 @@ Assets {
         Script {
           ScriptAsset {
             Id: 12642920618468124652
+          }
+        }
+      }
+      Objects {
+        Id: 18098018971099837701
+        Name: "ClientContext"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 11299040429736399793
+        ChildIds: 18031211952566242142
+        WantsNetworking: true
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        NetworkContext {
+        }
+      }
+      Objects {
+        Id: 18031211952566242142
+        Name: "ClickAbilityClient"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 18098018971099837701
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:ClickAbility"
+            ObjectReference {
+              SubObjectId: 11299040429736399793
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 3168707096465901022
           }
         }
       }
