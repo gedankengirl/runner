@@ -51,6 +51,12 @@ Assets {
               Id: 5147190332510817502
             }
           }
+          Overrides {
+            Name: "cs:PriceWindow"
+            ObjectReference {
+              SubObjectId: 7412002194565564235
+            }
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -338,6 +344,7 @@ Assets {
         ChildIds: 973490565226707146
         ChildIds: 58584741166383620
         ChildIds: 16890725571902664328
+        ChildIds: 16503010296497784772
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
         }
@@ -7269,6 +7276,264 @@ Assets {
         }
       }
       Objects {
+        Id: 16503010296497784772
+        Name: "PriceTagAtPetStand"
+        Transform {
+          Location {
+            X: 1.86804676
+            Y: -138.927475
+            Z: -190.266617
+          }
+          Rotation {
+            Roll: -20
+          }
+          Scale {
+            X: 0.834612489
+            Y: 0.834612489
+            Z: 0.834612489
+          }
+        }
+        ParentId: 4648180609797889792
+        ChildIds: 15707973971441354900
+        ChildIds: 4476665805023005653
+        ChildIds: 7412002194565564235
+        ChildIds: 7219219417403013531
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsFilePartition: true
+        }
+      }
+      Objects {
+        Id: 15707973971441354900
+        Name: "Gear - generic large solid"
+        Transform {
+          Location {
+          }
+          Rotation {
+            Yaw: 89.9999924
+          }
+          Scale {
+            X: 0.999999702
+            Y: 0.123515725
+            Z: 1
+          }
+        }
+        ParentId: 16503010296497784772
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 10344572814609721272
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.463541657
+              G: 0.0473002568
+              B: 0.0170280635
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: true
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 17022891752112639265
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          StaticMesh {
+            Physics {
+              Mass: 100
+              LinearDamping: 0.01
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 4476665805023005653
+        Name: "Ring - Beveled Thin"
+        Transform {
+          Location {
+            X: 0.45
+            Y: -1.07334913e-07
+          }
+          Rotation {
+            Pitch: 90
+            Yaw: 180
+            Roll: 180
+          }
+          Scale {
+            X: 0.791717231
+            Y: 0.791717231
+            Z: 0.0977032
+          }
+        }
+        ParentId: 16503010296497784772
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 11259929999270036456
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: true
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.698000073
+              G: 0.498571396
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 6402680484513847234
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          StaticMesh {
+            Physics {
+              Mass: 100
+              LinearDamping: 0.01
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 7412002194565564235
+        Name: "PriceWindow"
+        Transform {
+          Location {
+            X: 2.4648428
+            Y: -5.87664488e-07
+            Z: 4.95455933
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1.63495374
+            Y: 1.63495374
+            Z: 1.63495374
+          }
+        }
+        ParentId: 16503010296497784772
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Text {
+          Text: "100"
+          FontAsset {
+            Id: 11701932446705159886
+          }
+          Color {
+            R: 0.698000073
+            G: 0.498571396
+            A: 1
+          }
+          HorizontalSize: 1
+          VerticalSize: 1
+          HorizontalAlignment {
+            Value: "mc:ecoretexthorizontalalign:center"
+          }
+          VerticalAlignment {
+            Value: "mc:ecoretextverticalalign:center"
+          }
+        }
+      }
+      Objects {
+        Id: 7219219417403013531
+        Name: "World Text"
+        Transform {
+          Location {
+            X: 2.4648428
+            Y: -5.87664488e-07
+            Z: -13.0651245
+          }
+          Rotation {
+            Yaw: 6.83018516e-06
+          }
+          Scale {
+            X: 0.782334149
+            Y: 0.782334149
+            Z: 0.782334149
+          }
+        }
+        ParentId: 16503010296497784772
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Text {
+          Text: "speed"
+          FontAsset {
+            Id: 11701932446705159886
+          }
+          Color {
+            R: 0.698000073
+            G: 0.498571396
+            A: 1
+          }
+          HorizontalSize: 1
+          VerticalSize: 1
+          HorizontalAlignment {
+            Value: "mc:ecoretexthorizontalalign:center"
+          }
+          VerticalAlignment {
+            Value: "mc:ecoretextverticalalign:center"
+          }
+        }
+      }
+      Objects {
         Id: 3257178673025151841
         Name: "Cylinder - Bottom-Aligned"
         Transform {
@@ -7468,6 +7733,33 @@ Assets {
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
         AssetId: "sm_cone_truncated_hollow_002"
+      }
+    }
+    Assets {
+      Id: 17022891752112639265
+      Name: "Gear - generic large solid"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_gen_gear_001"
+      }
+    }
+    Assets {
+      Id: 6402680484513847234
+      Name: "Ring - Beveled Thin"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_ring_faceted_002"
+      }
+    }
+    Assets {
+      Id: 11259929999270036456
+      Name: "Clear Coat 01"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_clear-coat_001"
       }
     }
     Assets {

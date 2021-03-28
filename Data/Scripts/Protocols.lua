@@ -164,7 +164,7 @@ Protocols.SOCIAL = SOCIAL
 
 -- Static
 Protocols.STATIC = {
-    StaticPickup = "@StaticPickup" -- player, tag, amount, pos
+    StaticPickup = "@StaticPickup" -- player, boosterId, pos
 }
 
 -- C2S

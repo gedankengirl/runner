@@ -4,6 +4,7 @@ local SA = _G.req("_SpringAnimator")
 local SP = SA.SpringParams
 local S = _G.req("StaticData")
 local P = _G.req("Protocols")
+local formatNumToShort = _G.req("BusinessLogic").formatNumber
 local _maid = Maid.New(script)
 local _session_maid = Maid.New()
 _maid.session_maid = _session_maid
@@ -26,7 +27,7 @@ local PIPE_COLOR_BW = PIPE_COLOR:GetDesaturated(0.5)
 -- UI
 local UI_CONTAINER = script:GetCustomProperty("StandUIContainer"):WaitForObject()
 local BUY_BUTTON = script:GetCustomProperty("BuyButton"):WaitForObject()
-BUY_BUTTON.text = tostring(S.EggDb[EGG_ID].price).." Speed"
+BUY_BUTTON.text = formatNumToShort(S.EggDb[EGG_ID].price).." speed"
 local BUY_BUTTON_POS = Vector2.New(BUY_BUTTON.x, BUY_BUTTON.y)
 local EXIT_BUTTON = script:GetCustomProperty("ExitButton"):WaitForObject()
 local EXIT_BUTTON_POS = Vector2.New(EXIT_BUTTON.x, EXIT_BUTTON.y)

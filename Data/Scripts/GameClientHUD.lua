@@ -194,11 +194,11 @@ if Environment.IsSinglePlayerPreview() then
 end
 
 -- "@StaticPickup", player, RESOURCE_TAG, RESOURCE_AMOUNT, TRIGGER:GetWorldPosition()
-_maid.bonuses = Events.Connect("@StaticPickup", function(player, tag, mult, pos)
+_maid.bonuses = Events.Connect(P.STATIC.StaticPickup, function(player, boosterId, pos)
     if player == LOCAL_PLAYER then
-        local portion = B.calcCoinPortion(player, mult)
-        -- TODO: rarity
-        Bubble.Show(portion)
+        local entry = S.BoosterDb[boosterId]
+        local portion = B.calcCoinPortion(player, entry.mult)
+        Bubble.Show(portion, entry.rarity)
     end
 end)
 

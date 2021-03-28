@@ -15,22 +15,10 @@ Assets {
             Z: 4.5
           }
         }
-        ParentId: 3122736014753232819
-        ChildIds: 6556014175865174055
+        ParentId: 17599996129861414502
+        ChildIds: 2780792272697943552
         ChildIds: 11941171325061992523
         UnregisteredParameters {
-          Overrides {
-            Name: "cs:ResourceTag"
-            String: "Multiplier"
-          }
-          Overrides {
-            Name: "cs:ResourceAmount"
-            Int: 7
-          }
-          Overrides {
-            Name: "cs:RespawnDelay"
-            Float: 5
-          }
           Overrides {
             Name: "cs:GeoTemplate"
             AssetReference {
@@ -42,6 +30,10 @@ Assets {
             ObjectReference {
               SubObjectId: 11941171325061992523
             }
+          }
+          Overrides {
+            Name: "cs:Id"
+            Int: 12
           }
         }
         Collidable_v2 {
@@ -64,17 +56,17 @@ Assets {
         }
       }
       Objects {
-        Id: 6556014175865174055
-        Name: "StaticPickup-Ring"
+        Id: 2780792272697943552
+        Name: "StaticPickup"
         Transform {
           Location {
           }
           Rotation {
           }
           Scale {
-            X: 0.219681352
-            Y: 0.219681352
-            Z: 0.219681352
+            X: 0.222222224
+            Y: 0.222222224
+            Z: 0.222222224
           }
         }
         ParentId: 1485507658815784485
@@ -97,7 +89,7 @@ Assets {
         }
         Script {
           ScriptAsset {
-            Id: 6297295803900465227
+            Id: 16660452335456744765
           }
         }
       }

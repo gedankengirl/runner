@@ -10,27 +10,15 @@ Assets {
         Name: "BoosterPickup-Static-Epic"
         Transform {
           Scale {
-            X: 1
-            Y: 1
-            Z: 1
+            X: 2
+            Y: 2
+            Z: 2
           }
         }
         ParentId: 4781671109827199097
         ChildIds: 3984532467215322407
         ChildIds: 7534572849123961818
         UnregisteredParameters {
-          Overrides {
-            Name: "cs:ResourceTag"
-            String: "Multiplier"
-          }
-          Overrides {
-            Name: "cs:ResourceAmount"
-            Int: 5
-          }
-          Overrides {
-            Name: "cs:RespawnDelay"
-            Float: 3
-          }
           Overrides {
             Name: "cs:GeoTemplate"
             AssetReference {
@@ -42,6 +30,10 @@ Assets {
             ObjectReference {
               SubObjectId: 7534572849123961818
             }
+          }
+          Overrides {
+            Name: "cs:Id"
+            Int: 4
           }
         }
         Collidable_v2 {
@@ -111,9 +103,9 @@ Assets {
           Rotation {
           }
           Scale {
-            X: 1
-            Y: 1
-            Z: 1
+            X: 0.5
+            Y: 0.5
+            Z: 0.5
           }
         }
         ParentId: 12363151860168280099

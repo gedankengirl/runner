@@ -35,7 +35,7 @@ local RARITY = {
 
 -- FIXME: capitalize rarity names back
 local RARITY_INFO = {
-    [RARITY.COMMON] = {name="Common", color=Color.TAN},
+    [RARITY.COMMON] = {name="Common", color=Color.FromLinearHex("FFECA8FF")},
     [RARITY.UNCOMMON] = {name="Uncommon", color=Color.New(.043, 0.42, 0)},
     [RARITY.RARE] = {name="Rare", color=Color.New(0, 0.28, 0.8)},
     [RARITY.EPIC] = {name="Epic", color=Color.New(0.86, 0, 0.35)},
@@ -44,25 +44,25 @@ local RARITY_INFO = {
     [RARITY.GODLY] = {name="Godly", color=Color.YELLOW},
 }
 
-local BonusDb do
-    BonusDb = {
-        [01] = {"Orb" , rarity=RARITY.COMMON, mult=2},
-        [02] = {"Orb" , rarity=RARITY.UNCOMMON, mult=3},
-        [03] = {"Orb" , rarity=RARITY.RARE, mult=4},
-        [04] = {"Orb" , rarity=RARITY.EPIC, mult=5},
-        [05] = {"Orb" , rarity=RARITY.LEGENDARY, mult=6},
-        [06] = {"Orb" , rarity=RARITY.MYTHIC, mult=7},
-        [07] = {"Orb" , rarity=RARITY.GODLY, mult=8},
+local BoosterDb do
+    BoosterDb = {
+        [01] = {"Orb" , rarity=RARITY.COMMON, mult=2, delay = 3, scale = .5},
+        [02] = {"Orb" , rarity=RARITY.UNCOMMON, mult=3, delay = 3, scale = .5},
+        [03] = {"Orb" , rarity=RARITY.RARE, mult=4, delay = 3, scale = .5},
+        [04] = {"Orb" , rarity=RARITY.EPIC, mult=5, delay = 3, scale = .5},
+        [05] = {"Orb" , rarity=RARITY.LEGENDARY, mult=6, delay = 3, scale = .5},
+        [06] = {"Orb" , rarity=RARITY.MYTHIC, mult=7, delay = 3, scale = .5},
+        [07] = {"Orb" , rarity=RARITY.GODLY, mult=8, delay = 3, scale = .5},
         [08] = {},
         [09] = {},
         [10] = {},
-        [11] = {"Hoop" , rarity=RARITY.COMMON, mult=6},
-        [12] = {"Hoop" , rarity=RARITY.UNCOMMON, mult=7},
-        [13] = {"Hoop" , rarity=RARITY.RARE, mult=8},
-        [14] = {"Hoop" , rarity=RARITY.EPIC, mult=9},
-        [15] = {"Hoop" , rarity=RARITY.LEGENDARY, mult=10},
-        [16] = {"Hoop" , rarity=RARITY.MYTHIC, mult=11},
-        [17] = {"Hoop" , rarity=RARITY.GODLY, mult=12},
+        [11] = {"Hoop" , rarity=RARITY.COMMON, mult=6, delay = 5, scale = .15},
+        [12] = {"Hoop" , rarity=RARITY.UNCOMMON, mult=7, delay = 5, scale = .15},
+        [13] = {"Hoop" , rarity=RARITY.RARE, mult=8, delay = 5, scale = .15},
+        [14] = {"Hoop" , rarity=RARITY.EPIC, mult=9, delay = 5, scale = .15},
+        [15] = {"Hoop" , rarity=RARITY.LEGENDARY, mult=10, delay = 5, scale = .15},
+        [16] = {"Hoop" , rarity=RARITY.MYTHIC, mult=11, delay = 5, scale = .15},
+        [17] = {"Hoop" , rarity=RARITY.GODLY, mult=12, delay = 5, scale = .15},
         [18] = {},
         [19] = {},
         [20] = {},
@@ -458,7 +458,7 @@ INVENTORY_SHAPE[12] = {
     1,1,1,1,1,1,1,1,1,1,1,1,1,
 }
 
-StaticData.BonusDb = BonusDb
+StaticData.BoosterDb = BoosterDb
 StaticData.PetDb = PetDb
 StaticData.EggDb = EggDb
 StaticData.FancyPetNamesByName = FancyPetNamesByName

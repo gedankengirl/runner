@@ -6,8 +6,8 @@ local sound = script:GetCustomProperty("BoosterSound"):WaitForObject()
 
 assert(Environment.IsClient())
 
-_maid.boosterSound = Events.Connect(P.STATIC.StaticPickup, function(player, resourseTag, resourceAmount, pos)
-    if player == LOCAL_PLAYER and resourseTag == "Multiplier" then
+_maid.boosterSound = Events.Connect(P.STATIC.StaticPickup, function(player, boosterId, _pos)
+    if player == LOCAL_PLAYER then
         sound:Play()
     end
 end)

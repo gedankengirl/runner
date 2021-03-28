@@ -113,7 +113,6 @@ Assets {
           FadeInTime: 0.1
           IsSpatializationEnabled: true
           IsAttenuationEnabled: true
-          StopTime: 0.15
         }
       }
       Objects {
