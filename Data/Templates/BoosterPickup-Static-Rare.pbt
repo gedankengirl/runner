@@ -33,7 +33,7 @@ Assets {
           }
           Overrides {
             Name: "cs:Id"
-            Int: 2
+            Int: 3
           }
         }
         Collidable_v2 {
@@ -43,7 +43,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
+          Value: "mc:ecollisionsetting:forceoff"
         }
         Trigger {
           TeamSettings {
