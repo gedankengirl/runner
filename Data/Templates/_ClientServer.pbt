@@ -666,12 +666,6 @@ Assets {
               Id: 14130570800347747792
             }
           }
-          Overrides {
-            Name: "cs:PopSound"
-            ObjectReference {
-              SelfId: 3274377218464808505
-            }
-          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
