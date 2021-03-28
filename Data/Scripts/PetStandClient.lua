@@ -1,10 +1,11 @@
+local DEBUG = true
 local Maid = _G.req("Maid")
 local REvents = _G.req("ReliableEvents")
 local SA = _G.req("_SpringAnimator")
 local SP = SA.SpringParams
 local S = _G.req("StaticData")
 local P = _G.req("Protocols")
-local formatNumToShort = _G.req("BusinessLogic").formatNumber
+local B = _G.req("BusinessLogic")
 local _maid = Maid.New(script)
 local _session_maid = Maid.New()
 _maid.session_maid = _session_maid
@@ -14,7 +15,7 @@ local CAMERA = script:GetCustomProperty("Camera"):WaitForObject()
 local PET_STAND = script:GetCustomProperty("PetStand"):WaitForObject()
 local THIS_STAND_ID = PET_STAND.id
 local EGG_ID = PET_STAND:GetCustomProperty("EggId")
-
+if DEBUG then print("STAND EGG_ID", EGG_ID) end
 local SIGNBOARD = script:GetCustomProperty("DroidGeo"):WaitForObject()
 
 
@@ -27,7 +28,9 @@ local PIPE_COLOR_BW = PIPE_COLOR:GetDesaturated(0.5)
 -- UI
 local UI_CONTAINER = script:GetCustomProperty("StandUIContainer"):WaitForObject()
 local BUY_BUTTON = script:GetCustomProperty("BuyButton"):WaitForObject()
-BUY_BUTTON.text = formatNumToShort(S.EggDb[EGG_ID].price).." speed"
+
+local MAX_UNFORMATTED_PRICE = 10000
+BUY_BUTTON.text = B.formatNumber(S.EggDb[EGG_ID].price, MAX_UNFORMATTED_PRICE).." speed"
 local BUY_BUTTON_POS = Vector2.New(BUY_BUTTON.x, BUY_BUTTON.y)
 local EXIT_BUTTON = script:GetCustomProperty("ExitButton"):WaitForObject()
 local EXIT_BUTTON_POS = Vector2.New(EXIT_BUTTON.x, EXIT_BUTTON.y)
@@ -35,6 +38,8 @@ local EXIT_BUTTON_POS = Vector2.New(EXIT_BUTTON.x, EXIT_BUTTON.y)
 local SIGNBOARD_AMPLITUDE = Vector3.New(0, 0, 20)
 local PURCHASE_AUDIO1 = script:GetCustomProperty("PurchaseAudio1"):WaitForObject()
 local PURCHASE_AUDIO2 = script:GetCustomProperty("PurchaseAudio2"):WaitForObject()
+local EGG_CRACKING_AUDIO = script:GetCustomProperty("EggCrackingSound"):WaitForObject()
+
 local WORLD_TEXT = script:GetCustomProperty("WorldText"):WaitForObject()
 local DEFAULT_TEXT = WORLD_TEXT.text
 local FLY_UP_TEXT_BIG_RED = {color = Color.RED, isBig = true}
@@ -176,11 +181,13 @@ local OnEnterShop, OnLeaveShop, OnCanBuyEgg, OnEggHatched do
         local mark = PET_MARKS[#PET_MARKS] -- last mark for hatching
         PIPE_SPR:ToAnim():Target("Scale", EGG_TR:GetScale())(EGG_GROUP):Run()
             :Chain(
-                HATCH_SPR:ToAnim():Impulse("Rotation", Rotation.New(45, 0, 0))(EGG_GROUP),
-                HATCH_SPR:ToAnim():Impulse("Position", Vector3.New(0, 45, 0))(EGG_GROUP),
+                HATCH_SPR:ToAnim():Impulse("Rotation", Rotation.New(45, 0, 0))(EGG_GROUP)
+                    :SetOnFinish(function() EGG_CRACKING_AUDIO:Play() end),
+                HATCH_SPR:ToAnim():Impulse("Position", Vector3.New(0, 45, 0))(EGG_GROUP)
+                    :SetOnFinish(function() EGG_CRACKING_AUDIO:Play() end),
                 HATCH_SPR:ToAnim():Impulse("Scale", 0.5*Vector3.ONE)(EGG_GROUP)
                     :SetOnFinish(function()
-                        PURCHASE_AUDIO2:Play()
+                        EGG_CRACKING_AUDIO:Play()
                         -- TODO: some VFX here
                         PIPE_SPR:ToAnim():Target("Scale", Vector3.ZERO)(EGG_GROUP):Run()
                         PIPE_SPR:ToAnim():Target("Position", mark:GetPosition())(pet):Run()

@@ -36,16 +36,17 @@ local RARITY = {
 -- FIXME: capitalize rarity names back
 local RARITY_INFO = {
     [RARITY.COMMON] = {name="Common", color=Color.FromLinearHex("FFECA8FF")},
-    [RARITY.UNCOMMON] = {name="Uncommon", color=Color.New(.043, 0.42, 0)},
-    [RARITY.RARE] = {name="Rare", color=Color.New(0, 0.28, 0.8)},
-    [RARITY.EPIC] = {name="Epic", color=Color.New(0.86, 0, 0.35)},
-    [RARITY.LEGENDARY] = {name="Legendary", color=Color.New(0.85, 0.25, 0)},
+    [RARITY.UNCOMMON] = {name="Uncommon", color=Color.New(.043, 0.42, 0), bubble=Color.GREEN},
+    [RARITY.RARE] = {name="Rare", color=Color.New(0, 0.28, 0.8), bubble=Color.BLUE},
+    [RARITY.EPIC] = {name="Epic", color=Color.New(0.86, 0, 0.35), bubble=Color.PURPLE},
+    [RARITY.LEGENDARY] = {name="Legendary", color=Color.New(0.85, 0.25, 0), bubble=Color.ORANGE},
     [RARITY.MYTHIC] = {name="Mythic", color=Color.CYAN},
-    [RARITY.GODLY] = {name="Godly", color=Color.YELLOW},
+    [RARITY.GODLY] = {name="Godly", color=Color.RED},
 }
 
 local BoosterDb do
     BoosterDb = {
+        [00] = {"Click", rarity=0, mult=1},
         [01] = {"Orb" , rarity=RARITY.COMMON, mult=2, delay = 3, scale = .5},
         [02] = {"Orb" , rarity=RARITY.UNCOMMON, mult=3, delay = 3, scale = .5},
         [03] = {"Orb" , rarity=RARITY.RARE, mult=4, delay = 3, scale = .5},

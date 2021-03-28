@@ -60,9 +60,10 @@ local randomseed = xoshiro256.randomseed
 --------------------
 
 local _tiers = {"K", "M", "B", "T", "Q"}
-local function formatNumber(n)
+local function formatNumber(n, max_unformatted)
+    max_unformatted = max_unformatted or 100000
     n = math.tointeger(n) or n//1
-    if n < 100000 then return tostring(n) end
+    if n < max_unformatted then return tostring(n) end
     local tier = math.log(n, 10)//3
     n = n / 10^(3*tier)
     return string.format("%.4g%s", n, _tiers[tier])

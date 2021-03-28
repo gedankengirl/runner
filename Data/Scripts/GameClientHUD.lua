@@ -1,9 +1,9 @@
+local DEBUG = false
 local Maid = _G.req("_Maid")
 local _maid = Maid.New(script)
 local REvents = _G.req("ReliableEvents")
 local SA = _G.req("SpringAnimator")
 local SP = SA.SpringParams
-local Spring = SA.Spring
 local B = _G.req("BusinessLogic")
 local P = _G.req("Protocols")
 local S = _G.req("StaticData")
@@ -67,11 +67,12 @@ local Bubble do
     local SPR_IN = SP.New(0.6, 2.5)
     local SPR_S  = SP.New(0.9, 13)
     local SPR_OUT = SP.New(1, 5)
+    local _no_rarity = {color=Color.WHITE}
 
     function Bubble.Show(amount, rarity_id)
-        rarity_id = rarity_id or 1
-        assert(rarity_id >= 1 and rarity_id <= S.RARITY.GODLY)
-        local rarity_info = assert(S.RARITY_INFO[rarity_id])
+        rarity_id = rarity_id or 0 -- `0` for *no rarity*, simple click
+        assert(rarity_id <= S.RARITY.GODLY)
+        local rarity_info = S.RARITY_INFO[rarity_id] or _no_rarity
         local self = Bubble.Borrow()
         self.label.text = string.format("+%d", amount)
         local res = UI.GetScreenSize()
@@ -155,6 +156,11 @@ function HUD:Start()
         local res = B.GetResource(LOCAL_PLAYER, key)
         HUD._OnResourceChanged(LOCAL_PLAYER, key, res)
     end
+    -- update
+    _maid.update = Task.Spawn(HUD._Update)
+    _maid.update.repeatCount = -1
+    _maid.update.repeatInterval = 0.5
+
 end
 
 function HUD._OnResourceChanged(_player, tag, amount)
@@ -169,7 +175,7 @@ function HUD._OnResourceChanged(_player, tag, amount)
     end
 end
 
-function HUD:Update(_dt)
+function HUD._Update()
     local res = UI.GetScreenSize()
     local x = res.x//2 - 32
     local y = 80
@@ -177,17 +183,20 @@ function HUD:Update(_dt)
 end
 
 
+-----------------------------------------------------------------------------
+-- Events
+-----------------------------------------------------------------------------
 _maid.resources = LOCAL_PLAYER.resourceChangedEvent:Connect(HUD._OnResourceChanged)
 local last_amount = 0
 
-if Environment.IsSinglePlayerPreview() then
+if Environment.IsSinglePlayerPreview() and DEBUG then
     _maid.editor_bubbles = LOCAL_PLAYER.resourceChangedEvent:Connect(
         function(player, tag, amount)
             if tag == B.COIN_KEY then
                 local delta = amount - last_amount
                 last_amount = amount
                 if delta > 0 and delta ~= amount then
-                    Bubble.Show(delta, random(1, 7))
+                    Bubble.Show(delta, random(0, 7))
                 end
             end
         end)
@@ -203,3 +212,4 @@ _maid.bonuses = Events.Connect(P.STATIC.StaticPickup, function(player, boosterId
 end)
 
 HUD:Start()
+

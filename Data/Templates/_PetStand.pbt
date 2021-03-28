@@ -1280,6 +1280,7 @@ Assets {
         ChildIds: 5087964486264413219
         ChildIds: 1844729030372781078
         ChildIds: 2436293567738665060
+        ChildIds: 11233700873265112922
         ChildIds: 2508992384837161296
         ChildIds: 1590884632463285892
         ChildIds: 18113796287324508472
@@ -1592,6 +1593,39 @@ Assets {
           Volume: 0.681214035
           Falloff: 3600
           Radius: 400
+        }
+      }
+      Objects {
+        Id: 11233700873265112922
+        Name: "Ice Cracking 01 SFX"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 9583416130571679258
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        AudioInstance {
+          AudioAsset {
+            Id: 18140107367975880245
+          }
+          Volume: 1
+          Falloff: -1
+          Radius: -1
         }
       }
       Objects {
@@ -3466,6 +3500,12 @@ Assets {
             }
           }
           Overrides {
+            Name: "cs:EggCrackingSound"
+            ObjectReference {
+              SubObjectId: 11233700873265112922
+            }
+          }
+          Overrides {
             Name: "cs:Pipe"
             ObjectReference {
               SubObjectId: 1590884632463285892
@@ -3766,6 +3806,15 @@ Assets {
       PrimaryAsset {
         AssetType: "AudioAssetRef"
         AssetId: "sfx_meta_collect_item_sparkle_02_Cue_ref"
+      }
+    }
+    Assets {
+      Id: 18140107367975880245
+      Name: "Ice Cracking 01 SFX"
+      PlatformAssetType: 7
+      PrimaryAsset {
+        AssetType: "AudioAssetRef"
+        AssetId: "sfx_ice_cracking_01_Cue_ref"
       }
     }
     Assets {
