@@ -376,6 +376,7 @@ BusinessLogic.isRebirthPossible = isRebirthPossible
 BusinessLogic.doRebirth = doRebirth
 BusinessLogic.immobilizePlayer = immobilizePlayer
 BusinessLogic.COIN_KEY = COIN_KEY
+BusinessLogic.GEM_KEY = GEM_KEY
 BusinessLogic.COIN_CAP = COIN_CAP
 BusinessLogic.REBIRTH_KEY = REBIRTH_KEY
 BusinessLogic.INVENTORY_KEY = INVENTORY_KEY

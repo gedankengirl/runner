@@ -11,10 +11,29 @@ local pp = _G.req("_Luapp").pp
 local xoshiro256 = _G.req("_Xoshiro256")
 local random = xoshiro256.random
 local randomseed = xoshiro256.randomseed
+local tan, rad = math.tan, math.rad
+local HUD_UPDATE_FPS = 5
+
+-- UI refs
+local UI_HUD = script:GetCustomProperty("HUD"):WaitForObject()
+local UI_INFO_PANEL= UI_HUD:GetCustomProperty("InfoPanel"):WaitForObject()
+local UI_PLAYER_NAME = UI_INFO_PANEL:GetCustomProperty("PlayerName"):WaitForObject()
+local UI_PLAYER_ICON = UI_INFO_PANEL:GetCustomProperty("PlayerIcon"):WaitForObject()
+local UI_REBIRTH_COUNT = UI_INFO_PANEL:GetCustomProperty("RebirthCount"):WaitForObject()
+local UI_REBIRTH_PROGRESS = UI_INFO_PANEL:GetCustomProperty("RebirthProgress"):WaitForObject()
+local UI_NEED_TO_REBIRTH_COUNT = UI_INFO_PANEL:GetCustomProperty("NeedToRebirthCount"):WaitForObject()
+local UI_SPEED_COUNT = UI_INFO_PANEL:GetCustomProperty("SpeedCoinCount"):WaitForObject()
+local UI_GEMS_COUNT = UI_INFO_PANEL:GetCustomProperty("GemsCount"):WaitForObject()
 
 local LOCAL_PLAYER = Game.GetLocalPlayer()
-local CAM = LOCAL_PLAYER:GetDefaultCamera()
-local XF = math.tan(math.rad(CAM.fieldOfView/2))
+UI_PLAYER_ICON:SetImage(LOCAL_PLAYER)
+UI_PLAYER_NAME.text = LOCAL_PLAYER.name
+
+local XF = math.tan(math.rad(LOCAL_PLAYER:GetDefaultCamera().fieldOfView/2))
+local function _update_xf()
+    XF = tan(rad(LOCAL_PLAYER:GetDefaultCamera().fieldOfView/2))
+end
+_update_xf()
 
 function _screen_position(obj, width3d, width2d, x, y)
     local res = UI.GetScreenSize()
@@ -36,18 +55,19 @@ local function uniform(a, b)
 end
 
 local HUD_UI = script:GetCustomProperty("HUD"):WaitForObject()
-local SPEED_COIN_TEXT = script:GetCustomProperty("SpeedCoinsText"):WaitForObject()
 local LOCAL_VIEW_POOL = script:GetCustomProperty("LocalViewPool"):WaitForObject()
-local LOCAL_VIEW_BONUS = script:GetCustomProperty("LocalViewBonus")
-local LOCAL_VIEW_TEXT = script:GetCustomProperty("UI_BonusText32")
-local SPEED_COIN_ICON = script:GetCustomProperty("LightningBolt_Icon")
+local LOCAL_VIEW_BONUS_TEMPLATE = script:GetCustomProperty("LocalViewBonus")
+local LOCAL_VIEW_TEXT_TEMPLATE = script:GetCustomProperty("UI_BonusText32")
+local SPEED_COIN_ICON_TEMPLATE = script:GetCustomProperty("LightningBolt_Icon")
 local BUBBLE_WIDTH_3D = 20
 local BUBBLE_WIDTH_2D = 96
 local GROW_SCALE = 1.618
 
 
-_maid.speed_coin_icon = World.SpawnAsset(SPEED_COIN_ICON)
+_maid.speed_coin_icon = World.SpawnAsset(SPEED_COIN_ICON_TEMPLATE)
 _maid.speed_coin_icon:AttachToLocalView()
+_maid.gems_icon = World.SpawnAsset(SPEED_COIN_ICON_TEMPLATE)
+_maid.gems_icon:AttachToLocalView()
 
 local Bubble do
     Bubble = {}
@@ -59,8 +79,8 @@ local Bubble do
 
     function Bubble._New()
         local self = setmetatable({pos=Vector2.ZERO}, Bubble)
-        self.bubble = World.SpawnAsset(LOCAL_VIEW_BONUS, _bubble_params)
-        self.label = World.SpawnAsset(LOCAL_VIEW_TEXT, _label_rapams)
+        self.bubble = World.SpawnAsset(LOCAL_VIEW_BONUS_TEMPLATE, _bubble_params)
+        self.label = World.SpawnAsset(LOCAL_VIEW_TEXT_TEMPLATE, _label_rapams)
         return self
     end
 
@@ -159,27 +179,39 @@ function HUD:Start()
     -- update
     _maid.update = Task.Spawn(HUD._Update)
     _maid.update.repeatCount = -1
-    _maid.update.repeatInterval = 0.5
-
+    _maid.update.repeatInterval = 1/HUD_UPDATE_FPS
 end
 
 function HUD._OnResourceChanged(_player, tag, amount)
     if tag == B.COIN_KEY then
-        SPEED_COIN_TEXT.text = B.formatNumber(amount)
+        UI_SPEED_COUNT.text = B.formatNumber(amount)
     elseif tag == B.GEM_KEY then
-        -- TODO:
+        UI_GEMS_COUNT.text = B.formatNumber(amount)
     elseif tag == B.REBIRTH_KEY then
-        -- TODO:
+        UI_REBIRTH_COUNT.text = tostring(amount)
     elseif tag == B.PET_BONUS_KEY then
-        -- TODO:
+        -- TODO: some indicator?
     end
 end
 
+local ICON_DX = -156
+local ICON_DY = 50
 function HUD._Update()
     local res = UI.GetScreenSize()
-    local x = res.x//2 - 32
-    local y = 80
-    _screen_position(_maid.speed_coin_icon, 10, 128, x, y)
+    local half_width = res.x//2
+    _update_xf()
+    local scx, scy = UI_SPEED_COUNT.x, UI_SPEED_COUNT.y
+    local gcx, gcy = UI_GEMS_COUNT.x, UI_GEMS_COUNT.y
+    _screen_position(_maid.speed_coin_icon, 10, 128, half_width + scx + ICON_DX, scy + ICON_DY)
+    _screen_position(_maid.gems_icon, 10, 128, half_width + gcx + ICON_DX, gcy + ICON_DY)
+    local possible, needed, has, _rebirth = B.isRebirthPossible(LOCAL_PLAYER)
+    if possible then
+        UI_NEED_TO_REBIRTH_COUNT.text = "You can do a rebirth"
+        UI_REBIRTH_PROGRESS.progress = 1
+    else
+        UI_REBIRTH_PROGRESS.progress = has/needed
+        UI_NEED_TO_REBIRTH_COUNT.text = B.formatNumber(needed-has).." till next rebirth"
+    end
 end
 
 
