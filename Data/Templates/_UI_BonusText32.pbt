@@ -27,9 +27,9 @@ Assets {
         }
         Control {
           Width: 220
-          Height: 60
+          Height: 48
           UIX: 1175
-          UIY: 290
+          UIY: 625
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
@@ -38,15 +38,15 @@ Assets {
           Text {
             Label: "999 Speed"
             Color {
-              R: 0.940000057
-              G: 0.728344202
-              A: 0.9
+              R: 0.914000034
+              G: 0.607743323
+              B: 0.0843053237
+              A: 1
             }
             Size: 32
             Justification {
               Value: "mc:etextjustify:center"
             }
-            ClipTextToSize: true
             Font {
               Id: 5326088473088202130
             }
