@@ -1,16 +1,18 @@
 local trigger = script.parent
 local sound = script:GetCustomProperty("Sound"):WaitForObject()
-local cooldownPeriod = script:GetCustomProperty("CooldownPeriod")
+local cooldownMin = script:GetCustomProperty("CooldownMin")
+local cooldownMax = script:GetCustomProperty("CooldownMax")
 local localPlayer = Game.GetLocalPlayer()
+local pickRandomNum = _G.req("Snippets").uniform
 
-assert (cooldownPeriod > 0, trigger)
+assert (cooldownMin > 0, trigger)
 assert (sound, trigger)
 
 function OnBeginOverlap(whichTrigger, other)
 	if other:IsA("Player") and other == localPlayer then
 		trigger.isEnabled = false
 		sound:Play()
-		Task.Wait(cooldownPeriod)
+		Task.Wait(pickRandomNum(cooldownMin, cooldownMax))
 		trigger.isEnabled = true
 	end
 end

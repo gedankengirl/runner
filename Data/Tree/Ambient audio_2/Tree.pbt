@@ -17,7 +17,7 @@ Objects {
   ParentId: 16765078477078614408
   ChildIds: 6800357833572779590
   ChildIds: 9159062821291959453
-  ChildIds: 6653210741360217558
+  ChildIds: 14934137896254845306
   ChildIds: 4647750651342109358
   Collidable_v2 {
     Value: "mc:ecollisionsetting:forceoff"
@@ -64,6 +64,11 @@ Objects {
             Z: 74.5741577
           }
         }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
       }
     }
     ParameterOverrideMap {
@@ -76,8 +81,12 @@ Objects {
           }
         }
         Overrides {
-          Name: "cs:CooldownPeriod"
-          Float: 30
+          Name: "cs:CooldownMin"
+          Float: 25
+        }
+        Overrides {
+          Name: "cs:CooldownMax"
+          Float: 60
         }
       }
     }
@@ -87,82 +96,69 @@ Objects {
   }
 }
 Objects {
-  Id: 6653210741360217558
-  Name: "Trigger"
+  Id: 14934137896254845306
+  Name: "_RSoundTrigger"
   Transform {
-    Location {
-      X: 3966.16602
-      Y: 4066.87939
-      Z: 74.5741577
-    }
-    Rotation {
-    }
     Scale {
-      X: 24.7059517
-      Y: 24.7059517
-      Z: 16.3366718
+      X: 1
+      Y: 1
+      Z: 1
     }
   }
   ParentId: 11316114688753214870
-  ChildIds: 16642166804201244503
   Collidable_v2 {
-    Value: "mc:ecollisionsetting:forceon"
+    Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Trigger {
-    TeamSettings {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    TriggerShape_v2 {
-      Value: "mc:etriggershape:sphere"
-    }
-  }
-}
-Objects {
-  Id: 16642166804201244503
-  Name: "PlaySoundOnTrigger"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 0.175214157
-      Y: 0.175214157
-      Z: 0.264976501
-    }
-  }
-  ParentId: 6653210741360217558
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:Sound"
-      ObjectReference {
-        SelfId: 6800357833572779590
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 6283574561774308347
+      value {
+        Overrides {
+          Name: "Name"
+          String: "_RSoundTrigger"
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 24.7059517
+            Y: 24.7059517
+            Z: 16.3366718
+          }
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: 3966.16602
+            Y: 4066.87939
+            Z: 74.5741577
+          }
+        }
       }
     }
-    Overrides {
-      Name: "cs:CooldownPeriod"
-      Float: 20
+    ParameterOverrideMap {
+      key: 8638409400582938100
+      value {
+        Overrides {
+          Name: "cs:Sound"
+          ObjectReference {
+            SelfId: 6800357833572779590
+          }
+        }
+        Overrides {
+          Name: "cs:CooldownMin"
+          Float: 15
+        }
+        Overrides {
+          Name: "cs:CooldownMax"
+          Float: 30
+        }
+      }
     }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Script {
-    ScriptAsset {
-      Id: 17870403668611754621
+    TemplateAsset {
+      Id: 15901767622543304405
     }
   }
 }

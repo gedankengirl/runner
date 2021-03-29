@@ -19,9 +19,9 @@ Objects {
   ChildIds: 4906105228638113618
   ChildIds: 10764064574047099998
   ChildIds: 16813558807825262224
+  ChildIds: 8534815031986278044
   ChildIds: 4963320541580283836
   ChildIds: 7553754998792656332
-  ChildIds: 4017027197823384458
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -34,43 +34,6 @@ Objects {
     Value: "mc:ecollisionsetting:forceon"
   }
   Folder {
-  }
-}
-Objects {
-  Id: 4017027197823384458
-  Name: "UI Bubbles Popping 04 SFX"
-  Transform {
-    Location {
-      Z: 95.7106171
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 4781671109827199097
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  AudioInstance {
-    AudioAsset {
-      Id: 6550875708948833379
-    }
-    Pitch: 1537.8606
-    Volume: 0.144130602
-    Falloff: -1
-    Radius: -1
-    IsSpatializationEnabled: true
-    StopTime: 0.01
   }
 }
 Objects {
@@ -129,6 +92,74 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "UI"
+  }
+}
+Objects {
+  Id: 8534815031986278044
+  Name: "KillZoneTrigger"
+  Transform {
+    Location {
+      Z: -2274.33203
+    }
+    Rotation {
+    }
+    Scale {
+      X: 669.307434
+      Y: 669.307434
+      Z: 1.10194302
+    }
+  }
+  ParentId: 4781671109827199097
+  ChildIds: 6220797574871972291
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Trigger {
+    TeamSettings {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    TriggerShape_v2 {
+      Value: "mc:etriggershape:box"
+    }
+  }
+}
+Objects {
+  Id: 6220797574871972291
+  Name: "KillZone"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 0.00149408169
+      Y: 0.00149408169
+      Z: 0.907487929
+    }
+  }
+  ParentId: 8534815031986278044
+  UnregisteredParameters {
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 6167615629568480119
+    }
   }
 }
 Objects {
@@ -276,8 +307,11 @@ Objects {
     }
   }
   ParentId: 4781671109827199097
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:forceoff"
   }
   TemplateInstance {
     ParameterOverrideMap {
@@ -286,6 +320,16 @@ Objects {
         Overrides {
           Name: "Name"
           String: "@CoreModules"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
         }
       }
     }

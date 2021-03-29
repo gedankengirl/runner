@@ -121,6 +121,12 @@ Assets {
               Id: 9765507830262698727
             }
           }
+          Overrides {
+            Name: "cs:StartingTutorial"
+            AssetReference {
+              Id: 6088909678354106851
+            }
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"

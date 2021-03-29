@@ -419,7 +419,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Control {
-    Width: 100
+    Width: 400
     Height: 100
     UIX: -238.036133
     UIY: -112.31

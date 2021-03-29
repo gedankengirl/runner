@@ -1,6 +1,39 @@
 Name: "Info Boards"
 RootId: 9168930659997010632
 Objects {
+  Id: 18133843002547383417
+  Name: "PetBoard"
+  Transform {
+    Location {
+      X: 5832.66943
+      Y: -3274.22266
+      Z: 68.8156891
+    }
+    Rotation {
+      Yaw: 162.70636
+    }
+    Scale {
+      X: 0.948308408
+      Y: 0.948308408
+      Z: 0.948308408
+    }
+  }
+  ParentId: 9168930659997010632
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "PetBoard"
+  }
+}
+Objects {
   Id: 7255530086673314904
   Name: "Welcome Banner"
   Transform {

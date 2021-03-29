@@ -409,6 +409,10 @@ function Highlights:_turn(on)
     end
 end
 
+function Client: GetInventory()
+    return _maid.grid
+end
+
 function Client:_InstantiateInventory(grid)
     assert(grid)
     local N = grid.w*grid.h

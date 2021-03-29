@@ -348,6 +348,19 @@ function BusinessLogic.GetEqippedPets(grid)
     return grid:Fold(sum_pets, {})
 end
 
+-- GetEqippedPets :: grid -> {number}
+function BusinessLogic.GetPetCount(grid)
+    assert(grid and grid.type == "Grid")
+    local function count_pets(seed, cell)
+        local row, _, id = cell:Unpack()
+        if id then
+            seed = seed + 1
+        end
+        return seed
+    end
+    return grid:Fold(count_pets, 0)
+end
+
 function BusinessLogic.ResetGame(player)
     assert(Environment.IsServer())
     local data = {}
