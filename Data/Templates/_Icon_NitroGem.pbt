@@ -10,12 +10,12 @@ Assets {
         Name: "@Icon_NitroGem"
         Transform {
           Scale {
-            X: 1
-            Y: 1
-            Z: 1
+            X: 6.93938684
+            Y: 6.93938684
+            Z: 6.93938684
           }
         }
-        ParentId: 4781671109827199097
+        ParentId: 7553754998792656332
         ChildIds: 15076571212460292927
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -48,6 +48,7 @@ Assets {
         ParentId: 11727449955842407924
         ChildIds: 13910774802312813041
         ChildIds: 13355529003345945852
+        ChildIds: 4721927530163935841
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -75,8 +76,8 @@ Assets {
           }
           Scale {
             X: 0.0537214205
-            Y: 1.53970218
-            Z: 1.53970218
+            Y: 1.6
+            Z: 1.6
           }
         }
         ParentId: 15076571212460292927
@@ -177,6 +178,58 @@ Assets {
               Mass: 100
               LinearDamping: 0.01
             }
+          }
+        }
+      }
+      Objects {
+        Id: 4721927530163935841
+        Name: "Point Light"
+        Transform {
+          Location {
+            Z: 173.94342
+          }
+          Rotation {
+          }
+          Scale {
+            X: 3.60262394
+            Y: 3.60262394
+            Z: 3.60262394
+          }
+        }
+        ParentId: 15076571212460292927
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Light {
+          Intensity: 20
+          Color {
+            R: 0.332291782
+            G: 0.98940134
+            B: 1
+            A: 1
+          }
+          VolumetricIntensity: 5
+          TeamSettings {
+          }
+          Light {
+            Temperature: 6500
+            LocalLight {
+              AttenuationRadius: 40
+              PointLight {
+                SourceRadius: 20
+                SoftSourceRadius: 20
+                FallOffExponent: 8
+                UseFallOffExponent: true
+              }
+            }
+            MaxDrawDistance: 5000
+            MaxDistanceFadeRange: 1000
           }
         }
       }
