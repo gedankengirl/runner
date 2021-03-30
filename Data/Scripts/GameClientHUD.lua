@@ -16,6 +16,8 @@ local HUD_UPDATE_FPS = 5
 
 -- UI refs
 local UI_HUD = script:GetCustomProperty("HUD"):WaitForObject()
+local X_BUTTON = UI_HUD:GetCustomProperty("X"):WaitForObject()
+local X_BUTTON_CONTAINER = X_BUTTON.parent
 local UI_INFO_PANEL= UI_HUD:GetCustomProperty("InfoPanel"):WaitForObject()
 local UI_PLAYER_NAME = UI_INFO_PANEL:GetCustomProperty("PlayerName"):WaitForObject()
 local UI_PLAYER_ICON = UI_INFO_PANEL:GetCustomProperty("PlayerIcon"):WaitForObject()
@@ -23,7 +25,9 @@ local UI_REBIRTH_COUNT = UI_INFO_PANEL:GetCustomProperty("RebirthCount"):WaitFor
 local UI_REBIRTH_PROGRESS = UI_INFO_PANEL:GetCustomProperty("RebirthProgress"):WaitForObject()
 local UI_NEED_TO_REBIRTH_COUNT = UI_INFO_PANEL:GetCustomProperty("NeedToRebirthCount"):WaitForObject()
 local UI_SPEED_COUNT = UI_INFO_PANEL:GetCustomProperty("SpeedCoinCount"):WaitForObject()
+local UI_SPEED_COUNT_CONTAINER = UI_SPEED_COUNT.parent
 local UI_GEMS_COUNT = UI_INFO_PANEL:GetCustomProperty("GemsCount"):WaitForObject()
+local UI_GEMS_COUNT_CONTAINER = UI_GEMS_COUNT.parent
 
 local LOCAL_PLAYER = Game.GetLocalPlayer()
 UI_PLAYER_ICON:SetImage(LOCAL_PLAYER)
@@ -195,14 +199,15 @@ function HUD._OnResourceChanged(_player, tag, amount)
     end
 end
 
-local ICON_DX = -156
-local ICON_DY = 50
+local ICON_DX = -54
+local ICON_DY = 44
+
 function HUD._Update()
     local res = UI.GetScreenSize()
     local half_width = res.x//2
     _update_xf()
-    local scx, scy = UI_SPEED_COUNT.x, UI_SPEED_COUNT.y
-    local gcx, gcy = UI_GEMS_COUNT.x, UI_GEMS_COUNT.y
+    local scx, scy = UI_SPEED_COUNT_CONTAINER.x, UI_SPEED_COUNT_CONTAINER.y
+    local gcx, gcy = UI_GEMS_COUNT_CONTAINER.x, UI_GEMS_COUNT_CONTAINER.y
     _screen_position(_maid.speed_coin_icon, 10, 128, half_width + scx + ICON_DX, scy + ICON_DY)
     _screen_position(_maid.gems_icon, 10, 128, half_width + gcx + ICON_DX, gcy + ICON_DY)
     local possible, needed, has, _rebirth = B.isRebirthPossible(LOCAL_PLAYER)
@@ -219,21 +224,24 @@ end
 -----------------------------------------------------------------------------
 -- Events
 -----------------------------------------------------------------------------
+-- resources
 _maid.resources = LOCAL_PLAYER.resourceChangedEvent:Connect(HUD._OnResourceChanged)
-local last_amount = 0
 
-if Environment.IsSinglePlayerPreview() and DEBUG then
-    _maid.editor_bubbles = LOCAL_PLAYER.resourceChangedEvent:Connect(
-        function(player, tag, amount)
-            if tag == B.COIN_KEY then
-                local delta = amount - last_amount
-                last_amount = amount
-                if delta > 0 and delta ~= amount then
-                    Bubble.Show(delta, random(0, 7))
-                end
-            end
-        end)
-end
+-- X button
+_maid.x_button = X_BUTTON.clickedEvent:Connect(function()
+    REvents.Broadcast(P.CLIENT.X_BUTTON)
+end)
+
+_maid._x_button_hide = Events.Connect("ISM:InGame:Entering", function()
+    X_BUTTON_CONTAINER.visibility = Visibility.FORCE_OFF
+end)
+_maid._x_button_show_grid = Events.Connect("ISM:Inventory:Entering", function()
+    X_BUTTON_CONTAINER.visibility = Visibility.INHERIT
+end)
+_maid._x_button_show_shop = Events.Connect("ISM:Shop:Entering", function()
+    X_BUTTON_CONTAINER.visibility = Visibility.INHERIT
+end)
+
 
 -- "@StaticPickup", player, RESOURCE_TAG, RESOURCE_AMOUNT, TRIGGER:GetWorldPosition()
 _maid.bonuses = Events.Connect(P.STATIC.StaticPickup, function(player, boosterId, pos)

@@ -27,5 +27,5 @@ _maid:GiveTask(Events.Connect("ISM:Inventory:Entering", OpenInventoryInstruction
 _maid:GiveTask(Events.Connect("ISM:Inventory:Exiting", OpenFieldInstructions))
 
 _maid.inventory_binding = closeWindBtn.clickedEvent:Connect(function(_btn)
-    REvents.Broadcast(P.CLIENT.INVENTORY_USER_BINDING)
+    REvents.Broadcast("%InventoryUserBinding")
 end)
