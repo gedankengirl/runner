@@ -59,6 +59,7 @@ local LOCAL_VIEW_POOL = script:GetCustomProperty("LocalViewPool"):WaitForObject(
 local LOCAL_VIEW_BONUS_TEMPLATE = script:GetCustomProperty("LocalViewBonus")
 local LOCAL_VIEW_TEXT_TEMPLATE = script:GetCustomProperty("UI_BonusText32")
 local SPEED_COIN_ICON_TEMPLATE = script:GetCustomProperty("LightningBolt_Icon")
+local GEM_ICON_TEMPLATE = script:GetCustomProperty("Gem_Icon")
 local BUBBLE_WIDTH_3D = 20
 local BUBBLE_WIDTH_2D = 96
 local GROW_SCALE = 1.618
@@ -66,7 +67,7 @@ local GROW_SCALE = 1.618
 
 _maid.speed_coin_icon = World.SpawnAsset(SPEED_COIN_ICON_TEMPLATE)
 _maid.speed_coin_icon:AttachToLocalView()
-_maid.gems_icon = World.SpawnAsset(SPEED_COIN_ICON_TEMPLATE)
+_maid.gems_icon = World.SpawnAsset(GEM_ICON_TEMPLATE)
 _maid.gems_icon:AttachToLocalView()
 
 local Bubble do

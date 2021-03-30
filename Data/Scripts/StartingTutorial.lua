@@ -1,4 +1,6 @@
 local B = _G.req("BusinessLogic")
+local P = _G.req("Protocols")
+local REvents = _G.req("ReliableEvents")
 
 local LOCAL_PLAYER = Game.GetLocalPlayer()
 
@@ -19,21 +21,24 @@ function StartingTutorial:GetPetNumber()
 end
 
 local StartTutorial = function()
-    Task.Wait(1)
+    Task.Wait(.5)
     --TODO: instruction to buy a pet
 end
 
 local ContinueTutorial = function()
-    Task.Wait(1)
+    Task.Wait(.5)
     -- TODO: instruction to do a rebirth
 end
 
 -- Initialization
-local playerLevel = LOCAL_PLAYER:GetResource(B.REBIRTH_KEY)
-if -- number of pets <= 0 and playerLevel <=0
-    StartTutorial()
-elseif playerLevel <=0 then
-    ContinueTutorial()
-end
-
-return StartingTutorial
+-- do
+--     local playerLevel = LOCAL_PLAYER:GetResource(B.REBIRTH_KEY)
+--     if playerLevel <=0  and number of pets <= 0
+--     StartTutorial()
+--     elseif playerLevel <=0 then
+--     ContinueTutorial()
+--     else
+--     SkipTutorial()
+--     end
+-- end
+--return StartingTutorial
