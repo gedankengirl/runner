@@ -180,6 +180,30 @@ do
     end
 end
 
+local popcount32, popcount64 do
+    -- https://en.wikipedia.org/wiki/Hamming_weight
+    -- NOTE: popcount (without assert) 50% faster then 8-bit table lookup
+
+    popcount64 = function(i64)
+        -- assert(math.type(i64) == "integer")
+        i64 = i64 - (i64 >> 1) & 0x5555555555555555
+        i64 = (i64 & 0x3333333333333333) + ((i64 >> 2) & 0x3333333333333333)
+        i64 = (i64 + (i64 >> 4)) & 0x0F0F0F0F0F0F0F0F
+        return (i64 * 0x0101010101010101) >> 56
+    end
+
+    popcount32 = function(i32)
+        -- assert(math.type(i32) == "integer" and i32 >= -2147483648 and i32 <= 2147483647)
+        i32 = i32 - ((i32 >> 1) & 0x55555555)
+        i32 = (i32 & 0x33333333) + ((i32 >> 2) & 0x33333333)
+        i32 = (i32 + (i32 >> 4)) & 0x0F0F0F0F
+        return ((i32 * 0x01010101) & 0xFFFFFFFF) >> 24
+    end
+end
+
+snippets.popcount32 = popcount32
+snippets.popcount64 = popcount64
+
 -- measure the time and memory consumption of the thunk execution
 local function perfn(tag, times, thunk)
     if not CORE_ENV then
