@@ -108,7 +108,7 @@ end
 -------------------------------------------------------------------------------
 local bitvector32 = {}
 function bitvector32.new(data)
-    return setmetatable({data=data and (data & 0xFFFFFFFF) or 0}, bitvector32)
+    return setmetatable({data=data and data or 0}, bitvector32)
 end
 
 -- 1 based indices
@@ -122,6 +122,26 @@ function bitvector32:__newindex(i, v)
     assert(i > 0 and i <= 32)
     local bit = i - 1
     self.data = v and self.data | (1 << bit) or self.data & ~(1 << bit)
+end
+
+-- popcount32
+function bitvector32:__len()
+    local x = self.data
+    x = x - ((x >> 1) & 0x55555555)
+    x = (x & 0x33333333) + ((x >> 2) & 0x33333333)
+    x = (x + (x >> 4)) & 0x0F0F0F0F
+    return ((x * 0x01010101) & 0xFFFFFFFF) >> 24
+end
+
+function bitvector32:__eq(other)
+    return self.data == other.data
+end
+
+-- () -> i32
+function bitvector32:__call()
+    local n = self.data
+    -- converts to signed
+    return n < 0x7FFFFFFF and n or n - 0x100000000
 end
 
 bitarray.bitvec32 = bitvector32
@@ -205,26 +225,53 @@ local function _bitvector32_test()
     assert(not bv[32])
     bv[32] = 1
     assert(bv[32])
-    print(bv.data)
 
+    -- equals
     local bv2 = bitvector32.new(4294967295)
     for i = 1,32  do
-        print(bv2[i] and "1" or "0")
+        assert(bv2[i])
+    end
+
+    -- to i32
+    do
+        local i32 = -2147483648
+        assert(i32 ==  bitvector32.new(i32)())
+        assert(bitvector32.new(i32) == bitvector32.new(i32))
+    end
+
+    -- popcount
+    -- assert(math.type(x) == "integer" and x >= -2147483648 and x <= 2147483647)
+    for i=1, 1000 do
+        local x = math.random(-2147483648, 2147483647)
+        local b = bitvector32.new(x)
+        local c1 = #b
+        local c2 = 0
+        for j=1, 32 do
+            c2 = c2 + (b[j] and 1 or 0)
+        end
+        assert(c1==c2)
     end
 
     if CoreDebug and Environment.IsServer() then
-        local bv3 = bitvector32.new(-1)
+        while #Game.GetPlayers() == 0 do
+            Task.Wait()
+        end
         local PLAYER = Game.GetPlayers()[1]
-        PLAYER:SetResource("@@@", bv3.data)
-        local bv4 = bitvector32.new(PLAYER:GetResource("@@@"))
-        assert(bv3.data == bv4.data)
-        local pdata = Storage.GetPlayerData(PLAYER)
-        if pdata["@@@"] then
-            local bv5 = bitvector32.new(pdata["@@@"])
-            assert(bv5.data == bv3.data)
-        else
-            pdata["@@@"] = bv3.data
+        for i=1, 1000 do
+            -- local x = math.random(-2147483648, 2147483647)
+            local x = -2147483648
+            PLAYER:SetResource("@@@", x)
+            assert(x == PLAYER:GetResource("@@@"))
+            local b = bitvector32.new(x)
+            PLAYER:SetResource("@@@", b())
+            print(PLAYER:GetResource("@@@"), b())
+            local b1 = bitvector32.new(PLAYER:GetResource("@@@"))
+            assert(b == b1)
+            local pdata = Storage.GetPlayerData(PLAYER)
+            pdata["@@@"] = b.data
             Storage.SetPlayerData(PLAYER, pdata)
+            local b2 =  bitvector32.new(Storage.GetPlayerData(PLAYER)["@@@"])
+            assert(b == b2)
         end
     end
     print("bitvector32 -- ok")
