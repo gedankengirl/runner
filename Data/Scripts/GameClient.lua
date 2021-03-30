@@ -515,6 +515,10 @@ function SHOP:HandleExitShop()
     self._from, self._shop_id = nil, nil
 end
 
+function SHOP:HandleXButton()
+    self:HandleExitShop()
+end
+
 function SHOP:HandleModal(modal_arg)
     self.isInteractionEnabled = modal_arg < P.MODAL_ARG.OPEN
     if self.isInteractionEnabled then
@@ -577,6 +581,10 @@ function INVENTORY:HandleInventoryBinding()
     if self.isInteractionEnabled then
         ISM:GoToState(self._from)
     end
+end
+
+function INVENTORY:HandleXButton()
+    self:HandleInventoryBinding()
 end
 
 local function _get_move_outcome(grid, src_cell, dst_cell)
@@ -930,6 +938,7 @@ do -- main
         [P.CLIENT.EGG_HATCHED] = {"HandleEggHatched"}, -- TODO:
         [P.CLIENT.SHOP_INTERACTED]  = {"HandleShopInteraction"},
         [P.CLIENT.LEAVE_SHOP]  = {"HandleExitShop"},
+        [P.CLIENT.X_BUTTON]  = {"HandleXButton"},
         ["ability_extra_33"]  = {"HandleExitShop"}, -- press `F` to live the shop
     })
     ISM:Connect(LOCAL_PLAYER.bindingPressedEvent, function(_player, binding) ISM:MapToStateHandler(binding, 1) end)
@@ -938,6 +947,8 @@ do -- main
     ISM:Connect(Events, function(...) ISM:MapToStateHandler(P.CLIENT.EGG_HATCHED, 1, ...) end, P.CLIENT.EGG_HATCHED)
     ISM:Connect(Events, function(...) ISM:MapToStateHandler(P.CLIENT.SHOP_INTERACTED, 1, ...) end, P.CLIENT.SHOP_INTERACTED)
     ISM:Connect(Events, function(...) ISM:MapToStateHandler(P.CLIENT.LEAVE_SHOP, 1, ...) end, P.CLIENT.LEAVE_SHOP)
+    ISM:Connect(Events, function(...) ISM:MapToStateHandler(P.CLIENT.X_BUTTON, 1, ...) end, P.CLIENT.X_BUTTON)
+    Events.Connect(P.CLIENT.X_BUTTON, function(...) print(P.CLIENT.X_BUTTON, ...) end)
 
     ISM:GoToState(INGAME)
 
