@@ -7,7 +7,7 @@ Assets {
       RootId: 4835805725165403595
       Objects {
         Id: 4835805725165403595
-        Name: "Ability Display"
+        Name: "@Ability Display"
         Transform {
           Scale {
             X: 1
@@ -24,7 +24,7 @@ Assets {
           }
           Overrides {
             Name: "cs:BindingHint"
-            String: "Click LMB"
+            String: "Click"
           }
           Overrides {
             Name: "cs:ShowAbilityName"
@@ -251,6 +251,7 @@ Assets {
           }
         }
         ParentId: 11801791438655548464
+        ChildIds: 13392346047263084507
         ChildIds: 9301475271859481057
         ChildIds: 17241681059547605538
         ChildIds: 6462346518400297918
@@ -272,7 +273,6 @@ Assets {
           Width: 100
           Height: 200
           UIX: 32
-          UIY: -32
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
@@ -289,6 +289,69 @@ Assets {
             TargetAnchor {
               Anchor {
                 Value: "mc:euianchor:bottomleft"
+              }
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 13392346047263084507
+        Name: "UI Image"
+        Transform {
+          Location {
+            X: -27025
+            Y: 27415
+            Z: -360
+          }
+          Rotation {
+            Yaw: 74.9999695
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 6396825470346551669
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Control {
+          Width: 100
+          Height: 30
+          UIY: 67.4549255
+          RenderTransformPivot {
+            Anchor {
+              Value: "mc:euianchor:middlecenter"
+            }
+          }
+          Image {
+            Brush {
+              Id: 3169085770256452745
+            }
+            Color {
+              G: 0.0771429166
+              B: 0.162000179
+              A: 0.4
+            }
+            TeamSettings {
+            }
+          }
+          AnchorLayout {
+            SelfAnchor {
+              Anchor {
+                Value: "mc:euianchor:middlecenter"
+              }
+            }
+            TargetAnchor {
+              Anchor {
+                Value: "mc:euianchor:middlecenter"
               }
             }
           }
@@ -854,10 +917,10 @@ Assets {
           Text {
             Label: "5"
             Color {
-              R: 0.783538043
-              G: 0.520995617
-              B: 0.0722718
-              A: 1
+              R: 0.914000034
+              G: 0.607743323
+              B: 0.0843053237
+              A: 0.7
             }
             Size: 30
             Justification {
@@ -881,6 +944,15 @@ Assets {
             }
           }
         }
+      }
+    }
+    Assets {
+      Id: 3169085770256452745
+      Name: "BG Flat 002"
+      PlatformAssetType: 9
+      PrimaryAsset {
+        AssetType: "PlatformBrushAssetRef"
+        AssetId: "BackgroundNoOutline_019"
       }
     }
     Assets {

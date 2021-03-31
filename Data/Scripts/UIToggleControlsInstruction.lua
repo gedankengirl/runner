@@ -7,6 +7,7 @@ local inventoryInstructions = script:GetCustomProperty("InventoryInstructions"):
 local closeWindBtn = script:GetCustomProperty("CloseWindowButton"):WaitForObject()
 local closeInventoryImage = script:GetCustomProperty("CloseInvImg"):WaitForObject()
 
+warn("UIToggleControlsInnstruction DEPRECATED")
 
 function OpenInventoryInstructions()
     fieldInstructions.isEnabled = false

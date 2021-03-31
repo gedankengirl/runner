@@ -29,6 +29,11 @@ local UI_SPEED_COUNT_CONTAINER = UI_SPEED_COUNT.parent
 local UI_GEMS_COUNT = UI_INFO_PANEL:GetCustomProperty("GemsCount"):WaitForObject()
 local UI_GEMS_COUNT_CONTAINER = UI_GEMS_COUNT.parent
 
+local INFO_INVENTORY = UI_HUD:GetCustomProperty("INFO_Inventory"):WaitForObject()
+local INFO_PET_STAND = UI_HUD:GetCustomProperty("INFO_PetStand"):WaitForObject()
+local INFO_INGAME = UI_HUD:GetCustomProperty("INFO_InGame"):WaitForObject()
+local INFO_PET = UI_HUD:GetCustomProperty("INFO_Pet"):WaitForObject()
+
 local LOCAL_PLAYER = Game.GetLocalPlayer()
 UI_PLAYER_ICON:SetImage(LOCAL_PLAYER)
 UI_PLAYER_NAME.text = LOCAL_PLAYER.name
@@ -234,12 +239,21 @@ end)
 
 _maid._x_button_hide = Events.Connect("ISM:InGame:Entering", function()
     X_BUTTON_CONTAINER.visibility = Visibility.FORCE_OFF
+    INFO_INVENTORY.visibility = Visibility.FORCE_OFF
+    INFO_PET_STAND.visibility = Visibility.FORCE_OFF
+    INFO_INGAME.visibility = Visibility.INHERIT
 end)
 _maid._x_button_show_grid = Events.Connect("ISM:Inventory:Entering", function()
     X_BUTTON_CONTAINER.visibility = Visibility.INHERIT
+    INFO_INVENTORY.visibility = Visibility.INHERIT
+    INFO_PET_STAND.visibility = Visibility.FORCE_OFF
+    INFO_INGAME.visibility = Visibility.FORCE_OFF
 end)
 _maid._x_button_show_shop = Events.Connect("ISM:Shop:Entering", function()
     X_BUTTON_CONTAINER.visibility = Visibility.INHERIT
+    INFO_INVENTORY.visibility = Visibility.FORCE_OFF
+    INFO_PET_STAND.visibility = Visibility.INHERIT
+    INFO_INGAME.visibility = Visibility.FORCE_OFF
 end)
 
 
