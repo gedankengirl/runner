@@ -15,7 +15,7 @@ Objects {
     }
   }
   ChildIds: 13998269120099198432
-  ChildIds: 11474062630389737582
+  ChildIds: 11241210962460309157
   ChildIds: 4906105228638113618
   ChildIds: 10764064574047099998
   ChildIds: 16813558807825262224
@@ -347,13 +347,9 @@ Objects {
   }
 }
 Objects {
-  Id: 11474062630389737582
+  Id: 11241210962460309157
   Name: "@ClientServer"
   Transform {
-    Location {
-    }
-    Rotation {
-    }
     Scale {
       X: 1
       Y: 1
@@ -367,19 +363,29 @@ Objects {
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "_ClientServer"
-  }
-  InstanceHistory {
-    SelfId: 11474062630389737582
-    SubobjectId: 5300870412525512097
-    InstanceId: 11241210962460309157
-    TemplateId: 13073670985043419975
-    WasRoot: true
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 5300870412525512097
+      value {
+        Overrides {
+          Name: "Name"
+          String: "@ClientServer"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 13073670985043419975
+    }
   }
 }
 Objects {

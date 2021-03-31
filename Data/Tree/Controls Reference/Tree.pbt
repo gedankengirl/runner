@@ -156,7 +156,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
+    Value: "mc:evisibilitysetting:forceoff"
   }
   CameraCollidable {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -488,7 +488,9 @@ Objects {
         Id: 5196377603841433560
       }
       Color {
-        A: 0.3
+        G: 0.077143
+        B: 0.162000179
+        A: 0.4
       }
       TeamSettings {
       }
@@ -928,8 +930,8 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Control {
-    Width: 350
-    Height: 120
+    Width: 366
+    Height: 130
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -1002,7 +1004,9 @@ Objects {
         Id: 5196377603841433560
       }
       Color {
-        A: 0.3
+        G: 0.077143
+        B: 0.162000179
+        A: 0.4
       }
       TeamSettings {
       }
@@ -1112,7 +1116,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Control {
-    Width: 200
+    Width: 206
     Height: 60
     UIX: 30
     UIY: 10
@@ -1178,8 +1182,8 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Control {
-    Width: 200
-    Height: 60
+    Width: 216
+    Height: 70
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"

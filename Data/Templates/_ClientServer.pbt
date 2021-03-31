@@ -760,8 +760,8 @@ Assets {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Control {
-          Width: 120
-          Height: 120
+          Width: 110
+          Height: 110
           UIX: -1
           UIY: -1
           RenderTransformPivot {
@@ -827,9 +827,10 @@ Assets {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Control {
-          Width: 410
-          Height: 48
+          Width: 360
+          Height: 40
           UIX: 75
+          UIY: 18
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
@@ -837,12 +838,15 @@ Assets {
           }
           StatBar {
             Color {
-              R: 0.00596019113
-              G: 0.450000048
+              R: 0.0683655515
+              G: 0.830770075
+              B: 0.184521273
               A: 1
             }
             BackgroundColor {
-              R: 0.6
+              R: 0.968627512
+              G: 0.247058839
+              B: 0.254901975
               A: 1
             }
           }
@@ -902,7 +906,7 @@ Assets {
               B: 0.0843053237
               A: 1
             }
-            Size: 28
+            Size: 20
             Justification {
               Value: "mc:etextjustify:center"
             }
@@ -914,12 +918,12 @@ Assets {
           AnchorLayout {
             SelfAnchor {
               Anchor {
-                Value: "mc:euianchor:topcenter"
+                Value: "mc:euianchor:middlecenter"
               }
             }
             TargetAnchor {
               Anchor {
-                Value: "mc:euianchor:topcenter"
+                Value: "mc:euianchor:middlecenter"
               }
             }
           }
@@ -968,6 +972,8 @@ Assets {
               Id: 15709523992004481946
             }
             Color {
+              R: 0.0757143497
+              G: 0.106000066
               A: 1
             }
             TeamSettings {
@@ -1080,8 +1086,8 @@ Assets {
         Control {
           Width: 500
           Height: 80
-          UIX: 124
-          UIY: 8
+          UIX: 140
+          UIY: 40
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
@@ -1094,7 +1100,7 @@ Assets {
               B: 0.297
               A: 1
             }
-            Size: 48
+            Size: 32
             Justification {
               Value: "mc:etextjustify:left"
             }
@@ -1148,7 +1154,7 @@ Assets {
         }
         Control {
           Width: 249
-          Height: 72
+          Height: 56
           UIX: -250
           UIY: 26
           RenderTransformPivot {
@@ -1161,6 +1167,8 @@ Assets {
               Id: 8316394068749470350
             }
             Color {
+              G: 0.077143
+              B: 0.162000179
               A: 0.4
             }
             TeamSettings {
@@ -1206,7 +1214,7 @@ Assets {
         }
         Control {
           Width: 250
-          Height: 90
+          Height: 56
           UIX: -114
           UIY: -4
           RenderTransformPivot {
@@ -1222,7 +1230,7 @@ Assets {
               B: 0.297
               A: 1
             }
-            Size: 48
+            Size: 36
             Justification {
               Value: "mc:etextjustify:left"
             }
@@ -1276,8 +1284,8 @@ Assets {
         }
         Control {
           Width: 249
-          Height: 72
-          UIX: 200
+          Height: 56
+          UIX: 150
           UIY: 26
           RenderTransformPivot {
             Anchor {
@@ -1289,6 +1297,8 @@ Assets {
               Id: 8316394068749470350
             }
             Color {
+              G: 0.077143
+              B: 0.162000179
               A: 0.4
             }
             TeamSettings {
@@ -1335,7 +1345,7 @@ Assets {
         }
         Control {
           Width: 250
-          Height: 90
+          Height: 56
           UIX: -114
           UIY: -4
           RenderTransformPivot {
@@ -1351,7 +1361,7 @@ Assets {
               B: 0.297
               A: 1
             }
-            Size: 48
+            Size: 36
             Justification {
               Value: "mc:etextjustify:left"
             }
@@ -1558,8 +1568,8 @@ Assets {
               A: 1
             }
             HoveredColor {
-              R: 0.533000052
-              G: 0.336259186
+              R: 0.43854174
+              G: 0.276667327
               A: 1
             }
             PressedColor {

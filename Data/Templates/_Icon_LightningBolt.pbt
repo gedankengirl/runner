@@ -7,7 +7,7 @@ Assets {
       RootId: 820713607033268187
       Objects {
         Id: 820713607033268187
-        Name: "@LightningBolt_Icon"
+        Name: "@Icon_LightningBolt"
         Transform {
           Scale {
             X: 1
@@ -40,16 +40,15 @@ Assets {
             Yaw: 180
           }
           Scale {
-            X: 0.04
-            Y: 0.04
-            Z: 0.04
+            X: 0.03
+            Y: 0.03
+            Z: 0.03
           }
         }
         ParentId: 820713607033268187
         ChildIds: 6418302027773248953
         ChildIds: 12275920111549100407
         ChildIds: 17407783596492304609
-        ChildIds: 6189075335441860301
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -260,64 +259,6 @@ Assets {
           }
         }
       }
-      Objects {
-        Id: 6189075335441860301
-        Name: "Cylinder"
-        Transform {
-          Location {
-            X: -1.77539063
-            Z: 20
-          }
-          Rotation {
-            Pitch: 90
-          }
-          Scale {
-            X: 2.404
-            Y: 2.404
-            Z: 0.0103103463
-          }
-        }
-        ParentId: 13227565072351691887
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 18297409250839599089
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.890888929
-              G: 1
-              B: 0.0180000067
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:forceoff"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 6402680484513847234
-          }
-          Teams {
-          }
-          StaticMesh {
-            Physics {
-              Mass: 100
-              LinearDamping: 0.01
-            }
-          }
-        }
-      }
     }
     Assets {
       Id: 3334112133293105484
@@ -348,24 +289,6 @@ Assets {
     }
     Assets {
       Id: 10184847056121543272
-      Name: "Basic Material"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_basic_pbr_material_001"
-      }
-    }
-    Assets {
-      Id: 6402680484513847234
-      Name: "Ring - Beveled Thin"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_ring_faceted_002"
-      }
-    }
-    Assets {
-      Id: 18297409250839599089
       Name: "Basic Material"
       PlatformAssetType: 2
       PrimaryAsset {

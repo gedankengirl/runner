@@ -200,7 +200,7 @@ function HUD._OnResourceChanged(_player, tag, amount)
 end
 
 local ICON_DX = -54
-local ICON_DY = 44
+local ICON_DY = 34
 
 function HUD._Update()
     local res = UI.GetScreenSize()
@@ -212,7 +212,7 @@ function HUD._Update()
     _screen_position(_maid.gems_icon, 10, 128, half_width + gcx + ICON_DX, gcy + ICON_DY)
     local possible, needed, has, _rebirth = B.isRebirthPossible(LOCAL_PLAYER)
     if possible then
-        UI_NEED_TO_REBIRTH_COUNT.text = "You can do a rebirth"
+        UI_NEED_TO_REBIRTH_COUNT.text = "It's rebirth time!"
         UI_REBIRTH_PROGRESS.progress = 1
     else
         UI_REBIRTH_PROGRESS.progress = has/needed
