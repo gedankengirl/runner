@@ -15,12 +15,12 @@ Objects {
     }
   }
   ChildIds: 13998269120099198432
+  ChildIds: 4963320541580283836
   ChildIds: 11241210962460309157
   ChildIds: 4906105228638113618
   ChildIds: 10764064574047099998
   ChildIds: 16813558807825262224
   ChildIds: 8534815031986278044
-  ChildIds: 4963320541580283836
   ChildIds: 7553754998792656332
   ChildIds: 14492954847959394
   ChildIds: 18342802537463913049
@@ -155,35 +155,6 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "Scene props"
-  }
-}
-Objects {
-  Id: 4963320541580283836
-  Name: "UI"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 4781671109827199097
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "UI"
   }
 }
 Objects {
@@ -383,9 +354,52 @@ Objects {
         }
       }
     }
+    ParameterOverrideMap {
+      key: 12279097781082510211
+      value {
+        Overrides {
+          Name: "Color"
+          Color {
+            R: 0.022135457
+            G: 0.0779871121
+            B: 0.0885418281
+            A: 1
+          }
+        }
+      }
+    }
     TemplateAsset {
       Id: 13073670985043419975
     }
+  }
+}
+Objects {
+  Id: 4963320541580283836
+  Name: "UI"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:forceoff"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "UI"
   }
 }
 Objects {
