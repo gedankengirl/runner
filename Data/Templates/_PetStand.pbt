@@ -22,7 +22,7 @@ Assets {
         UnregisteredParameters {
           Overrides {
             Name: "cs:EggId"
-            String: ""
+            String: "Graveyard"
           }
         }
         Collidable_v2 {
@@ -1320,7 +1320,6 @@ Assets {
         }
         ParentId: 9583416130571679258
         ChildIds: 17144577203694290820
-        ChildIds: 17532657271730734529
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -1377,9 +1376,9 @@ Assets {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Control {
-          Width: 320
-          Height: 120
-          UIY: -260
+          Width: 400
+          Height: 130
+          UIY: -100
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
@@ -1388,126 +1387,40 @@ Assets {
           Button {
             Label: "Buy 500"
             FontColor {
+              R: 0.0075
+              G: 0.0264238212
+              B: 0.03
               A: 1
             }
             FontSize: 48
             ButtonColor {
-              R: 1
-              G: 1
-              B: 1
-              A: 1
+              R: 0.0683655515
+              G: 0.830770075
+              B: 0.184521273
+              A: 0.9
             }
             HoveredColor {
-              R: 0.479867518
-              G: 1
-              B: 0.339999974
-              A: 1
+              R: 0.0490459
+              G: 0.596
+              B: 0.132376805
+              A: 0.906
             }
             PressedColor {
-              R: 0.44834435
-              G: 1
-              B: 0.3
-              A: 1
+              R: 0.027073998
+              G: 0.329000026
+              B: 0.0730737746
+              A: 0.901
             }
             DisabledColor {
-              R: 1
-              G: 1
-              B: 1
-              A: 0.452000022
+              R: 0.478000015
+              G: 0.478000015
+              B: 0.478000015
+              A: 0.509
             }
             Brush {
-              Id: 841534158063459245
+              Id: 1348700120366131889
             }
             IsButtonEnabled: true
-            ClickMode {
-              Value: "mc:ebuttonclickmode:default"
-            }
-            Font {
-            }
-          }
-          AnchorLayout {
-            SelfAnchor {
-              Anchor {
-                Value: "mc:euianchor:bottomcenter"
-              }
-            }
-            TargetAnchor {
-              Anchor {
-                Value: "mc:euianchor:bottomcenter"
-              }
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 17532657271730734529
-        Name: "ExitButton"
-        Transform {
-          Location {
-          }
-          Rotation {
-            Yaw: 2.9882076e-06
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 5087964486264413219
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Control {
-          Width: 320
-          Height: 120
-          UIY: -100
-          RenderTransformPivot {
-            Anchor {
-              Value: "mc:euianchor:middlecenter"
-            }
-          }
-          Button {
-            Label: "EXIT"
-            FontColor {
-              A: 1
-            }
-            FontSize: 48
-            ButtonColor {
-              R: 1
-              G: 1
-              B: 1
-              A: 1
-            }
-            HoveredColor {
-              R: 1
-              G: 1
-              B: 1
-              A: 1
-            }
-            PressedColor {
-              R: 1
-              G: 1
-              B: 1
-              A: 1
-            }
-            DisabledColor {
-              R: 1
-              G: 1
-              B: 1
-              A: 0.995000064
-            }
-            Brush {
-              Id: 841534158063459245
-            }
-            IsButtonEnabled: true
-            OnlyUseMainColor: true
             ClickMode {
               Value: "mc:ebuttonclickmode:default"
             }
@@ -3538,7 +3451,7 @@ Assets {
           Overrides {
             Name: "cs:ExitButton"
             ObjectReference {
-              SubObjectId: 17532657271730734529
+              SelfId: 841534158063459245
             }
           }
           Overrides {
@@ -3788,6 +3701,15 @@ Assets {
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
         AssetId: "sm_arcade_cube_002"
+      }
+    }
+    Assets {
+      Id: 1348700120366131889
+      Name: "BG Gradient 002"
+      PlatformAssetType: 9
+      PrimaryAsset {
+        AssetType: "PlatformBrushAssetRef"
+        AssetId: "BackgroundFlat_019"
       }
     }
     Assets {

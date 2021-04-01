@@ -32,17 +32,12 @@ local BUY_BUTTON = script:GetCustomProperty("BuyButton"):WaitForObject()
 local MAX_UNFORMATTED_PRICE = 10000
 BUY_BUTTON.text = B.formatNumber(S.EggDb[EGG_ID].price, MAX_UNFORMATTED_PRICE).." speed"
 local BUY_BUTTON_POS = Vector2.New(BUY_BUTTON.x, BUY_BUTTON.y)
-local EXIT_BUTTON = script:GetCustomProperty("ExitButton"):WaitForObject()
-local EXIT_BUTTON_POS = Vector2.New(EXIT_BUTTON.x, EXIT_BUTTON.y)
 
 local SIGNBOARD_AMPLITUDE = Vector3.New(0, 0, 20)
 local PURCHASE_AUDIO1 = script:GetCustomProperty("PurchaseAudio1"):WaitForObject()
 local PURCHASE_AUDIO2 = script:GetCustomProperty("PurchaseAudio2"):WaitForObject()
 local EGG_CRACKING_AUDIO = script:GetCustomProperty("EggCrackingSound"):WaitForObject()
 
-local WORLD_TEXT = script:GetCustomProperty("WorldText"):WaitForObject()
-local DEFAULT_TEXT = WORLD_TEXT.text
-local FLY_UP_TEXT_BIG_RED = {color = Color.RED, isBig = true}
 local PET_MARKS_ROOT = script:GetCustomProperty("PetMarks"):WaitForObject()
 local LOOK_AT_MARK = script:GetCustomProperty("LookAtMark"):WaitForObject()
 
@@ -65,12 +60,6 @@ for petName, _weight in pairs(EGG_DATA.gacha) do
 end
 sort(PET_TEMPLATES, function(a,b) return b[1] < a[1] end)
 
-
-local function ResetTextWorker()
-    Task.Wait(2.0)
-    WORLD_TEXT.text = DEFAULT_TEXT
-end
-
 local DROID_SPR = SP.New(0, 0.4)
 local PIPE_SPR = SP.New(1, 4)
 local PET_SPR = SP.New(0.5, 1.5)
@@ -92,16 +81,12 @@ end
 
 local B_SPR = SP.New(0.4, 2)
 local B_BOTTOM = Vector2.New(0, 500)
-local function _show_or_hide_buy_button(show, both)
+local function _show_or_hide_buy_button(show)
     if show then
         B_SPR:ToAnim()(BUY_BUTTON):Target("offset", BUY_BUTTON_POS):Run()
-        B_SPR:ToAnim()(EXIT_BUTTON):Target("offset", EXIT_BUTTON_POS):Run()
     else
         local v2 = Vector2.New(0, 500)
         B_SPR:ToAnim()(BUY_BUTTON):Target("offset", B_BOTTOM):Run()
-        if both then
-            B_SPR:ToAnim()(EXIT_BUTTON):Target("offset", B_BOTTOM):Run()
-        end
     end
 end
 
@@ -126,7 +111,7 @@ local function _show_or_hide_pipe(show)
 end
 -- initial setup:
 _show_or_hide_pipe(not "show")
-_show_or_hide_buy_button(not "show", "both")
+_show_or_hide_buy_button(not "show")
 
 local function _show_or_hide_pets(show)
     if show then
@@ -151,12 +136,18 @@ local function _show_or_hide_pets(show)
     end
 end
 
+local function _buy_button_interactable(interactable)
+    local text_color = BUY_BUTTON:GetFontColor()
+    text_color.a = interactable and 1 or 0.6
+    print("interactable", interactable, text_color)
+    BUY_BUTTON:SetFontColor(text_color)
+    BUY_BUTTON.isInteractable = interactable
+end
 -- Flow: interaction -> wait for Shop state -> wait for Ingame state
 local OnEnterShop, OnLeaveShop, OnCanBuyEgg, OnEggHatched do
-
     local function OnInteractedEvent(_trigger, player)
         if player:IsA("Player") and player == LOCAL_PLAYER then
-            BUY_BUTTON.isInteractable = false
+            _buy_button_interactable(false)
             _show_or_hide_buy_button("show")
             _session_maid.onCanBuyEgg = Events.Connect(P.CLIENT.CAN_BUY_EGG, OnCanBuyEgg)
             _session_maid.shop_flow = Events.Connect("ISM:Shop:Entered", OnEnterShop)
@@ -164,10 +155,7 @@ local OnEnterShop, OnLeaveShop, OnCanBuyEgg, OnEggHatched do
             _session_maid.buy = BUY_BUTTON.clickedEvent:Connect(function()
                 _show_or_hide_buy_button(not "show")
                 REvents.BroadcastToServer(P.C2S.TransmitHatchingEgg, EGG_ID)
-                PURCHASE_AUDIO1:Play()
-            end)
-            _session_maid.exit = EXIT_BUTTON.clickedEvent:Connect(function()
-                REvents.Broadcast(P.CLIENT.LEAVE_SHOP)
+                PURCHASE_AUDIO2:Play()
             end)
             REvents.Broadcast(P.CLIENT.SHOP_INTERACTED, THIS_STAND_ID, EGG_ID, CAMERA)
         end
@@ -219,7 +207,8 @@ local OnEnterShop, OnLeaveShop, OnCanBuyEgg, OnEggHatched do
         SA.Stop(EGG_GROUP)
         _show_or_hide_pipe(not "show")
         _show_or_hide_pets(not "show")
-        _show_or_hide_buy_button(not "show", "both")
+        _show_or_hide_buy_button(not "show")
+        PURCHASE_AUDIO1:Play()
         -- should be at the end of the callback: wait before turn-on shop's interactivity
         _session_maid:Reset()
         Task.Wait(0.5)
@@ -229,9 +218,9 @@ local OnEnterShop, OnLeaveShop, OnCanBuyEgg, OnEggHatched do
 
     OnCanBuyEgg = function(shop_id, can_buy, cant_buy_reason)
         assert(shop_id == THIS_STAND_ID)
-        BUY_BUTTON.isInteractable = can_buy
-        print("OnCanBuyEgg", can_buy, cant_buy_reason, BUY_BUTTON.isInteractable)
+        _buy_button_interactable(can_buy)
         if not can_buy and cant_buy_reason then
+            -- TODO: message with reason
             warn(cant_buy_reason)
         end
     end
@@ -251,105 +240,3 @@ local OnEnterShop, OnLeaveShop, OnCanBuyEgg, OnEggHatched do
 end -- do
 
 -- TODO: purchase VFX
--- TODO: obliterate all below
--------------------
-
-
---[[
-function OnToggleUI(uniqueId, toggle)
-    if uniqueId == EGG_ID then
-        if toggle then
-            TRIGGER.isInteractable = false
-            LOCAL_PLAYER.isVisibleToSelf = false
-            -- TODO: shold be default cam
-            LOCAL_PLAYER:SetOverrideCamera(CAMERA, .1)
-            local pipeSpr = Spr.New(1, 2)
-            pipeSpr:Target(PIPE, "Scale", Vector3.New(7,7,7))
-            pipeSpr:Target(PIPE, "Position", Vector3.New(0,0,-290))
-            pipeSpr:Target(PIPE, "Color", Color.FromLinearHex("23EAFF41"):GetDesaturated(0.5))
-            pipeSpr:Target(SIGNBOARD, "Position", Vector3.New(300, 0, 0))
-            pipeSpr:Target(EGG_GROUP, "Scale", EGG_TR:GetScale()/2)
-            UI.SetCursorVisible(true)
-            UI.SetCanCursorInteractWithUI(true)
-            local petSpr = Spr.New(.6, 2)
-            for i, pet in ipairs(PETS) do
-                petSpr:Randomize():Target(pet, "Position", PET_MARKS[i]:GetPosition())
-                local scale = (i == 2 or i == 3) and 0.6 or 0.5
-                petSpr:Target(pet, "Scale", scale*Vector3.ONE)
-            end
-        else
-            LOCAL_PLAYER:ClearOverrideCamera(0.7)
-            local pipeSpr = Spr.New(0.6, 3)
-            pipeSpr:Target(PIPE, "Scale", PIPE_TR:GetScale())
-            pipeSpr:Target(PIPE, "Position", PIPE_TR:GetPosition())
-            pipeSpr:Target(PIPE, "Color", Color.FromLinearHex("23EAFF41"))
-            pipeSpr:Target(SIGNBOARD, "Position", Vector3.New(0, 0, 0), function()
-                SIGNBOARD_SPR:Target(SIGNBOARD, "Position", SIGNBOARD_AMPLITUDE)
-            end)
-            pipeSpr:Target(EGG_GROUP, "Scale", EGG_TR:GetScale())
-            LOCAL_PLAYER.isVisibleToSelf = true
-            TRIGGER.isInteractable = true
-            UI.SetCursorVisible(false)
-            UI.SetCanCursorInteractWithUI(false)
-            local petSpr = Spr.New(1, 4)
-            for i, pet in ipairs(PETS) do
-                petSpr:Target(pet, "Position", PET_MARKS_ROOT:GetPosition())
-                petSpr:Target(pet, "Scale", 0.2*Vector3.ONE)
-            end
-        end
-    else
-        if LOCAL_PLAYER:GetActiveCamera() == CAMERA then
-            LOCAL_PLAYER:ClearOverrideCamera(0.7)
-        end
-        if toggle then
-            TRIGGER.isInteractable = false
-        else
-            TRIGGER.isInteractable = true
-        end
-    end
-end
-_maid.toggleUI = Events.Connect("ToggleUI", OnToggleUI)
---]]
-
-function OnEggPurchased(id, player)
-    -- if not player == LOCAL_PLAYER then return end
-    -- local cam = player:GetActiveCamera()
-    -- local egg = World.SpawnAsset(EGG_TEMPLATE)
-    -- egg:AttachToLocalView()
-    -- player.isVisibleToSelf = false
-    -- Task.Wait(TIME_TO_SHOW)
-    -- player.isVisibleToSelf = true
-    -- egg:Destroy()
-end
-
-function OnItemPurchased(id, player)
-    if id == THIS_STAND_ID then
-        WORLD_TEXT.text = "Enjoy!"
-        _session_maid.textResetTask = Task.Spawn(ResetTextWorker)
-        if player == LOCAL_PLAYER then
-            UI.ShowFlyUpText(
-                string.format("-%d gold", 0 --[[STAND_KEY]]), -- FIXME: should be COST
-                LOCAL_PLAYER:GetWorldPosition() + Vector3.UP * 120.0, FLY_UP_TEXT_BIG_RED)
-        end
-        PURCHASE_AUDIO1:Play()
-        Task.Wait(0.3)
-        PURCHASE_AUDIO2:Play()
-    end
-end
-
-function OnItemPurchaseFailed(id)
-    if id == THIS_STAND_ID then
-        UI.ShowFlyUpText(
-            string.format("-%d gold", EGG_ID), -- FIXME: should be COST
-            LOCAL_PLAYER:GetWorldPosition() + Vector3.UP * 120.0, FLY_UP_TEXT_BIG_RED)
-    end
-end
-
--- _maid.triggerLeave = TRIGGER.endOverlapEvent:Connect(function(trigger, player)
---     print("endOverlapEvent")
---     OnToggleUI(EGG_ID, false)
--- end)
-
-Events.Connect("EggPurchased", OnEggPurchased)
-Events.Connect("ItemPurchased", OnItemPurchased)
-Events.Connect("ItemPurchaseFailed", OnItemPurchaseFailed)
