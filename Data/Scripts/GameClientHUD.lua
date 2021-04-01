@@ -272,7 +272,7 @@ do
         if _pet_show_id == pet_id then return end
         _pet_show_id = pet_id
         if not pet_id then
-            PET_SHOW_SPR:ToAnim()(INFO_PET):Target("offset", INFO_PET_HIDE):Run(3)
+            PET_SHOW_SPR:ToAnim()(INFO_PET):Target("offset", INFO_PET_HIDE):Run(.2)
         else
             local name = S.PetDb:GetName(pet_id)
             PET_NAME.text = S.FancyPetNamesByName[name] or name
