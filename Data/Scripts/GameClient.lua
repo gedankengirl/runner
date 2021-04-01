@@ -1,4 +1,4 @@
-local DEBUG = Environment.IsPreview()
+local DEBUG = Environment.IsPreview() and false
 local debug = function(...) if DEBUG then print("[D]", ...) end end
 local Maid = _G.req("_Maid")
 local Grid = _G.req("_Grid")
@@ -664,14 +664,14 @@ function INVENTORY:_UpdateInteractions(_dt)
                 -- 1. change color of tiles
                 -- 2. show hover animation
                 Events.Broadcast(P.INTERACTION.TileUnderCursorChanged, grid,
-                     newCellUnderCursor, self.moveOutcome, self.tileActivationOutcome)
+                     newCellUnderCursor, self.moveOutcome, self.tileActivationOutcome, self.attachedActor)
             end
         end
         self.cellUnderCursor = newCellUnderCursor
     else -- cell under cursor is nil
         if self.cellUnderCursor then
             self.cellUnderCursor = nil
-            Events.Broadcast(P.INTERACTION.TileUnderCursorChanged, grid, nil, nil, nil)
+            Events.Broadcast(P.INTERACTION.TileUnderCursorChanged, grid, nil, nil, nil, self.attachedActor)
         end
     end
     -- Update left mouse movement criteria and interaction type.
@@ -817,6 +817,7 @@ function INVENTORY:HandleLeftMouseUp()
     end
 end
 
+-- extra camera disstance
 local K = {
     [7*5] = 2,
     [7*6] = 2,
@@ -895,8 +896,8 @@ function INVENTORY:_UpdateCamera(dt)
 end
 
 -- Monkey patching Grid for highlights
-function INVENTORY._OnTileUnderCursorChanged(grid, cursor_cell, move_outcome)
-    debug(pp{"#", cursor_cell, move_outcome or {}, time()})
+function INVENTORY._OnTileUnderCursorChanged(grid, cursor_cell, move_outcome, _activation_outcome, _attached_actor)
+    debug(pp{"#", cursor_cell, move_outcome or {}, _attached_actor or {}, time()})
     local hl = grid._highlights
     hl:_clear()
     if move_outcome and INVENTORY.isInteractionEnabled then

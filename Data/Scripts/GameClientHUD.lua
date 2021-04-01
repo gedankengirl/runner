@@ -33,6 +33,9 @@ local INFO_INVENTORY = UI_HUD:GetCustomProperty("INFO_Inventory"):WaitForObject(
 local INFO_PET_STAND = UI_HUD:GetCustomProperty("INFO_PetStand"):WaitForObject()
 local INFO_INGAME = UI_HUD:GetCustomProperty("INFO_InGame"):WaitForObject()
 local INFO_PET = UI_HUD:GetCustomProperty("INFO_Pet"):WaitForObject()
+local INFO_PET_HIDE = Vector2.New(-500, INFO_PET.y)
+local INFO_PET_SHOW = Vector2.New(-6, INFO_PET.y)
+
 
 local LOCAL_PLAYER = Game.GetLocalPlayer()
 UI_PLAYER_ICON:SetImage(LOCAL_PLAYER)
@@ -256,6 +259,41 @@ _maid._x_button_show_shop = Events.Connect("ISM:Shop:Entering", function()
     INFO_INGAME.visibility = Visibility.FORCE_OFF
 end)
 
+-- pet info
+do
+    local PET_NAME = INFO_PET:GetCustomProperty("Name"):WaitForObject()
+    local PET_RARITY = INFO_PET:GetCustomProperty("Rarity"):WaitForObject()
+    local PET_LEVEL = INFO_PET:GetCustomProperty("Level"):WaitForObject()
+    local PET_BONUS = INFO_PET:GetCustomProperty("Bonus"):WaitForObject()
+    local PET_SPECIAL = INFO_PET:GetCustomProperty("Special"):WaitForObject()
+    local _pet_show_id = nil
+    local PET_SHOW_SPR = SP.New(1, 2)
+    local function _show_pet_info(pet_id)
+        if _pet_show_id == pet_id then return end
+        _pet_show_id = pet_id
+        if not pet_id then
+            PET_SHOW_SPR:ToAnim()(INFO_PET):Target("offset", INFO_PET_HIDE):Run(3)
+        else
+            local name = S.PetDb:GetName(pet_id)
+            PET_NAME.text = S.FancyPetNamesByName[name] or name
+            local _rid, rinfo = S.PetDb:GetRarity(pet_id)
+            PET_RARITY.text = rinfo.name
+            PET_RARITY:SetColor(rinfo.color)
+            local _, uname = S.PetDb:GetUpgradeStatus(pet_id)
+            uname = uname == "" and "Basic" or uname
+            PET_LEVEL.text = uname
+            local bonus = S.PetDb:GetBonus(pet_id)
+            PET_BONUS.text = tostring(bonus)
+            PET_SPECIAL.text = PET_SPECIAL.text -- unused
+            PET_SHOW_SPR:ToAnim()(INFO_PET):Target("offset", INFO_PET_SHOW):Run()
+        end
+    end
+    _maid._info_pet_inventory = Events.Connect(P.INTERACTION.TileUnderCursorChanged,
+        function(_grid, cursor_cell, _outcome, _activation_outcome, cursor_actor)
+            local actor = cursor_actor or cursor_cell and cursor_cell.actor
+            _show_pet_info(actor and actor.id)
+        end)
+end -- do
 
 -- "@StaticPickup", player, RESOURCE_TAG, RESOURCE_AMOUNT, TRIGGER:GetWorldPosition()
 _maid.bonuses = Events.Connect(P.STATIC.StaticPickup, function(player, boosterId, pos)
