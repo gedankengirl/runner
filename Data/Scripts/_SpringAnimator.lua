@@ -396,6 +396,16 @@ local function _sa_scheduler_add(spr_anim)
     _activate_sa_scheduler()
 end
 
+local function _sa_scheduler_remove(instance, propkey)
+    _sa_scheduler:_for_each(function(spr_anim)
+        if spr_anim:_get_instance() == instance and (not propkey or spr_anim._propkey == propkey) then
+            spr_anim._instance[1] = nil -- nil instance for (lazy) remove it later
+            local ok, msg = pcall(spr_anim._onCancel)
+            if not ok then warn(msg) end
+        end
+    end)
+end
+
 local function _sa_states_add(spr_anim)
     if not spr_anim then return end
     assert(_type(spr_anim, SpringAnimator.type, "spr_anim"))
@@ -412,6 +422,8 @@ local function _sa_states_add(spr_anim)
         if not ok then warn(msg) end
         states[propkey] = nil
     end
+    -- try to remove from scheduler too
+    _sa_scheduler_remove(instance, propkey)
     -- actualize origin and goal
     local methods = spr_anim._methods
     local get, wrap, add = methods.get, methods.wrap, methods.add
@@ -429,16 +441,6 @@ local function _sa_states_add(spr_anim)
     end
     states[propkey] = spr_anim
     _activate_sa_thread()
-end
-
-local function _sa_scheduler_remove(instance, propkey)
-    _sa_scheduler:_for_each(function(spr_anim)
-        if spr_anim:_get_instance() == instance and not propkey or spr_anim._propkey == propkey then
-            spr_anim._instance[1] = nil -- nil instance for (lazy) remove it later
-            local ok, msg = pcall(spr_anim._onCancel)
-            if not ok then warn(msg) end
-        end
-    end)
 end
 
 _sa_worker = function()
