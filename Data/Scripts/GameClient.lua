@@ -663,15 +663,16 @@ function INVENTORY:_UpdateInteractions(_dt)
             if not self.isHoveringUI then
                 -- 1. change color of tiles
                 -- 2. show hover animation
+                -- NOTE: originally activation outcome was passed instead of interactable
                 Events.Broadcast(P.INTERACTION.TileUnderCursorChanged, grid,
-                     newCellUnderCursor, self.moveOutcome, self.tileActivationOutcome, self.attachedActor)
+                     newCellUnderCursor, self.moveOutcome, self.isInteractionEnabled, self.attachedActor)
             end
         end
         self.cellUnderCursor = newCellUnderCursor
     else -- cell under cursor is nil
         if self.cellUnderCursor then
             self.cellUnderCursor = nil
-            Events.Broadcast(P.INTERACTION.TileUnderCursorChanged, grid, nil, nil, nil, self.attachedActor)
+            Events.Broadcast(P.INTERACTION.TileUnderCursorChanged, grid, nil, nil, self.isInteractionEnabled, self.attachedActor)
         end
     end
     -- Update left mouse movement criteria and interaction type.
@@ -896,11 +897,11 @@ function INVENTORY:_UpdateCamera(dt)
 end
 
 -- Monkey patching Grid for highlights
-function INVENTORY._OnTileUnderCursorChanged(grid, cursor_cell, move_outcome, _activation_outcome, _attached_actor)
+function INVENTORY._OnTileUnderCursorChanged(grid, cursor_cell, move_outcome, interactable, _attached_actor)
     debug(pp{"#", cursor_cell, move_outcome or {}, _attached_actor or {}, time()})
     local hl = grid._highlights
     hl:_clear()
-    if move_outcome and INVENTORY.isInteractionEnabled then
+    if move_outcome and interactable then
         local type, dst_cell, src_cell, other_cell = table.unpack(move_outcome)
         assert(not dst_cell or dst_cell == cursor_cell)
         if not cursor_cell or cursor_cell.type ~= "Cell" or cursor_cell:IsNil() or not type then return end

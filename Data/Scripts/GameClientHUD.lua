@@ -268,12 +268,12 @@ do
     local PET_SPECIAL = INFO_PET:GetCustomProperty("Special"):WaitForObject()
     local _pet_show_id = nil
     local PET_SHOW_SPR = SP.New(1, 2)
-    local function _show_pet_info(pet_id)
+    local function _show_pet_info(interactable, pet_id)
         if _pet_show_id == pet_id then return end
         _pet_show_id = pet_id
         if not pet_id then
             PET_SHOW_SPR:ToAnim()(INFO_PET):Target("offset", INFO_PET_HIDE):Run(.2)
-        else
+        elseif interactable then
             local name = S.PetDb:GetName(pet_id)
             PET_NAME.text = S.FancyPetNamesByName[name] or name
             local _rid, rinfo = S.PetDb:GetRarity(pet_id)
@@ -289,9 +289,9 @@ do
         end
     end
     _maid._info_pet_inventory = Events.Connect(P.INTERACTION.TileUnderCursorChanged,
-        function(_grid, cursor_cell, _outcome, _activation_outcome, cursor_actor)
+        function(_grid, cursor_cell, _outcome, interactable, cursor_actor)
             local actor = cursor_actor or cursor_cell and cursor_cell.actor
-            _show_pet_info(actor and actor.id)
+            _show_pet_info(interactable, actor and actor.id)
         end)
 end -- do
 
