@@ -29,6 +29,22 @@ local PIPE_COLOR_BW = PIPE_COLOR:GetDesaturated(0.5)
 local UI_CONTAINER = script:GetCustomProperty("StandUIContainer"):WaitForObject()
 local BUY_BUTTON = script:GetCustomProperty("BuyButton"):WaitForObject()
 
+-- TODO: hatched pet info
+local INFO_BUTTONS = {
+    script:GetCustomProperty("Info_1"):WaitForObject(),
+    script:GetCustomProperty("Info_2"):WaitForObject(),
+    script:GetCustomProperty("Info_3"):WaitForObject(),
+}
+
+local function _hide_info_buttons()
+    for _, info in ipairs(INFO_BUTTONS) do
+        info.isInteractable = false
+        info.isEnabled = false
+    end
+end
+-- initial hide
+_hide_info_buttons()
+
 local MAX_UNFORMATTED_PRICE = 10000
 BUY_BUTTON.text = B.formatNumber(S.EggDb[EGG_ID].price, MAX_UNFORMATTED_PRICE).." speed"
 local BUY_BUTTON_POS = Vector2.New(BUY_BUTTON.x, BUY_BUTTON.y)
@@ -118,11 +134,19 @@ local function _show_or_hide_pets(show)
         for i, pet in ipairs(PETS) do
             local scale = 0.6
             PET_SPR:ToAnim():Target("Scale", scale*Vector3.ONE)(pet):Run()
-            i = #PETS == 1 and 2 or i
-            i = #PETS == 2 and i == 2 and 3 or i
-            PET_SPR:ToAnim("randomize"):Target("Position", PET_MARKS[i]:GetPosition())(pet):Run()
+            local mark_idx = #PETS == 1 and 2 or i
+            mark_idx = #PETS == 2 and mark_idx == 2 and 3 or mark_idx
+            local info_idx = i
+            local mark_world_position = PET_MARKS[mark_idx]:GetWorldPosition()
+            PET_SPR:ToAnim("randomize"):Target("Position", PET_MARKS[mark_idx]:GetPosition())(pet):Run()
                 :SetOnFinish(function()
                     pet:LookAtContinuous(LOOK_AT_MARK, false, 1)
+                    local pos_scr = UI.GetScreenPosition(mark_world_position)
+                    local info = INFO_BUTTONS[info_idx]
+                    info.isEnabled = true
+                    info.isInteractable = true
+                    info.x = pos_scr.x
+                    info.y = pos_scr.y
             end)
         end
     else
@@ -139,10 +163,10 @@ end
 local function _buy_button_interactable(interactable)
     local text_color = BUY_BUTTON:GetFontColor()
     text_color.a = interactable and 1 or 0.6
-    print("interactable", interactable, text_color)
     BUY_BUTTON:SetFontColor(text_color)
     BUY_BUTTON.isInteractable = interactable
 end
+
 -- Flow: interaction -> wait for Shop state -> wait for Ingame state
 local OnEnterShop, OnLeaveShop, OnCanBuyEgg, OnEggHatched do
     local function OnInteractedEvent(_trigger, player)
@@ -157,6 +181,18 @@ local OnEnterShop, OnLeaveShop, OnCanBuyEgg, OnEggHatched do
                 REvents.BroadcastToServer(P.C2S.TransmitHatchingEgg, EGG_ID)
                 PURCHASE_AUDIO2:Play()
             end)
+            do -- info buttons
+                for i, pet in ipairs(PET_TEMPLATES) do
+                    local info = INFO_BUTTONS[i]
+                    local pet_id = pet[1]
+                    _session_maid:GiveTask(info.hoveredEvent:Connect(function()
+                        REvents.Broadcast(P.CLIENT.PET_STAND_INFO, pet_id)
+                    end))
+                    _session_maid:GiveTask(info.unhoveredEvent:Connect(function()
+                        REvents.Broadcast(P.CLIENT.PET_STAND_INFO, nil)
+                    end))
+                end
+            end
             REvents.Broadcast(P.CLIENT.SHOP_INTERACTED, THIS_STAND_ID, EGG_ID, CAMERA)
         end
     end
@@ -165,8 +201,11 @@ local OnEnterShop, OnLeaveShop, OnCanBuyEgg, OnEggHatched do
     OnEggHatched = function(shop_id, pet_id)
         if shop_id ~= THIS_STAND_ID then return end
         _show_or_hide_pets(not "show")
+        _hide_info_buttons()
+        -- TODO: info button
         local pet = PETS_BY_ID[pet_id]
         local mark = PET_MARKS[#PET_MARKS] -- last mark for hatching
+        local info = INFO_BUTTONS[1]
         PIPE_SPR:ToAnim():Target("Scale", EGG_TR:GetScale())(EGG_GROUP):Run()
             :Chain(
                 HATCH_SPR:ToAnim():Impulse("Rotation", Rotation.New(45, 0, 0))(EGG_GROUP)
@@ -176,6 +215,11 @@ local OnEnterShop, OnLeaveShop, OnCanBuyEgg, OnEggHatched do
                 HATCH_SPR:ToAnim():Impulse("Scale", 0.5*Vector3.ONE)(EGG_GROUP)
                     :SetOnFinish(function()
                         EGG_CRACKING_AUDIO:Play()
+                        info.isEnabled = true
+                        info.isInteractable = true
+                        local info_pos = UI.GetScreenPosition(mark:GetWorldPosition())
+                        info.x = info_pos.x
+                        info.y = info_pos.y
                         -- TODO: some VFX here
                         PIPE_SPR:ToAnim():Target("Scale", Vector3.ZERO)(EGG_GROUP):Run()
                         PIPE_SPR:ToAnim():Target("Position", mark:GetPosition())(pet):Run()
@@ -199,6 +243,7 @@ local OnEnterShop, OnLeaveShop, OnCanBuyEgg, OnEggHatched do
         _session_maid:GiveTask(Events.Connect("ISM:Shop:Exited", function()
             UI_CONTAINER.visibility = Visibility.FORCE_OFF
         end))
+
     end
 
     OnLeaveShop = function()
@@ -208,6 +253,7 @@ local OnEnterShop, OnLeaveShop, OnCanBuyEgg, OnEggHatched do
         _show_or_hide_pipe(not "show")
         _show_or_hide_pets(not "show")
         _show_or_hide_buy_button(not "show")
+        _hide_info_buttons()
         PURCHASE_AUDIO1:Play()
         -- should be at the end of the callback: wait before turn-on shop's interactivity
         _session_maid:Reset()
@@ -236,6 +282,8 @@ local OnEnterShop, OnLeaveShop, OnCanBuyEgg, OnEggHatched do
             TRIGGER.isInteractable = _save_TRIGGER_isInteractable
         end))
     end
+
+
 
 end -- do
 

@@ -207,7 +207,8 @@ Protocols.CLIENT = {
     SHOP_INTERACTED = "%ShopInteracted",
     CAN_BUY_EGG = "%CanBuyEgg",
     LEAVE_SHOP = "%LeaveShop",
-    X_BUTTON = "%CloseButtonClicked"
+    X_BUTTON = "%CloseButtonClicked",
+    PET_STAND_INFO = "%PetStandInfo",
 }
 
 Protocols.MODAL_ARG = {

@@ -496,6 +496,8 @@ function SHOP:Exit()
     self.isInteractionEnabled = false
     _show_cursor(false)
     LOCAL_PLAYER.isVisibleToSelf = true
+    -- force to close info panel on shop exit
+    REvents.Broadcast(P.CLIENT.PET_STAND_INFO, nil)
 end
 
 function SHOP:HandleEggHatched(_egg_id, pet_id)
