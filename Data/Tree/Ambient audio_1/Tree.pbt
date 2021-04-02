@@ -106,10 +106,12 @@ Objects {
       Id: 11613197061544053954
     }
     Pitch: 1310.45142
-    Volume: 1.33660138
+    Volume: 1
     Falloff: 400
     Radius: 1000
-    StopTime: 6
+    FadeInTime: 5
+    FadeOutTime: 6
+    StopTime: 15
   }
 }
 Objects {
@@ -122,9 +124,9 @@ Objects {
     Rotation {
     }
     Scale {
-      X: 0.99999994
-      Y: 0.99999994
-      Z: 1
+      X: 3.6269455
+      Y: 3.6269455
+      Z: 3.62694478
     }
   }
   ParentId: 8575734226450930608
@@ -141,10 +143,13 @@ Objects {
     AudioAsset {
       Id: 11613197061544053954
     }
-    Volume: 1.33660138
+    Pitch: -1000
+    Volume: 1
     Falloff: 400
     Radius: 1000
-    StopTime: 5
+    FadeInTime: 4
+    FadeOutTime: 6
+    StopTime: 10
   }
 }
 Objects {
@@ -231,18 +236,24 @@ Objects {
       key: 8638409400582938100
       value {
         Overrides {
-          Name: "cs:Sound"
+          Name: "cs:Sound1"
           ObjectReference {
             SelfId: 1423298432749172638
           }
         }
         Overrides {
           Name: "cs:CooldownMin"
-          Float: 20
+          Float: 30
         }
         Overrides {
           Name: "cs:CooldownMax"
-          Float: 30
+          Float: 40
+        }
+        Overrides {
+          Name: "cs:Sound2"
+          ObjectReference {
+            SelfId: 11770688659607540656
+          }
         }
       }
     }
@@ -315,6 +326,18 @@ Objects {
         Overrides {
           Name: "cs:CooldownMax"
           Float: 20
+        }
+        Overrides {
+          Name: "cs:Sound1"
+          ObjectReference {
+            SelfId: 11770688659607540656
+          }
+        }
+        Overrides {
+          Name: "cs:Sound2"
+          ObjectReference {
+            SelfId: 1423298432749172638
+          }
         }
       }
     }

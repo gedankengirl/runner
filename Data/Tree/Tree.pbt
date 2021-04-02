@@ -22,8 +22,7 @@ Objects {
   ChildIds: 16813558807825262224
   ChildIds: 8534815031986278044
   ChildIds: 7553754998792656332
-  ChildIds: 14492954847959394
-  ChildIds: 18342802537463913049
+  ChildIds: 12999392669496076010
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -39,71 +38,13 @@ Objects {
   }
 }
 Objects {
-  Id: 18342802537463913049
-  Name: "Humanoid 1 Rig"
+  Id: 12999392669496076010
+  Name: "Pet Heaven"
   Transform {
     Location {
-      X: -718.187378
-      Y: 3235.37036
-      Z: 209.854309
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 4781671109827199097
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  CoreMesh {
-    MeshAsset {
-      Id: 14348988342639881658
-    }
-    Teams {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    AnimatedMesh {
-      AnimationStance: "unarmed_idle_relaxed"
-      AnimationStancePlaybackRate: 1
-      AnimationStanceShouldLoop: true
-      AnimationPlaybackRateMultiplier: 1
-      PlayOnStartAnimation {
-        PlaybackRate: 1
-      }
-      SkinnedMeshes {
-        Id: 14112262793100824479
-      }
-      SkinnedMeshes {
-        Id: 841534158063459245
-      }
-      SkinnedMeshes {
-        Id: 841534158063459245
-      }
-      SkinnedMeshes {
-        Id: 841534158063459245
-      }
-    }
-  }
-}
-Objects {
-  Id: 14492954847959394
-  Name: "Treadmill"
-  Transform {
-    Location {
-      X: -666.812256
-      Y: 3237.43823
-      Z: 84.2045593
+      X: 1000
+      Y: -36651.6836
+      Z: -6221.54443
     }
     Rotation {
     }
@@ -125,7 +66,7 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Treadmill"
+    FilePartitionName: "Pet Heaven"
   }
 }
 Objects {
@@ -392,7 +333,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:forceoff"
+    Value: "mc:evisibilitysetting:inheritfromparent"
   }
   CameraCollidable {
     Value: "mc:ecollisionsetting:inheritfromparent"

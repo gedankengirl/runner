@@ -53,7 +53,17 @@ Assets {
         ParentId: 6283574561774308347
         UnregisteredParameters {
           Overrides {
-            Name: "cs:Sound"
+            Name: "cs:Sound1"
+            ObjectReference {
+            }
+          }
+          Overrides {
+            Name: "cs:Sound2"
+            ObjectReference {
+            }
+          }
+          Overrides {
+            Name: "cs:Sound3"
             ObjectReference {
             }
           }
@@ -63,6 +73,18 @@ Assets {
           }
           Overrides {
             Name: "cs:CooldownMax"
+            Float: 0
+          }
+          Overrides {
+            Name: "cs:ChangePItch"
+            Bool: false
+          }
+          Overrides {
+            Name: "cs:PitchMin"
+            Float: 0
+          }
+          Overrides {
+            Name: "cs:PitchMax"
             Float: 0
           }
         }

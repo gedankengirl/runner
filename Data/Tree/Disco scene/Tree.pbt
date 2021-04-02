@@ -7693,6 +7693,7 @@ Objects {
   }
   Trigger {
     Interactable: true
+    InteractionLabel: "Change music"
     TeamSettings {
       IsTeamCollisionEnabled: true
       IsEnemyCollisionEnabled: true

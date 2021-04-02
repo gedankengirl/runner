@@ -88,6 +88,18 @@ Objects {
           Name: "cs:CooldownMax"
           Float: 60
         }
+        Overrides {
+          Name: "cs:Sound1"
+          ObjectReference {
+            SelfId: 9159062821291959453
+          }
+        }
+        Overrides {
+          Name: "cs:Sound2"
+          ObjectReference {
+            SelfId: 6800357833572779590
+          }
+        }
       }
     }
     TemplateAsset {
@@ -154,6 +166,18 @@ Objects {
         Overrides {
           Name: "cs:CooldownMax"
           Float: 30
+        }
+        Overrides {
+          Name: "cs:Sound1"
+          ObjectReference {
+            SelfId: 6800357833572779590
+          }
+        }
+        Overrides {
+          Name: "cs:Sound2"
+          ObjectReference {
+            SelfId: 9159062821291959453
+          }
         }
       }
     }
