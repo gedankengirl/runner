@@ -1,4 +1,5 @@
 local DEBUG = false
+local Deque = _G.req("_Deque")
 local Maid = _G.req("_Maid")
 local _maid = Maid.New(script)
 local REvents = _G.req("ReliableEvents")
@@ -36,6 +37,16 @@ local INFO_PET = UI_HUD:GetCustomProperty("INFO_Pet"):WaitForObject()
 local INFO_PET_HIDE = Vector2.New(-500, INFO_PET.y)
 local INFO_PET_SHOW = Vector2.New(-6, INFO_PET.y)
 
+local MESSAGE_PANEL = script:GetCustomProperty("NotificationsPanel"):WaitForObject()
+local MESSAGE_PANEL_TEXT = MESSAGE_PANEL:GetCustomProperty("TEXT"):WaitForObject()
+local MESSAGE_DEFAULT_COLOR = MESSAGE_PANEL_TEXT:GetColor()
+local MESSAGE_SOUND = MESSAGE_PANEL:GetCustomProperty("NotifySound"):WaitForObject()
+local MESSAGE_PANEL_POS  = Vector2.New(MESSAGE_PANEL.x, MESSAGE_PANEL.y)
+local MESSAGE_QUEUE = Deque.New()
+-- MESSAGE_QUEUE:Push({text="Lorem Ipsum!", color = Color.RED})
+-- MESSAGE_QUEUE:Push({text="OK!",})
+local MESSAGE_SPR = SP.New(1, 2)
+local MESSAGE_DELAY = 3
 
 local LOCAL_PLAYER = Game.GetLocalPlayer()
 UI_PLAYER_ICON:SetImage(LOCAL_PLAYER)
@@ -64,6 +75,25 @@ end
 local function uniform(a, b)
     assert(a < b, "empty interval")
     return a + (b-a)*random()
+end
+
+local _message_visible = false
+local function _show_message(message)
+    local color = message.color or MESSAGE_DEFAULT_COLOR
+    local text = message.text
+    if not text or text == "" then return end
+    MESSAGE_PANEL_TEXT.text = text
+    MESSAGE_PANEL_TEXT:SetColor(color)
+    _message_visible = true
+    local anim_in = MESSAGE_SPR:ToAnim()(MESSAGE_PANEL):Target("offset", Vector2.ZERO)
+        :SetOnFinish(function()
+            print("CLING!")
+            MESSAGE_SOUND:Play()
+        end)
+    local anim_out = MESSAGE_SPR:ToAnim()(MESSAGE_PANEL):Target("offset", MESSAGE_PANEL_POS)
+        :SetPeriodicDelay(MESSAGE_DELAY)
+        :SetOnFinish(function() _message_visible = false end)
+    anim_in:Chain(anim_out):Run()
 end
 
 local HUD_UI = script:GetCustomProperty("HUD"):WaitForObject()
@@ -226,8 +256,12 @@ function HUD._Update()
         UI_REBIRTH_PROGRESS.progress = has/needed
         UI_NEED_TO_REBIRTH_COUNT.text = B.formatNumber(needed-has).." till next rebirth"
     end
+    -- message queue
+    if not _message_visible and not MESSAGE_QUEUE:IsEmpty() then
+        local message = MESSAGE_QUEUE:Pop()
+        _show_message(message)
+    end
 end
-
 
 -----------------------------------------------------------------------------
 -- Events

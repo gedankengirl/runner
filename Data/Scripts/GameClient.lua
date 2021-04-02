@@ -163,8 +163,8 @@ function PetAnimator.New(pet_id, pos_idx, player)
         pet = World.SpawnAsset(S.PetDb:GetMuid(pet_id), _pet_params),
         pet_id=pet_id,
         pos_idx=pos_idx,
-        min_spr=MIN_SPR:RandomizeFrequency(0.15),
-        max_spr=MAX_SPR:RandomizeFrequency(0.25),
+        min_spr=MIN_SPR:RandomizeFrequency(),
+        max_spr=MAX_SPR:RandomizeFrequency(),
         look_at_speed = _randomize(math.pi/4, 0.15),
         spring = Spring.New(MAX_SPR, _pet_params.position),
         zspring = Spring.New(Z_SPR, _pet_params.position.z)

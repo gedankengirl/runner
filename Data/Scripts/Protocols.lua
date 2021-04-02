@@ -209,6 +209,7 @@ Protocols.CLIENT = {
     LEAVE_SHOP = "%LeaveShop",
     X_BUTTON = "%CloseButtonClicked",
     PET_STAND_INFO = "%PetStandInfo",
+    MESSAGE = "%InfoMessage",
 }
 
 Protocols.MODAL_ARG = {
