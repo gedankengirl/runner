@@ -111,6 +111,8 @@ local MAX_SPR = SP.New(0.7, 1.0)
 local Z_SPR = SP.New(0.9, 1.0)
 local AWAY_SPR = SP.New(1, 0.5)
 local HEAVEN = Vector3.New(0, 0, 700)
+-- SLOW_MAX_SPEED is a expiremental constant, do not change without playtest!
+local SLOW_MAX_SPEED = 1450
 local SLOW_SQ = 1E6
 local Z_OFFSET = Vector3.UP*-65
 
@@ -178,11 +180,16 @@ function PetAnimator:ChangePositionIndex(idx)
     self.pos_idx = idx
 end
 
-function PetAnimator:Update(dt, target_transform, target_velocity, n_pets)
+function PetAnimator:Update(dt, target_transform, max_speed, target_velocity, n_pets)
     local pet = self.pet
     if not pet then return end
     target_velocity.z = 0
-    local is_slow = target_velocity.sizeSquared < SLOW_SQ
+    local is_slow = false
+    if max_speed < SLOW_MAX_SPEED then
+        is_slow = target_velocity.sizeSquared < 1
+    else
+        is_slow = target_velocity.sizeSquared < SLOW_SQ
+    end
     local spring, zspring = self.spring, self.zspring
     spring:SetSpringParams(is_slow and self.min_spr or self.max_spr)
     local pet_pos, master_pos = pet:GetWorldPosition(), target_transform:GetPosition() + Z_OFFSET
@@ -289,10 +296,11 @@ function PetMaster.Update(dt)
     for player_id, panims in pairs(state) do
         local player = players[player_id]
         if player and player:IsValid() then
+            local max_speed = player.maxWalkSpeed
             local tr, vel = player:GetWorldTransform(), player:GetVelocity()
             local n_pets = #panims
             for i=1, n_pets do
-                panims[i]:Update(dt, tr, vel, n_pets)
+                panims[i]:Update(dt, tr, max_speed, vel, n_pets)
             end
         end
     end
