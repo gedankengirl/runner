@@ -36,7 +36,7 @@ local PET_BONUS_KEY = "PetBonus" -- not persist
 
 local _KEY_DEFAULTS = {
     [COIN_KEY] = 1,
-    [LIFETIME_COINS_KEY] = 0.1,
+    [LIFETIME_COINS_KEY] = 1/LIFETIME_COINS_KEY_DIV,
     [GEM_KEY] = 0,
     [REBIRTH_KEY] = 0,
     [INVENTORY_KEY] = "",
@@ -53,7 +53,6 @@ _G.req = CoreMath and _G.req or require
 local xoshiro256 = _G.req("_Xoshiro256")
 local Trampoline = _G.req("_Trampoline")
 local random = xoshiro256.random
-local randomseed = xoshiro256.randomseed
 
 --------------------
 -- math utils
@@ -169,11 +168,18 @@ local function doRebirth(player)
     return false, needed, has, rebirth
 end
 
-local function addLifetimeCoins(player, n)
+local function _addLifetimeCoins(player, n)
     if n <= 0 then return end
     local data = Storage.GetPlayerData(player)
     local coins_div = data[LIFETIME_COINS_KEY] or _KEY_DEFAULTS[LIFETIME_COINS_KEY]
     BusinessLogic.SaveKey(player, LIFETIME_COINS_KEY, coins_div + n/LIFETIME_COINS_KEY_DIV)
+end
+
+local function getLifetimeCoins(player)
+    assert(player)
+    local data = Storage.GetPlayerData(player)
+    local scaled_lfc = data[LIFETIME_COINS_KEY] or _KEY_DEFAULTS[LIFETIME_COINS_KEY]
+    return (scaled_lfc * LIFETIME_COINS_KEY_DIV)//1
 end
 
 local function calcCoinPortion(player, multiplier)
@@ -188,14 +194,14 @@ end
 local function addCoins(player, multiplier)
     assert(Environment.IsServer())
     local portion = calcCoinPortion(player, multiplier)
+    _addLifetimeCoins(player, portion)
     local coins = portion + (player:GetResource(COIN_KEY) or _KEY_DEFAULTS[COIN_KEY])
     _setSpeed(player, coins)
     if DEBUG then
-        print(string.format("%s %d %d %d", player.name, portion//1, coins//1, player.maxWalkSpeed//1))
+        print(string.format("%s %d %d %d LTC: %d",
+            player.name, portion//1, coins//1, player.maxWalkSpeed//1, getLifetimeCoins(player)))
     end
 end
-
-
 
 local function addGems(player, ng)
     if ng <= 0 then return end
@@ -280,7 +286,7 @@ function BusinessLogic.SaveKey(player, key, datum)
 end
 
 function BusinessLogic.GetResource(player, key)
-    assert(player)
+    assert(player, "no player param")
     assert(_KEY_DEFAULTS[key], key)
     return player:GetResource(key) or _KEY_DEFAULTS[key]
 end
@@ -382,6 +388,7 @@ end
 BusinessLogic.formatNumber = formatNumber
 BusinessLogic.onClick = onSpeedAbilityClick
 BusinessLogic.addCoins = addCoins
+BusinessLogic.getLifetimeCoins = getLifetimeCoins
 BusinessLogic.calcCoinPortion = calcCoinPortion
 BusinessLogic.addGems = addGems
 BusinessLogic.subtractGems = subtractGems
