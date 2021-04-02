@@ -860,8 +860,8 @@ Assets {
         Control {
           Width: 360
           Height: 40
-          UIX: 56
-          UIY: 13
+          UIX: 55
+          UIY: 7
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
@@ -935,9 +935,9 @@ Assets {
           Text {
             Label: "REBIRTH"
             Color {
-              R: 0.0125
-              G: 0.0440397114
-              B: 0.05
+              R: 0.022135457
+              G: 0.0779871121
+              B: 0.0885418281
               A: 1
             }
             Size: 20
@@ -1122,7 +1122,8 @@ Assets {
         Control {
           Width: 64
           Height: 60
-          UIY: 5.90924263
+          UIX: 1
+          UIY: 7
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
@@ -4955,6 +4956,36 @@ Assets {
         ChildIds: 13039717779775404430
         ChildIds: 16826044602268388330
         UnregisteredParameters {
+          Overrides {
+            Name: "cs:Name"
+            ObjectReference {
+              SubObjectId: 10538721774288693265
+            }
+          }
+          Overrides {
+            Name: "cs:Rarity"
+            ObjectReference {
+              SubObjectId: 10876580398363005195
+            }
+          }
+          Overrides {
+            Name: "cs:Level"
+            ObjectReference {
+              SubObjectId: 10454743689934920414
+            }
+          }
+          Overrides {
+            Name: "cs:Bonus"
+            ObjectReference {
+              SubObjectId: 636277759359722180
+            }
+          }
+          Overrides {
+            Name: "cs:Special"
+            ObjectReference {
+              SubObjectId: 86917171925120732
+            }
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -4968,8 +4999,8 @@ Assets {
         Control {
           Width: 320
           Height: 230
-          UIX: -1025
-          UIY: 240
+          UIX: -500
+          UIY: -240
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
@@ -4980,12 +5011,12 @@ Assets {
           AnchorLayout {
             SelfAnchor {
               Anchor {
-                Value: "mc:euianchor:topleft"
+                Value: "mc:euianchor:middleleft"
               }
             }
             TargetAnchor {
               Anchor {
-                Value: "mc:euianchor:topcenter"
+                Value: "mc:euianchor:middleleft"
               }
             }
           }
@@ -5124,7 +5155,7 @@ Assets {
       }
       Objects {
         Id: 7440245720300319300
-        Name: "1 Pet Move Panel"
+        Name: "1 Pet Name"
         Transform {
           Location {
             X: 24150.002
@@ -5240,7 +5271,7 @@ Assets {
       }
       Objects {
         Id: 10538721774288693265
-        Name: "UI Text Box"
+        Name: "Name"
         Transform {
           Location {
           }
@@ -5431,7 +5462,7 @@ Assets {
       }
       Objects {
         Id: 4024080961289589725
-        Name: "2 Pan Panel"
+        Name: "2 Pan Rarity"
         Transform {
           Location {
             X: 24150.002
@@ -5547,7 +5578,7 @@ Assets {
       }
       Objects {
         Id: 10876580398363005195
-        Name: "UI Text Box"
+        Name: "Rarity"
         Transform {
           Location {
           }
@@ -5738,7 +5769,7 @@ Assets {
       }
       Objects {
         Id: 9079320514728036023
-        Name: "3 Zoom Panel"
+        Name: "3 Pet Level"
         Transform {
           Location {
             X: 24150.002
@@ -5854,7 +5885,7 @@ Assets {
       }
       Objects {
         Id: 10454743689934920414
-        Name: "UI Text Box"
+        Name: "Level"
         Transform {
           Location {
           }
@@ -6045,7 +6076,7 @@ Assets {
       }
       Objects {
         Id: 13039717779775404430
-        Name: "4 Pet Delete Panel"
+        Name: "4 Pet Bonus"
         Transform {
           Location {
             X: 24150.002
@@ -6161,7 +6192,7 @@ Assets {
       }
       Objects {
         Id: 636277759359722180
-        Name: "UI Text Box"
+        Name: "Bonus"
         Transform {
           Location {
           }
@@ -6352,7 +6383,7 @@ Assets {
       }
       Objects {
         Id: 16826044602268388330
-        Name: "5 Exit Panel"
+        Name: "5 Pet Special"
         Transform {
           Location {
             X: 24150
@@ -6467,7 +6498,7 @@ Assets {
       }
       Objects {
         Id: 86917171925120732
-        Name: "UI Text Box"
+        Name: "Special"
         Transform {
           Location {
           }
@@ -7362,8 +7393,8 @@ Assets {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Control {
-          Width: 670
-          Height: 330
+          Width: 650
+          Height: 280
           UIY: 60
           RenderTransformPivot {
             Anchor {

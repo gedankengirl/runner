@@ -138,8 +138,15 @@ function PlayerConnection.New(player)
     local playerData = B.LoadSave(player)
     local saved_inventory = playerData[B.INVENTORY_KEY]
     local inventory = saved_inventory and P.S2C.INVENTORY.unpack(saved_inventory, Grid.deserialize)
-        or _make_inventory()
-        -- or _make_debug_inventory(12, 3) -- DEBUG: inventory[1,12] equip [1,3]
+    if not inventory then
+        -- first time player
+        local FIRST_TIME_GEMS = 10
+        B.addGems(player, FIRST_TIME_GEMS)
+        B.SaveKey(player, B.GEM_KEY, FIRST_TIME_GEMS)
+        inventory = _make_inventory()
+        -- DEBUG: uncomment next line
+        -- inventory = _make_debug_inventory(12, 3) -- params: inventory[1,12] equip [1,3]
+    end
     local self = setmetatable({
         _maid = Maid.New(),
         player = player,
@@ -149,6 +156,7 @@ function PlayerConnection.New(player)
     }, PlayerConnection)
     B.RecalculatePetBonus(self.player, self.inventory)
     self:Send(P.S2C.CHANNELS.pack(player.id, self.channel, PET_CHAN, SOCIAL, _nonce(self)))
+    -- NOTE: all resources persist here:
     self._maid:GiveTask(player.resourceChangedEvent:Connect(B.SaveKey))
     return self
 end

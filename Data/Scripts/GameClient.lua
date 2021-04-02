@@ -1,4 +1,4 @@
-local DEBUG = Environment.IsPreview()
+local DEBUG = Environment.IsPreview() and false
 local debug = function(...) if DEBUG then print("[D]", ...) end end
 local Maid = _G.req("_Maid")
 local Grid = _G.req("_Grid")
@@ -111,6 +111,8 @@ local MAX_SPR = SP.New(0.7, 1.0)
 local Z_SPR = SP.New(0.9, 1.0)
 local AWAY_SPR = SP.New(1, 0.5)
 local HEAVEN = Vector3.New(0, 0, 700)
+-- SLOW_MAX_SPEED is a expiremental constant, do not change without playtest!
+local SLOW_MAX_SPEED = 1450
 local SLOW_SQ = 1E6
 local Z_OFFSET = Vector3.UP*-65
 
@@ -178,11 +180,16 @@ function PetAnimator:ChangePositionIndex(idx)
     self.pos_idx = idx
 end
 
-function PetAnimator:Update(dt, target_transform, target_velocity, n_pets)
+function PetAnimator:Update(dt, target_transform, max_speed, target_velocity, n_pets)
     local pet = self.pet
     if not pet then return end
     target_velocity.z = 0
-    local is_slow = target_velocity.sizeSquared < SLOW_SQ
+    local is_slow = false
+    if max_speed < SLOW_MAX_SPEED then
+        is_slow = target_velocity.sizeSquared < 1
+    else
+        is_slow = target_velocity.sizeSquared < SLOW_SQ
+    end
     local spring, zspring = self.spring, self.zspring
     spring:SetSpringParams(is_slow and self.min_spr or self.max_spr)
     local pet_pos, master_pos = pet:GetWorldPosition(), target_transform:GetPosition() + Z_OFFSET
@@ -289,10 +296,11 @@ function PetMaster.Update(dt)
     for player_id, panims in pairs(state) do
         local player = players[player_id]
         if player and player:IsValid() then
+            local max_speed = player.maxWalkSpeed
             local tr, vel = player:GetWorldTransform(), player:GetVelocity()
             local n_pets = #panims
             for i=1, n_pets do
-                panims[i]:Update(dt, tr, vel, n_pets)
+                panims[i]:Update(dt, tr, max_speed, vel, n_pets)
             end
         end
     end
@@ -496,6 +504,8 @@ function SHOP:Exit()
     self.isInteractionEnabled = false
     _show_cursor(false)
     LOCAL_PLAYER.isVisibleToSelf = true
+    -- force to close info panel on shop exit
+    REvents.Broadcast(P.CLIENT.PET_STAND_INFO, nil)
 end
 
 function SHOP:HandleEggHatched(_egg_id, pet_id)
@@ -663,15 +673,16 @@ function INVENTORY:_UpdateInteractions(_dt)
             if not self.isHoveringUI then
                 -- 1. change color of tiles
                 -- 2. show hover animation
+                -- NOTE: originally activation outcome was passed instead of interactable
                 Events.Broadcast(P.INTERACTION.TileUnderCursorChanged, grid,
-                     newCellUnderCursor, self.moveOutcome, self.tileActivationOutcome)
+                     newCellUnderCursor, self.moveOutcome, self.isInteractionEnabled, self.attachedActor)
             end
         end
         self.cellUnderCursor = newCellUnderCursor
     else -- cell under cursor is nil
         if self.cellUnderCursor then
             self.cellUnderCursor = nil
-            Events.Broadcast(P.INTERACTION.TileUnderCursorChanged, grid, nil, nil, nil)
+            Events.Broadcast(P.INTERACTION.TileUnderCursorChanged, grid, nil, nil, self.isInteractionEnabled, self.attachedActor)
         end
     end
     -- Update left mouse movement criteria and interaction type.
@@ -817,6 +828,7 @@ function INVENTORY:HandleLeftMouseUp()
     end
 end
 
+-- extra camera disstance
 local K = {
     [7*5] = 2,
     [7*6] = 2,
@@ -895,11 +907,11 @@ function INVENTORY:_UpdateCamera(dt)
 end
 
 -- Monkey patching Grid for highlights
-function INVENTORY._OnTileUnderCursorChanged(grid, cursor_cell, move_outcome)
-    debug(pp{"#", cursor_cell, move_outcome or {}, time()})
+function INVENTORY._OnTileUnderCursorChanged(grid, cursor_cell, move_outcome, interactable, _attached_actor)
+    debug(pp{"#", cursor_cell, move_outcome or {}, _attached_actor or {}, time()})
     local hl = grid._highlights
     hl:_clear()
-    if move_outcome and INVENTORY.isInteractionEnabled then
+    if move_outcome and interactable then
         local type, dst_cell, src_cell, other_cell = table.unpack(move_outcome)
         assert(not dst_cell or dst_cell == cursor_cell)
         if not cursor_cell or cursor_cell.type ~= "Cell" or cursor_cell:IsNil() or not type then return end

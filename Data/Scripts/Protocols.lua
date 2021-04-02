@@ -185,7 +185,7 @@ Protocols.INTERACTION = {
     AttemptDelete = "Interaction_AttemptDelete",
     CameraScrollingBegin="Interaction_CameraScrollingBegin",
     CameraScrollingEnd = "Interaction_CameraScrollingEnd",
-    TileUnderCursorChanged = "Interaction_TileUnderCursorChanged",
+    TileUnderCursorChanged = "Interaction_TileUnderCursorChanged", -- grid, cursor_cell, move_outcome, interactable, cursor_actor
     ActorPickUp = "Interaction_ActorPickUp",
 }
 
@@ -207,7 +207,8 @@ Protocols.CLIENT = {
     SHOP_INTERACTED = "%ShopInteracted",
     CAN_BUY_EGG = "%CanBuyEgg",
     LEAVE_SHOP = "%LeaveShop",
-    X_BUTTON = "%CloseButtonClicked"
+    X_BUTTON = "%CloseButtonClicked",
+    PET_STAND_INFO = "%PetStandInfo",
 }
 
 Protocols.MODAL_ARG = {
