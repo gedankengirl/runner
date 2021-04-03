@@ -221,7 +221,7 @@ local function subtractGems(player, price)
         player:SetResource(GEM_KEY, gems)
         return true
     else
-        return false, "insufficient funds"
+        return false, S.T.NOT_ENOUGH_GEMS
     end
 end
 
@@ -235,7 +235,7 @@ local function subtractCoins(player, price)
        _setSpeed(player, coins)
        return true
     else
-        return false, "Insufficient Speed"
+        return false, S.T.NOT_ENOUGH_SPEED
     end
     -- DEBUG:
     if DEBUG then
@@ -293,17 +293,17 @@ end
 
 function BusinessLogic.CanBuyEgg(player, egg_id, grid)
     if not grid then
-        return false, "Inventory not ready."
+        return false, S.T.INVENTORY_NOT_READY
     end
     local egg = S.EggDb[egg_id]
     local price = egg.price
     local free_cell = grid:Search(function(cell) return cell:IsFree() end)
     if not free_cell then
-        return false, "No free inventory space."
+        return false, S.T.INVENTORY_FULL
     end
     local coins = player:GetResource(COIN_KEY) or 1
     if price > coins then
-        return false, "Insufficient funds."
+        return false, S.T.NOT_ENOUGH_SPEED
     end
     return true
 end

@@ -38,7 +38,6 @@ local PROTOCOL_EGG do
     PROTOCOL_EGG = {op=op, pack=pack, unpack=unpack}
 end
 
--- TODO: rename record to grid or inventory
 local PROTOCOL_INVENTORY do
     local op = "@"
     local function pack(frags, nonce)
@@ -172,8 +171,8 @@ Protocols.C2S = {
     GameInventoryRrequest = "GIR",
     GameResetRequest = "GRR",
     TransmitInventoryModifications = "TIM",
-    TransmitPetDeletion = "TPD", -- TODO: send and handle
-    TransmitHatchingEgg = "THE", -- TODO: handle
+    TransmitPetDeletion = "TPD",
+    TransmitHatchingEgg = "THE",
     AskForRebirth = "AFR",
     -- for Equipment Server
     TurnEquipmentOn = "EON",
@@ -185,7 +184,8 @@ Protocols.INTERACTION = {
     AttemptDelete = "Interaction_AttemptDelete",
     CameraScrollingBegin="Interaction_CameraScrollingBegin",
     CameraScrollingEnd = "Interaction_CameraScrollingEnd",
-    TileUnderCursorChanged = "Interaction_TileUnderCursorChanged", -- grid, cursor_cell, move_outcome, interactable, cursor_actor
+    TileUnderCursorChanged = "Interaction_TileUnderCursorChanged", -- grid, cursor_cell, move_outcome, interactable
+    ActorUnderCursorChanged = "Interaction_ActorUnderCursorChanged", -- cursor_cell, cursor_actor, interactable
     ActorPickUp = "Interaction_ActorPickUp",
 }
 
@@ -203,13 +203,13 @@ Protocols.CLIENT = {
     EGG_HATCHED = "%Egg_Hatched",  -- + egg, pet_id
     EGG_HATCHED_IN_SHOP = "%Egg_Hatched_In_Shop", -- + shop_id, pet_id
     MODAL = "%Interactions_Modal", -- + 1 modal_arg
-    POPUP = "%Show_Popup",
+    POPUP = "%Show_Popup", -- {text=string, [yes=function], [no=function], [ok=function]}
     SHOP_INTERACTED = "%ShopInteracted",
     CAN_BUY_EGG = "%CanBuyEgg",
     LEAVE_SHOP = "%LeaveShop",
     X_BUTTON = "%CloseButtonClicked",
     PET_STAND_INFO = "%PetStandInfo",
-    MESSAGE = "%InfoMessage",
+    MESSAGE = "%InfoMessage", -- {text=string, [color=Color]}
 }
 
 Protocols.MODAL_ARG = {

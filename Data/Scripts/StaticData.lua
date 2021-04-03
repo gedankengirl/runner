@@ -6,6 +6,17 @@ local Color = CORE_ENV and Color or {
     New = function() return "@" end,
 }
 
+StaticData.TEXT = {
+    NOT_ENOUGH_SPEED = "Not enough Speed.",
+    NOT_ENOUGH_GEMS = "Not enough Gems.",
+    INVENTORY_NOT_READY = "Inventory not ready.",
+    INVENTORY_FULL = "Inventory full.\nMerge or delete some pets",
+    DELETE_PET_CONFIRM = "Do you want to delete\n%s?", -- note format
+    REBIRTH_CONFIRM = "Do you want to do a rebirth?\nAll your current speed will be spent."
+}
+
+StaticData.T = StaticData.TEXT
+
 local UPGRADE = {
     NO_UPGRADE = 1,
     GOLDEN = 2,
@@ -33,7 +44,6 @@ local RARITY = {
     GODLY = 7
 }
 
--- FIXME: capitalize rarity names back
 local RARITY_INFO = {
     [RARITY.COMMON] = {name="Common", color=Color.FromLinearHex("FFECA8FF")},
     [RARITY.UNCOMMON] = {name="Uncommon", color=Color.New(.043, 0.42, 0), bubble=Color.GREEN},

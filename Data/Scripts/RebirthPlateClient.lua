@@ -4,6 +4,7 @@ local Maid = _G.req("_Maid")
 local REvents = _G.req("ReliableEvents")
 local P = _G.req("Protocols")
 local B = _G.req("BusinessLogic")
+local S = _G.req("StaticData")
 
 local _maid = Maid.New(TRIGGER)
 
@@ -16,7 +17,7 @@ local AskForRebirth do
             _maid.trigger_connection = nil
             if B.isRebirthPossible(player) then
                 REvents.Broadcast(P.CLIENT.POPUP, {
-                    text = "Do you want to do a rebirth? All your current speed will be spent.",
+                    text = S.T.REBIRTH_CONFIRM,
                     yes = function()
                         REvents.BroadcastToServer(P.C2S.AskForRebirth)
                     end,

@@ -47,7 +47,7 @@ _maid.ISM = ISM
 
 local function _check_inventory()
     if not _maid.grid then
-        local error = "Inventory nor ready."
+        local error = S.T.INVENTORY_NOT_READY
         REvents.Broadcast(P.CLIENT.POPUP, {
             ok = function() warn("ERROR", error) end,
             text = error
@@ -674,15 +674,18 @@ function INVENTORY:_UpdateInteractions(_dt)
                 -- 1. change color of tiles
                 -- 2. show hover animation
                 -- NOTE: originally activation outcome was passed instead of interactable
-                Events.Broadcast(P.INTERACTION.TileUnderCursorChanged, grid,
-                     newCellUnderCursor, self.moveOutcome, self.isInteractionEnabled, self.attachedActor)
+                local interactible = self.isInteractionEnabled and not self.rightClickDownTime
+                Events.Broadcast(P.INTERACTION.TileUnderCursorChanged, grid, newCellUnderCursor, self.moveOutcome, interactible)
+                Events.Broadcast(P.INTERACTION.ActorUnderCursorChanged, newCellUnderCursor, self.attachedActor, interactible)
             end
         end
         self.cellUnderCursor = newCellUnderCursor
     else -- cell under cursor is nil
         if self.cellUnderCursor then
             self.cellUnderCursor = nil
-            Events.Broadcast(P.INTERACTION.TileUnderCursorChanged, grid, nil, nil, self.isInteractionEnabled, self.attachedActor)
+            local interactible = self.isInteractionEnabled and not self.rightClickDownTime
+            Events.Broadcast(P.INTERACTION.TileUnderCursorChanged, grid, nil, nil, interactible)
+            Events.Broadcast(P.INTERACTION.ActorUnderCursorChanged, nil, self.attachedActor, interactible)
         end
     end
     -- Update left mouse movement criteria and interaction type.
@@ -748,7 +751,7 @@ function INVENTORY:HandleRightMouseUp()
             local cell, actor = self.cellUnderCursor, self.cellUnderCursor.actor
             REvents.Broadcast(P.INTERACTION.AttemptDelete, cell)
             REvents.Broadcast(P.CLIENT.POPUP, {
-                text = string.format("Do you want to delete %s?", S.PetDb:FullPetNameById(actor.id)),
+                text = string.format(S.T.DELETE_PET_CONFIRM, S.PetDb:FullPetNameById(actor.id)),
                 yes = function()
                     _notify_server(P.MOVE_OUTCOME.DELETE, cell)
                     cell.actor = nil
@@ -788,7 +791,7 @@ function INVENTORY:HandleLeftMouseUp()
     self.mouseDownTime = nil
     if self.attachedActor then
         if self.mouseInteractionType == "Click" then
-            -- TODO: show info
+            -- TODO: bind something useful to click
         elseif self.mouseInteractionType == "Drag" and self.moveOutcome then
             local type, dst_cell, src_cell, other_cell = table.unpack(self.moveOutcome)
             _notify_server(type, dst_cell, src_cell, other_cell)
@@ -819,6 +822,9 @@ function INVENTORY:HandleLeftMouseUp()
                 dst_actor:Destroy()
                 actor3:Destroy()
                 Actor.New(next_id, dst_cell)
+                -- update dst_cell highlight and info
+                REvents.Broadcast(P.INTERACTION.TileUnderCursorChanged, _maid.grid, dst_cell, nil, true)
+                REvents.Broadcast(P.INTERACTION.ActorUnderCursorChanged, dst_cell, self.attachedActor, true)
             end
         else
             self.attachedActor:AnimateFlyHome()
@@ -907,8 +913,8 @@ function INVENTORY:_UpdateCamera(dt)
 end
 
 -- Monkey patching Grid for highlights
-function INVENTORY._OnTileUnderCursorChanged(grid, cursor_cell, move_outcome, interactable, _attached_actor)
-    debug(pp{"#", cursor_cell, move_outcome or {}, _attached_actor or {}, time()})
+function INVENTORY._OnTileUnderCursorChanged(grid, cursor_cell, move_outcome, interactable)
+    debug(pp{"#", cursor_cell, move_outcome or {}, time()})
     local hl = grid._highlights
     hl:_clear()
     if move_outcome and interactable then

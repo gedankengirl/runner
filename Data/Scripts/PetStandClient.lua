@@ -29,7 +29,6 @@ local PIPE_COLOR_BW = PIPE_COLOR:GetDesaturated(0.5)
 local UI_CONTAINER = script:GetCustomProperty("StandUIContainer"):WaitForObject()
 local BUY_BUTTON = script:GetCustomProperty("BuyButton"):WaitForObject()
 
--- TODO: hatched pet info
 local INFO_BUTTONS = {
     script:GetCustomProperty("Info_1"):WaitForObject(),
     script:GetCustomProperty("Info_2"):WaitForObject(),
@@ -95,7 +94,7 @@ for _i , petMuid in ipairs(PET_TEMPLATES) do
     PETS_BY_ID[pet_id] = pet
 end
 
-local B_SPR = SP.New(0.4, 2)
+local B_SPR = SP.New(0.7, 3)
 local B_BOTTOM = Vector2.New(0, 500)
 local function _show_or_hide_buy_button(show)
     if show then
@@ -202,7 +201,6 @@ local OnEnterShop, OnLeaveShop, OnCanBuyEgg, OnEggHatched do
         if shop_id ~= THIS_STAND_ID then return end
         _show_or_hide_pets(not "show")
         _hide_info_buttons()
-        -- TODO: info button
         local pet = PETS_BY_ID[pet_id]
         local mark = PET_MARKS[#PET_MARKS] -- last mark for hatching
         local info = INFO_BUTTONS[1]
@@ -229,7 +227,6 @@ local OnEnterShop, OnLeaveShop, OnCanBuyEgg, OnEggHatched do
             )
     end
 
-    -- TODO: use cant_buy_reason in UI (notification)
     OnEnterShop = function()
         TRIGGER.isInteractable = false
         UI_CONTAINER.visibility = Visibility.INHERIT
@@ -266,8 +263,7 @@ local OnEnterShop, OnLeaveShop, OnCanBuyEgg, OnEggHatched do
         assert(shop_id == THIS_STAND_ID)
         _buy_button_interactable(can_buy)
         if not can_buy and cant_buy_reason then
-            -- TODO: message with reason
-            warn(cant_buy_reason)
+            REvents.Broadcast(P.CLIENT.MESSAGE, {text=cant_buy_reason})
         end
     end
 
