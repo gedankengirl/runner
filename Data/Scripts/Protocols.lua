@@ -185,7 +185,8 @@ Protocols.INTERACTION = {
     AttemptDelete = "Interaction_AttemptDelete",
     CameraScrollingBegin="Interaction_CameraScrollingBegin",
     CameraScrollingEnd = "Interaction_CameraScrollingEnd",
-    TileUnderCursorChanged = "Interaction_TileUnderCursorChanged", -- grid, cursor_cell, move_outcome, interactable, cursor_actor
+    TileUnderCursorChanged = "Interaction_TileUnderCursorChanged", -- grid, cursor_cell, move_outcome, interactable
+    ActorUnderCursorChanged = "Interaction_ActorUnderCursorChanged", -- cursor_cell, cursor_actor, interactable
     ActorPickUp = "Interaction_ActorPickUp",
 }
 

@@ -318,15 +318,16 @@ do
             PET_LEVEL.text = uname
             local bonus = S.PetDb:GetBonus(pet_id)
             PET_BONUS.text = tostring(bonus)
-            PET_SPECIAL.text = PET_SPECIAL.text -- unused
+            PET_SPECIAL.text = PET_SPECIAL.text -- right now unused
             PET_SHOW_SPR:ToAnim()(INFO_PET):Target("offset", INFO_PET_SHOW):Run()
         end
     end
-    _maid._info_pet_inventory = Events.Connect(P.INTERACTION.TileUnderCursorChanged,
-        function(_grid, cursor_cell, _outcome, interactable, cursor_actor)
+
+    _maid._info_pet_inventory = Events.Connect(P.INTERACTION.ActorUnderCursorChanged, function(cursor_cell, cursor_actor, intractable)
             local actor = cursor_actor or cursor_cell and cursor_cell.actor
-            _show_pet_info(interactable, actor and actor.id)
-        end)
+            _show_pet_info(intractable, actor and actor.id)
+    end)
+
     _maid._info_pet_stand = Events.Connect(P.CLIENT.PET_STAND_INFO, function(pet_id)
         _show_pet_info("intractable", pet_id)
     end)
