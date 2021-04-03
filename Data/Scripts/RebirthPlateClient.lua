@@ -8,12 +8,14 @@ local S = _G.req("StaticData")
 
 local _maid = Maid.New(TRIGGER)
 
+local LOCAL_PLAYER = Game.GetLocalPlayer()
+
 local AskForRebirth do
     local function connect()
         _maid.trigger_connection = TRIGGER.beginOverlapEvent:Connect(AskForRebirth)
     end
     AskForRebirth = function(_trigger, player)
-        if player and player:IsA("Player") then
+        if player == LOCAL_PLAYER then
             _maid.trigger_connection = nil
             if B.isRebirthPossible(player) then
                 REvents.Broadcast(P.CLIENT.POPUP, {
