@@ -1,5 +1,3 @@
--- Position of the template in relation to Inventory root is currently stored in BG
-
 local floatRandom =_G.req("Snippets").uniform
 local Maid = _G.req("Maid")
 local _maid = Maid.New(script)
