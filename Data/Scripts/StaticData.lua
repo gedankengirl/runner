@@ -11,6 +11,8 @@ StaticData.TEXT = {
     NOT_ENOUGH_GEMS = "Not enough Gems.",
     INVENTORY_NOT_READY = "Inventory not ready.",
     INVENTORY_FULL = "Inventory full.\nMerge or delete some pets",
+    DELETE_PET_CONFIRM = "Do you want to delete\n%s?", -- note format
+    REBIRTH_CONFIRM = "Do you want to do a rebirth?\nAll your current speed will be spent."
 }
 
 StaticData.T = StaticData.TEXT

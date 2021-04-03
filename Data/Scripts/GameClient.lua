@@ -47,7 +47,7 @@ _maid.ISM = ISM
 
 local function _check_inventory()
     if not _maid.grid then
-        local error = "Inventory nor ready."
+        local error = S.T.INVENTORY_NOT_READY
         REvents.Broadcast(P.CLIENT.POPUP, {
             ok = function() warn("ERROR", error) end,
             text = error
@@ -751,7 +751,7 @@ function INVENTORY:HandleRightMouseUp()
             local cell, actor = self.cellUnderCursor, self.cellUnderCursor.actor
             REvents.Broadcast(P.INTERACTION.AttemptDelete, cell)
             REvents.Broadcast(P.CLIENT.POPUP, {
-                text = string.format("Do you want to delete %s?", S.PetDb:FullPetNameById(actor.id)),
+                text = string.format(S.T.DELETE_PET_CONFIRM, S.PetDb:FullPetNameById(actor.id)),
                 yes = function()
                     _notify_server(P.MOVE_OUTCOME.DELETE, cell)
                     cell.actor = nil
