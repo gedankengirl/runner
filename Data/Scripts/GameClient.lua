@@ -791,7 +791,7 @@ function INVENTORY:HandleLeftMouseUp()
     self.mouseDownTime = nil
     if self.attachedActor then
         if self.mouseInteractionType == "Click" then
-            -- TODO: show info
+            -- TODO: bind something useful to click
         elseif self.mouseInteractionType == "Drag" and self.moveOutcome then
             local type, dst_cell, src_cell, other_cell = table.unpack(self.moveOutcome)
             _notify_server(type, dst_cell, src_cell, other_cell)
@@ -822,6 +822,9 @@ function INVENTORY:HandleLeftMouseUp()
                 dst_actor:Destroy()
                 actor3:Destroy()
                 Actor.New(next_id, dst_cell)
+                -- update dst_cell highlight and info
+                REvents.Broadcast(P.INTERACTION.TileUnderCursorChanged, _maid.grid, dst_cell, nil, true)
+                REvents.Broadcast(P.INTERACTION.ActorUnderCursorChanged, dst_cell, self.attachedActor, true)
             end
         else
             self.attachedActor:AnimateFlyHome()
