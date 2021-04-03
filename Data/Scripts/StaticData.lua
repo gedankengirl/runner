@@ -44,7 +44,6 @@ local RARITY = {
     GODLY = 7
 }
 
--- FIXME: capitalize rarity names back
 local RARITY_INFO = {
     [RARITY.COMMON] = {name="Common", color=Color.FromLinearHex("FFECA8FF")},
     [RARITY.UNCOMMON] = {name="Uncommon", color=Color.New(.043, 0.42, 0), bubble=Color.GREEN},
