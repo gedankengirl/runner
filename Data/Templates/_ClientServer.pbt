@@ -381,7 +381,7 @@ Assets {
           Location {
             X: 1000
             Y: -36955.8438
-            Z: -4361.69336
+            Z: -20000
           }
           Rotation {
           }
@@ -393,6 +393,7 @@ Assets {
         }
         ParentId: 2415398450263118494
         ChildIds: 9711971517685216634
+        ChildIds: 9901380904301292291
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -444,6 +445,63 @@ Assets {
             Radius: 4000
             IsSpatializationEnabled: true
             IsAttenuationEnabled: true
+          }
+        }
+      }
+      Objects {
+        Id: 9901380904301292291
+        Name: "BG"
+        Transform {
+          Location {
+            Y: 304.160156
+            Z: -1859.85156
+          }
+          Rotation {
+            Pitch: 6.83018879e-06
+            Yaw: 89.9999542
+            Roll: 89.9999542
+          }
+          Scale {
+            X: 160
+            Y: 1
+            Z: 160
+          }
+        }
+        ParentId: 11557133986988323875
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 5949182878290302803
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:forceon"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 12095835209017042614
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          StaticMesh {
+            Physics {
+              Mass: 100
+              LinearDamping: 0.01
+            }
           }
         }
       }
@@ -8350,6 +8408,15 @@ Assets {
       PrimaryAsset {
         AssetType: "AudioBlueprintAssetRef"
         AssetId: "abp_8bit_funland_sections_kit_ref"
+      }
+    }
+    Assets {
+      Id: 12095835209017042614
+      Name: "Cube"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_cube_002"
       }
     }
     Assets {

@@ -31,7 +31,7 @@ function OnBeginOverlap(whichTrigger, other)
 		trigger.isEnabled = false
 		if isPitchToBeChanged then sounds[currentSoundNmbr].pitch = pickRandomNum(pitchMin, pitchMax) end
 		sounds[currentSoundNmbr]:Play()
-		currentSoundNmbr = (currentSoundNmbr -1) % nmbrOfSounds + 1
+		currentSoundNmbr = currentSoundNmbr % nmbrOfSounds + 1
 		Task.Wait(pickRandomNum(cooldownMin, cooldownMax))
 		trigger.isEnabled = true
 	end

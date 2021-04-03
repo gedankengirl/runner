@@ -145,7 +145,7 @@ function PlayerConnection.New(player)
         B.SaveKey(player, B.GEM_KEY, FIRST_TIME_GEMS)
         inventory = _make_inventory()
         -- DEBUG: uncomment next line
-        -- inventory = _make_debug_inventory(12, 3) -- params: inventory[1,12] equip [1,3]
+        --inventory = _make_debug_inventory(12, 3) -- params: inventory[1,12] equip [1,3]
     end
     local self = setmetatable({
         _maid = Maid.New(),

@@ -16,13 +16,13 @@ Objects {
   }
   ChildIds: 13998269120099198432
   ChildIds: 4963320541580283836
-  ChildIds: 11241210962460309157
+  ChildIds: 12007125140119696648
   ChildIds: 4906105228638113618
   ChildIds: 10764064574047099998
   ChildIds: 16813558807825262224
   ChildIds: 8534815031986278044
   ChildIds: 7553754998792656332
-  ChildIds: 12999392669496076010
+  ChildIds: 11938316480685104441
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -38,16 +38,9 @@ Objects {
   }
 }
 Objects {
-  Id: 12999392669496076010
+  Id: 11938316480685104441
   Name: "Pet Heaven"
   Transform {
-    Location {
-      X: 1000
-      Y: -36651.6836
-      Z: -6221.54443
-    }
-    Rotation {
-    }
     Scale {
       X: 1
       Y: 1
@@ -61,12 +54,19 @@ Objects {
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "Pet Heaven"
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 1554375620399369718
+      value {
+        Overrides {
+          Name: "Name"
+          String: "Pet Heaven"
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 7506838739139154008
+    }
   }
 }
 Objects {
@@ -259,7 +259,7 @@ Objects {
   }
 }
 Objects {
-  Id: 11241210962460309157
+  Id: 12007125140119696648
   Name: "@ClientServer"
   Transform {
     Scale {
@@ -291,20 +291,6 @@ Objects {
         Overrides {
           Name: "Rotation"
           Rotator {
-          }
-        }
-      }
-    }
-    ParameterOverrideMap {
-      key: 12279097781082510211
-      value {
-        Overrides {
-          Name: "Color"
-          Color {
-            R: 0.022135457
-            G: 0.0779871121
-            B: 0.0885418281
-            A: 1
           }
         }
       }
