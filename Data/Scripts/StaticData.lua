@@ -6,6 +6,15 @@ local Color = CORE_ENV and Color or {
     New = function() return "@" end,
 }
 
+StaticData.TEXT = {
+    NOT_ENOUGH_SPEED = "Not enough Speed.",
+    NOT_ENOUGH_GEMS = "Not enough Gems.",
+    INVENTORY_NOT_READY = "Inventory not ready.",
+    INVENTORY_FULL = "Inventory full.\nMerge or delete some pets",
+}
+
+StaticData.T = StaticData.TEXT
+
 local UPGRADE = {
     NO_UPGRADE = 1,
     GOLDEN = 2,

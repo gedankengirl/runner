@@ -43,10 +43,10 @@ local MESSAGE_DEFAULT_COLOR = MESSAGE_PANEL_TEXT:GetColor()
 local MESSAGE_SOUND = MESSAGE_PANEL:GetCustomProperty("NotifySound"):WaitForObject()
 local MESSAGE_PANEL_POS  = Vector2.New(MESSAGE_PANEL.x, MESSAGE_PANEL.y)
 local MESSAGE_QUEUE = Deque.New()
--- MESSAGE_QUEUE:Push({text="Lorem Ipsum!", color = Color.RED})
--- MESSAGE_QUEUE:Push({text="OK!",})
 local MESSAGE_SPR = SP.New(1, 2)
 local MESSAGE_DELAY = 3
+local MESSAGE_SPAM_TIME = 10
+local MESSAGE_SPAM_FILTER = {}
 
 local LOCAL_PLAYER = Game.GetLocalPlayer()
 UI_PLAYER_ICON:SetImage(LOCAL_PLAYER)
@@ -259,7 +259,17 @@ function HUD._Update()
     -- message queue
     if not _message_visible and not MESSAGE_QUEUE:IsEmpty() then
         local message = MESSAGE_QUEUE:Pop()
-        _show_message(message)
+        local text = message.text
+        if not text or text == "" then
+            warn("message with no text\n" .. CoreDebug.GetStackTrace())
+            return
+        end
+        local last_time = MESSAGE_SPAM_FILTER[text] or -MESSAGE_SPAM_TIME
+        local now = time()
+        if last_time + MESSAGE_SPAM_TIME < now then
+            MESSAGE_SPAM_FILTER[text] = now
+            _show_message(message)
+        end
     end
 end
 
@@ -340,6 +350,10 @@ _maid.bonuses = Events.Connect(P.STATIC.StaticPickup, function(player, boosterId
         local portion = B.calcCoinPortion(player, entry.mult)
         Bubble.Show(portion, entry.rarity)
     end
+end)
+
+_maid.messages = Events.Connect(P.CLIENT.MESSAGE, function(params)
+    MESSAGE_QUEUE:Push(params)
 end)
 
 HUD:Start()

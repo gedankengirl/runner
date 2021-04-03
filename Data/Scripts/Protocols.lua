@@ -204,13 +204,13 @@ Protocols.CLIENT = {
     EGG_HATCHED = "%Egg_Hatched",  -- + egg, pet_id
     EGG_HATCHED_IN_SHOP = "%Egg_Hatched_In_Shop", -- + shop_id, pet_id
     MODAL = "%Interactions_Modal", -- + 1 modal_arg
-    POPUP = "%Show_Popup",
+    POPUP = "%Show_Popup", -- {text=string, [yes=function], [no=function], [ok=function]}
     SHOP_INTERACTED = "%ShopInteracted",
     CAN_BUY_EGG = "%CanBuyEgg",
     LEAVE_SHOP = "%LeaveShop",
     X_BUTTON = "%CloseButtonClicked",
     PET_STAND_INFO = "%PetStandInfo",
-    MESSAGE = "%InfoMessage",
+    MESSAGE = "%InfoMessage", -- {text=string, [color=Color]}
 }
 
 Protocols.MODAL_ARG = {

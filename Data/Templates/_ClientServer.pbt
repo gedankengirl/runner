@@ -7208,7 +7208,7 @@ Assets {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Control {
-          Width: 650
+          Width: 620
           Height: 110
           UIY: 15
           RenderTransformPivot {
