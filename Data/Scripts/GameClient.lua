@@ -579,7 +579,8 @@ function INVENTORY:Exit()
         self.cursorPosition = nil
     end
     _set_inv_cam_limits(_maid.grid)
-
+    -- force to close info panel on inventory exit
+    REvents.Broadcast(P.CLIENT.PET_STAND_INFO, nil)
 end
 
 function INVENTORY:Update(dt)
