@@ -29,7 +29,6 @@ local PIPE_COLOR_BW = PIPE_COLOR:GetDesaturated(0.5)
 local UI_CONTAINER = script:GetCustomProperty("StandUIContainer"):WaitForObject()
 local BUY_BUTTON = script:GetCustomProperty("BuyButton"):WaitForObject()
 
--- TODO: hatched pet info
 local INFO_BUTTONS = {
     script:GetCustomProperty("Info_1"):WaitForObject(),
     script:GetCustomProperty("Info_2"):WaitForObject(),
@@ -202,7 +201,6 @@ local OnEnterShop, OnLeaveShop, OnCanBuyEgg, OnEggHatched do
         if shop_id ~= THIS_STAND_ID then return end
         _show_or_hide_pets(not "show")
         _hide_info_buttons()
-        -- TODO: info button
         local pet = PETS_BY_ID[pet_id]
         local mark = PET_MARKS[#PET_MARKS] -- last mark for hatching
         local info = INFO_BUTTONS[1]
@@ -229,7 +227,6 @@ local OnEnterShop, OnLeaveShop, OnCanBuyEgg, OnEggHatched do
             )
     end
 
-    -- TODO: use cant_buy_reason in UI (notification)
     OnEnterShop = function()
         TRIGGER.isInteractable = false
         UI_CONTAINER.visibility = Visibility.INHERIT

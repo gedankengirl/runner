@@ -38,7 +38,6 @@ local PROTOCOL_EGG do
     PROTOCOL_EGG = {op=op, pack=pack, unpack=unpack}
 end
 
--- TODO: rename record to grid or inventory
 local PROTOCOL_INVENTORY do
     local op = "@"
     local function pack(frags, nonce)
@@ -172,8 +171,8 @@ Protocols.C2S = {
     GameInventoryRrequest = "GIR",
     GameResetRequest = "GRR",
     TransmitInventoryModifications = "TIM",
-    TransmitPetDeletion = "TPD", -- TODO: send and handle
-    TransmitHatchingEgg = "THE", -- TODO: handle
+    TransmitPetDeletion = "TPD",
+    TransmitHatchingEgg = "THE",
     AskForRebirth = "AFR",
     -- for Equipment Server
     TurnEquipmentOn = "EON",

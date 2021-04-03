@@ -232,7 +232,6 @@ end
 -- inventory modification
 function PlayerConnection:OnTIM(...)
     warn(pp{"on TIM", ..., self.player.name})
-    -- TODO: use checks on client too
     local type, dst_cell, src_cell, other_cell = ...
     local ok = false
     if type == P.MOVE_OUTCOME.BASIC then
