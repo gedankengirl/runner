@@ -14,7 +14,7 @@ local PINK_BAT  = "4E962DA6159338A4:InvFlyerPinkBatClientContext"
 local BLACK_BAT = "DCB6947A28469804:InvFlyerBlackBatClientContext"
 local TWO_BLACK_BATS = "73447701360E21D1:InvFlyer2BlackBatsClientContext"
 local SCATTERED_BATS_GROUP = "95C53FEDAC2FCDD5:InvFlyerScatteredBatsGroupClientContext"
-local flyers = {WHITE_BIRD, SCATTERED_BATS_GROUP, PAIR_OF_BIRDS, THREE_BIRDS, PAIR_OF_WHITE_BIRDS, IVORY_BIRD}
+local flyers = {WHITE_BIRD, PINK_BAT, PAIR_OF_BIRDS, THREE_BIRDS, PAIR_OF_WHITE_BIRDS, IVORY_BIRD}
 --{TWO_BLACK_BATS, BATS_GROUP, PINK_BAT, BLACK_BAT, TWO_BLACK_BATS, SCATTERED_BATS_GROUP}
 local numberOfFlyers = #flyers
 local LEFT_MARK = script:GetCustomProperty("LeftMark"):WaitForObject()
@@ -27,6 +27,7 @@ local playerInInventory = false
 local FROM_LEFT_TO_RIGHT = Vector3.New(100, 0, 0)
 local FROM_RIGHT_TO_LEFT = Vector3.New(100, -10, 0)
 local flyersInstances = {}
+local spawningTask
 
 function Initiate ()
     playerInInventory = true
@@ -34,9 +35,7 @@ function Initiate ()
 end
 
 function FlyAFlyer ()
-    if playerInInventory == true then
-        --Task.Wait(floatRandom(waitMin, waitMax))
-        --currentFlyerIndexInArray = (currentFlyerIndexInArray % numberOfFlyers + 1)
+    if playerInInventory then
         currentFlyerIndexInArray = math.random(1,numberOfFlyers)
         currentFlyer = flyers[currentFlyerIndexInArray]
         currentMark = marks[math.random(1,#marks)]
@@ -45,35 +44,34 @@ function FlyAFlyer ()
     end
 end
 
-function SpawnAFlyer()
-    table.insert(flyersInstances, World.SpawnAsset(currentFlyer, {parent = currentMark}))
+function SpawnAFlyer ()
+    spawningTask = Task.Spawn(function()
+        table.insert(flyersInstances, World.SpawnAsset(currentFlyer, {parent = currentMark}))
 
-    if currentMark == marks[LEFT_MARK] then
+        if currentMark == marks[LEFT_MARK] then
         flyersInstances[#flyersInstances]:MoveContinuous(FROM_LEFT_TO_RIGHT, true)
-    else
+        else
         flyersInstances[#flyersInstances]:MoveContinuous(FROM_RIGHT_TO_LEFT, true)
-    end
+        end
 
-    Task.Wait(floatRandom(waitMin, waitMax))
-    FlyAFlyer()
-end
-
-function KillAFlyer(target)
-    if Object.IsValid(target) then target:Destroy() end
+        Task.Wait(floatRandom(waitMin, waitMax))
+        FlyAFlyer()
+    end)
+    return spawningTask
 end
 
 function StopAllActivity ()
    for k,v in pairs(flyersInstances) do
     if Object.IsValid(v) then v:Destroy() end
-    table.remove(flyersInstances, k)
    end
     _maid = nil
+    flyersInstances = {}
    playerInInventory = false
-   print (flyersInstances[1])
+   spawningTask:Cancel()
+   print ("inventory flyers list", flyersInstances[1])
 end
 
 do
     _maid:GiveTask(Events.Connect("ISM:Inventory:Entering", Initiate))
     _maid:GiveTask(Events.Connect("ISM:Inventory:Exiting", StopAllActivity))
-    _maid:GiveTask(Events.Connect("TimeToDie", KillAFlyer))
 end
