@@ -1,4 +1,7 @@
+local DEBUG = Environment.IsPreview()
+
 if not _G.req then _G.req = require end
+
 local pp = _G.req("_Luapp").pp
 local errfmt = _G.req("_Luapp").errfmt
 local Grid = _G.req("_Grid")
@@ -237,7 +240,9 @@ function PlayerConnection:OnAFR()
     if ok then
         REvents.Broadcast(P.SOCIAL.REBIRTH.event, self.player.id, new_rebirth)
     end
-    print(pp{"on AFR", self.player.name})
+    if DEBUG then
+        print(pp{"on AFR", self.player.name})
+    end
 end
 
 -- egg hatch
@@ -259,7 +264,9 @@ function PlayerConnection:OnTHE(egg)
         local reason = pet_id
         warn(pp{self.player, reason})
     end
-    print(pp{"on THE", self.player.name})
+    if DEBUG then
+        print(pp{"on THE", self.player.name})
+    end
 end
 
 function PlayerConnection:OnGIR()
@@ -268,7 +275,9 @@ function PlayerConnection:OnGIR()
     B.SaveKey(self.player, B.INVENTORY_KEY, packed)
     B.RecalculatePetBonus(self.player, self.inventory)
     self:Send(packed)
-    print(pp{"on GIR", self.player.name})
+    if DEBUG then
+        print(pp{"on GIR", self.player.name})
+    end
 end
 
 -- reset request
@@ -276,12 +285,16 @@ function PlayerConnection:OnGRR()
     B.ResetGame(self.player)
     self.inventory = _make_inventory()
     self:OnGIR() -- send + save basic inventory
-    print(pp{"on GRR", self.player.name})
+    if DEBUG then
+        print(pp{"on GRR", self.player.name})
+    end
 end
 
 -- inventory modification
 function PlayerConnection:OnTIM(...)
-    warn(pp{"on TIM", ..., self.player.name})
+    if DEBUG then
+        warn(pp{"on TIM", ..., self.player.name})
+    end
     local type, dst_cell, src_cell, other_cell = ...
     local ok = false
     if type == P.MOVE_OUTCOME.BASIC then
@@ -302,7 +315,7 @@ function PlayerConnection:OnTIM(...)
         ok = self.inventory:Delete(dst_cell)
     else warn(type)
     end
-    if ok then warn(pp{"OK", ...}) end
+    if ok and DEBUG then warn(pp{"OK", ...}) end
     if ok then
         B.SaveKey(self.player, B.INVENTORY_KEY,  P.S2C.INVENTORY.pack(self.inventory:serialize(true), UNNONCE_SYMBOL))
         B.RecalculatePetBonus(self.player, self.inventory)
