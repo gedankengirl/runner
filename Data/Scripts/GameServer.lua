@@ -176,11 +176,38 @@ PlayerConnection.__index = PlayerConnection
 function PlayerConnection.New(player)
     local playerData = B.LoadSave(player)
     local saved_inventory = playerData[B.INVENTORY_KEY]
-    -- DEBUG:
+
+    -- DEBUG: ------------------------
     local old_inventory = playerData["Inventory"]
-    if old_inventory then
-        Chat.BroadcastMessahe(old_inventory)
-    end
+    if old_inventory and type(old_inventory) == "string" then
+        local inv = old_inventory
+        Task.Spawn(function()
+            Chat.BroadcastMessage("old_inv")
+            local i = 1
+            while true do
+                Task.Wait(0.5)
+                local ss = string.sub(inv, i, i + 10 - 1)
+                if ss == "" then break end
+                Chat.BroadcastMessage(ss)
+                i = i + 10
+            end
+        end, 5)
+
+        local ok_1, msg_1 = pcall(P.S2C.INVENTORY.unpack, old_inventory, Grid.deserialize)
+        old_inventory = msg_1
+        Task.Spawn(function()
+            Chat.BroadcastMessage(string.format("1: %s %s", ok_1, msg_1))
+        end, 1.1)
+        local ok_2, msg_2, x, y = pcall(_get_inventory_shape, old_inventory)
+        Task.Spawn(function()
+            Chat.BroadcastMessage(string.format("2: %s %s %s %s", ok_2, msg_2, x, y))
+        end, 1.2)
+        local ok_3, msg_3 = pcall(_make_inventory, 1, 1, old_inventory)
+        Task.Spawn(function()
+            Chat.BroadcastMessage(string.format("3: %s %s", ok_3, msg_3))
+        end, 1.5)
+    end -- DEBUG: ------------------------
+
     local inventory = saved_inventory and P.S2C.INVENTORY.unpack(saved_inventory, Grid.deserialize)
 
     if inventory then
