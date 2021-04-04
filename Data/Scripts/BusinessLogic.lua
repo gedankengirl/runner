@@ -4,9 +4,9 @@ local DEBUG = Environment.IsPreview()
 * You can buy eggs for SC. You hatching pets from eggs.
 * The more SC you have then faster you are.
 * You can rebirth by spending all your SC (but no less then each rebirth price).
+* Each rebirth gives you + 1 SCPC. Rebirths is a prerequest for new areas and new eggs.
 * SC is earning by clicking or grabbing bonuses. Earned amount affected by your Speed Coin Per Click (SCPC).
 * One click gives you 1 SCPC, bonuses gives you one time X*SCPC (where X is a bonus multiplier).
-* Each rebirth gives you + 1 SCPC. Rebirths is a prerequest for new areas and new eggs.
 * SCPC = 3(base) + N-rebirth + Sum(equipped pet's bonus).
 * You can merge 3 equivalent pets to one `upgraded` pet. Now max upgrade is limited to 3-rd.
 * You can equip the limited number of pets: 3. You can upgrade this limit to 5.
@@ -23,6 +23,12 @@ local REBIRTH_EXP_RATE = 1.618
 local COIN_TO_SPEED_RATE = 1.001
 local COIN_CAP = 2E9//1
 local LIFETIME_COINS_KEY_DIV = 4096.0
+local EQUIP_LVL = {
+    MAX_EQUIP_LVL = 3,
+    MIN_EQUIP_LVL = 1,
+    MIN_EQUIP_SLOTS = 3,
+    MAX_EQUIP_SLOTS = 5,
+}
 
 local COIN_KEY = "SpeedCoin"
 local LIFETIME_COINS_KEY = "LivetimeCoins"
@@ -341,8 +347,8 @@ function BusinessLogic.RecalculatePetBonus(player, grid)
     Events.Broadcast("!RecalculatePetBonus")
 end
 
--- GetEqippedPets :: grid -> {pet_id}
-function BusinessLogic.GetEqippedPets(grid)
+-- GetEquippedPets :: grid -> {pet_id}
+function BusinessLogic.GetEquippedPets(grid)
     assert(grid and grid.type == "Grid")
     local function sum_pets(seed, cell)
         local row, _, id = cell:Unpack()
@@ -354,7 +360,21 @@ function BusinessLogic.GetEqippedPets(grid)
     return grid:Fold(sum_pets, {})
 end
 
--- GetEqippedPets :: grid -> {number}
+-- GetEquipSlotCount :: grid -> number
+function BusinessLogic.GetEquipSlotCount(grid)
+    assert(grid and grid.type == "Grid")
+    local function count_equip_cells(seed, cell)
+        local row, _, _ = cell:Unpack()
+        if row == EQUIPPED_ROW then
+            seed = seed + 1
+        end
+        return seed
+    end
+    return grid:Fold(count_equip_cells, 0)
+end
+
+
+-- GetPetCount :: grid -> number
 function BusinessLogic.GetPetCount(grid)
     assert(grid and grid.type == "Grid")
     local function count_pets(seed, cell)
@@ -407,6 +427,7 @@ BusinessLogic.PET_BONUS_KEY = PET_BONUS_KEY
 BusinessLogic.max = neededForRebirth
 BusinessLogic.MAX_KEY = REBIRTH_KEY
 BusinessLogic.EQUIPPED_ROW = EQUIPPED_ROW
+BusinessLogic.EQUIP_LVL = EQUIP_LVL
 
 local function _test()
     local t = {A=1, B=2, C=3}

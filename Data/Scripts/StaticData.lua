@@ -199,7 +199,11 @@ local PetDb, EggDb do
     ---------------------------
     -- Pets
     ---------------------------
-     function PetDb:GetName(id)
+    function PetDb:CheckPet(id)
+        return self[id] and (self:GetUpgradeStatus(id)) <= UPGRADE.MAX
+    end
+
+    function PetDb:GetName(id)
         return self[id][kName]
     end
 

@@ -295,7 +295,7 @@ end
 function PetMaster.Update(dt)
     local state = PetMaster._state
     if (_maid.grid) then
-        state[LOCAL_PLAYER.id] = _harmonize(B.GetEqippedPets(_maid.grid), state[LOCAL_PLAYER.id], LOCAL_PLAYER)
+        state[LOCAL_PLAYER.id] = _harmonize(B.GetEquippedPets(_maid.grid), state[LOCAL_PLAYER.id], LOCAL_PLAYER)
     end
     local players = Game.GetPlayers()
     -- {player_id=player}

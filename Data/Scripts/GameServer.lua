@@ -14,7 +14,7 @@ local S = _G.req("StaticData")
 local _maid = Maid.New(script)
 local NONCE_SYMBOLS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/'
 local UNNONCE_SYMBOL = '*'
-local PET_HATCH_SOCIAL_DELAY = 10
+local PET_HATCH_SOCIAL_DELAY = 5
 
 -- _defer_queue entry:: {fire_at, thunk}, max 10 entries per second
 local _defer_queue = Heap.New(function(a, b) return a[1] < b[1] end)
@@ -92,7 +92,27 @@ local function _nonce(self)
     return NONCE_SYMBOLS:sub(si, si)
 end
 
-local function _make_inventory(inv_level, equip_level)
+-- TODO: remove this hacky mess, add shape to grid serialization
+local EQUIP_LVL = B.EQUIP_LVL
+local function _get_inventory_shape(grid)
+    local gw, gh = grid.w, grid.h
+    -- equip level 1 1 1 2 3
+    local n = gw*gh
+    local equipn = B.GetEquipSlotCount(grid) + EQUIP_LVL.MIN_EQUIP_SLOTS - EQUIP_LVL.MAX_EQUIP_SLOTS
+    local result = 0
+    for i = 1, #S.INVENTORY_SHAPE do
+        local shape = S.INVENTORY_SHAPE[i]
+        local shapen, shapew = #shape, shape.width
+        if n == shapen and gw == shapew then
+            result = i
+            break
+        end
+    end
+    return result, n, equipn
+end
+
+-- all args optional
+local function _make_inventory(inv_level, equip_level, to_migrate)
     inv_level = inv_level or 1
     equip_level = equip_level or 1
     local shape = S.INVENTORY_SHAPE[inv_level]
@@ -102,8 +122,27 @@ local function _make_inventory(inv_level, equip_level)
     for i=1, #shape do
         local code = shape[i]
         if code == 0 or code > equip_level then
-            local idx = i - 1 -- grid is 0-indexed
-            grid:MakeHole(idx//width, idx%width)
+            local idx0 = i - 1 -- grid's row and col are 0-indexed
+            grid:MakeHole(idx0//width, idx0%width)
+        end
+    end
+    if to_migrate and to_migrate.type == "Grid" then
+        for i=1, grid.w*grid.h do
+            local old_cell = to_migrate:at(i)
+            if not old_cell:IsNil() and old_cell.actor then
+                local pet_id = old_cell.actor.id
+                if S.PetDb:CheckPet(pet_id) then
+                    local free_cell = grid:Search(function(cell) return cell:IsFree() end)
+                    if free_cell then
+                        free_cell.actor = old_cell.actor
+                    else
+                        warn("ERROR: no free cell in grid")
+                        break
+                    end
+                else
+                    warn("invalid pet id, remove:", pet_id)
+                end
+            end
         end
     end
     return grid
@@ -138,15 +177,25 @@ function PlayerConnection.New(player)
     local playerData = B.LoadSave(player)
     local saved_inventory = playerData[B.INVENTORY_KEY]
     local inventory = saved_inventory and P.S2C.INVENTORY.unpack(saved_inventory, Grid.deserialize)
-    if not inventory then
-        -- first time player
-        local FIRST_TIME_GEMS = 10
-        B.addGems(player, FIRST_TIME_GEMS)
-        B.SaveKey(player, B.GEM_KEY, FIRST_TIME_GEMS)
-        inventory = _make_inventory()
-        -- DEBUG: uncomment next line
-        --inventory = _make_debug_inventory(12, 3) -- params: inventory[1,12] equip [1,3]
+
+    if inventory then
+        local inv_lvl, n, equip_lvl = _get_inventory_shape(inventory)
+        print("!Inventory loaded", player.name, inv_lvl, n, equip_lvl)
+        -- migration
+        if inv_lvl < 1 then
+            warn("migrating old inventory ...")
+            inventory = _make_inventory(1, 1, inventory)
+        end
+    else
+         -- first time player
+         local FIRST_TIME_GEMS = 10
+         B.addGems(player, FIRST_TIME_GEMS)
+         B.SaveKey(player, B.GEM_KEY, FIRST_TIME_GEMS)
+         inventory = _make_inventory(1, 1) -- basic
+         -- DEBUG: uncomment next line
+         --inventory = _make_debug_inventory(12, 3) -- params: inventory[1,12] equip [1,3]
     end
+
     local self = setmetatable({
         _maid = Maid.New(),
         player = player,
@@ -325,7 +374,7 @@ function EquippedPets.OnPetsChanged()
     local out = {}
     for player, connection in pairs(Server.playerConnections) do
         if player and player:IsValid() and connection and connection.inventory then
-            local pets = B.GetEqippedPets(connection.inventory)
+            local pets = B.GetEquippedPets(connection.inventory)
             out[#out+1] = P.EQIPPED_PETS.pack(player.id, pets)
         end
         EquippedPets._state = out
