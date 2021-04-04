@@ -116,10 +116,6 @@ local SLOW_MAX_SPEED = 1450
 local SLOW_SQ = 1E6
 local Z_OFFSET = Vector3.UP*-65
 
-local PET_LOOKAT_TARGET = World.SpawnAsset("15DDE9D1C41FD428:EmptyObject")
-PET_LOOKAT_TARGET:AttachToPlayer(LOCAL_PLAYER, "pelvis")
-PET_LOOKAT_TARGET:SetPosition(Vector3.UP*(Z_OFFSET.z-10))
-
 local _get_goal do
     -- TODO: add up to 5 spots
     local alpha = math.rad(35)
@@ -169,7 +165,21 @@ function PetAnimator.New(pet_id, pos_idx, player)
         spring = Spring.New(MAX_SPR, _pet_params.position),
         zspring = Spring.New(Z_SPR, _pet_params.position.z)
     }
-    self.pet:LookAtContinuous(PET_LOOKAT_TARGET)
+    local pet_look_at_target do
+        for _, attachment in ipairs(player:GetAttachedObjects()) do
+            local socket = attachment:GetAttachedToSocketName()
+            if socket == "pelvis" then
+                pet_look_at_target = attachment
+                break
+            end
+        end
+        if not pet_look_at_target then
+            pet_look_at_target = World.SpawnAsset("15DDE9D1C41FD428:EmptyObject")
+            pet_look_at_target:AttachToPlayer(player, "pelvis")
+            pet_look_at_target:SetPosition(Vector3.UP*(Z_OFFSET.z-10))
+        end
+    end
+    self.pet:LookAtContinuous(pet_look_at_target)
     return setmetatable(self, PetAnimator)
 end
 
@@ -217,7 +227,7 @@ function PetAnimator:Destroy()
 end
 
 -- pdata: [pet_id]
--- pstae: [{pet_id=pet_id}]
+-- pstate: [{pet_id=pet_id}]
 local function _harmonize(pdata, pstate, player)
     pdata = pdata or {}
     pstate = pstate or {}

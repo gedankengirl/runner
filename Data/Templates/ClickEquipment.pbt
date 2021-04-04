@@ -30,7 +30,7 @@ Assets {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Equipment {
-          SocketName: "pelvis"
+          SocketName: "root"
           PickupTrigger {
             SelfId: 841534158063459245
           }
