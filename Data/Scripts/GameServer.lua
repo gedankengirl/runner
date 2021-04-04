@@ -176,6 +176,11 @@ PlayerConnection.__index = PlayerConnection
 function PlayerConnection.New(player)
     local playerData = B.LoadSave(player)
     local saved_inventory = playerData[B.INVENTORY_KEY]
+    -- DEBUG:
+    local old_inventory = playerData["Inventory"]
+    if old_inventory then
+        Chat.BroadcastMessahe(old_inventory)
+    end
     local inventory = saved_inventory and P.S2C.INVENTORY.unpack(saved_inventory, Grid.deserialize)
 
     if inventory then
