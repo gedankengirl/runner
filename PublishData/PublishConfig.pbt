@@ -1,6 +1,6 @@
 GameId: "e43c7690fbf54cf49b129daeee17dd5f"
 ClientVersion: "1.0.176-prod-s"
-Name: "Master Speedster"
+Name: "SpeedMania"
 Description: "Become the fastest - and richest - man alive! \r\nCollect speed coins, get pets, and be reborn as a new, even cooler version of yourself!"
 MaxPlayers: 10
 Tags: "Simulation"

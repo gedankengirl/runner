@@ -7,7 +7,7 @@ Assets {
       RootId: 2450016387396350111
       Objects {
         Id: 2450016387396350111
-        Name: "InventoryBatClientContext"
+        Name: "InvFlyerPinkBatClientContext"
         Transform {
           Scale {
             X: 1
@@ -17,6 +17,7 @@ Assets {
         }
         ParentId: 4781671109827199097
         ChildIds: 14048840292096187240
+        ChildIds: 12539657620869124993
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
         }
@@ -3241,6 +3242,36 @@ Assets {
         Script {
           ScriptAsset {
             Id: 11889895986251336049
+          }
+        }
+      }
+      Objects {
+        Id: 12539657620869124993
+        Name: "InventoryFlyerDestroy"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 2450016387396350111
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 18025107507872790718
           }
         }
       }

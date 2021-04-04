@@ -3073,7 +3073,7 @@ Objects {
         Overrides {
           Name: "Collidable"
           Enum {
-            Value: "mc:ecollisionsetting:forceoff"
+            Value: "mc:ecollisionsetting:inheritfromparent"
           }
         }
       }
@@ -4531,7 +4531,7 @@ Objects {
   ParentId: 7336164263267299788
   ChildIds: 10890535239238503422
   Collidable_v2 {
-    Value: "mc:ecollisionsetting:forceoff"
+    Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"

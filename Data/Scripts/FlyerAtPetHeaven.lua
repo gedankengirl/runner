@@ -1,27 +1,32 @@
 local floatRandom =_G.req("Snippets").uniform
 local Maid = _G.req("Maid")
 local _maid = Maid.New(script)
-local waitMin = 1
-local waitMax = 10
-local waitBeforeKill = 60
-local batsGroup = "9EE30CDBB5F3E368:InvFlyerBatsGroupClientContext"
-local pinkBat  = "4E962DA6159338A4:InvFlyerPinkBatClientContext"
-local blackBat = "DCB6947A28469804:InvFlyerBlackBatClientContext"
-local twoBlackBats = "73447701360E21D1:InvFlyer2BlackBatsClientContext"
-local scatteredBatsGroup = "95C53FEDAC2FCDD5:InvFlyerScatteredBatsGroupClientContext"
-local flyers = {twoBlackBats, batsGroup, pinkBat, blackBat, twoBlackBats, scatteredBatsGroup}
+local waitMin = 20
+local waitMax = 60
+local INITIAL_DELAY = 1
+local WHITE_BIRD = "E5527E172CD352BD:InvFlyerWhiteBirdClientContext"
+local IVORY_BIRD = "D87E0B43C1414A9B:InvFlyerBirdIvoryClientContext"
+local PAIR_OF_WHITE_BIRDS = "5744174BE03A3FDC:InvFlyerWhiteBirdsPairClientContext"
+local PAIR_OF_BIRDS = "0CA6880A477CEEC4:InvFlyerBirdsPairClientContext"
+local THREE_BIRDS = "4EE2807C70A99ABF:InvFlyerBirdsThreeClientContext"
+local BATS_GROUP = "9EE30CDBB5F3E368:InvFlyerBatsGroupClientContext"
+local PINK_BAT  = "4E962DA6159338A4:InvFlyerPinkBatClientContext"
+local BLACK_BAT = "DCB6947A28469804:InvFlyerBlackBatClientContext"
+local TWO_BLACK_BATS = "73447701360E21D1:InvFlyer2BlackBatsClientContext"
+local SCATTERED_BATS_GROUP = "95C53FEDAC2FCDD5:InvFlyerScatteredBatsGroupClientContext"
+local flyers = {WHITE_BIRD, SCATTERED_BATS_GROUP, PAIR_OF_BIRDS, THREE_BIRDS, PAIR_OF_WHITE_BIRDS, IVORY_BIRD}
+--{TWO_BLACK_BATS, BATS_GROUP, PINK_BAT, BLACK_BAT, TWO_BLACK_BATS, SCATTERED_BATS_GROUP}
 local numberOfFlyers = #flyers
-local leftMark = script:GetCustomProperty("LeftMark"):WaitForObject()
-local rightMark = script:GetCustomProperty("RightMark"):WaitForObject()
-local marks = {leftMark, rightMark}
+local LEFT_MARK = script:GetCustomProperty("LeftMark"):WaitForObject()
+local RIGHT_MARK = script:GetCustomProperty("RightMark"):WaitForObject()
+local marks = {LEFT_MARK, RIGHT_MARK}
 local currentFlyerIndexInArray = math.random(1,numberOfFlyers)
 local currentFlyer = flyers[currentFlyerIndexInArray]
 local currentMark = marks[math.random(1,#marks)]
 local playerInInventory = false
-local isInitialDelayInProgress = false
-local isSelectStillExecuting = false
-local fromLeftToRight = Vector3.New(100, 0, 0)
-local fromRightToLeft = Vector3.New(100, -10, 0)
+local FROM_LEFT_TO_RIGHT = Vector3.New(100, 0, 0)
+local FROM_RIGHT_TO_LEFT = Vector3.New(100, -10, 0)
+local flyersInstances = {}
 
 function Initiate ()
     playerInInventory = true
@@ -30,45 +35,45 @@ end
 
 function FlyAFlyer ()
     if playerInInventory == true then
-        if isSelectStillExecuting == true then Task.Wait(waitBeforeKill)
-        elseif isInitialDelayInProgress == false then
-            isInitialDelayInProgress = true
-            Task.Wait(floatRandom(waitMin, waitMax))
-            isInitialDelayInProgress = false
-        end
-        SelectAFlyer()
+        --Task.Wait(floatRandom(waitMin, waitMax))
+        --currentFlyerIndexInArray = (currentFlyerIndexInArray % numberOfFlyers + 1)
+        currentFlyerIndexInArray = math.random(1,numberOfFlyers)
+        currentFlyer = flyers[currentFlyerIndexInArray]
+        currentMark = marks[math.random(1,#marks)]
+
+        SpawnAFlyer()
     end
 end
 
-function SelectAFlyer()
-    isSelectStillExecuting = true
-    _maid.currentFlyerInstance = World.SpawnAsset(currentFlyer, {parent = currentMark})
-    if currentMark == marks[leftMark] then
-        _maid.currentFlyerInstance:MoveContinuous(fromLeftToRight, true)
+function SpawnAFlyer()
+    table.insert(flyersInstances, World.SpawnAsset(currentFlyer, {parent = currentMark}))
+
+    if currentMark == marks[LEFT_MARK] then
+        flyersInstances[#flyersInstances]:MoveContinuous(FROM_LEFT_TO_RIGHT, true)
     else
-        _maid.currentFlyerInstance:MoveContinuous(fromRightToLeft, true)
+        flyersInstances[#flyersInstances]:MoveContinuous(FROM_RIGHT_TO_LEFT, true)
     end
 
-    -- define the next flyer and spawn mark
-    currentFlyerIndexInArray = (currentFlyerIndexInArray % numberOfFlyers + 1)
-    currentFlyer = flyers[currentFlyerIndexInArray]
-    currentMark = marks[math.random(1,#marks)]
+    Task.Wait(floatRandom(waitMin, waitMax))
+    FlyAFlyer()
+end
 
-    Task.Wait(waitBeforeKill)
-    _maid.currentFlyerInstance = nil
-    isSelectStillExecuting = false
-
-    if playerInInventory == true then
-        FlyAFlyer()
-    end
+function KillAFlyer(target)
+    if Object.IsValid(target) then target:Destroy() end
 end
 
 function StopAllActivity ()
-   _maid.currentFlyerInstance = nil
+   for k,v in pairs(flyersInstances) do
+    if Object.IsValid(v) then v:Destroy() end
+    table.remove(flyersInstances, k)
+   end
+    _maid = nil
    playerInInventory = false
+   print (flyersInstances[1])
 end
 
 do
     _maid:GiveTask(Events.Connect("ISM:Inventory:Entering", Initiate))
     _maid:GiveTask(Events.Connect("ISM:Inventory:Exiting", StopAllActivity))
+    _maid:GiveTask(Events.Connect("TimeToDie", KillAFlyer))
 end

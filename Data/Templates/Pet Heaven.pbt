@@ -1,12 +1,12 @@
 Assets {
-  Id: 7506838739139154008
+  Id: 7022448175450989549
   Name: "Pet Heaven"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {
-      RootId: 1554375620399369718
+      RootId: 13647258816317264621
       Objects {
-        Id: 1554375620399369718
+        Id: 13647258816317264621
         Name: "Pet Heaven"
         Transform {
           Scale {
@@ -16,7 +16,7 @@ Assets {
           }
         }
         ParentId: 4781671109827199097
-        ChildIds: 9184758295447917552
+        ChildIds: 15493596308562033952
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -32,7 +32,7 @@ Assets {
         }
       }
       Objects {
-        Id: 9184758295447917552
+        Id: 15493596308562033952
         Name: "Client Contect"
         Transform {
           Location {
@@ -48,10 +48,10 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 1554375620399369718
-        ChildIds: 17671580278180885102
-        ChildIds: 3608660775060614092
-        ChildIds: 18379871877663641206
+        ParentId: 13647258816317264621
+        ChildIds: 4157289412187534431
+        ChildIds: 18206381739913281506
+        ChildIds: 17017486673070490979
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
         }
@@ -65,12 +65,12 @@ Assets {
         }
       }
       Objects {
-        Id: 17671580278180885102
+        Id: 4157289412187534431
         Name: "LeftMark"
         Transform {
           Location {
             X: -1700.17102
-            Y: -800
+            Y: -1300
             Z: 1000
           }
           Rotation {
@@ -81,7 +81,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 9184758295447917552
+        ParentId: 15493596308562033952
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -96,12 +96,12 @@ Assets {
         }
       }
       Objects {
-        Id: 3608660775060614092
+        Id: 18206381739913281506
         Name: "RightMark"
         Transform {
           Location {
             X: -1700
-            Y: 1500
+            Y: 1513.95313
             Z: 1100
           }
           Rotation {
@@ -112,7 +112,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 9184758295447917552
+        ParentId: 15493596308562033952
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -127,7 +127,7 @@ Assets {
         }
       }
       Objects {
-        Id: 18379871877663641206
+        Id: 17017486673070490979
         Name: "FlyerAtPetHeaven"
         Transform {
           Location {
@@ -140,18 +140,18 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 9184758295447917552
+        ParentId: 15493596308562033952
         UnregisteredParameters {
           Overrides {
             Name: "cs:LeftMark"
             ObjectReference {
-              SubObjectId: 17671580278180885102
+              SubObjectId: 4157289412187534431
             }
           }
           Overrides {
             Name: "cs:RightMark"
             ObjectReference {
-              SubObjectId: 3608660775060614092
+              SubObjectId: 18206381739913281506
             }
           }
         }

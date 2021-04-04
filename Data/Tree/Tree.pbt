@@ -22,7 +22,6 @@ Objects {
   ChildIds: 16813558807825262224
   ChildIds: 8534815031986278044
   ChildIds: 7553754998792656332
-  ChildIds: 11938316480685104441
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -35,38 +34,6 @@ Objects {
     Value: "mc:ecollisionsetting:forceon"
   }
   Folder {
-  }
-}
-Objects {
-  Id: 11938316480685104441
-  Name: "Pet Heaven"
-  Transform {
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 4781671109827199097
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  TemplateInstance {
-    ParameterOverrideMap {
-      key: 1554375620399369718
-      value {
-        Overrides {
-          Name: "Name"
-          String: "Pet Heaven"
-        }
-      }
-    }
-    TemplateAsset {
-      Id: 7506838739139154008
-    }
   }
 }
 Objects {

@@ -19,6 +19,7 @@ Assets {
         ChildIds: 13674702115372663946
         ChildIds: 8104043227159680553
         ChildIds: 12569043470008030161
+        ChildIds: 17429503781805063394
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
         }
@@ -9394,6 +9395,36 @@ Assets {
         Script {
           ScriptAsset {
             Id: 11889895986251336049
+          }
+        }
+      }
+      Objects {
+        Id: 17429503781805063394
+        Name: "InventoryFlyerDestroy"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 15224902494084207660
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 18025107507872790718
           }
         }
       }
