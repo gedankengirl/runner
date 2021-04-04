@@ -22,7 +22,7 @@ Assets {
         UnregisteredParameters {
           Overrides {
             Name: "cs:EggId"
-            String: "Graveyard"
+            String: "Hub"
           }
         }
         Collidable_v2 {
@@ -1425,7 +1425,7 @@ Assets {
             }
             IsButtonEnabled: true
             ClickMode {
-              Value: "mc:ebuttonclickmode:default"
+              Value: "mc:ebuttonclickmode:preciseclick"
             }
             Font {
             }
