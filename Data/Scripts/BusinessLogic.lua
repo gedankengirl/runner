@@ -34,7 +34,7 @@ local COIN_KEY = "SpeedCoin"
 local LIFETIME_COINS_KEY = "LivetimeCoins"
 local GEM_KEY = "Gems"
 local REBIRTH_KEY = "Rebirth"
-local INVENTORY_KEY = "Inventory_v_01"
+local INVENTORY_KEY = "Inventory"
 local EQUIP_LVL_KEY = "EquipLVL"
 local INVENTORY_LVL_KEY = "InventoryLVL"
 local BITSTATE_KEY = "BitState"
@@ -258,6 +258,11 @@ end
 function BusinessLogic.LoadSave(player)
     assert(Environment.IsServer())
     local data = Storage.GetPlayerData(player)
+    -- HACK: clean-up here
+    if data["Inventory_v_01"] then
+        data["Inventory_v_01"] = nil
+        Storage.SetPlayerData(player, data)
+    end
     for key, default in pairs(_KEY_DEFAULTS) do
         data[key] = data[key] or default
         if math.type(data[key]) == "integer" then
