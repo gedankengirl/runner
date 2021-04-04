@@ -42,6 +42,7 @@ Assets {
         }
         Trigger {
           TeamSettings {
+            IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
           TriggerShape_v2 {

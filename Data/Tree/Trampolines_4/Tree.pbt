@@ -55,6 +55,10 @@ Objects {
             Z: 3.12436604
           }
         }
+        Overrides {
+          Name: "TeamsEnableTeamCollision"
+          Bool: true
+        }
       }
     }
     TemplateAsset {
@@ -116,6 +120,10 @@ Objects {
             Z: 3.12436604
           }
         }
+        Overrides {
+          Name: "TeamsEnableTeamCollision"
+          Bool: true
+        }
       }
     }
     TemplateAsset {
@@ -160,6 +168,10 @@ Objects {
           Name: "Rotation"
           Rotator {
           }
+        }
+        Overrides {
+          Name: "TeamsEnableTeamCollision"
+          Bool: true
         }
       }
     }
