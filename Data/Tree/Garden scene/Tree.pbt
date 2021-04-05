@@ -1,6 +1,39 @@
 Name: "Garden scene"
 RootId: 15346583032969552003
 Objects {
+  Id: 4537210680692325316
+  Name: "InstructionBoard"
+  Transform {
+    Location {
+      X: 6444.63379
+      Y: -1135.81445
+      Z: 68.8156891
+    }
+    Rotation {
+      Yaw: 155.625519
+    }
+    Scale {
+      X: 0.948308408
+      Y: 0.948308408
+      Z: 0.948308408
+    }
+  }
+  ParentId: 15346583032969552003
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "InstructionBoard"
+  }
+}
+Objects {
   Id: 5243894877939740741
   Name: "Pet Corner"
   Transform {

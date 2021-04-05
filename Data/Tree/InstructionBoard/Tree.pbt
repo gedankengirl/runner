@@ -1,7 +1,7 @@
-Name: "PetBoard"
-RootId: 18133843002547383417
+Name: "InstructionBoard"
+RootId: 4537210680692325316
 Objects {
-  Id: 133180736912161979
+  Id: 9290822995944431382
   Name: "Cylinder - Bottom-Aligned"
   Transform {
     Location {
@@ -18,7 +18,7 @@ Objects {
       Z: 2.49147201
     }
   }
-  ParentId: 18133843002547383417
+  ParentId: 4537210680692325316
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -63,7 +63,7 @@ Objects {
   }
 }
 Objects {
-  Id: 11156046788758893006
+  Id: 2587914296952142458
   Name: "Cylinder - Bottom-Aligned"
   Transform {
     Location {
@@ -80,7 +80,7 @@ Objects {
       Z: 2.49147201
     }
   }
-  ParentId: 18133843002547383417
+  ParentId: 4537210680692325316
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -125,7 +125,7 @@ Objects {
   }
 }
 Objects {
-  Id: 8590657868296383873
+  Id: 10636944654109491548
   Name: "Inscription"
   Transform {
     Location {
@@ -142,7 +142,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 18133843002547383417
+  ParentId: 4537210680692325316
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -154,11 +154,11 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Inscription_1"
+    FilePartitionName: "Inscription_2"
   }
 }
 Objects {
-  Id: 1817523727888908794
+  Id: 10857449190303379055
   Name: "Cube"
   Transform {
     Location {
@@ -173,7 +173,7 @@ Objects {
       Z: 4.53968096
     }
   }
-  ParentId: 18133843002547383417
+  ParentId: 4537210680692325316
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"

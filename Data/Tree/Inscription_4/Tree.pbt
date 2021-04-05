@@ -1,13 +1,13 @@
-Name: "Inscription_1"
-RootId: 8590657868296383873
+Name: "Inscription_4"
+RootId: 8163513391121316711
 Objects {
-  Id: 6288855515871248321
+  Id: 10798016475487173368
   Name: "World Text"
   Transform {
     Location {
-      X: 4.30402422
-      Y: 0.000645632681
-      Z: -160
+      X: 4.30419874
+      Y: 0.000621496874
+      Z: -165
     }
     Rotation {
       Yaw: -2.73207552e-05
@@ -18,7 +18,7 @@ Objects {
       Z: 1.49629414
     }
   }
-  ParentId: 8590657868296383873
+  ParentId: 8163513391121316711
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -29,12 +29,12 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Text {
-    Text: "A UNIQUE PET SELECTION."
+    Text: "TO NEW AREAS."
     FontAsset {
     }
     Color {
-      G: 0.412222385
-      B: 0.490000129
+      G: 0.570000172
+      B: 0.0271427613
       A: 1
     }
     HorizontalSize: 1
@@ -48,13 +48,13 @@ Objects {
   }
 }
 Objects {
-  Id: 4716941529007190308
+  Id: 17338806678977437137
   Name: "World Text"
   Transform {
     Location {
-      X: 4.30402422
-      Y: 0.000645632681
-      Z: -130
+      X: 4.30419874
+      Y: 0.000618982769
+      Z: -135
     }
     Rotation {
       Yaw: -1.02452832e-05
@@ -65,7 +65,7 @@ Objects {
       Z: 1.49629414
     }
   }
-  ParentId: 8590657868296383873
+  ParentId: 8163513391121316711
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -76,7 +76,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Text {
-    Text: "EVERY AREA OFFERS"
+    Text: "YOU MAY ALSO GET ACCESS"
     FontAsset {
     }
     Color {
@@ -95,13 +95,13 @@ Objects {
   }
 }
 Objects {
-  Id: 16028945156404051166
+  Id: 9251634715619408078
   Name: "World Text"
   Transform {
     Location {
-      X: 4.30402422
-      Y: 0.000645632681
-      Z: -100
+      X: 4.30419874
+      Y: 0.000618982769
+      Z: -105
     }
     Rotation {
     }
@@ -111,7 +111,7 @@ Objects {
       Z: 1.49629414
     }
   }
-  ParentId: 8590657868296383873
+  ParentId: 8163513391121316711
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -122,6 +122,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Text {
+    Text: "IN GAINING IT ANEW."
     FontAsset {
     }
     Color {
@@ -140,13 +141,13 @@ Objects {
   }
 }
 Objects {
-  Id: 5884901770906775485
+  Id: 8031417463181132122
   Name: "World Text"
   Transform {
     Location {
-      X: 4.30402422
-      Y: 0.000645632681
-      Z: -70
+      X: 4.30419874
+      Y: 0.000618982769
+      Z: -75
     }
     Rotation {
     }
@@ -156,7 +157,7 @@ Objects {
       Z: 1.49629414
     }
   }
-  ParentId: 8590657868296383873
+  ParentId: 8163513391121316711
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -167,12 +168,12 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Text {
-    Text: "1 UPGRADED PET."
+    Text: "BUT YOU WILL BE FASTER"
     FontAsset {
     }
     Color {
-      G: 0.570000172
-      B: 0.0271427613
+      G: 0.412222385
+      B: 0.490000129
       A: 1
     }
     HorizontalSize: 1
@@ -186,13 +187,13 @@ Objects {
   }
 }
 Objects {
-  Id: 11062544049427931734
+  Id: 16346125855551002530
   Name: "World Text"
   Transform {
     Location {
-      X: 4.30402422
-      Y: 0.000645632681
-      Z: -40
+      X: 4.30419874
+      Y: 0.000618982769
+      Z: -45
     }
     Rotation {
     }
@@ -202,7 +203,7 @@ Objects {
       Z: 1.49629414
     }
   }
-  ParentId: 8590657868296383873
+  ParentId: 8163513391121316711
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -213,12 +214,12 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Text {
-    Text: "CAN BE MERGED INTO "
+    Text: "YOUR CURRENT SPEED,"
     FontAsset {
     }
     Color {
-      G: 0.570000172
-      B: 0.0271427613
+      R: 0.618000031
+      G: 0.0196190476
       A: 1
     }
     HorizontalSize: 1
@@ -232,13 +233,13 @@ Objects {
   }
 }
 Objects {
-  Id: 9405284513093188216
+  Id: 15889467552560902795
   Name: "World Text"
   Transform {
     Location {
-      X: 4.30402422
-      Y: 0.000645632681
-      Z: -10
+      X: 4.30419874
+      Y: 0.000618982769
+      Z: -15
     }
     Rotation {
     }
@@ -248,7 +249,7 @@ Objects {
       Z: 1.49629414
     }
   }
-  ParentId: 8590657868296383873
+  ParentId: 8163513391121316711
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -259,12 +260,12 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Text {
-    Text: "3 IDENTICAL CRITTERS "
+    Text: "YOU WILL LOSE ALL "
     FontAsset {
     }
     Color {
-      G: 0.570000172
-      B: 0.0271427613
+      R: 0.618000031
+      G: 0.0196190476
       A: 1
     }
     HorizontalSize: 1
@@ -278,7 +279,7 @@ Objects {
   }
 }
 Objects {
-  Id: 14234456283435948188
+  Id: 4614111366128499417
   Name: "World Text"
   Transform {
     Location {
@@ -294,7 +295,7 @@ Objects {
       Z: 1.49629414
     }
   }
-  ParentId: 8590657868296383873
+  ParentId: 8163513391121316711
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -305,7 +306,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Text {
-    Text: "MUCH FASTER."
+    Text: "AND GO FOR IT."
     FontAsset {
     }
     Color {
@@ -324,7 +325,7 @@ Objects {
   }
 }
 Objects {
-  Id: 154436687889479814
+  Id: 8271115595610981770
   Name: "World Text"
   Transform {
     Location {
@@ -340,7 +341,7 @@ Objects {
       Z: 1.49629414
     }
   }
-  ParentId: 8590657868296383873
+  ParentId: 8163513391121316711
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -351,7 +352,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Text {
-    Text: "THEY HELP YOU GAIN SPEED"
+    Text: "STEP ON THE RINK"
     FontAsset {
     }
     Color {
@@ -370,7 +371,7 @@ Objects {
   }
 }
 Objects {
-  Id: 2785414900856111602
+  Id: 12873220097883991136
   Name: "World Text"
   Transform {
     Location {
@@ -386,7 +387,7 @@ Objects {
       Z: 1.49629414
     }
   }
-  ParentId: 8590657868296383873
+  ParentId: 8163513391121316711
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -397,7 +398,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Text {
-    Text: "GETTING NEW PETS."
+    Text: "SPEED FOR A REBIRTH,"
     FontAsset {
     }
     Color {
@@ -416,7 +417,7 @@ Objects {
   }
 }
 Objects {
-  Id: 9460001419604196778
+  Id: 1348957703853377972
   Name: "World Text"
   Transform {
     Location {
@@ -432,7 +433,7 @@ Objects {
       Z: 1.49629414
     }
   }
-  ParentId: 8590657868296383873
+  ParentId: 8163513391121316711
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -443,7 +444,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Text {
-    Text: "NEVER MISS OUT ON "
+    Text: "IF YOU HAVE ENOUGH"
     FontAsset {
     }
     Color {
@@ -462,7 +463,7 @@ Objects {
   }
 }
 Objects {
-  Id: 9774896897037062785
+  Id: 6548534568539350990
   Name: "Cube"
   Transform {
     Location {
@@ -477,7 +478,7 @@ Objects {
       Z: 3.52245402
     }
   }
-  ParentId: 8590657868296383873
+  ParentId: 8163513391121316711
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
