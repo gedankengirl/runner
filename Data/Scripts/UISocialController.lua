@@ -1,6 +1,5 @@
 local Deque = _G.req("_Deque")
 local Maid = _G.req("_Maid")
-local B = _G.req("BusinessLogic")
 local P = _G.req("Protocols")
 local S = _G.req("StaticData")
 local Snippets = _G.req("Snippets")
@@ -27,11 +26,6 @@ local LINE_PROPS = {
     "PlayerIcon",
     "TextBack",
     "TextFront",
-    "IconRank",
-    "IconRankNumber",
-    "IconVictory",
-    "IconMap",
-    "IconEnemy",
 }
 
 ----------------------------------------------------------------------------------------------------
@@ -71,8 +65,9 @@ local function SpawnLine()
         line[prop] = line.root:GetCustomProperty(prop):WaitForObject()
     end
     line.controlsToFade = line.root:FindDescendantsByType("UIControl")
-    for _,control in ipairs(line.controlsToFade) do
+    for i, control in ipairs(line.controlsToFade) do
         control.clientUserData.baseAlpha = control:GetColor().a
+        print(i, control.name, control.clientUserData.baseAlpha)
     end
     return line
 end
@@ -113,7 +108,7 @@ local function WriteLine(lineInfo)
     line.TextBack.text = fullMessage
     line.TextFront.text = nameMessage
     -- Adjust the width.
-    local guessTextWidth = ConservativeGuessTextWidth(fullMessage, line.TextBack.fontSize)
+    local guessTextWidth = ConservativeGuessTextWidth(fullMessage, line.TextBack.fontSize) + 32
     local shortenAmount = line.TextBack.width - guessTextWidth
     line.TextBack.width = guessTextWidth
     line.TextFront.width = guessTextWidth
@@ -122,34 +117,14 @@ local function WriteLine(lineInfo)
     local isLocalPlayer = lineInfo.player == LOCAL_PLAYER
     line.TextFront:SetColor(isLocalPlayer and COLOR_NAME_LOCAL_PLAYER or COLOR_NAME_DEFAULT)
     -- Message settings according to type.
-    line.IconRank.visibility = Visibility.FORCE_OFF
-    line.IconVictory.visibility = Visibility.FORCE_OFF
-    line.IconMap.visibility = Visibility.FORCE_OFF
-    line.IconEnemy.visibility = Visibility.FORCE_OFF
     if lineInfo.type == "Hatch" then
         line.TextBack:SetColor(COLOR_MESSAGE_NEW_MAP)
-        line.IconRank:SetColor(COLOR_MESSAGE_NEW_MAP)
-        line.IconRankNumber:SetColor(COLOR_MESSAGE_NEW_MAP)
-        line.IconRank.visibility = Visibility.INHERIT
-        line.IconRankNumber.text = tostring(lineInfo.actorRank)
     elseif lineInfo.type == "Merge" then
         line.TextBack:SetColor(COLOR_MESSAGE_MERGE)
-        line.IconRank:SetColor(COLOR_MESSAGE_MERGE)
-        line.IconRankNumber:SetColor(COLOR_MESSAGE_MERGE)
-        line.IconRank.visibility = Visibility.INHERIT
-        line.IconRankNumber.text = tostring(lineInfo.actorRank)
     elseif lineInfo.type == "Rebirth" then
         line.TextBack:SetColor(COLOR_MESSAGE_MAP_COMPLETE)
-        line.IconRank:SetColor(COLOR_MESSAGE_MAP_COMPLETE)
-        line.IconRankNumber:SetColor(COLOR_MESSAGE_MAP_COMPLETE)
-        line.IconRank.visibility = Visibility.INHERIT
-        line.IconRankNumber.text = tostring(lineInfo.actorRank)
     elseif lineInfo.type == "Connect" then
         line.TextBack:SetColor(COLOR_MESSAGE_COMBAT)
-        line.IconRank:SetColor(COLOR_MESSAGE_COMBAT)
-        line.IconRankNumber:SetColor(COLOR_MESSAGE_COMBAT)
-        line.IconRank.visibility = Visibility.INHERIT
-        line.IconRankNumber.text = tostring(lineInfo.actorRank)
     elseif lineInfo.type == "Disconnect" then
         line.TextBack:SetColor(COLOR_MESSAGE_COMBAT)
     end
@@ -163,6 +138,7 @@ local function WriteLine(lineInfo)
 end
 
 local function UpdateLines(dt)
+    dt = dt > 0.030 and 0.030 or dt
     for line,_ in pairs(lines) do
         line.life = line.life - dt
         -- Do scrolling.
@@ -170,7 +146,7 @@ local function UpdateLines(dt)
         line.root.y = CoreMath.Lerp(line.targetY, line.oldY, CoreMath.Clamp(line.scrollTimer / LINE_SCROLL_TIME))
         -- Do fades and cleanup.
         if line.life <= 0 then
-            line.root:Destroy()
+            Maid.safeDestroy(line.root)
             lines[line] = nil
         elseif line.life <= LINE_FADE_TIME then
             local alpha = line.life / LINE_FADE_TIME
@@ -183,7 +159,6 @@ local function UpdateLines(dt)
 end
 
 ----------------------------------------------------------------------------------------------------
-local playersById = {}
 local function GetPlayerById(playerId)
     local players = Game.GetPlayers()
     for _, player in ipairs(players) do
@@ -197,7 +172,7 @@ local frivolousQueue = Deque.New()
 local rolloutTimer = 0
 
 local function PushOntoAppropriateQueue(lineInfo)
-    local isImportant = lineInfo.player == LOCAL_PLAYER
+    local isImportant = lineInfo.player == LOCAL_PLAYER or lineInfo.type == "Rebirth"
     local appropriateQueue = isImportant and importantQueue or frivolousQueue
     if appropriateQueue:Count() > QUEUE_LIMIT then
         appropriateQueue:PopFront()
@@ -224,16 +199,19 @@ end
 local SocialHandlers = {}
 
 function SocialHandlers.OnSocial_Hatch(player_id, pet_id)
+    -- TODO: filter out commons
+    local rarity, rarity_info = S.PetDb:GetRarity(pet_id)
     local player = GetPlayerById(player_id)
     if not player then return end
+    if rarity <=  S.RARITY.COMMON and player ~= LOCAL_PLAYER then
+        return
+    end
     local pet_name = S.PetDb:GetName(pet_id)
     local fancy_name = S.FancyPetNamesByName[pet_name] or pet_name
-    local _, rarity_info = S.PetDb:GetRarity(pet_id)
     PushOntoAppropriateQueue{
         type = "Hatch",
         player = player,
-        actorRank = player:GetResource(B.REBIRTH_KEY) or 0,
-        message = string.format("%s hatched %s %s", player.name, rarity_info.name:lower(), fancy_name)
+        message = string.format("%s hatched [%s] *%s*", player.name, rarity_info.name:lower(), fancy_name)
     }
 end
 
@@ -246,8 +224,7 @@ function SocialHandlers.OnSocial_Merge(player_id, pet_id)
     PushOntoAppropriateQueue{
         type = "Merge",
         player = player,
-        actorRank = player:GetResource(B.REBIRTH_KEY) or 0,
-        message = string.format("%s merged %s %s", player.name, upgrade, fancy_name)
+        message = string.format("%s merged [%s] *%s*", player.name, upgrade, fancy_name)
     }
 end
 
@@ -258,7 +235,6 @@ function SocialHandlers.OnSocial_Rebirth(player_id, rebirth)
     PushOntoAppropriateQueue{
         type = "Rebirth",
         player = player,
-        actorRank = player:GetResource(B.REBIRTH_KEY) or 0,
         message = string.format("%s, happy %s rebirthday!", player.name, suffixedRebirth)
     }
 end
@@ -268,7 +244,6 @@ function SocialHandlers.OnSocial_Connect_Local(player)
     PushOntoAppropriateQueue{
         type = "Connect",
         player = player,
-        actorRank = player:GetResource(B.REBIRTH_KEY) or 0,
         message = string.format("%s joined the game", player.name)
     }
 end
@@ -292,62 +267,3 @@ end
 
 _maid:GiveTask(Game.playerJoinedEvent:Connect(SocialHandlers.OnSocial_Connect_Local))
 _maid:GiveTask(Game.playerLeftEvent:Connect(SocialHandlers.OnSocial_Disconnect_Local))
-
---[[
----------------------------------------------------------------------------------------------------
--- Used to tune the correct line widths.
-local function _SelfTest()
-    local function execute()
-        local testWidths = {4, 6, 8, 10, 16, 24, 32, 64}
-        local testChar = TEST_CHAR
-        local testDelay = 0.3
-        local i = 0
-        while true do
-            local n = testWidths[(i % #testWidths) + 1]
-            i = i + 1
-            local message = string.rep(testChar, n) .. "aaaaaaaa"
-            PushOntoAppropriateQueue({
-                type = "Combat",
-                player = LOCAL_PLAYER,
-                message = message,
-                actorRank = 5
-            })
-            Task.Wait(testDelay)
-            PushOntoAppropriateQueue({
-                type = "Merge",
-                player = LOCAL_PLAYER,
-                message = message,
-                actorRank = 8
-            })
-            Task.Wait(testDelay)
-            print("doing it")
-        end
-    end
-    Events.Connect("Social_MapLoad", execute)
-end
-
-local function _SelfTestRandom()
-    local chars = {}
-    for k,_ in pairs(CHAR_WIDTHS) do if #k == 1 then table.insert(chars, k) end end
-    local function execute()
-        local testWidth = 64
-        local testDelay = 0.3
-        local i = 0
-        while true do
-            i = i + 1
-            local message = ""
-            for j=1,testWidth do message = message .. chars[math.random(#chars)] end
-            PushOntoAppropriateQueue({
-                type = "Combat",
-                player = LOCAL_PLAYER,
-                message = message,
-                actorRank = 5
-            })
-            Task.Wait(testDelay)
-        end
-    end
-    Events.Connect("Social_MapLoad", execute)
-end
-_SelfTestRandom()
-
-]]--

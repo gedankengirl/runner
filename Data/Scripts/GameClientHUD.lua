@@ -11,7 +11,6 @@ local S = _G.req("StaticData")
 local pp = _G.req("_Luapp").pp
 local xoshiro256 = _G.req("_Xoshiro256")
 local random = xoshiro256.random
-local randomseed = xoshiro256.randomseed
 local tan, rad = math.tan, math.rad
 local HUD_UPDATE_FPS = 5
 
@@ -34,8 +33,8 @@ local INFO_INVENTORY = UI_HUD:GetCustomProperty("INFO_Inventory"):WaitForObject(
 local INFO_PET_STAND = UI_HUD:GetCustomProperty("INFO_PetStand"):WaitForObject()
 local INFO_INGAME = UI_HUD:GetCustomProperty("INFO_InGame"):WaitForObject()
 local INFO_PET = UI_HUD:GetCustomProperty("INFO_Pet"):WaitForObject()
-local INFO_PET_HIDE = Vector2.New(-500, INFO_PET.y)
-local INFO_PET_SHOW = Vector2.New(-6, INFO_PET.y)
+local INFO_PET_HIDE = Vector2.New(400, INFO_PET.y)
+local INFO_PET_SHOW = Vector2.New(-10, INFO_PET.y)
 
 local MESSAGE_PANEL = script:GetCustomProperty("NotificationsPanel"):WaitForObject()
 local MESSAGE_PANEL_TEXT = MESSAGE_PANEL:GetCustomProperty("TEXT"):WaitForObject()
@@ -212,6 +211,9 @@ local Bubble do
     end
 end
 
+-----------------------------------------------------------------------------
+-- HUD
+-----------------------------------------------------------------------------
 local HUD = {}
 
 function HUD:Start()
@@ -251,6 +253,7 @@ function HUD._Update()
     _screen_position(_maid.gems_icon, 10, 128, half_width + gcx + ICON_DX, gcy + ICON_DY)
     local possible, needed, has, _rebirth = B.isRebirthPossible(LOCAL_PLAYER)
     if possible then
+        -- FIXME: text to static data
         UI_NEED_TO_REBIRTH_COUNT.text = "It's rebirth time!"
         UI_REBIRTH_PROGRESS.progress = 1
     else
@@ -304,7 +307,9 @@ _maid._x_button_show_shop = Events.Connect("ISM:Shop:Entering", function()
     INFO_INGAME.visibility = Visibility.FORCE_OFF
 end)
 
--- pet info
+-----------------------------------------------------------------------------
+-- PET INFO PANEL
+-----------------------------------------------------------------------------
 do
     local PET_NAME = INFO_PET:GetCustomProperty("Name"):WaitForObject()
     local PET_RARITY = INFO_PET:GetCustomProperty("Rarity"):WaitForObject()

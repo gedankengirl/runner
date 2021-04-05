@@ -4422,7 +4422,7 @@ Assets {
               Id: 3169085770256452745
             }
             Color {
-              G: 0.0771429539
+              G: 0.0771429166
               B: 0.162000179
               A: 0.4
             }
@@ -4848,9 +4848,8 @@ Assets {
         }
         Control {
           Width: 540
-          Height: 300
-          UIX: 20
-          UIY: 20
+          Height: 400
+          UIY: 200
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
@@ -4914,7 +4913,7 @@ Assets {
           }
           Overrides {
             Name: "cs:LineFadeTime"
-            Float: 2
+            Float: 1
           }
           Overrides {
             Name: "cs:LineScrollTime"
@@ -5064,7 +5063,7 @@ Assets {
         Control {
           Width: 320
           Height: 230
-          UIX: -500
+          UIX: 400
           UIY: -240
           RenderTransformPivot {
             Anchor {
@@ -5076,12 +5075,12 @@ Assets {
           AnchorLayout {
             SelfAnchor {
               Anchor {
-                Value: "mc:euianchor:middleleft"
+                Value: "mc:euianchor:middleright"
               }
             }
             TargetAnchor {
               Anchor {
-                Value: "mc:euianchor:middleleft"
+                Value: "mc:euianchor:middleright"
               }
             }
           }
