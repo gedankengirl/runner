@@ -19,7 +19,7 @@ Objects {
   ChildIds: 12007125140119696648
   ChildIds: 4906105228638113618
   ChildIds: 10764064574047099998
-  ChildIds: 16813558807825262224
+  ChildIds: 7548521323859238510
   ChildIds: 8534815031986278044
   ChildIds: 7553754998792656332
   ChildIds: 11266998582273717775
@@ -61,6 +61,16 @@ Objects {
         Overrides {
           Name: "Name"
           String: "Pet Heaven"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
         }
       }
     }
@@ -167,12 +177,12 @@ Objects {
   }
 }
 Objects {
-  Id: 16813558807825262224
-  Name: "Spawn Point"
+  Id: 7548521323859238510
+  Name: "Spawn Points"
   Transform {
     Location {
       X: -399.20166
-      Y: -2585.84644
+      Y: -2322.43091
       Z: 184.327332
     }
     Rotation {
@@ -184,8 +194,6 @@ Objects {
     }
   }
   ParentId: 4781671109827199097
-  UnregisteredParameters {
-  }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -195,9 +203,9 @@ Objects {
   CameraCollidable {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
-  PlayerSpawnPoint {
-    TeamInt: 1
-    PlayerScaleMultiplier: 1
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "Spawn Points"
   }
 }
 Objects {

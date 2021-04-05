@@ -1,4 +1,4 @@
-Name: "Inscription_4"
+Name: "MainInscription"
 RootId: 5429278001982228563
 Objects {
   Id: 10837221824397894701

@@ -10,7 +10,8 @@ local CURRENT_SCALE = Vector3.ONE * DATA_ENTRY.scale
 local RESPAWN_DELAY = S.BoosterDb[BOOSTER_ID].delay
 RESPAWN_DELAY = RESPAWN_DELAY < 0.1 and 0.1 or RESPAWN_DELAY
 CURRENT_ROT = Rotation.New(0, 0, 0)
-if DATA_ENTRY[1] == "Hoop" then CURRENT_ROT.y = 90 end
+local TAG = DATA_ENTRY[1]
+if TAG == "Hoop" then CURRENT_ROT.y = 90 end
 local TEMPLATE = assert(TRIGGER.sourceTemplateId, "template must not be deinstantiated")
 local GEO_TEMPLATE = TRIGGER:GetCustomProperty("GeoTemplate")
 local GEO_DUMMY = TRIGGER:GetCustomProperty("GeoDummy"):WaitForObject()
@@ -32,7 +33,7 @@ local function OnBeginOverlap(_trigger, player)
     REvents.Broadcast(P.STATIC.StaticPickup, player, BOOSTER_ID, TRIGGER:GetWorldPosition())
     SCHEDULER.Add(RESPAWN_DELAY + time(), TEMPLATE, TRIGGER.parent, TRIGGER:GetPosition(), TRIGGER:GetRotation(), TRIGGER:GetScale())
     -- NOTE: `isEnabled` is *not* supported in Static Context
-    TRIGGER:Destroy()
+    if TRIGGER then TRIGGER:Destroy() end
 end
 
 TRIGGER.beginOverlapEvent:Connect(OnBeginOverlap)

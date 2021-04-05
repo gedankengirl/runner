@@ -6945,7 +6945,7 @@ Objects {
 }
 Objects {
   Id: 5429278001982228563
-  Name: "Inscription"
+  Name: "MainInscription"
   Transform {
     Location {
       X: 12.1015625
@@ -6971,7 +6971,7 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Inscription_4"
+    FilePartitionName: "MainInscription"
   }
 }
 Objects {

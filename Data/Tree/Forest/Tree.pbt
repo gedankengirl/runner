@@ -5399,7 +5399,7 @@ Objects {
   ChildIds: 6782044049003545371
   ChildIds: 13697641988438033428
   Collidable_v2 {
-    Value: "mc:ecollisionsetting:forceoff"
+    Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"

@@ -7,12 +7,12 @@ local Color = CORE_ENV and Color or {
 }
 
 StaticData.TEXT = {
-    NOT_ENOUGH_SPEED = "Not enough Speed.",
-    NOT_ENOUGH_GEMS = "Not enough Gems.",
+    NOT_ENOUGH_SPEED = "Not enough [SPEED].",
+    NOT_ENOUGH_GEMS = "Not enough [GEMS].",
     INVENTORY_NOT_READY = "Inventory not ready.",
-    INVENTORY_FULL = "Inventory full.\nMerge or delete some pets",
-    DELETE_PET_CONFIRM = "Do you want to delete\n%s?", -- note format
-    REBIRTH_CONFIRM = "Do you want to do a rebirth?\nAll your current speed will be spent."
+    INVENTORY_FULL = "Inventory full.\nMerge or dismiss some pets",
+    DELETE_PET_CONFIRM = "Do you want to \npermanently dismiss\n%s?", -- note format
+    REBIRTH_CONFIRM = "Do you want to do a rebirth?\nAll your current [SPEED] will be spent."
 }
 
 StaticData.T = StaticData.TEXT

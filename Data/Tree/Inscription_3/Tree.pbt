@@ -33,9 +33,8 @@ Objects {
     FontAsset {
     }
     Color {
-      R: 0.802000046
-      G: 0.761186302
-      B: 0.152767882
+      G: 0.570000172
+      B: 0.0271427613
       A: 1
     }
     HorizontalSize: 1
@@ -219,8 +218,8 @@ Objects {
     FontAsset {
     }
     Color {
-      G: 0.412222385
-      B: 0.490000129
+      R: 0.618000031
+      G: 0.0196190476
       A: 1
     }
     HorizontalSize: 1
@@ -265,8 +264,8 @@ Objects {
     FontAsset {
     }
     Color {
-      G: 0.412222385
-      B: 0.490000129
+      R: 0.618000031
+      G: 0.0196190476
       A: 1
     }
     HorizontalSize: 1
