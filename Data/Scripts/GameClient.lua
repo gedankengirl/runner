@@ -1,4 +1,4 @@
-local DEBUG = Environment.IsPreview() and false
+local DEBUG = Environment.IsPreview()
 local debug = function(...) if DEBUG then print("[D]", ...) end end
 local Maid = _G.req("_Maid")
 local Grid = _G.req("_Grid")
@@ -83,7 +83,7 @@ local function _fitSphereToCamera(r, fov)
     if aspect < 1 then
         halfMinFov = math.atan(aspect * math.tan(halfMinFov))
     end
-    return r / math.sin(halfMinFov)
+    return r/math.sin(halfMinFov)
 end
 
 local function _set_inv_cam_limits(grid)
@@ -341,14 +341,18 @@ function Client:_AwaitDownlinkChannel()
         for _, val in pairs(DOWNLINK:GetCustomProperties()) do
             local player_id, channel, pets, social = P.S2C.CHANNELS.unpack(val)
             if player_id and player_id == LOCAL_PLAYER.id then
-                warn(pp{"got channel", LOCAL_PLAYER.name, player_id, channel, social})
+                if DEBUG then
+                    warn(pp{"got channel", LOCAL_PLAYER.name, player_id, channel, social})
+                end
                 self.channel = channel
                 self.pets_chan = pets
                 self.social_chan = social
                 break
             end
         end
-    end
+    end -- while
+
+    -- subscribe to dowmlink
     _maid.downlink = DOWNLINK.networkedPropertyChangedEvent:Connect(function(_owner, prop)
         local data = _read_channel(prop)
         if not data or #data == 0 then return end
@@ -377,17 +381,21 @@ function Client:_AwaitDownlinkChannel()
         end
     end)
     -- ask for inventory
-    warn(pp{"ask server for inventory", LOCAL_PLAYER.name})
+    if DEBUG then
+        warn(pp{"ask server for inventory", LOCAL_PLAYER.name})
+    end
     REvents.BroadcastToServer(P.C2S.GameInventoryRrequest)
 end
 
 function Client:_SetupEventForwarding()
     -- DEBUG:
-    for _op, protocol in pairs(P.SOCIAL.protocols) do
-        local event = protocol.event
-        _maid:GiveTask(Events.Connect(event, function(...)
-            debug("[SOCIAL DEBUG]", event, ...)
-        end))
+    if DEBUG then
+        for _op, protocol in pairs(P.SOCIAL.protocols) do
+            local event = protocol.event
+            _maid:GiveTask(Events.Connect(event, function(...)
+                debug("[SOCIAL DEBUG]", event, ...)
+            end))
+        end
     end
 end
 
@@ -845,8 +853,8 @@ function INVENTORY:HandleLeftMouseUp()
     end
 end
 
--- extra camera disstance
-local K = {
+-- extra camera distance, empirical
+local K_EXTRA = {
     [7*5] = 2,
     [7*6] = 2,
     [9*6] = 2,
@@ -868,7 +876,7 @@ function INVENTORY:_StartCamera()
     local distance, sin, cos = _set_inv_cam_limits(grid)
     local CAMERA_RELATIVE_HEIGHT = cos*distance
     INVENTORY_CAM.currentDistance = distance
-    local k_extra = assert(K[w*h], w*h)
+    local k_extra = K_EXTRA[w*h] or 1.5
     local startTransform = Transform.New(
         Quaternion.IDENTITY,
         Vector3.New(-distance + k_extra*dimx, (w-1)*dimy/2, INV_INTERACTION_PLANE_HEIGHT),
