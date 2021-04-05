@@ -12,7 +12,15 @@ StaticData.TEXT = {
     INVENTORY_NOT_READY = "Inventory not ready.",
     INVENTORY_FULL = "Inventory full.\nMerge or dismiss some pets",
     DELETE_PET_CONFIRM = "Do you want to \npermanently dismiss\n%s?", -- note format
-    REBIRTH_CONFIRM = "Do you want to do a rebirth?\nAll your current [SPEED] will be spent."
+    REBIRTH_CONFIRM = "Do you want to do a rebirth?\nAll your current [SPEED] will be spent.",
+    SOCIAL_CONNECT = "%s joined the game",
+    SOCIAL_DISCONNECT = "%s left the game",
+    SOCIAL_MERGE = "%s merged [%s] *%s*",
+    SOCIAL_REBIRTH = "%s, happy %s rebirthday!",
+    SOCIAL_HATCH = "%s hatched [%s] *%s*",
+    HUD_REBIRTH_TIME = "It's rebirth time!",
+    HUD_TILL_REBIRTH = "%s till next rebirth",
+
 }
 
 StaticData.T = StaticData.TEXT

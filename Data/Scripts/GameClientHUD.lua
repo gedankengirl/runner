@@ -254,11 +254,11 @@ function HUD._Update()
     local possible, needed, has, _rebirth = B.isRebirthPossible(LOCAL_PLAYER)
     if possible then
         -- FIXME: text to static data
-        UI_NEED_TO_REBIRTH_COUNT.text = "It's rebirth time!"
+        UI_NEED_TO_REBIRTH_COUNT.text = S.T.HUD_REBIRTH_TIME
         UI_REBIRTH_PROGRESS.progress = 1
     else
         UI_REBIRTH_PROGRESS.progress = has/needed
-        UI_NEED_TO_REBIRTH_COUNT.text = B.formatNumber(needed-has).." till next rebirth"
+        UI_NEED_TO_REBIRTH_COUNT.text = string.format(S.T.HUD_TILL_REBIRTH, B.formatNumber(needed-has))
     end
     -- message queue
     if not _message_visible and not MESSAGE_QUEUE:IsEmpty() then

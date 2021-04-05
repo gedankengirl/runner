@@ -211,7 +211,7 @@ function SocialHandlers.OnSocial_Hatch(player_id, pet_id)
     PushOntoAppropriateQueue{
         type = "Hatch",
         player = player,
-        message = string.format("%s hatched [%s] *%s*", player.name, rarity_info.name:lower(), fancy_name)
+        message = string.format(S.T.SOCIAL_HATCH, player.name, rarity_info.name:lower(), fancy_name)
     }
 end
 
@@ -224,7 +224,7 @@ function SocialHandlers.OnSocial_Merge(player_id, pet_id)
     PushOntoAppropriateQueue{
         type = "Merge",
         player = player,
-        message = string.format("%s merged [%s] *%s*", player.name, upgrade, fancy_name)
+        message = string.format(S.T.SOCIAL_MERGE, player.name, upgrade, fancy_name)
     }
 end
 
@@ -235,7 +235,7 @@ function SocialHandlers.OnSocial_Rebirth(player_id, rebirth)
     PushOntoAppropriateQueue{
         type = "Rebirth",
         player = player,
-        message = string.format("%s, happy %s rebirthday!", player.name, suffixedRebirth)
+        message = string.format(S.T.SOCIAL_REBIRTH, player.name, suffixedRebirth)
     }
 end
 
@@ -244,7 +244,7 @@ function SocialHandlers.OnSocial_Connect_Local(player)
     PushOntoAppropriateQueue{
         type = "Connect",
         player = player,
-        message = string.format("%s joined the game", player.name)
+        message = string.format(S.T.SOCIAL_CONNECT, player.name)
     }
 end
 
@@ -253,7 +253,7 @@ function SocialHandlers.OnSocial_Disconnect_Local(player)
     PushOntoAppropriateQueue{
         type = "Disconnect",
         player = {name=player.name},
-        message = string.format("%s left the game", player.name)
+        message = string.format(S.T.SOCIAL_DISCONNECT, player.name)
     }
 end
 
