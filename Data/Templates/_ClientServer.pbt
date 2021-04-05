@@ -394,6 +394,7 @@ Assets {
         ParentId: 2415398450263118494
         ChildIds: 9711971517685216634
         ChildIds: 9901380904301292291
+        ChildIds: 2002701602055693602
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -502,6 +503,54 @@ Assets {
               Mass: 100
               LinearDamping: 0.01
             }
+          }
+        }
+      }
+      Objects {
+        Id: 2002701602055693602
+        Name: "YOUR_POSSE"
+        Transform {
+          Location {
+            X: -90
+            Y: 375
+          }
+          Rotation {
+            Pitch: 90
+            Roll: 180
+          }
+          Scale {
+            X: 3
+            Y: 3
+            Z: 3
+          }
+        }
+        ParentId: 11557133986988323875
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Text {
+          Text: "YOUR POSSE"
+          FontAsset {
+            Id: 11701932446705159886
+          }
+          Color {
+            G: 0.841059208
+            B: 1
+            A: 1
+          }
+          HorizontalSize: 1
+          VerticalSize: 1
+          HorizontalAlignment {
+            Value: "mc:ecoretexthorizontalalign:center"
+          }
+          VerticalAlignment {
+            Value: "mc:ecoretextverticalalign:center"
           }
         }
       }
@@ -798,9 +847,8 @@ Assets {
               Id: 7068040180697003069
             }
             Color {
-              R: 0.0125
-              G: 0.0440397114
-              B: 0.05
+              G: 0.0771429166
+              B: 0.162000179
               A: 1
             }
             TeamSettings {
@@ -8416,6 +8464,15 @@ Assets {
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
         AssetId: "sm_cube_002"
+      }
+    }
+    Assets {
+      Id: 11701932446705159886
+      Name: "Baloo 2 Extra Bold"
+      PlatformAssetType: 28
+      PrimaryAsset {
+        AssetType: "FontAssetRef"
+        AssetId: "Baloo2ExtraBold_ref"
       }
     }
     Assets {
