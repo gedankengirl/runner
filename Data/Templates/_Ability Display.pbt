@@ -393,7 +393,6 @@ Assets {
             }
           }
           Text {
-            Label: "Hotkey"
             Color {
               R: 0.783538043
               G: 0.520995617
@@ -459,12 +458,8 @@ Assets {
             }
           }
           Text {
-            Label: "Ability"
             Color {
-              R: 1
-              G: 1
-              B: 1
-              A: 1
+              A: 0.509
             }
             Size: 20
             Justification {
@@ -915,7 +910,6 @@ Assets {
             }
           }
           Text {
-            Label: "5"
             Color {
               R: 0.914000034
               G: 0.607743323

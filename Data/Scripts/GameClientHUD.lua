@@ -96,7 +96,7 @@ local function _show_message(message)
     anim_in:Chain(anim_out):Run()
 end
 
-local HUD_UI = script:GetCustomProperty("HUD"):WaitForObject()
+local HUD_PANEL = script:GetCustomProperty("HUD"):WaitForObject()
 local LOCAL_VIEW_POOL = script:GetCustomProperty("LocalViewPool"):WaitForObject()
 local LOCAL_VIEW_BONUS_TEMPLATE = script:GetCustomProperty("LocalViewBonus")
 local LOCAL_VIEW_TEXT_TEMPLATE = script:GetCustomProperty("UI_BonusText32")
@@ -118,7 +118,7 @@ local Bubble do
     Bubble.pool = {}
     Bubble.borrowed = {}
     local _bubble_params = {parent=LOCAL_VIEW_POOL}
-    local _label_rapams = {parent=HUD_UI}
+    local _label_rapams = {parent=HUD_PANEL}
 
     function Bubble._New()
         local self = setmetatable({pos=Vector2.ZERO}, Bubble)
@@ -218,6 +218,7 @@ function HUD:Start()
     for _, key in ipairs({B.COIN_KEY, B.GEM_KEY, B.REBIRTH_KEY, B.PET_BONUS_KEY}) do
         local res = B.GetResource(LOCAL_PLAYER, key)
         HUD._OnResourceChanged(LOCAL_PLAYER, key, res)
+        HUD_PANEL.visibility = Visibility.INHERIT
     end
     -- update
     _maid.update = Task.Spawn(HUD._Update)
