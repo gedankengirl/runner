@@ -265,5 +265,13 @@ for _op, protocol in pairs(P.SOCIAL.protocols) do
     end
 end
 
-_maid:GiveTask(Game.playerJoinedEvent:Connect(SocialHandlers.OnSocial_Connect_Local))
-_maid:GiveTask(Game.playerLeftEvent:Connect(SocialHandlers.OnSocial_Disconnect_Local))
+-- defers subscription `playerJoinedEvent` to X seconds, on connect local player got this
+-- event from all conncted player
+local LOCAL_EVENTS_DEFER_TIME = 2
+_maid:GiveTask(Task.Spawn(
+    function()
+        _maid:GiveTask(Game.playerJoinedEvent:Connect(SocialHandlers.OnSocial_Connect_Local))
+        _maid:GiveTask(Game.playerLeftEvent:Connect(SocialHandlers.OnSocial_Disconnect_Local))
+    end,
+    LOCAL_EVENTS_DEFER_TIME
+))
