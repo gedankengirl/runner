@@ -1,5 +1,5 @@
-GameId: "3FDEF2C6451F81E2832C8D9AB810A055"
-DisplayName: "Runner"
+GameId: "6C26CB4D4A8AE4D56B902E9C3DC847BC"
+DisplayName: "SPEED_MANIA_PROD"
 GameSerializationVersion: 78
 Framework: "Empty Project"
 StorageVersion: 1
