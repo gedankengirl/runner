@@ -307,7 +307,8 @@ local AreaLvlReq = {
     Graveyard = 6,  -- 11K
     Tropical  = 12, -- 200K
     Disco     = 15, -- 843K
-    Forest    = 20, -- 9.35M
+    Forest    = 20, -- 9.4M
+    Zen       = 30  -- 1,2B
 }
 
 local AreaColor = {
@@ -316,7 +317,8 @@ local AreaColor = {
     Graveyard = Color.New(.062,0,.15),
     Tropical = Color.New(.106,.745,1),
     Disco = Color.New(.76,0,.12),
-    Forest = Color.New(.96,0,.66)
+    Forest = Color.New(.96,0,.66),
+    Zen = Color.WHITE
 }
 
 -- Invenrory shapes

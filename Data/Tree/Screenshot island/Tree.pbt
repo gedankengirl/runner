@@ -1,6 +1,92 @@
 Name: "Screenshot island"
 RootId: 12108043329569368714
 Objects {
+  Id: 13739743340077807694
+  Name: "Teleporter Home"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 12108043329569368714
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 5286474185563256762
+      value {
+        Overrides {
+          Name: "Name"
+          String: "Teleporter Home"
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 2.3926425
+            Y: 2.3926425
+            Z: 2.3926425
+          }
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: 799.539063
+            Y: 2661.40405
+            Z: 379.897125
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Yaw: 90
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 829631626122322619
+    }
+  }
+}
+Objects {
+  Id: 9411223911182424120
+  Name: "Teleporter Landing"
+  Transform {
+    Location {
+      Y: -1647.22253
+      Z: 392.188171
+    }
+    Rotation {
+      Yaw: 89.9999924
+    }
+    Scale {
+      X: 2.3926425
+      Y: 2.3926425
+      Z: 2.3926425
+    }
+  }
+  ParentId: 12108043329569368714
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:forceoff"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "Teleporter Landing"
+  }
+}
+Objects {
   Id: 11423145634959447863
   Name: "Trees"
   Transform {

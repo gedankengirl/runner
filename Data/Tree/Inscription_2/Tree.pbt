@@ -123,7 +123,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Text {
-    Text: " 2 TOGETHER, THEN DRAG"
+    Text: " 2 TOGETHER, THEN DRAG "
     FontAsset {
     }
     Color {
@@ -215,7 +215,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Text {
-    Text: "1 HIGHER-LEVEL PET."
+    Text: "AND MERGE THEM."
     FontAsset {
     }
     Color {
@@ -261,7 +261,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Text {
-    Text: "MERGE THEM INTO"
+    Text: "GO TO THE INVENTORY"
     FontAsset {
     }
     Color {

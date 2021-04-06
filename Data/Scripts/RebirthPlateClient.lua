@@ -1,4 +1,6 @@
 local TRIGGER = script:GetCustomProperty("RebirthPlate"):WaitForObject()
+local TRUIMPH_SOUND = script:GetCustomProperty("TriumphSound"):WaitForObject()
+local TRIUMPH_VFX = script:GetCustomProperty("TriumphVFX"):WaitForObject()
 
 local Maid = _G.req("_Maid")
 local REvents = _G.req("ReliableEvents")
@@ -22,6 +24,9 @@ local AskForRebirth do
                     text = S.T.REBIRTH_CONFIRM,
                     yes = function()
                         REvents.BroadcastToServer(P.C2S.AskForRebirth)
+                        TRUIMPH_SOUND:Play()
+                        TRIUMPH_VFX:SetWorldPosition(LOCAL_PLAYER:GetWorldPosition())
+                        TRIUMPH_VFX:Play()
                     end,
                 })
             end

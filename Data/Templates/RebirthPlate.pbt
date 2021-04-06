@@ -15,7 +15,7 @@ Assets {
             Z: 8
           }
         }
-        ParentId: 10966550013016146936
+        ParentId: 9772076435338117303
         ChildIds: 6798591778138675252
         ChildIds: 15287037078876339536
         Collidable_v2 {
@@ -53,6 +53,8 @@ Assets {
         }
         ParentId: 4222691229199675037
         ChildIds: 3226646465969827850
+        ChildIds: 787209473458151086
+        ChildIds: 8738090342876564243
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
         }
@@ -87,6 +89,18 @@ Assets {
               SubObjectId: 4222691229199675037
             }
           }
+          Overrides {
+            Name: "cs:TriumphSound"
+            ObjectReference {
+              SubObjectId: 787209473458151086
+            }
+          }
+          Overrides {
+            Name: "cs:TriumphVFX"
+            ObjectReference {
+              SubObjectId: 8738090342876564243
+            }
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -101,6 +115,104 @@ Assets {
           ScriptAsset {
             Id: 2436388842830682587
           }
+        }
+      }
+      Objects {
+        Id: 787209473458151086
+        Name: "Crowd Kids Cheering 01 SFX"
+        Transform {
+          Location {
+            X: -938.011169
+            Y: -14.8886108
+            Z: 0.451400757
+          }
+          Rotation {
+            Yaw: -89.9999466
+          }
+          Scale {
+            X: 0.125
+            Y: 0.125
+            Z: 0.125
+          }
+        }
+        ParentId: 6798591778138675252
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        AudioInstance {
+          AudioAsset {
+            Id: 8877447776568325292
+          }
+          Volume: 1
+          Falloff: -1
+          Radius: -1
+        }
+      }
+      Objects {
+        Id: 8738090342876564243
+        Name: "Confetti Radial Burst Volume VFX"
+        Transform {
+          Location {
+            X: -309.716339
+            Y: 0.0137939453
+            Z: 0.451396942
+          }
+          Rotation {
+            Yaw: -89.9999924
+          }
+          Scale {
+            X: 0.125
+            Y: 0.125
+            Z: 0.125
+          }
+        }
+        ParentId: 6798591778138675252
+        UnregisteredParameters {
+          Overrides {
+            Name: "bp:Density"
+            Float: 10
+          }
+          Overrides {
+            Name: "bp:Volume Type"
+            Enum {
+              Value: "mc:evfxvolumetype:2"
+            }
+          }
+          Overrides {
+            Name: "bp:Particle Scale Multiplier"
+            Float: 2
+          }
+          Overrides {
+            Name: "bp:Gravity"
+            Float: -4
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Blueprint {
+          BlueprintAsset {
+            Id: 13188921422266207782
+          }
+          TeamSettings {
+          }
+          Vfx {
+          }
+        }
+        Relevance {
+          Value: "mc:eproxyrelevance:medium"
         }
       }
       Objects {
@@ -251,6 +363,24 @@ Assets {
             }
           }
         }
+      }
+    }
+    Assets {
+      Id: 8877447776568325292
+      Name: "Crowd Kids Cheering 01 SFX"
+      PlatformAssetType: 7
+      PrimaryAsset {
+        AssetType: "AudioAssetRef"
+        AssetId: "sfx_crowd_kids_cheering_01_Cue_ref"
+      }
+    }
+    Assets {
+      Id: 13188921422266207782
+      Name: "Confetti Radial Burst Volume VFX"
+      PlatformAssetType: 8
+      PrimaryAsset {
+        AssetType: "VfxBlueprintAssetRef"
+        AssetId: "fxbp_confetti_burst_radial_volume"
       }
     }
     Assets {

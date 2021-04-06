@@ -6,7 +6,7 @@ Objects {
   Transform {
     Location {
       X: -4548.52539
-      Y: 1056.64453
+      Y: -154.632813
       Z: 47.2791748
     }
     Rotation {
@@ -29,7 +29,38 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Teleporter Landing"
+    FilePartitionName: "Teleporter Landing_6"
+  }
+}
+Objects {
+  Id: 4510064443107034086
+  Name: "To Zen Zone"
+  Transform {
+    Location {
+      X: -43.7207031
+      Y: 2050
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 10966550013016146936
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "To Zen Zone"
   }
 }
 Objects {
@@ -38,7 +69,7 @@ Objects {
   Transform {
     Location {
       X: -43.7207031
-      Y: 2677.06055
+      Y: 1500
     }
     Rotation {
     }
@@ -69,7 +100,7 @@ Objects {
   Transform {
     Location {
       X: -43.7207031
-      Y: 2123.16016
+      Y: 950
     }
     Rotation {
     }
@@ -100,7 +131,7 @@ Objects {
   Transform {
     Location {
       X: -43.7207031
-      Y: 1585.04492
+      Y: 400
     }
     Rotation {
     }
@@ -131,7 +162,7 @@ Objects {
   Transform {
     Location {
       X: -43.7207031
-      Y: 1054.21094
+      Y: -150
     }
     Rotation {
     }
@@ -162,7 +193,7 @@ Objects {
   Transform {
     Location {
       X: -43.7207031
-      Y: 505.595703
+      Y: -700
     }
     Rotation {
     }

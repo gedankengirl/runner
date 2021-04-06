@@ -1,7 +1,7 @@
 Name: "Teleporter Landing"
-RootId: 8242733357257470304
+RootId: 9411223911182424120
 Objects {
-  Id: 15964490269742097993
+  Id: 2038908448263147220
   Name: "Pipe (thin)"
   Transform {
     Location {
@@ -14,7 +14,7 @@ Objects {
       Z: 0.1
     }
   }
-  ParentId: 8242733357257470304
+  ParentId: 9411223911182424120
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -57,7 +57,7 @@ Objects {
   }
 }
 Objects {
-  Id: 16778533508368500714
+  Id: 16951028171356706621
   Name: "Cylinder - Rounded Bottom-Aligned"
   Transform {
     Location {
@@ -70,7 +70,7 @@ Objects {
       Z: 0.05
     }
   }
-  ParentId: 8242733357257470304
+  ParentId: 9411223911182424120
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
