@@ -843,7 +843,7 @@ function INVENTORY:HandleLeftMouseUp()
                 Actor.New(next_id, dst_cell)
                 -- update dst_cell highlight and info
                 REvents.Broadcast(P.INTERACTION.TileUnderCursorChanged, _maid.grid, dst_cell, nil, true)
-                REvents.Broadcast(P.INTERACTION.ActorUnderCursorChanged, dst_cell, self.attachedActor, true)
+                REvents.Broadcast(P.INTERACTION.ActorUnderCursorChanged, dst_cell, nil, true)
             end
         else
             self.attachedActor:AnimateFlyHome()
