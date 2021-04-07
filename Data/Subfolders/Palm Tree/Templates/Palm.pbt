@@ -568,6 +568,6 @@ Assets {
   Marketplace {
     Description: "A simple palm tree with coconuts"
   }
-  SerializationVersion: 78
+  SerializationVersion: 81
   DirectlyPublished: true
 }

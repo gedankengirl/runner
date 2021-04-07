@@ -43,5 +43,5 @@ Assets {
     Version: "1.0.0"
     Description: "Some translucent night time vegetation. \r\n(Made for PIRATES! but if you folks want to use it as well, here it is!)"
   }
-  SerializationVersion: 78
+  SerializationVersion: 81
 }

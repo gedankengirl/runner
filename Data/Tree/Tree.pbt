@@ -15,6 +15,7 @@ Objects {
     }
   }
   ChildIds: 13998269120099198432
+  ChildIds: 12422496746953989648
   ChildIds: 4963320541580283836
   ChildIds: 12007125140119696648
   ChildIds: 4906105228638113618
@@ -32,7 +33,7 @@ Objects {
     Value: "mc:evisibilitysetting:forceon"
   }
   CameraCollidable {
-    Value: "mc:ecollisionsetting:forceon"
+    Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Folder {
   }
@@ -338,6 +339,38 @@ Objects {
   }
 }
 Objects {
+  Id: 12422496746953989648
+  Name: "@SpeedManiaModules"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 16798922026780033713
+      value {
+        Overrides {
+          Name: "Name"
+          String: "@SpeedManiaModules"
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 17049989077593525048
+    }
+  }
+}
+Objects {
   Id: 13998269120099198432
   Name: "@CoreModules"
   Transform {
@@ -353,6 +386,9 @@ Objects {
   }
   Visible_v2 {
     Value: "mc:evisibilitysetting:forceoff"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceoff"
   }
   TemplateInstance {
     ParameterOverrideMap {

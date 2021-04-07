@@ -2,7 +2,7 @@ Assets {
   Id: 12629050514412668187
   Name: "Ghost Plasmafield Doublesided_golden"
   PlatformAssetType: 13
-  SerializationVersion: 78
+  SerializationVersion: 81
   CustomMaterialAsset {
     BaseMaterialId: 4768395625657117776
     ParameterOverrides {
