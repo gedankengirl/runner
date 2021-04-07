@@ -1,5 +1,5 @@
 local Maid = _G.req("_Maid")
-local REvents = _G.req("ReliableEvents")
+local REvents = _G.req("_ReliableEvents")
 local Deque = _G.req("_Deque")
 local P = _G.req("Protocols")
 -- TODO: windows animation with springs

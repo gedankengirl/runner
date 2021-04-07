@@ -1,5 +1,5 @@
-local floatRandom =_G.req("Snippets").uniform
-local Maid = _G.req("Maid")
+local floatRandom =_G.req("_Snippets").uniform
+local Maid = _G.req("_Maid")
 local _maid = Maid.New(script)
 local waitMin = 20
 local waitMax = 60
