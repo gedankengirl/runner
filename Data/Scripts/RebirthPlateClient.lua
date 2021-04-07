@@ -3,7 +3,7 @@ local TRUIMPH_SOUND = script:GetCustomProperty("TriumphSound"):WaitForObject()
 local TRIUMPH_VFX = script:GetCustomProperty("TriumphVFX"):WaitForObject()
 
 local Maid = _G.req("_Maid")
-local REvents = _G.req("ReliableEvents")
+local REvents = _G.req("_ReliableEvents")
 local P = _G.req("Protocols")
 local B = _G.req("BusinessLogic")
 local S = _G.req("StaticData")

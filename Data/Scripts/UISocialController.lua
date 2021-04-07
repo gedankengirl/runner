@@ -67,7 +67,6 @@ local function SpawnLine()
     line.controlsToFade = line.root:FindDescendantsByType("UIControl")
     for i, control in ipairs(line.controlsToFade) do
         control.clientUserData.baseAlpha = control:GetColor().a
-        print(i, control.name, control.clientUserData.baseAlpha)
     end
     return line
 end
