@@ -20,24 +20,6 @@ Assets {
         ChildIds: 2709063500133343796
         UnregisteredParameters {
           Overrides {
-            Name: "cs:BusinessLogic"
-            AssetReference {
-              Id: 18342435553950571227
-            }
-          }
-          Overrides {
-            Name: "cs:Protocols"
-            AssetReference {
-              Id: 5305102967692430199
-            }
-          }
-          Overrides {
-            Name: "cs:StaticData"
-            AssetReference {
-              Id: 14856984160948620178
-            }
-          }
-          Overrides {
             Name: "cs:_Base64"
             AssetReference {
               Id: 9544232931398361545
@@ -121,12 +103,6 @@ Assets {
               Id: 9765507830262698727
             }
           }
-          Overrides {
-            Name: "cs:StartingTutorial"
-            AssetReference {
-              Id: 6088909678354106851
-            }
-          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
@@ -135,7 +111,7 @@ Assets {
           Value: "mc:evisibilitysetting:forceoff"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
+          Value: "mc:ecollisionsetting:forceoff"
         }
         Folder {
           IsFilePartition: true
@@ -236,5 +212,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 78
+  SerializationVersion: 81
 }
