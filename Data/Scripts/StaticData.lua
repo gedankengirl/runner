@@ -20,7 +20,12 @@ StaticData.TEXT = {
     SOCIAL_HATCH = "%s hatched [%s] *%s*",
     HUD_REBIRTH_TIME = "It's rebirth time!",
     HUD_TILL_REBIRTH = "%s till next rebirth",
-
+    -- onboarding
+    TUT_FIRST_POPUP  = "%%Lorem ipsum Hello There!",
+    TUT_CLICK_CLICK_CLICK = "%%Lorem ipsum Click, Click! Earn [SPEED]!",
+    TUT_FIRST_PET = "%%Lorem ipsum Buy You a first Pet for 100 [SPPED].",
+    TOT_FIRST_REBIRTH_POPUP = "Lorem ipsum",
+    TUT_FIRST_MERGE_POPUP = "Lorem ipsum Now, You can merge 3 *%s* to [%s] *%s*"
 }
 
 StaticData.T = StaticData.TEXT
