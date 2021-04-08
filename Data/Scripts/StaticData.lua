@@ -135,11 +135,11 @@ local PetDb, EggDb do
         [29] = {"Ghost",    RARITY.EPIC, UPGRADE.EMERALD,         50, "0C0160C5404C95B7:$Ghost_3_ClientContext"},
         [30] = {"Ghost",    RARITY.EPIC, UPGRADE.RUBY,            75, "0C0160C5404C95B7:$Ghost_3_ClientContext"},
 
-        [31] = {"Witch",    RARITY.LEGENDARY, UPGRADE.NO_UPGRADE, 18, "A1B2E8E17077708A:$Witch_1_ClientContext"},
-        [32] = {"Witch",    RARITY.LEGENDARY, UPGRADE.GOLDEN,     27, "2F2C5E5DC7F6C4B8:$Witch_2_ClientContext"},
-        [33] = {"Witch",    RARITY.LEGENDARY, UPGRADE.DIAMOND,    40, "3E796B0666945BE2:$Witch_3_ClientContext"},
-        [34] = {"Witch",    RARITY.LEGENDARY, UPGRADE.EMERALD,    60, "3E796B0666945BE2:$Witch_3_ClientContext"},
-        [35] = {"Witch",    RARITY.LEGENDARY, UPGRADE.RUBY,       90, "3E796B0666945BE2:$Witch_3_ClientContext"},
+        [31] = {"Witch",    RARITY.RARE, UPGRADE.NO_UPGRADE,      12, "A1B2E8E17077708A:$Witch_1_ClientContext"},
+        [32] = {"Witch",    RARITY.RARE, UPGRADE.GOLDEN,          18, "2F2C5E5DC7F6C4B8:$Witch_2_ClientContext"},
+        [33] = {"Witch",    RARITY.RARE, UPGRADE.DIAMOND,         28, "3E796B0666945BE2:$Witch_3_ClientContext"},
+        [34] = {"Witch",    RARITY.RARE, UPGRADE.EMERALD,         41, "3E796B0666945BE2:$Witch_3_ClientContext"},
+        [35] = {"Witch",    RARITY.RARE, UPGRADE.RUBY,            62, "3E796B0666945BE2:$Witch_3_ClientContext"},
 
         -- 3
         [36] = {"Flamingo", RARITY.UNCOMMON, UPGRADE.NO_UPGRADE,  15, "C144AB8425326692:$Flamingo_1_ClientContext"},
@@ -204,10 +204,10 @@ local PetDb, EggDb do
     EggDb = {
         Hub = {price = 100, gacha = {Chick=100}, muid="35C8AE01462F650D:EggGroup_Hub"},
         Garden =  {price = 3000, gacha = {Bee=45, Gnome=35, Birdie=20}, muid = "6BF1AD3640E72529:EggGroup_Garden"},
-        Graveyard =  {price = 10000, gacha = {Bat=60, Ghost=35, Witch=5}, muid = "F957A07755CF5ACE:EggGroup_Graveyard"},
-        Tropical = {price = 45000, gacha = {Flamingo=55, Crab=40, Mermaid=5}, muid = "186F54701898DFCB:EggGroup_Tropical"},
+        Graveyard =  {price = 10000, gacha = {Bat=50, Witch=35, Ghost=15}, muid = "F957A07755CF5ACE:EggGroup_Graveyard"},
+        Tropical = {price = 45000, gacha = {Flamingo=50, Crab=40, Mermaid=10}, muid = "186F54701898DFCB:EggGroup_Tropical"},
         Disco = {price = 175000, gacha = {Monkey=50, Bull=35, Cat=15}, muid = "6E94B64378BE0BD7:EggGroup_Disco"},
-        Forest = {price = 750000, gacha = {Mushroom=65, Bunny=30, Fairy=5},  muid = "92C4C8B37C758BAC:EggGroup_Forest"},
+        Forest = {price = 750000, gacha = {Mushroom=60, Bunny=30, Fairy=10},  muid = "92C4C8B37C758BAC:EggGroup_Forest"},
     }
     ---------------------------
     -- Pets
