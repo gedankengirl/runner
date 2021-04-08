@@ -74,12 +74,6 @@ Assets {
             }
           }
           Overrides {
-            Name: "cs:_Spr"
-            AssetReference {
-              Id: 7602836839952416252
-            }
-          }
-          Overrides {
             Name: "cs:_SpringAnimator"
             AssetReference {
               Id: 15795618890956269941

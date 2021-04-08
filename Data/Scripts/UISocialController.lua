@@ -270,7 +270,8 @@ local LOCAL_EVENTS_DEFER_TIME = 2
 _maid:GiveTask(Task.Spawn(
     function()
         _maid:GiveTask(Game.playerJoinedEvent:Connect(SocialHandlers.OnSocial_Connect_Local))
-        _maid:GiveTask(Game.playerLeftEvent:Connect(SocialHandlers.OnSocial_Disconnect_Local))
+        -- NOTE: it's very sad, removed
+        -- _maid:GiveTask(Game.playerLeftEvent:Connect(SocialHandlers.OnSocial_Disconnect_Local))
     end,
     LOCAL_EVENTS_DEFER_TIME
 ))
