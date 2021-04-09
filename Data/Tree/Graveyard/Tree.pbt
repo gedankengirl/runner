@@ -1,6 +1,39 @@
 Name: "Graveyard"
 RootId: 4293257082225003563
 Objects {
+  Id: 8850545790790036901
+  Name: "InstructionBoard"
+  Transform {
+    Location {
+      X: 6568.56152
+      Y: -2524.27856
+      Z: 768.815674
+    }
+    Rotation {
+      Yaw: 155.62558
+    }
+    Scale {
+      X: 0.948308408
+      Y: 0.948308408
+      Z: 0.948308408
+    }
+  }
+  ParentId: 4293257082225003563
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "InstructionBoard"
+  }
+}
+Objects {
   Id: 10949224342247101963
   Name: "BoosterStaticContext"
   Transform {

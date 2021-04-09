@@ -6,7 +6,7 @@ Objects {
   Transform {
     Location {
       X: 6444.63379
-      Y: -1135.81445
+      Y: -1376.79688
       Z: 68.8156891
     }
     Rotation {
@@ -30,7 +30,7 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "InstructionBoard"
+    FilePartitionName: "InstructionBoard_1"
   }
 }
 Objects {
