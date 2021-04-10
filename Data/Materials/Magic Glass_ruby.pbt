@@ -1,6 +1,6 @@
 Assets {
-  Id: 3800583788902278311
-  Name: "Emerald Magic Glass"
+  Id: 4059260838507970771
+  Name: "Magic Glass_ruby"
   PlatformAssetType: 13
   SerializationVersion: 81
   CustomMaterialAsset {
@@ -9,8 +9,8 @@ Assets {
       Overrides {
         Name: "color b"
         Color {
-          G: 0.626041591
-          B: 0.198743656
+          R: 0.992708385
+          B: 0.0945447162
           A: 1
         }
       }
@@ -25,16 +25,16 @@ Assets {
       Overrides {
         Name: "color"
         Color {
-          G: 5
-          B: 1.58730388
+          R: 5
+          B: 0.476195812
           A: 1
         }
       }
       Overrides {
         Name: "glass color"
         Color {
-          G: 0.263541698
-          B: 0.083664149
+          R: 0.751041591
+          B: 0.0715285689
           A: 1
         }
       }

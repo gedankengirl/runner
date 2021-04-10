@@ -1,6 +1,6 @@
 Assets {
   Id: 13674206740428179952
-  Name: "Diamond Magic Glass"
+  Name: "Magic Glass_diamond"
   PlatformAssetType: 13
   SerializationVersion: 81
   CustomMaterialAsset {

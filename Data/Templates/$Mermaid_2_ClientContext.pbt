@@ -1529,9 +1529,8 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 1
-              G: 0.823841274
-              B: 0.642
+              R: 0.434000134
+              G: 0.310000062
               A: 1
             }
           }

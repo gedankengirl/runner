@@ -29,6 +29,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Text {
+    Text: "THAT ARE EVEN BETTER."
     FontAsset {
     }
     Color {
@@ -75,7 +76,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Text {
-    Text: "BEST FRIENDS."
+    Text: "BUT THERE ARE A FEW "
     FontAsset {
     }
     Color {
@@ -122,7 +123,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Text {
-    Text: "ARE A SPEEDSTER\'S"
+    Text: "A SPEEDSTER\'S BEST FRIEND,"
     FontAsset {
     }
     Color {
@@ -168,7 +169,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Text {
-    Text: "AFTER ALL, EMERALDS "
+    Text: "DIAMONDS MAY BE"
     FontAsset {
     }
     Color {
