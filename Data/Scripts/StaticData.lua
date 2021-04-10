@@ -132,8 +132,8 @@ local PetDb, EggDb do
         [26] = {"Ghost",    RARITY.EPIC, UPGRADE.NO_UPGRADE,      15, "CF55C15AEFAE9044:$Ghost_1_ClientContext"},
         [27] = {"Ghost",    RARITY.EPIC, UPGRADE.GOLDEN,          22, "BA0A766F76B7E34A:$Ghost_2_ClientContext"},
         [28] = {"Ghost",    RARITY.EPIC, UPGRADE.DIAMOND,         33, "0C0160C5404C95B7:$Ghost_3_ClientContext"},
-        [29] = {"Ghost",    RARITY.EPIC, UPGRADE.EMERALD,         50, "D118EE714CAB0EF7:$Ghost_4_ClientContext"},
-        [30] = {"Ghost",    RARITY.EPIC, UPGRADE.RUBY,            75, "D118EE714CAB0EF7:$Ghost_4_ClientContext"},
+        [29] = {"Ghost",    RARITY.EPIC, UPGRADE.EMERALD,         50, "0C0160C5404C95B7:$Ghost_3_ClientContext"},
+        [30] = {"Ghost",    RARITY.EPIC, UPGRADE.RUBY,            75, "0C0160C5404C95B7:$Ghost_3_ClientContext"},
 
         [31] = {"Witch",    RARITY.RARE, UPGRADE.NO_UPGRADE,      12, "A1B2E8E17077708A:$Witch_1_ClientContext"},
         [32] = {"Witch",    RARITY.RARE, UPGRADE.GOLDEN,          18, "2F2C5E5DC7F6C4B8:$Witch_2_ClientContext"},
@@ -159,8 +159,8 @@ local PetDb, EggDb do
         [46] = {"Mermaid",  RARITY.LEGENDARY, UPGRADE.NO_UPGRADE, 25,  "2DBDC09751CE4485:$Mermaid_1_ClientContext"},
         [47] = {"Mermaid",  RARITY.LEGENDARY, UPGRADE.GOLDEN,     38,  "1796205E3ECA0CA6:$Mermaid_2_ClientContext"},
         [48] = {"Mermaid",  RARITY.LEGENDARY, UPGRADE.DIAMOND,    57,  "6C8621CFD91213A9:$Mermaid_3_ClientContext"},
-        [49] = {"Mermaid",  RARITY.LEGENDARY, UPGRADE.EMERALD,    85,  "3FD651EA6A6BFFEB:$Mermaid_4_ClientContext"},
-        [50] = {"Mermaid",  RARITY.LEGENDARY, UPGRADE.RUBY,       127, "3FD651EA6A6BFFEB:$Mermaid_4_ClientContext"},
+        [49] = {"Mermaid",  RARITY.LEGENDARY, UPGRADE.EMERALD,    85,  "6C8621CFD91213A9:$Mermaid_3_ClientContext"},
+        [50] = {"Mermaid",  RARITY.LEGENDARY, UPGRADE.RUBY,       127, "6C8621CFD91213A9:$Mermaid_3_ClientContext"},
 
         -- 4
         [51] = {"Monkey",   RARITY.UNCOMMON, UPGRADE.NO_UPGRADE,  21,  "DA2AF5973CC4AAC7:$Monkey_1_ClientContext"},
@@ -178,8 +178,8 @@ local PetDb, EggDb do
         [61] = {"Cat",      RARITY.EPIC, UPGRADE.NO_UPGRADE,      30,  "0C4EB2DA3414B14F:$Cat_1_ClientContext"},
         [62] = {"Cat",      RARITY.EPIC, UPGRADE.GOLDEN,          45,  "DFE30E8B8B8E3A13:$Cat_2_ClientContext"},
         [63] = {"Cat",      RARITY.EPIC, UPGRADE.DIAMOND,         67,  "CB0B715CE9DAAB6B:$Cat_3_ClientContext"},
-        [64] = {"Cat",      RARITY.EPIC, UPGRADE.EMERALD,         100, "B17D6FBB1A8BD81D:$Cat_4_ClientContext"},
-        [65] = {"Cat",      RARITY.EPIC, UPGRADE.RUBY,            151, "B17D6FBB1A8BD81D:$Cat_4_ClientContext"},
+        [64] = {"Cat",      RARITY.EPIC, UPGRADE.EMERALD,         100, "CB0B715CE9DAAB6B:$Cat_3_ClientContext"},
+        [65] = {"Cat",      RARITY.EPIC, UPGRADE.RUBY,            151, "CB0B715CE9DAAB6B:$Cat_3_ClientContext"},
 
         -- 5
         [66] = {"Mushroom", RARITY.RARE, UPGRADE.NO_UPGRADE,      35,  "2E8C4BA2B95B6991:$MushroomClientContext_1"},
@@ -191,14 +191,14 @@ local PetDb, EggDb do
         [71] = {"Bunny",    RARITY.EPIC, UPGRADE.NO_UPGRADE,      42,  "5898683E0D7F13F3:$BunnyClientContext_1"},
         [72] = {"Bunny",    RARITY.EPIC, UPGRADE.GOLDEN,          63,  "7FB6E2346C48F56F:$BunnyClientContext_2"},
         [73] = {"Bunny",    RARITY.EPIC, UPGRADE.DIAMOND,         95,  "3BAE097EAFBDE1C1:$BunnyClientContext_3"},
-        [74] = {"Bunny",    RARITY.EPIC, UPGRADE.EMERALD,         143, "5D593C21B1F9057E:$BunnyClientContext_4"},
-        [75] = {"Bunny",    RARITY.EPIC, UPGRADE.RUBY,            214, "5D593C21B1F9057E:$BunnyClientContext_4"},
+        [74] = {"Bunny",    RARITY.EPIC, UPGRADE.EMERALD,         143, "3BAE097EAFBDE1C1:$BunnyClientContext_3"},
+        [75] = {"Bunny",    RARITY.EPIC, UPGRADE.RUBY,            214, "3BAE097EAFBDE1C1:$BunnyClientContext_3"},
 
         [76] = {"Fairy",    RARITY.LEGENDARY, UPGRADE.NO_UPGRADE, 51,  "F2CEAFC73E2982DB:$FairyClientContext_1"},
         [77] = {"Fairy",    RARITY.LEGENDARY, UPGRADE.GOLDEN,     76,  "DC4C8B19BDB624F2:$FairyClientContext_2"},
         [78] = {"Fairy",    RARITY.LEGENDARY, UPGRADE.DIAMOND,    114, "B6EC162A0D0221EA:$FairyClientContext_3"},
-        [79] = {"Fairy",    RARITY.LEGENDARY, UPGRADE.EMERALD,    171, "19CCC5FFDCDB359F:$FairyClientContext_4"},
-        [80] = {"Fairy",    RARITY.LEGENDARY, UPGRADE.RUBY,       257, "19CCC5FFDCDB359F:$FairyClientContext_4"},
+        [79] = {"Fairy",    RARITY.LEGENDARY, UPGRADE.EMERALD,    171, "B6EC162A0D0221EA:$FairyClientContext_3"},
+        [80] = {"Fairy",    RARITY.LEGENDARY, UPGRADE.RUBY,       257, "B6EC162A0D0221EA:$FairyClientContext_3"},
     }
 
     EggDb = {
@@ -252,20 +252,9 @@ local PetDb, EggDb do
     end
 
     function PetDb:CanUpgrade(id1, id2)
-        local u1, _ = self:GetUpgradeStatus(id1)
-        local r1, _ = self:GetRarity(id1)
-        -- NOTE: new rules for v.2
-        local max_upgrade do
-            if r1 <= RARITY.RARE then
-                max_upgrade = 3
-            elseif r1 == RARITY.EPIC then
-                max_upgrade = 4
-            else
-                max_upgrade = 4 -- my partner Rinoa insists on stopping at 4 for the moment
-            end
-        end
+        local u1 = self:GetUpgradeStatus(id1)
         local rec = self[id1]
-        return u1 < max_upgrade and (not id2 or id1 == id2), rec[kNextUpgradeId] or id1 + 1
+        return u1 < UPGRADE.MAX and (not id2 or id1 == id2), rec[kNextUpgradeId] or id1+1
     end
 
     -- add id by name
