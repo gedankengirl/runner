@@ -160,7 +160,7 @@ local PetDb, EggDb do
         [47] = {"Mermaid",  RARITY.LEGENDARY, UPGRADE.GOLDEN,     38,  "1796205E3ECA0CA6:$Mermaid_2_ClientContext"},
         [48] = {"Mermaid",  RARITY.LEGENDARY, UPGRADE.DIAMOND,    57,  "6C8621CFD91213A9:$Mermaid_3_ClientContext"},
         [49] = {"Mermaid",  RARITY.LEGENDARY, UPGRADE.EMERALD,    85,  "3FD651EA6A6BFFEB:$Mermaid_4_ClientContext"},
-        [50] = {"Mermaid",  RARITY.LEGENDARY, UPGRADE.RUBY,       127, "3FD651EA6A6BFFEB:$Mermaid_4_ClientContext"},
+        [50] = {"Mermaid",  RARITY.LEGENDARY, UPGRADE.RUBY,       127, "C62D646F6753756A:$Mermaid_5_ClientContext"},
 
         -- 4
         [51] = {"Monkey",   RARITY.UNCOMMON, UPGRADE.NO_UPGRADE,  21,  "DA2AF5973CC4AAC7:$Monkey_1_ClientContext"},
@@ -198,7 +198,7 @@ local PetDb, EggDb do
         [77] = {"Fairy",    RARITY.LEGENDARY, UPGRADE.GOLDEN,     76,  "DC4C8B19BDB624F2:$FairyClientContext_2"},
         [78] = {"Fairy",    RARITY.LEGENDARY, UPGRADE.DIAMOND,    114, "B6EC162A0D0221EA:$FairyClientContext_3"},
         [79] = {"Fairy",    RARITY.LEGENDARY, UPGRADE.EMERALD,    171, "19CCC5FFDCDB359F:$FairyClientContext_4"},
-        [80] = {"Fairy",    RARITY.LEGENDARY, UPGRADE.RUBY,       257, "19CCC5FFDCDB359F:$FairyClientContext_4"},
+        [80] = {"Fairy",    RARITY.LEGENDARY, UPGRADE.RUBY,       257, "E9FBFA0318943535:$FairyClientContext_5"},
     }
 
     EggDb = {
@@ -261,7 +261,7 @@ local PetDb, EggDb do
             elseif r1 == RARITY.EPIC then
                 max_upgrade = 4
             else
-                max_upgrade = 4 -- my partner Rinoa insists on stopping at 4 for the moment
+                max_upgrade = 5
             end
         end
         local rec = self[id1]
