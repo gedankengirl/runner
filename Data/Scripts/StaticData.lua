@@ -95,6 +95,7 @@ end
 -- name, rarity, upgrade, bonus, muid, [next upgrade id]
 local PetDb, EggDb do
     local kName, kRarity, kUpgrade, kBonus, kMuid, kNextUpgradeId = 1, 2, 3, 4, 5
+    -- NOTE: newer ever change the *id* of the pet!
     PetDb = {
         -- 0
         [01]  = {"Chick",   RARITY.COMMON, UPGRADE.NO_UPGRADE,    2, "821511D1C7002F28:$Chick_1_ClientContext"},
