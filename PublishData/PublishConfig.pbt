@@ -9,6 +9,7 @@ Tags: "Casual"
 Tags: "Action"
 Tags: "Adventure"
 ScreenshotPaths: "C:\\Users\\rinoa\\Documents\\My games\\CORE\\Saved\\Maps\\SPEED_MANIA_PROD\\Screenshots\\Screenshot 2021-02-24 151547.png"
+ReleaseNotes: "- Emerald and ruby tier added for higher rariry pets\r\n- Graveyard pets rebalance\r\n- Minor fixes"
 OwnerId: "1fe0c4ed2ab2416dba17f5d29ee420a4"
 SerializationVersion: 1
 PublishedState: Public
