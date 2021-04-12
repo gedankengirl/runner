@@ -2,7 +2,7 @@ Assets {
   Id: 2254571395422755238
   Name: "Droid Face"
   PlatformAssetType: 13
-  SerializationVersion: 78
+  SerializationVersion: 81
   CustomMaterialAsset {
     BaseMaterialId: 16675340308621607143
     ParameterOverrides {

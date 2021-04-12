@@ -1,7 +1,7 @@
 Name: "Inscription_2"
-RootId: 10636944654109491548
+RootId: 2818736917016586097
 Objects {
-  Id: 17709082206825032685
+  Id: 15999254933292793025
   Name: "World Text"
   Transform {
     Location {
@@ -18,7 +18,7 @@ Objects {
       Z: 1.49629414
     }
   }
-  ParentId: 10636944654109491548
+  ParentId: 2818736917016586097
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -29,7 +29,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Text {
-    Text: " OF EITHER."
+    Text: "THAT ARE EVEN BETTER."
     FontAsset {
     }
     Color {
@@ -48,7 +48,7 @@ Objects {
   }
 }
 Objects {
-  Id: 10912950989478658309
+  Id: 1743868096229310767
   Name: "World Text"
   Transform {
     Location {
@@ -65,7 +65,7 @@ Objects {
       Z: 1.49629414
     }
   }
-  ParentId: 10636944654109491548
+  ParentId: 2818736917016586097
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -76,7 +76,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Text {
-    Text: "THE THIRD ON TOP"
+    Text: "BUT THERE ARE A FEW "
     FontAsset {
     }
     Color {
@@ -95,7 +95,7 @@ Objects {
   }
 }
 Objects {
-  Id: 12036560604721627091
+  Id: 16339038605957187405
   Name: "World Text"
   Transform {
     Location {
@@ -112,7 +112,7 @@ Objects {
       Z: 1.49629414
     }
   }
-  ParentId: 10636944654109491548
+  ParentId: 2818736917016586097
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -123,7 +123,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Text {
-    Text: " 2 TOGETHER, THEN DRAG "
+    Text: "A SPEEDSTER\'S BEST FRIEND,"
     FontAsset {
     }
     Color {
@@ -142,7 +142,7 @@ Objects {
   }
 }
 Objects {
-  Id: 6421335805123340031
+  Id: 3628143417235238404
   Name: "World Text"
   Transform {
     Location {
@@ -158,7 +158,7 @@ Objects {
       Z: 1.49629414
     }
   }
-  ParentId: 10636944654109491548
+  ParentId: 2818736917016586097
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -169,7 +169,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Text {
-    Text: "TO DO THAT, JUST GROUP"
+    Text: "DIAMONDS MAY BE"
     FontAsset {
     }
     Color {
@@ -188,7 +188,7 @@ Objects {
   }
 }
 Objects {
-  Id: 1383933061195513119
+  Id: 5018610076251472575
   Name: "World Text"
   Transform {
     Location {
@@ -204,7 +204,7 @@ Objects {
       Z: 1.49629414
     }
   }
-  ParentId: 10636944654109491548
+  ParentId: 2818736917016586097
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -215,7 +215,6 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Text {
-    Text: "AND MERGE THEM."
     FontAsset {
     }
     Color {
@@ -234,7 +233,7 @@ Objects {
   }
 }
 Objects {
-  Id: 7279279513178001552
+  Id: 14025241795264864394
   Name: "World Text"
   Transform {
     Location {
@@ -250,7 +249,7 @@ Objects {
       Z: 1.49629414
     }
   }
-  ParentId: 10636944654109491548
+  ParentId: 2818736917016586097
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -261,7 +260,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Text {
-    Text: "GO TO THE INVENTORY"
+    Text: "WELL, NOW YOU DO!"
     FontAsset {
     }
     Color {
@@ -280,7 +279,7 @@ Objects {
   }
 }
 Objects {
-  Id: 3522839025883908344
+  Id: 7662517816154403371
   Name: "World Text"
   Transform {
     Location {
@@ -296,7 +295,7 @@ Objects {
       Z: 1.49629414
     }
   }
-  ParentId: 10636944654109491548
+  ParentId: 2818736917016586097
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -307,7 +306,6 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Text {
-    Text: "3 IDENTICAL PETS, "
     FontAsset {
     }
     Color {
@@ -326,7 +324,7 @@ Objects {
   }
 }
 Objects {
-  Id: 16442012599028591416
+  Id: 18227627313524596927
   Name: "World Text"
   Transform {
     Location {
@@ -342,7 +340,7 @@ Objects {
       Z: 1.49629414
     }
   }
-  ParentId: 10636944654109491548
+  ParentId: 2818736917016586097
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -353,12 +351,12 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Text {
-    Text: "WHENEVER YOU HAVE "
+    Text: "DIAMOND LEVEL?"
     FontAsset {
     }
     Color {
-      G: 0.412222385
-      B: 0.490000129
+      G: 0.570000172
+      B: 0.0271427613
       A: 1
     }
     HorizontalSize: 1
@@ -372,7 +370,7 @@ Objects {
   }
 }
 Objects {
-  Id: 5312343872683876898
+  Id: 16644050368033911851
   Name: "World Text"
   Transform {
     Location {
@@ -388,7 +386,7 @@ Objects {
       Z: 1.49629414
     }
   }
-  ParentId: 10636944654109491548
+  ParentId: 2818736917016586097
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -399,6 +397,99 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Text {
+    Text: "DO NOT STOP AT"
+    FontAsset {
+    }
+    Color {
+      G: 0.570000172
+      B: 0.0271427613
+      A: 1
+    }
+    HorizontalSize: 1
+    VerticalSize: 1
+    HorizontalAlignment {
+      Value: "mc:ecoretexthorizontalalign:center"
+    }
+    VerticalAlignment {
+      Value: "mc:ecoretextverticalalign:center"
+    }
+  }
+}
+Objects {
+  Id: 7708114758752828113
+  Name: "World Text"
+  Transform {
+    Location {
+      X: 4.30419874
+      Y: 0.000618982769
+      Z: 100
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1.06001854
+      Y: 1.03825974
+      Z: 1.49629414
+    }
+  }
+  ParentId: 2818736917016586097
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Text {
+    Text: "EPIC AND LEGENDARY PETS"
+    FontAsset {
+    }
+    Color {
+      G: 0.570000172
+      B: 0.0271427613
+      A: 1
+    }
+    HorizontalSize: 1
+    VerticalSize: 1
+    HorizontalAlignment {
+      Value: "mc:ecoretexthorizontalalign:center"
+    }
+    VerticalAlignment {
+      Value: "mc:ecoretextverticalalign:center"
+    }
+  }
+}
+Objects {
+  Id: 4295764689876568293
+  Name: "World Text"
+  Transform {
+    Location {
+      X: 4.30419874
+      Y: 0.000618982769
+      Z: 130
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1.06001842
+      Y: 1.03825974
+      Z: 1.49629414
+    }
+  }
+  ParentId: 2818736917016586097
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Text {
+    Text: "DID YOU KNOW THAT"
     FontAsset {
     }
     Color {
@@ -417,99 +508,7 @@ Objects {
   }
 }
 Objects {
-  Id: 95228066347817666
-  Name: "World Text"
-  Transform {
-    Location {
-      X: 4.30419874
-      Y: 0.000618982769
-      Z: 100
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1.06001854
-      Y: 1.03825974
-      Z: 1.49629414
-    }
-  }
-  ParentId: 10636944654109491548
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Text {
-    Text: "PETS IN YOUR INVENTORY."
-    FontAsset {
-    }
-    Color {
-      G: 0.570000172
-      B: 0.0271427613
-      A: 1
-    }
-    HorizontalSize: 1
-    VerticalSize: 1
-    HorizontalAlignment {
-      Value: "mc:ecoretexthorizontalalign:center"
-    }
-    VerticalAlignment {
-      Value: "mc:ecoretextverticalalign:center"
-    }
-  }
-}
-Objects {
-  Id: 2033337953416072347
-  Name: "World Text"
-  Transform {
-    Location {
-      X: 4.30419874
-      Y: 0.000618982769
-      Z: 130
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1.06001842
-      Y: 1.03825974
-      Z: 1.49629414
-    }
-  }
-  ParentId: 10636944654109491548
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Text {
-    Text: "YOU CAN MANAGE YOUR"
-    FontAsset {
-    }
-    Color {
-      G: 0.570000172
-      B: 0.0271427613
-      A: 1
-    }
-    HorizontalSize: 1
-    VerticalSize: 1
-    HorizontalAlignment {
-      Value: "mc:ecoretexthorizontalalign:center"
-    }
-    VerticalAlignment {
-      Value: "mc:ecoretextverticalalign:center"
-    }
-  }
-}
-Objects {
-  Id: 10687969065488267785
+  Id: 7582426920403023216
   Name: "Cube"
   Transform {
     Location {
@@ -524,7 +523,7 @@ Objects {
       Z: 3.52245402
     }
   }
-  ParentId: 10636944654109491548
+  ParentId: 2818736917016586097
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"

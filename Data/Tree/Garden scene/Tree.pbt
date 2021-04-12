@@ -6,7 +6,7 @@ Objects {
   Transform {
     Location {
       X: 6444.63379
-      Y: -1381.77344
+      Y: -1376.79688
       Z: 68.8156891
     }
     Rotation {
@@ -30,7 +30,7 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "InstructionBoard"
+    FilePartitionName: "InstructionBoard_1"
   }
 }
 Objects {
@@ -167,7 +167,7 @@ Objects {
     Value: "mc:evisibilitysetting:forceoff"
   }
   CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
+    Value: "mc:ecollisionsetting:forceoff"
   }
   Folder {
     IsFilePartition: true
@@ -5126,7 +5126,7 @@ Objects {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
+    Value: "mc:ecollisionsetting:forceoff"
   }
   NetworkContext {
   }

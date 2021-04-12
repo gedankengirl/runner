@@ -219,5 +219,5 @@ Assets {
       AssetId: "tm_fan_candle_holder_002_lit_01"
     }
   }
-  SerializationVersion: 78
+  SerializationVersion: 81
 }

@@ -8,7 +8,7 @@ local isPitchToBeChanged = script:GetCustomProperty("ChangePItch")
 local pitchMin = math.floor(script:GetCustomProperty("PitchMin"))
 local pitchMax = math.floor(script:GetCustomProperty("PitchMax"))
 local localPlayer = Game.GetLocalPlayer()
-local pickRandomNum = _G.req("Snippets").uniform
+local pickRandomNum = _G.req("_Snippets").uniform
 local sounds = {sound1}
 
 if sound2 then table.insert(sounds, sound2) end

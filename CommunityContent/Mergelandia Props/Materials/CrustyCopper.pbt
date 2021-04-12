@@ -2,7 +2,7 @@ Assets {
   Id: 9164901362543432853
   Name: "CrustyCopper"
   PlatformAssetType: 13
-  SerializationVersion: 78
+  SerializationVersion: 81
   CustomMaterialAsset {
     BaseMaterialId: 10570260117815476250
     ParameterOverrides {

@@ -2,7 +2,7 @@ Assets {
   Id: 1461126727686206988
   Name: "RiverSteel"
   PlatformAssetType: 13
-  SerializationVersion: 78
+  SerializationVersion: 81
   CustomMaterialAsset {
     BaseMaterialId: 527763958605568440
     ParameterOverrides {

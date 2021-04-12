@@ -1,6 +1,6 @@
 local Maid = _G.req("_Maid")
 local _maid = Maid.New(script)
-local REvents = _G.req("ReliableEvents")
+local REvents = _G.req("_ReliableEvents")
 local P = _G.req("Protocols")
 local CLICK_BOOSTER_DB_ID = 0
 

@@ -2,7 +2,7 @@ local Deque = _G.req("_Deque")
 local Maid = _G.req("_Maid")
 local P = _G.req("Protocols")
 local S = _G.req("StaticData")
-local Snippets = _G.req("Snippets")
+local Snippets = _G.req("_Snippets")
 local SOCIAL_LINE_ITEM = script:GetCustomProperty("SocialLineItem")
 local MAX_LINES = script:GetCustomProperty("MaxLines")
 local ROOT = script:GetCustomProperty("Root"):WaitForObject()
@@ -270,7 +270,8 @@ local LOCAL_EVENTS_DEFER_TIME = 2
 _maid:GiveTask(Task.Spawn(
     function()
         _maid:GiveTask(Game.playerJoinedEvent:Connect(SocialHandlers.OnSocial_Connect_Local))
-        _maid:GiveTask(Game.playerLeftEvent:Connect(SocialHandlers.OnSocial_Disconnect_Local))
+        -- NOTE: it's very sad, removed
+        -- _maid:GiveTask(Game.playerLeftEvent:Connect(SocialHandlers.OnSocial_Disconnect_Local))
     end,
     LOCAL_EVENTS_DEFER_TIME
 ))

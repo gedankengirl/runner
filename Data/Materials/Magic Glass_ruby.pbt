@@ -1,16 +1,16 @@
 Assets {
-  Id: 13674206740428179952
-  Name: "Diamond Magic Glass"
+  Id: 4059260838507970771
+  Name: "Magic Glass_ruby"
   PlatformAssetType: 13
-  SerializationVersion: 78
+  SerializationVersion: 81
   CustomMaterialAsset {
     BaseMaterialId: 9903815349600818687
     ParameterOverrides {
       Overrides {
         Name: "color b"
         Color {
-          G: 0.412222385
-          B: 0.490000129
+          R: 0.992708385
+          B: 0.0945447162
           A: 1
         }
       }
@@ -21,6 +21,22 @@ Assets {
       Overrides {
         Name: "metallic"
         Float: 0.438095
+      }
+      Overrides {
+        Name: "color"
+        Color {
+          R: 5
+          B: 0.476195812
+          A: 1
+        }
+      }
+      Overrides {
+        Name: "glass color"
+        Color {
+          R: 0.751041591
+          B: 0.0715285689
+          A: 1
+        }
       }
     }
     Assets {

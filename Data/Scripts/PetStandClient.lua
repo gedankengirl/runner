@@ -1,6 +1,6 @@
 local DEBUG = true
-local Maid = _G.req("Maid")
-local REvents = _G.req("ReliableEvents")
+local Maid = _G.req("_Maid")
+local REvents = _G.req("_ReliableEvents")
 local SA = _G.req("_SpringAnimator")
 local SP = SA.SpringParams
 local S = _G.req("StaticData")
@@ -73,7 +73,18 @@ for petName, _weight in pairs(EGG_DATA.gacha) do
     local muid = S.PetDb:GetMuid(id)
     table.insert(PET_TEMPLATES, {id, muid})
 end
-sort(PET_TEMPLATES, function(a,b) return b[1] < a[1] end)
+-- FIXME: sort by rarity, not by id!
+sort(PET_TEMPLATES, function(a,b)
+    local aid = a[1]
+    local bid = b[1]
+    local ar = S.PetDb:GetRarity(aid)
+    local br = S.PetDb:GetRarity(bid)
+    if br == ar then
+        return bid < aid
+    else
+        return br < ar end
+    end
+)
 
 local DROID_SPR = SP.New(0, 0.4)
 local PIPE_SPR = SP.New(1, 4)
@@ -202,8 +213,16 @@ local OnEnterShop, OnLeaveShop, OnCanBuyEgg, OnEggHatched do
         _show_or_hide_pets(not "show")
         _hide_info_buttons()
         local pet = PETS_BY_ID[pet_id]
-        local mark = PET_MARKS[#PET_MARKS] -- last mark for hatching
-        local info = INFO_BUTTONS[1]
+        local mark = PET_MARKS[#PET_MARKS] -- last mark is for hatching
+        local hatched_order = 0
+        for i=1, #PET_TEMPLATES do
+            local pt = PET_TEMPLATES[i]
+            if pt[1] == pet_id then
+                hatched_order = i
+            end
+        end
+        assert(hatched_order > 0 and hatched_order <= #PET_TEMPLATES)
+        local info = INFO_BUTTONS[hatched_order]
         PIPE_SPR:ToAnim():Target("Scale", EGG_TR:GetScale())(EGG_GROUP):Run()
             :Chain(
                 HATCH_SPR:ToAnim():Impulse("Rotation", Rotation.New(45, 0, 0))(EGG_GROUP)

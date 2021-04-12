@@ -7,8 +7,8 @@
         Update :: state, dt -> nil
 ]]
 
-local REvents = _G.req("ReliableEvents")
-local Maid = _G.req("Maid")
+local REvents = _G.req("_ReliableEvents")
+local Maid = _G.req("_Maid")
 local StateMachine = {type="StateMachine"}
 StateMachine.__index = StateMachine
 

@@ -366,39 +366,12 @@ Assets {
       }
     }
     Assets {
-      Id: 755036478599963226
-      Name: "Car Paint 01"
-      PlatformAssetType: 2
+      Id: 8877447776568325292
+      Name: "Crowd Kids Cheering 01 SFX"
+      PlatformAssetType: 7
       PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_car-paint_001"
-      }
-    }
-    Assets {
-      Id: 1591823270752426997
-      Name: "Plane Circle - One Sided"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_plane_circle_001"
-      }
-    }
-    Assets {
-      Id: 18202007265107996075
-      Name: "Metal Painted 01"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_metal_painted_new_001_uv"
-      }
-    }
-    Assets {
-      Id: 8269622313995794195
-      Name: "Ring 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_torus_002"
+        AssetType: "AudioAssetRef"
+        AssetId: "sfx_crowd_kids_cheering_01_Cue_ref"
       }
     }
     Assets {
@@ -411,20 +384,39 @@ Assets {
       }
     }
     Assets {
-      Id: 8877447776568325292
-      Name: "Crowd Kids Cheering 01 SFX"
-      PlatformAssetType: 7
+      Id: 8269622313995794195
+      Name: "Ring 01"
+      PlatformAssetType: 1
       PrimaryAsset {
-        AssetType: "AudioAssetRef"
-        AssetId: "sfx_crowd_kids_cheering_01_Cue_ref"
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_torus_002"
       }
     }
     Assets {
-      Id: 2436388842830682587
-      Name: "RebirthPlateClient"
-      PlatformAssetType: 3
-      TextAsset {
-        Text: "local TRIGGER = script:GetCustomProperty(\"RebirthPlate\"):WaitForObject()\r\nlocal TRUIMPH_SOUND = script:GetCustomProperty(\"TriumphSound\"):WaitForObject()\r\nlocal TRIUMPH_VFX = script:GetCustomProperty(\"TriumphVFX\"):WaitForObject()\r\n\r\nlocal Maid = _G.req(\"_Maid\")\r\nlocal REvents = _G.req(\"ReliableEvents\")\r\nlocal P = _G.req(\"Protocols\")\r\nlocal B = _G.req(\"BusinessLogic\")\r\nlocal S = _G.req(\"StaticData\")\r\n\r\nlocal _maid = Maid.New(TRIGGER)\r\n\r\nlocal LOCAL_PLAYER = Game.GetLocalPlayer()\r\n\r\nlocal AskForRebirth do\r\n    local function connect()\r\n        _maid.trigger_connection = TRIGGER.beginOverlapEvent:Connect(AskForRebirth)\r\n    end\r\n    AskForRebirth = function(_trigger, player)\r\n        if player == LOCAL_PLAYER then\r\n            _maid.trigger_connection = nil\r\n            if B.isRebirthPossible(player) then\r\n                REvents.Broadcast(P.CLIENT.POPUP, {\r\n                    text = S.T.REBIRTH_CONFIRM,\r\n                    yes = function()\r\n                        REvents.BroadcastToServer(P.C2S.AskForRebirth)\r\n                        TRUIMPH_SOUND:Play()\r\n                        TRIUMPH_VFX:SetWorldPosition(LOCAL_PLAYER:GetWorldPosition())\r\n                        TRIUMPH_VFX:Play()\r\n                    end,\r\n                })\r\n            end\r\n            Task.Wait(1)\r\n            connect()\r\n        end\r\n    end\r\n    connect()\r\nend\r\n\r\n\r\n\r\n\r\n\r\n"
+      Id: 18202007265107996075
+      Name: "Metal Painted 01"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_metal_painted_new_001_uv"
+      }
+    }
+    Assets {
+      Id: 1591823270752426997
+      Name: "Plane Circle - One Sided"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_plane_circle_001"
+      }
+    }
+    Assets {
+      Id: 755036478599963226
+      Name: "Car Paint 01"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_car-paint_001"
       }
     }
     PrimaryAssetId {
@@ -434,4 +426,3 @@ Assets {
   }
   SerializationVersion: 81
 }
-IncludesAllDependencies: true
