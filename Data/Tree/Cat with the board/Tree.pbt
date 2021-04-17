@@ -20,7 +20,6 @@ Objects {
   }
   ParentId: 6210973888000216498
   ChildIds: 9517339407585021089
-  WantsNetworking: true
   Collidable_v2 {
     Value: "mc:ecollisionsetting:forceoff"
   }
@@ -111,7 +110,7 @@ Objects {
 }
 Objects {
   Id: 18409782385731705684
-  Name: "Board"
+  Name: "NeedForSpeedBoard"
   Transform {
     Location {
       X: -12.6484375
@@ -138,6 +137,6 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Board"
+    FilePartitionName: "NeedForSpeedBoard"
   }
 }

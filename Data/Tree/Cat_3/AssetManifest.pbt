@@ -35,6 +35,15 @@ Assets {
   }
 }
 Assets {
+  Id: 13091512434361803159
+  Name: "Cube - Chamfered Small Polished"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_cube_hq_003"
+  }
+}
+Assets {
   Id: 11411462515494862368
   Name: "Text 01: ~"
   PlatformAssetType: 1
@@ -131,5 +140,14 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_hemisphere_002"
+  }
+}
+Assets {
+  Id: 132672053610873933
+  Name: "Plastic Matte"
+  PlatformAssetType: 2
+  PrimaryAsset {
+    AssetType: "MaterialAssetRef"
+    AssetId: "plastic_matte_001"
   }
 }

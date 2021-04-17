@@ -1,13 +1,4 @@
 Assets {
-  Id: 16593169243176712161
-  Name: "Container - Square Thin 01"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_container_square_thin_ref"
-  }
-}
-Assets {
   Id: 13629958479359906438
   Name: "Cylinder - Rounded Bottom-Aligned"
   PlatformAssetType: 1
@@ -53,20 +44,38 @@ Assets {
   }
 }
 Assets {
-  Id: 7055655178099606474
-  Name: "Glass 01"
-  PlatformAssetType: 2
-  PrimaryAsset {
-    AssetType: "MaterialAssetRef"
-    AssetId: "mi_basic_glass_refrac_001"
-  }
-}
-Assets {
   Id: 5836430349218932838
   Name: "Pipe - Thin"
   PlatformAssetType: 1
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_pipe_003"
+  }
+}
+Assets {
+  Id: 2030665186957883852
+  Name: "Plasma"
+  PlatformAssetType: 2
+  PrimaryAsset {
+    AssetType: "MaterialAssetRef"
+    AssetId: "fxma_plasmafield"
+  }
+}
+Assets {
+  Id: 506728267337359222
+  Name: "Plane 4m - One Sided"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_plane_4m_001"
+  }
+}
+Assets {
+  Id: 132672053610873933
+  Name: "Plastic Matte"
+  PlatformAssetType: 2
+  PrimaryAsset {
+    AssetType: "MaterialAssetRef"
+    AssetId: "plastic_matte_001"
   }
 }

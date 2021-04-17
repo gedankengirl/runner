@@ -1,6 +1,284 @@
 Name: "Cat_3"
 RootId: 6264509392441068273
 Objects {
+  Id: 6750351240044099164
+  Name: "SpeechBubble"
+  Transform {
+    Location {
+      X: 5.33511353
+      Y: 178.383331
+      Z: 53.2444
+    }
+    Rotation {
+      Yaw: -82.6177826
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 6264509392441068273
+  ChildIds: 923428867961396249
+  ChildIds: 2608992029303488927
+  ChildIds: 7923798487889256217
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 7923798487889256217
+  Name: "World Text"
+  Transform {
+    Location {
+      X: -13.6491117
+      Y: 5.35594368
+      Z: 1.63721466
+    }
+    Rotation {
+      Yaw: 89.9999466
+      Roll: 1.99442394e-12
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 6750351240044099164
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Text {
+    Text: "grasshopper!"
+    FontAsset {
+    }
+    Color {
+      A: 1
+    }
+    HorizontalSize: 1
+    VerticalSize: 1
+    HorizontalAlignment {
+      Value: "mc:ecoretexthorizontalalign:left"
+    }
+    VerticalAlignment {
+      Value: "mc:ecoretextverticalalign:center"
+    }
+  }
+}
+Objects {
+  Id: 2608992029303488927
+  Name: "World Text"
+  Transform {
+    Location {
+      X: -13.6491117
+      Y: 5.35594368
+      Z: 19.6782227
+    }
+    Rotation {
+      Yaw: 89.9999542
+      Roll: 1.99442481e-12
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 6750351240044099164
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Text {
+    Text: "You made it,"
+    FontAsset {
+    }
+    Color {
+      A: 1
+    }
+    HorizontalSize: 1
+    VerticalSize: 1
+    HorizontalAlignment {
+      Value: "mc:ecoretexthorizontalalign:left"
+    }
+    VerticalAlignment {
+      Value: "mc:ecoretextverticalalign:center"
+    }
+  }
+}
+Objects {
+  Id: 923428867961396249
+  Name: "ClientContext"
+  Transform {
+    Location {
+      X: 32.0579834
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 6750351240044099164
+  ChildIds: 4889459759715606305
+  ChildIds: 7767691234261708182
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  NetworkContext {
+  }
+}
+Objects {
+  Id: 7767691234261708182
+  Name: "Cube - Arcade 01"
+  Transform {
+    Location {
+      X: 19.8915749
+      Y: -0.000173568726
+      Z: 9.79165649
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1.60851598
+      Y: 0.0655348301
+      Z: 0.497663677
+    }
+  }
+  ParentId: 923428867961396249
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 132672053610873933
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 1
+        G: 1
+        B: 1
+        A: 1
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 13091512434361803159
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    InteractWithTriggers: true
+    StaticMesh {
+      Physics {
+      }
+    }
+  }
+}
+Objects {
+  Id: 4889459759715606305
+  Name: "Cube - Arcade 01"
+  Transform {
+    Location {
+      X: 75.2880325
+      Y: 0.000129699707
+      Z: -12.8903961
+    }
+    Rotation {
+      Pitch: 44.999958
+      Yaw: 2.30296424e-12
+      Roll: 1.99442502e-12
+    }
+    Scale {
+      X: 0.197113991
+      Y: 0.0577900372
+      Z: 0.197113991
+    }
+  }
+  ParentId: 923428867961396249
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 132672053610873933
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 1
+        G: 1
+        B: 1
+        A: 1
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 13091512434361803159
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    InteractWithTriggers: true
+    StaticMesh {
+      Physics {
+      }
+    }
+  }
+}
+Objects {
   Id: 11081981226996202903
   Name: "RockMove"
   Transform {

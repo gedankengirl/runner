@@ -2,7 +2,7 @@ Name: "Scene props"
 RootId: 7553754998792656332
 Objects {
   Id: 12108043329569368714
-  Name: "Screenshot island"
+  Name: "Zen Zone"
   Transform {
     Location {
       X: -20409.582
@@ -30,7 +30,7 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Screenshot island"
+    FilePartitionName: "Zen Zone"
   }
 }
 Objects {
