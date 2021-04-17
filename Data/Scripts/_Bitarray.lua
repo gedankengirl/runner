@@ -9,7 +9,7 @@ end
 
 function bitarray.new(size, default)
     size = size or 32
-    local n = nbytes(size)
+    local n, used = nbytes(size)
     local _size = size
     -- hide _size in closure
     local self = {size=function() return _size end}
@@ -17,6 +17,10 @@ function bitarray.new(size, default)
     local fill = default and 0xFF or 0x00
     for i=1, n do
         self[i] = fill
+    end
+    -- zero unused bits for correct equality compare
+    if default and used ~= 0 then
+        self[#self] = self[#self] & ~(-1 << used)
     end
     return setmetatable(self, bitarray)
 end
@@ -29,15 +33,11 @@ function bitarray:eq(other)
     if other.type ~= bitarray.type then return false end
     local size = self.size()
     if size ~= other.size() then return false end
-    local n, r = nbytes(size)
+    local n, _ = nbytes(size)
      for i=1, n-1 do
         if self[i] ~= other[i] then return false end
     end
-    if r == 0 then
-        return self[n] == other[n]
-    else
-        return (self[n] ~ other[n]) & ~(-1 << r) == 0
-    end
+    return self[n] == other[n]
 end
 
 -- `==` overload
@@ -124,7 +124,7 @@ function bitvector32:__newindex(i, v)
     self.data = v and self.data | (1 << bit) or self.data & ~(1 << bit)
 end
 
--- popcount32
+-- popcount32, number of ones
 function bitvector32:__len()
     local x = self.data
     x = x - ((x >> 1) & 0x55555555)
@@ -137,6 +137,7 @@ function bitvector32:__eq(other)
     return self.data == other.data
 end
 
+-- trivial serialization to i32
 -- () -> i32
 function bitvector32:__call()
     local n = self.data
@@ -258,7 +259,6 @@ local function _bitvector32_test()
         end
         local PLAYER = Game.GetPlayers()[1]
         for i=1, 1000 do
-            -- local x = math.random(-2147483648, 2147483647)
             local x = -2147483648
             PLAYER:SetResource("@@@", x)
             assert(x == PLAYER:GetResource("@@@"))
