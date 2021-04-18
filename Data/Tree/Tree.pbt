@@ -24,6 +24,7 @@ Objects {
   ChildIds: 8534815031986278044
   ChildIds: 7553754998792656332
   ChildIds: 11266998582273717775
+  ChildIds: 17116633522967605758
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -36,6 +37,47 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Folder {
+  }
+}
+Objects {
+  Id: 17116633522967605758
+  Name: "CinematicShot"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  WantsNetworking: true
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 16121779860319454006
+      value {
+        Overrides {
+          Name: "Name"
+          String: "CinematicShot"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: 3057.33911
+            Y: 2402.3186
+            Z: 70
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 12344851980764063573
+    }
   }
 }
 Objects {
@@ -300,6 +342,12 @@ Objects {
         Overrides {
           Name: "Rotation"
           Rotator {
+          }
+        }
+        Overrides {
+          Name: "Visible"
+          Enum {
+            Value: "mc:evisibilitysetting:inheritfromparent"
           }
         }
       }
