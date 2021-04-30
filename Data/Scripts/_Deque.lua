@@ -78,13 +78,12 @@ function Deque:PopFront()
     end
 end
 
--- aloases
+-- extra exports
 Deque.PeekFront = Deque.Front
 Deque.PeekBack = Deque.Back
-
 Deque.Push = Deque.PushBack
 Deque.Pop = Deque.PopFront
-Deque.Peek = Deque.PeekFront
+Deque.Peek = Deque.Front
 Deque.IsEmpty = Deque.Empty
 
 local function _test()

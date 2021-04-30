@@ -40,6 +40,7 @@ local function _defer_queue_add(delay, thunk)
     return _defer_queue:Push({time()+delay, thunk})
 end
 
+-- TODO: add admin chan
 local DOWNLINK, CHANNELS, IN_USE, SOCIAL, PET_CHAN do
     DOWNLINK = script:GetCustomProperty("DOWNLINK"):WaitForObject()
     local chans = DOWNLINK:GetCustomProperties()
@@ -262,7 +263,7 @@ function PlayerConnection:OnTHE(egg)
     else
         -- TODO: what to do with reson at server?
         local reason = pet_id
-        warn(pp{self.player, reason})
+        warn(pp{"THE: ERROR:", self.player, reason})
     end
     if DEBUG then
         print(pp{"on THE", self.player.name})
