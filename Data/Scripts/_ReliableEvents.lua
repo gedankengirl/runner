@@ -35,6 +35,7 @@ local BroadcastFactory do
 
     local txqueue = queue:new()
     local FEWEST_WARNINGS_INTERVAL = 0.90 -- empirical constant
+    local WAIT_ON_FAILURE = 0.1
 
     local function retry()
         Task.Spawn(function()
@@ -44,7 +45,9 @@ local BroadcastFactory do
                 local result, _ = broadcast(unpack(message))
                 if result == BroadcastEventResultCode.EXCEEDED_RATE_LIMIT then
                     Task.Wait(FEWEST_WARNINGS_INTERVAL)
-                else
+                elseif result == BroadcastEventResultCode.FAILURE then
+                    Task.Wait(WAIT_ON_FAILURE)
+                else -- ok
                     txqueue:pop()
                 end
             end
@@ -59,14 +62,9 @@ local BroadcastFactory do
 
     BroadcastFactory = function(method)
         return function (...)
-            local event = select(1, ...)
-            if not event or type(event) ~= "string" then
-                warn("ERROR: first argumenst have to be 'event' string\n" .. CoreDebug.GetStackTrace())
-                return
-            end
             if txqueue:empty() then
                 local result, _ = Events[method](...)
-                if result == BroadcastEventResultCode.EXCEEDED_RATE_LIMIT then
+                if result == BroadcastEventResultCode.EXCEEDED_RATE_LIMI or result == BroadcastEventResultCode.FAILURE then
                     _push_event(method, ...)
                     retry()
                 end
@@ -100,7 +98,8 @@ local Broadcast do
             return -- !
         end
         while not txqueue:empty() do
-            Events.Broadcast(unpack(txqueue:pop()))
+            local event = txqueue:pop()
+            Events.Broadcast(unpack(event))
         end
         _in_trampoline = false
     end
@@ -113,7 +112,8 @@ ReliableEvents.BroadcastToAllPlayers = BroadcastFactory("BroadcastToAllPlayers")
 ReliableEvents.Broadcast = Broadcast
 
 _test = function()
-    do -- test order of nested events
+    if CoreMath then
+        -- test order of nested events
         local out = {}
         Events.Connect("_x_Test_A", function()
             ReliableEvents.Broadcast("_x_Test_B", "A")
