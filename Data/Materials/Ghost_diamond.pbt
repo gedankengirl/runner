@@ -2,7 +2,7 @@ Assets {
   Id: 8188643544992053888
   Name: "Ghost_diamond"
   PlatformAssetType: 13
-  SerializationVersion: 81
+  SerializationVersion: 84
   CustomMaterialAsset {
     BaseMaterialId: 2258330122587909962
     ParameterOverrides {

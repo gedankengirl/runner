@@ -79,6 +79,7 @@ Assets {
           StaticMesh {
             Physics {
             }
+            BoundsScale: 1
           }
         }
       }
@@ -128,6 +129,7 @@ Assets {
           StaticMesh {
             Physics {
             }
+            BoundsScale: 1
           }
         }
       }
@@ -178,6 +180,7 @@ Assets {
           StaticMesh {
             Physics {
             }
+            BoundsScale: 1
           }
         }
       }
@@ -229,6 +232,7 @@ Assets {
           StaticMesh {
             Physics {
             }
+            BoundsScale: 1
           }
         }
       }
@@ -250,6 +254,6 @@ Assets {
   Marketplace {
     Description: "Awesome Stormy Clouds for your project. Copy, paste and resize to fill as much sky as you like. The dynamic material changes the shape of the cloud as you move it around the sky making every cloud unique."
   }
-  SerializationVersion: 81
+  SerializationVersion: 84
   DirectlyPublished: true
 }
