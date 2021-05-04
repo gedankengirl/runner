@@ -64,7 +64,7 @@ local enc do
             out[#out+1] = char(ENC[a1>>2], ENC[(a1&3)<<4|b1>>4], ENC[(b1&15)<<2|c1>>6], ENC[c1&63])
             x = x + 3
         end
-        -- tail: 1..2 -> 3..2 + padding
+        -- tail: 1..2 -> 2..3 + padding
         local n = y - x
         if n == 2 then
             a1, b1 = byte(data, x, x + 1)

@@ -133,6 +133,7 @@ function bitvector32:__len()
     return ((x * 0x01010101) & 0xFFFFFFFF) >> 24
 end
 
+-- value equality
 function bitvector32:__eq(other)
     return self.data == other.data
 end
