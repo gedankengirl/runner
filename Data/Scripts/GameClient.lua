@@ -976,7 +976,9 @@ do -- main
         [P.CLIENT.SHOP_INTERACTED]  = {"HandleShopInteraction"},
         [P.CLIENT.LEAVE_SHOP]  = {"HandleExitShop"},
         [P.CLIENT.X_BUTTON]  = {"HandleXButton"},
-        ["ability_extra_33"]  = {"HandleExitShop"}, -- press `F` to live the shop
+        -- NOTE: quick fix for the bug introduced by Core 03.05.21 update
+        -- TODO: return interface hint when the bug is fixed otherwise
+        --["ability_extra_33"]  = {"HandleExitShop"}, -- press `F` to leave the shop
     })
     ISM:Connect(LOCAL_PLAYER.bindingPressedEvent, function(_player, binding) ISM:MapToStateHandler(binding, 1) end)
     ISM:Connect(LOCAL_PLAYER.bindingReleasedEvent, function(_player, binding) ISM:MapToStateHandler(binding, 2) end)

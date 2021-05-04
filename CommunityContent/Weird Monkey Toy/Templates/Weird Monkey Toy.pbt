@@ -6143,7 +6143,7 @@ Assets {
     }
     Assets {
       Id: 10850164096982886051
-      Name: "Drum Kit Set Funk Sampled Instrument 01 SFX"
+      Name: "Drum Kit Set Funk Sampled Instrument 01"
       PlatformAssetType: 10
       PrimaryAsset {
         AssetType: "AudioBlueprintAssetRef"
