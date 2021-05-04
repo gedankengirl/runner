@@ -2,7 +2,7 @@ Assets {
   Id: 3729490388871249898
   Name: "Gemstone"
   PlatformAssetType: 13
-  SerializationVersion: 81
+  SerializationVersion: 84
   CustomMaterialAsset {
     BaseMaterialId: 1364294402302747595
     ParameterOverrides {

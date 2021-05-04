@@ -2,7 +2,7 @@ Assets {
   Id: 5468898726551871058
   Name: "Festive Pattern"
   PlatformAssetType: 13
-  SerializationVersion: 81
+  SerializationVersion: 84
   CustomMaterialAsset {
     BaseMaterialId: 11985589658934362048
     ParameterOverrides {
