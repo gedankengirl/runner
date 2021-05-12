@@ -15,7 +15,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 10806057176125142267
+        ParentId: 4781671109827199097
         ChildIds: 7114617901346040981
         WantsNetworking: true
         Collidable_v2 {
@@ -83,7 +83,6 @@ Assets {
         ChildIds: 11938663551870404649
         ChildIds: 15869699434845193318
         ChildIds: 419844824903898552
-        ChildIds: 16298299947104846980
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -4551,60 +4550,6 @@ Assets {
           }
         }
       }
-      Objects {
-        Id: 16298299947104846980
-        Name: "Outline Object"
-        Transform {
-          Location {
-            Z: 130.000061
-          }
-          Rotation {
-            Yaw: -6.10351344e-05
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 8782309469189699946
-        UnregisteredParameters {
-          Overrides {
-            Name: "bp:Color A"
-            Color {
-              G: 0.412222266
-              B: 0.490000129
-              A: 0.8
-            }
-          }
-          Overrides {
-            Name: "bp:Object To Outline"
-            ObjectReference {
-              SubObjectId: 8782309469189699946
-            }
-          }
-          Overrides {
-            Name: "bp:Thickness"
-            Float: 4
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Blueprint {
-          BlueprintAsset {
-            Id: 10913251976909601512
-          }
-          TeamSettings {
-          }
-        }
-      }
     }
     Assets {
       Id: 1472417143127626979
@@ -4811,15 +4756,6 @@ Assets {
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
         AssetId: "sm_gem_pear_polished_001"
-      }
-    }
-    Assets {
-      Id: 10913251976909601512
-      Name: "Outline Object"
-      PlatformAssetType: 20
-      PrimaryAsset {
-        AssetType: "BlueprintAssetRef"
-        AssetId: "fxbp_local_outline"
       }
     }
     PrimaryAssetId {

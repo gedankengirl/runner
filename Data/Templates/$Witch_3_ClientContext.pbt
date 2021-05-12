@@ -88,7 +88,6 @@ Assets {
         ChildIds: 6238970943014008599
         ChildIds: 8378937071850535879
         ChildIds: 2836380891068872736
-        ChildIds: 11558398845437211984
         ChildIds: 8273392849095358007
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -5327,60 +5326,6 @@ Assets {
         }
       }
       Objects {
-        Id: 11558398845437211984
-        Name: "Outline Object"
-        Transform {
-          Location {
-            Z: 154.975983
-          }
-          Rotation {
-            Yaw: 6.83019516e-06
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 13655165843619991981
-        UnregisteredParameters {
-          Overrides {
-            Name: "bp:Color A"
-            Color {
-              G: 0.412222266
-              B: 0.490000129
-              A: 0.8
-            }
-          }
-          Overrides {
-            Name: "bp:Object To Outline"
-            ObjectReference {
-              SubObjectId: 13655165843619991981
-            }
-          }
-          Overrides {
-            Name: "bp:Thickness"
-            Float: 4
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Blueprint {
-          BlueprintAsset {
-            Id: 10913251976909601512
-          }
-          TeamSettings {
-          }
-        }
-      }
-      Objects {
         Id: 8273392849095358007
         Name: "Bone arm"
         Transform {
@@ -5819,15 +5764,6 @@ Assets {
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
         AssetId: "sm_quarter_torus_001"
-      }
-    }
-    Assets {
-      Id: 10913251976909601512
-      Name: "Outline Object"
-      PlatformAssetType: 20
-      PrimaryAsset {
-        AssetType: "BlueprintAssetRef"
-        AssetId: "fxbp_local_outline"
       }
     }
     Assets {

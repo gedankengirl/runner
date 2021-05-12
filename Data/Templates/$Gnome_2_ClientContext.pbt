@@ -15,7 +15,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 10149358099801352491
+        ParentId: 4781671109827199097
         ChildIds: 7653866912214772171
         WantsNetworking: true
         Collidable_v2 {
@@ -75,7 +75,6 @@ Assets {
         }
         ParentId: 7653866912214772171
         ChildIds: 4848046373785420919
-        ChildIds: 15200383155928966344
         ChildIds: 7119334787494918738
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -1663,59 +1662,6 @@ Assets {
         }
       }
       Objects {
-        Id: 15200383155928966344
-        Name: "Outline Object"
-        Transform {
-          Location {
-            Z: -3.05175781e-05
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 15980454908161898700
-        UnregisteredParameters {
-          Overrides {
-            Name: "bp:Thickness"
-            Float: 4
-          }
-          Overrides {
-            Name: "bp:Object To Outline"
-            ObjectReference {
-              SubObjectId: 15980454908161898700
-            }
-          }
-          Overrides {
-            Name: "bp:Color A"
-            Color {
-              R: 0.506000042
-              G: 0.305206269
-              A: 0.8
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Blueprint {
-          BlueprintAsset {
-            Id: 10913251976909601512
-          }
-          TeamSettings {
-          }
-        }
-      }
-      Objects {
         Id: 7119334787494918738
         Name: "RockMove"
         Transform {
@@ -1856,15 +1802,6 @@ Assets {
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
         AssetId: "sm_coral_spike_small_01"
-      }
-    }
-    Assets {
-      Id: 10913251976909601512
-      Name: "Outline Object"
-      PlatformAssetType: 20
-      PrimaryAsset {
-        AssetType: "BlueprintAssetRef"
-        AssetId: "fxbp_local_outline"
       }
     }
     PrimaryAssetId {

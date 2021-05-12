@@ -91,6 +91,7 @@ Assets {
         ChildIds: 744705631492437870
         ChildIds: 4895015939938370094
         ChildIds: 4319312391834934733
+        ChildIds: 10991987395175937315
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -5139,6 +5140,329 @@ Assets {
             }
             BoundsScale: 1
           }
+        }
+      }
+      Objects {
+        Id: 10991987395175937315
+        Name: "Body"
+        Transform {
+          Location {
+            Z: 105.226135
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1.25756383
+            Y: 1.25756383
+            Z: 1.11568165
+          }
+        }
+        ParentId: 9856807081099151075
+        ChildIds: 13610569847611610331
+        ChildIds: 4911608616221891359
+        ChildIds: 1809177106507812247
+        ChildIds: 367121654281057352
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 2482510762028700951
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 1
+              G: 1
+              B: 1
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 15961349352539224933
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          StaticMesh {
+            Physics {
+              Mass: 100
+              LinearDamping: 0.01
+            }
+            BoundsScale: 1
+          }
+        }
+      }
+      Objects {
+        Id: 13610569847611610331
+        Name: "2D Basic Shapes Decal"
+        Transform {
+          Location {
+            X: 28.0631065
+            Y: 29.5443039
+            Z: 7.47007656
+          }
+          Rotation {
+            Roll: 70.4426498
+          }
+          Scale {
+            X: 0.231225967
+            Y: 0.0232351944
+            Z: 0.312916189
+          }
+        }
+        ParentId: 10991987395175937315
+        UnregisteredParameters {
+          Overrides {
+            Name: "bp:Sides"
+            Int: 3
+          }
+          Overrides {
+            Name: "bp:Color"
+            Color {
+              R: 0.0412562713
+              G: 0.134837672
+              B: 0.322000146
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "bp:Stroke Color"
+            Color {
+              R: 0.0412562713
+              G: 0.134837672
+              B: 0.322000146
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Blueprint {
+          BlueprintAsset {
+            Id: 6185017546957884116
+          }
+          TeamSettings {
+          }
+          DecalBP {
+          }
+        }
+        Relevance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 4911608616221891359
+        Name: "2D Basic Shapes Decal"
+        Transform {
+          Location {
+            X: 28.0631065
+            Y: 31.2627659
+            Z: 0.843902946
+          }
+          Rotation {
+            Roll: 70.4426498
+          }
+          Scale {
+            X: 0.231225967
+            Y: 0.0232351944
+            Z: 0.312916189
+          }
+        }
+        ParentId: 10991987395175937315
+        UnregisteredParameters {
+          Overrides {
+            Name: "bp:Sides"
+            Int: 3
+          }
+          Overrides {
+            Name: "bp:Color"
+            Color {
+              R: 0.0412562713
+              G: 0.134837672
+              B: 0.322000146
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "bp:Stroke Color"
+            Color {
+              R: 0.0412562713
+              G: 0.134837672
+              B: 0.322000146
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Blueprint {
+          BlueprintAsset {
+            Id: 6185017546957884116
+          }
+          TeamSettings {
+          }
+          DecalBP {
+          }
+        }
+        Relevance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 1809177106507812247
+        Name: "2D Basic Shapes Decal"
+        Transform {
+          Location {
+            X: 28.0631065
+            Y: -29.5446434
+            Z: 7.47007656
+          }
+          Rotation {
+            Roll: -70.4429932
+          }
+          Scale {
+            X: 0.231225967
+            Y: 0.0232351944
+            Z: 0.312916189
+          }
+        }
+        ParentId: 10991987395175937315
+        UnregisteredParameters {
+          Overrides {
+            Name: "bp:Sides"
+            Int: 3
+          }
+          Overrides {
+            Name: "bp:Color"
+            Color {
+              R: 0.0412562713
+              G: 0.134837672
+              B: 0.322000146
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "bp:Stroke Color"
+            Color {
+              R: 0.0412562713
+              G: 0.134837672
+              B: 0.322000146
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Blueprint {
+          BlueprintAsset {
+            Id: 6185017546957884116
+          }
+          TeamSettings {
+          }
+          DecalBP {
+          }
+        }
+        Relevance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 367121654281057352
+        Name: "2D Basic Shapes Decal"
+        Transform {
+          Location {
+            X: 28.0631065
+            Y: -31.2624264
+            Z: 0.843902946
+          }
+          Rotation {
+            Roll: -70.4429932
+          }
+          Scale {
+            X: 0.231225967
+            Y: 0.0232351944
+            Z: 0.312916189
+          }
+        }
+        ParentId: 10991987395175937315
+        UnregisteredParameters {
+          Overrides {
+            Name: "bp:Sides"
+            Int: 3
+          }
+          Overrides {
+            Name: "bp:Color"
+            Color {
+              R: 0.0412562713
+              G: 0.134837672
+              B: 0.322000146
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "bp:Stroke Color"
+            Color {
+              R: 0.0412562713
+              G: 0.134837672
+              B: 0.322000146
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Blueprint {
+          BlueprintAsset {
+            Id: 6185017546957884116
+          }
+          TeamSettings {
+          }
+          DecalBP {
+          }
+        }
+        Relevance {
+          Value: "mc:eproxyrelevance:critical"
         }
       }
     }

@@ -15,7 +15,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 8303771595245639355
+        ParentId: 4781671109827199097
         ChildIds: 18409655002179880532
         WantsNetworking: true
         Collidable_v2 {
@@ -83,7 +83,6 @@ Assets {
         ChildIds: 8290897063287273053
         ChildIds: 2693250890238056893
         ChildIds: 4957612910725658202
-        ChildIds: 2506223654491103320
         ChildIds: 4670244682023336584
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -3362,62 +3361,6 @@ Assets {
         }
       }
       Objects {
-        Id: 2506223654491103320
-        Name: "Outline Object"
-        Transform {
-          Location {
-            X: -42.0898438
-            Y: -355.076172
-            Z: 130.000046
-          }
-          Rotation {
-            Yaw: -6.10351381e-05
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 16475440777509782236
-        UnregisteredParameters {
-          Overrides {
-            Name: "bp:Color A"
-            Color {
-              R: 0.506000042
-              G: 0.305206269
-              A: 0.8
-            }
-          }
-          Overrides {
-            Name: "bp:Object To Outline"
-            ObjectReference {
-              SubObjectId: 16475440777509782236
-            }
-          }
-          Overrides {
-            Name: "bp:Thickness"
-            Float: 4
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Blueprint {
-          BlueprintAsset {
-            Id: 10913251976909601512
-          }
-          TeamSettings {
-          }
-        }
-      }
-      Objects {
         Id: 4670244682023336584
         Name: "RockMove"
         Transform {
@@ -3630,15 +3573,6 @@ Assets {
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
         AssetId: "sm_cylinder_rounded_003"
-      }
-    }
-    Assets {
-      Id: 10913251976909601512
-      Name: "Outline Object"
-      PlatformAssetType: 20
-      PrimaryAsset {
-        AssetType: "BlueprintAssetRef"
-        AssetId: "fxbp_local_outline"
       }
     }
     PrimaryAssetId {

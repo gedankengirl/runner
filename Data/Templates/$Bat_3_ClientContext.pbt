@@ -15,7 +15,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 4797334295332245929
+        ParentId: 4781671109827199097
         ChildIds: 15656079177242987034
         WantsNetworking: true
         Collidable_v2 {
@@ -46,8 +46,6 @@ Assets {
         }
         ParentId: 5275712490008961784
         ChildIds: 468938076742212288
-        ChildIds: 5007425621071763987
-        ChildIds: 10947056513387888987
         ChildIds: 11732285229197525241
         ChildIds: 17113710939108491378
         Collidable_v2 {
@@ -108,114 +106,6 @@ Assets {
         Script {
           ScriptAsset {
             Id: 11889895986251336049
-          }
-        }
-      }
-      Objects {
-        Id: 5007425621071763987
-        Name: "Outline Object"
-        Transform {
-          Location {
-            Z: 155.72377
-          }
-          Rotation {
-            Yaw: 3.4150904e-05
-          }
-          Scale {
-            X: 0.833386362
-            Y: 0.833386362
-            Z: 0.833386362
-          }
-        }
-        ParentId: 15656079177242987034
-        UnregisteredParameters {
-          Overrides {
-            Name: "bp:Color A"
-            Color {
-              G: 0.412222266
-              B: 0.490000129
-              A: 0.8
-            }
-          }
-          Overrides {
-            Name: "bp:Object To Outline"
-            ObjectReference {
-              SubObjectId: 11732285229197525241
-            }
-          }
-          Overrides {
-            Name: "bp:Thickness"
-            Float: 4
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Blueprint {
-          BlueprintAsset {
-            Id: 10913251976909601512
-          }
-          TeamSettings {
-          }
-        }
-      }
-      Objects {
-        Id: 10947056513387888987
-        Name: "Outline Object"
-        Transform {
-          Location {
-            Z: 155.72377
-          }
-          Rotation {
-            Yaw: 3.4150904e-05
-          }
-          Scale {
-            X: 0.833386362
-            Y: 0.833386362
-            Z: 0.833386362
-          }
-        }
-        ParentId: 15656079177242987034
-        UnregisteredParameters {
-          Overrides {
-            Name: "bp:Color A"
-            Color {
-              G: 0.412222266
-              B: 0.490000129
-              A: 0.8
-            }
-          }
-          Overrides {
-            Name: "bp:Object To Outline"
-            ObjectReference {
-              SubObjectId: 17113710939108491378
-            }
-          }
-          Overrides {
-            Name: "bp:Thickness"
-            Float: 4
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Blueprint {
-          BlueprintAsset {
-            Id: 10913251976909601512
-          }
-          TeamSettings {
           }
         }
       }
@@ -3723,15 +3613,6 @@ Assets {
             BoundsScale: 1
           }
         }
-      }
-    }
-    Assets {
-      Id: 10913251976909601512
-      Name: "Outline Object"
-      PlatformAssetType: 20
-      PrimaryAsset {
-        AssetType: "BlueprintAssetRef"
-        AssetId: "fxbp_local_outline"
       }
     }
     Assets {

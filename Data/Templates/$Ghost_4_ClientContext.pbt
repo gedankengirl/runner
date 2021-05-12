@@ -85,7 +85,6 @@ Assets {
         ChildIds: 12977237898731072985
         ChildIds: 14773203322249034827
         ChildIds: 7436959452421846323
-        ChildIds: 11346278083789548721
         ChildIds: 1150671970150454099
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -3842,62 +3841,6 @@ Assets {
         }
       }
       Objects {
-        Id: 11346278083789548721
-        Name: "Outline Object"
-        Transform {
-          Location {
-            X: -0.00256511616
-            Y: 0.00256511755
-            Z: 114.125412
-          }
-          Rotation {
-            Yaw: -1.3660374e-05
-          }
-          Scale {
-            X: 0.788003922
-            Y: 0.788003922
-            Z: 0.788003922
-          }
-        }
-        ParentId: 3301930949029099102
-        UnregisteredParameters {
-          Overrides {
-            Name: "bp:Color A"
-            Color {
-              G: 0.263541698
-              B: 0.083664149
-              A: 0.8
-            }
-          }
-          Overrides {
-            Name: "bp:Object To Outline"
-            ObjectReference {
-              SubObjectId: 3301930949029099102
-            }
-          }
-          Overrides {
-            Name: "bp:Thickness"
-            Float: 4
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Blueprint {
-          BlueprintAsset {
-            Id: 10913251976909601512
-          }
-          TeamSettings {
-          }
-        }
-      }
-      Objects {
         Id: 1150671970150454099
         Name: "RockMove"
         Transform {
@@ -4121,15 +4064,6 @@ Assets {
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
         AssetId: "sm_gem_radiant_polished_001"
-      }
-    }
-    Assets {
-      Id: 10913251976909601512
-      Name: "Outline Object"
-      PlatformAssetType: 20
-      PrimaryAsset {
-        AssetType: "BlueprintAssetRef"
-        AssetId: "fxbp_local_outline"
       }
     }
     PrimaryAssetId {

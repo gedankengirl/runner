@@ -15,7 +15,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 8864733907737882616
+        ParentId: 4781671109827199097
         ChildIds: 27815364087991900
         WantsNetworking: true
         Collidable_v2 {
@@ -94,7 +94,6 @@ Assets {
         ChildIds: 11774519117555191384
         ChildIds: 15073844771097908423
         ChildIds: 14661865794614934994
-        ChildIds: 15007959708855697553
         ChildIds: 8713509219584521156
         ChildIds: 15009227754737059576
         Collidable_v2 {
@@ -4227,59 +4226,6 @@ Assets {
         }
       }
       Objects {
-        Id: 15007959708855697553
-        Name: "Outline Object"
-        Transform {
-          Location {
-            Z: 158.341064
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 7940144871648328546
-        UnregisteredParameters {
-          Overrides {
-            Name: "bp:Color A"
-            Color {
-              G: 0.412222266
-              B: 0.490000129
-              A: 0.8
-            }
-          }
-          Overrides {
-            Name: "bp:Object To Outline"
-            ObjectReference {
-              SubObjectId: 7940144871648328546
-            }
-          }
-          Overrides {
-            Name: "bp:Thickness"
-            Float: 4
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Blueprint {
-          BlueprintAsset {
-            Id: 10913251976909601512
-          }
-          TeamSettings {
-          }
-        }
-      }
-      Objects {
         Id: 8713509219584521156
         Name: "Diamonds"
         Transform {
@@ -5153,15 +5099,6 @@ Assets {
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
         AssetId: "sm_diamond_hq_001"
-      }
-    }
-    Assets {
-      Id: 10913251976909601512
-      Name: "Outline Object"
-      PlatformAssetType: 20
-      PrimaryAsset {
-        AssetType: "BlueprintAssetRef"
-        AssetId: "fxbp_local_outline"
       }
     }
     PrimaryAssetId {

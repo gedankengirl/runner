@@ -25,6 +25,16 @@ Objects {
   ChildIds: 7553754998792656332
   ChildIds: 11266998582273717775
   ChildIds: 17116633522967605758
+  ChildIds: 3338158456487999942
+  ChildIds: 9044028060132427064
+  ChildIds: 12598901519706122844
+  ChildIds: 2193259271405470787
+  ChildIds: 9556189679176868113
+  ChildIds: 5377720032211584156
+  ChildIds: 9558887955664221140
+  ChildIds: 17595817859667413090
+  ChildIds: 1906542438843784096
+  ChildIds: 12688484476619821419
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -37,6 +47,461 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Folder {
+  }
+}
+Objects {
+  Id: 12688484476619821419
+  Name: "$Dragon_5_ClientContext"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  WantsNetworking: true
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 9206821742326218156
+      value {
+        Overrides {
+          Name: "Name"
+          String: "$Dragon_5_ClientContext"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -1960.44385
+            Y: -3275.8103
+            Z: 77.1521606
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 13817282648874699757
+    }
+  }
+}
+Objects {
+  Id: 1906542438843784096
+  Name: "$Dragon_4_ClientContext"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  WantsNetworking: true
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 8940308130882157624
+      value {
+        Overrides {
+          Name: "Name"
+          String: "$Dragon_4_ClientContext"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -1688.28931
+            Y: -3275.8103
+            Z: 77.1521606
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 11397834669757560074
+    }
+  }
+}
+Objects {
+  Id: 17595817859667413090
+  Name: "$Dragon_3_ClientContext"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  WantsNetworking: true
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 14749186957989903830
+      value {
+        Overrides {
+          Name: "Name"
+          String: "$Dragon_3_ClientContext"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -1405.26025
+            Y: -3275.8103
+            Z: 77.1521606
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 14443148769067268639
+    }
+  }
+}
+Objects {
+  Id: 9558887955664221140
+  Name: "$Dragon_2_ClientContext"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  WantsNetworking: true
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 8693004037658694660
+      value {
+        Overrides {
+          Name: "Name"
+          String: "$Dragon_2_ClientContext"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -1048.83569
+            Y: -3275.8103
+            Z: 77.1521606
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 12846053128352784096
+    }
+  }
+}
+Objects {
+  Id: 5377720032211584156
+  Name: "$Dragon_1_ClientContext"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  WantsNetworking: true
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 14752910433719742919
+      value {
+        Overrides {
+          Name: "Name"
+          String: "$Dragon_1_ClientContext"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -738.167358
+            Y: -3275.8103
+            Z: 77.1521606
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 17367698534703258183
+    }
+  }
+}
+Objects {
+  Id: 9556189679176868113
+  Name: "$Dog_5_ClientContext"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  WantsNetworking: true
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 14869144671641415648
+      value {
+        Overrides {
+          Name: "Name"
+          String: "$Dog_5_ClientContext"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -2080.04932
+            Y: -3643.31299
+            Z: 68.4820709
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 13141162734568829528
+    }
+  }
+}
+Objects {
+  Id: 2193259271405470787
+  Name: "$Dog_4_ClientContext"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  WantsNetworking: true
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 15274922501269463314
+      value {
+        Overrides {
+          Name: "Name"
+          String: "$Dog_4_ClientContext"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -1814.42273
+            Y: -3643.31299
+            Z: 68.4820709
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 10421646876323139595
+    }
+  }
+}
+Objects {
+  Id: 12598901519706122844
+  Name: "$Dog_3_ClientContext"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  WantsNetworking: true
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 13976260985885966166
+      value {
+        Overrides {
+          Name: "Name"
+          String: "$Dog_3_ClientContext"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -1494.57739
+            Y: -3643.31299
+            Z: 68.4820709
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 1653851821663939751
+    }
+  }
+}
+Objects {
+  Id: 9044028060132427064
+  Name: "$Dog_2_ClientContext"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  WantsNetworking: true
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 7645671139601321428
+      value {
+        Overrides {
+          Name: "Name"
+          String: "$Dog_2_ClientContext"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -1137.06104
+            Y: -3643.31299
+            Z: 68.4820709
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 5986440851328176586
+    }
+  }
+}
+Objects {
+  Id: 3338158456487999942
+  Name: "$Dog_1_ClientContext"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  WantsNetworking: true
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 15040614724697923268
+      value {
+        Overrides {
+          Name: "Name"
+          String: "$Dog_1_ClientContext"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -722.974243
+            Y: -3643.31323
+            Z: 70
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 9856774965590748112
+    }
   }
 }
 Objects {
@@ -156,7 +621,9 @@ Objects {
   Name: "KillZoneTrigger"
   Transform {
     Location {
-      Z: -2274.33203
+      X: -19.6121216
+      Y: 32.098877
+      Z: -2287.72876
     }
     Rotation {
     }
