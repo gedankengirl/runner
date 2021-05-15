@@ -35,6 +35,11 @@ Objects {
   ChildIds: 17595817859667413090
   ChildIds: 1906542438843784096
   ChildIds: 12688484476619821419
+  ChildIds: 14499480479488285177
+  ChildIds: 171504564472754813
+  ChildIds: 1405853984779302850
+  ChildIds: 3495900816611732726
+  ChildIds: 13464569019514229
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -47,6 +52,221 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Folder {
+  }
+}
+Objects {
+  Id: 13464569019514229
+  Name: "$Wolf_5_ClientContext"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  WantsNetworking: true
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 10711062318627434121
+      value {
+        Overrides {
+          Name: "Name"
+          String: "$Wolf_5_ClientContext"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -2095.7334
+            Y: -3905.90137
+            Z: 70
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 5039605062537153586
+    }
+  }
+}
+Objects {
+  Id: 3495900816611732726
+  Name: "$Wolf_4_ClientContext"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  WantsNetworking: true
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 2151241840808653104
+      value {
+        Overrides {
+          Name: "Name"
+          String: "$Wolf_4_ClientContext"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -1800
+            Y: -3905.90137
+            Z: 70
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 6664174289017175004
+    }
+  }
+}
+Objects {
+  Id: 1405853984779302850
+  Name: "$Wolf_3_ClientContext"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  WantsNetworking: true
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 9884467453185177762
+      value {
+        Overrides {
+          Name: "Name"
+          String: "$Wolf_3_ClientContext"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -1477.37
+            Y: -3905.90137
+            Z: 70
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 4269756832664458652
+    }
+  }
+}
+Objects {
+  Id: 171504564472754813
+  Name: "$Wolf_2_ClientContext"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  WantsNetworking: true
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 17801259842114743768
+      value {
+        Overrides {
+          Name: "Name"
+          String: "$Wolf_2_ClientContext"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -1132.81567
+            Y: -3905.90137
+            Z: 70
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 11651931644190758822
+    }
+  }
+}
+Objects {
+  Id: 14499480479488285177
+  Name: "$Wolf_1_ClientContext"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  WantsNetworking: true
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 2528956054670774209
+      value {
+        Overrides {
+          Name: "Name"
+          String: "$Wolf_1_ClientContext"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -722.974243
+            Y: -3905.90137
+            Z: 70
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 12152406727198746510
+    }
   }
 }
 Objects {
@@ -621,8 +841,8 @@ Objects {
   Name: "KillZoneTrigger"
   Transform {
     Location {
-      X: -19.6121216
-      Y: 32.098877
+      X: -36.7612305
+      Y: 267.282227
       Z: -2287.72876
     }
     Rotation {

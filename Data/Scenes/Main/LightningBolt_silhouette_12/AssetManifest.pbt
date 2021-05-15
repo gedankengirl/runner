@@ -1,10 +1,10 @@
 Assets {
-  Id: 14613802976288032229
-  Name: "Metal Gold 01"
+  Id: 10184847056121543272
+  Name: "Basic Material"
   PlatformAssetType: 2
   PrimaryAsset {
     AssetType: "MaterialAssetRef"
-    AssetId: "mi_metal_gold_001"
+    AssetId: "mi_basic_pbr_material_001"
   }
 }
 Assets {

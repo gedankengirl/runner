@@ -1,7 +1,7 @@
 Name: "LightningBolt_silhouette_12"
-RootId: 2733126446953330543
+RootId: 16487524550381028492
 Objects {
-  Id: 16132579529038028490
+  Id: 3747288862642683790
   Name: "Prism - 3-Sided"
   Transform {
     Location {
@@ -20,12 +20,12 @@ Objects {
       Z: -0.08
     }
   }
-  ParentId: 2733126446953330543
+  ParentId: 16487524550381028492
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
       AssetReference {
-        Id: 14613802976288032229
+        Id: 10184847056121543272
       }
     }
     Overrides {
@@ -39,6 +39,12 @@ Objects {
     Overrides {
       Name: "ma:Shared_BaseMaterial:vtile"
       Float: 0.481217235
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        A: 1
+      }
     }
   }
   Collidable_v2 {
@@ -67,14 +73,14 @@ Objects {
     }
   }
   InstanceHistory {
-    SelfId: 16132579529038028490
-    SubobjectId: 1572368706994074232
+    SelfId: 3747288862642683790
+    SubobjectId: 18316502266993349436
     InstanceId: 10907345231434236569
     TemplateId: 15904085984438255415
   }
 }
 Objects {
-  Id: 17457255707202876440
+  Id: 12983586508480052332
   Name: "Prism - 3-Sided"
   Transform {
     Location {
@@ -93,12 +99,12 @@ Objects {
       Z: -0.08
     }
   }
-  ParentId: 2733126446953330543
+  ParentId: 16487524550381028492
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
       AssetReference {
-        Id: 14613802976288032229
+        Id: 10184847056121543272
       }
     }
     Overrides {
@@ -112,6 +118,12 @@ Objects {
     Overrides {
       Name: "ma:Shared_BaseMaterial:vtile"
       Float: 0.481217235
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        A: 1
+      }
     }
   }
   Collidable_v2 {
@@ -140,8 +152,8 @@ Objects {
     }
   }
   InstanceHistory {
-    SelfId: 17457255707202876440
-    SubobjectId: 4068126000538605738
+    SelfId: 12983586508480052332
+    SubobjectId: 9087900909150621918
     InstanceId: 10907345231434236569
     TemplateId: 15904085984438255415
   }
