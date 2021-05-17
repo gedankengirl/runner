@@ -200,6 +200,14 @@ local PetDb, EggDb do
         [78] = {"Fairy",    RARITY.LEGENDARY, UPGRADE.DIAMOND,    114, "B6EC162A0D0221EA:$FairyClientContext_3"},
         [79] = {"Fairy",    RARITY.LEGENDARY, UPGRADE.EMERALD,    171, "19CCC5FFDCDB359F:$FairyClientContext_4"},
         [80] = {"Fairy",    RARITY.LEGENDARY, UPGRADE.RUBY,       257, "E9FBFA0318943535:$FairyClientContext_5"},
+
+        -- TODO: remove later ->
+
+        [81] = {"GemBag",    RARITY.LEGENDARY, UPGRADE.NO_UPGRADE,       257, "597330DDE9FEB3A0:Gems_Bag_Stand"},
+
+        [82] = {"GemBucket", RARITY.LEGENDARY, UPGRADE.NO_UPGRADE,       257, "E8FFE976F6E62F16:Gems_Bucket_Stand"},
+
+        [83] = {"GemBarrel", RARITY.LEGENDARY, UPGRADE.NO_UPGRADE,       257, "4631B394990C0EDA:Gems_Barrel_Stand"},
     }
 
     EggDb = {
@@ -209,6 +217,8 @@ local PetDb, EggDb do
         Tropical = {price = 45000, gacha = {Flamingo=50, Crab=40, Mermaid=10}, muid = "186F54701898DFCB:EggGroup_Tropical"},
         Disco = {price = 175000, gacha = {Monkey=50, Bull=35, Cat=15}, muid = "6E94B64378BE0BD7:EggGroup_Disco"},
         Forest = {price = 750000, gacha = {Mushroom=60, Bunny=30, Fairy=10},  muid = "92C4C8B37C758BAC:EggGroup_Forest"},
+        -- TODO: remove later ->
+        Test = {price = 750000, gacha = {GemBag=60, GemBucket=30, GemBarrel=10},  muid = "92C4C8B37C758BAC:EggGroup_Forest"},
     }
     ---------------------------
     -- Pets
@@ -222,6 +232,7 @@ local PetDb, EggDb do
     end
 
     function PetDb:GetMuid(id)
+        print("@", id)
         local rec = self[id]
         return  rec[kMuid]
     end

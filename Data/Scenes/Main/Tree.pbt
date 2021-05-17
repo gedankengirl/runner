@@ -40,6 +40,10 @@ Objects {
   ChildIds: 1405853984779302850
   ChildIds: 3495900816611732726
   ChildIds: 13464569019514229
+  ChildIds: 11321980997242978237
+  ChildIds: 15203762938750013701
+  ChildIds: 18029624464397213158
+  ChildIds: 8849050354149658571
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -52,6 +56,175 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Folder {
+  }
+}
+Objects {
+  Id: 8849050354149658571
+  Name: "@PetStand"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 533442655076706862
+      value {
+        Overrides {
+          Name: "Name"
+          String: "@PetStand"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -216.234436
+            Y: -865.098145
+            Z: 56.6037598
+          }
+        }
+        Overrides {
+          Name: "cs:EggId"
+          String: "Test"
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 12943947732222281349
+    }
+  }
+}
+Objects {
+  Id: 18029624464397213158
+  Name: "Gem_Barrel_Stand"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 16295898805774737983
+      value {
+        Overrides {
+          Name: "Name"
+          String: "Gems_Barrel_Stand"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -1426.08923
+            Y: -2205.53711
+            Z: 277.517273
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 5058021307318013658
+    }
+  }
+}
+Objects {
+  Id: 15203762938750013701
+  Name: "Gems_Bag_Stand"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 14604867279432609722
+      value {
+        Overrides {
+          Name: "Name"
+          String: "Gems_Bag_Stand"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -1397.35266
+            Y: -1808.30737
+            Z: 277.517303
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 6445549221369000864
+    }
+  }
+}
+Objects {
+  Id: 11321980997242978237
+  Name: "Gems_Bucket_Stand"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 12582290005324120963
+      value {
+        Overrides {
+          Name: "Name"
+          String: "Gems_Bucket_Stand"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -1411.07642
+            Y: -1994.35718
+            Z: 277.517303
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 16789394633018191638
+    }
   }
 }
 Objects {
@@ -298,9 +471,30 @@ Objects {
         Overrides {
           Name: "Position"
           Vector {
-            X: -1960.44385
-            Y: -3275.8103
-            Z: 77.1521606
+            X: -1922.39075
+            Y: -3258.95337
+            Z: 79.9196625
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 10904016403742978492
+      value {
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: 21.1344604
+            Y: -6.82739258
+            Z: -33.6902161
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 0.37089625
+            Y: 0.480330259
+            Z: 0.48673
           }
         }
       }
