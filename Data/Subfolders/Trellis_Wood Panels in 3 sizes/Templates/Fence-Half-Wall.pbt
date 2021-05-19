@@ -2125,6 +2125,6 @@ Assets {
   Marketplace {
     Description: "Trellis/Wood Panels in 3 sizes\r\nWindow Fill\r\nHalf Wall\r\nFull Wall\r\n\r\nSimple but useful :-)"
   }
-  SerializationVersion: 84
+  SerializationVersion: 85
   DirectlyPublished: true
 }

@@ -2,7 +2,7 @@ Assets {
   Id: 15724246958161596148
   Name: "BoosterRingRare"
   PlatformAssetType: 13
-  SerializationVersion: 84
+  SerializationVersion: 85
   CustomMaterialAsset {
     BaseMaterialId: 12537868752084607232
     ParameterOverrides {

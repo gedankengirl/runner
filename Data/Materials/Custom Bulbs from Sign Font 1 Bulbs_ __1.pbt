@@ -2,7 +2,7 @@ Assets {
   Id: 16881924658337627568
   Name: "Custom Bulbs from Sign Font 1 Bulbs: *_slower"
   PlatformAssetType: 13
-  SerializationVersion: 84
+  SerializationVersion: 85
   CustomMaterialAsset {
     BaseMaterialId: 15894717410161880023
     ParameterOverrides {

@@ -4887,7 +4887,7 @@ Assets {
     }
     Assets {
       Id: 13587355193496680449
-      Name: "Urban Damaged Rebar Twisted Ends 02"
+      Name: "Urban Damaged Rebar - Twisted Ends 02"
       PlatformAssetType: 1
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
@@ -4953,5 +4953,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 84
+  SerializationVersion: 85
 }

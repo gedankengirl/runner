@@ -18631,6 +18631,6 @@ Assets {
   Marketplace {
     Description: "A set of lizardy-dragon monster models.\r\n\r\nUpdate: assigning asset type."
   }
-  SerializationVersion: 84
+  SerializationVersion: 85
   DirectlyPublished: true
 }

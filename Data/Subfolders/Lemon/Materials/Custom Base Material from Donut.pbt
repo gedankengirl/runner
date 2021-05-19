@@ -2,7 +2,7 @@ Assets {
   Id: 14840764697550645417
   Name: "Custom Base Material from Donut"
   PlatformAssetType: 13
-  SerializationVersion: 84
+  SerializationVersion: 85
   CustomMaterialAsset {
     BaseMaterialId: 10118603938789951675
     ParameterOverrides {

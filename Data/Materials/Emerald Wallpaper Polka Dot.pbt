@@ -2,7 +2,7 @@ Assets {
   Id: 7359545288683723237
   Name: "Emerald Wallpaper Polka Dot"
   PlatformAssetType: 13
-  SerializationVersion: 84
+  SerializationVersion: 85
   CustomMaterialAsset {
     BaseMaterialId: 6488236446163016965
     ParameterOverrides {

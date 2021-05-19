@@ -76,5 +76,5 @@ Assets {
       AssetId: "Object_Mover_Continuous"
     }
   }
-  SerializationVersion: 84
+  SerializationVersion: 85
 }

@@ -49,5 +49,5 @@ Assets {
     Version: "1.0.0"
     Description: "22 floor futuristic building"
   }
-  SerializationVersion: 84
+  SerializationVersion: 85
 }

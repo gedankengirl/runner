@@ -51,5 +51,5 @@ Assets {
     Version: "1.1.0"
     Description: "A set of lizardy-dragon monster models.\r\n\r\nUpdate: assigning asset type."
   }
-  SerializationVersion: 84
+  SerializationVersion: 85
 }

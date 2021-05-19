@@ -8648,6 +8648,6 @@ Assets {
   Marketplace {
     Description: "Gold necklace great for props or quest item.\r\n\r\nEnjoy!\r\n\r\nMade for DnD game jam"
   }
-  SerializationVersion: 84
+  SerializationVersion: 85
   DirectlyPublished: true
 }

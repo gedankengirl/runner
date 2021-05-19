@@ -2,7 +2,7 @@ Assets {
   Id: 15414411062788696059
   Name: "Gemstone_Ruby"
   PlatformAssetType: 13
-  SerializationVersion: 84
+  SerializationVersion: 85
   CustomMaterialAsset {
     BaseMaterialId: 1364294402302747595
     ParameterOverrides {
