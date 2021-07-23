@@ -43,5 +43,5 @@ Assets {
     Version: "1.0.0"
     Description: "Just an orange"
   }
-  SerializationVersion: 85
+  SerializationVersion: 92
 }

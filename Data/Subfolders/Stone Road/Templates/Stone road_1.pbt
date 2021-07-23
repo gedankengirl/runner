@@ -2453,6 +2453,6 @@ Assets {
   Marketplace {
     Description: "A basic stone roads that add more depth than painting one"
   }
-  SerializationVersion: 85
+  SerializationVersion: 92
   DirectlyPublished: true
 }

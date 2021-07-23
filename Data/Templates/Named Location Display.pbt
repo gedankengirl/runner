@@ -180,6 +180,7 @@ Assets {
             }
           }
           Canvas {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -232,6 +233,7 @@ Assets {
             }
           }
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -408,6 +410,7 @@ Assets {
             }
           }
           Panel {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -560,5 +563,5 @@ Assets {
       AssetId: "Named_Location_Display"
     }
   }
-  SerializationVersion: 85
+  SerializationVersion: 92
 }

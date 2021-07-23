@@ -436,6 +436,6 @@ Assets {
   Marketplace {
     Description: "A low-poly style banana"
   }
-  SerializationVersion: 85
+  SerializationVersion: 92
   DirectlyPublished: true
 }

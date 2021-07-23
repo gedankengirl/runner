@@ -3961,7 +3961,7 @@ Assets {
     }
     Assets {
       Id: 18033297229984528543
-      Name: "Wood Planks Dark"
+      Name: "Wood Planks"
       PlatformAssetType: 2
       PrimaryAsset {
         AssetType: "MaterialAssetRef"
@@ -4075,6 +4075,6 @@ Assets {
   Marketplace {
     Description: "Please take a moment to review my first ever creation!\r\n\r\nCore\'s first wishing well <3\r\n\r\nThere might be some minor errors\r\nI apologize for that\r\n"
   }
-  SerializationVersion: 85
+  SerializationVersion: 92
   DirectlyPublished: true
 }

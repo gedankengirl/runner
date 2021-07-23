@@ -221,6 +221,7 @@ Objects {
       RespawnMode_v2 {
         Value: "mc:erespawnmode:atclosestspawnpoint"
       }
+      StartSpawned: true
     }
   }
 }
@@ -301,6 +302,8 @@ Objects {
           HighDistance: 9000
         }
       }
+      PlayerInteractDistance: 500
+      PlayerInteractAngleDeg: 50
     }
   }
 }

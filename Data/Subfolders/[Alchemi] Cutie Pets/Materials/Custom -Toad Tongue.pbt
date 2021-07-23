@@ -2,7 +2,7 @@ Assets {
   Id: 17028496886576370575
   Name: "Custom -Toad Tongue"
   PlatformAssetType: 13
-  SerializationVersion: 85
+  SerializationVersion: 92
   CustomMaterialAsset {
     BaseMaterialId: 17516850920054914043
     ParameterOverrides {

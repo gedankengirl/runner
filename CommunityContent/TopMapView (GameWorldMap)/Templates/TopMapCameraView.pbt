@@ -303,6 +303,7 @@ Assets {
             }
           }
           Canvas {
+            Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
@@ -459,6 +460,6 @@ Assets {
   Marketplace {
     Description: "ONLY \"M\" default Key, same to open and close.\r\nFull Screen Size World Map with custom icons, Follow the player (Center of map) and you can zoom in/out with mouse."
   }
-  SerializationVersion: 85
+  SerializationVersion: 92
   DirectlyPublished: true
 }

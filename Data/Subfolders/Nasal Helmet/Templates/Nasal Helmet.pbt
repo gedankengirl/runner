@@ -40,5 +40,5 @@ Assets {
     Version: "1.0.0"
     Description: "Nasal Helmet"
   }
-  SerializationVersion: 85
+  SerializationVersion: 92
 }

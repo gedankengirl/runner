@@ -1445,6 +1445,6 @@ Assets {
   Marketplace {
     Description: "Oh no it\'s not me... It\'s... somone else."
   }
-  SerializationVersion: 85
+  SerializationVersion: 92
   DirectlyPublished: true
 }

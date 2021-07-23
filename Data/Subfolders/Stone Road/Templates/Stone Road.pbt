@@ -43,5 +43,5 @@ Assets {
     Version: "1.0.0"
     Description: "A basic stone roads that add more depth than painting one"
   }
-  SerializationVersion: 85
+  SerializationVersion: 92
 }

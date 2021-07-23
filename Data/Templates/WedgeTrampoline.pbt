@@ -821,6 +821,6 @@ Assets {
   Marketplace {
     Description: "WedgeTrampoline"
   }
-  SerializationVersion: 85
+  SerializationVersion: 92
   DirectlyPublished: true
 }

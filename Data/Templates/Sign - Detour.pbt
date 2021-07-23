@@ -326,5 +326,5 @@ Assets {
       AssetId: "Sign_-_Detour"
     }
   }
-  SerializationVersion: 85
+  SerializationVersion: 92
 }

@@ -2,7 +2,7 @@ Assets {
   Id: 3409049767788662311
   Name: "Ghost_emerald"
   PlatformAssetType: 13
-  SerializationVersion: 85
+  SerializationVersion: 92
   CustomMaterialAsset {
     BaseMaterialId: 2258330122587909962
     ParameterOverrides {

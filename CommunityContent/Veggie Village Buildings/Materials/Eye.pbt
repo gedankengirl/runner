@@ -2,7 +2,7 @@ Assets {
   Id: 11451877678913667775
   Name: "Eye"
   PlatformAssetType: 13
-  SerializationVersion: 85
+  SerializationVersion: 92
   CustomMaterialAsset {
     BaseMaterialId: 643713811288060970
     ParameterOverrides {

@@ -2,7 +2,7 @@ Assets {
   Id: 16432430742087806792
   Name: "Palm Tree Trunk"
   PlatformAssetType: 13
-  SerializationVersion: 85
+  SerializationVersion: 92
   CustomMaterialAsset {
     BaseMaterialId: 1010577580598291187
     ParameterOverrides {

@@ -27057,6 +27057,6 @@ Assets {
   Marketplace {
     Description: "9 little animal props"
   }
-  SerializationVersion: 85
+  SerializationVersion: 92
   DirectlyPublished: true
 }

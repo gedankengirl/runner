@@ -2,7 +2,7 @@ Assets {
   Id: 9328301213438330755
   Name: "Custom -PICKLE"
   PlatformAssetType: 13
-  SerializationVersion: 85
+  SerializationVersion: 92
   CustomMaterialAsset {
     BaseMaterialId: 9039445155969808083
     ParameterOverrides {

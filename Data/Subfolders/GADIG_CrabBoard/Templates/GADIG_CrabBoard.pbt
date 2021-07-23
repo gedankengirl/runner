@@ -49,5 +49,5 @@ Assets {
     Version: "1.0.0"
     Description: "Crab billboard"
   }
-  SerializationVersion: 85
+  SerializationVersion: 92
 }

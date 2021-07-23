@@ -1808,6 +1808,6 @@ Assets {
   Marketplace {
     Description: "My tribute to the inspiring Alice in Wonderland submissions.\r\nGreat job! <3 (equipment)\r\n\r\n-updated camera collision\r\n\r\nThank you Codexier for the playing cards!"
   }
-  SerializationVersion: 85
+  SerializationVersion: 92
   DirectlyPublished: true
 }
