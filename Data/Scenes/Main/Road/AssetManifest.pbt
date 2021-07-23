@@ -34,3 +34,12 @@ Assets {
     AssetId: "sm_urb_road_edge_curve_003"
   }
 }
+Assets {
+  Id: 2451906568776093363
+  Name: "Road Lines (1:10)"
+  PlatformAssetType: 2
+  PrimaryAsset {
+    AssetType: "MaterialAssetRef"
+    AssetId: "mi_road_lines_003_ref"
+  }
+}
