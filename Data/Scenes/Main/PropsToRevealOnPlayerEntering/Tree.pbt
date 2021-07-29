@@ -5,7 +5,7 @@ Objects {
   Name: "SignWithAddress"
   Transform {
     Location {
-      X: 591.132813
+      X: 591.132812
       Y: 2371.98218
       Z: 459.165314
     }
@@ -407,7 +407,7 @@ Objects {
   Name: "VisibleGeoForInvisibleTeleporter"
   Transform {
     Location {
-      X: 999.539063
+      X: 999.539062
       Y: 2261.40405
       Z: 379.897125
     }

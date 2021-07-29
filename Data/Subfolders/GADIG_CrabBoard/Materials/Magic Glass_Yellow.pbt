@@ -2,7 +2,7 @@ Assets {
   Id: 4476066579906742257
   Name: "Magic Glass_Yellow"
   PlatformAssetType: 13
-  SerializationVersion: 92
+  SerializationVersion: 94
   CustomMaterialAsset {
     BaseMaterialId: 9701872505929737372
     ParameterOverrides {

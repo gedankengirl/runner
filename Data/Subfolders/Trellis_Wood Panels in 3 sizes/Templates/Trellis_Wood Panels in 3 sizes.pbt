@@ -49,5 +49,5 @@ Assets {
     Version: "1.0.0"
     Description: "Trellis/Wood Panels in 3 sizes\r\nWindow Fill\r\nHalf Wall\r\nFull Wall\r\n\r\nSimple but useful :-)"
   }
-  SerializationVersion: 92
+  SerializationVersion: 94
 }

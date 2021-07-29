@@ -808,7 +808,7 @@ Objects {
   Name: "Waterfall Details"
   Transform {
     Location {
-      X: 9589.89063
+      X: 9589.89062
       Y: 5773.00586
       Z: 355.308105
     }
@@ -1100,7 +1100,7 @@ Objects {
   Name: "Rock Flat 01"
   Transform {
     Location {
-      X: 2550.20313
+      X: 2550.20312
       Y: 2580.51807
       Z: 378.273438
     }

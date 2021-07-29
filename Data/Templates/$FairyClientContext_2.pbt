@@ -447,7 +447,7 @@ Assets {
           Location {
             X: 13.9747314
             Y: -0.870849609
-            Z: -0.0434570313
+            Z: -0.0434570312
           }
           Rotation {
             Pitch: 81.3651581
@@ -2933,7 +2933,7 @@ Assets {
         Name: "Cylinder - Rounded Small"
         Transform {
           Location {
-            Y: 9.67382813
+            Y: 9.67382812
             Z: 2.373
           }
           Rotation {
@@ -2995,7 +2995,7 @@ Assets {
         Name: "Cylinder - Rounded Small"
         Transform {
           Location {
-            Y: -9.67382813
+            Y: -9.67382812
             Z: 2.37338257
           }
           Rotation {
@@ -3095,7 +3095,7 @@ Assets {
         Name: "Cylinder - Rounded Small"
         Transform {
           Location {
-            Y: 9.15039063
+            Y: 9.15039062
             Z: 1.52587891e-05
           }
           Rotation {
@@ -3156,7 +3156,7 @@ Assets {
         Name: "Cylinder - Rounded Small"
         Transform {
           Location {
-            Y: -9.15039063
+            Y: -9.15039062
             Z: 1.52587891e-05
           }
           Rotation {
@@ -3218,7 +3218,7 @@ Assets {
         Transform {
           Location {
             X: 4.43554688
-            Y: 9.05664063
+            Y: 9.05664062
           }
           Rotation {
             Pitch: 90
@@ -3988,7 +3988,7 @@ Assets {
         Transform {
           Location {
             X: 35.5273438
-            Y: -26.8320313
+            Y: -26.8320312
             Z: 20.5917969
           }
           Rotation {
@@ -4174,7 +4174,7 @@ Assets {
         Transform {
           Location {
             X: -35.2304688
-            Y: -26.8320313
+            Y: -26.8320312
             Z: 20.5917969
           }
           Rotation {
@@ -4298,7 +4298,7 @@ Assets {
             Z: 123.350906
           }
           Rotation {
-            Yaw: -6.10351563e-05
+            Yaw: -6.10351562e-05
           }
           Scale {
             X: 1.1545018
@@ -4544,5 +4544,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 92
+  SerializationVersion: 94
 }

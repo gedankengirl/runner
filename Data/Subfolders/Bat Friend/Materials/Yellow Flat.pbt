@@ -2,7 +2,7 @@ Assets {
   Id: 14421444004674082663
   Name: "Yellow Flat"
   PlatformAssetType: 13
-  SerializationVersion: 92
+  SerializationVersion: 94
   CustomMaterialAsset {
     BaseMaterialId: 15774776668431417239
     ParameterOverrides {

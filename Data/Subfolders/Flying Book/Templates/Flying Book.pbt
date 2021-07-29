@@ -49,5 +49,5 @@ Assets {
     Version: "1.0.0"
     Description: "Animated Flying Book"
   }
-  SerializationVersion: 92
+  SerializationVersion: 94
 }

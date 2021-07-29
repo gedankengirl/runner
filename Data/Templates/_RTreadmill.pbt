@@ -142,7 +142,7 @@ Assets {
         Name: "Sci-fi Console Screen 03"
         Transform {
           Location {
-            X: -111.726563
+            X: -111.726562
             Z: 165.962921
           }
           Rotation {
@@ -245,5 +245,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 92
+  SerializationVersion: 94
 }

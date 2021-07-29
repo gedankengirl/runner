@@ -2,7 +2,7 @@ Assets {
   Id: 10760100145061037708
   Name: "Dance Floor Magic Glass 01"
   PlatformAssetType: 13
-  SerializationVersion: 92
+  SerializationVersion: 94
   CustomMaterialAsset {
     BaseMaterialId: 9903815349600818687
     ParameterOverrides {

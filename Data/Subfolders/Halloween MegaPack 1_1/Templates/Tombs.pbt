@@ -38,7 +38,7 @@ Assets {
         Transform {
           Location {
             X: -0.000244140625
-            Y: -0.000122070313
+            Y: -0.000122070312
             Z: 5.97511292
           }
           Rotation {
@@ -813,7 +813,7 @@ Assets {
         Name: "Cube"
         Transform {
           Location {
-            X: -0.770507813
+            X: -0.770507812
             Y: -6.86120605
             Z: 87.7476349
           }
@@ -873,7 +873,7 @@ Assets {
         Name: "Cube"
         Transform {
           Location {
-            X: -0.770507813
+            X: -0.770507812
             Y: -6.63061523
             Z: 97.6367645
           }
@@ -1115,6 +1115,6 @@ Assets {
   Marketplace {
     Description: "Here is a CC Mega Pack full of Halloween goodies. Candy, Monsters, Props, etc."
   }
-  SerializationVersion: 92
+  SerializationVersion: 94
   DirectlyPublished: true
 }

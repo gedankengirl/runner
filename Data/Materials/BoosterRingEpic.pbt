@@ -2,7 +2,7 @@ Assets {
   Id: 3595364298761128928
   Name: "BoosterRingEpic"
   PlatformAssetType: 13
-  SerializationVersion: 92
+  SerializationVersion: 94
   CustomMaterialAsset {
     BaseMaterialId: 12537868752084607232
     ParameterOverrides {

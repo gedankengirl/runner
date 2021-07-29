@@ -5,7 +5,7 @@ Objects {
   Name: "SignWithAddress"
   Transform {
     Location {
-      X: 391.132813
+      X: 391.132812
       Y: 2771.98218
       Z: 459.165314
     }

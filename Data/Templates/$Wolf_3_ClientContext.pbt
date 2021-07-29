@@ -2607,7 +2607,7 @@ Assets {
         Transform {
           Location {
             X: -44.8847656
-            Y: 5.62695313
+            Y: 5.62695312
             Z: -18.1416016
           }
           Rotation {
@@ -2720,7 +2720,7 @@ Assets {
         Transform {
           Location {
             X: 19.8390694
-            Y: -0.688476563
+            Y: -0.688476562
             Z: 33.7831116
           }
           Rotation {
@@ -3759,7 +3759,7 @@ Assets {
         Transform {
           Location {
             X: 19.8390694
-            Y: -0.688476563
+            Y: -0.688476562
             Z: 33.7831116
           }
           Rotation {
@@ -5177,7 +5177,7 @@ Assets {
         Transform {
           Location {
             X: 2.4822998
-            Y: -0.739257813
+            Y: -0.739257812
             Z: -1.01046753
           }
           Rotation {
@@ -5326,7 +5326,7 @@ Assets {
         Name: "Prism - 3-Sided"
         Transform {
           Location {
-            X: -2.03320313
+            X: -2.03320312
             Y: -20.9169922
             Z: 22.4740601
           }
@@ -5551,7 +5551,7 @@ Assets {
         Name: "Prism - 3-Sided"
         Transform {
           Location {
-            X: -2.03320313
+            X: -2.03320312
             Y: 20.8730469
             Z: 26.7689056
           }
@@ -7952,7 +7952,7 @@ Assets {
         Transform {
           Location {
             X: -118.847778
-            Y: -0.684570313
+            Y: -0.684570312
             Z: 56.4165649
           }
           Rotation {
@@ -8162,5 +8162,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 92
+  SerializationVersion: 94
 }

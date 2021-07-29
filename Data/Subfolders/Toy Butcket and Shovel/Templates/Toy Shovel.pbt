@@ -71,7 +71,7 @@ Assets {
         Transform {
           Location {
             X: 49.7749023
-            Y: -54.9882813
+            Y: -54.9882812
             Z: 193.925934
           }
           Rotation {
@@ -133,7 +133,7 @@ Assets {
         Transform {
           Location {
             X: 49.7749023
-            Y: 54.9882813
+            Y: 54.9882812
             Z: 193.92807
           }
           Rotation {
@@ -195,7 +195,7 @@ Assets {
         Transform {
           Location {
             X: 49.7749023
-            Y: -54.9882813
+            Y: -54.9882812
             Z: 193.925934
           }
           Rotation {
@@ -257,7 +257,7 @@ Assets {
         Transform {
           Location {
             X: 49.7749023
-            Y: -54.9882813
+            Y: -54.9882812
             Z: 193.925934
           }
           Rotation {
@@ -319,7 +319,7 @@ Assets {
         Transform {
           Location {
             X: 49.7758789
-            Y: 54.9882813
+            Y: 54.9882812
             Z: 193.926437
           }
           Rotation {
@@ -607,7 +607,7 @@ Assets {
             Z: 226.822784
           }
           Rotation {
-            Pitch: -6.10351563e-05
+            Pitch: -6.10351562e-05
             Yaw: -90
             Roll: -162.499985
           }
@@ -732,7 +732,7 @@ Assets {
           }
           Rotation {
             Pitch: 72.4998474
-            Yaw: -6.10351563e-05
+            Yaw: -6.10351562e-05
             Roll: -90.0001221
           }
           Scale {
@@ -975,7 +975,7 @@ Assets {
         Transform {
           Location {
             X: 158.584961
-            Y: -0.0493164063
+            Y: -0.0493164062
             Z: 431.975586
           }
           Rotation {
@@ -1121,6 +1121,6 @@ Assets {
   Marketplace {
     Description: "A toy bucket and shovel for playing in the sand :)"
   }
-  SerializationVersion: 92
+  SerializationVersion: 94
   DirectlyPublished: true
 }

@@ -2,7 +2,7 @@ Assets {
   Id: 17551431442048606053
   Name: "ColorCodeTemplate"
   PlatformAssetType: 13
-  SerializationVersion: 92
+  SerializationVersion: 94
   CustomMaterialAsset {
     BaseMaterialId: 2258330122587909962
     ParameterOverrides {

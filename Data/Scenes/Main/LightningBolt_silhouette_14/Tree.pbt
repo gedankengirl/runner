@@ -5,7 +5,7 @@ Objects {
   Name: "Prism - 3-Sided"
   Transform {
     Location {
-      X: -4.87695313
+      X: -4.87695312
       Y: 7.90625
       Z: 24.3706665
     }
@@ -78,7 +78,7 @@ Objects {
   Name: "Prism - 3-Sided"
   Transform {
     Location {
-      X: -4.87695313
+      X: -4.87695312
       Y: -7.90625
       Z: -21.5219727
     }

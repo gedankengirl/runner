@@ -184,5 +184,5 @@ Assets {
       AssetId: "Object_Rotator"
     }
   }
-  SerializationVersion: 92
+  SerializationVersion: 94
 }

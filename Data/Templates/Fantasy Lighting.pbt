@@ -5895,7 +5895,7 @@ Assets {
         Name: "Point Light"
         Transform {
           Location {
-            X: 2526.95313
+            X: 2526.95312
             Y: -612.862732
             Z: -296.501923
           }
@@ -7955,5 +7955,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 92
+  SerializationVersion: 94
 }

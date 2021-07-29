@@ -124,7 +124,7 @@ Objects {
   Name: "Rock Flat 02"
   Transform {
     Location {
-      X: 91.0195313
+      X: 91.0195312
       Y: -5.890625
     }
     Rotation {

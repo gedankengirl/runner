@@ -45,7 +45,7 @@ Assets {
         Transform {
           Location {
             X: 0.117248535
-            Y: -0.301757813
+            Y: -0.301757812
             Z: 150.848633
           }
           Rotation {
@@ -315,7 +315,7 @@ Assets {
         Transform {
           Location {
             X: -0.11730957
-            Y: 0.301757813
+            Y: 0.301757812
           }
           Rotation {
           }
@@ -824,7 +824,7 @@ Assets {
         Transform {
           Location {
             X: 0.117248535
-            Y: -0.301757813
+            Y: -0.301757812
             Z: 107.355721
           }
           Rotation {
@@ -884,7 +884,7 @@ Assets {
         Transform {
           Location {
             X: -0.682067871
-            Y: -0.301757813
+            Y: -0.301757812
             Z: 48.6906815
           }
           Rotation {
@@ -945,7 +945,7 @@ Assets {
         Transform {
           Location {
             X: -0.682067871
-            Y: -0.301757813
+            Y: -0.301757812
             Z: 73.0787888
           }
           Rotation {
@@ -1008,7 +1008,7 @@ Assets {
         Transform {
           Location {
             X: -0.682067871
-            Y: -0.301757813
+            Y: -0.301757812
             Z: 53.0991287
           }
           Rotation {
@@ -1071,7 +1071,7 @@ Assets {
         Transform {
           Location {
             X: 0.117248535
-            Y: -0.301757813
+            Y: -0.301757812
             Z: 163.18515
           }
           Rotation {
@@ -1152,6 +1152,6 @@ Assets {
   Marketplace {
     Description: "Here is a CC Mega Pack full of Halloween goodies. Candy, Monsters, Props, etc."
   }
-  SerializationVersion: 92
+  SerializationVersion: 94
   DirectlyPublished: true
 }

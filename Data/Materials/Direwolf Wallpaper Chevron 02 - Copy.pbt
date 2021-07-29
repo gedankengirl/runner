@@ -2,7 +2,7 @@ Assets {
   Id: 2919066375115052861
   Name: "Direwolf Gold Wallpaper Chevron 02"
   PlatformAssetType: 13
-  SerializationVersion: 92
+  SerializationVersion: 94
   CustomMaterialAsset {
     BaseMaterialId: 11107235379774520765
     ParameterOverrides {

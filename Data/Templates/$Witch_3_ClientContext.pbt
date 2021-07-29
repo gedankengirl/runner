@@ -2865,7 +2865,7 @@ Assets {
         Name: "Cylinder - Rounded Small"
         Transform {
           Location {
-            X: -9.48632813
+            X: -9.48632812
             Y: 0.001953125
             Z: -1.52587891e-05
           }
@@ -3093,7 +3093,7 @@ Assets {
         Name: "Cylinder - Rounded Small"
         Transform {
           Location {
-            X: -9.77539063
+            X: -9.77539062
             Y: 0.001953125
             Z: -4.57763672e-05
           }
@@ -4732,7 +4732,7 @@ Assets {
         Name: "Gem - Pear Polished"
         Transform {
           Location {
-            X: 5.88476563
+            X: 5.88476562
             Y: 1.03515434
             Z: -4.80116272
           }
@@ -4795,7 +4795,7 @@ Assets {
         Name: "Ring"
         Transform {
           Location {
-            X: 5.88476563
+            X: 5.88476562
             Y: 1.04101372
             Z: 4.40792847
           }
@@ -5330,7 +5330,7 @@ Assets {
         Name: "Bone arm"
         Transform {
           Location {
-            X: -79.5507813
+            X: -79.5507812
             Y: 4.7415946e-05
             Z: 273.848267
           }
@@ -5798,5 +5798,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 92
+  SerializationVersion: 94
 }

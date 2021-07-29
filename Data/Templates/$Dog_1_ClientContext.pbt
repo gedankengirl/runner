@@ -563,9 +563,9 @@ Assets {
         Name: "Plane Ring - One Sided"
         Transform {
           Location {
-            X: -2.60351563
+            X: -2.60351562
             Y: -1
-            Z: -6.10351563e-05
+            Z: -6.10351562e-05
           }
           Rotation {
             Pitch: 70.3999863
@@ -2532,7 +2532,7 @@ Assets {
         Transform {
           Location {
             X: -44.8847656
-            Y: 5.62695313
+            Y: 5.62695312
             Z: -18.1416016
           }
           Rotation {
@@ -4297,7 +4297,7 @@ Assets {
           Rotation {
             Pitch: 90
             Yaw: -4.09811328e-05
-            Roll: -6.10351563e-05
+            Roll: -6.10351562e-05
           }
           Scale {
             X: 0.48477003
@@ -5441,5 +5441,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 92
+  SerializationVersion: 94
 }

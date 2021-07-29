@@ -8734,8 +8734,8 @@ Assets {
         Name: "Urban Pipe Coupling 05"
         Transform {
           Location {
-            X: -6.10351563e-05
-            Y: 0.000122070313
+            X: -6.10351562e-05
+            Y: 0.000122070312
             Z: -3.04568672
           }
           Rotation {
@@ -10400,7 +10400,7 @@ Assets {
         Name: "Sphere"
         Transform {
           Location {
-            X: -0.907226563
+            X: -0.907226562
             Y: 0.1328125
             Z: 103.035889
           }
@@ -10521,7 +10521,7 @@ Assets {
         Name: "Sphere"
         Transform {
           Location {
-            X: -0.907226563
+            X: -0.907226562
             Y: 33.5117188
             Z: 60.4626465
           }
@@ -17084,7 +17084,7 @@ Assets {
           }
           Rotation {
             Pitch: 1.36603776e-05
-            Yaw: -6.10351563e-05
+            Yaw: -6.10351562e-05
             Roll: -8.84002686
           }
           Scale {
@@ -17948,7 +17948,7 @@ Assets {
             Z: 53.0950165
           }
           Rotation {
-            Yaw: -6.10351563e-05
+            Yaw: -6.10351562e-05
             Roll: 65.9911575
           }
           Scale {
@@ -23999,7 +23999,7 @@ Assets {
         Transform {
           Location {
             X: -11.7337646
-            Y: 5.23632813
+            Y: 5.23632812
             Z: 216.926758
           }
           Rotation {
@@ -24137,7 +24137,7 @@ Assets {
         Transform {
           Location {
             X: -17.3925781
-            Y: 6.38476563
+            Y: 6.38476562
             Z: 249.328613
           }
           Rotation {
@@ -24191,7 +24191,7 @@ Assets {
         Transform {
           Location {
             X: -17.3925781
-            Y: 6.38476563
+            Y: 6.38476562
             Z: 249.328613
           }
           Rotation {
@@ -24245,7 +24245,7 @@ Assets {
         Transform {
           Location {
             X: -17.3925781
-            Y: 6.38476563
+            Y: 6.38476562
             Z: 249.328613
           }
           Rotation {
@@ -24345,7 +24345,7 @@ Assets {
         Transform {
           Location {
             X: -17.3925781
-            Y: 6.38476563
+            Y: 6.38476562
             Z: 249.328613
           }
           Rotation {
@@ -24906,7 +24906,7 @@ Assets {
         Name: "Fantasy Human Guy"
         Transform {
           Location {
-            Y: -6.10351563e-05
+            Y: -6.10351562e-05
             Z: 209.369873
           }
           Rotation {
@@ -33517,7 +33517,7 @@ Assets {
             Z: 1.65358889
           }
           Rotation {
-            Pitch: -6.10351563e-05
+            Pitch: -6.10351562e-05
             Yaw: 12.7402983
             Roll: -179.999893
           }
@@ -40317,6 +40317,6 @@ Assets {
   Marketplace {
     Description: "This contains food, coins, trees, crates, chests, mana crystals, and statues from Mergelandia. Enjoy!\r\n\r\nBig props to the Merglandia team for such awesome content!"
   }
-  SerializationVersion: 92
+  SerializationVersion: 94
   DirectlyPublished: true
 }

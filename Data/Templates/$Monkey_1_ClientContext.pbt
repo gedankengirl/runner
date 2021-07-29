@@ -373,7 +373,7 @@ Assets {
         Name: "Sphere - Half"
         Transform {
           Location {
-            X: 0.000122070313
+            X: 0.000122070312
             Y: -16.8059082
           }
           Rotation {
@@ -439,7 +439,7 @@ Assets {
         Name: "Sphere - Half"
         Transform {
           Location {
-            X: 0.000122070313
+            X: 0.000122070312
             Y: -16.8059082
           }
           Rotation {
@@ -1264,7 +1264,7 @@ Assets {
         Name: "Teeth"
         Transform {
           Location {
-            X: 0.000610351563
+            X: 0.000610351562
             Y: 5.96826172
             Z: 0.370346069
           }
@@ -1842,7 +1842,7 @@ Assets {
         Transform {
           Location {
             X: -5.06005859
-            Y: 15.9570313
+            Y: 15.9570312
             Z: 1.51913452
           }
           Rotation {
@@ -1896,7 +1896,7 @@ Assets {
         Transform {
           Location {
             X: -4.29974365
-            Y: -15.5195313
+            Y: -15.5195312
           }
           Rotation {
             Pitch: -40.1776
@@ -3924,7 +3924,7 @@ Assets {
         Transform {
           Location {
             X: -31.703186
-            Y: -3.69726563
+            Y: -3.69726562
             Z: 86.9603882
           }
           Rotation {
@@ -4132,7 +4132,7 @@ Assets {
         Transform {
           Location {
             X: -0.25579834
-            Y: 7.50195313
+            Y: 7.50195312
             Z: 4.00488281
           }
           Rotation {
@@ -4366,7 +4366,7 @@ Assets {
         Transform {
           Location {
             X: -28.0310059
-            Y: 55.1132813
+            Y: 55.1132812
             Z: 41.840271
           }
           Rotation {
@@ -5116,5 +5116,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 92
+  SerializationVersion: 94
 }

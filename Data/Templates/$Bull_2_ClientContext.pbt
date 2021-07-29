@@ -35,7 +35,7 @@ Assets {
         Name: "Transform Controller"
         Transform {
           Location {
-            Z: 6.10351563e-05
+            Z: 6.10351562e-05
           }
           Rotation {
           }
@@ -551,7 +551,7 @@ Assets {
         Transform {
           Location {
             X: -38.0058594
-            Y: 35.2382813
+            Y: 35.2382812
             Z: 182.684662
           }
           Rotation {
@@ -800,7 +800,7 @@ Assets {
         Transform {
           Location {
             X: -37.3730469
-            Y: 72.4726563
+            Y: 72.4726562
             Z: 150.171875
           }
           Rotation {
@@ -864,7 +864,7 @@ Assets {
         Transform {
           Location {
             X: 14.2460938
-            Y: 2.43945313
+            Y: 2.43945312
             Z: 148.527328
           }
           Rotation {
@@ -1183,7 +1183,7 @@ Assets {
         Transform {
           Location {
             X: -38.0058594
-            Y: -35.2382813
+            Y: -35.2382812
             Z: 182.684662
           }
           Rotation {
@@ -2286,5 +2286,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 92
+  SerializationVersion: 94
 }

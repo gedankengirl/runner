@@ -2287,7 +2287,7 @@ Assets {
         Name: "spikes"
         Transform {
           Location {
-            X: 0.211914063
+            X: 0.211914062
             Y: 0.275970459
             Z: 9.98996
           }
@@ -2922,7 +2922,7 @@ Assets {
         Name: "spikes"
         Transform {
           Location {
-            X: 0.211914063
+            X: 0.211914062
             Y: 0.275970459
             Z: 9.98996
           }
@@ -3557,7 +3557,7 @@ Assets {
         Name: "spikes"
         Transform {
           Location {
-            X: 0.211914063
+            X: 0.211914062
             Y: 0.275970459
             Z: 9.98996
           }
@@ -4322,6 +4322,6 @@ Assets {
   Marketplace {
     Description: "This is my first template so it\'s not great but I neede a king so I made a king"
   }
-  SerializationVersion: 92
+  SerializationVersion: 94
   DirectlyPublished: true
 }

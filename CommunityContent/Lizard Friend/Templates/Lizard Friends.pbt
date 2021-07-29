@@ -1119,7 +1119,7 @@ Assets {
         Name: "Teardrop - Truncated"
         Transform {
           Location {
-            X: 83.5507813
+            X: 83.5507812
             Y: -77.7064209
             Z: 2.33966064
           }
@@ -1959,7 +1959,7 @@ Assets {
         Name: "Teardrop - Truncated"
         Transform {
           Location {
-            X: -96.1757813
+            X: -96.1757812
             Y: 0.171142578
             Z: 11.0320435
           }
@@ -2157,7 +2157,7 @@ Assets {
         Transform {
           Location {
             X: 101.813828
-            Y: 4.20507813
+            Y: 4.20507812
             Z: 383.822205
           }
           Rotation {
@@ -7292,7 +7292,7 @@ Assets {
         Name: "Teardrop - Truncated"
         Transform {
           Location {
-            X: 83.5507813
+            X: 83.5507812
             Y: -77.7064209
             Z: 2.33966064
           }
@@ -8137,7 +8137,7 @@ Assets {
         Name: "Teardrop - Truncated"
         Transform {
           Location {
-            X: -96.1757813
+            X: -96.1757812
             Y: 0.171142578
             Z: 11.0320435
           }
@@ -8338,7 +8338,7 @@ Assets {
         Transform {
           Location {
             X: 101.813828
-            Y: 4.20507813
+            Y: 4.20507812
             Z: 383.822205
           }
           Rotation {
@@ -13472,7 +13472,7 @@ Assets {
         Name: "Teardrop - Truncated"
         Transform {
           Location {
-            X: 83.5507813
+            X: 83.5507812
             Y: -77.7064209
             Z: 2.33966064
           }
@@ -14317,7 +14317,7 @@ Assets {
         Name: "Teardrop - Truncated"
         Transform {
           Location {
-            X: -96.1757813
+            X: -96.1757812
             Y: 0.171142578
             Z: 11.0320435
           }
@@ -14518,7 +14518,7 @@ Assets {
         Transform {
           Location {
             X: 101.813828
-            Y: 4.20507813
+            Y: 4.20507812
             Z: 383.822205
           }
           Rotation {
@@ -18631,6 +18631,6 @@ Assets {
   Marketplace {
     Description: "A set of lizardy-dragon monster models.\r\n\r\nUpdate: assigning asset type."
   }
-  SerializationVersion: 92
+  SerializationVersion: 94
   DirectlyPublished: true
 }

@@ -222,7 +222,7 @@ Assets {
         Name: "Cylinder"
         Transform {
           Location {
-            X: -1.77539063
+            X: -1.77539062
           }
           Rotation {
             Pitch: 90
@@ -279,7 +279,7 @@ Assets {
         Name: "Cylinder"
         Transform {
           Location {
-            X: -1.77539063
+            X: -1.77539062
           }
           Rotation {
             Pitch: 90
@@ -761,7 +761,7 @@ Assets {
         Name: "Cylinder"
         Transform {
           Location {
-            X: -1.77539063
+            X: -1.77539062
           }
           Rotation {
             Pitch: 90
@@ -812,7 +812,7 @@ Assets {
         Name: "Cylinder"
         Transform {
           Location {
-            X: -1.77539063
+            X: -1.77539062
           }
           Rotation {
             Pitch: 90
@@ -1053,7 +1053,7 @@ Assets {
         Name: "Prism - 6-Sided"
         Transform {
           Location {
-            X: -1.77539063
+            X: -1.77539062
           }
           Rotation {
             Pitch: 90
@@ -1113,7 +1113,7 @@ Assets {
         Name: "Prism - 6-Sided"
         Transform {
           Location {
-            X: -1.77539063
+            X: -1.77539062
           }
           Rotation {
             Pitch: 90
@@ -1174,7 +1174,7 @@ Assets {
         Transform {
           Location {
             Y: 803.5625
-            Z: 6.10351563e-05
+            Z: 6.10351562e-05
           }
           Rotation {
           }
@@ -1207,7 +1207,7 @@ Assets {
         Name: "Prism - 3-Sided"
         Transform {
           Location {
-            X: -4.87695313
+            X: -4.87695312
             Y: -7.90625
             Z: -21.5219727
           }
@@ -1274,7 +1274,7 @@ Assets {
         Name: "Prism - 3-Sided"
         Transform {
           Location {
-            X: -4.87695313
+            X: -4.87695312
             Y: 7.90625
             Z: 24.3706665
           }
@@ -1474,5 +1474,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 92
+  SerializationVersion: 94
 }

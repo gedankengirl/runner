@@ -344,7 +344,7 @@ Assets {
         Name: "Sphere"
         Transform {
           Location {
-            X: 445.289063
+            X: 445.289062
             Z: 137.028503
           }
           Rotation {
@@ -1451,7 +1451,7 @@ Assets {
         Transform {
           Location {
             X: -337.126953
-            Y: -0.325195313
+            Y: -0.325195312
             Z: -190.153259
           }
           Rotation {
@@ -2814,7 +2814,7 @@ Assets {
         Name: "Ring - Quarter"
         Transform {
           Location {
-            X: 228.695313
+            X: 228.695312
             Y: -204.682617
             Z: -279.174438
           }
@@ -3139,7 +3139,7 @@ Assets {
         Transform {
           Location {
             X: 961.75
-            Y: 125.320313
+            Y: 125.320312
             Z: 224.191467
           }
           Rotation {
@@ -3462,7 +3462,7 @@ Assets {
         Name: "Ring - Quarter"
         Transform {
           Location {
-            X: 423.289063
+            X: 423.289062
             Y: 217.143555
             Z: -251.925598
           }
@@ -5220,7 +5220,7 @@ Assets {
         Name: "lens"
         Transform {
           Location {
-            X: 904.101563
+            X: 904.101562
             Y: -281.657227
             Z: 1579.84009
           }
@@ -5637,6 +5637,6 @@ Assets {
   Marketplace {
     Description: "From my Alice Entry. Hopeing some can use him in the future."
   }
-  SerializationVersion: 92
+  SerializationVersion: 94
   DirectlyPublished: true
 }

@@ -268,6 +268,7 @@ Assets {
           MaxPitch: 89
           MinYaw: -89
           MaxYaw: 89
+          UseAsAudioListener: true
         }
       }
       Objects {
@@ -460,6 +461,6 @@ Assets {
   Marketplace {
     Description: "ONLY \"M\" default Key, same to open and close.\r\nFull Screen Size World Map with custom icons, Follow the player (Center of map) and you can zoom in/out with mouse."
   }
-  SerializationVersion: 92
+  SerializationVersion: 94
   DirectlyPublished: true
 }

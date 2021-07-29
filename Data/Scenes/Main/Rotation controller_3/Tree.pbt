@@ -91,7 +91,7 @@ Objects {
         Overrides {
           Name: "cs:RotateTo"
           Rotator {
-            Pitch: 32.4257813
+            Pitch: 32.4257812
             Yaw: -66.2958679
             Roll: -62.7142029
           }

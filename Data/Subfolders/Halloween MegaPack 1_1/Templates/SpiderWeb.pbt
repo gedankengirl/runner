@@ -2556,7 +2556,7 @@ Assets {
             Z: 204.639801
           }
           Rotation {
-            Pitch: -0.000122070313
+            Pitch: -0.000122070312
             Yaw: -45.6178589
             Roll: 89.9998779
           }
@@ -3471,6 +3471,6 @@ Assets {
   Marketplace {
     Description: "Here is a CC Mega Pack full of Halloween goodies. Candy, Monsters, Props, etc."
   }
-  SerializationVersion: 92
+  SerializationVersion: 94
   DirectlyPublished: true
 }

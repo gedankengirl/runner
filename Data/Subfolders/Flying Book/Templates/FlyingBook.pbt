@@ -1201,6 +1201,6 @@ Assets {
   Marketplace {
     Description: "Animated Flying Book"
   }
-  SerializationVersion: 92
+  SerializationVersion: 94
   DirectlyPublished: true
 }

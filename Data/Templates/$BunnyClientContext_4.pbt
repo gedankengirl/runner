@@ -107,7 +107,7 @@ Assets {
             Z: 146.88298
           }
           Rotation {
-            Yaw: -6.10351563e-05
+            Yaw: -6.10351562e-05
           }
           Scale {
             X: 0.988269627
@@ -1125,7 +1125,7 @@ Assets {
         Name: "Vibrisses"
         Transform {
           Location {
-            Y: 24.5820313
+            Y: 24.5820312
             Z: 3.05175781e-05
           }
           Rotation {
@@ -1633,7 +1633,7 @@ Assets {
         Name: "Sphere"
         Transform {
           Location {
-            X: -58.8789063
+            X: -58.8789062
             Z: 60.9724121
           }
           Rotation {
@@ -2016,7 +2016,7 @@ Assets {
         Name: "Cube - Rounded"
         Transform {
           Location {
-            X: -1.86132813
+            X: -1.86132812
           }
           Rotation {
           }
@@ -2076,7 +2076,7 @@ Assets {
         Transform {
           Location {
             X: -0.861328125
-            Y: 16.6757813
+            Y: 16.6757812
           }
           Rotation {
             Roll: -90
@@ -2137,7 +2137,7 @@ Assets {
         Transform {
           Location {
             X: -0.861328125
-            Y: -16.6757813
+            Y: -16.6757812
           }
           Rotation {
             Roll: 89.9999924
@@ -2480,7 +2480,7 @@ Assets {
         Name: "Teardrop - Truncated"
         Transform {
           Location {
-            X: -60.7851563
+            X: -60.7851562
             Z: -31.6277924
           }
           Rotation {
@@ -2682,7 +2682,7 @@ Assets {
         Name: "Gem - Radiant Polished"
         Transform {
           Location {
-            X: 59.3632813
+            X: 59.3632812
             Z: 69.3721161
           }
           Rotation {
@@ -2940,5 +2940,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 92
+  SerializationVersion: 94
 }

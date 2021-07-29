@@ -562,7 +562,7 @@ Assets {
         Name: "Vibrisses"
         Transform {
           Location {
-            X: 48.2695313
+            X: 48.2695312
             Y: 23.3203125
             Z: 155.530273
           }
@@ -724,7 +724,7 @@ Assets {
         Name: "Vibrisses"
         Transform {
           Location {
-            X: 48.2695313
+            X: 48.2695312
             Y: -23.3203125
             Z: 155.530273
           }
@@ -1605,7 +1605,7 @@ Assets {
         Name: "Hood"
         Transform {
           Location {
-            X: 15.2382813
+            X: 15.2382812
             Z: 166.419373
           }
           Rotation {
@@ -1883,7 +1883,7 @@ Assets {
         Name: "Hoodie Drawstring"
         Transform {
           Location {
-            X: 49.0664063
+            X: 49.0664062
             Y: 2
             Z: 97.0707397
           }
@@ -2040,7 +2040,7 @@ Assets {
         Name: "Hoodie Drawstring"
         Transform {
           Location {
-            X: 51.4101563
+            X: 51.4101562
             Y: -6.75
             Z: 91.0879517
           }
@@ -3860,7 +3860,7 @@ Assets {
         Transform {
           Location {
             X: -44.8847656
-            Y: 5.62695313
+            Y: 5.62695312
             Z: -18.1416016
           }
           Rotation {
@@ -3923,7 +3923,7 @@ Assets {
         Transform {
           Location {
             X: -13.8203125
-            Y: 34.9257813
+            Y: 34.9257812
             Z: 206.913361
           }
           Rotation {
@@ -3999,7 +3999,7 @@ Assets {
         Transform {
           Location {
             X: -13.8203125
-            Y: -34.9257813
+            Y: -34.9257812
             Z: 206.913361
           }
           Rotation {
@@ -4415,5 +4415,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 92
+  SerializationVersion: 94
 }

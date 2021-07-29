@@ -563,7 +563,7 @@ Assets {
         Name: "Vibrisses"
         Transform {
           Location {
-            X: 48.2695313
+            X: 48.2695312
             Y: 23.3203125
             Z: 155.530273
           }
@@ -725,7 +725,7 @@ Assets {
         Name: "Vibrisses"
         Transform {
           Location {
-            X: 48.2695313
+            X: 48.2695312
             Y: -23.3203125
             Z: 155.530273
           }
@@ -1614,7 +1614,7 @@ Assets {
         Name: "Hood"
         Transform {
           Location {
-            X: 15.2382813
+            X: 15.2382812
             Z: 166.419373
           }
           Rotation {
@@ -1892,7 +1892,7 @@ Assets {
         Name: "Hoodie Drawstring"
         Transform {
           Location {
-            X: 49.0664063
+            X: 49.0664062
             Y: 2
             Z: 97.0707397
           }
@@ -2049,7 +2049,7 @@ Assets {
         Name: "Hoodie Drawstring"
         Transform {
           Location {
-            X: 51.4101563
+            X: 51.4101562
             Y: -6.75
             Z: 91.0879517
           }
@@ -3869,7 +3869,7 @@ Assets {
         Transform {
           Location {
             X: -44.8847656
-            Y: 5.62695313
+            Y: 5.62695312
             Z: -18.1416016
           }
           Rotation {
@@ -3931,8 +3931,8 @@ Assets {
         Name: "Cone"
         Transform {
           Location {
-            X: -13.8164063
-            Y: 34.9257813
+            X: -13.8164062
+            Y: 34.9257812
             Z: 206.913361
           }
           Rotation {
@@ -4007,8 +4007,8 @@ Assets {
         Name: "Cone"
         Transform {
           Location {
-            X: -13.8164063
-            Y: -34.9257813
+            X: -13.8164062
+            Y: -34.9257812
             Z: 206.913361
           }
           Rotation {
@@ -4406,7 +4406,7 @@ Assets {
         Transform {
           Location {
             X: 4.97460938
-            Y: -37.5351563
+            Y: -37.5351562
             Z: 68.3855286
           }
           Rotation {
@@ -4470,7 +4470,7 @@ Assets {
         Transform {
           Location {
             X: 2.32617188
-            Y: -53.0195313
+            Y: -53.0195312
             Z: 50.7119446
           }
           Rotation {
@@ -4533,7 +4533,7 @@ Assets {
         Name: "Diamond - Polished"
         Transform {
           Location {
-            X: -2.72070313
+            X: -2.72070312
             Y: -62.78125
             Z: 27.1114502
           }
@@ -4662,7 +4662,7 @@ Assets {
         Transform {
           Location {
             X: -9.20117188
-            Y: 66.8945313
+            Y: 66.8945312
             Z: 4.57763672e-05
           }
           Rotation {
@@ -5113,5 +5113,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 92
+  SerializationVersion: 94
 }

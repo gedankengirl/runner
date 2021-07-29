@@ -2,7 +2,7 @@ Assets {
   Id: 17143042493049892809
   Name: "Monkey Fur"
   PlatformAssetType: 13
-  SerializationVersion: 92
+  SerializationVersion: 94
   CustomMaterialAsset {
     BaseMaterialId: 11758947754981552040
     ParameterOverrides {

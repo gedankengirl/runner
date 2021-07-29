@@ -491,7 +491,7 @@ Assets {
         Transform {
           Location {
             X: 5.81707063e-05
-            Y: -23.1914063
+            Y: -23.1914062
             Z: 0.000268427451
           }
           Rotation {
@@ -654,7 +654,7 @@ Assets {
         Name: "Left eye"
         Transform {
           Location {
-            Y: 23.1914063
+            Y: 23.1914062
             Z: -1.52587891e-05
           }
           Rotation {
@@ -1644,5 +1644,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 92
+  SerializationVersion: 94
 }

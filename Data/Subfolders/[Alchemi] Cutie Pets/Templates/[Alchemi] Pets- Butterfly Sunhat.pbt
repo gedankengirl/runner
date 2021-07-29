@@ -138,7 +138,7 @@ Assets {
         Name: "Cone - Truncated Hollow Thin"
         Transform {
           Location {
-            X: 11.5195313
+            X: 11.5195312
             Y: 1.35644531
             Z: 12.4660645
           }
@@ -1030,7 +1030,7 @@ Assets {
             Z: 2.06664681
           }
           Rotation {
-            Pitch: -6.10351563e-05
+            Pitch: -6.10351562e-05
             Yaw: 89.9999313
             Roll: -90
           }
@@ -1547,7 +1547,7 @@ Assets {
           Location {
             X: 13.9747314
             Y: -0.870849609
-            Z: -0.0434570313
+            Z: -0.0434570312
           }
           Rotation {
             Pitch: 81.3651581
@@ -2174,6 +2174,6 @@ Assets {
   Marketplace {
     Description: "Hi! \r\n \r\nLess kitbashing and more frankenstein activity!\r\nBut we got some funny cutie friends.. or new pets.\r\n\r\nThere is:   \r\nDecorative fence with a sun hat and animated butterfly\r\nA bug catchin\' net with little animated butters also bobbling about.\r\nOh! My frog!  He\'s a cute croaky fellow with a a whip of a tongue!\r\nAnd a gold fish ballooon!  Cause they like long walks in the park too!\r\n\r\n\r\n "
   }
-  SerializationVersion: 92
+  SerializationVersion: 94
   DirectlyPublished: true
 }

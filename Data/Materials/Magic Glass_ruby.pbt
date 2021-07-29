@@ -2,7 +2,7 @@ Assets {
   Id: 4059260838507970771
   Name: "Magic Glass_ruby"
   PlatformAssetType: 13
-  SerializationVersion: 92
+  SerializationVersion: 94
   CustomMaterialAsset {
     BaseMaterialId: 9903815349600818687
     ParameterOverrides {

@@ -217,7 +217,7 @@ Assets {
         Name: "Prism - 6-Sided"
         Transform {
           Location {
-            X: 0.00122070313
+            X: 0.00122070312
             Y: -0.923339844
             Z: 42.6533203
           }
@@ -719,7 +719,7 @@ Assets {
         Name: "Prism - 6-Sided"
         Transform {
           Location {
-            X: 0.00122070313
+            X: 0.00122070312
             Y: -0.923339844
             Z: 42.6533203
           }
@@ -1027,6 +1027,6 @@ Assets {
   Marketplace {
     Description: "Here is a CC Mega Pack full of Halloween goodies. Candy, Monsters, Props, etc."
   }
-  SerializationVersion: 92
+  SerializationVersion: 94
   DirectlyPublished: true
 }

@@ -4845,6 +4845,6 @@ Assets {
   Marketplace {
     Description: "Hi! My name\'s Squa! I apologize for not properly naming each part. I will update this as soon as I can! But I appreciate the support and I thank you for downloading and trying out my model!"
   }
-  SerializationVersion: 92
+  SerializationVersion: 94
   DirectlyPublished: true
 }

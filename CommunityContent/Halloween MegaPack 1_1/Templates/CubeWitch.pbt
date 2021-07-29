@@ -104,7 +104,7 @@ Assets {
         Transform {
           Location {
             X: 0.117248535
-            Y: -0.301757813
+            Y: -0.301757812
             Z: 131.59613
           }
           Rotation {
@@ -429,7 +429,7 @@ Assets {
         Transform {
           Location {
             X: -0.11730957
-            Y: 0.301757813
+            Y: 0.301757812
           }
           Rotation {
           }
@@ -1754,7 +1754,7 @@ Assets {
         Transform {
           Location {
             X: 36.6683197
-            Y: -0.000122070313
+            Y: -0.000122070312
           }
           Rotation {
           }
@@ -1810,7 +1810,7 @@ Assets {
         Transform {
           Location {
             X: 26.4973831
-            Y: -0.000122070313
+            Y: -0.000122070312
           }
           Rotation {
           }
@@ -1866,7 +1866,7 @@ Assets {
         Transform {
           Location {
             X: 15.2163162
-            Y: -0.000122070313
+            Y: -0.000122070312
           }
           Rotation {
           }
@@ -1922,7 +1922,7 @@ Assets {
         Transform {
           Location {
             X: 3.80049133
-            Y: -0.000122070313
+            Y: -0.000122070312
           }
           Rotation {
           }
@@ -1978,7 +1978,7 @@ Assets {
         Transform {
           Location {
             X: 15.2163162
-            Y: -0.000122070313
+            Y: -0.000122070312
           }
           Rotation {
           }
@@ -2034,7 +2034,7 @@ Assets {
         Transform {
           Location {
             X: -7.98199463
-            Y: -0.000122070313
+            Y: -0.000122070312
           }
           Rotation {
           }
@@ -2090,7 +2090,7 @@ Assets {
         Transform {
           Location {
             X: -19.3500366
-            Y: -0.000122070313
+            Y: -0.000122070312
           }
           Rotation {
           }
@@ -2146,7 +2146,7 @@ Assets {
         Transform {
           Location {
             X: -30.0559387
-            Y: -0.000122070313
+            Y: -0.000122070312
           }
           Rotation {
           }
@@ -2202,7 +2202,7 @@ Assets {
         Transform {
           Location {
             X: -40.0107574
-            Y: -0.000122070313
+            Y: -0.000122070312
           }
           Rotation {
           }
@@ -2297,6 +2297,6 @@ Assets {
   Marketplace {
     Description: "Here is a CC Mega Pack full of Halloween goodies. Candy, Monsters, Props, etc."
   }
-  SerializationVersion: 92
+  SerializationVersion: 94
   DirectlyPublished: true
 }
