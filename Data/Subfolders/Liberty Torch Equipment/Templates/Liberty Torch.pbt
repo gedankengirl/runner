@@ -7710,6 +7710,6 @@ Assets {
   Marketplace {
     Description: "A torch and crown. Demonstrates how two equipments can behave as a single one."
   }
-  SerializationVersion: 94
+  SerializationVersion: 100
   DirectlyPublished: true
 }

@@ -2,7 +2,7 @@ Assets {
   Id: 8247538591444708871
   Name: "steel_bucket"
   PlatformAssetType: 13
-  SerializationVersion: 94
+  SerializationVersion: 100
   CustomMaterialAsset {
     BaseMaterialId: 18353867087517647095
     ParameterOverrides {

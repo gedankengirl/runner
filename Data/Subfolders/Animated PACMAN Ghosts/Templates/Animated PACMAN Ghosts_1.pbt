@@ -6783,6 +6783,6 @@ Assets {
   Marketplace {
     Description: "Looks great in your hub world."
   }
-  SerializationVersion: 94
+  SerializationVersion: 100
   DirectlyPublished: true
 }

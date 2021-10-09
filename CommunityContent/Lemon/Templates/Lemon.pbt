@@ -420,6 +420,6 @@ Assets {
   Marketplace {
     Description: "A Lemon"
   }
-  SerializationVersion: 94
+  SerializationVersion: 100
   DirectlyPublished: true
 }

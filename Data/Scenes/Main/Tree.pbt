@@ -24,6 +24,7 @@ Objects {
   ChildIds: 8534815031986278044
   ChildIds: 7553754998792656332
   ChildIds: 11266998582273717775
+  ChildIds: 15096133948427597975
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -36,6 +37,52 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Folder {
+  }
+}
+Objects {
+  Id: 15096133948427597975
+  Name: "QQ announce"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 7951774224442454998
+      value {
+        Overrides {
+          Name: "Name"
+          String: "QQ announce"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: 4252.06201
+            Y: 3283.5769
+            Z: 180.862732
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Yaw: 23.0441666
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 7945600508244610067
+    }
   }
 }
 Objects {

@@ -43,5 +43,5 @@ Assets {
     Version: "1.0.0"
     Description: "This is my first template so it\'s not great but I neede a king so I made a king"
   }
-  SerializationVersion: 94
+  SerializationVersion: 100
 }

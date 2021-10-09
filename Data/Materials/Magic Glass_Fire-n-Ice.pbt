@@ -2,7 +2,7 @@ Assets {
   Id: 15999610462197418743
   Name: "Magic Glass_Fire-n-Ice"
   PlatformAssetType: 13
-  SerializationVersion: 94
+  SerializationVersion: 100
   CustomMaterialAsset {
     BaseMaterialId: 6981698627626169233
     ParameterOverrides {

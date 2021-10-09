@@ -2,7 +2,7 @@ Assets {
   Id: 12239907797691183136
   Name: "Custom GoldFish Fin"
   PlatformAssetType: 13
-  SerializationVersion: 94
+  SerializationVersion: 100
   CustomMaterialAsset {
     BaseMaterialId: 14315509850518805565
     ParameterOverrides {

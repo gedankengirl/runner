@@ -2,7 +2,7 @@ Assets {
   Id: 10386713042997070993
   Name: "Custom Asphalt 01"
   PlatformAssetType: 13
-  SerializationVersion: 94
+  SerializationVersion: 100
   CustomMaterialAsset {
     BaseMaterialId: 1131951008205784005
     ParameterOverrides {

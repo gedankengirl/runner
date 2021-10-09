@@ -2,7 +2,7 @@ Assets {
   Id: 12724770190205235469
   Name: "Belly"
   PlatformAssetType: 13
-  SerializationVersion: 94
+  SerializationVersion: 100
   CustomMaterialAsset {
     BaseMaterialId: 4399777814431567982
     ParameterOverrides {

@@ -5637,6 +5637,6 @@ Assets {
   Marketplace {
     Description: "From my Alice Entry. Hopeing some can use him in the future."
   }
-  SerializationVersion: 94
+  SerializationVersion: 100
   DirectlyPublished: true
 }
