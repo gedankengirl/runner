@@ -9,7 +9,10 @@ Tags: "Casual"
 Tags: "Action"
 Tags: "Adventure"
 ScreenshotPaths: "C:\\Users\\rinoa\\Documents\\My games\\CORE\\Saved\\Maps\\SPEED_MANIA_PROD\\Screenshots\\Screenshot 2021-02-24 151547.png"
-ReleaseNotes: "Quickfix of the bug introduced by the latest Core update. \r\nPet stands are back in business! \r\n(\342\200\234F\342\200\235 key for exiting shops is temporarily disabled \342\200\223 please, use the \342\200\234X\342\200\235 button in the top right corner instead)."
 OwnerId: "1fe0c4ed2ab2416dba17f5d29ee420a4"
 SerializationVersion: 1
 PublishedState: Public
+SceneNameToSceneIdMap {
+  key: "Main"
+  value: "a546e85549176ad77c7df88ab792bfa8"
+}

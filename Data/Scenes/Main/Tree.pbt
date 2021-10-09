@@ -58,6 +58,15 @@ Objects {
   }
   TemplateInstance {
     ParameterOverrideMap {
+      key: 7847474950880705904
+      value {
+        Overrides {
+          Name: "CanvasControl.IsHUD"
+          Bool: false
+        }
+      }
+    }
+    ParameterOverrideMap {
       key: 7951774224442454998
       value {
         Overrides {
