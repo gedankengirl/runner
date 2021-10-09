@@ -15,7 +15,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 14216477141313801599
+        ParentId: 4781671109827199097
         ChildIds: 5094467874440278228
         WantsNetworking: true
         Collidable_v2 {
@@ -77,7 +77,6 @@ Assets {
         ChildIds: 9507698580940780723
         ChildIds: 8582147594544849485
         ChildIds: 13429006013510921584
-        ChildIds: 13248923321463334480
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -1487,63 +1486,6 @@ Assets {
           }
         }
       }
-      Objects {
-        Id: 13248923321463334480
-        Name: "Outline Object"
-        Transform {
-          Location {
-            Z: -10.1594162
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 7068539498899259041
-        UnregisteredParameters {
-          Overrides {
-            Name: "bp:Thickness"
-            Float: 4
-          }
-          Overrides {
-            Name: "bp:Multi-Color"
-            Bool: false
-          }
-          Overrides {
-            Name: "bp:Object To Outline"
-            ObjectReference {
-              SubObjectId: 7068539498899259041
-            }
-          }
-          Overrides {
-            Name: "bp:Color A"
-            Color {
-              G: 0.412222266
-              B: 0.490000129
-              A: 0.8
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Blueprint {
-          BlueprintAsset {
-            Id: 10913251976909601512
-          }
-          TeamSettings {
-          }
-        }
-      }
     }
     Assets {
       Id: 15961349352539224933
@@ -1617,19 +1559,10 @@ Assets {
         AssetId: "sm_hemisphere_wedge_002"
       }
     }
-    Assets {
-      Id: 10913251976909601512
-      Name: "Outline Object"
-      PlatformAssetType: 20
-      PrimaryAsset {
-        AssetType: "BlueprintAssetRef"
-        AssetId: "fxbp_local_outline"
-      }
-    }
     PrimaryAssetId {
       AssetType: "None"
       AssetId: "None"
     }
   }
-  SerializationVersion: 84
+  SerializationVersion: 100
 }

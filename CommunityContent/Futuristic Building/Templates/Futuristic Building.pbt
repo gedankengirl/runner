@@ -117178,7 +117178,7 @@ Assets {
         Transform {
           Location {
             X: -0.00200544111
-            Y: -128.257813
+            Y: -128.257812
             Z: 2.1023562
           }
           Rotation {
@@ -118045,7 +118045,7 @@ Assets {
         Transform {
           Location {
             X: 50.0007
-            Y: -128.257813
+            Y: -128.257812
             Z: 2.1023562
           }
           Rotation {
@@ -118912,7 +118912,7 @@ Assets {
         Transform {
           Location {
             X: -99.9994888
-            Y: -128.257813
+            Y: -128.257812
             Z: 2.1023562
           }
           Rotation {
@@ -119779,7 +119779,7 @@ Assets {
         Transform {
           Location {
             X: -49.9967804
-            Y: -128.257813
+            Y: -128.257812
             Z: 2.1023562
           }
           Rotation {
@@ -120646,7 +120646,7 @@ Assets {
         Transform {
           Location {
             X: -199.999496
-            Y: -128.257813
+            Y: -128.257812
             Z: 2.1023562
           }
           Rotation {
@@ -121513,7 +121513,7 @@ Assets {
         Transform {
           Location {
             X: -149.996796
-            Y: -128.257813
+            Y: -128.257812
             Z: 2.1023562
           }
           Rotation {
@@ -122380,7 +122380,7 @@ Assets {
         Transform {
           Location {
             X: -299.99707
-            Y: -128.257813
+            Y: -128.257812
             Z: 2.1023562
           }
           Rotation {
@@ -123247,7 +123247,7 @@ Assets {
         Transform {
           Location {
             X: -249.994278
-            Y: -128.257813
+            Y: -128.257812
             Z: 2.1023562
           }
           Rotation {
@@ -124114,7 +124114,7 @@ Assets {
         Transform {
           Location {
             X: 200.000809
-            Y: -128.257813
+            Y: -128.257812
             Z: 2.1023562
           }
           Rotation {
@@ -124981,7 +124981,7 @@ Assets {
         Transform {
           Location {
             X: 250.003662
-            Y: -128.257813
+            Y: -128.257812
             Z: 2.1023562
           }
           Rotation {
@@ -125848,7 +125848,7 @@ Assets {
         Transform {
           Location {
             X: 100.002975
-            Y: -128.257813
+            Y: -128.257812
             Z: 2.1023562
           }
           Rotation {
@@ -126715,7 +126715,7 @@ Assets {
         Transform {
           Location {
             X: 150.005768
-            Y: -128.257813
+            Y: -128.257812
             Z: 2.1023562
           }
           Rotation {
@@ -127548,7 +127548,7 @@ Assets {
         Name: "Whitebox Floor 01 8m x 8m"
         Transform {
           Location {
-            X: -682.851563
+            X: -682.851562
             Y: 579.057495
             Z: 625
           }
@@ -155957,7 +155957,7 @@ Assets {
         Name: "Cube - Bottom-Aligned"
         Transform {
           Location {
-            X: 30.0664063
+            X: 30.0664062
           }
           Rotation {
           }
@@ -157161,6 +157161,6 @@ Assets {
   Marketplace {
     Description: "22 floor futuristic building"
   }
-  SerializationVersion: 84
+  SerializationVersion: 100
   DirectlyPublished: true
 }

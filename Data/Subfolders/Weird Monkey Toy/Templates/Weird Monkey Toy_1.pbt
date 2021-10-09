@@ -194,7 +194,7 @@ Assets {
         Transform {
           Location {
             X: 7.30871582
-            Y: -0.239257813
+            Y: -0.239257812
             Z: 59.3371658
           }
           Rotation {
@@ -523,7 +523,7 @@ Assets {
         Name: "Sphere - Half"
         Transform {
           Location {
-            X: 0.000122070313
+            X: 0.000122070312
             Y: -16.8059082
           }
           Rotation {
@@ -589,7 +589,7 @@ Assets {
         Name: "Sphere - Half"
         Transform {
           Location {
-            X: 0.000122070313
+            X: 0.000122070312
             Y: -16.8059082
           }
           Rotation {
@@ -1737,7 +1737,7 @@ Assets {
         Transform {
           Location {
             X: -4.31469727
-            Y: 3.43945313
+            Y: 3.43945312
             Z: -0.908023834
           }
           Rotation {
@@ -2330,7 +2330,7 @@ Assets {
         Name: "Hair"
         Transform {
           Location {
-            X: -3.97070313
+            X: -3.97070312
             Y: -7.33850098
             Z: 21.3675919
           }
@@ -6284,6 +6284,6 @@ Assets {
   Marketplace {
     Description: "Feed me bananas\r\n\r\nThank you LuckOfBuck, Joviex, CodeHeavy, and tjarvis for their help with the code! :D"
   }
-  SerializationVersion: 84
+  SerializationVersion: 100
   DirectlyPublished: true
 }

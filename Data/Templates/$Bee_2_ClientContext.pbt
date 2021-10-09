@@ -15,7 +15,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 7284708399235958616
+        ParentId: 4781671109827199097
         ChildIds: 18376507301167939084
         WantsNetworking: true
         Collidable_v2 {
@@ -91,7 +91,6 @@ Assets {
         ChildIds: 7047378398593412138
         ChildIds: 2463762475710562228
         ChildIds: 14936431207483297768
-        ChildIds: 3745179040855610215
         ChildIds: 14739976144548720550
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -768,7 +767,7 @@ Assets {
         Transform {
           Location {
             X: 24.2421875
-            Y: -5.07226563
+            Y: -5.07226562
             Z: -24.9590759
           }
           Rotation {
@@ -1107,7 +1106,7 @@ Assets {
         Transform {
           Location {
             X: 34.8613281
-            Y: 22.9414063
+            Y: 22.9414062
             Z: 141.92836
           }
           Rotation {
@@ -1669,59 +1668,6 @@ Assets {
         }
       }
       Objects {
-        Id: 3745179040855610215
-        Name: "Outline Object"
-        Transform {
-          Location {
-            Z: 130
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 11634215444230935743
-        UnregisteredParameters {
-          Overrides {
-            Name: "bp:Color A"
-            Color {
-              R: 0.506000042
-              G: 0.305206269
-              A: 0.8
-            }
-          }
-          Overrides {
-            Name: "bp:Object To Outline"
-            ObjectReference {
-              SubObjectId: 11634215444230935743
-            }
-          }
-          Overrides {
-            Name: "bp:Thickness"
-            Float: 4
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Blueprint {
-          BlueprintAsset {
-            Id: 10913251976909601512
-          }
-          TeamSettings {
-          }
-        }
-      }
-      Objects {
         Id: 14739976144548720550
         Name: "RockMove"
         Transform {
@@ -1855,19 +1801,10 @@ Assets {
         AssetId: "sm_half_lense_001"
       }
     }
-    Assets {
-      Id: 10913251976909601512
-      Name: "Outline Object"
-      PlatformAssetType: 20
-      PrimaryAsset {
-        AssetType: "BlueprintAssetRef"
-        AssetId: "fxbp_local_outline"
-      }
-    }
     PrimaryAssetId {
       AssetType: "None"
       AssetId: "None"
     }
   }
-  SerializationVersion: 84
+  SerializationVersion: 100
 }

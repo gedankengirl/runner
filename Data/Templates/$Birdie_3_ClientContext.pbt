@@ -15,7 +15,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 10212933596085455662
+        ParentId: 4781671109827199097
         ChildIds: 17571171684127843871
         WantsNetworking: true
         Collidable_v2 {
@@ -77,7 +77,6 @@ Assets {
         ChildIds: 2114078364555997033
         ChildIds: 5051206930855399243
         ChildIds: 10222822274680191685
-        ChildIds: 16349882766390414636
         ChildIds: 17607281018411345007
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -1968,62 +1967,6 @@ Assets {
         }
       }
       Objects {
-        Id: 16349882766390414636
-        Name: "Outline Object"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 18401219379072206075
-        UnregisteredParameters {
-          Overrides {
-            Name: "bp:Thickness"
-            Float: 4
-          }
-          Overrides {
-            Name: "bp:Multi-Color"
-            Bool: false
-          }
-          Overrides {
-            Name: "bp:Object To Outline"
-            ObjectReference {
-              SubObjectId: 18401219379072206075
-            }
-          }
-          Overrides {
-            Name: "bp:Color A"
-            Color {
-              G: 0.412222266
-              B: 0.490000129
-              A: 0.8
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Blueprint {
-          BlueprintAsset {
-            Id: 10913251976909601512
-          }
-          TeamSettings {
-          }
-        }
-      }
-      Objects {
         Id: 17607281018411345007
         Name: "RockMove"
         Transform {
@@ -2148,19 +2091,10 @@ Assets {
         AssetId: "sm_half_lense_001"
       }
     }
-    Assets {
-      Id: 10913251976909601512
-      Name: "Outline Object"
-      PlatformAssetType: 20
-      PrimaryAsset {
-        AssetType: "BlueprintAssetRef"
-        AssetId: "fxbp_local_outline"
-      }
-    }
     PrimaryAssetId {
       AssetType: "None"
       AssetId: "None"
     }
   }
-  SerializationVersion: 84
+  SerializationVersion: 100
 }

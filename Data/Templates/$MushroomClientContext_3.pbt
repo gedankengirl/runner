@@ -15,7 +15,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 96217471946232102
+        ParentId: 4781671109827199097
         ChildIds: 14584931564280984374
         WantsNetworking: true
         Collidable_v2 {
@@ -77,7 +77,6 @@ Assets {
         ChildIds: 16778676133152796326
         ChildIds: 11194657340353882252
         ChildIds: 3282964313811848673
-        ChildIds: 1095498852484570537
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -1040,7 +1039,7 @@ Assets {
             Z: 1.65358889
           }
           Rotation {
-            Pitch: -6.10351563e-05
+            Pitch: -6.10351562e-05
             Yaw: 12.7402983
             Roll: -179.999893
           }
@@ -2032,7 +2031,7 @@ Assets {
         Transform {
           Location {
             X: 5.81707063e-05
-            Y: -23.1914063
+            Y: -23.1914062
             Z: 0.000268427451
           }
           Rotation {
@@ -2195,7 +2194,7 @@ Assets {
         Name: "Left eye"
         Transform {
           Location {
-            Y: 23.1914063
+            Y: 23.1914062
             Z: -1.52587891e-05
           }
           Rotation {
@@ -2902,58 +2901,6 @@ Assets {
           }
         }
       }
-      Objects {
-        Id: 1095498852484570537
-        Name: "Outline Object"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 1534093548803610110
-        UnregisteredParameters {
-          Overrides {
-            Name: "bp:Color A"
-            Color {
-              G: 0.412222266
-              B: 0.490000129
-              A: 0.8
-            }
-          }
-          Overrides {
-            Name: "bp:Thickness"
-            Float: 4
-          }
-          Overrides {
-            Name: "bp:Object To Outline"
-            ObjectReference {
-              SubObjectId: 1534093548803610110
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Blueprint {
-          BlueprintAsset {
-            Id: 10913251976909601512
-          }
-          TeamSettings {
-          }
-        }
-      }
     }
     Assets {
       Id: 289143332295159697
@@ -3144,19 +3091,10 @@ Assets {
         AssetId: "mi_mil_wood_strand_001_uv_ref"
       }
     }
-    Assets {
-      Id: 10913251976909601512
-      Name: "Outline Object"
-      PlatformAssetType: 20
-      PrimaryAsset {
-        AssetType: "BlueprintAssetRef"
-        AssetId: "fxbp_local_outline"
-      }
-    }
     PrimaryAssetId {
       AssetType: "None"
       AssetId: "None"
     }
   }
-  SerializationVersion: 84
+  SerializationVersion: 100
 }

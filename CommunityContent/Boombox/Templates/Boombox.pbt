@@ -2250,6 +2250,6 @@ Assets {
   Marketplace {
     Description: "A pretty basic boombox model."
   }
-  SerializationVersion: 84
+  SerializationVersion: 100
   DirectlyPublished: true
 }

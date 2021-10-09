@@ -2,7 +2,7 @@ Assets {
   Id: 3800583788902278311
   Name: "Magic Glass_emerald"
   PlatformAssetType: 13
-  SerializationVersion: 84
+  SerializationVersion: 100
   CustomMaterialAsset {
     BaseMaterialId: 9903815349600818687
     ParameterOverrides {

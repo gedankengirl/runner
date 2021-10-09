@@ -198,7 +198,7 @@ Objects {
   Transform {
     Location {
       X: -3576.85742
-      Y: -20239.5313
+      Y: -20239.5312
       Z: 1037.84521
     }
     Rotation {
@@ -645,7 +645,7 @@ Objects {
           Name: "Position"
           Vector {
             X: 3491.14648
-            Y: 2695.51563
+            Y: 2695.51562
             Z: 147
           }
         }
@@ -1470,7 +1470,7 @@ Objects {
           Name: "Position"
           Vector {
             X: -3781.81299
-            Y: 742.101563
+            Y: 742.101562
             Z: 147
           }
         }
@@ -5514,7 +5514,7 @@ Objects {
   Transform {
     Location {
       X: 271.806396
-      Y: 8931.45313
+      Y: 8931.45312
       Z: 29.7591858
     }
     Rotation {
@@ -5801,7 +5801,7 @@ Objects {
       Z: 1.65358889
     }
     Rotation {
-      Pitch: -6.10351563e-05
+      Pitch: -6.10351562e-05
       Yaw: 12.7402983
       Roll: -179.999893
     }
@@ -6197,7 +6197,7 @@ Objects {
       Z: 1.65358889
     }
     Rotation {
-      Pitch: -6.10351563e-05
+      Pitch: -6.10351562e-05
       Yaw: 12.7402983
       Roll: -179.999893
     }
@@ -6594,7 +6594,7 @@ Objects {
       Z: 1.65358889
     }
     Rotation {
-      Pitch: -6.10351563e-05
+      Pitch: -6.10351562e-05
       Yaw: 12.7402983
       Roll: -179.999893
     }
@@ -10319,7 +10319,7 @@ Objects {
   Transform {
     Location {
       X: 4456.46875
-      Y: -2433.76563
+      Y: -2433.76562
       Z: -27.5114746
     }
     Rotation {
@@ -10720,7 +10720,7 @@ Objects {
       Z: 1.65358889
     }
     Rotation {
-      Pitch: -6.10351563e-05
+      Pitch: -6.10351562e-05
       Yaw: 12.7402983
       Roll: -179.999893
     }
@@ -17361,7 +17361,7 @@ Objects {
   Name: "Tree_Birch_08"
   Transform {
     Location {
-      X: 1527.14063
+      X: 1527.14062
       Y: -2167.18848
       Z: -41.6184845
     }
@@ -20941,7 +20941,7 @@ Objects {
   Transform {
     Location {
       Y: 1.52587891e-05
-      Z: 6.10351563e-05
+      Z: 6.10351562e-05
     }
     Rotation {
     }

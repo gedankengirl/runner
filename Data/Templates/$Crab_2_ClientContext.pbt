@@ -82,7 +82,6 @@ Assets {
         ChildIds: 2354581810817817006
         ChildIds: 16312629353141986286
         ChildIds: 11525407195517473818
-        ChildIds: 15267344807203910642
         ChildIds: 15053851252448036507
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -841,7 +840,7 @@ Assets {
         Transform {
           Location {
             X: -55.1724854
-            Y: -41.8164063
+            Y: -41.8164062
             Z: 2.60101318
           }
           Rotation {
@@ -2631,61 +2630,6 @@ Assets {
         }
       }
       Objects {
-        Id: 15267344807203910642
-        Name: "Outline Object"
-        Transform {
-          Location {
-            X: -52.1708107
-            Z: 133.846802
-          }
-          Rotation {
-            Yaw: -6.10351344e-05
-          }
-          Scale {
-            X: 1.23951066
-            Y: 1.23951066
-            Z: 1.23951066
-          }
-        }
-        ParentId: 9419709391727124397
-        UnregisteredParameters {
-          Overrides {
-            Name: "bp:Color A"
-            Color {
-              R: 0.506000042
-              G: 0.305206269
-              A: 0.8
-            }
-          }
-          Overrides {
-            Name: "bp:Object To Outline"
-            ObjectReference {
-              SubObjectId: 9419709391727124397
-            }
-          }
-          Overrides {
-            Name: "bp:Thickness"
-            Float: 4
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Blueprint {
-          BlueprintAsset {
-            Id: 10913251976909601512
-          }
-          TeamSettings {
-          }
-        }
-      }
-      Objects {
         Id: 15053851252448036507
         Name: "RockMove"
         Transform {
@@ -2873,19 +2817,10 @@ Assets {
         AssetId: "sm_torus_002"
       }
     }
-    Assets {
-      Id: 10913251976909601512
-      Name: "Outline Object"
-      PlatformAssetType: 20
-      PrimaryAsset {
-        AssetType: "BlueprintAssetRef"
-        AssetId: "fxbp_local_outline"
-      }
-    }
     PrimaryAssetId {
       AssetType: "None"
       AssetId: "None"
     }
   }
-  SerializationVersion: 84
+  SerializationVersion: 100
 }

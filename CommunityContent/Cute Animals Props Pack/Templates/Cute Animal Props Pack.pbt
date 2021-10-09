@@ -10838,7 +10838,7 @@ Assets {
           Rotation {
             Pitch: -22.5000019
             Yaw: 4.09123168e-05
-            Roll: -6.10351563e-05
+            Roll: -6.10351562e-05
           }
           Scale {
             X: 0.5
@@ -17370,7 +17370,7 @@ Assets {
         Name: "Fontal Legs"
         Transform {
           Location {
-            X: 6.10351563e-05
+            X: 6.10351562e-05
             Y: 125
             Z: -70
           }
@@ -21302,7 +21302,7 @@ Assets {
         Name: "Sphere"
         Transform {
           Location {
-            Y: -6.10351563e-05
+            Y: -6.10351562e-05
             Z: 180
           }
           Rotation {
@@ -22111,7 +22111,7 @@ Assets {
         Name: "Sphere"
         Transform {
           Location {
-            Y: -6.10351563e-05
+            Y: -6.10351562e-05
             Z: 180
           }
           Rotation {
@@ -22849,7 +22849,7 @@ Assets {
         Name: "Pipe - Spiral"
         Transform {
           Location {
-            Y: -0.000122070313
+            Y: -0.000122070312
             Z: -146.25
           }
           Rotation {
@@ -26731,7 +26731,7 @@ Assets {
         Name: "Sphere"
         Transform {
           Location {
-            X: 0.000122070313
+            X: 0.000122070312
             Y: -280
             Z: 99.999939
           }
@@ -27057,6 +27057,6 @@ Assets {
   Marketplace {
     Description: "9 little animal props"
   }
-  SerializationVersion: 84
+  SerializationVersion: 100
   DirectlyPublished: true
 }

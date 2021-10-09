@@ -32,7 +32,7 @@ Assets {
         Transform {
           Location {
             X: 95.4355469
-            Y: -113.007813
+            Y: -113.007812
           }
           Rotation {
           }
@@ -389,7 +389,7 @@ Assets {
         Transform {
           Location {
             X: -735.324219
-            Y: 428.195313
+            Y: 428.195312
             Z: 557.4729
           }
           Rotation {
@@ -678,7 +678,7 @@ Assets {
         Transform {
           Location {
             X: -100.189453
-            Y: 42.8007813
+            Y: 42.8007812
             Z: 21.9581299
           }
           Rotation {
@@ -1664,7 +1664,7 @@ Assets {
         Transform {
           Location {
             X: 274.796875
-            Y: 167.289063
+            Y: 167.289062
             Z: 79.2598877
           }
           Rotation {
@@ -1722,7 +1722,7 @@ Assets {
         Transform {
           Location {
             X: -186.478516
-            Y: 24.8164063
+            Y: 24.8164062
             Z: 79.2598877
           }
           Rotation {
@@ -1973,6 +1973,6 @@ Assets {
   Marketplace {
     Description: "Some translucent night time vegetation. \r\n(Made for PIRATES! but if you folks want to use it as well, here it is!)"
   }
-  SerializationVersion: 84
+  SerializationVersion: 100
   DirectlyPublished: true
 }

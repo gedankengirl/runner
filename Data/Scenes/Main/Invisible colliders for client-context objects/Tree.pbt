@@ -5,7 +5,7 @@ Objects {
   Name: "SignWithAddress"
   Transform {
     Location {
-      X: 391.132813
+      X: 391.132812
       Y: 2771.98218
       Z: 459.165314
     }
@@ -115,8 +115,8 @@ Objects {
   Name: "Board"
   Transform {
     Location {
-      X: -12.6484528
-      Y: -153.808563
+      X: -441.476501
+      Y: 72.6504211
       Z: 622.732544
     }
     Rotation {
@@ -160,8 +160,8 @@ Objects {
   Name: "Cat"
   Transform {
     Location {
-      X: 107.830063
-      Y: 141.552704
+      X: -335.378876
+      Y: 387.398438
       Z: 490.017273
     }
     Rotation {

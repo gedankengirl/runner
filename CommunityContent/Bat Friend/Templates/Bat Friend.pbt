@@ -851,7 +851,7 @@ Assets {
         Name: "Horn"
         Transform {
           Location {
-            X: 6.10351563e-05
+            X: 6.10351562e-05
             Y: -3.02168655
             Z: 53.1391144
           }
@@ -912,7 +912,7 @@ Assets {
         Name: "NewFolder"
         Transform {
           Location {
-            X: 6.10351563e-05
+            X: 6.10351562e-05
             Y: 71.5463104
             Z: 90.3747101
           }
@@ -1901,7 +1901,7 @@ Assets {
         Name: "Horn"
         Transform {
           Location {
-            X: 6.10351563e-05
+            X: 6.10351562e-05
             Y: -3.02168655
             Z: 53.1391144
           }
@@ -1962,7 +1962,7 @@ Assets {
         Name: "NewFolder"
         Transform {
           Location {
-            X: 6.10351563e-05
+            X: 6.10351562e-05
             Y: 71.5463104
             Z: 90.3747101
           }
@@ -2902,6 +2902,6 @@ Assets {
   Marketplace {
     Description: "A little bat model for your monster needs! One eye for maximum wisdom and minimum deapth perception.\r\n\r\nUpdate: Cleaning up a small wing issue that was bugging me, and added a couple extra shapes because why not!"
   }
-  SerializationVersion: 84
+  SerializationVersion: 100
   DirectlyPublished: true
 }

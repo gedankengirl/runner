@@ -128,7 +128,7 @@ Assets {
         Transform {
           Location {
             X: -8.72823341e-11
-            Y: 0.000122070313
+            Y: 0.000122070312
           }
           Rotation {
           }
@@ -607,6 +607,6 @@ Assets {
   Marketplace {
     Description: "A basic script and example for flickering lights. \r\n\r\nProvides a few different types of flicker:  Single sin, double sin, random flicker, stepped flicker.  \r\n\r\nUseful for light tubes on the fritz, a campfire, strobes, siren lights etc.  "
   }
-  SerializationVersion: 84
+  SerializationVersion: 100
   DirectlyPublished: true
 }

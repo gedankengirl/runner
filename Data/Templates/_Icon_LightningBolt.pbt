@@ -211,7 +211,7 @@ Assets {
         Name: "Cylinder"
         Transform {
           Location {
-            X: -1.77539063
+            X: -1.77539062
             Z: 20
           }
           Rotation {
@@ -304,5 +304,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 84
+  SerializationVersion: 100
 }

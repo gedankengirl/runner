@@ -561,7 +561,7 @@ Assets {
         Name: "Vibrisses"
         Transform {
           Location {
-            X: 48.2695313
+            X: 48.2695312
             Y: 23.3203125
             Z: 143.955322
           }
@@ -723,7 +723,7 @@ Assets {
         Name: "Vibrisses"
         Transform {
           Location {
-            X: 48.2695313
+            X: 48.2695312
             Y: -23.3203125
             Z: 143.955322
           }
@@ -1537,7 +1537,7 @@ Assets {
         Name: "Prism - 3-Sided Convex"
         Transform {
           Location {
-            X: -4.49414063
+            X: -4.49414062
             Z: 3.6595459
           }
           Rotation {
@@ -1600,7 +1600,7 @@ Assets {
         Name: "Hood"
         Transform {
           Location {
-            X: 15.2382813
+            X: 15.2382812
             Z: 154.844421
           }
           Rotation {
@@ -1801,7 +1801,7 @@ Assets {
         Name: "Hoodie Drawstring"
         Transform {
           Location {
-            X: 49.0664063
+            X: 49.0664062
             Y: 2
             Z: 85.4957886
           }
@@ -1960,7 +1960,7 @@ Assets {
         Name: "Hoodie Drawstring"
         Transform {
           Location {
-            X: 51.4101563
+            X: 51.4101562
             Y: -6.75
             Z: 79.513
           }
@@ -3786,7 +3786,7 @@ Assets {
         Transform {
           Location {
             X: -44.8847656
-            Y: 5.62695313
+            Y: 5.62695312
             Z: -18.1416016
           }
           Rotation {
@@ -3849,7 +3849,7 @@ Assets {
         Transform {
           Location {
             X: -13.8203125
-            Y: 34.9257813
+            Y: 34.9257812
             Z: 195.338409
           }
           Rotation {
@@ -3925,7 +3925,7 @@ Assets {
         Transform {
           Location {
             X: -13.8203125
-            Y: -34.9257813
+            Y: -34.9257812
             Z: 195.338409
           }
           Rotation {
@@ -4332,5 +4332,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 84
+  SerializationVersion: 100
 }

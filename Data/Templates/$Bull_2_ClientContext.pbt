@@ -15,7 +15,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 5625148233525474564
+        ParentId: 4781671109827199097
         ChildIds: 4229215138978237031
         WantsNetworking: true
         Collidable_v2 {
@@ -35,7 +35,7 @@ Assets {
         Name: "Transform Controller"
         Transform {
           Location {
-            Z: 6.10351563e-05
+            Z: 6.10351562e-05
           }
           Rotation {
           }
@@ -93,7 +93,6 @@ Assets {
         ChildIds: 13509410122584662811
         ChildIds: 9910818747436259798
         ChildIds: 3059511220101833784
-        ChildIds: 2331102026404762259
         ChildIds: 4478293678020612082
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -552,7 +551,7 @@ Assets {
         Transform {
           Location {
             X: -38.0058594
-            Y: 35.2382813
+            Y: 35.2382812
             Z: 182.684662
           }
           Rotation {
@@ -801,7 +800,7 @@ Assets {
         Transform {
           Location {
             X: -37.3730469
-            Y: 72.4726563
+            Y: 72.4726562
             Z: 150.171875
           }
           Rotation {
@@ -865,7 +864,7 @@ Assets {
         Transform {
           Location {
             X: 14.2460938
-            Y: 2.43945313
+            Y: 2.43945312
             Z: 148.527328
           }
           Rotation {
@@ -1184,7 +1183,7 @@ Assets {
         Transform {
           Location {
             X: -38.0058594
-            Y: -35.2382813
+            Y: -35.2382812
             Z: 182.684662
           }
           Rotation {
@@ -2086,59 +2085,6 @@ Assets {
         }
       }
       Objects {
-        Id: 2331102026404762259
-        Name: "Outline Object"
-        Transform {
-          Location {
-            Z: 143.436401
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 13053849070953050788
-        UnregisteredParameters {
-          Overrides {
-            Name: "bp:Color A"
-            Color {
-              R: 0.506000042
-              G: 0.305206269
-              A: 0.8
-            }
-          }
-          Overrides {
-            Name: "bp:Object To Outline"
-            ObjectReference {
-              SubObjectId: 13053849070953050788
-            }
-          }
-          Overrides {
-            Name: "bp:Thickness"
-            Float: 4
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Blueprint {
-          BlueprintAsset {
-            Id: 10913251976909601512
-          }
-          TeamSettings {
-          }
-        }
-      }
-      Objects {
         Id: 4478293678020612082
         Name: "RockMove"
         Transform {
@@ -2335,19 +2281,10 @@ Assets {
         AssetId: "sm_cube_rounded_002"
       }
     }
-    Assets {
-      Id: 10913251976909601512
-      Name: "Outline Object"
-      PlatformAssetType: 20
-      PrimaryAsset {
-        AssetType: "BlueprintAssetRef"
-        AssetId: "fxbp_local_outline"
-      }
-    }
     PrimaryAssetId {
       AssetType: "None"
       AssetId: "None"
     }
   }
-  SerializationVersion: 84
+  SerializationVersion: 100
 }

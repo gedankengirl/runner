@@ -1,11 +1,11 @@
 Name: "LightningBolt_silhouette_7"
-RootId: 4186292357065775312
+RootId: 16843592260553505434
 Objects {
-  Id: 7157672843277666421
+  Id: 6272989916761137632
   Name: "Prism - 3-Sided"
   Transform {
     Location {
-      X: -4.87695313
+      X: -4.87695312
       Y: 7.90625
       Z: 24.3706665
     }
@@ -20,7 +20,7 @@ Objects {
       Z: -0.08
     }
   }
-  ParentId: 4186292357065775312
+  ParentId: 16843592260553505434
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -73,18 +73,18 @@ Objects {
     }
   }
   InstanceHistory {
-    SelfId: 7157672843277666421
-    SubobjectId: 12206280144827458759
+    SelfId: 6272989916761137632
+    SubobjectId: 11330600976692874578
     InstanceId: 10907345231434236569
     TemplateId: 15904085984438255415
   }
 }
 Objects {
-  Id: 5182012468852714589
+  Id: 15866433814020283968
   Name: "Prism - 3-Sided"
   Transform {
     Location {
-      X: -4.87695313
+      X: -4.87695312
       Y: -7.90625
       Z: -21.5219727
     }
@@ -99,7 +99,7 @@ Objects {
       Z: -0.08
     }
   }
-  ParentId: 4186292357065775312
+  ParentId: 16843592260553505434
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -152,8 +152,8 @@ Objects {
     }
   }
   InstanceHistory {
-    SelfId: 5182012468852714589
-    SubobjectId: 10221612575406342383
+    SelfId: 15866433814020283968
+    SubobjectId: 1585451670818681586
     InstanceId: 10907345231434236569
     TemplateId: 15904085984438255415
   }

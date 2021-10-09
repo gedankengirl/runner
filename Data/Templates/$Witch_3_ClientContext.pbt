@@ -88,7 +88,6 @@ Assets {
         ChildIds: 6238970943014008599
         ChildIds: 8378937071850535879
         ChildIds: 2836380891068872736
-        ChildIds: 11558398845437211984
         ChildIds: 8273392849095358007
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -2866,7 +2865,7 @@ Assets {
         Name: "Cylinder - Rounded Small"
         Transform {
           Location {
-            X: -9.48632813
+            X: -9.48632812
             Y: 0.001953125
             Z: -1.52587891e-05
           }
@@ -3094,7 +3093,7 @@ Assets {
         Name: "Cylinder - Rounded Small"
         Transform {
           Location {
-            X: -9.77539063
+            X: -9.77539062
             Y: 0.001953125
             Z: -4.57763672e-05
           }
@@ -4733,7 +4732,7 @@ Assets {
         Name: "Gem - Pear Polished"
         Transform {
           Location {
-            X: 5.88476563
+            X: 5.88476562
             Y: 1.03515434
             Z: -4.80116272
           }
@@ -4796,7 +4795,7 @@ Assets {
         Name: "Ring"
         Transform {
           Location {
-            X: 5.88476563
+            X: 5.88476562
             Y: 1.04101372
             Z: 4.40792847
           }
@@ -5327,65 +5326,11 @@ Assets {
         }
       }
       Objects {
-        Id: 11558398845437211984
-        Name: "Outline Object"
-        Transform {
-          Location {
-            Z: 154.975983
-          }
-          Rotation {
-            Yaw: 6.83019516e-06
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 13655165843619991981
-        UnregisteredParameters {
-          Overrides {
-            Name: "bp:Color A"
-            Color {
-              G: 0.412222266
-              B: 0.490000129
-              A: 0.8
-            }
-          }
-          Overrides {
-            Name: "bp:Object To Outline"
-            ObjectReference {
-              SubObjectId: 13655165843619991981
-            }
-          }
-          Overrides {
-            Name: "bp:Thickness"
-            Float: 4
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Blueprint {
-          BlueprintAsset {
-            Id: 10913251976909601512
-          }
-          TeamSettings {
-          }
-        }
-      }
-      Objects {
         Id: 8273392849095358007
         Name: "Bone arm"
         Transform {
           Location {
-            X: -79.5507813
+            X: -79.5507812
             Y: 4.7415946e-05
             Z: 273.848267
           }
@@ -5822,15 +5767,6 @@ Assets {
       }
     }
     Assets {
-      Id: 10913251976909601512
-      Name: "Outline Object"
-      PlatformAssetType: 20
-      PrimaryAsset {
-        AssetType: "BlueprintAssetRef"
-        AssetId: "fxbp_local_outline"
-      }
-    }
-    Assets {
       Id: 8368848255779568515
       Name: "Bone Human Ulna 01"
       PlatformAssetType: 1
@@ -5862,5 +5798,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 84
+  SerializationVersion: 100
 }

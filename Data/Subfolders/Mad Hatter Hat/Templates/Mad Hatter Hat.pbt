@@ -47,7 +47,7 @@ Assets {
     OwnerAccountId: "557d4f1ae17646579646dfd20dcb7b66"
     OwnerName: "AwkwardGameDev"
     Version: "1.5.0"
-    Description: "My tribute to the inspiring Alice in Wonderland submissions.\r\nGreat job! <3 (equipment)\r\n\r\n-updated camera collision\r\n\r\nThank you Codexier for the playing cards!"
+    Description: "My tribute to the inspiring Alice in Wonderland submissions.\r\nGreat job! <3 (equipment)\r\n\r\n-removed unnecessary folders\r\n-updated camera collision\r\n\r\nThank you Codexier for the playing cards!"
   }
-  SerializationVersion: 84
+  SerializationVersion: 100
 }

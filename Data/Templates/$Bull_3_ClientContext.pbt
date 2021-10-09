@@ -15,7 +15,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 5625148233525474564
+        ParentId: 4781671109827199097
         ChildIds: 2083994663026099255
         WantsNetworking: true
         Collidable_v2 {
@@ -35,7 +35,7 @@ Assets {
         Name: "Transform Controller"
         Transform {
           Location {
-            Z: 6.10351563e-05
+            Z: 6.10351562e-05
           }
           Rotation {
           }
@@ -93,7 +93,6 @@ Assets {
         ChildIds: 1620444569609277294
         ChildIds: 8478248442786485557
         ChildIds: 9383795887466739179
-        ChildIds: 6824611482181450453
         ChildIds: 7472780630948038642
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -552,7 +551,7 @@ Assets {
         Transform {
           Location {
             X: -38.0058594
-            Y: 35.2382813
+            Y: 35.2382812
             Z: 182.684662
           }
           Rotation {
@@ -801,7 +800,7 @@ Assets {
         Transform {
           Location {
             X: -37.3730469
-            Y: 72.4726563
+            Y: 72.4726562
             Z: 150.171875
           }
           Rotation {
@@ -929,7 +928,7 @@ Assets {
         Transform {
           Location {
             X: 14.2460938
-            Y: 2.43945313
+            Y: 2.43945312
             Z: 148.527328
           }
           Rotation {
@@ -1248,7 +1247,7 @@ Assets {
         Transform {
           Location {
             X: -38.0058594
-            Y: -35.2382813
+            Y: -35.2382812
             Z: 182.684662
           }
           Rotation {
@@ -1871,7 +1870,7 @@ Assets {
         Transform {
           Location {
             X: -6.9609375
-            Y: -21.3007813
+            Y: -21.3007812
             Z: 21.5168
           }
           Rotation {
@@ -1934,7 +1933,7 @@ Assets {
         Transform {
           Location {
             X: -5.6015625
-            Y: -15.6445313
+            Y: -15.6445312
             Z: 48.2133942
           }
           Rotation {
@@ -2482,7 +2481,7 @@ Assets {
         Name: "Bowtie"
         Transform {
           Location {
-            X: 16.3476563
+            X: 16.3476562
             Z: 115.682373
           }
           Rotation {
@@ -2707,59 +2706,6 @@ Assets {
         }
       }
       Objects {
-        Id: 6824611482181450453
-        Name: "Outline Object"
-        Transform {
-          Location {
-            Z: 143.436401
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 8584857222574505312
-        UnregisteredParameters {
-          Overrides {
-            Name: "bp:Color A"
-            Color {
-              G: 0.412222266
-              B: 0.490000129
-              A: 0.8
-            }
-          }
-          Overrides {
-            Name: "bp:Object To Outline"
-            ObjectReference {
-              SubObjectId: 8584857222574505312
-            }
-          }
-          Overrides {
-            Name: "bp:Thickness"
-            Float: 4
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Blueprint {
-          BlueprintAsset {
-            Id: 10913251976909601512
-          }
-          TeamSettings {
-          }
-        }
-      }
-      Objects {
         Id: 7472780630948038642
         Name: "RockMove"
         Transform {
@@ -2965,19 +2911,10 @@ Assets {
         AssetId: "sm_cube_rounded_002"
       }
     }
-    Assets {
-      Id: 10913251976909601512
-      Name: "Outline Object"
-      PlatformAssetType: 20
-      PrimaryAsset {
-        AssetType: "BlueprintAssetRef"
-        AssetId: "fxbp_local_outline"
-      }
-    }
     PrimaryAssetId {
       AssetType: "None"
       AssetId: "None"
     }
   }
-  SerializationVersion: 84
+  SerializationVersion: 100
 }

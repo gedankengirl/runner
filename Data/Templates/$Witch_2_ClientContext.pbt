@@ -91,7 +91,6 @@ Assets {
         ChildIds: 9225897458737145575
         ChildIds: 16390948841031657253
         ChildIds: 7910062342267857820
-        ChildIds: 6775356325039202084
         ChildIds: 9903438008561900626
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -3376,60 +3375,6 @@ Assets {
         }
       }
       Objects {
-        Id: 6775356325039202084
-        Name: "Outline Object"
-        Transform {
-          Location {
-            Z: 158.9422
-          }
-          Rotation {
-            Yaw: 6.83019516e-06
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 2976896071545612889
-        UnregisteredParameters {
-          Overrides {
-            Name: "bp:Color A"
-            Color {
-              R: 0.506000042
-              G: 0.305206269
-              A: 0.8
-            }
-          }
-          Overrides {
-            Name: "bp:Object To Outline"
-            ObjectReference {
-              SubObjectId: 2976896071545612889
-            }
-          }
-          Overrides {
-            Name: "bp:Thickness"
-            Float: 4
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Blueprint {
-          BlueprintAsset {
-            Id: 10913251976909601512
-          }
-          TeamSettings {
-          }
-        }
-      }
-      Objects {
         Id: 9903438008561900626
         Name: "RockMove"
         Transform {
@@ -3709,19 +3654,10 @@ Assets {
         AssetId: "sm_quarter_torus_001"
       }
     }
-    Assets {
-      Id: 10913251976909601512
-      Name: "Outline Object"
-      PlatformAssetType: 20
-      PrimaryAsset {
-        AssetType: "BlueprintAssetRef"
-        AssetId: "fxbp_local_outline"
-      }
-    }
     PrimaryAssetId {
       AssetType: "None"
       AssetId: "None"
     }
   }
-  SerializationVersion: 84
+  SerializationVersion: 100
 }

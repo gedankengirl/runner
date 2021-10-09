@@ -270,7 +270,7 @@ Objects {
         Overrides {
           Name: "Position"
           Vector {
-            X: 799.539063
+            X: 799.539062
             Y: 2661.40405
             Z: 379.897125
           }
@@ -328,7 +328,7 @@ Objects {
     Location {
     }
     Rotation {
-      Yaw: 6.83018789e-06
+      Yaw: 90
     }
     Scale {
       X: 2.3926425

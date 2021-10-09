@@ -15,7 +15,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 10806057176125142267
+        ParentId: 4781671109827199097
         ChildIds: 3628180404535020763
         WantsNetworking: true
         Collidable_v2 {
@@ -84,7 +84,6 @@ Assets {
         ChildIds: 15963549525448963709
         ChildIds: 9423801698191952069
         ChildIds: 4253116143559337827
-        ChildIds: 10980489685949154762
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -448,7 +447,7 @@ Assets {
           Location {
             X: 13.9747314
             Y: -0.870849609
-            Z: -0.0434570313
+            Z: -0.0434570312
           }
           Rotation {
             Pitch: 81.3651581
@@ -2934,7 +2933,7 @@ Assets {
         Name: "Cylinder - Rounded Small"
         Transform {
           Location {
-            Y: 9.67382813
+            Y: 9.67382812
             Z: 2.373
           }
           Rotation {
@@ -2996,7 +2995,7 @@ Assets {
         Name: "Cylinder - Rounded Small"
         Transform {
           Location {
-            Y: -9.67382813
+            Y: -9.67382812
             Z: 2.37338257
           }
           Rotation {
@@ -3096,7 +3095,7 @@ Assets {
         Name: "Cylinder - Rounded Small"
         Transform {
           Location {
-            Y: 9.15039063
+            Y: 9.15039062
             Z: 1.52587891e-05
           }
           Rotation {
@@ -3157,7 +3156,7 @@ Assets {
         Name: "Cylinder - Rounded Small"
         Transform {
           Location {
-            Y: -9.15039063
+            Y: -9.15039062
             Z: 1.52587891e-05
           }
           Rotation {
@@ -3219,7 +3218,7 @@ Assets {
         Transform {
           Location {
             X: 4.43554688
-            Y: 9.05664063
+            Y: 9.05664062
           }
           Rotation {
             Pitch: 90
@@ -3989,7 +3988,7 @@ Assets {
         Transform {
           Location {
             X: 35.5273438
-            Y: -26.8320313
+            Y: -26.8320312
             Z: 20.5917969
           }
           Rotation {
@@ -4175,7 +4174,7 @@ Assets {
         Transform {
           Location {
             X: -35.2304688
-            Y: -26.8320313
+            Y: -26.8320312
             Z: 20.5917969
           }
           Rotation {
@@ -4299,7 +4298,7 @@ Assets {
             Z: 123.350906
           }
           Rotation {
-            Yaw: -6.10351563e-05
+            Yaw: -6.10351562e-05
           }
           Scale {
             X: 1.1545018
@@ -4347,60 +4346,6 @@ Assets {
               LinearDamping: 0.01
             }
             BoundsScale: 1
-          }
-        }
-      }
-      Objects {
-        Id: 10980489685949154762
-        Name: "Outline Object"
-        Transform {
-          Location {
-            Z: 130.000061
-          }
-          Rotation {
-            Yaw: -6.10351344e-05
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 6685241211780330049
-        UnregisteredParameters {
-          Overrides {
-            Name: "bp:Color A"
-            Color {
-              R: 0.506000042
-              G: 0.305206269
-              A: 0.8
-            }
-          }
-          Overrides {
-            Name: "bp:Object To Outline"
-            ObjectReference {
-              SubObjectId: 6685241211780330049
-            }
-          }
-          Overrides {
-            Name: "bp:Thickness"
-            Float: 4
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Blueprint {
-          BlueprintAsset {
-            Id: 10913251976909601512
-          }
-          TeamSettings {
           }
         }
       }
@@ -4594,19 +4539,10 @@ Assets {
         AssetId: "CollegeBulb_01_Text_044"
       }
     }
-    Assets {
-      Id: 10913251976909601512
-      Name: "Outline Object"
-      PlatformAssetType: 20
-      PrimaryAsset {
-        AssetType: "BlueprintAssetRef"
-        AssetId: "fxbp_local_outline"
-      }
-    }
     PrimaryAssetId {
       AssetType: "None"
       AssetId: "None"
     }
   }
-  SerializationVersion: 84
+  SerializationVersion: 100
 }

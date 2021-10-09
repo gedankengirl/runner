@@ -1,8 +1,8 @@
 Name: "Info Boards"
 RootId: 9168930659997010632
 Objects {
-  Id: 18133843002547383417
-  Name: "PetBoard"
+  Id: 8890892875989064123
+  Name: "Pet Board"
   Transform {
     Location {
       X: 5832.66943
@@ -10,7 +10,7 @@ Objects {
       Z: 68.8156891
     }
     Rotation {
-      Yaw: 162.70636
+      Yaw: 162.706345
     }
     Scale {
       X: 0.948308408
@@ -30,7 +30,7 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "PetBoard"
+    FilePartitionName: "Pet Board"
   }
 }
 Objects {

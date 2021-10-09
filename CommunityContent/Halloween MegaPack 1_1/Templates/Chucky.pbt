@@ -559,7 +559,7 @@ Assets {
         Transform {
           Location {
             X: 0.117248535
-            Y: -0.301757813
+            Y: -0.301757812
             Z: 131.59613
           }
           Rotation {
@@ -890,7 +890,7 @@ Assets {
         Transform {
           Location {
             X: -0.11730957
-            Y: 0.301757813
+            Y: 0.301757812
           }
           Rotation {
           }
@@ -1691,7 +1691,7 @@ Assets {
           Rotation {
             Pitch: 0.000942566083
             Yaw: 1.12945485
-            Roll: -6.10351563e-05
+            Roll: -6.10351562e-05
           }
           Scale {
             X: 0.0361515582
@@ -1811,7 +1811,7 @@ Assets {
           Rotation {
             Pitch: 0.000942566083
             Yaw: 1.12945485
-            Roll: -6.10351563e-05
+            Roll: -6.10351562e-05
           }
           Scale {
             X: 0.0361507908
@@ -2242,7 +2242,7 @@ Assets {
             Z: 127.688271
           }
           Rotation {
-            Yaw: -0.000122070313
+            Yaw: -0.000122070312
           }
           Scale {
             X: 1
@@ -2603,6 +2603,6 @@ Assets {
   Marketplace {
     Description: "Here is a CC Mega Pack full of Halloween goodies. Candy, Monsters, Props, etc."
   }
-  SerializationVersion: 84
+  SerializationVersion: 100
   DirectlyPublished: true
 }

@@ -105,7 +105,7 @@ Assets {
             Z: 146.88298
           }
           Rotation {
-            Yaw: -6.10351563e-05
+            Yaw: -6.10351562e-05
           }
           Scale {
             X: 0.988269627
@@ -1594,7 +1594,7 @@ Assets {
         Transform {
           Location {
             X: -12.9667969
-            Y: -35.4414063
+            Y: -35.4414062
             Z: 1.52587891e-05
           }
           Rotation {
@@ -1692,7 +1692,7 @@ Assets {
         Name: "Cylinder - Rounded Small"
         Transform {
           Location {
-            Y: 25.0820313
+            Y: 25.0820312
             Z: 3.05175781e-05
           }
           Rotation {
@@ -1754,7 +1754,7 @@ Assets {
         Name: "Cylinder - Rounded Small"
         Transform {
           Location {
-            Y: -25.0820313
+            Y: -25.0820312
             Z: 3.05175781e-05
           }
           Rotation {
@@ -2056,5 +2056,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 84
+  SerializationVersion: 100
 }

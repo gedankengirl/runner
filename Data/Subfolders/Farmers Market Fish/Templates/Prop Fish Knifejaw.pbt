@@ -1551,7 +1551,7 @@ Assets {
         Transform {
           Location {
             X: -40.9165039
-            Y: -17.0351563
+            Y: -17.0351562
             Z: -19.2129059
           }
           Rotation {
@@ -2480,6 +2480,6 @@ Assets {
   Marketplace {
     Description: "The are the fish used in Farmers Market. "
   }
-  SerializationVersion: 84
+  SerializationVersion: 100
   DirectlyPublished: true
 }

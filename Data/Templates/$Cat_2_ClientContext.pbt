@@ -15,7 +15,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 8864733907737882616
+        ParentId: 4781671109827199097
         ChildIds: 3779878591198949005
         WantsNetworking: true
         Collidable_v2 {
@@ -93,7 +93,6 @@ Assets {
         ChildIds: 5419464597421430866
         ChildIds: 8797719858734747709
         ChildIds: 6254529556723403710
-        ChildIds: 4288171718686952166
         ChildIds: 16380238182050723797
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -563,7 +562,7 @@ Assets {
         Name: "Vibrisses"
         Transform {
           Location {
-            X: 48.2695313
+            X: 48.2695312
             Y: 23.3203125
             Z: 155.530273
           }
@@ -725,7 +724,7 @@ Assets {
         Name: "Vibrisses"
         Transform {
           Location {
-            X: 48.2695313
+            X: 48.2695312
             Y: -23.3203125
             Z: 155.530273
           }
@@ -1606,7 +1605,7 @@ Assets {
         Name: "Hood"
         Transform {
           Location {
-            X: 15.2382813
+            X: 15.2382812
             Z: 166.419373
           }
           Rotation {
@@ -1884,7 +1883,7 @@ Assets {
         Name: "Hoodie Drawstring"
         Transform {
           Location {
-            X: 49.0664063
+            X: 49.0664062
             Y: 2
             Z: 97.0707397
           }
@@ -2041,7 +2040,7 @@ Assets {
         Name: "Hoodie Drawstring"
         Transform {
           Location {
-            X: 51.4101563
+            X: 51.4101562
             Y: -6.75
             Z: 91.0879517
           }
@@ -3861,7 +3860,7 @@ Assets {
         Transform {
           Location {
             X: -44.8847656
-            Y: 5.62695313
+            Y: 5.62695312
             Z: -18.1416016
           }
           Rotation {
@@ -3924,7 +3923,7 @@ Assets {
         Transform {
           Location {
             X: -13.8203125
-            Y: 34.9257813
+            Y: 34.9257812
             Z: 206.913361
           }
           Rotation {
@@ -4000,7 +3999,7 @@ Assets {
         Transform {
           Location {
             X: -13.8203125
-            Y: -34.9257813
+            Y: -34.9257812
             Z: 206.913361
           }
           Rotation {
@@ -4157,59 +4156,6 @@ Assets {
               LinearDamping: 0.01
             }
             BoundsScale: 1
-          }
-        }
-      }
-      Objects {
-        Id: 4288171718686952166
-        Name: "Outline Object"
-        Transform {
-          Location {
-            Z: 158.341064
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 11103816251375639128
-        UnregisteredParameters {
-          Overrides {
-            Name: "bp:Color A"
-            Color {
-              R: 0.506000042
-              G: 0.305206269
-              A: 0.8
-            }
-          }
-          Overrides {
-            Name: "bp:Object To Outline"
-            ObjectReference {
-              SubObjectId: 11103816251375639128
-            }
-          }
-          Overrides {
-            Name: "bp:Thickness"
-            Float: 4
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Blueprint {
-          BlueprintAsset {
-            Id: 10913251976909601512
-          }
-          TeamSettings {
           }
         }
       }
@@ -4464,19 +4410,10 @@ Assets {
         AssetId: "F1_Text_036"
       }
     }
-    Assets {
-      Id: 10913251976909601512
-      Name: "Outline Object"
-      PlatformAssetType: 20
-      PrimaryAsset {
-        AssetType: "BlueprintAssetRef"
-        AssetId: "fxbp_local_outline"
-      }
-    }
     PrimaryAssetId {
       AssetType: "None"
       AssetId: "None"
     }
   }
-  SerializationVersion: 84
+  SerializationVersion: 100
 }

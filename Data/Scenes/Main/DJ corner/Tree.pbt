@@ -539,7 +539,7 @@ Objects {
           Name: "Position"
           Vector {
             X: 1401.76501
-            Y: 714.632813
+            Y: 714.632812
             Z: 598.345703
           }
         }
@@ -1250,7 +1250,7 @@ Objects {
         Overrides {
           Name: "Position"
           Vector {
-            X: 22.1757813
+            X: 22.1757812
           }
         }
       }
@@ -1461,7 +1461,7 @@ Objects {
           Name: "Position"
           Vector {
             X: 602.890503
-            Y: 103.601563
+            Y: 103.601562
             Z: 109.600281
           }
         }

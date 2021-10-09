@@ -15,7 +15,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 7284708399235958616
+        ParentId: 4781671109827199097
         ChildIds: 4354707392600184750
         WantsNetworking: true
         Collidable_v2 {
@@ -90,7 +90,6 @@ Assets {
         ChildIds: 991527463856024520
         ChildIds: 5152002343799836729
         ChildIds: 8696396203992296009
-        ChildIds: 12258578183344887224
         ChildIds: 9182671207176107326
         ChildIds: 10685538789173609185
         Collidable_v2 {
@@ -770,7 +769,7 @@ Assets {
         Transform {
           Location {
             X: 24.2421875
-            Y: -5.07226563
+            Y: -5.07226562
             Z: -24.9590759
           }
           Rotation {
@@ -1109,7 +1108,7 @@ Assets {
         Transform {
           Location {
             X: 34.8613281
-            Y: 22.9414063
+            Y: 22.9414062
             Z: 141.92836
           }
           Rotation {
@@ -1607,59 +1606,6 @@ Assets {
         }
       }
       Objects {
-        Id: 12258578183344887224
-        Name: "Outline Object"
-        Transform {
-          Location {
-            Z: 130
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 5587026107058685019
-        UnregisteredParameters {
-          Overrides {
-            Name: "bp:Color A"
-            Color {
-              G: 0.412222266
-              B: 0.490000129
-              A: 0.8
-            }
-          }
-          Overrides {
-            Name: "bp:Object To Outline"
-            ObjectReference {
-              SubObjectId: 5587026107058685019
-            }
-          }
-          Overrides {
-            Name: "bp:Thickness"
-            Float: 4
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Blueprint {
-          BlueprintAsset {
-            Id: 10913251976909601512
-          }
-          TeamSettings {
-          }
-        }
-      }
-      Objects {
         Id: 9182671207176107326
         Name: "Gem - Diamond 8-Sided Polished"
         Transform {
@@ -1863,19 +1809,10 @@ Assets {
         AssetId: "sm_diamond_8_sided_polished_001"
       }
     }
-    Assets {
-      Id: 10913251976909601512
-      Name: "Outline Object"
-      PlatformAssetType: 20
-      PrimaryAsset {
-        AssetType: "BlueprintAssetRef"
-        AssetId: "fxbp_local_outline"
-      }
-    }
     PrimaryAssetId {
       AssetType: "None"
       AssetId: "None"
     }
   }
-  SerializationVersion: 84
+  SerializationVersion: 100
 }

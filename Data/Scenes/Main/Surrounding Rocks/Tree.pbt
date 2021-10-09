@@ -5,7 +5,7 @@ Objects {
   Name: "Rock section"
   Transform {
     Location {
-      X: -4189.39063
+      X: -4189.39062
       Y: 2584.90527
       Z: 428.322754
     }

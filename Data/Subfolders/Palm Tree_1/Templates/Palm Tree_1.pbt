@@ -511,6 +511,6 @@ Assets {
   Marketplace {
     Description: "For inclusion in your gaming paradise!"
   }
-  SerializationVersion: 84
+  SerializationVersion: 100
   DirectlyPublished: true
 }

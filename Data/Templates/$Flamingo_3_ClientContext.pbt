@@ -15,7 +15,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 17958106882838060675
+        ParentId: 4781671109827199097
         ChildIds: 13217271847148517510
         WantsNetworking: true
         Collidable_v2 {
@@ -78,7 +78,6 @@ Assets {
         ChildIds: 11353759459620885101
         ChildIds: 8893892168038803046
         ChildIds: 10000792816480701336
-        ChildIds: 12245199029897534004
         ChildIds: 5756533335652818985
         ChildIds: 10224566057202119045
         Collidable_v2 {
@@ -1288,7 +1287,7 @@ Assets {
         Transform {
           Location {
             X: 15.0201712
-            Y: 9.82226563
+            Y: 9.82226562
             Z: 23.7972317
           }
           Rotation {
@@ -3188,61 +3187,6 @@ Assets {
         }
       }
       Objects {
-        Id: 12245199029897534004
-        Name: "Outline Object"
-        Transform {
-          Location {
-            X: -42.0898438
-            Z: 141.415588
-          }
-          Rotation {
-            Yaw: -6.10351563e-05
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 11433096180922388572
-        UnregisteredParameters {
-          Overrides {
-            Name: "bp:Color A"
-            Color {
-              G: 0.412222266
-              B: 0.490000129
-              A: 0.8
-            }
-          }
-          Overrides {
-            Name: "bp:Object To Outline"
-            ObjectReference {
-              SubObjectId: 11433096180922388572
-            }
-          }
-          Overrides {
-            Name: "bp:Thickness"
-            Float: 4
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Blueprint {
-          BlueprintAsset {
-            Id: 10913251976909601512
-          }
-          TeamSettings {
-          }
-        }
-      }
-      Objects {
         Id: 5756533335652818985
         Name: "Hat"
         Transform {
@@ -3855,15 +3799,6 @@ Assets {
       }
     }
     Assets {
-      Id: 10913251976909601512
-      Name: "Outline Object"
-      PlatformAssetType: 20
-      PrimaryAsset {
-        AssetType: "BlueprintAssetRef"
-        AssetId: "fxbp_local_outline"
-      }
-    }
-    Assets {
       Id: 289143332295159697
       Name: "Sphere - Half Thin"
       PlatformAssetType: 1
@@ -3913,5 +3848,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 84
+  SerializationVersion: 100
 }

@@ -1727,7 +1727,7 @@ Assets {
     }
     Assets {
       Id: 10634098119816284342
-      Name: "Wood Planks Dark"
+      Name: "Wood Planks"
       PlatformAssetType: 2
       PrimaryAsset {
         AssetType: "MaterialAssetRef"
@@ -1742,6 +1742,6 @@ Assets {
   Marketplace {
     Description: "Trellis/Wood Panels in 3 sizes\r\nWindow Fill\r\nHalf Wall\r\nFull Wall\r\n\r\nSimple but useful :-)"
   }
-  SerializationVersion: 84
+  SerializationVersion: 100
   DirectlyPublished: true
 }

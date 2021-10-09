@@ -2,7 +2,7 @@ Assets {
   Id: 37739248475890813
   Name: "Basic_no_spec_max_rough"
   PlatformAssetType: 13
-  SerializationVersion: 84
+  SerializationVersion: 100
   CustomMaterialAsset {
     BaseMaterialId: 10184847056121543272
     ParameterOverrides {

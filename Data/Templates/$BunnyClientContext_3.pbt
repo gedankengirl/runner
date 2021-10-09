@@ -15,7 +15,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 17043490186478522665
+        ParentId: 4781671109827199097
         ChildIds: 7220893551299585578
         WantsNetworking: true
         Collidable_v2 {
@@ -85,7 +85,6 @@ Assets {
         ChildIds: 12195727744798706289
         ChildIds: 13510515592459175575
         ChildIds: 16213964458129010609
-        ChildIds: 17954539685112113559
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -108,7 +107,7 @@ Assets {
             Z: 146.88298
           }
           Rotation {
-            Yaw: -6.10351563e-05
+            Yaw: -6.10351562e-05
           }
           Scale {
             X: 0.988269627
@@ -1126,7 +1125,7 @@ Assets {
         Name: "Vibrisses"
         Transform {
           Location {
-            Y: 24.5820313
+            Y: 24.5820312
             Z: 3.05175781e-05
           }
           Rotation {
@@ -1634,7 +1633,7 @@ Assets {
         Name: "Sphere"
         Transform {
           Location {
-            X: -58.8789063
+            X: -58.8789062
             Z: 60.9724121
           }
           Rotation {
@@ -2017,7 +2016,7 @@ Assets {
         Name: "Cube - Rounded"
         Transform {
           Location {
-            X: -1.86132813
+            X: -1.86132812
           }
           Rotation {
           }
@@ -2077,7 +2076,7 @@ Assets {
         Transform {
           Location {
             X: -0.861328125
-            Y: 16.6757813
+            Y: 16.6757812
           }
           Rotation {
             Roll: -90
@@ -2138,7 +2137,7 @@ Assets {
         Transform {
           Location {
             X: -0.861328125
-            Y: -16.6757813
+            Y: -16.6757812
           }
           Rotation {
             Roll: 89.9999924
@@ -2481,7 +2480,7 @@ Assets {
         Name: "Teardrop - Truncated"
         Transform {
           Location {
-            X: -60.7851563
+            X: -60.7851562
             Z: -31.6277924
           }
           Rotation {
@@ -2683,7 +2682,7 @@ Assets {
         Name: "Gem - Radiant Polished"
         Transform {
           Location {
-            X: 59.3632813
+            X: 59.3632812
             Z: 69.3721161
           }
           Rotation {
@@ -2788,58 +2787,6 @@ Assets {
         Script {
           ScriptAsset {
             Id: 14863999780221077747
-          }
-        }
-      }
-      Objects {
-        Id: 17954539685112113559
-        Name: "Outline Object"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 384847936546808363
-        UnregisteredParameters {
-          Overrides {
-            Name: "bp:Color A"
-            Color {
-              G: 0.412222266
-              B: 0.490000129
-              A: 0.8
-            }
-          }
-          Overrides {
-            Name: "bp:Thickness"
-            Float: 4
-          }
-          Overrides {
-            Name: "bp:Object To Outline"
-            ObjectReference {
-              SubObjectId: 384847936546808363
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Blueprint {
-          BlueprintAsset {
-            Id: 10913251976909601512
-          }
-          TeamSettings {
           }
         }
       }
@@ -2988,19 +2935,10 @@ Assets {
         AssetId: "sm_gem_radiant_polished_001"
       }
     }
-    Assets {
-      Id: 10913251976909601512
-      Name: "Outline Object"
-      PlatformAssetType: 20
-      PrimaryAsset {
-        AssetType: "BlueprintAssetRef"
-        AssetId: "fxbp_local_outline"
-      }
-    }
     PrimaryAssetId {
       AssetType: "None"
       AssetId: "None"
     }
   }
-  SerializationVersion: 84
+  SerializationVersion: 100
 }

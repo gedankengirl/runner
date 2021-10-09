@@ -609,7 +609,7 @@ Assets {
         Name: "Rock Block 01"
         Transform {
           Location {
-            X: 18.0664063
+            X: 18.0664062
             Y: -216.653564
             Z: -45.9733887
           }
@@ -1807,7 +1807,7 @@ Assets {
         Name: "Rock Block 01"
         Transform {
           Location {
-            X: 18.0664063
+            X: 18.0664062
             Y: -216.653564
             Z: -45.9733887
           }
@@ -2453,6 +2453,6 @@ Assets {
   Marketplace {
     Description: "A basic stone roads that add more depth than painting one"
   }
-  SerializationVersion: 84
+  SerializationVersion: 100
   DirectlyPublished: true
 }

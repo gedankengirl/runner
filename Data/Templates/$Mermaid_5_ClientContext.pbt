@@ -17,6 +17,7 @@ Assets {
         }
         ParentId: 4781671109827199097
         ChildIds: 4047951503656648099
+        WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
         }
@@ -83,7 +84,6 @@ Assets {
         ChildIds: 16517935201312446703
         ChildIds: 14730533787339217539
         ChildIds: 3198819179260501475
-        ChildIds: 11881658511289929214
         ChildIds: 1310410867380497594
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -106,7 +106,7 @@ Assets {
             Z: 146.88298
           }
           Rotation {
-            Yaw: -6.10351563e-05
+            Yaw: -6.10351562e-05
           }
           Scale {
             X: 0.988269627
@@ -2269,7 +2269,7 @@ Assets {
         Transform {
           Location {
             X: -2.90234375
-            Y: 27.1289063
+            Y: 27.1289062
             Z: 166.887939
           }
           Rotation {
@@ -3017,7 +3017,7 @@ Assets {
         Transform {
           Location {
             X: -12.9667969
-            Y: -35.4414063
+            Y: -35.4414062
             Z: 1.52587891e-05
           }
           Rotation {
@@ -3113,7 +3113,7 @@ Assets {
         Name: "Cylinder - Rounded Small"
         Transform {
           Location {
-            Y: 25.0820313
+            Y: 25.0820312
             Z: 3.05175781e-05
           }
           Rotation {
@@ -3175,7 +3175,7 @@ Assets {
         Name: "Cylinder - Rounded Small"
         Transform {
           Location {
-            Y: -25.0820313
+            Y: -25.0820312
             Z: 3.05175781e-05
           }
           Rotation {
@@ -3338,7 +3338,7 @@ Assets {
           }
           Rotation {
             Pitch: 7.99998856
-            Yaw: -6.10351563e-05
+            Yaw: -6.10351562e-05
             Roll: 4.11111846e-13
           }
           Scale {
@@ -3401,7 +3401,7 @@ Assets {
           }
           Rotation {
             Pitch: 7.99998856
-            Yaw: -6.10351563e-05
+            Yaw: -6.10351562e-05
             Roll: 4.11111846e-13
           }
           Scale {
@@ -3464,7 +3464,7 @@ Assets {
           }
           Rotation {
             Pitch: 7.99998856
-            Yaw: -6.10351563e-05
+            Yaw: -6.10351562e-05
             Roll: 4.11111846e-13
           }
           Scale {
@@ -6425,60 +6425,6 @@ Assets {
         }
       }
       Objects {
-        Id: 11881658511289929214
-        Name: "Outline Object"
-        Transform {
-          Location {
-            Z: 130.000046
-          }
-          Rotation {
-            Yaw: -6.10351344e-05
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 8854476548414654070
-        UnregisteredParameters {
-          Overrides {
-            Name: "bp:Color A"
-            Color {
-              R: 0.938000083
-              B: 0.0893343389
-              A: 0.8
-            }
-          }
-          Overrides {
-            Name: "bp:Object To Outline"
-            ObjectReference {
-              SubObjectId: 8854476548414654070
-            }
-          }
-          Overrides {
-            Name: "bp:Thickness"
-            Float: 4
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Blueprint {
-          BlueprintAsset {
-            Id: 10913251976909601512
-          }
-          TeamSettings {
-          }
-        }
-      }
-      Objects {
         Id: 1310410867380497594
         Name: "RockMove"
         Transform {
@@ -6711,19 +6657,10 @@ Assets {
         AssetId: "sm_quarter_torus_001"
       }
     }
-    Assets {
-      Id: 10913251976909601512
-      Name: "Outline Object"
-      PlatformAssetType: 20
-      PrimaryAsset {
-        AssetType: "BlueprintAssetRef"
-        AssetId: "fxbp_local_outline"
-      }
-    }
     PrimaryAssetId {
       AssetType: "None"
       AssetId: "None"
     }
   }
-  SerializationVersion: 84
+  SerializationVersion: 100
 }

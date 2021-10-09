@@ -1169,7 +1169,7 @@ Assets {
         Name: "Cylinder - Rounded Small"
         Transform {
           Location {
-            X: 2.21289063
+            X: 2.21289062
             Y: -39.6386719
             Z: -59.9430389
           }
@@ -1232,7 +1232,7 @@ Assets {
         Name: "Cylinder - Rounded Small"
         Transform {
           Location {
-            X: 2.21289063
+            X: 2.21289062
             Y: -23.109375
             Z: -53.7591705
           }
@@ -1294,7 +1294,7 @@ Assets {
         Name: "Cylinder - Rounded Small"
         Transform {
           Location {
-            X: 2.21289063
+            X: 2.21289062
             Y: -61.6816406
             Z: -72.4866791
           }
@@ -1488,5 +1488,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 84
+  SerializationVersion: 100
 }

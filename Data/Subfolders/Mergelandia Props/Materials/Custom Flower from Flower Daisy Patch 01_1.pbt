@@ -2,7 +2,7 @@ Assets {
   Id: 13177624607860925441
   Name: "Custom Flower from Flower Daisy Patch 01_1"
   PlatformAssetType: 13
-  SerializationVersion: 84
+  SerializationVersion: 100
   CustomMaterialAsset {
     BaseMaterialId: 3849968066063545991
     ParameterOverrides {

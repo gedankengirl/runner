@@ -15,7 +15,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 15317849570465314173
+        ParentId: 4781671109827199097
         ChildIds: 10691971303635146872
         WantsNetworking: true
         Collidable_v2 {
@@ -85,7 +85,6 @@ Assets {
         ChildIds: 8072931012172165320
         ChildIds: 2820746078789359768
         ChildIds: 6416790988233016307
-        ChildIds: 14475295576589205882
         ChildIds: 17325988686169570403
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -375,7 +374,7 @@ Assets {
         Name: "Sphere - Half"
         Transform {
           Location {
-            X: 0.000122070313
+            X: 0.000122070312
             Y: -16.8059082
           }
           Rotation {
@@ -441,7 +440,7 @@ Assets {
         Name: "Sphere - Half"
         Transform {
           Location {
-            X: 0.000122070313
+            X: 0.000122070312
             Y: -16.8059082
           }
           Rotation {
@@ -1266,7 +1265,7 @@ Assets {
         Name: "Teeth"
         Transform {
           Location {
-            X: 0.000610351563
+            X: 0.000610351562
             Y: 5.96826172
             Z: 0.370346069
           }
@@ -1844,7 +1843,7 @@ Assets {
         Transform {
           Location {
             X: -5.06005859
-            Y: 15.9570313
+            Y: 15.9570312
             Z: 1.51913452
           }
           Rotation {
@@ -1898,7 +1897,7 @@ Assets {
         Transform {
           Location {
             X: -4.29974365
-            Y: -15.5195313
+            Y: -15.5195312
           }
           Rotation {
             Pitch: -40.1776
@@ -3926,7 +3925,7 @@ Assets {
         Transform {
           Location {
             X: -31.703186
-            Y: -3.69726563
+            Y: -3.69726562
             Z: 86.9603882
           }
           Rotation {
@@ -4134,7 +4133,7 @@ Assets {
         Transform {
           Location {
             X: -0.25579834
-            Y: 7.50195313
+            Y: 7.50195312
             Z: 4.00488281
           }
           Rotation {
@@ -4368,7 +4367,7 @@ Assets {
         Transform {
           Location {
             X: -28.0310059
-            Y: 55.1132813
+            Y: 55.1132812
             Z: 41.840271
           }
           Rotation {
@@ -5231,59 +5230,6 @@ Assets {
         }
       }
       Objects {
-        Id: 14475295576589205882
-        Name: "Outline Object"
-        Transform {
-          Location {
-            Z: 130.625
-          }
-          Rotation {
-          }
-          Scale {
-            X: 0.910682738
-            Y: 0.910682738
-            Z: 0.910682738
-          }
-        }
-        ParentId: 6837354041371230196
-        UnregisteredParameters {
-          Overrides {
-            Name: "bp:Color A"
-            Color {
-              R: 0.506000042
-              G: 0.305206269
-              A: 0.8
-            }
-          }
-          Overrides {
-            Name: "bp:Object To Outline"
-            ObjectReference {
-              SubObjectId: 6837354041371230196
-            }
-          }
-          Overrides {
-            Name: "bp:Thickness"
-            Float: 4
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Blueprint {
-          BlueprintAsset {
-            Id: 10913251976909601512
-          }
-          TeamSettings {
-          }
-        }
-      }
-      Objects {
         Id: 17325988686169570403
         Name: "RockMove"
         Transform {
@@ -5615,19 +5561,10 @@ Assets {
         AssetId: "F1_Text_036"
       }
     }
-    Assets {
-      Id: 10913251976909601512
-      Name: "Outline Object"
-      PlatformAssetType: 20
-      PrimaryAsset {
-        AssetType: "BlueprintAssetRef"
-        AssetId: "fxbp_local_outline"
-      }
-    }
     PrimaryAssetId {
       AssetType: "None"
       AssetId: "None"
     }
   }
-  SerializationVersion: 84
+  SerializationVersion: 100
 }

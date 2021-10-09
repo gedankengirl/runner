@@ -49,5 +49,5 @@ Assets {
     Version: "1.0.0"
     Description: "From my Alice Entry. Hopeing some can use him in the future."
   }
-  SerializationVersion: 84
+  SerializationVersion: 100
 }

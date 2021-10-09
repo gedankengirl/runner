@@ -719,7 +719,7 @@ Objects {
           Name: "Position"
           Vector {
             X: -3781.81299
-            Y: 742.101563
+            Y: 742.101562
             Z: 147
           }
         }
@@ -3211,7 +3211,7 @@ Objects {
   Transform {
     Location {
       X: 6412.19
-      Y: -402.101563
+      Y: -402.101562
       Z: -12.7101135
     }
     Rotation {

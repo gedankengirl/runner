@@ -24,7 +24,7 @@ Objects {
   ChildIds: 8534815031986278044
   ChildIds: 7553754998792656332
   ChildIds: 11266998582273717775
-  ChildIds: 17116633522967605758
+  ChildIds: 15096133948427597975
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -40,8 +40,8 @@ Objects {
   }
 }
 Objects {
-  Id: 17116633522967605758
-  Name: "CinematicShot"
+  Id: 15096133948427597975
+  Name: "QQ announce"
   Transform {
     Scale {
       X: 1
@@ -50,7 +50,6 @@ Objects {
     }
   }
   ParentId: 4781671109827199097
-  WantsNetworking: true
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -59,24 +58,30 @@ Objects {
   }
   TemplateInstance {
     ParameterOverrideMap {
-      key: 16121779860319454006
+      key: 7951774224442454998
       value {
         Overrides {
           Name: "Name"
-          String: "CinematicShot"
+          String: "QQ announce"
         }
         Overrides {
           Name: "Position"
           Vector {
-            X: 3057.33911
-            Y: 2402.3186
-            Z: 70
+            X: 4252.06201
+            Y: 3283.5769
+            Z: 180.862732
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Yaw: 23.0441666
           }
         }
       }
     }
     TemplateAsset {
-      Id: 12344851980764063573
+      Id: 7945600508244610067
     }
   }
 }
@@ -156,7 +161,9 @@ Objects {
   Name: "KillZoneTrigger"
   Transform {
     Location {
-      Z: -2274.33203
+      X: -36.7612305
+      Y: 267.282227
+      Z: -2287.72876
     }
     Rotation {
     }

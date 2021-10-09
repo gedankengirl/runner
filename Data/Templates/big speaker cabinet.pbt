@@ -146,7 +146,7 @@ Assets {
         Name: "Cube - Arcade 03"
         Transform {
           Location {
-            X: 22.1757813
+            X: 22.1757812
           }
           Rotation {
           }
@@ -542,7 +542,7 @@ Assets {
         Name: "Cube - Arcade 03"
         Transform {
           Location {
-            X: 22.1757813
+            X: 22.1757812
           }
           Rotation {
           }
@@ -938,7 +938,7 @@ Assets {
         Name: "Cube - Arcade 03"
         Transform {
           Location {
-            X: 22.1757813
+            X: 22.1757812
           }
           Rotation {
           }
@@ -1334,7 +1334,7 @@ Assets {
         Name: "Cube - Arcade 03"
         Transform {
           Location {
-            X: 22.1757813
+            X: 22.1757812
           }
           Rotation {
           }
@@ -1730,7 +1730,7 @@ Assets {
         Name: "Cube - Arcade 03"
         Transform {
           Location {
-            X: 22.1757813
+            X: 22.1757812
           }
           Rotation {
           }
@@ -2126,7 +2126,7 @@ Assets {
         Name: "Cube - Arcade 03"
         Transform {
           Location {
-            X: 22.1757813
+            X: 22.1757812
           }
           Rotation {
           }
@@ -2522,7 +2522,7 @@ Assets {
         Name: "Cube - Arcade 03"
         Transform {
           Location {
-            X: 22.1757813
+            X: 22.1757812
           }
           Rotation {
           }
@@ -2917,7 +2917,7 @@ Assets {
         Name: "Cube - Arcade 03"
         Transform {
           Location {
-            X: 22.1757813
+            X: 22.1757812
           }
           Rotation {
           }
@@ -3313,7 +3313,7 @@ Assets {
         Name: "Cube - Arcade 03"
         Transform {
           Location {
-            X: 22.1757813
+            X: 22.1757812
           }
           Rotation {
           }
@@ -4607,7 +4607,7 @@ Assets {
         Name: "Cube - Arcade 03"
         Transform {
           Location {
-            X: 22.1757813
+            X: 22.1757812
           }
           Rotation {
           }
@@ -5058,5 +5058,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 84
+  SerializationVersion: 100
 }

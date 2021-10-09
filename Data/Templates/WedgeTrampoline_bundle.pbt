@@ -43,5 +43,5 @@ Assets {
     Version: "1.0.0"
     Description: "WedgeTrampoline"
   }
-  SerializationVersion: 84
+  SerializationVersion: 100
 }

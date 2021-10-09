@@ -156,7 +156,7 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Inscription_5"
+    FilePartitionName: "Inscription_6"
   }
 }
 Objects {

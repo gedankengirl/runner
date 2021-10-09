@@ -663,7 +663,7 @@ Objects {
   Name: "Rock Flat 02"
   Transform {
     Location {
-      X: 1460.76563
+      X: 1460.76562
       Y: -1449.97681
       Z: 200
     }

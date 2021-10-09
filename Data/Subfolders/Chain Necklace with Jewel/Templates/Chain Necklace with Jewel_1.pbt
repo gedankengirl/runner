@@ -1940,7 +1940,7 @@ Assets {
         Name: "chainb"
         Transform {
           Location {
-            X: 0.879882813
+            X: 0.879882812
             Y: -1.49578857
             Z: 53.455
           }
@@ -8648,6 +8648,6 @@ Assets {
   Marketplace {
     Description: "Gold necklace great for props or quest item.\r\n\r\nEnjoy!\r\n\r\nMade for DnD game jam"
   }
-  SerializationVersion: 84
+  SerializationVersion: 100
   DirectlyPublished: true
 }

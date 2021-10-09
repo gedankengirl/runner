@@ -146,7 +146,7 @@ Objects {
   Transform {
     Location {
       X: -9.20117188
-      Y: 66.8945313
+      Y: 66.8945312
       Z: 4.57763672e-05
     }
     Rotation {
@@ -285,7 +285,7 @@ Objects {
   Name: "Diamond - Polished"
   Transform {
     Location {
-      X: -2.72070313
+      X: -2.72070312
       Y: -62.78125
       Z: 27.1114502
     }
@@ -356,7 +356,7 @@ Objects {
   Transform {
     Location {
       X: 2.32617188
-      Y: -53.0195313
+      Y: -53.0195312
       Z: 50.7119446
     }
     Rotation {
@@ -426,7 +426,7 @@ Objects {
   Transform {
     Location {
       X: 4.97460938
-      Y: -37.5351563
+      Y: -37.5351562
       Z: 68.3855286
     }
     Rotation {

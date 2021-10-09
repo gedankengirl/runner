@@ -15,7 +15,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 17043490186478522665
+        ParentId: 4781671109827199097
         ChildIds: 14010356382958989724
         WantsNetworking: true
         Collidable_v2 {
@@ -83,7 +83,6 @@ Assets {
         ChildIds: 14513807100247172051
         ChildIds: 9476767001167350129
         ChildIds: 10716726224571095813
-        ChildIds: 10487946799227778412
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -106,7 +105,7 @@ Assets {
             Z: 146.88298
           }
           Rotation {
-            Yaw: -6.10351563e-05
+            Yaw: -6.10351562e-05
           }
           Scale {
             X: 0.988269627
@@ -1124,7 +1123,7 @@ Assets {
         Name: "Vibrisses"
         Transform {
           Location {
-            Y: 24.5820313
+            Y: 24.5820312
             Z: 3.05175781e-05
           }
           Rotation {
@@ -1632,7 +1631,7 @@ Assets {
         Name: "Sphere"
         Transform {
           Location {
-            X: -58.8789063
+            X: -58.8789062
             Z: 60.9724121
           }
           Rotation {
@@ -2015,7 +2014,7 @@ Assets {
         Name: "Cube - Rounded"
         Transform {
           Location {
-            X: -1.86132813
+            X: -1.86132812
           }
           Rotation {
           }
@@ -2075,7 +2074,7 @@ Assets {
         Transform {
           Location {
             X: -0.861328125
-            Y: 16.6757813
+            Y: 16.6757812
           }
           Rotation {
             Roll: -90
@@ -2136,7 +2135,7 @@ Assets {
         Transform {
           Location {
             X: -0.861328125
-            Y: -16.6757813
+            Y: -16.6757812
           }
           Rotation {
             Roll: 89.9999924
@@ -2479,7 +2478,7 @@ Assets {
         Name: "Teardrop - Truncated"
         Transform {
           Location {
-            X: -60.7851563
+            X: -60.7851562
             Z: -31.6277924
           }
           Rotation {
@@ -2669,58 +2668,6 @@ Assets {
           }
         }
       }
-      Objects {
-        Id: 10487946799227778412
-        Name: "Outline Object"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 15130564856022501176
-        UnregisteredParameters {
-          Overrides {
-            Name: "bp:Color A"
-            Color {
-              R: 0.506000042
-              G: 0.305206269
-              A: 0.8
-            }
-          }
-          Overrides {
-            Name: "bp:Thickness"
-            Float: 4
-          }
-          Overrides {
-            Name: "bp:Object To Outline"
-            ObjectReference {
-              SubObjectId: 15130564856022501176
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Blueprint {
-          BlueprintAsset {
-            Id: 10913251976909601512
-          }
-          TeamSettings {
-          }
-        }
-      }
     }
     Assets {
       Id: 5185278861897178064
@@ -2857,19 +2804,10 @@ Assets {
         AssetId: "sm_crescent_003"
       }
     }
-    Assets {
-      Id: 10913251976909601512
-      Name: "Outline Object"
-      PlatformAssetType: 20
-      PrimaryAsset {
-        AssetType: "BlueprintAssetRef"
-        AssetId: "fxbp_local_outline"
-      }
-    }
     PrimaryAssetId {
       AssetType: "None"
       AssetId: "None"
     }
   }
-  SerializationVersion: 84
+  SerializationVersion: 100
 }

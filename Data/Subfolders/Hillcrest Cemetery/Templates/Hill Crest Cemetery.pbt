@@ -1451,7 +1451,7 @@ Assets {
         Name: "Square Grave"
         Transform {
           Location {
-            X: 235.789063
+            X: 235.789062
             Y: 450
             Z: 1586.71252
           }
@@ -1635,7 +1635,7 @@ Assets {
         Name: "Hemisphere"
         Transform {
           Location {
-            X: -360.789063
+            X: -360.789062
             Z: 0.787475586
           }
           Rotation {
@@ -1685,7 +1685,7 @@ Assets {
         Name: "Cylinder"
         Transform {
           Location {
-            X: -173.289063
+            X: -173.289062
             Z: 0.787475586
           }
           Rotation {
@@ -1736,7 +1736,7 @@ Assets {
         Name: "Square Grave"
         Transform {
           Location {
-            X: 235.789063
+            X: 235.789062
             Y: 1700
             Z: 1586.71252
           }
@@ -1920,7 +1920,7 @@ Assets {
         Name: "Hemisphere"
         Transform {
           Location {
-            X: -360.789063
+            X: -360.789062
             Z: 0.787475586
           }
           Rotation {
@@ -1970,7 +1970,7 @@ Assets {
         Name: "Cylinder"
         Transform {
           Location {
-            X: -173.289063
+            X: -173.289062
             Z: 0.787475586
           }
           Rotation {
@@ -3554,7 +3554,7 @@ Assets {
         Name: "Hemisphere"
         Transform {
           Location {
-            X: -360.789063
+            X: -360.789062
             Z: 0.787475586
           }
           Rotation {
@@ -3604,7 +3604,7 @@ Assets {
         Name: "Cylinder"
         Transform {
           Location {
-            X: -173.289063
+            X: -173.289062
             Z: 0.787475586
           }
           Rotation {
@@ -5471,7 +5471,7 @@ Assets {
         Name: "Hemisphere"
         Transform {
           Location {
-            X: -360.789063
+            X: -360.789062
             Z: 0.787475586
           }
           Rotation {
@@ -5521,7 +5521,7 @@ Assets {
         Name: "Cylinder"
         Transform {
           Location {
-            X: -173.289063
+            X: -173.289062
             Z: 0.787475586
           }
           Rotation {
@@ -5756,7 +5756,7 @@ Assets {
         Name: "Hemisphere"
         Transform {
           Location {
-            X: -360.789063
+            X: -360.789062
             Z: 0.787475586
           }
           Rotation {
@@ -5806,7 +5806,7 @@ Assets {
         Name: "Cylinder"
         Transform {
           Location {
-            X: -173.289063
+            X: -173.289062
             Z: 0.787475586
           }
           Rotation {
@@ -7390,7 +7390,7 @@ Assets {
         Name: "Hemisphere"
         Transform {
           Location {
-            X: -360.789063
+            X: -360.789062
             Z: 0.787475586
           }
           Rotation {
@@ -7440,7 +7440,7 @@ Assets {
         Name: "Cylinder"
         Transform {
           Location {
-            X: -173.289063
+            X: -173.289062
             Z: 0.787475586
           }
           Rotation {
@@ -8993,7 +8993,7 @@ Assets {
         Name: "Hemisphere"
         Transform {
           Location {
-            X: -360.789063
+            X: -360.789062
             Z: 0.787475586
           }
           Rotation {
@@ -9043,7 +9043,7 @@ Assets {
         Name: "Cylinder"
         Transform {
           Location {
-            X: -173.289063
+            X: -173.289062
             Z: 0.787475586
           }
           Rotation {
@@ -10627,7 +10627,7 @@ Assets {
         Name: "Hemisphere"
         Transform {
           Location {
-            X: -360.789063
+            X: -360.789062
             Z: 0.787475586
           }
           Rotation {
@@ -10677,7 +10677,7 @@ Assets {
         Name: "Cylinder"
         Transform {
           Location {
-            X: -173.289063
+            X: -173.289062
             Z: 0.787475586
           }
           Rotation {
@@ -12046,7 +12046,7 @@ Assets {
         Name: "Square Grave"
         Transform {
           Location {
-            X: 235.789063
+            X: 235.789062
             Y: -1400
             Z: 1586.71252
           }
@@ -12230,7 +12230,7 @@ Assets {
         Name: "Hemisphere"
         Transform {
           Location {
-            X: -360.789063
+            X: -360.789062
             Z: 0.787475586
           }
           Rotation {
@@ -12280,7 +12280,7 @@ Assets {
         Name: "Cylinder"
         Transform {
           Location {
-            X: -173.289063
+            X: -173.289062
             Z: 0.787475586
           }
           Rotation {
@@ -13864,7 +13864,7 @@ Assets {
         Name: "Hemisphere"
         Transform {
           Location {
-            X: -360.789063
+            X: -360.789062
             Z: 0.787475586
           }
           Rotation {
@@ -13914,7 +13914,7 @@ Assets {
         Name: "Cylinder"
         Transform {
           Location {
-            X: -173.289063
+            X: -173.289062
             Z: 0.787475586
           }
           Rotation {
@@ -14777,7 +14777,7 @@ Assets {
         Name: "Hemisphere"
         Transform {
           Location {
-            X: -360.789063
+            X: -360.789062
             Z: 0.787475586
           }
           Rotation {
@@ -14827,7 +14827,7 @@ Assets {
         Name: "Cylinder"
         Transform {
           Location {
-            X: -173.289063
+            X: -173.289062
             Z: 0.787475586
           }
           Rotation {
@@ -16349,7 +16349,7 @@ Assets {
         Name: "Hemisphere"
         Transform {
           Location {
-            X: -360.789063
+            X: -360.789062
             Z: 0.787475586
           }
           Rotation {
@@ -16399,7 +16399,7 @@ Assets {
         Name: "Cylinder"
         Transform {
           Location {
-            X: -173.289063
+            X: -173.289062
             Z: 0.787475586
           }
           Rotation {
@@ -17607,7 +17607,7 @@ Assets {
         Name: "Hemisphere"
         Transform {
           Location {
-            X: -360.789063
+            X: -360.789062
             Z: 0.787475586
           }
           Rotation {
@@ -17657,7 +17657,7 @@ Assets {
         Name: "Cylinder"
         Transform {
           Location {
-            X: -173.289063
+            X: -173.289062
             Z: 0.787475586
           }
           Rotation {
@@ -68310,7 +68310,7 @@ Assets {
         Name: "Fantasy Castle Pillar 01 Top"
         Transform {
           Location {
-            X: 4.37695313
+            X: 4.37695312
             Y: -285.929688
           }
           Rotation {
@@ -68367,7 +68367,7 @@ Assets {
         Name: "Fantasy Castle Pillar 01 Top"
         Transform {
           Location {
-            X: 4.37695313
+            X: 4.37695312
             Y: 300.349609
           }
           Rotation {
@@ -68654,7 +68654,7 @@ Assets {
         Name: "Text 03: L"
         Transform {
           Location {
-            X: 4.64257813
+            X: 4.64257812
             Y: -127.852539
             Z: 746.176758
           }
@@ -68718,7 +68718,7 @@ Assets {
         Name: "Text 03: L"
         Transform {
           Location {
-            X: 4.64257813
+            X: 4.64257812
             Y: -75.640625
             Z: 746.176758
           }
@@ -68782,7 +68782,7 @@ Assets {
         Name: "Text 03: C"
         Transform {
           Location {
-            X: 4.80664063
+            X: 4.80664062
             Y: -27.3325195
             Z: 746.176758
           }
@@ -68846,7 +68846,7 @@ Assets {
         Name: "Text 03: R"
         Transform {
           Location {
-            X: 4.80664063
+            X: 4.80664062
             Y: 30.6113281
             Z: 746.176758
           }
@@ -68910,7 +68910,7 @@ Assets {
         Name: "Text 03: E"
         Transform {
           Location {
-            X: 4.80664063
+            X: 4.80664062
             Y: 92.9008789
             Z: 746.176758
           }
@@ -68974,7 +68974,7 @@ Assets {
         Name: "Text 03: S"
         Transform {
           Location {
-            X: 4.80664063
+            X: 4.80664062
             Y: 145.634766
             Z: 746.176758
           }
@@ -69038,7 +69038,7 @@ Assets {
         Name: "Text 03: T"
         Transform {
           Location {
-            X: 4.80664063
+            X: 4.80664062
             Y: 194.028809
             Z: 746.176758
           }
@@ -69527,7 +69527,7 @@ Assets {
         Name: "Fantasy Castle Pillar 01 Top"
         Transform {
           Location {
-            X: 4.37695313
+            X: 4.37695312
             Y: -285.929688
           }
           Rotation {
@@ -69584,7 +69584,7 @@ Assets {
         Name: "Fantasy Castle Pillar 01 Top"
         Transform {
           Location {
-            X: 4.37695313
+            X: 4.37695312
             Y: 300.349609
           }
           Rotation {
@@ -69871,7 +69871,7 @@ Assets {
         Name: "Text 03: L"
         Transform {
           Location {
-            X: 4.64257813
+            X: 4.64257812
             Y: -127.852539
             Z: 746.176758
           }
@@ -69935,7 +69935,7 @@ Assets {
         Name: "Text 03: L"
         Transform {
           Location {
-            X: 4.64257813
+            X: 4.64257812
             Y: -75.640625
             Z: 746.176758
           }
@@ -69999,7 +69999,7 @@ Assets {
         Name: "Text 03: C"
         Transform {
           Location {
-            X: 4.80664063
+            X: 4.80664062
             Y: -27.3325195
             Z: 746.176758
           }
@@ -70063,7 +70063,7 @@ Assets {
         Name: "Text 03: R"
         Transform {
           Location {
-            X: 4.80664063
+            X: 4.80664062
             Y: 30.6113281
             Z: 746.176758
           }
@@ -70127,7 +70127,7 @@ Assets {
         Name: "Text 03: E"
         Transform {
           Location {
-            X: 4.80664063
+            X: 4.80664062
             Y: 92.9008789
             Z: 746.176758
           }
@@ -70191,7 +70191,7 @@ Assets {
         Name: "Text 03: S"
         Transform {
           Location {
-            X: 4.80664063
+            X: 4.80664062
             Y: 145.634766
             Z: 746.176758
           }
@@ -70255,7 +70255,7 @@ Assets {
         Name: "Text 03: T"
         Transform {
           Location {
-            X: 4.80664063
+            X: 4.80664062
             Y: 194.028809
             Z: 746.176758
           }
@@ -70744,7 +70744,7 @@ Assets {
         Name: "Fantasy Castle Pillar 01 Top"
         Transform {
           Location {
-            X: 4.37695313
+            X: 4.37695312
             Y: -285.929688
           }
           Rotation {
@@ -70801,7 +70801,7 @@ Assets {
         Name: "Fantasy Castle Pillar 01 Top"
         Transform {
           Location {
-            X: 4.37695313
+            X: 4.37695312
             Y: 300.349609
           }
           Rotation {
@@ -71088,7 +71088,7 @@ Assets {
         Name: "Text 03: L"
         Transform {
           Location {
-            X: 4.64257813
+            X: 4.64257812
             Y: -127.852539
             Z: 746.176758
           }
@@ -71152,7 +71152,7 @@ Assets {
         Name: "Text 03: L"
         Transform {
           Location {
-            X: 4.64257813
+            X: 4.64257812
             Y: -75.640625
             Z: 746.176758
           }
@@ -71216,7 +71216,7 @@ Assets {
         Name: "Text 03: C"
         Transform {
           Location {
-            X: 4.80664063
+            X: 4.80664062
             Y: -27.3325195
             Z: 746.176758
           }
@@ -71280,7 +71280,7 @@ Assets {
         Name: "Text 03: R"
         Transform {
           Location {
-            X: 4.80664063
+            X: 4.80664062
             Y: 30.6113281
             Z: 746.176758
           }
@@ -71344,7 +71344,7 @@ Assets {
         Name: "Text 03: E"
         Transform {
           Location {
-            X: 4.80664063
+            X: 4.80664062
             Y: 92.9008789
             Z: 746.176758
           }
@@ -71408,7 +71408,7 @@ Assets {
         Name: "Text 03: S"
         Transform {
           Location {
-            X: 4.80664063
+            X: 4.80664062
             Y: 145.634766
             Z: 746.176758
           }
@@ -71472,7 +71472,7 @@ Assets {
         Name: "Text 03: T"
         Transform {
           Location {
-            X: 4.80664063
+            X: 4.80664062
             Y: 194.028809
             Z: 746.176758
           }
@@ -72301,7 +72301,7 @@ Assets {
         Name: "Square Grave"
         Transform {
           Location {
-            X: 235.789063
+            X: 235.789062
             Y: 450
             Z: 1586.71252
           }
@@ -72485,7 +72485,7 @@ Assets {
         Name: "Hemisphere"
         Transform {
           Location {
-            X: -360.789063
+            X: -360.789062
             Z: 0.787475586
           }
           Rotation {
@@ -72535,7 +72535,7 @@ Assets {
         Name: "Cylinder"
         Transform {
           Location {
-            X: -173.289063
+            X: -173.289062
             Z: 0.787475586
           }
           Rotation {
@@ -72586,7 +72586,7 @@ Assets {
         Name: "Square Grave"
         Transform {
           Location {
-            X: 235.789063
+            X: 235.789062
             Y: 1700
             Z: 1586.71252
           }
@@ -72770,7 +72770,7 @@ Assets {
         Name: "Hemisphere"
         Transform {
           Location {
-            X: -360.789063
+            X: -360.789062
             Z: 0.787475586
           }
           Rotation {
@@ -72820,7 +72820,7 @@ Assets {
         Name: "Cylinder"
         Transform {
           Location {
-            X: -173.289063
+            X: -173.289062
             Z: 0.787475586
           }
           Rotation {
@@ -75063,7 +75063,7 @@ Assets {
         Name: "Hemisphere"
         Transform {
           Location {
-            X: -360.789063
+            X: -360.789062
             Z: 0.787475586
           }
           Rotation {
@@ -75113,7 +75113,7 @@ Assets {
         Name: "Cylinder"
         Transform {
           Location {
-            X: -173.289063
+            X: -173.289062
             Z: 0.787475586
           }
           Rotation {
@@ -75348,7 +75348,7 @@ Assets {
         Name: "Hemisphere"
         Transform {
           Location {
-            X: -360.789063
+            X: -360.789062
             Z: 0.787475586
           }
           Rotation {
@@ -75398,7 +75398,7 @@ Assets {
         Name: "Cylinder"
         Transform {
           Location {
-            X: -173.289063
+            X: -173.289062
             Z: 0.787475586
           }
           Rotation {
@@ -76292,7 +76292,7 @@ Assets {
         Name: "Hemisphere"
         Transform {
           Location {
-            X: -360.789063
+            X: -360.789062
             Z: 0.787475586
           }
           Rotation {
@@ -76342,7 +76342,7 @@ Assets {
         Name: "Cylinder"
         Transform {
           Location {
-            X: -173.289063
+            X: -173.289062
             Z: 0.787475586
           }
           Rotation {
@@ -77550,7 +77550,7 @@ Assets {
         Name: "Hemisphere"
         Transform {
           Location {
-            X: -360.789063
+            X: -360.789062
             Z: 0.787475586
           }
           Rotation {
@@ -77600,7 +77600,7 @@ Assets {
         Name: "Cylinder"
         Transform {
           Location {
-            X: -173.289063
+            X: -173.289062
             Z: 0.787475586
           }
           Rotation {
@@ -78624,7 +78624,7 @@ Assets {
         Name: "Square Grave"
         Transform {
           Location {
-            X: 235.789063
+            X: 235.789062
             Y: -1400
             Z: 1586.71252
           }
@@ -78808,7 +78808,7 @@ Assets {
         Name: "Hemisphere"
         Transform {
           Location {
-            X: -360.789063
+            X: -360.789062
             Z: 0.787475586
           }
           Rotation {
@@ -78858,7 +78858,7 @@ Assets {
         Name: "Cylinder"
         Transform {
           Location {
-            X: -173.289063
+            X: -173.289062
             Z: 0.787475586
           }
           Rotation {
@@ -78909,7 +78909,7 @@ Assets {
         Name: "Square Grave"
         Transform {
           Location {
-            X: 235.789063
+            X: 235.789062
             Y: -150
             Z: 1586.71252
           }
@@ -79093,7 +79093,7 @@ Assets {
         Name: "Hemisphere"
         Transform {
           Location {
-            X: -360.789063
+            X: -360.789062
             Z: 0.787475586
           }
           Rotation {
@@ -79143,7 +79143,7 @@ Assets {
         Name: "Cylinder"
         Transform {
           Location {
-            X: -173.289063
+            X: -173.289062
             Z: 0.787475586
           }
           Rotation {
@@ -80037,7 +80037,7 @@ Assets {
         Name: "Hemisphere"
         Transform {
           Location {
-            X: -360.789063
+            X: -360.789062
             Z: 0.787475586
           }
           Rotation {
@@ -80087,7 +80087,7 @@ Assets {
         Name: "Cylinder"
         Transform {
           Location {
-            X: -173.289063
+            X: -173.289062
             Z: 0.787475586
           }
           Rotation {
@@ -80950,7 +80950,7 @@ Assets {
         Name: "Hemisphere"
         Transform {
           Location {
-            X: -360.789063
+            X: -360.789062
             Z: 0.787475586
           }
           Rotation {
@@ -81000,7 +81000,7 @@ Assets {
         Name: "Cylinder"
         Transform {
           Location {
-            X: -173.289063
+            X: -173.289062
             Z: 0.787475586
           }
           Rotation {
@@ -81894,7 +81894,7 @@ Assets {
         Name: "Hemisphere"
         Transform {
           Location {
-            X: -360.789063
+            X: -360.789062
             Z: 0.787475586
           }
           Rotation {
@@ -81944,7 +81944,7 @@ Assets {
         Name: "Cylinder"
         Transform {
           Location {
-            X: -173.289063
+            X: -173.289062
             Z: 0.787475586
           }
           Rotation {
@@ -83152,7 +83152,7 @@ Assets {
         Name: "Hemisphere"
         Transform {
           Location {
-            X: -360.789063
+            X: -360.789062
             Z: 0.787475586
           }
           Rotation {
@@ -83202,7 +83202,7 @@ Assets {
         Name: "Cylinder"
         Transform {
           Location {
-            X: -173.289063
+            X: -173.289062
             Z: 0.787475586
           }
           Rotation {
@@ -132004,7 +132004,7 @@ Assets {
         Name: "Step Railings"
         Transform {
           Location {
-            X: -59.4726563
+            X: -59.4726562
             Z: 64.7452393
           }
           Rotation {
@@ -133652,7 +133652,7 @@ Assets {
         Name: "Whitebox Wall 01"
         Transform {
           Location {
-            X: -50.0351563
+            X: -50.0351562
             Y: -107.092773
             Z: 900.626465
           }
@@ -134640,7 +134640,7 @@ Assets {
         Name: "Arch Fancy Peaked 2m"
         Transform {
           Location {
-            X: -6.85351563
+            X: -6.85351562
             Y: 50
             Z: 433.328369
           }
@@ -135008,7 +135008,7 @@ Assets {
         Name: "Whitebox Wall 01"
         Transform {
           Location {
-            X: -50.0351563
+            X: -50.0351562
             Y: -107.092773
             Z: 900.626465
           }
@@ -136442,7 +136442,7 @@ Assets {
         Name: "Whitebox Wall 01"
         Transform {
           Location {
-            X: -50.0351563
+            X: -50.0351562
             Y: -107.092773
             Z: 900.626465
           }
@@ -137429,7 +137429,7 @@ Assets {
         Name: "Arch Fancy Peaked 2m"
         Transform {
           Location {
-            X: -6.85351563
+            X: -6.85351562
             Y: 50
             Z: 433.328369
           }
@@ -137797,7 +137797,7 @@ Assets {
         Name: "Whitebox Wall 01"
         Transform {
           Location {
-            X: -50.0351563
+            X: -50.0351562
             Y: -107.092773
             Z: 900.626465
           }
@@ -139231,7 +139231,7 @@ Assets {
         Name: "Whitebox Wall 01"
         Transform {
           Location {
-            X: -50.0351563
+            X: -50.0351562
             Y: -107.092773
             Z: 900.626465
           }
@@ -140219,7 +140219,7 @@ Assets {
         Name: "Arch Fancy Peaked 2m"
         Transform {
           Location {
-            X: -6.85351563
+            X: -6.85351562
             Y: 50
             Z: 433.328369
           }
@@ -140587,7 +140587,7 @@ Assets {
         Name: "Whitebox Wall 01"
         Transform {
           Location {
-            X: -50.0351563
+            X: -50.0351562
             Y: -107.092773
             Z: 900.626465
           }
@@ -142074,7 +142074,7 @@ Assets {
         Name: "Step Railings"
         Transform {
           Location {
-            X: -59.4726563
+            X: -59.4726562
             Z: 64.7452393
           }
           Rotation {
@@ -143434,7 +143434,7 @@ Assets {
         Name: "Step Railings"
         Transform {
           Location {
-            X: -59.4726563
+            X: -59.4726562
             Z: 64.7452393
           }
           Rotation {
@@ -144832,7 +144832,7 @@ Assets {
         Name: "Whitebox Wall 01"
         Transform {
           Location {
-            X: -73.4101563
+            X: -73.4101562
             Y: -750.00293
             Z: -170.672485
           }
@@ -145300,7 +145300,7 @@ Assets {
         Transform {
           Location {
             X: 300
-            Y: 314.320313
+            Y: 314.320312
             Z: 13.1733398
           }
           Rotation {
@@ -146677,7 +146677,7 @@ Assets {
         Name: "Arch Fancy Peaked 6m"
         Transform {
           Location {
-            X: -7.68945313
+            X: -7.68945312
             Y: -73.453125
           }
           Rotation {
@@ -146811,7 +146811,7 @@ Assets {
         Name: "Arch Fancy Peaked 6m"
         Transform {
           Location {
-            X: -7.68945313
+            X: -7.68945312
             Y: -73.453125
           }
           Rotation {
@@ -147439,7 +147439,7 @@ Assets {
         Name: "Diamond - 6-Sided"
         Transform {
           Location {
-            X: 0.149414063
+            X: 0.149414062
             Y: -0.0087890625
           }
           Rotation {
@@ -147489,7 +147489,7 @@ Assets {
         Name: "Sphere"
         Transform {
           Location {
-            X: 0.149414063
+            X: 0.149414062
             Y: -0.0087890625
             Z: 50
           }
@@ -147540,7 +147540,7 @@ Assets {
         Name: "Cone - Truncated Concave"
         Transform {
           Location {
-            X: 0.149414063
+            X: 0.149414062
             Y: -0.0087890625
             Z: 176.177734
           }
@@ -147592,7 +147592,7 @@ Assets {
         Name: "Cylinder"
         Transform {
           Location {
-            X: 0.149414063
+            X: 0.149414062
             Y: -0.0087890625
             Z: 175.234375
           }
@@ -147643,7 +147643,7 @@ Assets {
         Name: "Pyramid - 6-Sided Truncated Polished"
         Transform {
           Location {
-            X: 0.149414063
+            X: 0.149414062
             Y: -0.0087890625
             Z: 400
           }
@@ -147748,7 +147748,7 @@ Assets {
         Name: "Cube"
         Transform {
           Location {
-            X: -99.5195313
+            X: -99.5195312
             Y: -0.0087890625
             Z: 301.564453
           }
@@ -147803,7 +147803,7 @@ Assets {
         Transform {
           Location {
             X: -50.7285156
-            Y: 84.6914063
+            Y: 84.6914062
             Z: 301.564453
           }
           Rotation {
@@ -148018,7 +148018,7 @@ Assets {
         Name: "Cone - Truncated Wide"
         Transform {
           Location {
-            X: 0.149414063
+            X: 0.149414062
             Y: -0.0087890625
             Z: 550
           }
@@ -148069,7 +148069,7 @@ Assets {
         Name: "Ring"
         Transform {
           Location {
-            X: 0.149414063
+            X: 0.149414062
             Y: -0.0087890625
             Z: 600
           }
@@ -148122,7 +148122,7 @@ Assets {
         Transform {
           Location {
             X: -1.34960938
-            Y: 0.891601563
+            Y: 0.891601562
             Z: 697.361328
           }
           Rotation {
@@ -148916,7 +148916,7 @@ Assets {
         Name: "Diamond - 6-Sided"
         Transform {
           Location {
-            X: 0.149414063
+            X: 0.149414062
             Y: -0.0087890625
           }
           Rotation {
@@ -148966,7 +148966,7 @@ Assets {
         Name: "Sphere"
         Transform {
           Location {
-            X: 0.149414063
+            X: 0.149414062
             Y: -0.0087890625
             Z: 50
           }
@@ -149017,7 +149017,7 @@ Assets {
         Name: "Cone - Truncated Concave"
         Transform {
           Location {
-            X: 0.149414063
+            X: 0.149414062
             Y: -0.0087890625
             Z: 176.177734
           }
@@ -149069,7 +149069,7 @@ Assets {
         Name: "Cylinder"
         Transform {
           Location {
-            X: 0.149414063
+            X: 0.149414062
             Y: -0.0087890625
             Z: 175.234375
           }
@@ -149120,7 +149120,7 @@ Assets {
         Name: "Pyramid - 6-Sided Truncated Polished"
         Transform {
           Location {
-            X: 0.149414063
+            X: 0.149414062
             Y: -0.0087890625
             Z: 400
           }
@@ -149225,7 +149225,7 @@ Assets {
         Name: "Cube"
         Transform {
           Location {
-            X: -99.5195313
+            X: -99.5195312
             Y: -0.0087890625
             Z: 301.564453
           }
@@ -149280,7 +149280,7 @@ Assets {
         Transform {
           Location {
             X: -50.7285156
-            Y: 84.6914063
+            Y: 84.6914062
             Z: 301.564453
           }
           Rotation {
@@ -149495,7 +149495,7 @@ Assets {
         Name: "Cone - Truncated Wide"
         Transform {
           Location {
-            X: 0.149414063
+            X: 0.149414062
             Y: -0.0087890625
             Z: 550
           }
@@ -149546,7 +149546,7 @@ Assets {
         Name: "Ring"
         Transform {
           Location {
-            X: 0.149414063
+            X: 0.149414062
             Y: -0.0087890625
             Z: 600
           }
@@ -149599,7 +149599,7 @@ Assets {
         Transform {
           Location {
             X: -1.34960938
-            Y: 0.891601563
+            Y: 0.891601562
             Z: 697.361328
           }
           Rotation {
@@ -150393,7 +150393,7 @@ Assets {
         Name: "Diamond - 6-Sided"
         Transform {
           Location {
-            X: 0.149414063
+            X: 0.149414062
             Y: -0.0087890625
           }
           Rotation {
@@ -150443,7 +150443,7 @@ Assets {
         Name: "Sphere"
         Transform {
           Location {
-            X: 0.149414063
+            X: 0.149414062
             Y: -0.0087890625
             Z: 50
           }
@@ -150494,7 +150494,7 @@ Assets {
         Name: "Cone - Truncated Concave"
         Transform {
           Location {
-            X: 0.149414063
+            X: 0.149414062
             Y: -0.0087890625
             Z: 176.177734
           }
@@ -150546,7 +150546,7 @@ Assets {
         Name: "Cylinder"
         Transform {
           Location {
-            X: 0.149414063
+            X: 0.149414062
             Y: -0.0087890625
             Z: 175.234375
           }
@@ -150597,7 +150597,7 @@ Assets {
         Name: "Pyramid - 6-Sided Truncated Polished"
         Transform {
           Location {
-            X: 0.149414063
+            X: 0.149414062
             Y: -0.0087890625
             Z: 400
           }
@@ -150702,7 +150702,7 @@ Assets {
         Name: "Cube"
         Transform {
           Location {
-            X: -99.5195313
+            X: -99.5195312
             Y: -0.0087890625
             Z: 301.564453
           }
@@ -150757,7 +150757,7 @@ Assets {
         Transform {
           Location {
             X: -50.7285156
-            Y: 84.6914063
+            Y: 84.6914062
             Z: 301.564453
           }
           Rotation {
@@ -150972,7 +150972,7 @@ Assets {
         Name: "Cone - Truncated Wide"
         Transform {
           Location {
-            X: 0.149414063
+            X: 0.149414062
             Y: -0.0087890625
             Z: 550
           }
@@ -151023,7 +151023,7 @@ Assets {
         Name: "Ring"
         Transform {
           Location {
-            X: 0.149414063
+            X: 0.149414062
             Y: -0.0087890625
             Z: 600
           }
@@ -151076,7 +151076,7 @@ Assets {
         Transform {
           Location {
             X: -1.34960938
-            Y: 0.891601563
+            Y: 0.891601562
             Z: 697.361328
           }
           Rotation {
@@ -152303,6 +152303,6 @@ Assets {
   Marketplace {
     Description: "A cemetery I made with all basic shapes. If you use this and find it useful please leave a rewiew for me. \r\nEnjoy :)"
   }
-  SerializationVersion: 84
+  SerializationVersion: 100
   DirectlyPublished: true
 }

@@ -387,7 +387,7 @@ Assets {
         Transform {
           Location {
             X: 21.6323242
-            Y: -15.3320313
+            Y: -15.3320312
             Z: 16.9464111
           }
           Rotation {
@@ -440,7 +440,7 @@ Assets {
         Name: "Cylinder - Bottom-Aligned"
         Transform {
           Location {
-            X: 3.25976563
+            X: 3.25976562
             Y: 9.97900391
             Z: 16.9464111
           }
@@ -943,7 +943,7 @@ Assets {
         Transform {
           Location {
             X: 21.6323242
-            Y: -15.3320313
+            Y: -15.3320312
             Z: 16.9464111
           }
           Rotation {
@@ -996,7 +996,7 @@ Assets {
         Name: "Cylinder - Bottom-Aligned"
         Transform {
           Location {
-            X: 3.25976563
+            X: 3.25976562
             Y: 9.97900391
             Z: 16.9464111
           }
@@ -2102,5 +2102,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 84
+  SerializationVersion: 100
 }

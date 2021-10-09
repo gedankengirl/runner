@@ -800,7 +800,7 @@ Objects {
         Overrides {
           Name: "Position"
           Vector {
-            X: 5745.89063
+            X: 5745.89062
             Y: -5897.53125
             Z: 147
           }
@@ -1569,7 +1569,7 @@ Objects {
         Overrides {
           Name: "Position"
           Vector {
-            X: -114.414063
+            X: -114.414062
             Y: -6351.23438
             Z: 147
           }
@@ -1621,7 +1621,7 @@ Objects {
         Overrides {
           Name: "Position"
           Vector {
-            X: 5609.82813
+            X: 5609.82812
             Y: -4526.19531
             Z: 147
           }
@@ -1802,7 +1802,7 @@ Objects {
           Name: "Position"
           Vector {
             X: 843.902344
-            Y: 2174.82813
+            Y: 2174.82812
             Z: 147
           }
         }
@@ -1891,7 +1891,7 @@ Objects {
         Overrides {
           Name: "Position"
           Vector {
-            X: 3838.01563
+            X: 3838.01562
             Y: -1032.37695
             Z: 147
           }
@@ -3566,7 +3566,7 @@ Objects {
   Transform {
     Location {
       Y: 1.52587891e-05
-      Z: 6.10351563e-05
+      Z: 6.10351562e-05
     }
     Rotation {
     }

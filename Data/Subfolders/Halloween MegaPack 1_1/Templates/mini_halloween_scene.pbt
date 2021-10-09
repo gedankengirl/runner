@@ -2772,6 +2772,6 @@ Assets {
   Marketplace {
     Description: "Here is a CC Mega Pack full of Halloween goodies. Candy, Monsters, Props, etc."
   }
-  SerializationVersion: 84
+  SerializationVersion: 100
   DirectlyPublished: true
 }

@@ -1229,7 +1229,7 @@ Assets {
         Name: "Horn"
         Transform {
           Location {
-            X: 6.10351563e-05
+            X: 6.10351562e-05
             Y: -3.02168655
             Z: 53.1391144
           }
@@ -1292,7 +1292,7 @@ Assets {
         Name: "NewFolder"
         Transform {
           Location {
-            X: 6.10351563e-05
+            X: 6.10351562e-05
             Y: 71.5463104
             Z: 90.3747101
           }
@@ -2305,7 +2305,7 @@ Assets {
         Name: "Horn"
         Transform {
           Location {
-            X: 6.10351563e-05
+            X: 6.10351562e-05
             Y: -3.02168655
             Z: 53.1391144
           }
@@ -2368,7 +2368,7 @@ Assets {
         Name: "NewFolder"
         Transform {
           Location {
-            X: 6.10351563e-05
+            X: 6.10351562e-05
             Y: 71.5463104
             Z: 90.3747101
           }
@@ -3394,5 +3394,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 84
+  SerializationVersion: 100
 }

@@ -767,7 +767,7 @@ Assets {
         Name: "Sphere"
         Transform {
           Location {
-            X: -0.907226563
+            X: -0.907226562
             Y: 0.1328125
             Z: 103.035889
           }
@@ -888,7 +888,7 @@ Assets {
         Name: "Sphere"
         Transform {
           Location {
-            X: -0.907226563
+            X: -0.907226562
             Y: 33.5117188
             Z: 60.4626465
           }
@@ -5267,5 +5267,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 84
+  SerializationVersion: 100
 }

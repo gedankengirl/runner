@@ -805,7 +805,7 @@ Assets {
     }
     Assets {
       Id: 12688413543869885375
-      Name: "Wood Planks Dark"
+      Name: "Wood Planks"
       PlatformAssetType: 2
       PrimaryAsset {
         AssetType: "MaterialAssetRef"
@@ -865,6 +865,6 @@ Assets {
   Marketplace {
     Description: "Here is a CC Mega Pack full of Halloween goodies. Candy, Monsters, Props, etc."
   }
-  SerializationVersion: 84
+  SerializationVersion: 100
   DirectlyPublished: true
 }

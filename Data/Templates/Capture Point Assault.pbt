@@ -125,7 +125,7 @@ Assets {
         Name: "CapturePointAssaultServer"
         Transform {
           Location {
-            Z: -0.000122070313
+            Z: -0.000122070312
           }
           Rotation {
           }
@@ -217,7 +217,7 @@ Assets {
         Name: "ClientContext"
         Transform {
           Location {
-            Z: -0.000122070313
+            Z: -0.000122070312
           }
           Rotation {
           }
@@ -1057,5 +1057,5 @@ Assets {
       AssetId: "Capture_Point_Assault"
     }
   }
-  SerializationVersion: 84
+  SerializationVersion: 100
 }
