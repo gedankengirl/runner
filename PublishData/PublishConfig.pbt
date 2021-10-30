@@ -10,9 +10,10 @@ Tags: "Action"
 Tags: "Adventure"
 ScreenshotPaths: "C:\\Users\\rinoa\\Documents\\My games\\CORE\\Saved\\Maps\\SPEED_MANIA_PROD\\Screenshots\\Screenshot 2021-02-24 151547.png"
 OwnerId: "1fe0c4ed2ab2416dba17f5d29ee420a4"
-SerializationVersion: 1
+SerializationVersion: 2
 PublishedState: Public
 SceneNameToSceneIdMap {
   key: "Main"
   value: "a546e85549176ad77c7df88ab792bfa8"
 }
+MaxPlayersForMainScene: 8
