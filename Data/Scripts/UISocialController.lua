@@ -97,7 +97,7 @@ local function WriteLine(lineInfo)
     local line = SpawnLine()
     -- Player icon.
     if type(lineInfo.player) == "userdata" then
-        line.PlayerIcon:SetImage(lineInfo.player)
+        line.PlayerIcon:SetPlayerProfile(lineInfo.player)
     else
         line.PlayerIcon:SetImage("EB55834C5013E70F:Icon Profile")
     end

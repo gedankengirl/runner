@@ -1,5 +1,5 @@
 --[[
-Copyright 2019 Manticore Games, Inc. 
+Copyright 2019 Manticore Games, Inc.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated
 documentation files (the "Software"), to deal in the Software without restriction, including without limitation the
@@ -73,13 +73,13 @@ function Reset()
 
     if oldEnabled ~= ENABLED_BY_DEFAULT then
         Events.Broadcast("CapturePointEnabledStateChanged", COMPONENT_ROOT.id, oldEnabled, ENABLED_BY_DEFAULT)
-    end    
+    end
 
-    script:SetNetworkedCustomProperty("FriendliesPresent", 0)
-    script:SetNetworkedCustomProperty("EnemiesPresent", 0)
-    script:SetNetworkedCustomProperty("LastCaptureProgress", 0.0)
-    script:SetNetworkedCustomProperty("LastUpdateTime", time())
-    script:SetNetworkedCustomProperty("IsEnabled", ENABLED_BY_DEFAULT)
+    script:SetCustomProperty("FriendliesPresent", 0)
+    script:SetCustomProperty("EnemiesPresent", 0)
+    script:SetCustomProperty("LastCaptureProgress", 0.0)
+    script:SetCustomProperty("LastUpdateTime", time())
+    script:SetCustomProperty("IsEnabled", ENABLED_BY_DEFAULT)
 end
 
 -- float GetCaptureSpeed()
@@ -103,7 +103,7 @@ function GetCaptureSpeed()
     end
 
     local multiplier = 1
-    
+
     if enemiesPresent > 0 then
         -- Only enemies, we are moving backwards
         multiplier = -1
@@ -223,10 +223,10 @@ end
 function UpdateReplicatedProgress()
     local newCaptureProgress = GetCaptureProgress()
 
-    script:SetNetworkedCustomProperty("FriendliesPresent", GetFriendliesPresent())
-    script:SetNetworkedCustomProperty("EnemiesPresent", GetEnemiesPresent())
-    script:SetNetworkedCustomProperty("LastCaptureProgress", newCaptureProgress)
-    script:SetNetworkedCustomProperty("LastUpdateTime", time())
+    script:SetCustomProperty("FriendliesPresent", GetFriendliesPresent())
+    script:SetCustomProperty("EnemiesPresent", GetEnemiesPresent())
+    script:SetCustomProperty("LastCaptureProgress", newCaptureProgress)
+    script:SetCustomProperty("LastUpdateTime", time())
 end
 
 -- nil SetEnabled(bool)
@@ -236,12 +236,12 @@ function SetEnabled(enabled)
     UpdateReplicatedProgress()
 
     local oldEnabled = script:GetCustomProperty("IsEnabled")
-    script:SetNetworkedCustomProperty("IsEnabled", enabled)
+    script:SetCustomProperty("IsEnabled", enabled)
 
     -- Only broadcast 'CapturePointEnabledStateChanged' event if we actually changed the statae
     if oldEnabled ~= enabled then
         Events.Broadcast("CapturePointEnabledStateChanged", COMPONENT_ROOT.id, oldEnabled, enabled)
-    end    
+    end
 end
 
 -- nil OnRoundEnd()
