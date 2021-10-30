@@ -49,5 +49,5 @@ Assets {
     Version: "1.1.0"
     Description: "9 little animal props"
   }
-  SerializationVersion: 100
+  SerializationVersion: 101
 }

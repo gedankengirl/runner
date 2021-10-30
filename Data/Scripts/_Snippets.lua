@@ -299,7 +299,7 @@ function snippets.Subject(obj, networkedProperty, callback)
         end
     end
     wrapped(obj, networkedProperty)
-    return obj.networkedPropertyChangedEvent:Connect(wrapped)
+    return obj.customPropertyChangedEvent:Connect(wrapped)
 end
 
 -- call thunk immediately (not at the end of frame) in it's own thread

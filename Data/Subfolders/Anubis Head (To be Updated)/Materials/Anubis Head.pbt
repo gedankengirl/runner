@@ -2,7 +2,7 @@ Assets {
   Id: 12810931524485979163
   Name: "Anubis Head"
   PlatformAssetType: 13
-  SerializationVersion: 100
+  SerializationVersion: 101
   CustomMaterialAsset {
     BaseMaterialId: 14844672563279110931
     ParameterOverrides {

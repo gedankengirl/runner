@@ -353,7 +353,7 @@ function Client:_AwaitDownlinkChannel()
     end -- while
 
     -- subscribe to dowmlink
-    _maid.downlink = DOWNLINK.networkedPropertyChangedEvent:Connect(function(_owner, prop)
+    _maid.downlink = DOWNLINK.customPropertyChangedEvent:Connect(function(_owner, prop)
         local data = _read_channel(prop)
         if not data or #data == 0 then return end
         if prop == self.channel then

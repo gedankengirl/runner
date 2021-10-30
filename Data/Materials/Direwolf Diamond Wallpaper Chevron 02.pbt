@@ -2,7 +2,7 @@ Assets {
   Id: 9830225051861757754
   Name: "Direwolf Diamond Wallpaper Chevron 02"
   PlatformAssetType: 13
-  SerializationVersion: 100
+  SerializationVersion: 101
   CustomMaterialAsset {
     BaseMaterialId: 11107235379774520765
     ParameterOverrides {

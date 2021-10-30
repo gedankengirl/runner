@@ -2,7 +2,7 @@ Assets {
   Id: 13270981459987544708
   Name: "Virtual Folders"
   PlatformAssetType: 30
-  SerializationVersion: 100
+  SerializationVersion: 101
   VirtualFolderSetAsset {
     Folders {
       VirtualFolderPath: "RinoaScripts"

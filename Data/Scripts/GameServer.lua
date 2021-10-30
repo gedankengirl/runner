@@ -79,9 +79,9 @@ end
 -- we need to protect *sending* by buffer and timestamp.
 local function _post_to_channel(channel, message)
     if type(message) == 'string' then
-        DOWNLINK:SetNetworkedCustomProperty(channel, message)
+        DOWNLINK:SetCustomProperty(channel, message)
     elseif type(message) == table then
-        DOWNLINK:SetNetworkedCustomProperty(channel, table.concat(message))
+        DOWNLINK:SetCustomProperty(channel, table.concat(message))
     else
         assert(false, errfmt(message) .. '\n' .. CoreDebug.GetStackTrace())
     end
@@ -216,7 +216,7 @@ function PlayerConnection.New(player)
 end
 
 function PlayerConnection:Destroy()
-    DOWNLINK:SetNetworkedCustomProperty(self.channel, "")
+    DOWNLINK:SetCustomProperty(self.channel, "")
     _free_chan(self.channel)
     self._maid:Destroy()
 end

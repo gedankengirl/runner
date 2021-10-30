@@ -225,6 +225,6 @@ Assets {
   Marketplace {
     Description: "Just an orange"
   }
-  SerializationVersion: 100
+  SerializationVersion: 101
   DirectlyPublished: true
 }

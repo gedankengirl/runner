@@ -2,7 +2,7 @@ Assets {
   Id: 10458204977127181103
   Name: "Custom Generic Water"
   PlatformAssetType: 13
-  SerializationVersion: 100
+  SerializationVersion: 101
   CustomMaterialAsset {
     BaseMaterialId: 1272761305013892500
     ParameterOverrides {

@@ -43,5 +43,5 @@ Assets {
     Version: "1.0.0"
     Description: "Gaming headphones with base.\r\nHeadphones inspired by Razer Kraken Tournament Edition\r\nBase inspired by Corsair ST100\r\nThe base and the headset are in different groups, you can delete one and use the other one (only base or headset) or use them separately.\r\nFeel free to use this model on your game, and leave a like and comment if you like it."
   }
-  SerializationVersion: 100
+  SerializationVersion: 101
 }

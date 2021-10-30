@@ -1103,6 +1103,6 @@ Assets {
   Marketplace {
     Description: "Nasal Helmet"
   }
-  SerializationVersion: 100
+  SerializationVersion: 101
   DirectlyPublished: true
 }

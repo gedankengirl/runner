@@ -314,6 +314,6 @@ Assets {
   Marketplace {
     Description: "RunnerBosterPickup"
   }
-  SerializationVersion: 100
+  SerializationVersion: 101
   DirectlyPublished: true
 }

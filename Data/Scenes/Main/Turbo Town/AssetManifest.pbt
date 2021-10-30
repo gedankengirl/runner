@@ -152,6 +152,15 @@ Assets {
   }
 }
 Assets {
+  Id: 17747486695592980290
+  Name: "Cylinder - Chamfered Polished"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_cylinder_hq_002"
+  }
+}
+Assets {
   Id: 17722917267016575012
   Name: "Text 01: O"
   PlatformAssetType: 1
@@ -665,6 +674,15 @@ Assets {
   }
 }
 Assets {
+  Id: 15048610057996333108
+  Name: "Text 01: G"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "F1_Text_006"
+  }
+}
+Assets {
   Id: 15047207674834551980
   Name: "Waterfall Straight"
   PlatformAssetType: 1
@@ -689,6 +707,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "F1_Text_031"
+  }
+}
+Assets {
+  Id: 14883344300886235070
+  Name: "Humanoid 2 Core Pants"
+  PlatformAssetType: 26
+  PrimaryAsset {
+    AssetType: "SkinnedMeshAssetRef"
+    AssetId: "npc_human_guy_lower_basic_000_ref"
   }
 }
 Assets {
@@ -989,6 +1016,24 @@ Assets {
   }
 }
 Assets {
+  Id: 13650613233821206030
+  Name: "Granite 01"
+  PlatformAssetType: 2
+  PrimaryAsset {
+    AssetType: "MaterialAssetRef"
+    AssetId: "mi_rock_granite_001_uv_ref"
+  }
+}
+Assets {
+  Id: 13634576490683611059
+  Name: "Text 01: 9"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "F1_Text_035"
+  }
+}
+Assets {
   Id: 13614546110894110611
   Name: "Food Cheese 01"
   PlatformAssetType: 2
@@ -1040,6 +1085,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "F1_Text_010"
+  }
+}
+Assets {
+  Id: 13336098019994174067
+  Name: "Helix -  1.0 Pointed"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_prim_horn_helix_100cm_001_ref"
   }
 }
 Assets {
@@ -1286,6 +1340,15 @@ Assets {
   }
 }
 Assets {
+  Id: 11978929715727231198
+  Name: "Humanoid 2 Rig"
+  PlatformAssetType: 25
+  PrimaryAsset {
+    AssetType: "SkeletonAssetRef"
+    AssetId: "npc_guy_wireframe_001_ref"
+  }
+}
+Assets {
   Id: 11974361906548255645
   Name: "Glass 01 (no distortion)"
   PlatformAssetType: 2
@@ -1319,6 +1382,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_rock_generic_002_sm_rock_generic_002_LOD0"
+  }
+}
+Assets {
+  Id: 11831000944780011569
+  Name: "Park Bench"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_park_bench_001"
   }
 }
 Assets {
@@ -1445,6 +1517,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_ts_urb_dtn_mst_wall_001_half_window_ref"
+  }
+}
+Assets {
+  Id: 11052830231601453858
+  Name: "Text 01: P"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "F1_Text_015"
   }
 }
 Assets {
@@ -1655,6 +1736,15 @@ Assets {
   }
 }
 Assets {
+  Id: 9846341595176358351
+  Name: "Arch"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_arch_001"
+  }
+}
+Assets {
   Id: 9826710443425479508
   Name: "Modern Weapon Ammo - Bullet 01"
   PlatformAssetType: 1
@@ -1724,6 +1814,15 @@ Assets {
   PrimaryAsset {
     AssetType: "MaterialAssetRef"
     AssetId: "mi_moss_001_uv"
+  }
+}
+Assets {
+  Id: 9468940380719363782
+  Name: "Text 01: H"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "F1_Text_007"
   }
 }
 Assets {
@@ -2060,6 +2159,15 @@ Assets {
   }
 }
 Assets {
+  Id: 7167549716896193940
+  Name: "Text 01: _"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "F1_Text_049"
+  }
+}
+Assets {
   Id: 7165675152249801996
   Name: "Text 03: N"
   PlatformAssetType: 1
@@ -2093,6 +2201,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_crescent_002"
+  }
+}
+Assets {
+  Id: 6985710649117550935
+  Name: "Fantasy Castle Stairs Spiral Trim 01 - Small"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_ts_fan_cas_stairs_spiral_trim_001_sm"
   }
 }
 Assets {
@@ -2519,6 +2636,15 @@ Assets {
   }
 }
 Assets {
+  Id: 5547417111867623224
+  Name: "Text 01: D"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "F1_Text_003"
+  }
+}
+Assets {
   Id: 5517650793586535881
   Name: "Main Street Wall 01 - Doorway 01"
   PlatformAssetType: 1
@@ -2663,6 +2789,15 @@ Assets {
   }
 }
 Assets {
+  Id: 4788896958707991408
+  Name: "Humanoid 2 Ramesh"
+  PlatformAssetType: 26
+  PrimaryAsset {
+    AssetType: "SkinnedMeshAssetRef"
+    AssetId: "npc_human_guy_head_basic_008_ref"
+  }
+}
+Assets {
   Id: 4774606322871755174
   Name: "Text 03: O"
   PlatformAssetType: 1
@@ -2705,6 +2840,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_gen_whitebox_wall_001_doorframe"
+  }
+}
+Assets {
+  Id: 4425283651708144297
+  Name: "Humanoid 2 Core Shirt"
+  PlatformAssetType: 26
+  PrimaryAsset {
+    AssetType: "SkinnedMeshAssetRef"
+    AssetId: "npc_human_guy_upper_basic_000_ref"
   }
 }
 Assets {
@@ -2966,6 +3110,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_fern_generic_001"
+  }
+}
+Assets {
+  Id: 3071861659783463999
+  Name: "Text 01: 6"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "F1_Text_032"
   }
 }
 Assets {
@@ -3293,6 +3446,15 @@ Assets {
   }
 }
 Assets {
+  Id: 1131951008205784005
+  Name: "Asphalt 01"
+  PlatformAssetType: 2
+  PrimaryAsset {
+    AssetType: "MaterialAssetRef"
+    AssetId: "mi_gen_asphault_001"
+  }
+}
+Assets {
   Id: 1128247331693917451
   Name: "Text 01: 1"
   PlatformAssetType: 1
@@ -3380,6 +3542,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_pipe_003"
+  }
+}
+Assets {
+  Id: 652698749144111010
+  Name: "Ellipsoid - Truncated Wedge"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_ellipsoid_truncated_wedge_001"
   }
 }
 Assets {

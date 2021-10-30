@@ -45,7 +45,7 @@ end
 function OnPlayerLeft(player)
     playerLines[#playerLines]:Destroy()
     playerLines[#playerLines] = nil
-    
+
     if player ~= LOCAL_PLAYER then
         Task.Wait()
         SortPlayers()
@@ -69,7 +69,7 @@ function SortPlayers()
         local line = playerLines[i]
         line:GetCustomProperty("Name"):WaitForObject().text = player.name
         line:GetCustomProperty("Name"):WaitForObject():SetColor(teamColor)
-        line:GetCustomProperty("Icon"):WaitForObject():SetImage(player)
+        line:GetCustomProperty("Icon"):WaitForObject():SetPlayerProfile(player)
     end
 end
 

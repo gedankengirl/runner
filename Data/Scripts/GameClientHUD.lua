@@ -48,7 +48,7 @@ local MESSAGE_SPAM_TIME = 10
 local MESSAGE_SPAM_FILTER = {}
 
 local LOCAL_PLAYER = Game.GetLocalPlayer()
-UI_PLAYER_ICON:SetImage(LOCAL_PLAYER)
+UI_PLAYER_ICON:SetPlayerProfile(LOCAL_PLAYER)
 UI_PLAYER_NAME.text = LOCAL_PLAYER.name
 
 local XF = math.tan(math.rad(LOCAL_PLAYER:GetDefaultCamera().fieldOfView/2))
