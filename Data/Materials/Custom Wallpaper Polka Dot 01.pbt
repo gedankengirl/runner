@@ -2,7 +2,7 @@ Assets {
   Id: 5948852901744071681
   Name: "Gold Wallpaper Polka Dot"
   PlatformAssetType: 13
-  SerializationVersion: 100
+  SerializationVersion: 101
   CustomMaterialAsset {
     BaseMaterialId: 6488236446163016965
     ParameterOverrides {

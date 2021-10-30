@@ -2,7 +2,7 @@ Assets {
   Id: 8651366770037800397
   Name: "BoosterRingLegendary"
   PlatformAssetType: 13
-  SerializationVersion: 100
+  SerializationVersion: 101
   CustomMaterialAsset {
     BaseMaterialId: 12537868752084607232
     ParameterOverrides {

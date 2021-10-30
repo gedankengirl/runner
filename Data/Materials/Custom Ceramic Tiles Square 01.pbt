@@ -2,7 +2,7 @@ Assets {
   Id: 11313264990851532725
   Name: "BoosterRingCommon"
   PlatformAssetType: 13
-  SerializationVersion: 100
+  SerializationVersion: 101
   CustomMaterialAsset {
     BaseMaterialId: 12537868752084607232
     ParameterOverrides {

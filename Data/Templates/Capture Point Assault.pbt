@@ -1057,5 +1057,5 @@ Assets {
       AssetId: "Capture_Point_Assault"
     }
   }
-  SerializationVersion: 100
+  SerializationVersion: 101
 }

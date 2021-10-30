@@ -2,7 +2,7 @@ Assets {
   Id: 3490593329562162298
   Name: "Core Cola Mat"
   PlatformAssetType: 13
-  SerializationVersion: 100
+  SerializationVersion: 101
   CustomMaterialAsset {
     BaseMaterialId: 7530375060674054497
     ParameterOverrides {

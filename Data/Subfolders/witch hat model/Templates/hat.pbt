@@ -318,6 +318,6 @@ Assets {
   Marketplace {
     Description: "just a model"
   }
-  SerializationVersion: 100
+  SerializationVersion: 101
   DirectlyPublished: true
 }

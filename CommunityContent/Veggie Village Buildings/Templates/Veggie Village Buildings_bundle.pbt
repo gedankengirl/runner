@@ -43,5 +43,5 @@ Assets {
     Version: "1.0.0"
     Description: "Set of 7 buildings including:\r\n- Rutabega\'s Closet\r\n- Bank of Legume\r\n- Scallion\'s Club\r\n- Daikon Sushi\r\n- Tomato\'s Pizza Shop\r\n- Ginger\'s Ice Cream\r\n- Carrot Top\'s Market Shop\r\n\r\nEach building has it\'s own unique interior\r\n"
   }
-  SerializationVersion: 100
+  SerializationVersion: 101
 }

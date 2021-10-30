@@ -2,7 +2,7 @@ Assets {
   Id: 4536802812078038532
   Name: "Rice"
   PlatformAssetType: 13
-  SerializationVersion: 100
+  SerializationVersion: 101
   CustomMaterialAsset {
     BaseMaterialId: 8471595097559052102
     ParameterOverrides {

@@ -2,7 +2,7 @@ Assets {
   Id: 15799815126981751846
   Name: "Pet Heaven Magic Glass"
   PlatformAssetType: 13
-  SerializationVersion: 100
+  SerializationVersion: 101
   CustomMaterialAsset {
     BaseMaterialId: 6981698627626169233
     ParameterOverrides {

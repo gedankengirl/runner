@@ -2,7 +2,7 @@ Assets {
   Id: 16935372493134720526
   Name: "Egg shell: from Custom Neon from Animated Neon Sign"
   PlatformAssetType: 13
-  SerializationVersion: 100
+  SerializationVersion: 101
   CustomMaterialAsset {
     BaseMaterialId: 5599762435865357145
     ParameterOverrides {

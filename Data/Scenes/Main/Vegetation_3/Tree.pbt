@@ -1,6 +1,341 @@
 Name: "Vegetation_3"
 RootId: 8302413848649510927
 Objects {
+  Id: 12685023786418047766
+  Name: "Bush 02"
+  Transform {
+    Location {
+      X: -3521.68042
+      Y: -6577.94
+      Z: 61.6226349
+    }
+    Rotation {
+      Yaw: 59.865963
+    }
+    Scale {
+      X: 1.43886709
+      Y: 1.43886709
+      Z: 1.43886709
+    }
+  }
+  ParentId: 8302413848649510927
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Nature_Leaves:color"
+      Color {
+        R: 0.074783124
+        G: 0.11354176
+        B: 0.0106444657
+        A: 1
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 12184241772267133154
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 5693639453748902218
+  Name: "Bush 02"
+  Transform {
+    Location {
+      X: -1301.1936
+      Y: -6204.27148
+      Z: 61.622757
+    }
+    Rotation {
+      Yaw: -13.6663513
+    }
+    Scale {
+      X: 1.01878095
+      Y: 1.01878095
+      Z: 1.01878095
+    }
+  }
+  ParentId: 8302413848649510927
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Nature_Leaves:color"
+      Color {
+        R: 0.151624247
+        G: 0.230208233
+        B: 0.0215818714
+        A: 1
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 12184241772267133154
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 13854577912046341021
+  Name: "Bush 02"
+  Transform {
+    Location {
+      X: -2024.32617
+      Y: -6630.19922
+      Z: 61.622757
+    }
+    Rotation {
+      Yaw: -13.6663208
+    }
+    Scale {
+      X: 1.45490766
+      Y: 1.45490766
+      Z: 1.45490766
+    }
+  }
+  ParentId: 8302413848649510927
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Nature_Leaves:color"
+      Color {
+        R: 0.074783124
+        G: 0.11354176
+        B: 0.0106444657
+        A: 1
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 12184241772267133154
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 11849628602539472478
+  Name: "Bush 02"
+  Transform {
+    Location {
+      X: -2109.54565
+      Y: -6384.87
+      Z: 61.622757
+    }
+    Rotation {
+      Yaw: 4.05987501
+    }
+    Scale {
+      X: 1.38883126
+      Y: 1.38883126
+      Z: 1.38883126
+    }
+  }
+  ParentId: 8302413848649510927
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Nature_Leaves:color"
+      Color {
+        R: 0.074783124
+        G: 0.11354176
+        B: 0.0106444657
+        A: 1
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 12184241772267133154
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 9466832335978032923
+  Name: "Bush 01"
+  Transform {
+    Location {
+      X: -3047.07666
+      Y: -6535.13428
+      Z: 58.8424683
+    }
+    Rotation {
+      Yaw: 32.4149704
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 8302413848649510927
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Nature_Leaves:color"
+      Color {
+        R: 0.219682664
+        G: 0.346000075
+        A: 1
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 9482804777020448757
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 15322818408193471747
+  Name: "Bush 02"
+  Transform {
+    Location {
+      X: -2865.58057
+      Y: -6154.31543
+      Z: 61.622757
+    }
+    Rotation {
+      Yaw: 14.6879911
+    }
+    Scale {
+      X: 1.0475769
+      Y: 1.0475769
+      Z: 1.0475769
+    }
+  }
+  ParentId: 8302413848649510927
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Nature_Leaves:color"
+      Color {
+        R: 0.074783124
+        G: 0.11354176
+        B: 0.0106444657
+        A: 1
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 12184241772267133154
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
   Id: 523362183957014694
   Name: "Bush 02"
   Transform {

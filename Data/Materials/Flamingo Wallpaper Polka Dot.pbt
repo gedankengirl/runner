@@ -2,7 +2,7 @@ Assets {
   Id: 2053604298863069118
   Name: "Flamingo Wallpaper Polka Dot"
   PlatformAssetType: 13
-  SerializationVersion: 100
+  SerializationVersion: 101
   CustomMaterialAsset {
     BaseMaterialId: 6488236446163016965
     ParameterOverrides {

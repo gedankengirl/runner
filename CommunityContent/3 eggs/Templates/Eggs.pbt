@@ -540,6 +540,6 @@ Assets {
   Marketplace {
     Description: "Colorful eggs for spring Holiday"
   }
-  SerializationVersion: 100
+  SerializationVersion: 101
   DirectlyPublished: true
 }
