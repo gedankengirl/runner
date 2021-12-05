@@ -53,7 +53,6 @@ local function queue_test()
     q:clear()
     assert(#q == 0)
     for i = 0, q._read do assert(q[i] == nil) end
-
 end
 
 -----------------------------------------------------------------------------
@@ -61,44 +60,64 @@ end
 -----------------------------------------------------------------------------
 local BroadcastFactory do
 
-    local txqueue = queue:new()
+    local network_txqueue = queue:new()
     local FEWEST_WARNINGS_INTERVAL = 0.90 -- empirical constant
     local WAIT_ON_FAILURE = 0.1
 
+    local loop_spawned = false
     local function retry()
+        if loop_spawned then
+            return
+        end
         Task.Spawn(function()
-            while not txqueue:empty() do
-                local message = txqueue:peek()
+            loop_spawned = true
+            while true do
+                if network_txqueue:empty() then
+                    break
+                end
+                local message = network_txqueue:peek()
                 local broadcast = Events[message.method]
+
                 local result, _ = broadcast(unpack(message))
                 if result == BroadcastEventResultCode.EXCEEDED_RATE_LIMIT then
                     Task.Wait(FEWEST_WARNINGS_INTERVAL)
                 elseif result == BroadcastEventResultCode.FAILURE then
                     Task.Wait(WAIT_ON_FAILURE)
                 else -- ok
-                    txqueue:pop()
+                    network_txqueue:pop()
                 end
             end
+            loop_spawned = false
         end)
     end
 
     local function _push_event(method, ...)
         local event = pack(...)
         event.method = method
-        txqueue:push(event)
+        network_txqueue:push(event)
     end
 
+    local EDITOR_SINGLE = Environment.IsSinglePlayerPreview()
     BroadcastFactory = function(method)
-        return function (...)
-            local broadcast = Events[method]
-            if txqueue:empty() then
-                local result, _ = broadcast(...)
-                if result == BroadcastEventResultCode.EXCEEDED_RATE_LIMIT or result == BroadcastEventResultCode.FAILURE then
+        -- NB. from Core 1.0.224-prod-s, in Single Preview broadcast newer
+        -- return on recursive brodcasts.
+        if not EDITOR_SINGLE then
+            return function(...)
+                local broadcast = Events[method]
+                if network_txqueue:empty() then
+                    local result, _ = broadcast(...)
+                    if result == BroadcastEventResultCode.EXCEEDED_RATE_LIMIT or result == BroadcastEventResultCode.FAILURE then
+                        _push_event(method, ...)
+                        retry()
+                    end
+                else
                     _push_event(method, ...)
-                    retry()
                 end
-            else
+            end
+        else -- EDITOR_SINGLE
+            return function(...)
                 _push_event(method, ...)
+                retry()
             end
         end
     end
@@ -109,7 +128,6 @@ end
 -----------------------------------------------------------------------------
 local CORE_EDITOR_SINGLE = Environment.IsSinglePlayerPreview()
 local Broadcast do
-
 
     local txqueue = queue:new()
     local _in_trampoline = false
