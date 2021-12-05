@@ -3,29 +3,57 @@ ReliableEvents.__index = ReliableEvents
 
 local pack, unpack = table.pack, table.unpack
 
--- simple queue from PIL
-local queue = {}
+local queue = {type="RE queue"}
 queue.__index = queue
-function queue.new()
-    return setmetatable({first=0, last=-1, q = {}}, queue)
-end
-function queue:empty()
-    return self.first > self.last
-end
+
+function queue.new() return setmetatable({_read = 0, _write = 0}, queue) end
+function queue:empty() return self._read == self._write end
+function queue:__len() return self._write - self._read end
+function queue:peek() return self[self._read] end
+function queue:clear() while #self > 0 do self:pop() end end
 function queue:push(val)
-    local last = self.last + 1
-    self.last = last
-    self.q[last] = val
+    self[self._write] = val
+    self._write = self._write + 1
+    return self
 end
 function queue:pop()
-    local first = self.first
-    local result = self.q[first]
-    self.q[first] = nil
-    self.first = first + 1
-    return result
+    local read = self._read
+    if read == self._write then return nil end
+    local val = self[read]
+    self[read], self._read = nil, read + 1
+    return val
 end
-function queue:peek()
-    return self.q[self.first]
+
+local function queue_test()
+    local q = queue.new()
+    assert(#q == 0)
+    assert(q:empty())
+    q:push(1)
+    assert(#q == 1)
+    assert(q:peek() == 1)
+    assert(q:pop() == 1)
+    assert(not q:peek())
+
+    for i = 1, 100 do
+        q:push(i)
+        assert(#q == i)
+    end
+    for i = 1, 100 do
+        local v = q:pop()
+        assert(v == i, "" .. i .. " " .. v)
+    end
+    assert(#q == 0)
+    for i = 0, q._read do assert(q[i] == nil) end
+
+    for i = 1, 100 do
+        q:push(i)
+        assert(#q == i)
+    end
+    assert(#q == 100)
+    q:clear()
+    assert(#q == 0)
+    for i = 0, q._read do assert(q[i] == nil) end
+
 end
 
 -----------------------------------------------------------------------------
@@ -62,8 +90,9 @@ local BroadcastFactory do
 
     BroadcastFactory = function(method)
         return function (...)
+            local broadcast = Events[method]
             if txqueue:empty() then
-                local result, _ = Events[method](...)
+                local result, _ = broadcast(...)
                 if result == BroadcastEventResultCode.EXCEEDED_RATE_LIMIT or result == BroadcastEventResultCode.FAILURE then
                     _push_event(method, ...)
                     retry()
@@ -78,7 +107,9 @@ end
 -----------------------------------------------------------------------------
 -- Local events
 -----------------------------------------------------------------------------
+local CORE_EDITOR_SINGLE = Environment.IsSinglePlayerPreview()
 local Broadcast do
+
 
     local txqueue = queue:new()
     local _in_trampoline = false
@@ -111,7 +142,7 @@ ReliableEvents.BroadcastToPlayer = BroadcastFactory("BroadcastToPlayer")
 ReliableEvents.BroadcastToAllPlayers = BroadcastFactory("BroadcastToAllPlayers")
 ReliableEvents.Broadcast = Broadcast
 
-_test = function()
+local self_test = function()
     if CoreMath then
         -- test order of nested events
         local out = {}
@@ -130,9 +161,10 @@ _test = function()
         ReliableEvents.Broadcast("_x_Test_A")
         assert(out[1] == "A" and out[2] == "B" and out[3] == "C" and out[4] == "C")
     end
+    queue_test()
     print("reliable events -- ok")
 end
 
-_test()
+self_test()
 
 return ReliableEvents
