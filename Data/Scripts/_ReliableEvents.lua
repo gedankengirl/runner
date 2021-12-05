@@ -64,7 +64,7 @@ local BroadcastFactory do
         return function (...)
             if txqueue:empty() then
                 local result, _ = Events[method](...)
-                if result == BroadcastEventResultCode.EXCEEDED_RATE_LIMI or result == BroadcastEventResultCode.FAILURE then
+                if result == BroadcastEventResultCode.EXCEEDED_RATE_LIMIT or result == BroadcastEventResultCode.FAILURE then
                     _push_event(method, ...)
                     retry()
                 end
