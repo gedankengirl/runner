@@ -31,6 +31,9 @@ Objects {
     IsFilePartition: true
     FilePartitionName: "wall"
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 287135262449423225
@@ -75,6 +78,9 @@ Objects {
       BoundsScale: 1
     }
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 4086239073708288536
@@ -105,6 +111,9 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "wall_1"
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -152,5 +161,8 @@ Objects {
       }
       BoundsScale: 1
     }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }

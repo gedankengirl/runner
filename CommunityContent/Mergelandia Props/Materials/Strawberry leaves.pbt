@@ -2,7 +2,7 @@ Assets {
   Id: 9424041204335963951
   Name: "Strawberry leaves"
   PlatformAssetType: 13
-  SerializationVersion: 101
+  SerializationVersion: 104
   CustomMaterialAsset {
     BaseMaterialId: 6673010460101842862
     ParameterOverrides {

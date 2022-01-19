@@ -31,6 +31,9 @@ Objects {
     IsFilePartition: true
     FilePartitionName: "Turbotown"
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 7704483822740820467
@@ -62,6 +65,9 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "To"
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -95,5 +101,8 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "Welcome"
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }

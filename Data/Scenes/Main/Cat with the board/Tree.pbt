@@ -38,6 +38,9 @@ Objects {
     TemplateId: 14630912458317540203
     WasRoot: true
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 9517339407585021089
@@ -71,6 +74,9 @@ Objects {
     SubobjectId: 7143783368390073549
     InstanceId: 5079087640106900919
     TemplateId: 14630912458317540203
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -107,6 +113,9 @@ Objects {
     InstanceId: 5079087640106900919
     TemplateId: 14630912458317540203
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 18409782385731705684
@@ -138,5 +147,8 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "NeedForSpeedBoard"
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }

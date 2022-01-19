@@ -31,6 +31,9 @@ Objects {
     IsFilePartition: true
     FilePartitionName: "patch02"
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 4815537410376482989
@@ -62,5 +65,8 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "patch01"
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }

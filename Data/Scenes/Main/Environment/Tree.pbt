@@ -42,6 +42,9 @@ Objects {
     TeamSettings {
     }
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 9268979066929535113
@@ -110,5 +113,8 @@ Objects {
     TemplateAsset {
       Id: 3763643597437609373
     }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }

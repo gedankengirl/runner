@@ -32,6 +32,9 @@ Assets {
             }
           }
         }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
       }
     }
     PrimaryAssetId {
@@ -46,5 +49,5 @@ Assets {
     Version: "1.1.0"
     Description: "The are the fish used in Farmers Market. "
   }
-  SerializationVersion: 101
+  SerializationVersion: 104
 }

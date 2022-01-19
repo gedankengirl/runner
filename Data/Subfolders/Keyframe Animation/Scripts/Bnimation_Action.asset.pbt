@@ -3,6 +3,8 @@ Assets {
   Name: "Bnimation_Action"
   PlatformAssetType: 3
   TextAsset {
+    CustomParameters {
+    }
   }
-  SerializationVersion: 101
+  SerializationVersion: 104
 }

@@ -31,6 +31,9 @@ Objects {
     IsFilePartition: true
     FilePartitionName: "Sign"
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 2137261537859657176
@@ -72,5 +75,8 @@ Objects {
     TemplateAsset {
       Id: 6997487586924821979
     }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }

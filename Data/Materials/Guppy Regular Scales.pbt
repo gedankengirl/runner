@@ -2,7 +2,7 @@ Assets {
   Id: 10713867422638071450
   Name: "Guppy Regular Scales"
   PlatformAssetType: 13
-  SerializationVersion: 101
+  SerializationVersion: 104
   CustomMaterialAsset {
     BaseMaterialId: 14542716416382345847
     ParameterOverrides {

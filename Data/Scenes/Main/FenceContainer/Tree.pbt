@@ -31,4 +31,7 @@ Objects {
     IsFilePartition: true
     FilePartitionName: "Fence_2"
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }

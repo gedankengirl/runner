@@ -2,7 +2,7 @@ Assets {
   Id: 990278212142586504
   Name: "Bloodshot Monkey Eye"
   PlatformAssetType: 13
-  SerializationVersion: 101
+  SerializationVersion: 104
   CustomMaterialAsset {
     BaseMaterialId: 16248579165065301109
     ParameterOverrides {

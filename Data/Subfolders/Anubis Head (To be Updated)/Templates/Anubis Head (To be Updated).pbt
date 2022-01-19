@@ -29,6 +29,9 @@ Assets {
             }
           }
         }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
       }
     }
     PrimaryAssetId {
@@ -43,5 +46,5 @@ Assets {
     Version: "1.0.0"
     Description: "Hi! My name\'s Squa! I apologize for not properly naming each part. I will update this as soon as I can! But I appreciate the support and I thank you for downloading and trying out my model!"
   }
-  SerializationVersion: 101
+  SerializationVersion: 104
 }

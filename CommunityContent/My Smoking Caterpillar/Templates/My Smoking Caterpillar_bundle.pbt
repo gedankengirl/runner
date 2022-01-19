@@ -35,6 +35,9 @@ Assets {
             }
           }
         }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
       }
     }
     PrimaryAssetId {
@@ -49,5 +52,5 @@ Assets {
     Version: "1.0.0"
     Description: "From my Alice Entry. Hopeing some can use him in the future."
   }
-  SerializationVersion: 101
+  SerializationVersion: 104
 }

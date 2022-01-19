@@ -2,7 +2,7 @@ Assets {
   Id: 9366267575707575843
   Name: "grid walls black"
   PlatformAssetType: 13
-  SerializationVersion: 101
+  SerializationVersion: 104
   CustomMaterialAsset {
     BaseMaterialId: 16872281456320893949
     ParameterOverrides {

@@ -2,7 +2,7 @@ Assets {
   Id: 16091381689152556399
   Name: "Bag Advanced Material_5"
   PlatformAssetType: 13
-  SerializationVersion: 101
+  SerializationVersion: 104
   CustomMaterialAsset {
     BaseMaterialId: 6662310896267058003
     ParameterOverrides {

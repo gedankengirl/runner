@@ -32,6 +32,9 @@ Objects {
     IsFilePartition: true
     FilePartitionName: "half"
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 18167500946653358018
@@ -63,5 +66,8 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "half_1"
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }

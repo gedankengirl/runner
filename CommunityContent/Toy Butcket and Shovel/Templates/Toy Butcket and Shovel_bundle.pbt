@@ -32,6 +32,9 @@ Assets {
             }
           }
         }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
       }
     }
     PrimaryAssetId {
@@ -46,5 +49,5 @@ Assets {
     Version: "1.0.0"
     Description: "A toy bucket and shovel for playing in the sand :)"
   }
-  SerializationVersion: 101
+  SerializationVersion: 104
 }

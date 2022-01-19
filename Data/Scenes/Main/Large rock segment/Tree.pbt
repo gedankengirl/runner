@@ -55,6 +55,9 @@ Objects {
     InstanceId: 5289051581721734545
     TemplateId: 8965823007101946117
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 8523408796163086540
@@ -113,6 +116,9 @@ Objects {
     SubobjectId: 6914956846135396988
     InstanceId: 5289051581721734545
     TemplateId: 8965823007101946117
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -174,6 +180,9 @@ Objects {
     InstanceId: 5289051581721734545
     TemplateId: 8965823007101946117
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 1752458888059649068
@@ -234,6 +243,9 @@ Objects {
     InstanceId: 5289051581721734545
     TemplateId: 8965823007101946117
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 17814237075241530801
@@ -293,6 +305,9 @@ Objects {
     InstanceId: 5289051581721734545
     TemplateId: 8965823007101946117
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 5366009006761112720
@@ -351,6 +366,9 @@ Objects {
     InstanceId: 5289051581721734545
     TemplateId: 8965823007101946117
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 966458721006036012
@@ -382,5 +400,8 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "Rock section_2"
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }

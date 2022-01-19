@@ -32,6 +32,9 @@ Objects {
     IsFilePartition: true
     FilePartitionName: "Pet Board"
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 7255530086673314904
@@ -64,6 +67,9 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "Welcome Banner"
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -98,6 +104,9 @@ Objects {
     IsFilePartition: true
     FilePartitionName: "RebirthBoard"
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 14139637125947873166
@@ -130,5 +139,8 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "IntroductionBoard"
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }

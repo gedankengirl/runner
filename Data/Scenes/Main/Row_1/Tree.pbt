@@ -55,6 +55,9 @@ Objects {
       BoundsScale: 1
     }
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 15020243806862282093
@@ -89,6 +92,9 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "Rotation controller_4"
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -125,6 +131,9 @@ Objects {
     IsFilePartition: true
     FilePartitionName: "Rotation controller_5"
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 18407796655879390798
@@ -160,6 +169,9 @@ Objects {
     IsFilePartition: true
     FilePartitionName: "Rotation controller_6"
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 5564638012538145858
@@ -194,5 +206,8 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "Rotation controller_7"
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }

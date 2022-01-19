@@ -2,7 +2,7 @@ Assets {
   Id: 15005041901494965950
   Name: "Terrain Moss - Graveyard"
   PlatformAssetType: 13
-  SerializationVersion: 101
+  SerializationVersion: 104
   CustomMaterialAsset {
     BaseMaterialId: 3233298230221723918
     ParameterOverrides {

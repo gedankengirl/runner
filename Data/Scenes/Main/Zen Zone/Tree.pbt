@@ -28,6 +28,9 @@ Objects {
     IsFilePartition: true
     FilePartitionName: "Invisible colliders for client-context objects"
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 12950577873510241196
@@ -61,6 +64,9 @@ Objects {
   }
   NetworkContext {
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 12866780512148231075
@@ -92,6 +98,9 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "PropsToRevealOnPlayerEntering"
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -139,6 +148,9 @@ Objects {
       Falloff: 3600
       Radius: 400
     }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -202,6 +214,9 @@ Objects {
       Value: "mc:etriggershape:capsule"
     }
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 831072193250069195
@@ -232,6 +247,9 @@ Objects {
     ScriptAsset {
       Id: 12036940641236891704
     }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -287,6 +305,9 @@ Objects {
       Id: 829631626122322619
     }
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 9411223911182424120
@@ -319,6 +340,9 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "Teleporter Landing"
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -402,6 +426,9 @@ Objects {
   Folder {
     IsGroup: true
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 11761679579646599308
@@ -434,6 +461,9 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "mark 3"
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -468,6 +498,9 @@ Objects {
     IsFilePartition: true
     FilePartitionName: "mark 2"
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 9598044874665201800
@@ -501,6 +534,9 @@ Objects {
     IsFilePartition: true
     FilePartitionName: "mark 1"
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 12184989546910877949
@@ -532,6 +568,9 @@ Objects {
   }
   Folder {
     IsGroup: true
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -590,6 +629,9 @@ Objects {
       BoundsScale: 1
     }
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 1165338237342720527
@@ -637,5 +679,8 @@ Objects {
       }
       BoundsScale: 1
     }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }

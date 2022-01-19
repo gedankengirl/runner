@@ -2,7 +2,7 @@ Assets {
   Id: 12219792179313148296
   Name: "Monkey Pants Pattern"
   PlatformAssetType: 13
-  SerializationVersion: 101
+  SerializationVersion: 104
   CustomMaterialAsset {
     BaseMaterialId: 16341525093401187188
     ParameterOverrides {

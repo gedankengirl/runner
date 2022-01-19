@@ -2,7 +2,7 @@ Assets {
   Id: 8602624648139272005
   Name: "Cow Hide_Body"
   PlatformAssetType: 13
-  SerializationVersion: 101
+  SerializationVersion: 104
   CustomMaterialAsset {
     BaseMaterialId: 8163204580629135587
     ParameterOverrides {

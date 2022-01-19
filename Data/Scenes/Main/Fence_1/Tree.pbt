@@ -31,6 +31,9 @@ Objects {
     IsFilePartition: true
     FilePartitionName: "Fence03_1"
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 9485369997379513184
@@ -61,6 +64,9 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "Fence01_1"
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -94,6 +100,9 @@ Objects {
     IsFilePartition: true
     FilePartitionName: "Fence02_1"
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 16116236027511132799
@@ -125,5 +134,8 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "Fence04_1"
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }

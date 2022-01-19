@@ -245,6 +245,9 @@ Objects {
       Id: 7068133745803303303
     }
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 10179086172677766084
@@ -490,6 +493,9 @@ Objects {
     TemplateAsset {
       Id: 7068133745803303303
     }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -773,6 +779,9 @@ Objects {
       Id: 7068133745803303303
     }
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 1359950691819946809
@@ -1019,6 +1028,9 @@ Objects {
     TemplateAsset {
       Id: 7068133745803303303
     }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -1302,5 +1314,8 @@ Objects {
     TemplateAsset {
       Id: 7068133745803303303
     }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }

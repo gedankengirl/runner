@@ -29,6 +29,9 @@ Objects {
   }
   NetworkContext {
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 6229506193174498731
@@ -63,6 +66,9 @@ Objects {
     IsFilePartition: true
     FilePartitionName: "Balloon_3"
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 17184035438941894174
@@ -94,6 +100,9 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "Balloon_4"
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -127,5 +136,8 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "Balloon_5"
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }

@@ -2,7 +2,7 @@ Assets {
   Id: 4478683609903257260
   Name: "Direwolf Ruby Wallpaper Chevron 02"
   PlatformAssetType: 13
-  SerializationVersion: 101
+  SerializationVersion: 104
   CustomMaterialAsset {
     BaseMaterialId: 11107235379774520765
     ParameterOverrides {

@@ -2,7 +2,7 @@ Assets {
   Id: 2276784711058004044
   Name: "Brown rubber"
   PlatformAssetType: 13
-  SerializationVersion: 101
+  SerializationVersion: 104
   CustomMaterialAsset {
     BaseMaterialId: 9216612035059178316
     ParameterOverrides {

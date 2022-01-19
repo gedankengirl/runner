@@ -37,6 +37,9 @@ Objects {
     TemplateId: 14277164630199377850
     WasRoot: true
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 6225799522998208854
@@ -66,6 +69,9 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "big section_9"
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -97,6 +103,9 @@ Objects {
     IsFilePartition: true
     FilePartitionName: "big section_10"
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 6371830164522131822
@@ -126,5 +135,8 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "big section_11"
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }

@@ -32,6 +32,9 @@ Objects {
     IsFilePartition: true
     FilePartitionName: "Zen Zone"
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 12794903354937555053
@@ -63,6 +66,9 @@ Objects {
     IsFilePartition: true
     FilePartitionName: "Forest"
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 2423505836595553228
@@ -92,6 +98,9 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "Disco scene"
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -125,6 +134,9 @@ Objects {
     IsFilePartition: true
     FilePartitionName: "Tropical"
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 4293257082225003563
@@ -157,6 +169,9 @@ Objects {
     IsFilePartition: true
     FilePartitionName: "Graveyard"
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 15346583032969552003
@@ -188,6 +203,9 @@ Objects {
     IsFilePartition: true
     FilePartitionName: "Garden scene"
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 10665984139206756167
@@ -216,5 +234,8 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "Turbo Town"
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }

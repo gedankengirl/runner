@@ -2,7 +2,7 @@ Assets {
   Id: 15946978894397839653
   Name: "Guppy Regular Tail"
   PlatformAssetType: 13
-  SerializationVersion: 101
+  SerializationVersion: 104
   CustomMaterialAsset {
     BaseMaterialId: 14722796561991146384
     ParameterOverrides {

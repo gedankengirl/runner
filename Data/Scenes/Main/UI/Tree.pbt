@@ -63,6 +63,9 @@ Objects {
       Id: 14955300005117460957
     }
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 356157396593397113
@@ -106,5 +109,8 @@ Objects {
     TemplateAsset {
       Id: 14534803186118804946
     }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }

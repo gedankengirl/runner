@@ -33,6 +33,9 @@ Assets {
         Folder {
           IsGroup: true
         }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
       }
       Objects {
         Id: 11581625567771586145
@@ -96,6 +99,9 @@ Assets {
             }
             BoundsScale: 1
           }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
         }
       }
       Objects {
@@ -164,6 +170,9 @@ Assets {
             BoundsScale: 1
           }
         }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
       }
       Objects {
         Id: 15072788779821987254
@@ -230,6 +239,9 @@ Assets {
             }
             BoundsScale: 1
           }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
         }
       }
       Objects {
@@ -298,6 +310,9 @@ Assets {
             BoundsScale: 1
           }
         }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
       }
       Objects {
         Id: 12563379112133744064
@@ -362,6 +377,9 @@ Assets {
             BoundsScale: 1
           }
         }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
       }
     }
     Assets {
@@ -408,6 +426,6 @@ Assets {
   Marketplace {
     Description: "Candy Cane Decal made for toxo.\r\n\r\nMy Social Links:\r\n\r\nTwitter: https://twitter.com/AnthonyRSaephan\r\nYouTube: https://www.youtube.com/channel/UCdv7b9iclm9HHb4ezLm6eqg\r\nTwitch: https://www.twitch.tv/lnsertyourself\r\nCore: https://www.coregames.com/user/229a28a1da4b445f85e74ab878ae9646\r\nInstagram: https://www.instagram.com/insertyourself_core/\r\nDiscord Server: https://discord.gg/vMpfwDBrnZ\r\nDiscord Tag: Insert#0865"
   }
-  SerializationVersion: 101
+  SerializationVersion: 104
   DirectlyPublished: true
 }

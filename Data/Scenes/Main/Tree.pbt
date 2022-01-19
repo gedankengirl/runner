@@ -21,6 +21,7 @@ Objects {
   ChildIds: 4906105228638113618
   ChildIds: 10764064574047099998
   ChildIds: 7548521323859238510
+  ChildIds: 9915252275265462069
   ChildIds: 8534815031986278044
   ChildIds: 7553754998792656332
   ChildIds: 11266998582273717775
@@ -37,6 +38,9 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Folder {
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -84,6 +88,9 @@ Objects {
       Id: 7945600508244610067
     }
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 11266998582273717775
@@ -126,6 +133,9 @@ Objects {
       Id: 7022448175450989549
     }
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 7553754998792656332
@@ -154,6 +164,9 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "Scene props"
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -193,6 +206,9 @@ Objects {
       Value: "mc:etriggershape:box"
     }
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 6220797574871972291
@@ -224,6 +240,44 @@ Objects {
     ScriptAsset {
       Id: 6167615629568480119
     }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 9915252275265462069
+  Name: "BGM_Management"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "BGM_Management"
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -257,6 +311,9 @@ Objects {
     IsFilePartition: true
     FilePartitionName: "Spawn Points"
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 10764064574047099998
@@ -286,6 +343,9 @@ Objects {
     IsFilePartition: true
     FilePartitionName: "Environment"
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 4906105228638113618
@@ -314,6 +374,9 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "Settings"
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -357,6 +420,9 @@ Objects {
       Id: 13073670985043419975
     }
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 4963320541580283836
@@ -385,6 +451,9 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "UI"
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -417,6 +486,9 @@ Objects {
     TemplateAsset {
       Id: 17049989077593525048
     }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -462,5 +534,8 @@ Objects {
     TemplateAsset {
       Id: 17771149258410848072
     }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }

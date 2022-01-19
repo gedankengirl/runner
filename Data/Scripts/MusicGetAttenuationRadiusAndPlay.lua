@@ -8,4 +8,4 @@ AUDIO_SOURCE.isAutoRepeatEnabled = true
 
 local CURRENT_ATTN_RADIUS = 150*AREA:GetScale().x/2
 AUDIO_SOURCE.radius = CURRENT_ATTN_RADIUS
-AUDIO_SOURCE:Play()
+--AUDIO_SOURCE:Play()

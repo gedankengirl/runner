@@ -2,7 +2,7 @@ Assets {
   Id: 9506673235737511617
   Name: "Ankh Magic Glass"
   PlatformAssetType: 13
-  SerializationVersion: 101
+  SerializationVersion: 104
   CustomMaterialAsset {
     BaseMaterialId: 6981698627626169233
     ParameterOverrides {

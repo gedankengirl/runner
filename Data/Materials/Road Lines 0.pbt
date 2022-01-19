@@ -2,7 +2,7 @@ Assets {
   Id: 16905684890603411007
   Name: "Road Lines 0"
   PlatformAssetType: 13
-  SerializationVersion: 101
+  SerializationVersion: 104
   CustomMaterialAsset {
     BaseMaterialId: 7737549934548731503
     ParameterOverrides {

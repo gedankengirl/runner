@@ -31,6 +31,9 @@ Objects {
     IsFilePartition: true
     FilePartitionName: "Teleporter Landing_6"
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 4510064443107034086
@@ -61,6 +64,9 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "To Zen Zone"
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -93,6 +99,9 @@ Objects {
     IsFilePartition: true
     FilePartitionName: "To Forest"
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 15351899610614648275
@@ -123,6 +132,9 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "To Disco Hall"
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -155,6 +167,9 @@ Objects {
     IsFilePartition: true
     FilePartitionName: "To Tropical Beach"
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 12977225123815053029
@@ -186,6 +201,9 @@ Objects {
     IsFilePartition: true
     FilePartitionName: "To Graveyard"
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 8628129298483782844
@@ -216,5 +234,8 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "To Veggie Patch"
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }

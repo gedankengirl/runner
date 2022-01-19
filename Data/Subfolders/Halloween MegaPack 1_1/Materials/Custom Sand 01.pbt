@@ -2,7 +2,7 @@ Assets {
   Id: 1433745671307834073
   Name: "Custom Sand 01"
   PlatformAssetType: 13
-  SerializationVersion: 101
+  SerializationVersion: 104
   CustomMaterialAsset {
     BaseMaterialId: 1481744078696836815
     ParameterOverrides {

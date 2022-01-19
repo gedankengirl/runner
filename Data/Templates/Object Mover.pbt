@@ -175,6 +175,9 @@ Assets {
             Id: 6126478455621128065
           }
         }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
       }
     }
     PrimaryAssetId {
@@ -182,5 +185,5 @@ Assets {
       AssetId: "Object_Mover"
     }
   }
-  SerializationVersion: 101
+  SerializationVersion: 104
 }

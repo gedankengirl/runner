@@ -2,7 +2,7 @@ Assets {
   Id: 13297489836761771466
   Name: "Elemental Amethyst"
   PlatformAssetType: 13
-  SerializationVersion: 101
+  SerializationVersion: 104
   CustomMaterialAsset {
     BaseMaterialId: 1364294402302747595
     ParameterOverrides {

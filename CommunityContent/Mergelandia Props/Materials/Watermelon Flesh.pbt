@@ -2,7 +2,7 @@ Assets {
   Id: 7197627181755208949
   Name: "Watermelon Flesh"
   PlatformAssetType: 13
-  SerializationVersion: 101
+  SerializationVersion: 104
   CustomMaterialAsset {
     BaseMaterialId: 13658921109999552618
     ParameterOverrides {
