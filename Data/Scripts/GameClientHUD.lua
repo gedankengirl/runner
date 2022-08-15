@@ -117,12 +117,12 @@ local Bubble do
     Bubble.pool = {}
     Bubble.borrowed = {}
     local _bubble_params = {parent=LOCAL_VIEW_POOL}
-    local _label_rapams = {parent=HUD_PANEL}
+    local _label_params = {parent=HUD_PANEL}
 
     function Bubble._New()
         local self = setmetatable({pos=Vector2.ZERO}, Bubble)
         self.bubble = World.SpawnAsset(LOCAL_VIEW_BONUS_TEMPLATE, _bubble_params)
-        self.label = World.SpawnAsset(LOCAL_VIEW_TEXT_TEMPLATE, _label_rapams)
+        self.label = World.SpawnAsset(LOCAL_VIEW_TEXT_TEMPLATE, _label_params)
         return self
     end
 

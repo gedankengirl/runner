@@ -111,7 +111,7 @@ local MAX_SPR = SP.New(0.7, 1.0)
 local Z_SPR = SP.New(0.9, 1.0)
 local AWAY_SPR = SP.New(1, 0.5)
 local HEAVEN = Vector3.New(0, 0, 700)
--- SLOW_MAX_SPEED is a expiremental constant, do not change without playtest!
+-- SLOW_MAX_SPEED is a experimental constant, do not change without playtest!
 local SLOW_MAX_SPEED = 1450
 local SLOW_SQ = 1E6
 local Z_OFFSET = Vector3.UP*-65
